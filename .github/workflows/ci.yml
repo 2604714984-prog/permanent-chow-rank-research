@@ -35,3 +35,11 @@ jobs:
         run: |
           python scripts/n6_coordinate_secant_audit.py \
             --json /tmp/n6_coordinate_secant_audit.json
+      - name: Replay n6 one-step route barrier
+        run: |
+          python scripts/n6_multishadow_route_barrier.py \
+            --json /tmp/n6_multishadow_route_barrier.json
+      - name: Replay n6 quotient Koszul gain
+        run: |
+          python scripts/n6_quotient_gain_audit.py \
+            --json /tmp/n6_quotient_gain_audit.json
