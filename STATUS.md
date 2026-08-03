@@ -22,11 +22,12 @@ Status vocabulary:
 | G-006 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_6)>=22` | G-005 with `(m,d,q)=(3,1,1)` |
 | G-007 | `PROOF_DRAFT_COMPLETE` | `border-ChowRank(perm_n)>=L_K(n)` | closed determinantal rank locus |
 | G-008 | `PROOF_DRAFT_COMPLETE` | `border-ChowRank(perm_n)>=binom(n,floor(n/2))+1` | central-degree corollary of G-007 |
+| G-009 | `PROOF_DRAFT_COMPLETE` | `L_SR(n)>=L_K(n)+Omega(a^n/sqrt(n))`, `a=(1+sqrt(2))/2` | entropy optimization and Stirling estimates |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 | N6-001 | `OPEN` | exclude a 31-term decomposition of `perm_6` | `docs/n6_research_program.md` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-008 has not been exhaustively checked.
+- Literature novelty of G-001 through G-009 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` rank claim beyond the lower bound 22 is made.
