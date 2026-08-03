@@ -1,0 +1,53 @@
+{
+  "scope": {
+    "submission": "perm345_reviewer_submission_20260802_v9_ams_hardened.zip",
+    "submission_sha256": "70b9a059389b6cf7b4c2988f9f012d06a14b86963775df4fe619ddce61016309",
+    "pdf": "perm345_chow_rank_strict_proofs_zh_20260802_v9_ams_hardened_reviewer.pdf",
+    "pdf_sha256": "a5d2360b70dc3faba1a6ffcac6dc1345b839214e94b7c8791200ccb3448117de",
+    "strict_manifest_sha256": "3e5c6c796cfe061b76d1115090928e1a6eaf0dbb45c4e7180e486a95cf413c8e"
+  },
+  "verdict": {
+    "overall": "REQUEST_CHANGES",
+    "mathematical_text": "NO_NEW_FATAL_COUNTEREXAMPLE_FOUND",
+    "n3": "ACCEPT",
+    "n4": "ACCEPT_INDEPENDENT_EXACT_REPLAY_PASS",
+    "n5": "CONDITIONAL_PASS_PENDING_OMITTED_LOWER15_SAT_REPLAY",
+    "official_native_posix_replay": "FAIL",
+    "adapted_lower16_overlay_replay": "PASS",
+    "publication_ready": false
+  },
+  "verified": {
+    "outer_zip_testzip": "PASS",
+    "inner_zip_members": 5684,
+    "inner_zip_uncompressed_bytes": 481272030,
+    "pdf_pages": 20,
+    "pdf_embedded_attachments": 7,
+    "formal_spec_checker": "PASS",
+    "hardening_unit_tests": "6/6 PASS",
+    "n3": "PASS",
+    "n4": "PASS",
+    "independent_n5_partial_audit": "PASS",
+    "fixed_six_states": 58,
+    "fixed_six_route_histogram": [38, 19, 1],
+    "boundary_truth_entries": 226840,
+    "adapted_replay_producers": 22,
+    "adapted_replay_declared_outputs": 46,
+    "boundary_cnfs_regenerated": 24,
+    "boundary_drats_verified": 24,
+    "strict_manifest_files_rehashed": 5677,
+    "strict_manifest_mismatches": 0
+  },
+  "not_verified": {
+    "lower15_omitted_files": 265,
+    "lower15_omitted_bytes": 10019589791,
+    "lower15_cnf_count": 133,
+    "lower15_unsat_drat_count": 132,
+    "reason": "CaDiCaL was unavailable; the workspace and deterministic regeneration plan were prepared, but execution was not performed."
+  },
+  "blocking_findings": [
+    "Official --compact-reviewer --replay fails on native POSIX because frozen JSON uses CRLF while producers emit native LF.",
+    "The active boundary certifier hard-codes WSL and does not use the new portable solver backend.",
+    "The recommended AMS build fails with Pandoc 3.1.11.1 due to --syntax-highlighting=none; after that is patched, TeX Live rejects the MiKTeX-only flag and cannot find the Windows SimSun font.",
+    "The generated PDF visibly contains source-conversion defects on page 12: qquad and a literal Markdown heading."
+  ]
+}
