@@ -16,7 +16,7 @@ Status vocabulary:
 | S5-001 | `CONDITIONAL` | `ChowRank(perm_5)=16` | lower-16 overlay replayed; omitted lower-15 SAT layer not regenerated here |
 | G-001 | `PROOF_DRAFT_COMPLETE` | `dim D_m(perm_n)=binom(n,m)^2` | `docs/general_n_koszul_bounds.md` |
 | G-002 | `PROOF_DRAFT_COMPLETE` | `D_m(perm_n)^(1)=D_{m+1}(perm_n)` for `2<=m<=n-1` | coefficient propagation proof |
-| G-003 | `PROOF_DRAFT_COMPLETE` | generalized first-Koszul lower bound `L_K(n)` | exact formula and tests |
+| G-003 | `PROOF_DRAFT_COMPLETE` | generalized first-Koszul lower bound `L_K(n)`; unique optimizer `m=ceil(n/2)` | exact formula, optimizer proof, and tests |
 | G-004 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_n)>=binom(n,floor(n/2))+1` for `n>=3` | corollary of G-003 |
 | G-005 | `PROOF_DRAFT_COMPLETE` | shadow-removal lower bound `L_SR(n)` | intersection lemma and double-quotient argument |
 | G-006 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_6)>=22` | G-005 with `(m,d,q)=(3,1,1)` |
