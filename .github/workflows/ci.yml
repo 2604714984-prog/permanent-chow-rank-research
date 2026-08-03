@@ -19,5 +19,14 @@ jobs:
         run: python scripts/check_english_only.py
       - name: Unit tests
         run: python -m unittest discover -s tests -v
-      - name: Rebuild deterministic tables
+      - name: Rebuild deterministic general bounds
         run: python scripts/generate_bounds.py --max-n 50 --output-dir /tmp/chow-bounds
+      - name: Rebuild even-degree multishadow certificates
+        run: |
+          python scripts/generate_even_multishadow_bounds.py \
+            --csv /tmp/even_multishadow_bounds.csv \
+            --json /tmp/even_multishadow_bounds.json
+      - name: Replay n6 coordinate secant audit
+        run: |
+          python scripts/n6_coordinate_secant_audit.py \
+            --json /tmp/n6_coordinate_secant_audit.json
