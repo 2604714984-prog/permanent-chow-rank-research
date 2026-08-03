@@ -25,17 +25,20 @@ Status vocabulary:
 | G-007 | `PROOF_DRAFT_COMPLETE` | `border-ChowRank(perm_n)>=L_K(n)` | closed determinantal rank locus |
 | G-008 | `PROOF_DRAFT_COMPLETE` | `border-ChowRank(perm_n)>=binom(n,floor(n/2))+1` | central-degree corollary of G-007 |
 | G-009 | `PROOF_DRAFT_COMPLETE` | `L_SR(n)>=L_K(n)+Omega(a^n/sqrt(n))`, `a=(1+sqrt(2))/2` | entropy optimization and Stirling estimates |
-| G-010 | `PROOF_DRAFT_COMPLETE` | even-degree multidimensional-shadow bound of Theorem 1.1 | self-transpose middle catalecticant, quotient prolongation, and Bukh's shadow theorem |
-| G-011 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_6)>=23` | G-010 with an exact rational witness, `q=4`, and intersection cap 40 |
+| G-010 | `PROOF_DRAFT_COMPLETE` | even-degree multidimensional-shadow bound | `docs/even_n_multidimensional_shadow_bound.md`; special case of G-014 |
+| G-011 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_6)>=23` | G-014 with `m=3`, `q=4`, and complementary intersection cap 40 |
 | G-012 | `PROOF_DRAFT_COMPLETE` | for even `n`, the G-010 additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` | gamma-ratio expansion and one-variable optimization |
 | G-013 | `PROOF_DRAFT_COMPLETE` | the G-010 route independently excludes seven terms for `perm_4` | fix two terms, intersection cap 6, residual rank `464>5*92` |
+| G-014 | `PROOF_DRAFT_COMPLETE` | for arbitrary `n>=4`, `rank K_m(perm_n-R)>=A_{n,m}-n^2 b`, where `b=dim(D_{n-m}(perm_n) intersect D_{n-m}(R))`; Bukh shadows convert this into a computable Chow-rank lower bound | `docs/general_multidimensional_shadow_bound.md` |
+| G-015 | `PROOF_DRAFT_COMPLETE` | reviewed exact-rational bounds include `rank(perm_5)>=13`, `rank(perm_7)>=41`, `rank(perm_9)>=141`, `rank(perm_11)>=506`, `rank(perm_15)>=6879` | `data/multishadow_bounds.json` and regression tests |
 | N6-001 | `OPEN` | exclude a 31-term decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-013 has not been exhaustively checked.
+- Literature novelty of G-001 through G-015 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` claim is made; the current in-repository interval is `23<=ChowRank(perm_6)<=32`.
+- The frozen rational witnesses certify the displayed lower bounds but are not proved globally optimal within G-014.
 - N6-002 shows that coordinate low-catalectic points lie on positive-dimensional branches; it does not classify the full rank-nine locus.
