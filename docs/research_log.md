@@ -32,7 +32,7 @@
   \underline{\operatorname{ChowRank}}(\operatorname{perm}_n)
   \ge \binom n{\lfloor n/2\rfloor}+1.
   \]
-- The stronger shadow-removal bound remains an ordinary Chow-rank result only; no border-rank promotion is claimed.
+- The stronger zero-intersection shadow-removal bound remains an ordinary Chow-rank result only; no border-rank promotion is claimed.
 - Choosing the central derivative degree and
   \[
   d\sim\left(1-\frac1{\sqrt2}\right)\left\lfloor\frac n2\right\rfloor
@@ -45,7 +45,6 @@
   \frac{((1+\sqrt2)/2)^n}{\sqrt n}
   \right).
   \]
-  The derivative fraction is the unique entropy maximizer within this central shadow-removal construction.
 
 ### `n=6` frontier at that stage
 
@@ -59,87 +58,49 @@ This entry is retained as research history; the next entry supersedes it with 23
 
 ## 2026-08-04 — multidimensional shadows and the first `n=6` geometric obstruction
 
-### Even-degree central residual lemma
+### General complementary-intersection residual lemma
 
-For `n=2k`, the middle catalecticant is self-transpose. If `R` is a fixed sum of Chow terms,
-
-\[
-E=\mathcal D_k(P_n),
-\qquad
-H=\mathcal D_k(R),
-\qquad
-s=\dim(E\cap H),
-\]
-
-then the current proof draft establishes
+For arbitrary `n>=4` and `2<=m<=n-2`, put `r=n-m`. If `R` is a fixed sum of Chow terms, the asymmetric catalectic double-quotient argument gives
 
 \[
-\operatorname{rank}K_k(P_n-R)
+\operatorname{rank}K_m(P_n-R)
 \ge
-\operatorname{rank}K_k(P_n)-n^2s.
+A_{n,m}-n^2b,
 \]
 
-The proof combines:
+where
 
-1. the double-quotient rank inequality for the two symmetric middle catalectics;
-2. an injection
-   \[
-   (E+H)^{(1)}/E^{(1)}
-   \hookrightarrow
-   ((E+H)/E)\otimes V^*;
-   \]
-3. the Koszul kernel-prolongation identity.
+\[
+b=\dim\left(
+\mathcal D_r(P_n)
+\cap
+\mathcal D_r(R)
+\right).
+\]
 
-The dimensions of `H` cancel; only the central intersection `s` costs rank.
+The output-side intersection and the catalectic rank cancel. Thus the self-transpose even case is a convenient special case rather than a necessary hypothesis.
 
 ### Multidimensional-shadow intersection control
 
-The permanent central derivative basis is indexed by
+The permanent complementary derivative basis is indexed by
 
 \[
-\binom{[2k]}k\times\binom{[2k]}k.
+\binom{[n]}r\times\binom{[n]}r.
 \]
 
-A row-column torus degeneration turns an arbitrary intersection subspace into a coordinate family. Bukh's multidimensional Kruskal--Katona theorem then controls its lower shadow. For
+A row-column torus degeneration turns an arbitrary intersection subspace into a coordinate family. Bukh's multidimensional Kruskal--Katona theorem controls its simultaneous lower shadow and yields exact-rational lower-bound certificates in every reviewed degree from 4 through 16.
+
+The reviewed table includes
 
 \[
-q_x=
-\left\lfloor
-\frac{\binom{x}{k-1}^2}{\binom{2k}{k-1}}
-\right\rfloor,
+\operatorname{ChowRank}(\operatorname{perm}_5)\ge13,
+\qquad
+\operatorname{ChowRank}(\operatorname{perm}_6)\ge23,
+\qquad
+\operatorname{ChowRank}(\operatorname{perm}_7)\ge41.
 \]
 
-fixing `q_x` Chow terms forces
-
-\[
-s\le\left\lfloor\binom{x}{k}^2\right\rfloor.
-\]
-
-Substitution into the residual lemma gives a new exact lower-bound family for every even degree.
-
-### Improved exact certificates
-
-The deterministic exact-rational table now includes:
-
-| `n` | previous central bound | new bound |
-|---:|---:|---:|
-| 4 | 7 | 8 |
-| 6 | 21 | 23 |
-| 8 | 71 | 76 |
-| 10 | 253 | 267 |
-| 12 | 925 | 968 |
-| 14 | 3,434 | 3,568 |
-| 16 | 12,875 | 13,312 |
-
-In particular,
-
-\[
-\boxed{
-\operatorname{ChowRank}(\operatorname{perm}_6)\ge23.
-}
-\]
-
-For the frozen witness, four fixed terms imply `s<=40`; hence
+For `n=6`, four fixed terms imply a central intersection cap of 40, so
 
 \[
 14175-36\cdot40=12735,
@@ -149,24 +110,15 @@ For the frozen witness, four fixed terms imply `s<=40`; hence
 
 and the total lower bound is `4+19=23`.
 
-The same argument independently excludes seven terms for `perm_4`:
-
-\[
-560-16\cdot6=464>5\cdot92=460.
-\]
-
-This is a shorter alternative lower proof; it does not replace the independently replayed 659-by-659 chart certificate in the small-`n` evidence boundary.
-
 ### Even-degree asymptotics
 
-With `x=2k-c` and optimized constant
+With `n=2k`, `x=2k-c`, and optimized constant
 
 \[
-c_*=
-\frac{1+1/\log2}{2},
+c_*=\frac{1+1/\log2}{2},
 \]
 
-the new lower bound satisfies
+the even-degree lower bound satisfies
 
 \[
 L_{MS}(2k)
@@ -178,14 +130,6 @@ L_K(2k)
 \right)
 \frac{\binom{2k}{k}}{k}.
 \]
-
-Equivalently, the additive gain for even `n` has scale
-
-\[
-\Theta\left(\frac{2^n}{n^{3/2}}\right).
-\]
-
-The argument is ordinary-rank only and does not close the multiplicative gap to Glynn.
 
 ### `n=6` coordinate secant audit
 
@@ -206,28 +150,222 @@ rank 17: 16,200
 rank 18:  7,800
 ```
 
-For two coordinate points with row overlap `r` and column overlap `c`, the rank is
+At every coordinate point, the rank-at-most-nine locus has affine tangent dimension 19 and projective tangent dimension 18. Hence the low-catalectic boundary is positive-dimensional; an isolated-fixed-point strategy is invalid.
+
+## 2026-08-04 — quotient Koszul gain and a proved barrier for the current `n=6` formula
+
+### Exact quotient gain retained
+
+For
 
 \[
-18-rc-\binom r2\binom c2.
+E_m=\mathcal D_m(P_n),
+\qquad
+H_m=\mathcal D_m(R),
 \]
 
-The rank remains nine only for overlap types `(3,2)` and `(2,3)`; the next rank is 13.
+let
 
-At every coordinate point, the rank-at-most-nine determinantal locus has affine tangent dimension 19 and projective tangent dimension 18. The proof uses 19 explicit rational tangent directions and a rank-381 tangent-map certificate modulo `1,000,003`.
+\[
+h=\dim H_m,
+\qquad
+a=\dim(E_m\cap H_m),
+\]
 
-### Route decision
+and define
 
-The coordinate low-catalectic boundary is not discrete. Each fixed point lies on multiple row- and column-replacement linear families. Therefore an `n=6` proof must not import an isolated-fixed-point assumption from a smaller case.
+\[
+p_E(H_m)
+=
+\dim\left((E_m+H_m)^{(1)}/E_m^{(1)}\right),
+\]
 
-The next step is to classify these positive-dimensional branches relative to central intersections. No SAT, Hilbert-scheme, or Kuranishi layer is authorized until that classification produces a proved finite frontier.
+\[
+\Gamma_E(H_m)
+=
+n^2(h-a)-p_E(H_m).
+\]
 
-### Evidence boundary
+The residual argument can be kept in the sharper form
 
-- The multidimensional-shadow theorem is a proof draft, not a peer-reviewed theorem.
-- A preliminary literature search found Bukh's shadow theorem and Guan's Chow/Koszul framework, but did not establish novelty of their combination here.
-- The coordinate audit is a route diagnostic and does not prove `ChowRank(perm_6)=32`.
-- The current in-repository interval is
+\[
+\boxed{
+\operatorname{rank}K_m(P_n-R)
+\ge
+A_{n,m}-n^2b+\Gamma_E(H_m),
+}
+\]
+
+where
+
+\[
+b=\dim\left(
+\mathcal D_{n-m}(P_n)
+\cap
+\mathcal D_{n-m}(R)
+\right).
+\]
+
+Moreover,
+
+\[
+\Gamma_E(H_m)
+=
+\operatorname{rank}\delta_m((E_m+H_m)\otimes V)
+-
+\operatorname{rank}\delta_m(E_m\otimes V).
+\]
+
+Thus `Gamma` is the actual new Koszul image contributed by the quotient directions. The previous multishadow theorem used only the inequality `Gamma>=0`.
+
+### Derivative-transversality criterion
+
+If the lower derivative spaces of two homogeneous subspaces are disjoint, their prolongations split and their Koszul ranks add. In particular, if
+
+\[
+\partial E_m\cap\partial H_m=0,
+\]
+
+then the entire Koszul rank of `H_m` survives as quotient gain.
+
+### Explicit full-gain term at `n=6`
+
+For
+
+\[
+T_{\mathrm{diag}}=\prod_{i=0}^{5}x_{ii},
+\]
+
+the spaces
+
+\[
+\mathcal D_2(P_6)
+\quad\text{and}\quad
+\mathcal D_2(T_{\mathrm{diag}})
+\]
+
+are disjoint. Consequently
+
+\[
+\Gamma=705
+\]
+
+and
+
+\[
+\operatorname{rank}\delta_3
+\left(
+(\mathcal D_3(P_6)+\mathcal D_3(T_{\mathrm{diag}}))\otimes V
+\right)
+=14880.
+\]
+
+The independent sparse-integer replay obtains rank 14,880 modulo `1,000,003`. Subadditivity gives the matching characteristic-zero upper bound `14,175+705`, so the equality is exact over characteristic zero.
+
+This is an existence certificate, not a uniform theorem for arbitrary Chow terms.
+
+### Quantified next target
+
+At the current four-term frontier,
+
+\[
+b\le40
+\]
+
+and the intersection-only residual floor is 12,735. To raise the universal lower bound from 23 to 24 by this state, it would suffice to prove
+
+\[
+\boxed{\Gamma\ge661.}
+\]
+
+The corresponding thresholds for the neighboring one-step states are 790 for three fixed terms and 676 for five fixed terms. The four-term state is therefore the minimal quantified target.
+
+### Exact route barrier
+
+A complete exact optimization of the current one-step Bukh-shadow formula over every output degree
+
+\[
+m\in\{2,3,4\}
+\]
+
+and every continuous witness value proves that the formula cannot exceed 23 at `n=6`.
+
+The only maximizing states are
+
+```text
+m=3, q=4, intersection cap=40, residual terms=19
+m=3, q=5, intersection cap=60, residual terms=18
+```
+
+The coordinate family
+
+\[
+\binom{[5]}3\times\binom{[4]}3
+\]
+
+has size 40 and simultaneous shadow size 60, so the universal `q=4` Bukh cap is sharp. A denser witness search, a different admissible output degree, or a tighter universal scalar shadow estimate cannot produce 24.
+
+The next improvement must use at least one of the following:
+
+1. non-realizability of the extremal coordinate families as Chow intersections;
+2. a positive quotient gain `Gamma`;
+3. coupled information beyond one shadow cardinality;
+4. a different flattening or invariant.
+
+### Odd-degree asymptotic constant
+
+For `n=2k+1`, choose output degree `m=k`, complementary degree `r=k+1`, and witness `x=2k+1-c`. The exact ratio identity
+
+\[
+R_{k+1}(c)
+=
+R_k(c)
+\left(1-\frac{c}{k+1}\right)
+\]
+
+yields
+
+\[
+L_{MS}(2k+1)-L_K(2k+1)
+\ge
+2c4^{-c}
+\frac{\binom{2k+1}{k}}{k}
++
+O\left(
+\frac{\binom{2k+1}{k}}{k^2}
+\right).
+\]
+
+The unique optimizer is
+
+\[
+c=\frac1{\log4},
+\]
+
+so
+
+\[
+\boxed{
+L_{MS}(2k+1)
+\ge
+L_K(2k+1)
++
+\left(
+\frac1{e\log2}+o(1)
+\right)
+\frac{\binom{2k+1}{k}}{k}.
+}
+\]
+
+In the normalization `binom(n,floor(n/2))/n`, the odd constant is twice the even constant.
+
+### Evidence and claim boundary
+
+- The quotient-gain identity and parity asymptotic are proof drafts, not peer-reviewed theorems.
+- The route-barrier and diagonal-term scripts are exact deterministic diagnostics.
+- The route barrier is a limitation of the current scalar one-step formula, not an upper bound on Chow rank.
+- No uniform `Gamma>=661` theorem has been proved.
+- The current interval remains
   \[
   23\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
   \]
