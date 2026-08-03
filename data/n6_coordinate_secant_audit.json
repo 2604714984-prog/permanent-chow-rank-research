@@ -1,0 +1,95 @@
+{
+  "mathematical_claim_boundary": "This is a route diagnostic. It does not certify ChowRank(perm_6)=32.",
+  "pair_audit": {
+    "coordinate_basis_size": 400,
+    "next_rank_after_nine": 13,
+    "overlap_distribution": {
+      "0,0": 200,
+      "0,1": 1800,
+      "0,2": 1800,
+      "0,3": 200,
+      "1,0": 1800,
+      "1,1": 16200,
+      "1,2": 16200,
+      "1,3": 1800,
+      "2,0": 1800,
+      "2,1": 16200,
+      "2,2": 16200,
+      "2,3": 1800,
+      "3,0": 200,
+      "3,1": 1800,
+      "3,2": 1800
+    },
+    "overlap_types_by_rank": {
+      "13": {
+        "2,2": 16200
+      },
+      "15": {
+        "1,3": 1800,
+        "3,1": 1800
+      },
+      "16": {
+        "1,2": 16200,
+        "2,1": 16200
+      },
+      "17": {
+        "1,1": 16200
+      },
+      "18": {
+        "0,0": 200,
+        "0,1": 1800,
+        "0,2": 1800,
+        "0,3": 200,
+        "1,0": 1800,
+        "2,0": 1800,
+        "3,0": 200
+      },
+      "9": {
+        "2,3": 1800,
+        "3,2": 1800
+      }
+    },
+    "rank_distribution": {
+      "13": 16200,
+      "15": 3600,
+      "16": 32400,
+      "17": 16200,
+      "18": 7800,
+      "9": 3600
+    },
+    "rank_nine_overlap_types": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "unordered_pairs_checked": 79800
+  },
+  "scope": "coordinate first-catalectic lines and tangent space inside D_3(perm_6)",
+  "status": "COMPUTATION_REPLAYED",
+  "tangent_audit": {
+    "affine_tangent_dimension_over_Q": 19,
+    "ambient_affine_dimension": 400,
+    "explicit_tangent_coordinate_directions": 19,
+    "projective_tangent_dimension_over_Q": 18,
+    "representative": {
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        0,
+        1,
+        2
+      ]
+    },
+    "tangent_map_rank_mod_prime": 381,
+    "transitivity_covers_coordinate_points": 400,
+    "violation_equations": 2565
+  }
+}
