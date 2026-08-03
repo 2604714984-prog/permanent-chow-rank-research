@@ -33,6 +33,19 @@
   \ge \binom n{\lfloor n/2\rfloor}+1.
   \]
 - The stronger shadow-removal bound remains an ordinary Chow-rank result only; no border-rank promotion is claimed.
+- Choosing the central derivative degree and
+  \[
+  d\sim\left(1-\frac1{\sqrt2}\right)\left\lfloor\frac n2\right\rfloor
+  \]
+  gives an explicit additive gain
+  \[
+  L_{SR}(n)
+  \ge L_K(n)+
+  \Omega\left(
+  \frac{((1+\sqrt2)/2)^n}{\sqrt n}
+  \right).
+  \]
+  The derivative fraction is the unique entropy maximizer within this central shadow-removal construction.
 
 ### `n=6` frontier
 
