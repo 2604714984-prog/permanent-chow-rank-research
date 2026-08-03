@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 import unittest
 from fractions import Fraction
@@ -51,6 +52,29 @@ class EvenMultishadowTests(unittest.TestCase):
             for certificate in reviewed_even_certificates()
         }
         self.assertEqual(actual, expected)
+
+    def test_frozen_json_matches_exact_certificates(self) -> None:
+        payload = json.loads(
+            (ROOT / "data" / "even_multishadow_bounds.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        frozen = {row["n"]: row for row in payload["certificates"]}
+        live = {certificate.n: certificate for certificate in reviewed_even_certificates()}
+        self.assertEqual(set(frozen), set(live))
+        for n, certificate in live.items():
+            row = frozen[n]
+            self.assertEqual(row["witness"], str(certificate.witness))
+            self.assertEqual(row["fixed_terms"], certificate.fixed_terms)
+            self.assertEqual(
+                row["intersection_dimension_cap"],
+                certificate.intersection_dimension_cap,
+            )
+            self.assertEqual(
+                row["residual_koszul_rank_floor"],
+                certificate.residual_koszul_rank_floor,
+            )
+            self.assertEqual(row["lower_bound"], certificate.lower_bound)
 
     def test_n6_arithmetic_certificate(self) -> None:
         certificate = even_multishadow_bound_at(6, REVIEWED_WITNESSES[6])
