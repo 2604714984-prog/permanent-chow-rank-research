@@ -21,6 +21,11 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Rebuild deterministic general bounds
         run: python scripts/generate_bounds.py --max-n 50 --output-dir /tmp/chow-bounds
+      - name: Rebuild all-degree multishadow certificates
+        run: |
+          python scripts/generate_multishadow_bounds.py \
+            --csv /tmp/multishadow_bounds.csv \
+            --json /tmp/multishadow_bounds.json
       - name: Rebuild even-degree multishadow certificates
         run: |
           python scripts/generate_even_multishadow_bounds.py \
