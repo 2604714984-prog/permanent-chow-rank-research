@@ -30,15 +30,21 @@ Status vocabulary:
 | G-012 | `PROOF_DRAFT_COMPLETE` | for even `n`, the G-010 additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` | gamma-ratio expansion and one-variable optimization |
 | G-013 | `PROOF_DRAFT_COMPLETE` | the G-010 route independently excludes seven terms for `perm_4` | fix two terms, intersection cap 6, residual rank `464>5*92` |
 | G-014 | `PROOF_DRAFT_COMPLETE` | for arbitrary `n>=4`, `rank K_m(perm_n-R)>=A_{n,m}-n^2 b`, where `b=dim(D_{n-m}(perm_n) intersect D_{n-m}(R))`; Bukh shadows convert this into a computable Chow-rank lower bound | `docs/general_multidimensional_shadow_bound.md` |
-| G-015 | `PROOF_DRAFT_COMPLETE` | reviewed exact-rational bounds include `rank(perm_5)>=13`, `rank(perm_7)>=41`, `rank(perm_9)>=141`, `rank(perm_11)>=506`, `rank(perm_15)>=6879` | `data/multishadow_bounds.json` and regression tests |
+| G-015 | `PROOF_DRAFT_COMPLETE` | reviewed exact-rational bounds include `ChowRank(perm_5)>=13`, `ChowRank(perm_7)>=41`, `ChowRank(perm_9)>=141`, `ChowRank(perm_11)>=506`, and `ChowRank(perm_15)>=6879` | `data/multishadow_bounds.json` and regression tests |
+| G-016 | `PROOF_DRAFT_COMPLETE` | exact refinement `rank K_m(perm_n-R)>=A_{n,m}-n^2 b+Gamma`, where `Gamma` is the quotient Koszul image gain | `docs/quotient_koszul_gain.md` |
+| G-017 | `PROOF_DRAFT_COMPLETE` | the odd-degree one-step multishadow gain is `(2/(e log 2)+o(1))*binom(n,floor(n/2))/n`, twice the even constant in this normalization | `docs/general_multishadow_parity_asymptotics.md` |
 | N6-001 | `OPEN` | exclude a 31-term decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
+| N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the current one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained by an explicit coordinate family | `scripts/n6_multishadow_route_barrier.py` |
+| N6-004 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the explicit diagonal Chow term has full quotient Koszul gain `Gamma=705`, with combined rank `14175+705=14880` | `scripts/n6_quotient_gain_audit.py` |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-015 has not been exhaustively checked.
+- Literature novelty of G-001 through G-017 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` claim is made; the current in-repository interval is `23<=ChowRank(perm_6)<=32`.
 - The frozen rational witnesses certify the displayed lower bounds but are not proved globally optimal within G-014.
 - N6-002 shows that coordinate low-catalectic points lie on positive-dimensional branches; it does not classify the full rank-nine locus.
+- N6-003 is a barrier for the current scalar one-step formula only; it does not rule out Chow-realizability restrictions, positive `Gamma`, higher coupled shadows, or different flattenings.
+- N6-004 is an explicit existence certificate, not a uniform gain theorem for arbitrary Chow terms.

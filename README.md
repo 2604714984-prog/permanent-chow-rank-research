@@ -29,8 +29,11 @@ The repository does **not** own large upstream proof bundles. External submissio
 | General first-Koszul bound | proof draft complete | exact formula; its unique optimizing output degree is `m=ceil(n/2)` |
 | Border Chow-rank bound | proof draft complete | the determinantal first-Koszul obstruction gives `border-ChowRank(perm_n)>=L_K(n)` |
 | Zero-intersection shadow removal | proof draft complete | additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
-| General multidimensional-shadow bound | proof draft complete | valid for every `n>=4`; reviewed examples include `rank(perm_5)>=13`, `rank(perm_6)>=23`, `rank(perm_7)>=41`, and `rank(perm_9)>=141` |
-| Even-degree asymptotics | proof draft complete | additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` for even `n` |
+| General multidimensional-shadow bound | proof draft complete | valid for every `n>=4`; reviewed examples include `ChowRank(perm_5)>=13`, `ChowRank(perm_6)>=23`, `ChowRank(perm_7)>=41`, and `ChowRank(perm_9)>=141` |
+| Parity-sensitive multishadow asymptotics | proof draft complete | additive scale `Theta(2^n/n^(3/2))`; the odd constant is twice the even constant in `binom(n,floor(n/2))/n` normalization |
+| Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
+| `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the current scalar formula stops at 23 |
+| `n=6` diagonal quotient-gain audit | computation replayed; diagnostic only | one explicit Chow term has the full gain `Gamma=705` and combined rank `14,880` |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
 | Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
@@ -75,9 +78,19 @@ python scripts/generate_bounds.py --max-n 50
 python scripts/generate_multishadow_bounds.py
 python scripts/generate_even_multishadow_bounds.py
 python scripts/n6_coordinate_secant_audit.py
+python scripts/n6_multishadow_route_barrier.py
+python scripts/n6_quotient_gain_audit.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
+
+The quotient-gain audit similarly uses a modular rank only as a lower bound. Subadditivity gives the matching characteristic-zero upper bound
+
+```text
+14,175 + 705 = 14,880,
+```
+
+so the displayed combined rank and gain are exact over characteristic zero.
 
 ## Layout
 

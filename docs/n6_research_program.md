@@ -12,201 +12,254 @@
 32.
 \]
 
-The lower bound 23 is proved in `docs/even_n_multidimensional_shadow_bound.md`. The upper bound is Glynn's 32-term decomposition. No exact-32 claim is made.
+The lower bound 23 follows from the multidimensional-shadow theorem. The upper bound is Glynn's 32-term decomposition. No exact-32 claim is made.
 
 ## 1. Exact numerical baseline
 
 Use the central derivative degree `m=3`:
 
 \[
-\dim \mathcal D_3(P_6)=\binom63^2=400,
+\dim\mathcal D_3(P_6)=400,
 \qquad
-\dim \mathcal D_4(P_6)=\binom64^2=225.
-\]
-
-Hence
-
-\[
-A_{6,3}=36\cdot400-225=14175.
+A_{6,3}=14175.
 \]
 
 One six-factor Chow term contributes at most
 
 \[
-B_{6,3}=36\cdot20-15=705.
+B_{6,3}=705.
 \]
 
-The ordinary ratio gives 21. Zero-intersection shadow removal gives 22. The even-degree multidimensional-shadow theorem fixes four terms, proves that their central intersection with `D_3(P_6)` has dimension at most 40, and gives
+The current proof history is:
+
+```text
+ordinary first-Koszul ratio:            21
+zero-intersection shadow removal:       22
+multidimensional-shadow intersection:   23
+```
+
+The 23 certificate fixes four terms, obtains the complementary intersection cap
 
 \[
-14175-36\cdot40=12735.
+b\le40,
 \]
 
-Since
+and uses
 
 \[
-\left\lceil\frac{12735}{705}\right\rceil=19,
+14175-36\cdot40=12735,
+\qquad
+\left\lceil\frac{12735}{705}\right\rceil=19.
 \]
 
-the certified lower bound is
+Thus `4+19=23`.
 
-\[
-4+19=23.
-\]
+## 2. Exact residual identity with quotient gain
 
-## 2. Exact-32 target reduction
-
-To prove the conjectural exact value 32, assume a 31-term decomposition and fix 11 terms with sum `R`. The residual 20 terms have flattening capacity
-
-\[
-20\cdot705=14100.
-\]
-
-It is enough to prove
-
-\[
-\operatorname{rank}K_{6,3}(P_6-R)
-\ge14101
-\]
-
-for every such `R`.
-
-Let
+For a fixed partial sum `R`, define
 
 \[
 E=\mathcal D_3(P_6),
 \qquad
 H=\mathcal D_3(R),
-\qquad
-S=E\cap H,
-\qquad
-s=\dim S.
 \]
 
-The even central residual lemma gives
-
 \[
-\operatorname{rank}K_{6,3}(P_6-R)
-\ge14175-36s.
+b=\dim(E\cap H),
 \]
 
-Therefore the current intersection-only bound would close exact 32 if one could prove
+and
 
 \[
-s\le2.
-\]
-
-This threshold is severe. The existing multidimensional-shadow inequality does not force `s<=2` for 11 fixed terms. Exact 32 therefore requires either a much sharper intersection theorem or an additional rank gain that uses the geometry of `H/S`.
-
-## 3. What has changed after the coordinate audit
-
-The central catalecticant `C_{3,3}` is self-transpose, so the specific odd-degree row-image/column-image mismatch from `n=5` is absent. However, the low-catalectic boundary is already positive-dimensional.
-
-For the 400 coordinate basis points `P_{I,J}`, the complete first-catalectic line formula is
-
-\[
-\operatorname{rank}C_{1,2}
-(\alpha P_{I,J}+\beta P_{I',J'})
+\Gamma_E(H)
 =
-18-rc-\binom r2\binom c2,
+\operatorname{rank}\delta_3((E+H)\otimes V)
+-
+\operatorname{rank}\delta_3(E\otimes V).
 \]
 
-where
+The exact residual estimate is
 
 \[
-r=|I\cap I'|,
-\qquad
-c=|J\cap J'|.
+\boxed{
+\operatorname{rank}K_{6,3}(P_6-R)
+\ge
+14175-36b+\Gamma_E(H).
+}
+\tag{2.1}
 \]
 
-All 79,800 coordinate pairs were checked. Rank nine persists for 3,600 pairs of overlap type `(3,2)` or `(2,3)`, and the next rank is 13. At every coordinate point, the rank-at-most-nine locus has affine tangent dimension 19 and projective tangent dimension 18.
+The previous multishadow theorem discarded the nonnegative term `Gamma`.
 
-Consequently, any proof route that assumes isolated torus-fixed low-catalectic points is invalid. The first geometric task is to control the visible row- and column-replacement branches.
-
-## 4. Hidden assumptions
-
-1. **Glynn is optimal for unrestricted Chow rank.** This may be false even if it is optimal in a restricted row-homogeneous model.
-2. **The central first-Koszul flattening is sufficient.** The intersection-only loss `36s` may saturate too early.
-3. **The coordinate boundary is representative.** Non-coordinate and non-reduced limits may introduce larger families.
-4. **A finite frontier exists.** Positive-dimensional rank-nine branches may prevent a small orbit reduction.
-5. **The `n=5` finite-state method scales.** The state space and local geometry may be materially more complicated for `n=6`.
-
-## 5. Assume every assumption is false
-
-Then the correct program is not to enlarge a fixed-state SAT search. It is to run two falsification tracks first:
-
-- search for structured decompositions with fewer than 32 terms;
-- search for explicit 11-term sums `R` that make the central residual rank at most 14,100.
-
-Any such example is a counterexample to the proposed exact-32 proof route, not a numerical nuisance.
-
-## 6. Minority complete logic
-
-A plausible alternative objective is an asymptotically stronger lower bound rather than exact Glynn optimality. The even-degree multidimensional-shadow theorem already improves the additive scale to
+At the four-term frontier, a lower bound of 24 would follow from
 
 \[
-\Theta\left(\frac{2^n}{n^{3/2}}\right)
+\boxed{\Gamma_E(H)\ge661.}
+\tag{2.2}
 \]
 
-above the central first-Koszul bound. Higher shadows, recursive Koszul maps, or nonlinear secant equations may improve this further without solving the exact rank.
+The neighboring one-step thresholds are:
 
-This alternative remains mathematically useful even if `ChowRank(perm_6)<32`.
+| fixed terms | intersection cap | required `Gamma` for total 24 |
+|---:|---:|---:|
+| 3 | 24 | 790 |
+| 4 | 40 | **661** |
+| 5 | 60 | 676 |
 
-## 7. Optimistic frame
+Thus the four-term state is the smallest quantified target.
 
-- the self-transpose `C_{3,3}` collapses one major coupling asymmetry;
-- the permanent derivative basis is multiplicity-free for the row-column torus;
-- the multidimensional shadow theorem gives a general intersection mechanism rather than a case-specific table;
-- the coordinate rank-nine lines have an explicit overlap classification;
-- the rank gap from 9 to 13 on all other coordinate lines may help isolate the dangerous positive-dimensional branches.
+## 3. Proved limitation of the current scalar shadow route
 
-## 8. Pessimistic frame
-
-- exact 32 requires an effective intersection threshold near `s<=2` unless a new quotient gain is found;
-- coordinate rank-nine points have six visible branch families and projective tangent dimension 18;
-- non-reduced torus limits may add further tangent and jet directions;
-- a 31-term decomposition may exist;
-- a complete geometric classification may be more complex than the theorem it is intended to prove.
-
-## 9. Recommended minimal program
-
-### N6-0 — deterministic baseline
-
-Keep the exact formulas, the multishadow certificates, and the coordinate audit stable. Do not introduce a large certificate framework.
-
-### N6-1 — classify the visible rank-nine branches
-
-Start from the six row/column replacement families through each coordinate point. Determine:
-
-1. their global parameter spaces;
-2. their pairwise intersections;
-3. the corresponding cubic essential-variable spaces;
-4. which of them can occur inside `E intersection D_3(R)` for a sum of Chow terms.
-
-The elementary multi-affine factorization lemma in `docs/n6_coordinate_secant_geometry.md` should be the first tool.
-
-### N6-2 — strengthen the residual inequality
-
-The current estimate
+The complete exact optimization of the current one-step Bukh-shadow formula over
 
 \[
-\operatorname{rank}K(P_6-R)
-\ge14175-36s
+m=2,3,4
 \]
 
-uses no geometry of `(E+H)/E`. Seek a strict improvement of the form
+and every continuous witness value has maximum 23. The only maximizing states are
+
+```text
+m=3, q=4, b=40, residual terms=19
+m=3, q=5, b=60, residual terms=18
+```
+
+Moreover, the coordinate family
 
 \[
-14175-36s+\Gamma(H/S),
+\binom{[5]}3\times\binom{[4]}3
 \]
 
-where `Gamma` is positive away from explicitly classified low-prolongation families.
+has size 40 and simultaneous lower shadow 60. Therefore the universal `q=4` shadow cap is sharp as a combinatorial statement.
 
-This is the highest-leverage route: even a modest quotient gain could relax the unrealistic threshold `s<=2`.
+This proves that none of the following can improve the universal bound to 24:
 
-### N6-3 — higher and iterated shadows
+- a denser rational search for the same witness;
+- switching to output degree 2 or 4;
+- exact continuous optimization of the same scalar formula;
+- lowering the universal `q=4` cap below 40 using shadow cardinality alone.
 
-For `S subset D_3(P_6)`, combine first and second multidimensional shadows. Determine whether simultaneous bounds on
+A stronger result must use Chow realizability, positive quotient gain, higher coupled data, or another invariant.
+
+## 4. Full gain is possible
+
+For the explicit diagonal term
+
+\[
+T_{\mathrm{diag}}=\prod_{i=0}^{5}x_{ii},
+\]
+
+one has
+
+\[
+\mathcal D_2(P_6)
+\cap
+\mathcal D_2(T_{\mathrm{diag}})
+=0.
+\]
+
+Derivative transversality implies that its entire Koszul rank survives in the quotient:
+
+\[
+\Gamma_E(\mathcal D_3(T_{\mathrm{diag}}))=705.
+\]
+
+The independent sparse replay gives
+
+\[
+\operatorname{rank}\delta_3
+\left(
+(E+\mathcal D_3(T_{\mathrm{diag}}))\otimes V
+\right)
+=14880.
+\]
+
+This exceeds the four-term threshold 661, so the target is numerically plausible for transverse configurations. It is not uniform: special terms or coupled sums may have much smaller gain.
+
+## 5. Coordinate low-catalectic geometry
+
+The central space has 400 coordinate `3 x 3` subpermanents. All 79,800 coordinate pairs were classified. Their first-catalectic ranks are
+
+```text
+9, 13, 15, 16, 17, 18.
+```
+
+Rank nine persists on overlap types `(3,2)` and `(2,3)`. At every coordinate point, the rank-at-most-nine determinantal locus has affine tangent dimension 19 and projective tangent dimension 18.
+
+Therefore the low-catalectic boundary is positive-dimensional. Any route that assumes isolated torus-fixed points is invalid.
+
+## 6. Hidden assumptions
+
+1. **Glynn is optimal for unrestricted Chow rank.** This remains conjectural.
+2. **A uniform four-term gain near 661 exists.** The diagonal term proves existence of full gain, not uniformity.
+3. **Extremal Bukh families are not Chow-realizable.** This has not been proved.
+4. **Lower-degree derivative intersections control `Gamma` sharply.** Only a sufficient transversality criterion is currently known.
+5. **A finite dangerous frontier exists.** Positive-dimensional coordinate branches may obstruct a small orbit classification.
+
+## 7. Assume every assumption is false
+
+Then exact 32 may be inaccessible to the central first-Koszul route, or false. The correct response is not to add a large finite-state pipeline. It is to search for explicit route counterexamples:
+
+- four-term sums with `b` near 40 and `Gamma<661`;
+- eleven-term sums with residual rank at most 14,100;
+- structured decompositions with at most 31 terms.
+
+Finite-field examples are diagnostics only. They require an integer minor, exact rational elimination, or a proved semicontinuity bridge before entering a characteristic-zero claim.
+
+## 8. Recommended minimal program
+
+### N6-1 — classify failure of derivative transversality
+
+Study
+
+\[
+\mathcal D_2(P_6)
+\cap
+\partial\mathcal D_3(R).
+\]
+
+The first objective is a structural classification for one Chow term, then for sums of two to four terms. Determine which factor configurations create a nonzero lower-degree intersection and how much quotient gain they lose.
+
+### N6-2 — prove a quantitative `Gamma` inequality
+
+Seek a theorem of the form
+
+\[
+\Gamma_E(H)
+\ge
+705q-\Phi(Z),
+\]
+
+where `q` is the number of fixed independent contributions and `Z` is an explicitly controlled lower-degree intersection or relation space.
+
+The immediate target is not exact 32; it is the uniform four-term inequality
+
+\[
+\Gamma_E(H)\ge661
+\]
+
+under the same state that gives `b<=40`. Failure should be recorded with an exact counterexample.
+
+### N6-3 — test Chow realizability of the extremal 40-family
+
+The family
+
+\[
+\binom{[5]}3\times\binom{[4]}3
+\]
+
+attains the universal shadow cap. Determine whether it can occur as a torus limit of
+
+\[
+\mathcal D_3(P_6)
+\cap
+\mathcal D_3(R)
+\]
+
+for a four-term Chow sum `R`. A non-realizability theorem would improve the current cap without changing Bukh's combinatorics.
+
+### N6-4 — coupled first and second shadows
+
+Track both
 
 \[
 \partial S
@@ -214,40 +267,38 @@ For `S subset D_3(P_6)`, combine first and second multidimensional shadows. Dete
 \partial^2S
 \]
 
-improve the intersection cap for 11 fixed terms. A negative exact calculation should be recorded as a stopping result rather than hidden.
+and their compatibility with one common Chow sum. The existing scalar shadow theorem forgets this coupling.
 
-### N6-4 — route falsification
+### N6-5 — exact diagnostics
 
-Construct random and structured 11-term Chow sums over small finite fields as diagnostics only. Record:
+For structured candidate sums, record:
 
-- central intersection dimension;
-- residual central catalectic rank;
+- `b=dim(D_3(P_6) intersect D_3(R))`;
+- quotient dimension `dim((E+H)/E)`;
+- `Gamma`;
 - residual Koszul rank;
-- first-catalectic rank profile of the intersection;
-- whether the intersection enters a known rank-nine branch.
+- lower-degree intersection dimension;
+- whether the intersection enters a known coordinate rank-nine branch.
 
-No finite-field equality may be promoted to characteristic-zero evidence without an integer minor, exact rational elimination, or a proved semicontinuity bridge.
-
-### N6-5 — exact representative replay
-
-For any dangerous representative, rebuild the integer matrix and establish rank with rational computation or a certified nonzero integer minor.
+Any dangerous representative must be replayed with exact rational arithmetic or a certified integer minor.
 
 ### N6-6 — geometry only after a finite frontier exists
 
-Introduce Hilbert-scheme, SAT/DRAT, or Kuranishi machinery only after the dangerous states are mathematically proved finite and small. Do not create managers, registries, dispatchers, ticket layers, or multi-repository orchestration.
+Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations, managers, registries, dispatchers, or multi-repository orchestration unless a mathematical theorem first reduces the dangerous cases to a finite and small set.
 
-## 10. Fail-closed exit criteria
+## 9. Fail-closed exit criteria
 
-Reject the central-Koszul exact route if any of the following occurs:
+Reject or suspend the central-Koszul exact route if any of the following occurs:
 
 - a decomposition with at most 31 terms is found;
-- a reproducible 11-term sum has residual rank at most 14,100 and no stronger invariant is available;
-- the quotient gain `Gamma` vanishes on a positive-dimensional family too large to classify;
-- the dangerous frontier cannot be proved finite without a large speculative workflow;
-- the required geometric machinery is materially more complex than the mathematical obstruction it is meant to certify.
+- a reproducible four-term sum has `b<=40` and `Gamma<661`, with no compensating invariant;
+- a reproducible eleven-term sum has residual rank at most 14,100;
+- the extremal shadow families are Chow-realizable on an uncontrolled positive-dimensional family;
+- no finite frontier can be proved without a large speculative workflow;
+- the required geometry becomes materially more complex than the obstruction it certifies.
 
-## 11. Strongest objection to this recommendation
+## 10. Strongest objection to this program
 
-The branch-classification program may still spend substantial effort on a flattening whose natural intersection loss cannot approach 32. A direct decomposition search could be more decisive.
+The target `Gamma>=661` may fail badly on coupled four-term sums. The diagonal example may be atypically transverse, and classifying all failures could be as difficult as the original rank problem.
 
-The response is to time-box N6-1 through N6-3. If they do not produce either a strict quotient gain or a sharply smaller intersection frontier, the central-Koszul exact route should be rejected rather than expanded indefinitely.
+That objection is decisive enough to impose a stopping rule: N6-1 through N6-3 must either produce a strict theorem, a small finite frontier, or an exact route counterexample. Otherwise the program should pivot to a different flattening or to asymptotic lower bounds rather than add process complexity.
