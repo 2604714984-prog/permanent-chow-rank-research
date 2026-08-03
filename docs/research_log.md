@@ -22,6 +22,11 @@
   B_{n,m}=n^2\binom nm-\binom n{m+1}.
   \]
 - The same determinantal obstruction applies to border Chow rank because matrix-rank upper bounds are Zariski closed.
+- The first-Koszul rank ratio is globally and uniquely maximized at the central derivative degree
+  \[
+  m=\left\lceil\frac n2\right\rceil.
+  \]
+  This removes the maximization over `m` and yields closed even/odd formulas for `L_K(n)`.
 - Consequently,
   \[
   \underline{\operatorname{ChowRank}}(\operatorname{perm}_n)
