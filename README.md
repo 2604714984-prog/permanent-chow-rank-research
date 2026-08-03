@@ -28,28 +28,41 @@ The repository does **not** own large upstream proof bundles. External submissio
 | General `n` derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
 | General Koszul lower bound | proof draft complete | exact formula; the unique optimizing derivative degree is `m=ceil(n/2)` |
 | Border Chow-rank lower bound | proof draft complete | the same closed determinantal obstruction gives `border-ChowRank(perm_n) >= L_K(n)` |
-| Shadow-removal lower bound | proof draft complete | `ChowRank(perm_6)>=22`; asymptotic additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
+| Zero-intersection shadow removal | proof draft complete | `ChowRank(perm_6)>=22`; additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
+| Even-degree multidimensional shadow | proof draft complete | `ChowRank(perm_6)>=23`; for even `n`, additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` |
+| `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
 | Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
 “Proof draft complete” means the argument is written in the repository and its arithmetic implementation is tested. It does **not** mean external peer review or literature novelty review has been completed.
 
-## Reproduce the bound table
+The current certified interval for `n=6` is
 
-```bash
-python -m unittest discover -s tests -v
-python scripts/generate_bounds.py --max-n 50
+```text
+23 <= ChowRank(perm_6) <= 32.
 ```
 
-The generator uses only the Python standard library and exact integer/rational arithmetic.
+No exact-32 claim is made.
+
+## Reproduce the deterministic results
+
+```bash
+python scripts/check_english_only.py
+python -m unittest discover -s tests -v
+python scripts/generate_bounds.py --max-n 50
+python scripts/generate_even_multishadow_bounds.py
+python scripts/n6_coordinate_secant_audit.py
+```
+
+The bound generators use only the Python standard library and exact integer/rational arithmetic. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 minor modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact tangent dimension 19 over `Q`.
 
 ## Layout
 
 ```text
 src/permanent_chow_rank/   exact bound implementation
-scripts/                   deterministic table generation
+scripts/                   deterministic table generation and finite audits
 tests/                     regression tests
 docs/                      English proofs, assumptions, literature notes, and research program
-data/                      generated exact bound tables
+data/                      generated exact bound tables and audit outputs
 evidence/small_n/          read-only audit snapshots and source identities
 ```
 
