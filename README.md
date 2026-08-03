@@ -25,11 +25,12 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=3` | accepted baseline | `ChowRank(perm_3)=4` |
 | `n=4` | independently exact-replayed | `ChowRank(perm_4)=8` |
 | `n=5` | conditional external review | source submission claims `16`; the lower-16 overlay was replayed, while the omitted ~10 GB lower-15 SAT layer has not been independently regenerated here |
-| General `n` derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
-| General Koszul lower bound | proof draft complete | exact formula; the unique optimizing derivative degree is `m=ceil(n/2)` |
-| Border Chow-rank lower bound | proof draft complete | the same closed determinantal obstruction gives `border-ChowRank(perm_n) >= L_K(n)` |
-| Zero-intersection shadow removal | proof draft complete | `ChowRank(perm_6)>=22`; additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
-| Even-degree multidimensional shadow | proof draft complete | `ChowRank(perm_6)>=23`; for even `n`, additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` |
+| General derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
+| General first-Koszul bound | proof draft complete | exact formula; its unique optimizing output degree is `m=ceil(n/2)` |
+| Border Chow-rank bound | proof draft complete | the determinantal first-Koszul obstruction gives `border-ChowRank(perm_n)>=L_K(n)` |
+| Zero-intersection shadow removal | proof draft complete | additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
+| General multidimensional-shadow bound | proof draft complete | valid for every `n>=4`; reviewed examples include `rank(perm_5)>=13`, `rank(perm_6)>=23`, `rank(perm_7)>=41`, and `rank(perm_9)>=141` |
+| Even-degree asymptotics | proof draft complete | additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` for even `n` |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
 | Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
@@ -43,17 +44,40 @@ The current certified interval for `n=6` is
 
 No exact-32 claim is made.
 
+## Reviewed general lower-bound table
+
+The current exact-rational multidimensional-shadow certificates give:
+
+| `n` | first-Koszul `L_K(n)` | multidimensional-shadow lower bound | Glynn upper bound |
+|---:|---:|---:|---:|
+| 4 | 7 | 8 | 8 |
+| 5 | 11 | 13 | 16 |
+| 6 | 21 | 23 | 32 |
+| 7 | 36 | 41 | 64 |
+| 8 | 71 | 76 | 128 |
+| 9 | 127 | 141 | 256 |
+| 10 | 253 | 267 | 512 |
+| 11 | 463 | 506 | 1,024 |
+| 12 | 925 | 968 | 2,048 |
+| 13 | 1,718 | 1,853 | 4,096 |
+| 14 | 3,434 | 3,568 | 8,192 |
+| 15 | 6,440 | 6,879 | 16,384 |
+| 16 | 12,875 | 13,312 | 32,768 |
+
+These are ordinary Chow-rank lower bounds. The frozen rational witnesses are certificates of the displayed values; they are not claimed to be globally optimal.
+
 ## Reproduce the deterministic results
 
 ```bash
 python scripts/check_english_only.py
 python -m unittest discover -s tests -v
 python scripts/generate_bounds.py --max-n 50
+python scripts/generate_multishadow_bounds.py
 python scripts/generate_even_multishadow_bounds.py
 python scripts/n6_coordinate_secant_audit.py
 ```
 
-The bound generators use only the Python standard library and exact integer/rational arithmetic. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 minor modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact tangent dimension 19 over `Q`.
+The bound generators use only the Python standard library and exact integer/rational arithmetic. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
 
 ## Layout
 
