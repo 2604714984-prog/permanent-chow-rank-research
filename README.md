@@ -28,7 +28,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | General `n` derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
 | General Koszul lower bound | proof draft complete | exact formula; the unique optimizing derivative degree is `m=ceil(n/2)` |
 | Border Chow-rank lower bound | proof draft complete | the same closed determinantal obstruction gives `border-ChowRank(perm_n) >= L_K(n)` |
-| Shadow-removal lower bound | proof draft complete | improves the ordinary Koszul bound for `n>=6`; for example `ChowRank(perm_6)>=22` |
+| Shadow-removal lower bound | proof draft complete | `ChowRank(perm_6)>=22`; asymptotic additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
 | Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
 “Proof draft complete” means the argument is written in the repository and its arithmetic implementation is tested. It does **not** mean external peer review or literature novelty review has been completed.
