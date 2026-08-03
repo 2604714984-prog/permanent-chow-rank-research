@@ -90,6 +90,12 @@ class BoundTests(unittest.TestCase):
                 central_catalecticant_bound(n) + 1,
             )
 
+    def test_central_degree_is_global_optimizer(self) -> None:
+        for n in range(3, 301):
+            certificate = best_koszul_bound(n)
+            self.assertEqual(certificate.m, (n + 1) // 2)
+            self.assertEqual(certificate.lower_bound, central_koszul_bound(n))
+
     def test_border_certificate_matches_closed_rank_obstruction(self) -> None:
         for n in range(3, 101):
             self.assertEqual(
