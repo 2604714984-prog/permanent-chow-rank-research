@@ -25,11 +25,22 @@ from .even_multishadow import (
     generalized_binomial,
     reviewed_even_certificates,
 )
+from .multishadow import (
+    REVIEWED_GENERAL_WITNESSES,
+    MultishadowCertificate,
+    best_general_grid_certificate,
+    koszul_data,
+    multishadow_bound_at,
+    reviewed_general_certificates,
+)
 
 __all__ = [
     "BoundCertificate",
     "EvenMultishadowCertificate",
+    "MultishadowCertificate",
+    "REVIEWED_GENERAL_WITNESSES",
     "REVIEWED_WITNESSES",
+    "best_general_grid_certificate",
     "best_koszul_bound",
     "best_rational_grid_certificate",
     "best_shadow_removal_bound",
@@ -45,7 +56,10 @@ __all__ = [
     "generalized_binomial",
     "glynn_upper_bound",
     "koszul_bound_at",
+    "koszul_data",
+    "multishadow_bound_at",
     "permanent_koszul_rank",
     "reviewed_even_certificates",
+    "reviewed_general_certificates",
     "shadow_removal_capacity",
 ]
