@@ -146,6 +146,14 @@ L_K(n):=
 
 This follows from linearity of the flattening and subadditivity of matrix rank. Because the condition `rank K_{n,m}(f) <= r B_{n,m}` is determinantal and therefore Zariski closed, the same bound holds for border Chow rank. The border-rank statement and its scope are written separately in `docs/border_chow_rank_bounds.md`.
 
+The ratio is uniquely maximized at
+
+\[
+m=\left\lceil\frac n2\right\rceil.
+\]
+
+A proof is given in `docs/central_koszul_optimality.md`. Thus the maximization over `m` can be replaced by a single central-degree evaluation.
+
 ### Corollary 4.3 — central catalecticant plus one
 
 For every `n>=3`,
