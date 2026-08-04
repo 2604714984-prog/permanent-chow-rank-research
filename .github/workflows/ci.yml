@@ -81,3 +81,11 @@ jobs:
         run: |
           python scripts/n6_lower26_fixed_q_diagnostic.py \
             --json /tmp/n6_lower26_fixed_q_diagnostic.json
+      - name: Replay n6 first higher-wedge Koszul ranks
+        run: |
+          python scripts/n6_second_koszul_rank_audit.py \
+            --json /tmp/n6_second_koszul_rank_audit.json
+      - name: Replay Glynn sign-family rigidity
+        run: |
+          python scripts/glynn_family_rigidity_audit.py \
+            --json /tmp/glynn_family_rigidity_audit.json

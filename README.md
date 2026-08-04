@@ -34,11 +34,14 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Fixed-offset multishadow optimization | proof draft complete | among every fixed integer output-degree offset and constant witness defect, the unique asymptotic optimizer is the central lower output degree |
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | Vector-valued Macaulay relation cap | proof draft complete; finite interfaces replayed | for `K subset W tensor Sym^2 V`, `dim K^(1)<=dim(K)^{<2>}`; the proof uses a universal Grassmannian kernel and an explicit colored-monomial degeneration |
+| Glynn column-uniform sign family | proof draft complete; exact Walsh replay | the `2^(n-1)` sign products are linearly independent and the unique expansion of `perm_n` in their span uses every term |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the former scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
 | `n=6` fixed-four projection frontier | proof draft complete; exact arithmetic replayed | the raw range is `20<=b<=27`; common-quotient and low-relation arguments exclude `b=27,26,25` |
 | `n=6` component-prolongation closure | superseded proof draft; exact arithmetic replayed | excludes 23-term decompositions and proves the historical lower bound 24 |
 | `n=6` fixed-six lower-25 closure | proof draft complete; primary and independent arithmetic replayed | fixing six terms in a hypothetical 24-term decomposition gives `40<=b<=64`; vector-valued Macaulay growth and block-Sylvester exclude every state, so `ChowRank(perm_6)>=25` |
+| `n=6` lower-26 fixed-count diagnostic | computation replayed; no route selected | `q=6,7,8` leave 327, 355, and 635 states after central pruning, so the central first-Koszul fixed-count route is suspended |
+| `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the Glynn sign subfamily still requires all 32 terms |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
@@ -97,6 +100,9 @@ python scripts/n6_component_prolongation_exclusion.py
 python scripts/vector_valued_macaulay_audit.py
 python scripts/n6_fixed_six_lower25_audit.py
 python scripts/n6_fixed_six_lower25_independent_audit.py
+python scripts/n6_lower26_fixed_q_diagnostic.py
+python scripts/n6_second_koszul_rank_audit.py
+python scripts/glynn_family_rigidity_audit.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
@@ -105,9 +111,13 @@ The universal single-term theorem first degenerates the at-most-six-dimensional 
 
 The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27` and 36 states. Equality at `b=27` forces a common 12-dimensional quadratic quotient, a direct quadratic sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34. Low-relation arguments exclude the next two layers, and componentwise scalar Macaulay growth closes the historical 23-term frontier, proving lower 24.
 
-The new lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
+The lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
+
+The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings, a dimension-only second shadow is vacuous at those fixed counts, and the column-uniform Glynn sign family cannot be shortened below 32 terms. These are route-closing results, not a lower-26 theorem.
 
 The vector-valued Macaulay audit checks 3,996 distinct colored quadratic weights, all six-part successor inequalities through total dimension 16, and all 2,825 subspaces of a small divided-power `F_2` model. The finite-field calculation is a deterministic counterexample search only; it is not used to transfer an equality to characteristic zero.
+
+The first higher-wedge audit splits the `p=2` matrices by exact row-column torus weight and performs sparse rank over `F_1000003`. A modular rank is used only as a characteristic-zero lower bound. At output degree two, the repository records a rank window rather than an unsupported equality.
 
 The extremal six-plane theorem remains an independent structural result. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components.
 

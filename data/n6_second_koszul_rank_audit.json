@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "The modular ranks are characteristic-zero lower bounds. Exactness is claimed only where the preceding-image upper bound agrees. The audit does not rule out higher wedge order, quotient refinements, or additional intersection geometry.",
+  "degrees": [
+    {
+      "characteristic_zero_chow_rank_window": [8730, 8745],
+      "characteristic_zero_permanent_rank_window": [127125, 127575],
+      "certified_second_koszul_rank_ratio_lower_bound": 15,
+      "first_koszul_integer_rank_ratio_lower_bound": 15,
+      "output_degree": 2,
+      "rank_exact_in_characteristic_zero": false,
+      "single_term_domain_dimension": 9450,
+      "single_term_modular_rank": 8730,
+      "single_term_weight_block_count": 8115,
+      "target_domain_dimension": 141750,
+      "target_modular_rank": 127125,
+      "target_weight_block_count": 13500
+    },
+    {
+      "characteristic_zero_chow_rank_window": [12066, 12066],
+      "characteristic_zero_permanent_rank_window": [243936, 243936],
+      "certified_second_koszul_rank_ratio_lower_bound": 21,
+      "first_koszul_integer_rank_ratio_lower_bound": 21,
+      "output_degree": 3,
+      "rank_exact_in_characteristic_zero": true,
+      "single_term_domain_dimension": 12600,
+      "single_term_modular_rank": 12066,
+      "single_term_weight_block_count": 11076,
+      "target_domain_dimension": 252000,
+      "target_modular_rank": 243936,
+      "target_weight_block_count": 30996
+    },
+    {
+      "characteristic_zero_chow_rank_window": [9235, 9235],
+      "characteristic_zero_permanent_rank_window": [140455, 140455],
+      "certified_second_koszul_rank_ratio_lower_bound": 16,
+      "first_koszul_integer_rank_ratio_lower_bound": 16,
+      "output_degree": 4,
+      "rank_exact_in_characteristic_zero": true,
+      "single_term_domain_dimension": 9450,
+      "single_term_modular_rank": 9235,
+      "single_term_weight_block_count": 8626,
+      "target_domain_dimension": 141750,
+      "target_modular_rank": 140455,
+      "target_weight_block_count": 29161
+    }
+  ],
+  "prime": 1000003,
+  "route_decision": "For output degrees 2, 3, and 4, the first higher-wedge Koszul rank ratio has exactly the same integer lower-bound ceiling as the ordinary first-Koszul ratio.",
+  "status": "N6_SECOND_KOSZUL_RANKS_REPLAYED"
+}

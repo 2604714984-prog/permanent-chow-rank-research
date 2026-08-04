@@ -16,8 +16,8 @@ The lower bound 25 is the fixed-six relation-module argument in
 `docs/n6_fixed_six_lower25.md`. The upper bound is Glynn's 32-term
 decomposition. No lower-26, border-lower-25, or exact-32 claim is made.
 
-The first lower-26 fixed-count diagnostic has now been completed. It does not
-select a fixed count and suspends the current central first-Koszul route.
+The lower-26 fixed-count diagnostic and the first alternative-route ceiling
+comparison have both been completed. Neither selects a proof route.
 
 ## 1. Exact numerical baseline
 
@@ -29,19 +29,8 @@ At central derivative degree three,
 \operatorname{rank}K_{6,3}(\operatorname{perm}_6)=14175.
 \]
 
-One degree-six Chow term contributes at most
-
-\[
-20
-\]
-
-to the middle catalectic and at most
-
-\[
-705
-\]
-
-to the first Koszul flattening.
+One degree-six Chow term contributes at most 20 to the middle catalectic and
+at most 705 to the first Koszul flattening.
 
 The current lower-bound history is
 
@@ -137,17 +126,7 @@ exact diagnostic evaluated
 q\in\{6,7,8\}
 \]
 
-fixed terms. For each choice it regenerated:
-
-1. the projection cap `15(q-1)+3`;
-2. rational Bukh shadow certificates;
-3. every symmetric middle-catalectic state;
-4. the quadratic relation-module cap;
-5. the vector-valued Macaulay cubic-relation cap;
-6. conservative individual central-rank profiles; and
-7. the remaining quotient-Koszul requirement.
-
-The result is:
+fixed terms. The result is:
 
 | fixed terms | initial states | central-pruned survivors | structural states | maximum relation cap |
 |---:|---:|---:|---:|---:|
@@ -155,108 +134,134 @@ The result is:
 | 7 | 1,225 | 355 | 290 | 33 |
 | 8 | 1,520 | 635 | 584 | 33 |
 
-The exact details are in
-`docs/n6_lower26_fixed_q_diagnostic.md` and
-`scripts/n6_lower26_fixed_q_diagnostic.py`.
+Six fixed terms are arithmetically smallest, but the frontier is not compact.
+No fixed count is selected and the central first-Koszul fixed-count route is
+suspended for lower 26.
 
-Six fixed terms are arithmetically smallest, but 327 surviving states and 269
-structural states are not a compact frontier. Seven fixed terms are slightly
-worse. Eight fixed terms are substantially worse and leave every
-shadow-permitted `b` layer nonempty.
+## 5. Completed N6-16: alternative-route ceiling comparison
 
-Therefore:
+The exact comparison in
+`docs/n6_alternative_route_ceiling_comparison.md` tests three different
+ideas.
+
+### 5.1 First higher-wedge Koszul differential
+
+For
+
+\[
+\delta_2:
+D_m(f)\otimes\Lambda^2V
+\to
+D_{m-1}(f)\otimes\Lambda^3V,
+\]
+
+the exact torus-block replay gives:
+
+| output degree `m` | permanent rank information | one-term rank information | certified integer ratio |
+|---:|---:|---:|---:|
+| 2 | `127125..127575` | `8730..8745` | 15 |
+| 3 | `243936` | `12066` | 21 |
+| 4 | `140455` | `9235` | 16 |
+
+The first-Koszul integer ratios at the same degrees are also `15,21,16`.
+Thus the first higher wedge does not improve the base rank-ratio ceiling.
+At output degree two the repository records windows, not an unsupported
+characteristic-zero equality.
+
+### 5.2 Scalar second shadow
+
+If
+
+\[
+b=\binom{x}{3}^2,
+\]
+
+then the iterated two-dimensional shadow bound gives
+
+\[
+\dim\partial^2S\ge x^2.
+\]
+
+For `q>=6`, however,
+
+\[
+\dim D_1(R)\le\min(36,6q)=36,
+\]
+
+so this yields only `x<=6` and `b<=400`, the full central dimension. A
+dimension-only second shadow is therefore vacuous on the tested lower-26
+fixed counts.
+
+### 5.3 Structured Glynn-family search
+
+The `2^(n-1)` column-uniform sign products form a Walsh-Hadamard basis of the
+row-parity-symmetric subspace. The unique expansion of `perm_n` in that basis
+uses every term with nonzero coefficient. Hence for `n=6` the natural Glynn
+subfamily requires all 32 terms and contains no 25-term decomposition.
+
+This is a restricted-family theorem, not a Chow-rank lower bound.
+
+### N6-16 decision
 
 ```text
-N6-15=COMPLETED_ROUTE_DIAGNOSTIC
-N6-16_FIXED_COUNT_SELECTION=NO_SELECTION
-CENTRAL_FIRST_KOSZUL_FIXED_COUNT_ROUTE=SUSPENDED_FOR_LOWER_26
+HIGHER_WEDGE_P2=NO_RATIO_IMPROVEMENT
+SCALAR_SECOND_SHADOW=VACUOUS_FOR_Q_GE_6
+COLUMN_UNIFORM_GLYNN_SEARCH=REQUIRES_32_TERMS
+ROUTE_SELECTED=NONE
 ```
 
-This decision is fail-closed. It does not assert that lower 26 is false or
-that no stronger bulk theorem can exist.
+No tested route has a strict global ceiling capable of proving lower 26.
 
-## 5. Why low-profile classification alone is not the answer
+## 6. Next authorized milestone: structure, not another scalar ceiling
 
-The diagnostic assigns central-rank lower bound zero to every unresolved
-individual quadratic profile of dimension at most ten. This is deliberately
-conservative.
+The next work must use information discarded by the completed diagnostics.
+Only two small targets are authorized.
 
-Nevertheless, among the 31 surviving six-fixed `b` layers, the all-full
-profile is the unique minimizing epsilon profile in 29 layers and tied in the
-remaining two. For seven fixed terms it is unique in 30 surviving layers and
-tied in three.
+### N6-17A — higher-Koszul homology structure
 
-Thus a classification of low individual profiles cannot by itself remove the
-broad six- or seven-fixed frontier. A useful next theorem must act on the full
-coupled relation geometry or change the flattening.
+The `p=2`, output-degree-two audit has a nonzero gap between the modular rank
+and the preceding-image upper bound. Determine the characteristic-zero
+homology space and whether it carries a representation-theoretic obstruction
+that survives subtraction of Chow terms.
 
-## 6. Next authorized milestone: route comparison, not state expansion
+The goal is a theorem about the **structure** of the homology, not another
+base rank ratio.
 
-### N6-16 — exact alternative-route ceilings
+### N6-17B — column-dependent sign family
 
-Compare a small number of genuinely different routes before developing any
-of them:
+Enlarge the structured search from one row-sign vector shared by all columns
+to a finite column-dependent sign ansatz. Before optimization, quotient by
+row signs, column signs, row/column permutations, and global scaling. Compute
+the exact span dimension and test whether `perm_6` lies in the span of a
+small orbit family.
 
-1. a higher Koszul flattening;
-2. a coupled first- and second-shadow inequality;
-3. a different derivative output degree; and
-4. exact structured decomposition search.
+This is a falsification/search program, not a lower-bound theorem. It must
+remain finite, symmetry-reduced, and exact.
 
-For each route, first derive an exact global numerical ceiling from existing
-permanent ranks and per-term capacities. A route is promoted only if that
-ceiling can in principle exclude 25 terms with a nontrivial margin.
-
-The comparison must remain a small deterministic script and proof note. It
-must not introduce a manager, dispatcher, ticket system, registry, SAT layer,
-or geometric classification.
-
-### N6-17 — select at most one route
-
-Select one route only when it has:
-
-- a stated characteristic-zero theorem target;
-- a strict numerical margin before case classification;
-- an explicit coupled/uncoupled boundary;
-- a finite falsification test; and
-- a minimal exact replay.
-
-If no route passes, record the negative result and stop the lower-26 program
-until a new mathematical idea appears.
-
-### N6-18 — counterexample and decomposition search
-
-Independently test structured 25-term decompositions and fixed sums with large
-relation modules. A reproducible counterexample to a proposed inequality is a
-valid result and takes precedence over building a proof workflow.
-
-### N6-19 — geometry only after a finite theorem
-
-Do not introduce Hilbert schemes, Kuranishi calculations, SAT/DRAT, or a large
-orbit registry unless a theorem first reduces the unresolved locus to a small
-finite family.
+At most one of N6-17A and N6-17B may be promoted after the first diagnostic.
 
 ## 7. Falsification first
 
-Before promoting any alternative route, search for:
+Before promotion, search for:
 
-- structured decompositions with at most 25 terms;
-- fixed sums saturating the relevant per-term capacity;
-- relation modules whose prolongations attain the Macaulay cap;
-- examples close to equality in block-Sylvester;
-- coupled shadows that fail to add; and
-- finite-field artifacts that disappear over characteristic zero.
+- higher-Koszul homology classes that are already generated by Chow terms;
+- column-dependent sign terms giving a decomposition with at most 25 terms;
+- finite-field rank patterns that fail over characteristic zero;
+- apparent quotient gains destroyed by coupled catalectic cancellation; and
+- symmetry reductions that identify fewer orbits than the implementation
+  assumes.
 
-Finite-field examples are diagnostic only. A dangerous example changes a
-characteristic-zero conclusion only after exact rational elimination, an
-integer minor, or a proved semicontinuity bridge.
+A dangerous example changes a characteristic-zero conclusion only after
+exact rational elimination, an integer minor, or a proved semicontinuity
+bridge.
 
 ## 8. Hidden assumptions
 
-1. At least one alternative flattening has unused numerical headroom.
-2. A useful coupled two-shadow theorem exists.
-3. Structured decomposition search can cover a mathematically meaningful
-   family without becoming a generic optimizer.
-4. A new invariant can act on hundreds of states simultaneously.
+1. The higher-Koszul homology has useful structure beyond its dimension.
+2. A finite column-dependent sign ansatz is broad enough to find a shorter
+   decomposition if one exists nearby.
+3. Symmetry reduction can keep the structured search small.
+4. A new invariant can act on hundreds of fixed-count states simultaneously.
 5. The exact value 32 is not contradicted by a shorter decomposition.
 
 None is a theorem.
@@ -267,29 +272,29 @@ Then lower 25 is the current endpoint of the available method. The correct
 repository state is a proved internal lower-25 draft plus an open lower-26
 problem, not a larger process architecture.
 
-A negative route comparison is acceptable. It would establish that the known
-first-order derivative/Koszul information is numerically saturated and would
-prevent unproductive classification work.
+The completed negative diagnostics remain useful because they prevent three
+unproductive expansions: a larger fixed-count state tree, a scalar second
+shadow, and a base-ratio-only higher-wedge calculation.
 
 ## 10. Fail-closed exit criteria
 
 Suspend a route if any of the following occurs:
 
-- its global numerical ceiling cannot exceed the 25-term capacity;
-- it requires hundreds of states before a new theorem is stated;
-- unresolved low profiles determine the result without a tractable bulk
-  bound;
+- it yields only the already-known integer rank ratio;
+- it needs hundreds of states before a new theorem is stated;
+- its shadow dimension is bounded only by the ambient dimension;
 - it assumes equality between a coupled catalectic image and a literal sum;
 - it relies on finite-field equality without characteristic-zero transfer;
-- it needs a large workflow layer before a finite mathematical reduction; or
+- its structured family is already proved to require all 32 terms; or
 - an exact decomposition or counterexample invalidates its premise.
 
 ## 11. Strongest objection
 
-The fixed-count diagnostic is conservative and may overstate the true
-frontier. A new theorem about Chow-realizable relation modules could collapse
-hundreds of states at once.
+The route comparison tests only the first higher wedge, a dimension-only
+second shadow, and one structured sign family. A genuinely coupled second
+shadow, a higher wedge order, or arbitrary column-dependent linear forms may
+still contain substantial information.
 
-That is the strongest case for revisiting the route. It is also the reason not
-to enumerate the states now: the next deliverable must be the bulk theorem or
-an alternative flattening ceiling, not a larger state table.
+That objection is valid. It justifies N6-17A or N6-17B. It does not justify a
+new registry or a broad computational workflow before one of those targets
+produces an exact structural statement.

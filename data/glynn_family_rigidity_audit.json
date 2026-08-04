@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "General Chow terms may use arbitrary and column-dependent linear forms. This audit is not a general Chow-rank lower bound.",
+  "degrees": [
+    {"family_size":2,"n":2,"negative_coefficient_count":1,"nonzero_expansion_coefficient_count":2,"positive_coefficient_count":1,"proper_subfamily_can_span_permanent":false},
+    {"family_size":4,"n":3,"negative_coefficient_count":2,"nonzero_expansion_coefficient_count":4,"positive_coefficient_count":2,"proper_subfamily_can_span_permanent":false},
+    {"family_size":8,"n":4,"negative_coefficient_count":4,"nonzero_expansion_coefficient_count":8,"positive_coefficient_count":4,"proper_subfamily_can_span_permanent":false},
+    {"family_size":16,"n":5,"negative_coefficient_count":8,"nonzero_expansion_coefficient_count":16,"positive_coefficient_count":8,"proper_subfamily_can_span_permanent":false},
+    {"family_size":32,"n":6,"negative_coefficient_count":16,"nonzero_expansion_coefficient_count":32,"positive_coefficient_count":16,"proper_subfamily_can_span_permanent":false},
+    {"family_size":64,"n":7,"negative_coefficient_count":32,"nonzero_expansion_coefficient_count":64,"positive_coefficient_count":32,"proper_subfamily_can_span_permanent":false},
+    {"family_size":128,"n":8,"negative_coefficient_count":64,"nonzero_expansion_coefficient_count":128,"positive_coefficient_count":64,"proper_subfamily_can_span_permanent":false},
+    {"family_size":256,"n":9,"negative_coefficient_count":128,"nonzero_expansion_coefficient_count":256,"positive_coefficient_count":128,"proper_subfamily_can_span_permanent":false},
+    {"family_size":512,"n":10,"negative_coefficient_count":256,"nonzero_expansion_coefficient_count":512,"positive_coefficient_count":256,"proper_subfamily_can_span_permanent":false}
+  ],
+  "n6_conclusion": "Every one of the 32 column-uniform sign terms occurs with a nonzero coefficient in the unique expansion of perm_6. No 25-term decomposition exists inside this restricted family.",
+  "status": "GLYNN_COLUMN_UNIFORM_FAMILY_RIGIDITY_REPLAYED"
+}
