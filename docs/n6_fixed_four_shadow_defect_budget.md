@@ -101,7 +101,6 @@ For every `j=1,2,3,4`,
 27-b.
 }
 \tag{2.2}
-\]
 
 Summing the four inequalities gives
 
@@ -112,7 +111,6 @@ Summing the four inequalities gives
 4(27-b).
 }
 \tag{2.3}
-\]
 
 ## 3. The excluded endpoint `b=27`
 
@@ -180,34 +178,75 @@ At `b=26`, equation (2.2) becomes
 \qquad(j=1,2,3,4).
 }
 \tag{4.1}
-\]
 
 The total weighted defect obeys
 
 \[
 3\sum_i\varepsilon_i+\sum_i\alpha_i\le4.
 \tag{4.2}
+
+These inequalities give an exact defect-pattern classification.
+
+### Proposition 4.1 — the 24 defect patterns
+
+Exactly one of the following holds.
+
+**Family A — one quadratic-dimension defect.** There is a unique index `i` with
+
+\[
+\varepsilon_i=1,
+\qquad
+\varepsilon_j=0\quad(j\ne i).
 \]
 
-Several immediate consequences are useful.
+Then
 
-1. At most one `epsilon_i` can be nonzero.
-2. If some `epsilon_i=1`, then every other `epsilon` and every `alpha` is zero.
-3. If all `epsilon_i=0`, then each `alpha_i` is zero or one, with no further restriction from (4.1) alone.
-4. Every factor with `alpha_i=0` lies in the equality locus
-   \[
-   \dim(E_2\cap\operatorname{Sym}^2L_i)=3
-   \]
-   and is therefore governed by the disjoint-support `2 x 3` / `3 x 2` classification.
+\[
+\alpha_j=0\quad(j\ne i),
+\qquad
+\alpha_i\in\{0,1\}.
+\]
 
-Thus the `b=26` layer has only two defect families:
+There are eight labelled patterns.
 
-```text
-A. one quadratic-dimension defect epsilon_i=1; all other defects zero;
-B. all quadratic dimensions maximal; an arbitrary subset of alpha_i equals 1.
-```
+**Family B — no quadratic-dimension defect.** All
 
-This is a finite structural split, not a broad Grassmannian search.
+\[
+\varepsilon_i=0,
+\]
+
+and each
+
+\[
+\alpha_i\in\{0,1\}
+\]
+
+is independent. There are sixteen labelled patterns.
+
+Thus there are precisely
+
+\[
+\boxed{8+16=24}
+\tag{4.3}
+\]
+
+labelled defect patterns.
+
+### Proof
+
+If two distinct `epsilon` variables were positive, choose an omitted index different from both; the corresponding inequality in (4.1) would have left side at least two. Thus at most one `epsilon_i` is positive, and every positive value must be one.
+
+If `epsilon_i=1`, then the inequalities with omitted index `j ne i` contain `epsilon_i+alpha_j`, forcing `alpha_j=0`. The inequality omitting `i` permits `alpha_i<=1`. This is family A.
+
+If every `epsilon` is zero, equation (4.1) reduces independently to `alpha_j<=1`, giving family B. ∎
+
+Every factor with `alpha_i=0` lies in the equality locus
+
+\[
+\dim(E_2\cap\operatorname{Sym}^2L_i)=3
+\]
+
+and is governed by the disjoint-support `2 x 3` / `3 x 2` classification. In family A, at least three factors are extremal. In family B, the number of extremal factors ranges from zero to four.
 
 ## 5. Current frontier
 
@@ -234,11 +273,11 @@ The maximum remaining quotient-gain requirement is 157.
 
 The next minimal task is the `b=26` near-equality classification.
 
-1. Treat family A by classifying a single 14-dimensional quadratic derivative space coupled to three extremal 15-dimensional spaces.
-2. Treat family B by combining the explicit 5,580 equality components for the factors with `alpha_i=0` and the one-dimensional intersection losses for the factors with `alpha_i=1`.
+1. Treat the eight family-A patterns by coupling one 14-dimensional quadratic derivative space to three extremal spaces.
+2. Treat the sixteen family-B patterns by the number and support types of the factors with `alpha_i=0`.
 3. Derive the analogue of common-quotient rigidity with one unit of projection defect.
 
-No SAT layer, Hilbert-scheme registry, or general workflow abstraction is justified before this two-family linear-algebra problem is exhausted.
+No SAT layer, Hilbert-scheme registry, or general workflow abstraction is justified before these 24 patterns are reduced algebraically.
 
 ## 7. Reproduction
 
