@@ -1,4 +1,11 @@
 {
+  "b26_defect_patterns": {
+    "family_counts": {
+      "maximal_quadratic_dimensions": 16,
+      "one_quadratic_dimension_defect": 8
+    },
+    "pattern_count": 24
+  },
   "b27_exclusion": {
     "common_quotient_dimension": 12,
     "contradiction": "80>34",
@@ -11,7 +18,7 @@
     20,
     26
   ],
-  "claim_boundary": "Summary identity only. The generator replays the 28-state frontier but does not exclude the 15 remaining structural states or establish the p<=23 and p<=59 caps.",
+  "claim_boundary": "Summary identity only. The generator replays the 28-state frontier and 24 b=26 defect patterns but does not exclude the 15 remaining structural states or establish the p<=23 and p<=59 caps.",
   "excluded_b27_states": [
     [27, 0, 27, "structural", null],
     [27, 1, 28, "structural", null],
