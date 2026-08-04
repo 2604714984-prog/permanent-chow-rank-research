@@ -1,0 +1,58 @@
+{
+  "automatic_low_layers": [
+    {
+      "b": 40,
+      "eighteen_term_koszul_cap": 12690,
+      "residual_koszul_rank_lower_bound": 12735,
+      "strict_margin": 45
+    },
+    {
+      "b": 41,
+      "eighteen_term_koszul_cap": 12690,
+      "residual_koszul_rank_lower_bound": 12699,
+      "strict_margin": 9
+    }
+  ],
+  "central_intersection_range_after_shadow_and_catalectic": [40, 64],
+  "certified_interval_if_algebraic_lemmas_are_accepted": [25, 32],
+  "claim_boundary": "This exact arithmetic payload does not by itself prove the vector-valued Macaulay degeneration lemma, the Bukh shadow theorem, the block-Sylvester inequality, or the individual term profiles. It does not prove lower 26, border lower 25, or exact rank 32.",
+  "component_relation_layers": [
+    {"all_labelled_epsilon_count":79443,"b":42,"defect_budget":16,"impossible_dimension_twelve_labelled_count":41833,"maximum_cubic_relation_kernel_cap":36,"maximum_quadratic_relation_kernel_cap":16,"minimum_coupled_central_rank_lower_bound":48,"profile_feasible_symmetric_type_count":404,"quadratic_shadow_lower_bound":62,"residual_central_rank_upper_bound":44,"shadow_separator":"2243/500","strict_margin":4},
+    {"all_labelled_epsilon_count":79443,"b":43,"defect_budget":16,"impossible_dimension_twelve_labelled_count":41833,"maximum_cubic_relation_kernel_cap":36,"maximum_quadratic_relation_kernel_cap":16,"minimum_coupled_central_rank_lower_bound":48,"profile_feasible_symmetric_type_count":404,"quadratic_shadow_lower_bound":62,"residual_central_rank_upper_bound":46,"shadow_separator":"4499/1000","strict_margin":2},
+    {"all_labelled_epsilon_count":57520,"b":44,"defect_budget":15,"impossible_dimension_twelve_labelled_count":30127,"maximum_cubic_relation_kernel_cap":35,"maximum_quadratic_relation_kernel_cap":15,"minimum_coupled_central_rank_lower_bound":50,"profile_feasible_symmetric_type_count":320,"quadratic_shadow_lower_bound":63,"residual_central_rank_upper_bound":48,"shadow_separator":"4511/1000","strict_margin":2},
+    {"all_labelled_epsilon_count":40888,"b":45,"defect_budget":14,"impossible_dimension_twelve_labelled_count":21228,"maximum_cubic_relation_kernel_cap":30,"maximum_quadratic_relation_kernel_cap":14,"minimum_coupled_central_rank_lower_bound":60,"profile_feasible_symmetric_type_count":253,"quadratic_shadow_lower_bound":64,"residual_central_rank_upper_bound":50,"shadow_separator":"1131/250","strict_margin":10},
+    {"all_labelled_epsilon_count":28475,"b":46,"defect_budget":13,"impossible_dimension_twelve_labelled_count":14613,"maximum_cubic_relation_kernel_cap":26,"maximum_quadratic_relation_kernel_cap":13,"minimum_coupled_central_rank_lower_bound":68,"profile_feasible_symmetric_type_count":196,"quadratic_shadow_lower_bound":65,"residual_central_rank_upper_bound":52,"shadow_separator":"567/125","strict_margin":16},
+    {"all_labelled_epsilon_count":19377,"b":47,"defect_budget":12,"impossible_dimension_twelve_labelled_count":9778,"maximum_cubic_relation_kernel_cap":23,"maximum_quadratic_relation_kernel_cap":12,"minimum_coupled_central_rank_lower_bound":74,"profile_feasible_symmetric_type_count":152,"quadratic_shadow_lower_bound":66,"residual_central_rank_upper_bound":54,"shadow_separator":"1137/250","strict_margin":20},
+    {"all_labelled_epsilon_count":19377,"b":48,"defect_budget":12,"impossible_dimension_twelve_labelled_count":9778,"maximum_cubic_relation_kernel_cap":23,"maximum_quadratic_relation_kernel_cap":12,"minimum_coupled_central_rank_lower_bound":74,"profile_feasible_symmetric_type_count":152,"quadratic_shadow_lower_bound":66,"residual_central_rank_upper_bound":56,"shadow_separator":"114/25","strict_margin":18},
+    {"all_labelled_epsilon_count":12844,"b":49,"defect_budget":11,"impossible_dimension_twelve_labelled_count":6328,"maximum_cubic_relation_kernel_cap":21,"maximum_quadratic_relation_kernel_cap":11,"minimum_coupled_central_rank_lower_bound":78,"profile_feasible_symmetric_type_count":115,"quadratic_shadow_lower_bound":67,"residual_central_rank_upper_bound":58,"shadow_separator":"4571/1000","strict_margin":20},
+    {"all_labelled_epsilon_count":8261,"b":50,"defect_budget":10,"impossible_dimension_twelve_labelled_count":3932,"maximum_cubic_relation_kernel_cap":20,"maximum_quadratic_relation_kernel_cap":10,"minimum_coupled_central_rank_lower_bound":80,"profile_feasible_symmetric_type_count":88,"quadratic_shadow_lower_bound":68,"residual_central_rank_upper_bound":60,"shadow_separator":"4583/1000","strict_margin":20},
+    {"all_labelled_epsilon_count":5131,"b":51,"defect_budget":9,"impossible_dimension_twelve_labelled_count":2342,"maximum_cubic_relation_kernel_cap":16,"maximum_quadratic_relation_kernel_cap":9,"minimum_coupled_central_rank_lower_bound":88,"profile_feasible_symmetric_type_count":64,"quadratic_shadow_lower_bound":69,"residual_central_rank_upper_bound":62,"shadow_separator":"2297/500","strict_margin":26},
+    {"all_labelled_epsilon_count":5131,"b":52,"defect_budget":9,"impossible_dimension_twelve_labelled_count":2342,"maximum_cubic_relation_kernel_cap":16,"maximum_quadratic_relation_kernel_cap":9,"minimum_coupled_central_rank_lower_bound":88,"profile_feasible_symmetric_type_count":64,"quadratic_shadow_lower_bound":69,"residual_central_rank_upper_bound":64,"shadow_separator":"921/200","strict_margin":24},
+    {"all_labelled_epsilon_count":3059,"b":53,"defect_budget":8,"impossible_dimension_twelve_labelled_count":1317,"maximum_cubic_relation_kernel_cap":13,"maximum_quadratic_relation_kernel_cap":8,"minimum_coupled_central_rank_lower_bound":92,"profile_feasible_symmetric_type_count":47,"quadratic_shadow_lower_bound":70,"residual_central_rank_upper_bound":66,"shadow_separator":"577/125","strict_margin":26},
+    {"all_labelled_epsilon_count":1737,"b":54,"defect_budget":7,"impossible_dimension_twelve_labelled_count":687,"maximum_cubic_relation_kernel_cap":11,"maximum_quadratic_relation_kernel_cap":7,"minimum_coupled_central_rank_lower_bound":96,"profile_feasible_symmetric_type_count":33,"quadratic_shadow_lower_bound":71,"residual_central_rank_upper_bound":68,"shadow_separator":"4627/1000","strict_margin":28},
+    {"all_labelled_epsilon_count":930,"b":55,"defect_budget":6,"impossible_dimension_twelve_labelled_count":321,"maximum_cubic_relation_kernel_cap":10,"maximum_quadratic_relation_kernel_cap":6,"minimum_coupled_central_rank_lower_bound":98,"profile_feasible_symmetric_type_count":24,"quadratic_shadow_lower_bound":72,"residual_central_rank_upper_bound":70,"shadow_separator":"4637/1000","strict_margin":28},
+    {"all_labelled_epsilon_count":930,"b":56,"defect_budget":6,"impossible_dimension_twelve_labelled_count":321,"maximum_cubic_relation_kernel_cap":10,"maximum_quadratic_relation_kernel_cap":6,"minimum_coupled_central_rank_lower_bound":98,"profile_feasible_symmetric_type_count":24,"quadratic_shadow_lower_bound":72,"residual_central_rank_upper_bound":72,"shadow_separator":"581/125","strict_margin":26},
+    {"all_labelled_epsilon_count":463,"b":57,"defect_budget":5,"impossible_dimension_twelve_labelled_count":126,"maximum_cubic_relation_kernel_cap":7,"maximum_quadratic_relation_kernel_cap":5,"minimum_coupled_central_rank_lower_bound":100,"profile_feasible_symmetric_type_count":16,"quadratic_shadow_lower_bound":73,"residual_central_rank_upper_bound":74,"shadow_separator":"2329/500","strict_margin":26},
+    {"all_labelled_epsilon_count":210,"b":58,"defect_budget":4,"impossible_dimension_twelve_labelled_count":36,"maximum_cubic_relation_kernel_cap":5,"maximum_quadratic_relation_kernel_cap":4,"minimum_coupled_central_rank_lower_bound":110,"profile_feasible_symmetric_type_count":10,"quadratic_shadow_lower_bound":74,"residual_central_rank_upper_bound":76,"shadow_separator":"1167/250","strict_margin":34},
+    {"all_labelled_epsilon_count":84,"b":59,"defect_budget":3,"impossible_dimension_twelve_labelled_count":6,"maximum_cubic_relation_kernel_cap":4,"maximum_quadratic_relation_kernel_cap":3,"minimum_coupled_central_rank_lower_bound":112,"profile_feasible_symmetric_type_count":6,"quadratic_shadow_lower_bound":75,"residual_central_rank_upper_bound":78,"shadow_separator":"2339/500","strict_margin":34},
+    {"all_labelled_epsilon_count":84,"b":60,"defect_budget":3,"impossible_dimension_twelve_labelled_count":6,"maximum_cubic_relation_kernel_cap":4,"maximum_quadratic_relation_kernel_cap":3,"minimum_coupled_central_rank_lower_bound":112,"profile_feasible_symmetric_type_count":6,"quadratic_shadow_lower_bound":75,"residual_central_rank_upper_bound":80,"shadow_separator":"586/125","strict_margin":32},
+    {"all_labelled_epsilon_count":28,"b":61,"defect_budget":2,"impossible_dimension_twelve_labelled_count":0,"maximum_cubic_relation_kernel_cap":2,"maximum_quadratic_relation_kernel_cap":2,"minimum_coupled_central_rank_lower_bound":116,"profile_feasible_symmetric_type_count":4,"quadratic_shadow_lower_bound":76,"residual_central_rank_upper_bound":82,"shadow_separator":"4697/1000","strict_margin":34},
+    {"all_labelled_epsilon_count":7,"b":62,"defect_budget":1,"impossible_dimension_twelve_labelled_count":0,"maximum_cubic_relation_kernel_cap":1,"maximum_quadratic_relation_kernel_cap":1,"minimum_coupled_central_rank_lower_bound":118,"profile_feasible_symmetric_type_count":2,"quadratic_shadow_lower_bound":77,"residual_central_rank_upper_bound":84,"shadow_separator":"4707/1000","strict_margin":34},
+    {"all_labelled_epsilon_count":7,"b":63,"defect_budget":1,"impossible_dimension_twelve_labelled_count":0,"maximum_cubic_relation_kernel_cap":1,"maximum_quadratic_relation_kernel_cap":1,"minimum_coupled_central_rank_lower_bound":118,"profile_feasible_symmetric_type_count":2,"quadratic_shadow_lower_bound":77,"residual_central_rank_upper_bound":86,"shadow_separator":"1179/250","strict_margin":32},
+    {"all_labelled_epsilon_count":1,"b":64,"defect_budget":0,"impossible_dimension_twelve_labelled_count":0,"maximum_cubic_relation_kernel_cap":0,"maximum_quadratic_relation_kernel_cap":0,"minimum_coupled_central_rank_lower_bound":120,"profile_feasible_symmetric_type_count":1,"quadratic_shadow_lower_bound":78,"residual_central_rank_upper_bound":88,"shadow_separator":"189/40","strict_margin":32}
+  ],
+  "conclusion": "Every fixed-six state under a hypothetical 24-term decomposition is contradictory. Therefore ChowRank(perm_6)>=25 over characteristic zero.",
+  "fixed_terms": 6,
+  "hypothetical_total_terms": 24,
+  "macaulay_degree_two_successors": {"0":0,"1":1,"2":2,"3":4,"4":5,"5":7,"6":10,"7":11,"8":13,"9":16,"10":20,"11":21,"12":23,"13":26,"14":30,"15":35,"16":36},
+  "module_partition_identity_verified_through": 16,
+  "projection_cap": 78,
+  "reconstructed_term_profiles": {
+    "factor_span_at_most_four_quadratic_cap": 10,
+    "factor_span_five_support_table": {"1":[11,14],"2":[11,14],"3":[13,18],"4":[14,20],"5":[15,20]},
+    "factor_span_six_independent": [15,20],
+    "quadratic_dimension_twelve_impossible": true
+  },
+  "residual_terms": 18,
+  "status": "EXACT_N6_FIXED_SIX_24_TERM_EXCLUSION_REPLAYED"
+}
