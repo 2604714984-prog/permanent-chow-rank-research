@@ -1,19 +1,53 @@
 {
-  "b26_defect_patterns": {
-    "family_counts": {
-      "maximal_quadratic_dimensions": 16,
-      "one_quadratic_dimension_defect": 8
+  "b25_defect_patterns": {
+    "pattern_count": 213,
+    "relation_kernel_cap_counts": {
+      "0": 189,
+      "1": 23,
+      "2": 1
     },
-    "pattern_count": 24
+    "unique_two_relation_pattern": {
+      "alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "epsilon": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "b25_exclusion": {
+    "contradictions": [
+      "78>30",
+      "80>30"
+    ],
+    "direct_pattern_count": 189,
+    "excluded_state_count": 6,
+    "one_relation_pattern_count": 23,
+    "residual_central_rank_upper_bound": 30,
+    "two_relation_pattern_count": 1,
+    "two_relation_squarefree_binary_obstruction": true
+  },
+  "b26_defect_patterns": {
+    "pattern_count": 24,
+    "relation_kernel_cap_counts": {
+      "0": 23,
+      "1": 1
+    }
   },
   "b26_exclusion": {
     "contradictions": [
       "60>32",
       "80>32"
     ],
+    "direct_pattern_count": 23,
     "excluded_state_count": 7,
-    "family_a_central_rank_lower_bound": 60,
-    "family_b_central_rank": 80,
+    "one_relation_pattern_count": 1,
     "one_relation_pure_cube_obstruction": true,
     "residual_central_rank_upper_bound": 32
   },
@@ -27,9 +61,17 @@
   },
   "b_range": [
     20,
-    25
+    24
   ],
-  "claim_boundary": "Summary identity only. The generator replays the 21-state frontier after the b=27 and b=26 exclusions but does not exclude the 10 remaining structural states or establish the p<=23 and p<=59 caps.",
+  "claim_boundary": "Summary identity only. The generator replays the 15-state frontier after the b=27, b=26, and b=25 exclusions but does not exclude the 6 remaining structural states or establish the p<=23 and p<=59 caps.",
+  "excluded_b25_states": [
+    [25, 0, 25, "structural", null],
+    [25, 1, 26, "structural", null],
+    [25, 2, 27, "structural", null],
+    [25, 3, 28, "structural", null],
+    [25, 4, 29, "p_cap", 23],
+    [25, 5, 30, "p_cap", 59]
+  ],
   "excluded_b26_states": [
     [26, 0, 26, "structural", null],
     [26, 1, 27, "structural", null],
@@ -49,6 +91,22 @@
     [27, 6, 33, "p_cap", 23],
     [27, 7, 34, "p_cap", 59]
   ],
+  "frontier_after_b26": {
+    "b_range": [
+      20,
+      25
+    ],
+    "p_cap_counts": {
+      "23": 4,
+      "59": 4
+    },
+    "route_counts": {
+      "automatic": 3,
+      "p_cap": 8,
+      "structural": 10
+    },
+    "state_count": 21
+  },
   "frontier_after_b27": {
     "b_range": [
       20,
@@ -65,7 +123,7 @@
     },
     "state_count": 28
   },
-  "maximum_remaining_gain_requirement": 121,
+  "maximum_remaining_gain_requirement": 85,
   "maximal_term_profile": {
     "factor_span_five": {
       "1": [
@@ -93,11 +151,11 @@
       15,
       20
     ],
-    "pure_cube_free_at_quadratic_dimension_15": true
+    "pure_cube_free_for_displayed_profiles": true
   },
   "p_cap_counts": {
-    "23": 4,
-    "59": 4
+    "23": 3,
+    "59": 3
   },
   "projection_cap": 48,
   "raw_frontier": {
@@ -118,15 +176,15 @@
   },
   "route_counts": {
     "automatic": 3,
-    "p_cap": 8,
-    "structural": 10
+    "p_cap": 6,
+    "structural": 6
   },
   "separator": {
     "binom_x_2_sq": "19496257641/400000000",
     "binom_x_3_sq": "111624739998121/4000000000000",
     "x": "427/100"
   },
-  "state_count": 21,
+  "state_count": 15,
   "states": [
     [20, 0, 20, "automatic", null],
     [21, 0, 21, "automatic", null],
@@ -142,13 +200,7 @@
     [24, 1, 25, "structural", null],
     [24, 2, 26, "structural", null],
     [24, 3, 27, "p_cap", 23],
-    [24, 4, 28, "p_cap", 59],
-    [25, 0, 25, "structural", null],
-    [25, 1, 26, "structural", null],
-    [25, 2, 27, "structural", null],
-    [25, 3, 28, "structural", null],
-    [25, 4, 29, "p_cap", 23],
-    [25, 5, 30, "p_cap", 59]
+    [24, 4, 28, "p_cap", 59]
   ],
-  "status": "EXACT_INTEGER_FRONTIER_THROUGH_B26_EXCLUSION_REPLAYED"
+  "status": "EXACT_INTEGER_FRONTIER_THROUGH_B25_EXCLUSION_REPLAYED"
 }
