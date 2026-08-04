@@ -5,300 +5,250 @@
 `OPEN`. The currently proved in-repository interval is
 
 \[
-23
+24
 \le
 \operatorname{ChowRank}(\operatorname{perm}_6)
 \le
 32.
 \]
 
-The lower bound 23 follows from the multidimensional-shadow theorem. The upper bound is Glynn's 32-term decomposition. No exact-32 claim is made.
+The lower bound 24 is the internal proof draft in
+`docs/n6_component_prolongation_exclusion.md`. The upper bound is Glynn's
+32-term decomposition. No exact-32 claim is made.
 
 ## 1. Exact numerical baseline
 
-Use the central derivative degree `m=3`:
+At central derivative degree three,
 
 \[
-\dim\mathcal D_3(P_6)=400,
+\dim\mathcal D_3(\operatorname{perm}_6)=400,
 \qquad
-A_{6,3}=14175.
+\operatorname{rank}K_{6,3}(\operatorname{perm}_6)=14175.
 \]
 
 One six-factor Chow term contributes at most
 
 \[
-B_{6,3}=705.
+20
 \]
 
-The current proof history is:
+to the middle catalectic and at most
+
+\[
+705
+\]
+
+to the first Koszul flattening.
+
+The proved lower-bound history is
 
 ```text
 ordinary first-Koszul ratio:            21
 zero-intersection shadow removal:       22
 multidimensional-shadow intersection:   23
+fixed-four component prolongation:      24
 ```
 
-The 23 certificate fixes four terms, obtains the complementary intersection cap
+## 2. What closed the 23-term problem
+
+Under a hypothetical 23-term decomposition, fixing four terms gives a
+nineteen-term residual. Projection and Bukh compression first reduce the
+central intersection to
 
 \[
-b\le40,
+20\le b\le27.
 \]
 
-and uses
+The layers `b=27,26,25` are excluded by common-quotient, one-relation, and
+two-relation coupling arguments.
+
+For the remaining layers, let `kappa` be the quadratic relation-kernel
+dimension among the four fixed quadratic derivative spaces. Each component
+of a cubic relation lies in the first prolongation of a scalar quadratic
+space of dimension at most `kappa`. Macaulay growth gives
 
 \[
-14175-36\cdot40=12735,
-\qquad
-\left\lceil\frac{12735}{705}\right\rceil=19.
+\dim P^{(1)}\le\kappa^{\langle2\rangle}.
 \]
 
-Thus `4+19=23`.
+The four-component cubic relation kernel is therefore at most
 
-## 2. Exact residual identity with quotient gain
+\[
+3\kappa^{\langle2\rangle}.
+\]
+
+A block-Sylvester inequality converts this into minimum coupled central
+ranks
+
+```text
+b=22: 38 > residual upper bound 24
+b=23: 50 > residual upper bound 26
+b=24: 56 > residual upper bound 28
+```
+
+The three states at `b=20,21` were already strict in the quotient-Koszul
+budget. Hence no 23-term decomposition exists.
+
+## 3. Exact residual identity retained for later work
 
 For a fixed partial sum `R`, define
 
 \[
-E=\mathcal D_3(P_6),
+E=\mathcal D_3(\operatorname{perm}_6),
 \qquad
 H=\mathcal D_3(R),
+\qquad
+b=\dim(E\cap H).
 \]
 
-\[
-b=\dim(E\cap H),
-\]
-
-and
-
-\[
-\Gamma_E(H)
-=
-\operatorname{rank}\delta_3((E+H)\otimes V)
--
-\operatorname{rank}\delta_3(E\otimes V).
-\]
-
-The exact residual estimate is
+The exact first-Koszul residual estimate is
 
 \[
 \boxed{
-\operatorname{rank}K_{6,3}(P_6-R)
+\operatorname{rank}K_{6,3}(\operatorname{perm}_6-R)
 \ge
 14175-36b+\Gamma_E(H).
 }
-\tag{2.1}
+\tag{3.1}
 \]
 
-The previous multishadow theorem discarded the nonnegative term `Gamma`.
+The quotient gain `Gamma` is nonnegative but is not additive term by term
+for a coupled sum. The one-term full-gain theorem remains valid and useful,
+but it does not by itself address the next lower-bound step.
 
-At the four-term frontier, a lower bound of 24 would follow from
+## 4. Next milestone: test the 24-term frontier
 
-\[
-\boxed{\Gamma_E(H)\ge661.}
-\tag{2.2}
-\]
+A lower bound of 25 requires excluding a 24-term decomposition. The previous
+four-fixed-term state equations change because the residual now has twenty
+terms:
 
-The neighboring one-step thresholds are:
+- middle-catalectic capacity `20*20=400`;
+- first-Koszul capacity `20*705=14100`;
+- the former lower edge `b>=20` disappears for four fixed terms.
 
-| fixed terms | intersection cap | required `Gamma` for total 24 |
-|---:|---:|---:|
-| 3 | 24 | 790 |
-| 4 | 40 | **661** |
-| 5 | 60 | 676 |
+Therefore the lower-24 proof cannot be relabelled mechanically as a
+lower-25 proof.
 
-Thus the four-term state is the smallest quantified target.
+The next task is a diagnostic theorem generator for a general number `q` of
+fixed terms. It must compute, without guessed states:
 
-## 3. Proved limitation of the current scalar shadow route
+1. the projection cap
+   \[
+   \dim(E_2\cap\sum_{i=1}^qG_i)\le15(q-1)+3;
+   \]
+2. the exact Bukh shadow cap on the central intersection;
+3. the symmetric middle-catalectic state inequalities for a
+   `(24-q)`-term residual;
+4. the quadratic relation-kernel cap;
+5. the componentwise Macaulay cubic-relation cap;
+6. the quotient-Koszul gain still required after the central-rank
+   exclusions.
 
-The complete exact optimization of the current one-step Bukh-shadow formula over
+The purpose is to choose the smallest mathematically effective fixed-term
+count, not to create a generic state-management framework.
 
-\[
-m=2,3,4
-\]
+## 5. Falsification first
 
-and every continuous witness value has maximum 23. The only maximizing states are
+Before promoting a lower-25 route, search for exact counterexamples to its
+implicit assumptions:
 
-```text
-m=3, q=4, b=40, residual terms=19
-m=3, q=5, b=60, residual terms=18
-```
+- structured 24-term decompositions;
+- fixed sums with unusually large quadratic relation kernels;
+- coupled middle-catalectic rank below the proposed block-Sylvester lower
+  bound because one of its hypotheses was misapplied;
+- low quadratic derivative profiles that defeat the conservative term-rank
+  table;
+- quotient gains too small to close the residual budget.
 
-Moreover, the coordinate family
+Finite-field examples are diagnostics only. A dangerous example must be
+replayed by exact rational elimination, an integer minor, or a proved
+semicontinuity bridge before it changes a characteristic-zero statement.
 
-\[
-\binom{[5]}3\times\binom{[4]}3
-\]
+## 6. Recommended minimal sequence
 
-has size 40 and simultaneous lower shadow 60. Therefore the universal `q=4` shadow cap is sharp as a combinatorial statement.
+### N6-14 — general fixed-`q` arithmetic diagnostic
 
-This proves that none of the following can improve the universal bound to 24:
+Extend the exact integer formulas to a hypothetical 24-term decomposition
+for `q=4,5,6`. Record every derived state directly from the inequalities.
+Do not import the historical 23-term table.
 
-- a denser rational search for the same witness;
-- switching to output degree 2 or 4;
-- exact continuous optimization of the same scalar formula;
-- lowering the universal `q=4` cap below 40 using shadow cardinality alone.
+The output is diagnostic until every shadow separator and term-profile
+input is proved.
 
-A stronger result must use Chow realizability, positive quotient gain, higher coupled data, or another invariant.
+### N6-15 — select one proof frontier
 
-## 4. Full gain is possible
+Choose the smallest `q` for which the arithmetic leaves a strict, small
+frontier. Reject any route that leaves a broad positive-dimensional
+classification problem with no numerical margin.
 
-For the explicit diagonal term
+### N6-16 — classify only the surviving profiles
 
-\[
-T_{\mathrm{diag}}=\prod_{i=0}^{5}x_{ii},
-\]
+If a small frontier exists, classify only the individual quadratic
+profiles and component relation spaces actually appearing there. Do not
+classify all degree-six Chow terms.
 
-one has
+### N6-17 — exact route counterexample search
 
-\[
-\mathcal D_2(P_6)
-\cap
-\mathcal D_2(T_{\mathrm{diag}})
-=0.
-\]
+In parallel, test structured fixed sums and candidate 24-term decompositions.
+A reproducible counterexample is a result: it rejects the route and prevents
+a speculative proof architecture.
 
-Derivative transversality implies that its entire Koszul rank survives in the quotient:
+### N6-18 — geometry only after finite reduction
 
-\[
-\Gamma_E(\mathcal D_3(T_{\mathrm{diag}}))=705.
-\]
+Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations,
+managers, registries, dispatchers, or multi-repository orchestration unless
+a theorem first reduces the unresolved locus to a finite and small set.
 
-The independent sparse replay gives
+## 7. Hidden assumptions
 
-\[
-\operatorname{rank}\delta_3
-\left(
-(E+\mathcal D_3(T_{\mathrm{diag}}))\otimes V
-\right)
-=14880.
-\]
+1. A useful fixed-`q` count exists for the 24-term problem.
+2. Componentwise Macaulay growth remains numerically strong when the
+   quadratic relation kernel is larger than five.
+3. Conservative central-rank lower bounds for low quadratic profiles do not
+   erase the margin.
+4. The block-Sylvester lower bound is close enough to the actual coupled
+   rank to be useful.
+5. The exact value 32 is not contradicted by a shorter decomposition.
 
-This exceeds the four-term threshold 661, so the target is numerically plausible for transverse configurations. It is not uniform: special terms or coupled sums may have much smaller gain.
+None of these assumptions is promoted to a theorem.
 
-## 5. Coordinate low-catalectic geometry
-
-The central space has 400 coordinate `3 x 3` subpermanents. All 79,800 coordinate pairs were classified. Their first-catalectic ranks are
-
-```text
-9, 13, 15, 16, 17, 18.
-```
-
-Rank nine persists on overlap types `(3,2)` and `(2,3)`. At every coordinate point, the rank-at-most-nine determinantal locus has affine tangent dimension 19 and projective tangent dimension 18.
-
-Therefore the low-catalectic boundary is positive-dimensional. Any route that assumes isolated torus-fixed points is invalid.
-
-## 6. Hidden assumptions
-
-1. **Glynn is optimal for unrestricted Chow rank.** This remains conjectural.
-2. **A uniform four-term gain near 661 exists.** The diagonal term proves existence of full gain, not uniformity.
-3. **Extremal Bukh families are not Chow-realizable.** This has not been proved.
-4. **Lower-degree derivative intersections control `Gamma` sharply.** Only a sufficient transversality criterion is currently known.
-5. **A finite dangerous frontier exists.** Positive-dimensional coordinate branches may obstruct a small orbit classification.
-
-## 7. Assume every assumption is false
-
-Then exact 32 may be inaccessible to the central first-Koszul route, or false. The correct response is not to add a large finite-state pipeline. It is to search for explicit route counterexamples:
-
-- four-term sums with `b` near 40 and `Gamma<661`;
-- eleven-term sums with residual rank at most 14,100;
-- structured decompositions with at most 31 terms.
-
-Finite-field examples are diagnostics only. They require an integer minor, exact rational elimination, or a proved semicontinuity bridge before entering a characteristic-zero claim.
-
-## 8. Recommended minimal program
-
-### N6-1 — classify failure of derivative transversality
-
-Study
-
-\[
-\mathcal D_2(P_6)
-\cap
-\partial\mathcal D_3(R).
-\]
-
-The first objective is a structural classification for one Chow term, then for sums of two to four terms. Determine which factor configurations create a nonzero lower-degree intersection and how much quotient gain they lose.
-
-### N6-2 — prove a quantitative `Gamma` inequality
-
-Seek a theorem of the form
-
-\[
-\Gamma_E(H)
-\ge
-705q-\Phi(Z),
-\]
-
-where `q` is the number of fixed independent contributions and `Z` is an explicitly controlled lower-degree intersection or relation space.
-
-The immediate target is not exact 32; it is the uniform four-term inequality
-
-\[
-\Gamma_E(H)\ge661
-\]
-
-under the same state that gives `b<=40`. Failure should be recorded with an exact counterexample.
-
-### N6-3 — test Chow realizability of the extremal 40-family
-
-The family
-
-\[
-\binom{[5]}3\times\binom{[4]}3
-\]
-
-attains the universal shadow cap. Determine whether it can occur as a torus limit of
-
-\[
-\mathcal D_3(P_6)
-\cap
-\mathcal D_3(R)
-\]
-
-for a four-term Chow sum `R`. A non-realizability theorem would improve the current cap without changing Bukh's combinatorics.
-
-### N6-4 — coupled first and second shadows
-
-Track both
-
-\[
-\partial S
-\quad\text{and}\quad
-\partial^2S
-\]
-
-and their compatibility with one common Chow sum. The existing scalar shadow theorem forgets this coupling.
-
-### N6-5 — exact diagnostics
-
-For structured candidate sums, record:
-
-- `b=dim(D_3(P_6) intersect D_3(R))`;
-- quotient dimension `dim((E+H)/E)`;
-- `Gamma`;
-- residual Koszul rank;
-- lower-degree intersection dimension;
-- whether the intersection enters a known coordinate rank-nine branch.
-
-Any dangerous representative must be replayed with exact rational arithmetic or a certified integer minor.
-
-### N6-6 — geometry only after a finite frontier exists
-
-Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations, managers, registries, dispatchers, or multi-repository orchestration unless a mathematical theorem first reduces the dangerous cases to a finite and small set.
+## 8. Assume every assumption is false
+
+Then the lower-24 argument is a local success rather than the beginning of
+a monotone induction. The correct response is to stop extending the same
+fixed-four machinery and pivot to one of:
+
+- a different fixed-term count;
+- a higher Koszul flattening;
+- coupled first and second shadows;
+- a border-versus-ordinary rank separation;
+- explicit decomposition search.
+
+The repository should not add process complexity merely to preserve the
+current route.
 
 ## 9. Fail-closed exit criteria
 
-Reject or suspend the central-Koszul exact route if any of the following occurs:
+Suspend a lower-25 route if any of the following occurs:
 
-- a decomposition with at most 31 terms is found;
-- a reproducible four-term sum has `b<=40` and `Gamma<661`, with no compensating invariant;
-- a reproducible eleven-term sum has residual rank at most 14,100;
-- the extremal shadow families are Chow-realizable on an uncontrolled positive-dimensional family;
-- no finite frontier can be proved without a large speculative workflow;
-- the required geometry becomes materially more complex than the obstruction it certifies.
+- a reproducible decomposition with at most 24 terms is found;
+- every tested fixed-term count leaves a large uncontrolled frontier;
+- the componentwise prolongation cap loses all strict central-rank margin;
+- the remaining quotient-gain requirement is not structurally linked to the
+  surviving profiles;
+- exact replay requires a large workflow before a finite theorem has been
+  stated;
+- a claimed characteristic-zero step depends only on finite-field equality
+  or random search.
 
-## 10. Strongest objection to this program
+## 10. Strongest objection
 
-The target `Gamma>=661` may fail badly on coupled four-term sums. The diagonal example may be atypically transverse, and classifying all failures could be as difficult as the original rank problem.
+The new lower bound 24 may be an endpoint of this method. In the 24-term
+problem the twenty-term residual saturates the permanent's middle
+catalectic rank, so the central lower edge that made the 23-term frontier
+small disappears. A fixed-`q` refinement may therefore produce many states
+without a usable margin.
 
-That objection is decisive enough to impose a stopping rule: N6-1 through N6-3 must either produce a strict theorem, a small finite frontier, or an exact route counterexample. Otherwise the program should pivot to a different flattening or to asymptotic lower bounds rather than add process complexity.
+This objection is strong enough to impose a stopping rule: N6-14 must first
+show a compact exact frontier. If it does not, the project should pivot
+rather than add a larger classification layer.
