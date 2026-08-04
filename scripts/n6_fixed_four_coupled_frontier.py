@@ -6,8 +6,10 @@ fix four terms with sum ``R``. The mathematical note
 ``docs/n6_fixed_four_coupled_frontier.md`` proves:
 
 * the central intersection ``b`` is at most 27, improving the raw Bukh cap 40;
+* for ``20<=b<=27``, the quadratic derivative shadow is at least ``b+21``;
+* the individual quadratic-space defects satisfy an explicit budget ``27-b``;
 * the central catalectic quotient dimension ``d`` satisfies
-  ``20 <= b <= 27`` and ``0 <= d <= b-20``;
+  ``0 <= d <= b-20``;
 * exactly 36 integer states remain;
 * three states are already excluded by the residual rank budget;
 * twelve states can be excluded by relative-prolongation caps 23 or 59; and
@@ -38,6 +40,16 @@ RESIDUAL_KOSZUL_CAP = RESIDUAL_TERMS * PER_TERM_KOSZUL_CAP
 RESIDUAL_CENTRAL_CAP = RESIDUAL_TERMS * PER_TERM_CENTRAL_CAP
 AMBIENT_VARIABLES = 36
 BUKH_SEPARATOR = Fraction(427, 100)
+SHADOW_SEPARATORS: dict[int, Fraction] = {
+    20: Fraction(41, 10),
+    21: Fraction(103, 25),
+    22: Fraction(207, 50),
+    23: Fraction(104, 25),
+    24: Fraction(209, 50),
+    25: Fraction(21, 5),
+    26: Fraction(211, 50),
+    27: Fraction(106, 25),
+}
 
 
 def generalized_binomial(value: Fraction, order: int) -> Fraction:
@@ -69,10 +81,34 @@ def bukh_separator_certificate() -> dict[str, object]:
     }
 
 
+def exact_shadow_lower_table() -> dict[str, dict[str, object]]:
+    table: dict[str, dict[str, object]] = {}
+    for dimension, separator in SHADOW_SEPARATORS.items():
+        cubic_size = generalized_binomial(separator, 3) ** 2
+        quadratic_shadow = generalized_binomial(separator, 2) ** 2
+        target_shadow = dimension + 20
+
+        if not cubic_size < dimension:
+            raise AssertionError((dimension, cubic_size))
+        if not quadratic_shadow > target_shadow:
+            raise AssertionError((dimension, quadratic_shadow))
+
+        table[str(dimension)] = {
+            "separator": str(separator),
+            "binom_separator_3_squared": str(cubic_size),
+            "binom_separator_2_squared": str(quadratic_shadow),
+            "integer_shadow_lower_bound": dimension + 21,
+            "per_omitted_factor_defect_budget": 27 - dimension,
+        }
+    return table
+
+
 def build_states() -> list[dict[str, object]]:
     states: list[dict[str, object]] = []
 
     for intersection_dimension in range(20, 28):
+        shadow_lower = intersection_dimension + 21
+        defect_budget = 27 - intersection_dimension
         for quotient_dimension in range(
             0,
             intersection_dimension - 20 + 1,
@@ -109,6 +145,8 @@ def build_states() -> list[dict[str, object]]:
                     "central_rank_upper_from_residual": (
                         2 * intersection_dimension - 20
                     ),
+                    "quadratic_shadow_lower_bound": shadow_lower,
+                    "per_omitted_factor_defect_budget": defect_budget,
                     "minimum_quotient_gain_for_strict_koszul_budget": required_gain,
                     "maximum_possible_quotient_gain": maximum_gain,
                     "relative_prolongation_cap_sufficient_for_closure": prolongation_cap,
@@ -129,6 +167,7 @@ def build_payload() -> dict[str, object]:
     if projection_cap != 48:
         raise AssertionError(projection_cap)
 
+    shadow_table = exact_shadow_lower_table()
     states = build_states()
     route_histogram = Counter(row["route"] for row in states)
     expected_histogram = {
@@ -156,6 +195,7 @@ def build_payload() -> dict[str, object]:
         "residual_central_catalectic_cap": RESIDUAL_CENTRAL_CAP,
         "quadratic_intersection_projection_cap": projection_cap,
         "bukh_separator_certificate": bukh_separator_certificate(),
+        "exact_shadow_lower_table": shadow_table,
         "central_intersection_range": [20, 27],
         "state_count": len(states),
         "route_histogram": dict(sorted(route_histogram.items())),
@@ -164,8 +204,9 @@ def build_payload() -> dict[str, object]:
         },
         "states": states,
         "claim_boundary": (
-            "The audit proves the numerical frontier only. It does not exclude "
-            "the 21 structural states or establish the p<=23 and p<=59 caps."
+            "The audit proves the numerical frontier and defect budgets only. "
+            "It does not exclude the 21 structural states or establish the "
+            "p<=23 and p<=59 caps."
         ),
     }
 
