@@ -39,6 +39,42 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             certificate["binom_separator_2_squared_is_greater_than_48"]
         )
 
+    def test_exact_shadow_and_defect_budgets(self) -> None:
+        table = self.payload["exact_shadow_lower_table"]
+        expected_separators = {
+            "20": "41/10",
+            "21": "103/25",
+            "22": "207/50",
+            "23": "104/25",
+            "24": "209/50",
+            "25": "21/5",
+            "26": "211/50",
+            "27": "106/25",
+        }
+        self.assertEqual(set(table), set(expected_separators))
+        for key, separator in expected_separators.items():
+            dimension = int(key)
+            self.assertEqual(table[key]["separator"], separator)
+            self.assertEqual(
+                table[key]["integer_shadow_lower_bound"],
+                dimension + 21,
+            )
+            self.assertEqual(
+                table[key]["per_omitted_factor_defect_budget"],
+                27 - dimension,
+            )
+
+        for row in self.payload["states"]:
+            dimension = row["central_intersection_b"]
+            self.assertEqual(
+                row["quadratic_shadow_lower_bound"],
+                dimension + 21,
+            )
+            self.assertEqual(
+                row["per_omitted_factor_defect_budget"],
+                27 - dimension,
+            )
+
     def test_state_partition(self) -> None:
         self.assertEqual(self.payload["central_intersection_range"], [20, 27])
         self.assertEqual(self.payload["state_count"], 36)
