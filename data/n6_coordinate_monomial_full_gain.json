@@ -1,0 +1,112 @@
+{
+  "characteristic_zero_conclusion": "For every coordinate monomial M of degree six, im K_3(perm_6) intersects im K_3(M) trivially, so the quotient Koszul gain equals rank K_3(M).",
+  "claim_boundary": "This theorem covers reduced coordinate fixed points only. It does not prove full quotient gain for arbitrary Chow terms or for non-strict torus limits with rank loss.",
+  "coordinate_monomial_orbits": 167,
+  "k23_exact_minor_certificate": {
+    "next_koszul_minor_determinant": -1,
+    "next_koszul_minor_order": 45,
+    "quadratic_first_koszul_minor_determinant": -1,
+    "quadratic_first_koszul_minor_order": 18
+  },
+  "multiplicity_partition_certificates": {
+    "1,1,1,1,1,1": {
+      "degree_four_prolongation_dimension": 15,
+      "degree_three_derivative_dimension": 20,
+      "exact_quotient_koszul_gain": 705,
+      "exact_term_koszul_rank": 705,
+      "orbit_count": 50
+    },
+    "2,1,1,1,1": {
+      "degree_four_prolongation_dimension": 11,
+      "degree_three_derivative_dimension": 14,
+      "exact_quotient_koszul_gain": 493,
+      "exact_term_koszul_rank": 493,
+      "orbit_count": 50
+    },
+    "2,2,1,1": {
+      "degree_four_prolongation_dimension": 8,
+      "degree_three_derivative_dimension": 10,
+      "exact_quotient_koszul_gain": 352,
+      "exact_term_koszul_rank": 352,
+      "orbit_count": 25
+    },
+    "2,2,2": {
+      "degree_four_prolongation_dimension": 6,
+      "degree_three_derivative_dimension": 7,
+      "exact_quotient_koszul_gain": 246,
+      "exact_term_koszul_rank": 246,
+      "orbit_count": 4
+    },
+    "3,1,1,1": {
+      "degree_four_prolongation_dimension": 8,
+      "degree_three_derivative_dimension": 8,
+      "exact_quotient_koszul_gain": 280,
+      "exact_term_koszul_rank": 280,
+      "orbit_count": 17
+    },
+    "3,2,1": {
+      "degree_four_prolongation_dimension": 6,
+      "degree_three_derivative_dimension": 6,
+      "exact_quotient_koszul_gain": 210,
+      "exact_term_koszul_rank": 210,
+      "orbit_count": 8
+    },
+    "3,3": {
+      "degree_four_prolongation_dimension": 5,
+      "degree_three_derivative_dimension": 4,
+      "exact_quotient_koszul_gain": 139,
+      "exact_term_koszul_rank": 139,
+      "orbit_count": 2
+    },
+    "4,1,1": {
+      "degree_four_prolongation_dimension": 4,
+      "degree_three_derivative_dimension": 4,
+      "exact_quotient_koszul_gain": 140,
+      "exact_term_koszul_rank": 140,
+      "orbit_count": 6
+    },
+    "4,2": {
+      "degree_four_prolongation_dimension": 3,
+      "degree_three_derivative_dimension": 3,
+      "exact_quotient_koszul_gain": 105,
+      "exact_term_koszul_rank": 105,
+      "orbit_count": 2
+    },
+    "5,1": {
+      "degree_four_prolongation_dimension": 2,
+      "degree_three_derivative_dimension": 2,
+      "exact_quotient_koszul_gain": 70,
+      "exact_term_koszul_rank": 70,
+      "orbit_count": 2
+    },
+    "6": {
+      "degree_four_prolongation_dimension": 1,
+      "degree_three_derivative_dimension": 1,
+      "exact_quotient_koszul_gain": 35,
+      "exact_term_koszul_rank": 35,
+      "orbit_count": 1
+    }
+  },
+  "permanent_central_koszul_rank": 14175,
+  "prime": 1000003,
+  "rectangle_orbit_distribution": {
+    "0": 151,
+    "1": 15,
+    "3": 1
+  },
+  "scope": "all degree-six coordinate-monomial Chow terms modulo row permutations, column permutations, transpose, and factor order",
+  "status": "COMPUTATION_REPLAYED",
+  "term_rank_and_gain_distribution": {
+    "105": 2,
+    "139": 2,
+    "140": 6,
+    "210": 8,
+    "246": 4,
+    "280": 17,
+    "35": 1,
+    "352": 25,
+    "493": 50,
+    "70": 2,
+    "705": 50
+  }
+}
