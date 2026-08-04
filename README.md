@@ -36,6 +36,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the current scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
 | `n=6` fixed-four coupled frontier | proof draft complete; exact arithmetic replayed | actual Chow-term geometry improves the central-intersection cap from 40 to 27 and reduces a hypothetical 23-term decomposition to 36 exact states |
+| `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
@@ -87,6 +88,7 @@ python scripts/n6_multishadow_route_barrier.py
 python scripts/n6_quotient_gain_audit.py
 python scripts/n6_coordinate_monomial_full_gain_audit.py
 python scripts/n6_fixed_four_coupled_frontier.py
+python scripts/n6_extremal_six_plane_audit.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
@@ -94,6 +96,8 @@ The bound generators use only the Python standard library and exact integer/rati
 The universal single-term theorem first degenerates the at-most-six-dimensional factor span to a coordinate subspace while keeping the relevant quadratic intersection at fixed dimension. The coordinate audit then supplies the only local cases: no rectangle, one rectangle, or a `K_2,3` / `K_3,2` rectangle space. The last case is eliminated by regenerated integer minors of determinant `-1` in orders 18 and 45.
 
 The fixed-four frontier uses the resulting individual quadratic-intersection cap `3`, a section-and-projection argument giving total quadratic shadow at most `48`, and an exact rational Bukh separator to prove `20<=b<=27`. The generated state table remains fail-closed: 21 of its 36 states are explicitly marked as requiring structural exclusion or a stronger invariant.
+
+The extremal six-plane theorem classifies the equality case behind the endpoint `b=27`. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components. This does not yet exclude four coupled extremal frames.
 
 ## Layout
 
