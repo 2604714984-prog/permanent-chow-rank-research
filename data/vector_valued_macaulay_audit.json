@@ -1,0 +1,143 @@
+{
+  "claim_boundary": "The script does not prove upper semicontinuity or scalar Macaulay growth and does not transfer finite-field equality to characteristic zero. Those steps are the mathematical proof in the companion note.",
+  "explicit_weight_certificate": {
+    "all_weights_distinct": true,
+    "color_stride": 100063090197999415,
+    "colored_quadratic_weight_count": 3996,
+    "colors": 6,
+    "variables": 36
+  },
+  "six_color_partition_certificate": {
+    "0": {
+      "maximizers": [[0, 0, 0, 0, 0, 0]],
+      "maximum_partition_sum": 0,
+      "partition_count": 1,
+      "scalar_macaulay_successor": 0
+    },
+    "1": {
+      "maximizers": [[0, 0, 0, 0, 0, 1]],
+      "maximum_partition_sum": 1,
+      "partition_count": 1,
+      "scalar_macaulay_successor": 1
+    },
+    "10": {
+      "maximizers": [[0, 0, 0, 0, 0, 10]],
+      "maximum_partition_sum": 20,
+      "partition_count": 35,
+      "scalar_macaulay_successor": 20
+    },
+    "11": {
+      "maximizers": [[0, 0, 0, 0, 0, 11], [0, 0, 0, 0, 1, 10]],
+      "maximum_partition_sum": 21,
+      "partition_count": 44,
+      "scalar_macaulay_successor": 21
+    },
+    "12": {
+      "maximizers": [[0, 0, 0, 0, 0, 12]],
+      "maximum_partition_sum": 23,
+      "partition_count": 58,
+      "scalar_macaulay_successor": 23
+    },
+    "13": {
+      "maximizers": [[0, 0, 0, 0, 0, 13]],
+      "maximum_partition_sum": 26,
+      "partition_count": 71,
+      "scalar_macaulay_successor": 26
+    },
+    "14": {
+      "maximizers": [[0, 0, 0, 0, 0, 14]],
+      "maximum_partition_sum": 30,
+      "partition_count": 90,
+      "scalar_macaulay_successor": 30
+    },
+    "15": {
+      "maximizers": [[0, 0, 0, 0, 0, 15]],
+      "maximum_partition_sum": 35,
+      "partition_count": 110,
+      "scalar_macaulay_successor": 35
+    },
+    "16": {
+      "maximizers": [[0, 0, 0, 0, 0, 16], [0, 0, 0, 0, 1, 15]],
+      "maximum_partition_sum": 36,
+      "partition_count": 136,
+      "scalar_macaulay_successor": 36
+    },
+    "2": {
+      "maximizers": [[0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 1, 1]],
+      "maximum_partition_sum": 2,
+      "partition_count": 2,
+      "scalar_macaulay_successor": 2
+    },
+    "3": {
+      "maximizers": [[0, 0, 0, 0, 0, 3]],
+      "maximum_partition_sum": 4,
+      "partition_count": 3,
+      "scalar_macaulay_successor": 4
+    },
+    "4": {
+      "maximizers": [[0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 1, 3]],
+      "maximum_partition_sum": 5,
+      "partition_count": 5,
+      "scalar_macaulay_successor": 5
+    },
+    "5": {
+      "maximizers": [[0, 0, 0, 0, 0, 5]],
+      "maximum_partition_sum": 7,
+      "partition_count": 7,
+      "scalar_macaulay_successor": 7
+    },
+    "6": {
+      "maximizers": [[0, 0, 0, 0, 0, 6]],
+      "maximum_partition_sum": 10,
+      "partition_count": 11,
+      "scalar_macaulay_successor": 10
+    },
+    "7": {
+      "maximizers": [[0, 0, 0, 0, 0, 7], [0, 0, 0, 0, 1, 6]],
+      "maximum_partition_sum": 11,
+      "partition_count": 14,
+      "scalar_macaulay_successor": 11
+    },
+    "8": {
+      "maximizers": [[0, 0, 0, 0, 0, 8]],
+      "maximum_partition_sum": 13,
+      "partition_count": 20,
+      "scalar_macaulay_successor": 13
+    },
+    "9": {
+      "maximizers": [[0, 0, 0, 0, 0, 9]],
+      "maximum_partition_sum": 16,
+      "partition_count": 26,
+      "scalar_macaulay_successor": 16
+    }
+  },
+  "small_field_exhaustive_diagnostic": {
+    "colors": 2,
+    "counterexample_found": false,
+    "cubic_ambient_dimension": 8,
+    "field": "F_2 divided-power contraction",
+    "logical_role": "diagnostic only",
+    "maximum_prolongation_by_dimension": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 5,
+      "5": 6,
+      "6": 8
+    },
+    "quadratic_ambient_dimension": 6,
+    "subspace_count": 2825,
+    "subspace_count_by_dimension": {
+      "0": 1,
+      "1": 63,
+      "2": 651,
+      "3": 1395,
+      "4": 651,
+      "5": 63,
+      "6": 1
+    },
+    "variables": 2
+  },
+  "status": "VECTOR_VALUED_MACAULAY_FINITE_INTERFACES_REPLAYED"
+}
