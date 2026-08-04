@@ -16,6 +16,9 @@ The lower bound 24 is the internal proof draft in
 `docs/n6_component_prolongation_exclusion.md`. The upper bound is Glynn's
 32-term decomposition. No exact-32 claim is made.
 
+The first lower-25 route diagnostic is complete. It shows that the existing
+fixed-term arithmetic does not produce a compact 24-term frontier.
+
 ## 1. Exact numerical baseline
 
 At central derivative degree three,
@@ -116,124 +119,160 @@ The quotient gain `Gamma` is nonnegative but is not additive term by term
 for a coupled sum. The one-term full-gain theorem remains valid and useful,
 but it does not by itself address the next lower-bound step.
 
-## 4. Next milestone: test the 24-term frontier
+## 4. Completed N6-14 diagnostic: the 24-term frontier
 
-A lower bound of 25 requires excluding a 24-term decomposition. The previous
-four-fixed-term state equations change because the residual now has twenty
-terms:
+A lower bound of 25 requires excluding a 24-term decomposition. The exact
+fixed-`q` diagnostic tests
 
-- middle-catalectic capacity `20*20=400`;
-- first-Koszul capacity `20*705=14100`;
-- the former lower edge `b>=20` disappears for four fixed terms.
+\[
+q=4,5,6
+\]
 
-Therefore the lower-24 proof cannot be relabelled mechanically as a
-lower-25 proof.
+fixed terms without importing the historical 23-term state table.
 
-The next task is a diagnostic theorem generator for a general number `q` of
-fixed terms. It must compute, without guessed states:
+It regenerates:
 
 1. the projection cap
    \[
    \dim(E_2\cap\sum_{i=1}^qG_i)\le15(q-1)+3;
    \]
-2. the exact Bukh shadow cap on the central intersection;
-3. the symmetric middle-catalectic state inequalities for a
-   `(24-q)`-term residual;
+2. 65 exact rational Bukh-shadow certificates;
+3. the symmetric middle-catalectic inequalities for a `(24-q)`-term
+   residual;
 4. the quadratic relation-kernel cap;
-5. the componentwise Macaulay cubic-relation cap;
-6. the quotient-Koszul gain still required after the central-rank
-   exclusions.
+5. the componentwise Macaulay cubic-relation cap when it is numerically
+   relevant;
+6. the quotient-Koszul gain and relative-prolongation cap for every state.
 
-The purpose is to choose the smallest mathematically effective fixed-term
-count, not to create a generic state-management framework.
+The exact results are:
 
-## 5. Falsification first
+| fixed terms `q` | initial states | surviving states | structural states | relative-prolongation caps |
+|---:|---:|---:|---:|---:|
+| 4 | 406 | 260 | 194 | `2,38,74` |
+| 5 | 325 | 184 | 147 | `23,59` |
+| 6 | 325 | 179 | 141 | `8,44` |
 
-Before promoting a lower-25 route, search for exact counterexamples to its
+Six fixed terms are numerically smallest, but the improvement over five
+fixed terms is only five surviving states and six structural states. Its
+relative-prolongation caps are also tighter. Therefore N6-14 does not select
+a proof frontier and does not prove a lower bound of 25.
+
+The exact record is
+
+```text
+docs/n6_lower25_fixed_q_diagnostic.md
+scripts/n6_lower25_fixed_q_diagnostic.py
+data/n6_lower25_fixed_q_diagnostic.json
+```
+
+## 5. Route decision after N6-14
+
+The fixed-term dimension-only route is suspended. The next result must
+reduce many structural states at once. Merely expanding the state table is
+not research progress.
+
+The preferred directions are:
+
+1. retain the full projection data
+   \[
+   P_i=\operatorname{pr}_i(\mathcal K)
+   \]
+   of the quadratic relation kernel rather than only `dim K`;
+2. couple first and second derivative shadows;
+3. derive a stronger block inequality using pairwise or higher intersections
+   among the central derivative spaces;
+4. search exactly for structured decompositions with at most 24 terms;
+5. test a different flattening if no bulk structural reduction appears.
+
+No single direction is yet promoted.
+
+## 6. Next minimal sequence
+
+### N6-15 — projection-profile theorem or route rejection
+
+Determine whether the projected relation spaces `P_i` obey a uniform
+constraint stronger than
+
+\[
+\dim P_i\le\dim\mathcal K.
+\]
+
+The target is a theorem that reduces the cubic relation cap across a broad
+class of states. A case-by-case registry of 141 structural states is not an
+acceptable substitute.
+
+### N6-16 — exact structured-decomposition search
+
+Search sparse, symmetry-reduced, and orbit-compatible 24-term ansatzes. Any
+candidate must be reconstructed over `Q` or an explicit algebraic number
+field before it changes the characteristic-zero boundary.
+
+A reproducible decomposition is a valid research result because it rejectss
+the lower-25 program.
+
+### N6-17 — coupled second-shadow diagnostic
+
+Test whether adding one further derivative layer gives a strict numerical
+margin on the surviving fixed-five or fixed-six ranges. This remains a
+route diagnostic until the relevant shadow theorem and coupling semantics
+are written explicitly.
+
+### N6-18 — geometry only after a bulk reduction
+
+Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations,
+managers, registries, dispatchers, or multi-repository orchestration unless
+a theorem first reduces the unresolved locus to a finite and small set.
+
+## 7. Falsification first
+
+Before promoting any lower-25 route, search for exact counterexamples to its
 implicit assumptions:
 
 - structured 24-term decompositions;
-- fixed sums with unusually large quadratic relation kernels;
-- coupled middle-catalectic rank below the proposed block-Sylvester lower
-  bound because one of its hypotheses was misapplied;
-- low quadratic derivative profiles that defeat the conservative term-rank
-  table;
+- fixed sums with unusually large or badly projected quadratic relation
+  kernels;
+- central derivative spaces whose pairwise overlaps make the current
+  block-Sylvester estimate very loose;
+- low quadratic derivative profiles that erase the expected margin;
 - quotient gains too small to close the residual budget.
 
 Finite-field examples are diagnostics only. A dangerous example must be
 replayed by exact rational elimination, an integer minor, or a proved
 semicontinuity bridge before it changes a characteristic-zero statement.
 
-## 6. Recommended minimal sequence
+## 8. Hidden assumptions
 
-### N6-14 — general fixed-`q` arithmetic diagnostic
-
-Extend the exact integer formulas to a hypothetical 24-term decomposition
-for `q=4,5,6`. Record every derived state directly from the inequalities.
-Do not import the historical 23-term table.
-
-The output is diagnostic until every shadow separator and term-profile
-input is proved.
-
-### N6-15 — select one proof frontier
-
-Choose the smallest `q` for which the arithmetic leaves a strict, small
-frontier. Reject any route that leaves a broad positive-dimensional
-classification problem with no numerical margin.
-
-### N6-16 — classify only the surviving profiles
-
-If a small frontier exists, classify only the individual quadratic
-profiles and component relation spaces actually appearing there. Do not
-classify all degree-six Chow terms.
-
-### N6-17 — exact route counterexample search
-
-In parallel, test structured fixed sums and candidate 24-term decompositions.
-A reproducible counterexample is a result: it rejects the route and prevents
-a speculative proof architecture.
-
-### N6-18 — geometry only after finite reduction
-
-Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations,
-managers, registries, dispatchers, or multi-repository orchestration unless
-a theorem first reduces the unresolved locus to a finite and small set.
-
-## 7. Hidden assumptions
-
-1. A useful fixed-`q` count exists for the 24-term problem.
-2. Componentwise Macaulay growth remains numerically strong when the
-   quadratic relation kernel is larger than five.
-3. Conservative central-rank lower bounds for low quadratic profiles do not
-   erase the margin.
-4. The block-Sylvester lower bound is close enough to the actual coupled
-   rank to be useful.
+1. A useful bulk constraint exists on the projected relation spaces.
+2. A higher coupled shadow remains computationally and mathematically
+   tractable.
+3. Conservative central-rank lower bounds for low quadratic profiles are
+   not hiding the decisive geometry.
+4. State count is correlated with proof complexity.
 5. The exact value 32 is not contradicted by a shorter decomposition.
 
 None of these assumptions is promoted to a theorem.
 
-## 8. Assume every assumption is false
+## 9. Assume every assumption is false
 
-Then the lower-24 argument is a local success rather than the beginning of
-a monotone induction. The correct response is to stop extending the same
-fixed-four machinery and pivot to one of:
+Then the lower bound 24 is an endpoint of the current method. The correct
+response is to stop extending the fixed-term machinery and pivot to:
 
-- a different fixed-term count;
-- a higher Koszul flattening;
-- coupled first and second shadows;
+- a different flattening;
+- an explicit decomposition program;
 - a border-versus-ordinary rank separation;
-- explicit decomposition search.
+- a new geometric invariant unrelated to the current defect state table.
 
 The repository should not add process complexity merely to preserve the
 current route.
 
-## 9. Fail-closed exit criteria
+## 10. Fail-closed exit criteria
 
 Suspend a lower-25 route if any of the following occurs:
 
 - a reproducible decomposition with at most 24 terms is found;
-- every tested fixed-term count leaves a large uncontrolled frontier;
-- the componentwise prolongation cap loses all strict central-rank margin;
+- the projection-profile theorem gives no improvement over the scalar
+  Macaulay cap;
+- coupled second shadows leave a broad uncontrolled frontier;
 - the remaining quotient-gain requirement is not structurally linked to the
   surviving profiles;
 - exact replay requires a large workflow before a finite theorem has been
@@ -241,14 +280,13 @@ Suspend a lower-25 route if any of the following occurs:
 - a claimed characteristic-zero step depends only on finite-field equality
   or random search.
 
-## 10. Strongest objection
+## 11. Strongest objection
 
-The new lower bound 24 may be an endpoint of this method. In the 24-term
-problem the twenty-term residual saturates the permanent's middle
-catalectic rank, so the central lower edge that made the 23-term frontier
-small disappears. A fixed-`q` refinement may therefore produce many states
-without a usable margin.
+The N6-14 state counts deliberately ignore some Chow-realizability
+restrictions and assign central rank zero to every individual quadratic
+profile of dimension at most ten. The apparent 179-state frontier may be a
+large overestimate.
 
-This objection is strong enough to impose a stopping rule: N6-14 must first
-show a compact exact frontier. If it does not, the project should pivot
-rather than add a larger classification layer.
+That objection is valid but does not justify deeper enumeration. It places
+the burden on N6-15: prove a structural constraint that removes states in
+bulk. Without such a theorem, the lower-25 program remains fail-closed.
