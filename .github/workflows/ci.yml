@@ -67,3 +67,7 @@ jobs:
         run: |
           python scripts/n6_component_prolongation_exclusion.py \
             --json /tmp/n6_component_prolongation_exclusion.json
+      - name: Replay n6 lower25 fixed-q diagnostic
+        run: |
+          python scripts/n6_lower25_fixed_q_diagnostic.py \
+            --json /tmp/n6_lower25_fixed_q_diagnostic.json
