@@ -1,16 +1,62 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "n6_fixed_six_lower25_audit.py"
+FROZEN = ROOT / "data" / "n6_fixed_six_lower25.json"
 
 spec = importlib.util.spec_from_file_location("lower25", SCRIPT)
 assert spec is not None and spec.loader is not None
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
+
+
+def compact_payload(payload: dict[str, object]) -> dict[str, object]:
+    layer_keys = (
+        "b",
+        "quadratic_shadow_lower_bound",
+        "shadow_separator",
+        "defect_budget",
+        "all_labelled_epsilon_count",
+        "impossible_dimension_twelve_labelled_count",
+        "profile_feasible_symmetric_type_count",
+        "maximum_quadratic_relation_kernel_cap",
+        "maximum_cubic_relation_kernel_cap",
+        "minimum_coupled_central_rank_lower_bound",
+        "residual_central_rank_upper_bound",
+        "strict_margin",
+    )
+    return {
+        "status": payload["status"],
+        "hypothetical_total_terms": payload["hypothetical_total_terms"],
+        "fixed_terms": payload["fixed_terms"],
+        "residual_terms": payload["residual_terms"],
+        "projection_cap": payload["projection_cap"],
+        "central_intersection_range_after_shadow_and_catalectic": payload[
+            "central_intersection_range_after_shadow_and_catalectic"
+        ],
+        "automatic_low_layers": payload["automatic_low_layers"],
+        "macaulay_degree_two_successors": payload[
+            "macaulay_degree_two_successors"
+        ],
+        "module_partition_identity_verified_through": payload[
+            "module_partition_identity_verified_through"
+        ],
+        "reconstructed_term_profiles": payload["reconstructed_term_profiles"],
+        "component_relation_layers": [
+            {key: row[key] for key in layer_keys}
+            for row in payload["component_relation_layers"]
+        ],
+        "conclusion": payload["conclusion"],
+        "certified_interval_if_algebraic_lemmas_are_accepted": payload[
+            "certified_interval_if_algebraic_lemmas_are_accepted"
+        ],
+        "claim_boundary": payload["claim_boundary"],
+    }
 
 
 class Lower25AuditTests(unittest.TestCase):
@@ -72,7 +118,7 @@ class Lower25AuditTests(unittest.TestCase):
                 layer["residual_central_rank_upper_bound"],
             )
 
-    def test_full_payload(self) -> None:
+    def test_full_payload_and_frozen_summary(self) -> None:
         payload = module.build_payload()
         self.assertEqual(
             payload["status"],
@@ -92,6 +138,8 @@ class Lower25AuditTests(unittest.TestCase):
             [45, 9],
         )
         self.assertEqual(len(payload["component_relation_layers"]), 23)
+        frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
+        self.assertEqual(compact_payload(payload), frozen)
 
 
 if __name__ == "__main__":
