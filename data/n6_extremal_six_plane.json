@@ -1,0 +1,335 @@
+{
+  "ambient_symmetric_square_dimension": 666,
+  "base_kernel_dimension": 3,
+  "base_rank": 18,
+  "characteristic_zero_conclusion": "At each coordinate K_2,3 or K_3,2 fixed point, the extremal six-plane locus has exactly the disjoint-support tensor-product branches used in the global classification proof.",
+  "characteristic_zero_jacobian_rank": 163,
+  "claim_boundary": "The script certifies the exact local linear and quadratic data. The passage to all six-planes uses the proof note's projective torus fixed-point, multiplicity, and component arguments.",
+  "classified_local_branches": 432,
+  "coordinate_fixed_point": {
+    "columns": [
+      0,
+      1,
+      2
+    ],
+    "rows": [
+      0,
+      1
+    ]
+  },
+  "explicit_characteristic_zero_kernel_dimension": 17,
+  "global_support_components": {
+    "dimension_each": 7,
+    "row_2_column_3": 2790,
+    "row_3_column_2": 2790,
+    "stirling_6_2": 31,
+    "stirling_6_3": 90,
+    "total": 5580
+  },
+  "grassmann_chart_dimension": 180,
+  "jacobian_rank_mod_prime": 163,
+  "local_domain_dimension": 21,
+  "permanent_quadratic_dimension": 225,
+  "pivot_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "pivot_minor_determinant": 1,
+  "pivot_rows": [
+    0,
+    1,
+    2,
+    6,
+    11,
+    12,
+    16,
+    17,
+    26,
+    30,
+    31,
+    32,
+    126,
+    127,
+    128,
+    136,
+    137,
+    149
+  ],
+  "prime": 1000003,
+  "quotient_dimension": 441,
+  "scope": "the completed local rank-condition at a coordinate K_2,3 six-plane in Gr(6,36)",
+  "second_order": {
+    "all_good_quadratic_monomials_have_integral_corrections": true,
+    "bad_monomial_count": 13,
+    "bad_monomials": [
+      {
+        "first": [
+          "row",
+          0,
+          2
+        ],
+        "second": [
+          "row",
+          1,
+          2
+        ]
+      },
+      {
+        "first": [
+          "row",
+          0,
+          3
+        ],
+        "second": [
+          "row",
+          1,
+          3
+        ]
+      },
+      {
+        "first": [
+          "row",
+          0,
+          4
+        ],
+        "second": [
+          "row",
+          1,
+          4
+        ]
+      },
+      {
+        "first": [
+          "row",
+          0,
+          5
+        ],
+        "second": [
+          "row",
+          1,
+          5
+        ]
+      },
+      {
+        "first": [
+          "column",
+          0,
+          3
+        ],
+        "second": [
+          "column",
+          1,
+          3
+        ]
+      },
+      {
+        "first": [
+          "column",
+          0,
+          3
+        ],
+        "second": [
+          "column",
+          2,
+          3
+        ]
+      },
+      {
+        "first": [
+          "column",
+          0,
+          4
+        ],
+        "second": [
+          "column",
+          1,
+          4
+        ]
+      },
+      {
+        "first": [
+          "column",
+          0,
+          4
+        ],
+        "second": [
+          "column",
+          2,
+          4
+        ]
+      },
+      {
+        "first": [
+          "column",
+          0,
+          5
+        ],
+        "second": [
+          "column",
+          1,
+          5
+        ]
+      },
+      {
+        "first": [
+          "column",
+          0,
+          5
+        ],
+        "second": [
+          "column",
+          2,
+          5
+        ]
+      },
+      {
+        "first": [
+          "column",
+          1,
+          3
+        ],
+        "second": [
+          "column",
+          2,
+          3
+        ]
+      },
+      {
+        "first": [
+          "column",
+          1,
+          4
+        ],
+        "second": [
+          "column",
+          2,
+          4
+        ]
+      },
+      {
+        "first": [
+          "column",
+          1,
+          5
+        ],
+        "second": [
+          "column",
+          2,
+          5
+        ]
+      }
+    ],
+    "good_monomial_count": 140,
+    "obstruction_rank_mod_prime": 13
+  },
+  "squarefree_initial_ideal": {
+    "dimension": 7,
+    "generators": 13,
+    "minimal_primes": 432,
+    "multiplicity": 432
+  },
+  "status": "EXACT_LOCAL_CLASSIFICATION_CERTIFICATE_REPLAYED",
+  "tangent_coordinates": [
+    [
+      "row",
+      0,
+      2
+    ],
+    [
+      "row",
+      0,
+      3
+    ],
+    [
+      "row",
+      0,
+      4
+    ],
+    [
+      "row",
+      0,
+      5
+    ],
+    [
+      "row",
+      1,
+      2
+    ],
+    [
+      "row",
+      1,
+      3
+    ],
+    [
+      "row",
+      1,
+      4
+    ],
+    [
+      "row",
+      1,
+      5
+    ],
+    [
+      "column",
+      0,
+      3
+    ],
+    [
+      "column",
+      0,
+      4
+    ],
+    [
+      "column",
+      0,
+      5
+    ],
+    [
+      "column",
+      1,
+      3
+    ],
+    [
+      "column",
+      1,
+      4
+    ],
+    [
+      "column",
+      1,
+      5
+    ],
+    [
+      "column",
+      2,
+      3
+    ],
+    [
+      "column",
+      2,
+      4
+    ],
+    [
+      "column",
+      2,
+      5
+    ]
+  ]
+}

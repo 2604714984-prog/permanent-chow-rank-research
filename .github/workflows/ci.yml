@@ -55,3 +55,7 @@ jobs:
         run: |
           python scripts/n6_fixed_four_coupled_frontier.py \
             --json /tmp/n6_fixed_four_coupled_frontier.json
+      - name: Replay n6 extremal six-plane classification
+        run: |
+          python scripts/n6_extremal_six_plane_audit.py \
+            --json /tmp/n6_extremal_six_plane.json
