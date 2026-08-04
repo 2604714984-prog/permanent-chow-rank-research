@@ -5,7 +5,7 @@ For ``2<=n<=10`` the script verifies:
 
 * the ``2^(n-1)`` sign terms have the Walsh-Hadamard coefficient matrix on
   row-parity classes;
-* the matrix square is ``2^(n-1) I``;
+* the character sums give ``H H^T = 2^(n-1) I``;
 * the permanent parity function is a delta function at the all-ones class;
 * Walsh inversion uses every sign term with a nonzero coefficient.
 
@@ -32,35 +32,30 @@ def audit_degree(n: int) -> dict[str, object]:
     if n < 2:
         raise ValueError(n)
     dimension = 1 << (n - 1)
-    rows = [
-        [walsh_entry(parity, sign) for sign in range(dimension)]
-        for parity in range(dimension)
-    ]
 
-    for left in range(dimension):
-        for right in range(dimension):
-            inner = sum(
-                rows[left][column] * rows[right][column]
-                for column in range(dimension)
-            )
-            expected = dimension if left == right else 0
-            if inner != expected:
-                raise AssertionError((n, left, right, inner, expected))
+    character_sums = [
+        sum(walsh_entry(difference, sign) for sign in range(dimension))
+        for difference in range(dimension)
+    ]
+    expected_character_sums = [dimension] + [0] * (dimension - 1)
+    if character_sums != expected_character_sums:
+        raise AssertionError((n, character_sums))
 
     target_parity = dimension - 1
-    numerators = rows[target_parity]
+    numerators = [
+        walsh_entry(target_parity, sign)
+        for sign in range(dimension)
+    ]
     if any(value not in {-1, 1} for value in numerators):
         raise AssertionError((n, numerators))
-    if any(value == 0 for value in numerators):
-        raise AssertionError((n, numerators))
 
-    reconstructed = []
-    for parity in range(dimension):
-        value = sum(
-            numerators[sign] * rows[parity][sign]
+    reconstructed = [
+        sum(
+            numerators[sign] * walsh_entry(parity, sign)
             for sign in range(dimension)
         )
-        reconstructed.append(value)
+        for parity in range(dimension)
+    ]
     expected_reconstruction = [0] * dimension
     expected_reconstruction[target_parity] = dimension
     if reconstructed != expected_reconstruction:
