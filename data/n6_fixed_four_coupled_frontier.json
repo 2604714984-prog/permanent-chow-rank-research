@@ -6,6 +6,17 @@
     },
     "pattern_count": 24
   },
+  "b26_exclusion": {
+    "contradictions": [
+      "60>32",
+      "80>32"
+    ],
+    "excluded_state_count": 7,
+    "family_a_central_rank_lower_bound": 60,
+    "family_b_central_rank": 80,
+    "one_relation_pure_cube_obstruction": true,
+    "residual_central_rank_upper_bound": 32
+  },
   "b27_exclusion": {
     "common_quotient_dimension": 12,
     "contradiction": "80>34",
@@ -16,9 +27,18 @@
   },
   "b_range": [
     20,
-    26
+    25
   ],
-  "claim_boundary": "Summary identity only. The generator replays the 28-state frontier and 24 b=26 defect patterns but does not exclude the 15 remaining structural states or establish the p<=23 and p<=59 caps.",
+  "claim_boundary": "Summary identity only. The generator replays the 21-state frontier after the b=27 and b=26 exclusions but does not exclude the 10 remaining structural states or establish the p<=23 and p<=59 caps.",
+  "excluded_b26_states": [
+    [26, 0, 26, "structural", null],
+    [26, 1, 27, "structural", null],
+    [26, 2, 28, "structural", null],
+    [26, 3, 29, "structural", null],
+    [26, 4, 30, "structural", null],
+    [26, 5, 31, "p_cap", 23],
+    [26, 6, 32, "p_cap", 59]
+  ],
   "excluded_b27_states": [
     [27, 0, 27, "structural", null],
     [27, 1, 28, "structural", null],
@@ -29,10 +49,55 @@
     [27, 6, 33, "p_cap", 23],
     [27, 7, 34, "p_cap", 59]
   ],
-  "maximum_remaining_gain_requirement": 157,
+  "frontier_after_b27": {
+    "b_range": [
+      20,
+      26
+    ],
+    "p_cap_counts": {
+      "23": 5,
+      "59": 5
+    },
+    "route_counts": {
+      "automatic": 3,
+      "p_cap": 10,
+      "structural": 15
+    },
+    "state_count": 28
+  },
+  "maximum_remaining_gain_requirement": 121,
+  "maximal_term_profile": {
+    "factor_span_five": {
+      "1": [
+        11,
+        14
+      ],
+      "2": [
+        11,
+        14
+      ],
+      "3": [
+        13,
+        18
+      ],
+      "4": [
+        14,
+        20
+      ],
+      "5": [
+        15,
+        20
+      ]
+    },
+    "factor_span_six": [
+      15,
+      20
+    ],
+    "pure_cube_free_at_quadratic_dimension_15": true
+  },
   "p_cap_counts": {
-    "23": 5,
-    "59": 5
+    "23": 4,
+    "59": 4
   },
   "projection_cap": 48,
   "raw_frontier": {
@@ -53,15 +118,15 @@
   },
   "route_counts": {
     "automatic": 3,
-    "p_cap": 10,
-    "structural": 15
+    "p_cap": 8,
+    "structural": 10
   },
   "separator": {
     "binom_x_2_sq": "19496257641/400000000",
     "binom_x_3_sq": "111624739998121/4000000000000",
     "x": "427/100"
   },
-  "state_count": 28,
+  "state_count": 21,
   "states": [
     [20, 0, 20, "automatic", null],
     [21, 0, 21, "automatic", null],
@@ -83,14 +148,7 @@
     [25, 2, 27, "structural", null],
     [25, 3, 28, "structural", null],
     [25, 4, 29, "p_cap", 23],
-    [25, 5, 30, "p_cap", 59],
-    [26, 0, 26, "structural", null],
-    [26, 1, 27, "structural", null],
-    [26, 2, 28, "structural", null],
-    [26, 3, 29, "structural", null],
-    [26, 4, 30, "structural", null],
-    [26, 5, 31, "p_cap", 23],
-    [26, 6, 32, "p_cap", 59]
+    [25, 5, 30, "p_cap", 59]
   ],
-  "status": "EXACT_INTEGER_FRONTIER_WITH_B27_EXCLUSION_REPLAYED"
+  "status": "EXACT_INTEGER_FRONTIER_THROUGH_B26_EXCLUSION_REPLAYED"
 }
