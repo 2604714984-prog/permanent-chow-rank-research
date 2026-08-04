@@ -41,15 +41,17 @@ Status vocabulary:
 | N6-005 | `COMPUTATION_REPLAYED` | every degree-six coordinate monomial `M` satisfies `im K_3(perm_6) intersect im K_3(M)=0`; all 167 row/column/transpose orbits are replayed | finite coordinate input to N6-006: `docs/n6_coordinate_monomial_full_gain.md` and exact `K_2,3` minors |
 | N6-006 | `PROOF_DRAFT_COMPLETE` | every nonzero degree-six Chow term `T`, including repeated and linearly dependent factors, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence its quotient gain equals `rank K_3(T)` | torus degeneration of the factor span plus N6-005; `docs/n6_universal_single_term_full_gain.md` |
 | N6-007 | `PROOF_DRAFT_COMPLETE` | for every nonzero scalar `alpha` and degree-six Chow term `T`, `rank K_3(perm_6-alpha T)=14175+rank K_3(T)` | `D_3(perm_6) intersect D_3(T)=0`, N6-006, and the double-quotient inequality; `docs/n6_single_term_residual_additivity.md` |
+| N6-008 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | under a hypothetical 23-term decomposition, fixing four terms forces `20<=b<=27` and `0<=d<=b-20`; the exact frontier has 36 states, partitioned as 3 already strict, 12 addressable by `p<=23` or `p<=59`, and 21 requiring structural exclusion | individual quadratic intersection cap 3, projection shadow cap 48, Bukh compression, and symmetric central catalectic; `docs/n6_fixed_four_coupled_frontier.md` |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-018 and N6-006/N6-007 has not been exhaustively checked.
+- Literature novelty of G-001 through G-018 and N6-006 through N6-008 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` claim is made; the current in-repository interval is `23<=ChowRank(perm_6)<=32`.
 - The frozen rational witnesses certify the displayed lower bounds but are not proved globally optimal within G-014.
 - G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.
 - N6-002 shows that coordinate low-catalectic points lie on positive-dimensional branches; it does not classify the full rank-nine locus.
 - N6-003 is a barrier for the current scalar one-step formula only; it does not rule out Chow-realizability restrictions, positive `Gamma`, higher coupled shadows, or different flattenings.
-- N6-006 and N6-007 are one-term theorems. They do not imply additivity of quotient gain for `K_3(T_1+...+T_q)`; coupling of the catalectic of the sum remains the exact-24 bottleneck.
+- N6-006 and N6-007 are one-term theorems. They do not imply additivity of quotient gain for `K_3(T_1+...+T_q)`.
+- N6-008 does not close the exact-24 target. The 21 structural states remain open, and the relative-prolongation bounds 23 and 59 have not been established on the twelve addressable states.
