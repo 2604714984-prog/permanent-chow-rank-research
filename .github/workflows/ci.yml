@@ -47,3 +47,7 @@ jobs:
         run: |
           python scripts/n6_quotient_gain_audit.py \
             --json /tmp/n6_quotient_gain_audit.json
+      - name: Replay n6 coordinate-monomial full gain
+        run: |
+          python scripts/n6_coordinate_monomial_full_gain_audit.py \
+            --json /tmp/n6_coordinate_monomial_full_gain.json
