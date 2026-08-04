@@ -1,0 +1,130 @@
+{
+  "claim_boundary": "This output does not exclude a 24-term decomposition, does not prove ChowRank(perm_6)>=25, and does not select q=6 as a proof program without an additional structural invariant.",
+  "conclusion": "The lower-24 component-prolongation proof does not extend mechanically to a lower bound of 25. No fixed-q route is promoted beyond ROUTE_DIAGNOSTIC.",
+  "fixed_q_diagnostics_sha256": "4c8e392f2bd5a02049660156d07927bf0cddcc2b2fa79797184b26e7f2b99a2c",
+  "fixed_q_summaries": [
+    {
+      "central_intersection_range": [
+        0,
+        27
+      ],
+      "fixed_terms": 4,
+      "layers_sha256": "6eb938f9ef09503ff4f436078180618af3397433e918af9109523c915f5a8f0c",
+      "maximum_required_quotient_gain_among_survivors": 718,
+      "maximum_structural_gain_deficit": 682,
+      "projection_cap": 48,
+      "relative_prolongation_cap_histogram": {
+        "2": 20,
+        "38": 20,
+        "74": 20
+      },
+      "residual_terms": 20,
+      "route_counts": {
+        "component_central_rank_exclusion": 146,
+        "quotient_koszul_already_strict": 6,
+        "relative_prolongation_cap_can_close": 60,
+        "structural_exclusion_or_stronger_invariant_required": 194
+      },
+      "state_count_before_component_exclusions": 406,
+      "states_sha256": "1026410a03911ff0365dbdc1d53fe848b34fdae3f496abe7a1fd2750b632d7f4",
+      "surviving_b_range": [
+        0,
+        22
+      ],
+      "surviving_state_count": 260
+    },
+    {
+      "central_intersection_range": [
+        20,
+        44
+      ],
+      "fixed_terms": 5,
+      "layers_sha256": "25e62dbb8bc402c14a4f3c7dad4c9452ded37374a84ce573a3d394c60cc3dd16",
+      "maximum_required_quotient_gain_among_survivors": 589,
+      "maximum_structural_gain_deficit": 553,
+      "projection_cap": 63,
+      "relative_prolongation_cap_histogram": {
+        "23": 17,
+        "59": 17
+      },
+      "residual_terms": 19,
+      "route_counts": {
+        "component_central_rank_exclusion": 141,
+        "quotient_koszul_already_strict": 3,
+        "relative_prolongation_cap_can_close": 34,
+        "structural_exclusion_or_stronger_invariant_required": 147
+      },
+      "state_count_before_component_exclusions": 325,
+      "states_sha256": "b17f850e64a03ec618e2f4439448da93d082082cbb4cbe7fb0276f6af2f8a5d3",
+      "surviving_b_range": [
+        20,
+        38
+      ],
+      "surviving_state_count": 184
+    },
+    {
+      "central_intersection_range": [
+        40,
+        64
+      ],
+      "fixed_terms": 6,
+      "layers_sha256": "48f1ad7599e54486c55abcd9b13c149d9c26d8ff840243e2a4f2321c98a3e7ab",
+      "maximum_required_quotient_gain_among_survivors": 676,
+      "maximum_structural_gain_deficit": 568,
+      "projection_cap": 78,
+      "relative_prolongation_cap_histogram": {
+        "44": 18,
+        "8": 17
+      },
+      "residual_terms": 18,
+      "route_counts": {
+        "component_central_rank_exclusion": 146,
+        "quotient_koszul_already_strict": 3,
+        "relative_prolongation_cap_can_close": 35,
+        "structural_exclusion_or_stronger_invariant_required": 141
+      },
+      "state_count_before_component_exclusions": 325,
+      "states_sha256": "780d561d6177eca7d6e229ec38e2ce685f032a9ceb1f77437d15606fd027b10c",
+      "surviving_b_range": [
+        40,
+        60
+      ],
+      "surviving_state_count": 179
+    }
+  ],
+  "macaulay_degree_two_successors": {
+    "0": 0,
+    "1": 1,
+    "10": 20,
+    "11": 21,
+    "12": 23,
+    "13": 26,
+    "14": 30,
+    "15": 35,
+    "16": 36,
+    "17": 38,
+    "18": 41,
+    "19": 45,
+    "2": 2,
+    "20": 50,
+    "21": 56,
+    "22": 57,
+    "3": 4,
+    "4": 5,
+    "5": 7,
+    "6": 10,
+    "7": 11,
+    "8": 13,
+    "9": 16
+  },
+  "route_selection": {
+    "assessment": "No tested fixed-term count produces a compact proof frontier. q=6 is numerically smallest, but it still leaves 179 states, including 141 structural states, and its relative-prolongation caps 8 and 44 are tighter than the q=5 caps 23 and 59.",
+    "fewest_structural_states": 141,
+    "fewest_surviving_states": 179,
+    "fewest_surviving_states_fixed_terms": 6
+  },
+  "shadow_certificate_count": 65,
+  "shadow_certificates_sha256": "a786d3dcbfd7b2206d1a60710b8fd158e44186f220a392a6915c34ee8994578b",
+  "status": "EXACT_LOWER25_FIXED_Q_ROUTE_DIAGNOSTIC_REPLAYED",
+  "target": "Test fixed-term arithmetic under a hypothetical 24-term decomposition of perm_6."
+}
