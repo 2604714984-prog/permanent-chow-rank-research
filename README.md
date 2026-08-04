@@ -34,7 +34,8 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Fixed-offset multishadow optimization | proof draft complete | among every fixed integer output-degree offset and constant witness defect, the unique asymptotic optimizer is the central lower output degree |
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the current scalar formula stops at 23 |
-| `n=6` diagonal quotient-gain audit | computation replayed; diagnostic only | one explicit Chow term has the full gain `Gamma=705` and combined rank `14,880` |
+| `n=6` coordinate-monomial full gain | proof draft complete; computation replayed | all 167 coordinate Chow fixed-point orbits have `Gamma=rank K_3(M)`; arbitrary non-monomial terms remain open because rank-dropping limits are non-strict |
+| `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the coordinate-monomial theorem |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
 | Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
@@ -82,17 +83,12 @@ python scripts/generate_even_multishadow_bounds.py
 python scripts/n6_coordinate_secant_audit.py
 python scripts/n6_multishadow_route_barrier.py
 python scripts/n6_quotient_gain_audit.py
+python scripts/n6_coordinate_monomial_full_gain_audit.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
 
-The quotient-gain audit similarly uses a modular rank only as a lower bound. Subadditivity gives the matching characteristic-zero upper bound
-
-```text
-14,175 + 705 = 14,880,
-```
-
-so the displayed combined rank and gain are exact over characteristic zero.
+The coordinate-monomial full-gain audit uses two complementary exact mechanisms. The `K_2,3` obstruction is eliminated by regenerated integer minors of determinant `-1`, and all 167 coordinate orbits are replayed modulo `1,000,003`. For each orbit, the modular combined rank reaches the characteristic-zero subadditivity upper bound, so the quotient-gain equality is exact.
 
 ## Layout
 
