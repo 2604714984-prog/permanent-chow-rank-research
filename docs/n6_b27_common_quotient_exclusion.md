@@ -176,7 +176,27 @@ K_1\oplus K_2\oplus K_3\oplus K_4
 
 ### Proof
 
-If a nonzero `k` belonged to both `K_i` and `K_j`, equation (2.2) would give two different values for the unique vector `sigma(k)`. ∎
+Suppose
+
+\[
+k_1+k_2+k_3+k_4=0,
+\qquad
+k_i\in K_i.
+\]
+
+By linearity of the section and equation (2.2),
+
+\[
+0
+=
+\sigma(0)
+=
+\sum_i\sigma(k_i)
+=
+(k_1,k_2,k_3,k_4)
+\]
+
+in the external direct sum. Hence every `k_i` is zero. ∎
 
 ## 3. A common twelve-dimensional quotient
 
@@ -223,7 +243,9 @@ Y
 
 ### Proof
 
-Lemma 2.1 says that the corresponding projection before quotienting is surjective onto the 45-dimensional sum of the three `G_i`. Its kernel is exactly `K_j`. After quotienting by all four `K_i`, both source and target have dimension 36, and the induced map is injective and surjective. ∎
+Lemma 2.1 says that the corresponding projection before quotienting is surjective onto the 45-dimensional external direct sum of the three `G_i`. Its kernel is exactly `K_j`.
+
+If a class in `Y` maps to zero, choose a representative `sigma(x)`. Its three visible coordinates lie in the corresponding `K_i`. Subtract their coordinate vectors, which belong to `sigma(X)` by (2.2). The resulting representative has only the `j`th coordinate and therefore comes from `K_j`; its class in `Y` is zero. Thus the induced map is injective. It is also surjective, and both spaces have dimension 36. ∎
 
 Every tuple in `Y` sums to zero in `M`, because its unquotiented sum belongs to `X subset E`.
 
@@ -360,13 +382,22 @@ Differentiate in an arbitrary variable direction. Then
 
 Corollary 4.1 makes the `G_i` a direct sum, so every first derivative of every `c_i` vanishes. A homogeneous cubic with all first derivatives zero is zero in characteristic zero. Thus all `c_i` vanish. ∎
 
-The middle catalectic of a degree-six form is symmetric. Regard
+For each `i`, let
 
 \[
-C_{3,3}(R)
+A_i=C_{3,3}(T_i),
+\qquad
+A=C_{3,3}(R)=A_1+A_2+A_3+A_4.
 \]
 
-as a map with codomain `C_1 direct_sum ... direct_sum C_4`. For each individual term, both its image and row space are `C_i`. By Lemma 5.1, the transpose images are direct, so the transpose map is injective on the direct sum of the four 20-dimensional dual image spaces. Consequently:
+Under the standard monomial pairing, the middle catalectic is symmetric, so
+
+\[
+\operatorname{im}A_i=C_i,
+\qquad
+\operatorname{row}A_i=C_i.
+\tag{5.2}
+\]
 
 ### Proposition 5.2 — no central coupling loss
 
@@ -377,8 +408,43 @@ as a map with codomain `C_1 direct_sum ... direct_sum C_4`. For each individual 
 \qquad
 h=80.
 }
-\tag{5.2}
+\tag{5.3}
 \]
+
+### Proof
+
+If `Ax=0`, then
+
+\[
+A_1x+A_2x+A_3x+A_4x=0.
+\]
+
+Each summand lies in `C_i`, and the `C_i` are direct by Lemma 5.1. Hence
+
+\[
+A_ix=0
+\qquad
+\text{for every }i.
+\]
+
+Therefore
+
+\[
+\ker A=\bigcap_i\ker A_i.
+\]
+
+The annihilator of this intersection is the sum of the row spaces. By (5.2) and Lemma 5.1,
+
+\[
+\operatorname{codim}\ker A
+=
+\dim\left(\sum_i\operatorname{row}A_i\right)
+=
+\sum_i\dim C_i
+=80.
+\]
+
+Thus `rank A=80`. Its image is contained in the 80-dimensional direct sum of the `C_i`, so equality of images follows. ∎
 
 This is the degree-six analogue of the direct-sum coupling lemma used in the corrected `n=5` proof. It is applied only after directness has been independently established.
 
