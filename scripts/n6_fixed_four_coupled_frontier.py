@@ -9,6 +9,7 @@ fix four terms with sum ``R``. The proof notes establish:
 * the individual quadratic-space defects satisfy the budget ``27-b``;
 * common-quotient rigidity excludes every state with ``b=27``;
 * the current frontier therefore has ``20<=b<=26`` and 28 states;
+* the top layer ``b=26`` has exactly 24 labelled defect patterns;
 * three states are already excluded by the residual rank budget;
 * ten states can be excluded by relative-prolongation caps 23 or 59; and
 * fifteen states require structural exclusion or a stronger invariant.
@@ -101,6 +102,65 @@ def exact_shadow_lower_table() -> dict[str, dict[str, object]]:
     return table
 
 
+def build_b26_defect_patterns() -> list[dict[str, object]]:
+    """Enumerate every labelled solution of the ``b=26`` defect inequalities."""
+
+    patterns: list[dict[str, object]] = []
+
+    # Family A: one epsilon_i=1; only alpha_i may be zero or one.
+    for index in range(FIXED_TERMS):
+        for alpha_value in (0, 1):
+            epsilon = [0] * FIXED_TERMS
+            alpha = [0] * FIXED_TERMS
+            epsilon[index] = 1
+            alpha[index] = alpha_value
+            patterns.append(
+                {
+                    "family": "one_quadratic_dimension_defect",
+                    "epsilon": epsilon,
+                    "alpha": alpha,
+                }
+            )
+
+    # Family B: every epsilon is zero and the four alpha bits are arbitrary.
+    for mask in range(1 << FIXED_TERMS):
+        alpha = [
+            (mask >> index) & 1
+            for index in range(FIXED_TERMS)
+        ]
+        patterns.append(
+            {
+                "family": "maximal_quadratic_dimensions",
+                "epsilon": [0] * FIXED_TERMS,
+                "alpha": alpha,
+            }
+        )
+
+    for pattern in patterns:
+        epsilon = pattern["epsilon"]
+        alpha = pattern["alpha"]
+        if not isinstance(epsilon, list) or not isinstance(alpha, list):
+            raise AssertionError(pattern)
+        for omitted in range(FIXED_TERMS):
+            left = sum(
+                int(epsilon[index])
+                for index in range(FIXED_TERMS)
+                if index != omitted
+            ) + int(alpha[omitted])
+            if left > 1:
+                raise AssertionError((pattern, omitted, left))
+
+    if len(patterns) != 24:
+        raise AssertionError(len(patterns))
+    family_histogram = Counter(str(pattern["family"]) for pattern in patterns)
+    if dict(family_histogram) != {
+        "one_quadratic_dimension_defect": 8,
+        "maximal_quadratic_dimensions": 16,
+    }:
+        raise AssertionError(family_histogram)
+    return patterns
+
+
 def build_raw_states() -> list[dict[str, object]]:
     states: list[dict[str, object]] = []
 
@@ -179,6 +239,7 @@ def build_payload() -> dict[str, object]:
         raise AssertionError(projection_cap)
 
     shadow_table = exact_shadow_lower_table()
+    defect_patterns = build_b26_defect_patterns()
     raw_states = build_raw_states()
     excluded_states = [
         row for row in raw_states if row["central_intersection_b"] == 27
@@ -218,6 +279,10 @@ def build_payload() -> dict[str, object]:
     if maximum_remaining_requirement != 157:
         raise AssertionError(maximum_remaining_requirement)
 
+    defect_family_histogram = dict(
+        sorted(Counter(str(row["family"]) for row in defect_patterns).items())
+    )
+
     return {
         "status": "EXACT_INTEGER_FRONTIER_WITH_B27_EXCLUSION_REPLAYED",
         "hypothesis": "a 23-term Chow decomposition of perm_6",
@@ -247,6 +312,11 @@ def build_payload() -> dict[str, object]:
             "residual_inequality_upper_bound_on_central_rank": 34,
             "contradiction": "80>34",
         },
+        "b26_defect_patterns": {
+            "pattern_count": len(defect_patterns),
+            "family_histogram": defect_family_histogram,
+            "patterns": defect_patterns,
+        },
         "central_intersection_range": [20, 26],
         "state_count": len(states),
         "route_histogram": surviving_histogram,
@@ -255,9 +325,10 @@ def build_payload() -> dict[str, object]:
         "states": states,
         "excluded_b27_states": excluded_states,
         "claim_boundary": (
-            "The audit replays the 28-state frontier after the proved b=27 "
-            "common-quotient exclusion. It does not exclude the 15 remaining "
-            "structural states or establish the p<=23 and p<=59 caps."
+            "The audit replays the 28-state frontier and 24 b=26 defect "
+            "patterns after the proved b=27 common-quotient exclusion. It "
+            "does not exclude the 15 remaining structural states or "
+            "establish the p<=23 and p<=59 caps."
         ),
     }
 
