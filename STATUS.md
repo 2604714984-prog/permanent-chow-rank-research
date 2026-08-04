@@ -35,6 +35,7 @@ Status vocabulary:
 | G-017 | `PROOF_DRAFT_COMPLETE` | the odd-degree one-step multishadow gain is `(2/(e log 2)+o(1))*binom(n,floor(n/2))/n`, twice the even constant in this normalization | `docs/general_multishadow_parity_asymptotics.md` |
 | G-018 | `PROOF_DRAFT_COMPLETE` | among all fixed integer output-degree offsets and fixed constant witness defects, the G-014 parity coefficients are uniquely maximized at the central lower output degree | `docs/general_multishadow_offset_optimality.md` and exact finite diagnostics |
 | G-019 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | for every `K subset W tensor Sym^2 V` of dimension `k`, the vector-valued first prolongation satisfies `dim K^(1)<=k^{<2>}` | universal Grassmannian kernel, explicit colored-monomial one-parameter subgroup, scalar Macaulay growth, superadditivity, and `scripts/vector_valued_macaulay_audit.py` |
+| G-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | the `2^(n-1)` column-uniform Glynn sign products are linearly independent, and the unique expansion of `perm_n` in their span uses every term with nonzero coefficient | Walsh-Hadamard proof and `scripts/glynn_family_rigidity_audit.py`; restricted-family theorem only |
 | N6-001 | `OPEN` | improve the lower bound beyond 25 or find a shorter decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the former one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained | `scripts/n6_multishadow_route_barrier.py` |
@@ -49,17 +50,20 @@ Status vocabulary:
 | N6-012 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | the `b=25` defect patterns have relation-kernel cap at most two and force central rank at least 78, contradicting the residual upper bound 30 | `docs/n6_b25_two_relation_exclusion.md` |
 | N6-013 | `SUPERSEDED`, `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | componentwise scalar Macaulay prolongation and a block-Sylvester inequality exclude 23-term decompositions, proving the historical lower bound 24 | `docs/n6_component_prolongation_exclusion.md` |
 | N6-014 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | under a hypothetical 24-term decomposition, fixing six terms gives `40<=b<=64`; `b=40,41` are Koszul-strict and G-019 plus block-Sylvester and exact defect arithmetic exclude every `42<=b<=64`, hence `ChowRank(perm_6)>=25` | `docs/n6_fixed_six_lower25.md`, `scripts/n6_fixed_six_lower25_audit.py`, independent `16^6` labelled replay, and compact frozen payload |
-| N6-015 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | under a hypothetical 25-term decomposition, exact `q=6,7,8` fixed-count arithmetic leaves respectively 327, 355, and 635 states after vector-Macaulay central pruning; the structural counts are 269, 290, and 584, so no fixed count is selected and the central first-Koszul route is suspended for lower 26 | `docs/n6_lower26_fixed_q_diagnostic.md`, `scripts/n6_lower26_fixed_q_diagnostic.py`, and frozen table hashes |
+| N6-015 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | under a hypothetical 25-term decomposition, exact `q=6,7,8` fixed-count arithmetic leaves respectively 327, 355, and 635 states after vector-Macaulay central pruning; no fixed count is selected and the central first-Koszul route is suspended for lower 26 | `docs/n6_lower26_fixed_q_diagnostic.md`, `scripts/n6_lower26_fixed_q_diagnostic.py`, and frozen table hashes |
+| N6-016 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | for output degrees `2,3,4`, the first higher-wedge Koszul rank ratios certify only `15,21,16`, identical to the ordinary first-Koszul integer bounds; a dimension-only second shadow is vacuous for `q>=6`; the column-uniform Glynn family requires all 32 terms | `docs/n6_alternative_route_ceiling_comparison.md`, exact torus-block ranks, and G-020 |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-019 and N6-006 through N6-014 has not been exhaustively checked.
+- Literature novelty of G-001 through G-020 and N6-006 through N6-016 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
 - N6-014 does not prove `ChowRank(perm_6)>=26`, a border Chow-rank lower bound of 25, or the conjectural exact value 32.
-- N6-015 is a negative route diagnostic. Its state counts do not prove that lower 26 is impossible; they only show that the tested fixed-count central first-Koszul inequalities do not produce a compact frontier.
+- N6-015 and N6-016 are negative route diagnostics. They do not prove that lower 26 is impossible; they identify specific dimension-only and rank-ratio routes that do not supply a strict global margin.
+- At output degree two, N6-016 records characteristic-zero rank windows for the second Koszul differential rather than unsupported equalities.
+- G-020 is restricted to column-uniform sign products and does not control arbitrary Chow terms or column-dependent sign patterns.
 - The small `F_2` calculation in the G-019 audit is diagnostic only; the characteristic-zero theorem rests on the universal-bundle and torus-degeneration proof.
 - The frozen rational witnesses certify the displayed general lower bounds but are not proved globally optimal within G-014.
 - G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.
