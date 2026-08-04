@@ -1,28 +1,46 @@
-# The unique three-relation frontier at `b=24`
+# The historical three-relation diagnostic at `b=24`
 
 ## Status
 
-`ROUTE_DIAGNOSTIC` with exact integer replay. This note does not exclude `b=24` and does not prove `ChowRank(perm_6)>=24`.
+`SUPERSEDED_ROUTE_DIAGNOSTIC`, with exact integer replay.
 
-## 1. Current fixed-four boundary
+The defect table and the unique cap-three pattern below remain valid. They
+no longer describe an open proof boundary: the componentwise Macaulay
+argument in
 
-The proved fixed-four exclusion chain removes the layers
+```text
+docs/n6_component_prolongation_exclusion.md
+```
+
+bounds the full cubic relation kernel and excludes the entire `b=24` layer.
+The current in-repository conclusion is
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_6)\ge24.
+\]
+
+## 1. Historical fixed-four boundary
+
+Before the component-prolongation theorem, the proved fixed-four exclusion
+chain had removed
 
 \[
 b=27,
 \qquad
 b=26,
 \qquad
-b=25.
+b=25,
 \]
 
-Under a hypothetical 23-term decomposition, the current range is
+and left the range
 
 \[
-20\le b\le24.
+20\le b\le24
 \]
 
-At the top remaining layer, the quadratic shadow is exactly
+under a hypothetical 23-term decomposition.
+
+At the top layer, the quadratic shadow is exactly
 
 \[
 \dim\left(
@@ -34,7 +52,8 @@ At the top remaining layer, the quadratic shadow is exactly
 \tag{1.1}
 \]
 
-If it were at least 46, the already-proved `b=25` direct/one-/two-relation analysis would give a central-rank contradiction.
+If it were at least 46, the already-proved `b=25` analysis would give a
+central-rank contradiction.
 
 ## 2. Defect inequalities
 
@@ -62,6 +81,7 @@ The four omitted-factor projections give
 \qquad(j=1,2,3,4).
 }
 \tag{2.1}
+\]
 
 For one labelled pattern, let
 
@@ -71,23 +91,25 @@ r_i=15-\varepsilon_i,
 q_i=12-\varepsilon_i+\alpha_i.
 \]
 
-Since the total quadratic shadow is 45, the quadratic relation-kernel dimension satisfies
+The dimension-only quadratic relation-kernel cap is
 
 \[
 \kappa
 \le
 \sum_ir_i-45-\max_iq_i.
 \tag{2.2}
+\]
 
 ## 3. Exact exhaustive table
 
-The standard-library generator enumerates every nonnegative labelled solution of (2.1). It finds
+The standard-library generator enumerates every nonnegative labelled
+solution of (2.1). It finds
 
 \[
 \boxed{1153}
 \]
 
-patterns, partitioned by the cap (2.2) as
+patterns:
 
 ```text
 relation-kernel cap 0: 940
@@ -96,13 +118,14 @@ relation-kernel cap 2:  23
 relation-kernel cap 3:   1
 ```
 
-The degree-six Chow-term profile proved in the preceding layers shows that quadratic derivative dimension 12 is impossible. Exactly 16 patterns require such a dimension. Removing them leaves
+Quadratic derivative dimension 12 is impossible for a degree-six Chow term.
+Exactly 16 patterns require that profile. Removing them leaves
 
 \[
 \boxed{1137}
 \]
 
-profile-realizable patterns:
+profile-feasible patterns:
 
 ```text
 relation-kernel cap 0: 924
@@ -120,7 +143,7 @@ The 23 cap-two patterns have only two epsilon types:
 
 ## 4. The unique cap-three pattern
 
-The unique pattern with relation-kernel cap three is
+The unique pattern with quadratic relation-kernel cap three is
 
 \[
 \boxed{
@@ -129,59 +152,84 @@ The unique pattern with relation-kernel cap three is
 \alpha_1=\cdots=\alpha_4=0.
 }
 \tag{4.1}
-
-Thus all four fixed terms satisfy
-
-\[
-\dim\mathcal D_2(T_i)=15,
 \]
 
+Thus all four terms have 15-dimensional quadratic derivative spaces,
+three-dimensional permanent intersections, and 12-dimensional quotient
+images. The extremal six-plane theorem applies to all four factor spans.
+
+## 5. Why the former firewall stopped here
+
+A zero-dimensional quadratic relation kernel makes the central derivative
+spaces direct. Dimension one forces pure-cube relation components, while
+dimension two forces binary cubic components. The previously proved term
+profiles exclude those possibilities.
+
+Dimension three can support a ternary squarefree cubic, so that component
+classification could not be extended mechanically. This was a genuine
+failure of the old proof route.
+
+## 6. How the layer is now excluded
+
+The superseding theorem does not classify ternary cubic components. If the
+quadratic relation kernel has dimension `kappa`, each scalar component of a
+cubic relation lies in the first prolongation of a quadratic space of
+dimension at most `kappa`. Macaulay growth gives
+
 \[
-\dim\left(
-\mathcal D_2(\operatorname{perm}_6)
-\cap
-\mathcal D_2(T_i)
-\right)=3,
+\dim P^{(1)}\le\kappa^{\langle2\rangle}.
 \]
 
-and each quotient image has dimension 12.
+For four components, the entire cubic relation kernel has dimension at most
 
-The extremal six-plane theorem therefore applies to every factor span: up to transpose, each is a disjoint-support `2 x 3` tensor-product plane.
+\[
+3\kappa^{\langle2\rangle}.
+\]
 
-## 5. Why the existing coupling firewall stops here
+At `b=24`, one has `kappa<=3` and
 
-A quadratic relation kernel of dimension zero makes the central derivative spaces direct. Dimension one forces every cubic relation component to be a pure cube; dimension two forces every component to be a binary cubic. Those cases are excluded by the degree-six term profiles and the squarefree-binary obstruction.
+\[
+3^{\langle2\rangle}=4.
+\]
 
-For dimension three, a relation component may be a ternary squarefree cubic. For example, a product of three independent factor variables is already such a cubic. Therefore the one-/two-relation argument cannot be extended by replacing “binary” with “ternary.”
+The resulting cubic relation cap is 12. The block-Sylvester inequality then
+gives
 
-This is the precise remaining obstruction, not merely a larger version of the previous integer table.
+\[
+\dim\mathcal D_3(R)
+\ge
+4\cdot20-2\cdot12
+=56.
+\]
 
-## 6. Next proof target
+The nineteen-term residual inequality gives instead
 
-The next minimal target is to analyze the unique pattern (4.1) using the explicit extremal geometry:
+\[
+\dim\mathcal D_3(R)\le2b-20=28.
+\]
 
-1. put the four factor spans into the classified `2 x 3` / `3 x 2` support components;
-2. classify three-dimensional quadratic relation kernels among their 15-dimensional derivative spaces;
-3. impose integrability on the induced ternary cubic relation components;
-4. bound the coupled middle-catalectic rank or the relative prolongation on the surviving relation types.
+Hence `b=24` is impossible.
 
-No broad SAT, Hilbert-scheme, or workflow layer is justified before this single equality pattern is reduced algebraically.
+## 7. Claim boundary
 
-## 7. Reproduction
+The exact table in this note is still useful as an independent arithmetic
+replay, but it is no longer a theorem boundary. The superseding result
+proves only
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_6)\ge24.
+\]
+
+It does not prove a lower bound of 25, a border-rank lower bound of 24, or
+the conjectural exact value 32.
+
+## 8. Reproduction
 
 Run
 
 ```bash
 python scripts/n6_b24_three_relation_frontier.py
 python -m unittest tests.test_n6_b24_three_relation_frontier -v
-```
-
-Expected output includes
-
-```text
-all_labelled_pattern_count=1153
-profile_realizable_pattern_count=1137
-relation_kernel_caps=924/189/23/1
-unique_three_relation_pattern=all_zero_defects
-N6_B24_THREE_RELATION_FRONTIER_PASS
+python scripts/n6_component_prolongation_exclusion.py
+python -m unittest tests.test_n6_component_prolongation_exclusion -v
 ```
