@@ -35,7 +35,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the current scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
-| `n=6` fixed-four current frontier | proof draft complete; exact arithmetic replayed | common-quotient rigidity excludes `b=27`; maximal-term profiles plus a one-relation coupling lemma exclude `b=26`; the current range is `20<=b<=25` with 21 exact states |
+| `n=6` fixed-four current frontier | proof draft complete; exact arithmetic replayed | common-quotient, one-relation, and two-relation coupling arguments exclude `b=27,26,25`; the current range is `20<=b<=24` with 15 exact states |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
@@ -97,9 +97,13 @@ The universal single-term theorem first degenerates the at-most-six-dimensional 
 
 The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27` and 36 states. Equality at `b=27` forces a common 12-dimensional quadratic quotient, a direct quadratic sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34.
 
-At `b=26`, the exact defect inequalities have 24 labelled patterns. The script independently replays the degree-six Chow-term catalectic profile: quadratic dimension 15 forces cubic dimension 20 and excludes pure cubes. Twenty-three patterns force the quadratic sum to be direct; the last has relation-kernel dimension at most one, and integrability would turn any cubic relation into pure cubes. Hence every `b=26` pattern has central rank at least 60, contradicting the residual upper bound 32. The current frontier is `20<=b<=25` with 21 states: 3 already strict, 8 addressable by relative-prolongation caps, and 10 still structural. The maximum remaining quotient-gain requirement is 121.
+At `b=26`, 24 exact defect patterns have quadratic relation-kernel cap zero or one. The exact term-profile matrices show that quadratic dimension 15 forces cubic dimension 20 and no pure cube. Directness or one-relation integrability gives central rank at least 60, contradicting the residual upper bound 32.
 
-The extremal six-plane theorem independently classifies the individual equality geometry relevant to the near-endpoint layers. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components.
+At `b=25`, the script enumerates 213 labelled defect patterns: 189 have no quadratic relation, 23 have relation-kernel cap one, and a unique all-zero defect pattern has cap two. Quadratic dimensions 13–15 have cubic dimensions at least 18. The unique two-relation pattern lies on the extremal equality locus, so its factor spaces are independent and their squarefree cubic spaces contain no binary cubic. All 213 patterns therefore have central rank at least 78, contradicting the residual upper bound 30.
+
+The current frontier is `20<=b<=24` with 15 states: 3 already strict, 6 addressable by relative-prolongation caps, and 6 still structural. The maximum remaining quotient-gain requirement is 85. At the next layer `b=24`, only the all-zero defect pattern can have quadratic relation-kernel cap three.
+
+The extremal six-plane theorem independently classifies the individual equality geometry relevant to that final high-intersection pattern. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components.
 
 ## Layout
 
