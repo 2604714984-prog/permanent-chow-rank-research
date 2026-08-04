@@ -43,12 +43,13 @@ Status vocabulary:
 | N6-007 | `PROOF_DRAFT_COMPLETE` | for every nonzero scalar `alpha` and degree-six Chow term `T`, `rank K_3(perm_6-alpha T)=14175+rank K_3(T)` | `D_3(perm_6) intersect D_3(T)=0`, N6-006, and the double-quotient inequality; `docs/n6_single_term_residual_additivity.md` |
 | N6-008 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | the fixed-four projection, shadow, and central-catalectic inequalities first give the raw range `20<=b<=27`, `0<=d<=b-20`, and 36 states | individual quadratic intersection cap 3, projection shadow cap 48, Bukh compression, and symmetric middle catalectic; `docs/n6_fixed_four_coupled_frontier.md` |
 | N6-009 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | every six-plane `L` with `dim(D_2(perm_6) intersect Sym^2 L)=3` is a disjoint-support `2 x 3` or `3 x 2` tensor-product plane; the reduced extremal locus has 5,580 seven-dimensional components, and each coordinate fixed point has exactly 432 local branches | exact `163/17/13` local certificate, squarefree multiplicity closure, and projective torus globalization; `docs/n6_extremal_six_plane_classification.md` |
-| N6-010 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | equality in the four omitted-factor projection bounds at `b=27` forces a common 12-dimensional quotient, direct quadratic derivative sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34; the current frontier is `20<=b<=26` with 28 states | `docs/n6_b27_common_quotient_exclusion.md` and revised `scripts/n6_fixed_four_coupled_frontier.py` |
+| N6-010 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | equality in the four omitted-factor projection bounds at `b=27` forces a common 12-dimensional quotient, direct quadratic derivative sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34 | `docs/n6_b27_common_quotient_exclusion.md` and revised frontier replay |
+| N6-011 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | at `b=26`, the 24 exact defect patterns either force the quadratic sum to be direct or leave one quadratic relation; maximal quadratic dimension implies cubic dimension 20 and no pure cube, so the one-relation integrability lemma forces central rank at least 60, contradicting the residual upper bound 32; the current frontier is `20<=b<=25` with 21 states | `docs/n6_b26_one_relation_exclusion.md`, exact term-profile matrices, and revised `scripts/n6_fixed_four_coupled_frontier.py` |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-018 and N6-006 through N6-010 has not been exhaustively checked.
+- Literature novelty of G-001 through G-018 and N6-006 through N6-011 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` claim is made; the current in-repository interval is `23<=ChowRank(perm_6)<=32`.
 - The frozen rational witnesses certify the displayed lower bounds but are not proved globally optimal within G-014.
@@ -57,4 +58,4 @@ Status vocabulary:
 - N6-003 is a barrier for the current scalar one-step formula only; it does not rule out Chow-realizability restrictions, positive `Gamma`, higher coupled shadows, or different flattenings.
 - N6-006 and N6-007 are one-term theorems. They do not imply additivity of quotient gain for `K_3(T_1+...+T_q)`.
 - N6-009 classifies individual equality planes and their factor-frame base locus, not four coupled frames.
-- N6-010 removes the eight `b=27` states but does not close the exact-24 target. Fifteen structural states remain, and the relative-prolongation bounds 23 and 59 have not been established on the ten addressable states.
+- N6-010 and N6-011 remove the `b=27` and `b=26` layers but do not close the exact-24 target. Ten structural states remain, and the relative-prolongation bounds 23 and 59 have not been established on the eight addressable states.
