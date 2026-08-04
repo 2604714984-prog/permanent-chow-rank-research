@@ -2,97 +2,62 @@
 
 ## Status
 
-`PROOF_DRAFT_COMPLETE` — the argument below proves the coordinate-monomial theorem in characteristic zero. A standard-library audit independently enumerates all 167 bipartite-multigraph orbit types and replays every rank. External peer review and a complete literature-novelty review have not been performed.
+`COMPUTATION_REPLAYED` and proof input for `docs/n6_universal_single_term_full_gain.md`.
 
-## 1. Scope
+This note proves and replays the coordinate-monomial theorem. The earlier limitation to coordinate terms has now been removed by a separate torus-degeneration argument on the at-most-six-dimensional factor span. The present file remains the finite coordinate certificate used by that general proof.
+
+## 1. Coordinate theorem
 
 Let
 
 \[
 P=\operatorname{perm}_6,
 \qquad
-V=\operatorname{span}\{x_{ij}:0\le i,j<6\},
+E_3=\mathcal D_3(P),
 \qquad
-\dim V=36,
+E_2=\mathcal D_2(P).
 \]
 
-and put
-
-\[
-E=\mathcal D_3(P).
-\]
-
-The central first-Koszul image has dimension
-
-\[
-\operatorname{rank}\delta_3(E\otimes V)=14175.
-\]
-
-For a degree-six form `T`, write
-
-\[
-F_T=\mathcal D_3(T)
-\]
-
-and define its quotient Koszul gain relative to the permanent by
-
-\[
-\Gamma_E(F_T)
-=
-\operatorname{rank}\delta_3((E+F_T)\otimes V)
--
-\operatorname{rank}\delta_3(E\otimes V).
-\]
-
-The general residual theorem in `docs/quotient_koszul_gain.md` uses only `Gamma_E(F_T)>=0`. This note proves the strongest possible value for every **coordinate monomial**
+For a degree-six coordinate monomial
 
 \[
 M=\prod_{i,j}x_{ij}^{a_{ij}},
 \qquad
-a_{ij}\in\mathbb Z_{\ge0},
+\sum_{i,j}a_{ij}=6,
+\]
+
+put
+
+\[
+F_3=\mathcal D_3(M),
 \qquad
-\sum_{i,j}a_{ij}=6.
+F_2=\mathcal D_2(M).
 \]
 
 ### Theorem 1.1
 
-For every nonzero coordinate monomial `M` of degree six,
+For every nonzero coordinate monomial `M`,
 
 \[
 \boxed{
-\Gamma_E(F_M)
-=
-\operatorname{rank}\delta_3(F_M\otimes V).
-}
-\]
-
-Equivalently,
-
-\[
-\boxed{
-\delta_3(E\otimes V)
+\delta_3(E_3\otimes V)
 \cap
-\delta_3(F_M\otimes V)
-=
-0.
+\delta_3(F_3\otimes V)
+=0.
 }
 \]
 
-Thus every reduced coordinate fixed point has full quotient gain, including all factor-multiplicity degenerations.
-
-This is not yet a theorem for arbitrary non-monomial Chow terms. Section 7 explains the non-strict specialization obstruction.
-
-## 2. A second-Koszul reduction
-
-Let
+Equivalently, the quotient Koszul gain equals the full term rank:
 
 \[
-E_2=\mathcal D_2(P),
-\qquad
-F_{M,2}=\mathcal D_2(M).
+\boxed{
+\Gamma_{E_3}(F_3)=\operatorname{rank}K_3(M).
+}
 \]
 
-The next differential in the Koszul complex is
+## 2. Second-Koszul reduction
+
+The next differential is
 
 \[
 \delta_2:
@@ -101,148 +66,82 @@ The next differential in the Koszul complex is
 V\otimes\Lambda^3V.
 \]
 
-### Lemma 2.1
-
-Set
+A common vector in the two first-Koszul images lies in
 
 \[
-T_M=E_2\cap F_{M,2}.
+(E_2\cap F_2)\otimes\Lambda^2V
 \]
 
-Then
+and is killed by `delta_2`. It is therefore enough to prove that
 
 \[
-\delta_3(E\otimes V)
-\cap
-\delta_3(F_M\otimes V)
-\subseteq
-\ker\left(
-\delta_2|_{T_M\otimes\Lambda^2V}
-\right).
-\]
-
-### Proof
-
-The image of `delta_3(E tensor V)` is contained in
-
-\[
-E_2\otimes\Lambda^2V,
-\]
-
-and the image of `delta_3(F_M tensor V)` is contained in
-
-\[
-F_{M,2}\otimes\Lambda^2V.
-\]
-
-Hence a common image vector lies in `T_M tensor Lambda^2 V`. It is also a Koszul cycle because consecutive Koszul differentials compose to zero. ∎
-
-It therefore suffices to prove that
-
-\[
-\delta_2|_{T_M\otimes\Lambda^2V}
+\delta_2|_{(E_2\cap F_2)\otimes\Lambda^2V}
 \]
 
 is injective.
 
-## 3. The rectangle space of a coordinate monomial
+## 3. Rectangle-space classification
 
-Let `G_M` be the simple bipartite support graph of `M`. Its left vertices are the six matrix rows, its right vertices are the six matrix columns, and `(i,j)` is an edge exactly when `a_ij>0`. The graph has at most six distinct edges.
+Let `G_M` be the simple bipartite support graph of `M`: the edge `(i,j)` occurs when `a_ij>0`. It has at most six distinct edges.
 
-The permanent quadratic derivative space has the basis
+The permanent quadratic derivative space has basis
 
 \[
 q_{ii';jj'}
 =
-x_{ij}x_{i'j'}
-+
-x_{ij'}x_{i'j},
-\qquad
-i<i',
-\quad
-j<j'.
+x_{ij}x_{i'j'}+x_{ij'}x_{i'j}.
 \]
 
-Different rectangles have disjoint pairs of monomial supports.
+The two monomials attached to different rectangles are disjoint. Hence
 
-### Lemma 3.1
+\[
+E_2\cap F_2
+\]
 
-The intersection `T_M` is the span of precisely those `q_{ii';jj'}` whose four rectangle edges occur in `G_M`.
+is spanned exactly by the rectangle quadrics whose four edges occur in `G_M`.
 
-### Proof
-
-The monomial space `F_{M,2}` is spanned by the degree-two monomial divisors of `M`. Because every permanent quadratic basis vector has its own two-monomial support pair, a linear combination belongs to this monomial space exactly when both monomials of every used rectangle divide `M`. This is equivalent to the presence of all four rectangle edges in `G_M`. ∎
-
-### Lemma 3.2 — six-edge rectangle classification
-
-A simple bipartite graph with at most six edges has one of the following rectangle sets:
+A simple bipartite graph with at most six edges has:
 
 1. no rectangle;
-2. exactly one rectangle;
-3. exactly three rectangles, in which case its cyclic core is `K_2,3` or `K_3,2`.
+2. one rectangle; or
+3. exactly three rectangles, with cyclic core `K_2,3` or `K_3,2`.
 
-### Proof
+Indeed, two different four-cycles in a union of at most six edges must share an adjacent two-edge path. Their union is `K_2,3` or its transpose and automatically contains the third rectangle.
 
-Two distinct four-cycles whose union has at most six edges must share at least two edges. In a bipartite graph, two distinct four-cycles sharing two edges share an adjacent length-two path. Their union is therefore `K_2,3` or `K_3,2`, and the third four-cycle is automatically present. A `K_2,3` already uses six edges, so no further edge can belong to the support. ∎
+Thus the relevant quadratic intersection has dimension `0`, `1`, or `3`.
 
-Consequently, `T_M` has dimension `0`, `1`, or `3`.
+## 4. Injectivity in the three cases
 
-## 4. Injectivity for one rectangle
+### 4.1 No rectangle
 
-Suppose
+The intersection is zero.
 
-\[
-T_M=\operatorname{span}\{q\}.
-\]
+### 4.2 One rectangle
 
-The quadric `q` has matrix rank four.
-
-### Lemma 4.1
-
-If a quadratic form `q` has rank at least three, then
+The unique rectangle quadric has matrix rank four. For a rank-at-least-three quadric `q`, diagonalize it as
 
 \[
-\delta_2:
-\operatorname{span}\{q\}\otimes\Lambda^2V
-\longrightarrow
-V\otimes\Lambda^3V
+q=y_1^2+\cdots+y_r^2,
+\qquad r\ge3.
 \]
 
-is injective.
-
-### Proof
-
-After a linear change of variables, the gradient of `q` contains three linearly independent variables `y_1,y_2,y_3`. If
+If
 
 \[
 \delta_2(q\otimes\omega)=0,
 \]
 
-independence of the first tensor factors gives
+independence of the first tensor factors forces
 
 \[
 y_i\wedge\omega=0
-\qquad
-(i=1,2,3).
 \]
 
-The first equation gives `omega=y_1 wedge a`. The second forces `a` to lie in `span(y_1,y_2)`, so `omega` is a scalar multiple of `y_1 wedge y_2`. The third equation then forces that scalar to vanish. ∎
+for three independent `y_i`, hence `omega=0`. The one-rectangle restriction is injective.
 
-Thus the one-rectangle case contributes no common Koszul image.
+### 4.3 The `K_2,3` core
 
-## 5. Injectivity for the `K_2,3` rectangle space
-
-It is enough to treat `K_2,3`; transposition gives `K_3,2`.
-
-Let
-
-\[
-L=\operatorname{span}
-\{a_1,a_2,a_3,b_1,b_2,b_3\}
-\subseteq V
-\]
-
-and let
+Transposition reduces to
 
 \[
 T=
@@ -251,90 +150,36 @@ T=
 a_1b_2+a_2b_1,
 a_1b_3+a_3b_1,
 a_2b_3+a_3b_2
-\}.
+\}
+\subseteq
+\operatorname{Sym}^2L,
 \]
 
-Choose a complement `V=L direct_sum W`. The decomposition
+where
 
 \[
-\Lambda^2V
-=
-\Lambda^2L
-\oplus
-(L\wedge W)
-\oplus
-\Lambda^2W
+L=\operatorname{span}\{a_1,a_2,a_3,b_1,b_2,b_3\}.
 \]
 
-is preserved by the number of `W`-factors in the output of `delta_2`.
+Choose `V=L direct_sum W`. The number of `W` factors splits the map into three independent blocks.
 
-### Proposition 5.1
+- On `T tensor Lambda^2 W`, the map is the polarization embedding of `T` tensored with `Lambda^2 W`, hence injective.
+- For each `w in W`, the `T tensor (L wedge w)` block is the map
+  \[
+  T\otimes L\to L\otimes\Lambda^2L.
+  \]
+  Its regenerated integer matrix has an `18 x 18` minor of determinant `-1`.
+- The `T tensor Lambda^2 L` block is
+  \[
+  T\otimes\Lambda^2L\to L\otimes\Lambda^3L.
+  \]
+  Its regenerated integer matrix has a `45 x 45` minor of determinant `-1`.
 
-The restriction
+All blocks are injective over characteristic zero. This proves Theorem 1.1.
 
-\[
-\delta_2|_{T\otimes\Lambda^2V}
-\]
+## 5. Complete orbit replay
 
-is injective.
-
-### Proof
-
-There are three independent blocks.
-
-#### The `Lambda^2 W` block
-
-For a fixed nonzero `w wedge w'`, the map is the gradient map on `T`, tensored with `w wedge w'`. The gradient map is injective because Euler multiplication recovers `2q` from the gradient of `q`. Hence this block is injective.
-
-#### The `L wedge W` block
-
-For every fixed `w in W`, the relevant map is
-
-\[
-T\otimes L
-\longrightarrow
-L\otimes\Lambda^2L.
-\]
-
-In the ordered basis
-
-\[
-a_1,a_2,a_3,b_1,b_2,b_3,
-\]
-
-the exact integer matrix has an `18 x 18` minor of determinant
-
-\[
--1.
-\]
-
-Therefore this map is injective over every field.
-
-#### The `Lambda^2 L` block
-
-The remaining map is
-
-\[
-T\otimes\Lambda^2L
-\longrightarrow
-L\otimes\Lambda^3L.
-\]
-
-Its exact integer matrix has a `45 x 45` minor of determinant
-
-\[
--1.
-\]
-
-Hence this block is also injective over every field.
-
-The two minors are reconstructed from the definitions by `scripts/n6_coordinate_monomial_full_gain_audit.py`; their selected row indices are frozen in that script, while the matrices themselves are regenerated rather than stored. ∎
-
-Combining Sections 3–5 proves that the kernel in Lemma 2.1 is always zero, and therefore proves Theorem 1.1.
-
-## 6. Exact ranks and the 167-orbit replay
-
-A degree-six coordinate monomial is equivalently a bipartite multigraph with six unlabeled edges. Row permutations, column permutations, transpose, and factor order reduce these monomials to exactly
+A coordinate monomial is a bipartite multigraph with six unlabeled edges. Modulo row permutations, column permutations, transpose, and factor order, there are exactly
 
 \[
 167
@@ -342,19 +187,24 @@ A degree-six coordinate monomial is equivalently a bipartite multigraph with six
 
 orbits.
 
-For a monomial `M`, the space `F_M` is a monomial cubic space. Its first prolongation is also monomial: a degree-four monomial belongs to `F_M^(1)` exactly when deleting any one of its variables leaves a cubic divisor of `M`. Hence
+The rectangle distribution is
+
+```text
+no rectangle:     151
+one rectangle:     15
+three rectangles:   1
+```
+
+For a monomial `M`, the cubic derivative space and its first prolongation are monomial. Therefore
 
 \[
 \operatorname{rank}K_3(M)
-=
-36\dim F_M-\dim F_M^{(1)}
+=36\dim\mathcal D_3(M)-\dim\mathcal D_3(M)^{(1)}
 \]
 
-is computed over the integers without numerical rank estimation.
+is an exact integer formula. The full replay gives:
 
-The complete orbit replay gives:
-
-| factor multiplicities | orbit count | `dim D_3(M)` | `dim D_3(M)^(1)` | term rank | quotient gain |
+| factor multiplicities | orbit count | `dim D_3(M)` | prolongation | term rank | quotient gain |
 |---|---:|---:|---:|---:|---:|
 | `6` | 1 | 1 | 1 | 35 | 35 |
 | `5+1` | 2 | 2 | 2 | 70 | 70 |
@@ -368,80 +218,42 @@ The complete orbit replay gives:
 | `2+1+1+1+1` | 50 | 14 | 11 | 493 | 493 |
 | `1+1+1+1+1+1` | 50 | 20 | 15 | 705 | 705 |
 
-The rectangle distribution across the 167 orbits is
-
-```text
-no rectangle:    151
-one rectangle:    15
-three rectangles:  1
-```
-
-For every representative, the script rebuilds:
-
-1. the exact monomial prolongation upper bound;
-2. the term Koszul rank modulo `1,000,003`;
-3. the combined permanent-plus-term rank modulo the same prime.
-
-The modular combined rank equals
+For each orbit, the audit reconstructs the exact prolongation dimension and computes both the term rank and the new rank modulo `1,000,003`. The modular combined rank equals
 
 \[
 14175+\operatorname{rank}K_3(M).
 \]
 
-Since matrix rank over characteristic zero is at least the modular rank, while subadditivity gives the matching upper bound, the full-gain equality follows exactly in characteristic zero.
+Characteristic-zero rank is at least modular rank, while subadditivity gives the matching upper bound. Thus the displayed quotient-gain equality is exact over characteristic zero.
 
-The frozen machine-readable result is
+## 6. Reproduction and claim boundary
+
+Run
+
+```bash
+python scripts/n6_coordinate_monomial_full_gain_audit.py
+python -m unittest tests.test_n6_coordinate_monomial_full_gain -v
+```
+
+Expected outputs include
+
+```text
+coordinate_monomial_orbits=167
+rectangle_orbit_distribution=151/15/1
+K_2,3 exact minors=-1,-1
+N6_COORDINATE_MONOMIAL_FULL_GAIN_AUDIT_PASS
+```
+
+The machine-readable result is
 
 ```text
 data/n6_coordinate_monomial_full_gain.json
 ```
 
-and the replay command is
+This coordinate computation is now used as a finite lemma in
 
-```bash
-python scripts/n6_coordinate_monomial_full_gain_audit.py
+```text
+docs/n6_universal_single_term_full_gain.md
 ```
 
-## 7. Why this does not yet prove full gain for every Chow term
-
-The row-column torus preserves `E`, and every Chow term has coordinate-monomial limits. However, the rank of `K_3(T)` can drop in such a limit. The condition
-
-\[
-\operatorname{im}K_3(T)\cap\operatorname{im}K_3(P)=0
-\]
-
-is not closed across rank-dropping families.
-
-A model linear-algebra example is
-
-\[
-B_t=
-\begin{pmatrix}
-1&0\\
-0&t
-\end{pmatrix},
-\qquad
-A=\operatorname{span}(e_2).
-\]
-
-For `t != 0`, the image of `B_t` meets `A`; at `t=0`, the image drops to `span(e_1)` and the intersection disappears. Thus a bad generic family need not leave a bad reduced fixed point.
-
-Theorem 1.1 therefore closes the **reduced coordinate boundary**, but a universal full-gain theorem would still have to exclude non-strict rank-loss jets at those fixed points.
-
-## 8. Research consequence
-
-The current evidence supports the conjecture
-
-\[
-\Gamma_E(\mathcal D_3(T))
-=
-\operatorname{rank}K_3(T)
-\]
-
-for every degree-six Chow term `T`, including degenerate terms. Random and structured sparse tests have found no counterexample, but those tests are diagnostic only and are not part of Theorem 1.1.
-
-The next proof task is now sharply localized:
-
-> classify first-order and higher-order rank-loss arcs in the Chow-term parameter space whose reduced row-column-torus limit is a coordinate monomial, and prove that no Koszul intersection survives in the associated Rees limit.
-
-No SAT, Hilbert-scheme registry, or large finite-state layer is justified before that local strictness problem is understood.
+which proves full quotient gain for every individual degree-six Chow term by degenerating its factor span, not the term image itself. Neither result implies additivity for a coupled sum of several Chow terms. The exact-24 bottleneck is the quotient rank of `K_3(T_1+...+T_q)` for `q=4` or `5`.
