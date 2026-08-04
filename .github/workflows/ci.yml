@@ -51,3 +51,7 @@ jobs:
         run: |
           python scripts/n6_coordinate_monomial_full_gain_audit.py \
             --json /tmp/n6_coordinate_monomial_full_gain.json
+      - name: Replay n6 fixed-four coupled frontier
+        run: |
+          python scripts/n6_fixed_four_coupled_frontier.py \
+            --json /tmp/n6_fixed_four_coupled_frontier.json
