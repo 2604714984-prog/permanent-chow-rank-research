@@ -1,37 +1,34 @@
 #!/usr/bin/env python3
-"""Exact fixed-q route diagnostic for a hypothetical 24-term decomposition.
+"""Exact fixed-q diagnostic for a hypothetical 24-term decomposition of perm_6.
 
-The current theorem excludes 23 terms and proves ChowRank(perm_6)>=24.
-This script asks whether the same fixed-term arithmetic gives a compact
-route to excluding 24 terms. It tests q=4,5,6 fixed terms using:
+The script rebuilds the arithmetic for q=4,5,6 fixed terms. It certifies
+Bukh-shadow lower bounds with exact rational brackets, enumerates every
+central state, applies the already-proved scalar component-prolongation
+bound, and records the remaining quotient-Koszul route.
 
-* exact rational Bukh-shadow separators;
-* the symmetric middle-catalectic residual inequality;
-* componentwise Macaulay prolongation when it can exclude states;
-* the quotient-Koszul gain budget.
-
-The output is a route diagnostic only. It does not prove a lower bound of
-25 and deliberately leaves broad structural state sets unresolved.
+This is a route diagnostic only. It does not prove ChowRank(perm_6)>=25.
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from collections import Counter
 from fractions import Fraction
+from itertools import combinations_with_replacement
 from math import comb, factorial
 from pathlib import Path
 
 TOTAL_TERMS = 24
-PERMANENT_CENTRAL_RANK = 400
+PERMANENT_CENTRAL_DIMENSION = 400
 PERMANENT_KOSZUL_RANK = 14_175
 PER_TERM_CENTRAL_CAP = 20
 PER_TERM_KOSZUL_CAP = 705
 PER_TERM_QUADRATIC_CAP = 15
 PER_TERM_INTERSECTION_CAP = 3
 AMBIENT_VARIABLES = 36
-FIXED_TERM_COUNTS = (4, 5, 6)
+FIXED_TERM_CHOICES = (4, 5, 6)
 
 CENTRAL_RANK_LOWER_BY_QUADRATIC_DIMENSION: dict[int, int | None] = {
     15: 20,
@@ -42,76 +39,14 @@ CENTRAL_RANK_LOWER_BY_QUADRATIC_DIMENSION: dict[int, int | None] = {
     10: 0,
 }
 
-# Each pair (x,m) exactly certifies
-# binom(x,3)^2 < b and binom(x,2)^2 > m-1,
-# hence every b-dimensional central space has quadratic shadow at least m.
-SHADOW_CERTIFICATES: dict[int, tuple[Fraction, int]] = {
-    1: (Fraction(3, 1), 9),
-    2: (Fraction(16, 5), 13),
-    3: (Fraction(10, 3), 16),
-    4: (Fraction(24, 7), 18),
-    5: (Fraction(7, 2), 20),
-    6: (Fraction(25, 7), 22),
-    7: (Fraction(51, 14), 24),
-    8: (Fraction(48, 13), 25),
-    9: (Fraction(56, 15), 27),
-    10: (Fraction(91, 24), 29),
-    11: (Fraction(65, 17), 30),
-    12: (Fraction(27, 7), 31),
-    13: (Fraction(82, 21), 33),
-    14: (Fraction(55, 14), 34),
-    15: (Fraction(83, 21), 35),
-    16: (Fraction(167, 42), 36),
-    17: (Fraction(145, 36), 38),
-    18: (Fraction(77, 19), 39),
-    19: (Fraction(53, 13), 40),
-    20: (Fraction(41, 10), 41),
-    21: (Fraction(33, 8), 42),
-    22: (Fraction(29, 7), 43),
-    23: (Fraction(25, 6), 44),
-    24: (Fraction(46, 11), 45),
-    25: (Fraction(21, 5), 46),
-    26: (Fraction(38, 9), 47),
-    27: (Fraction(17, 4), 48),
-    28: (Fraction(64, 15), 49),
-    29: (Fraction(30, 7), 50),
-    30: (Fraction(43, 10), 51),
-    31: (Fraction(69, 16), 52),
-    32: (Fraction(13, 3), 53),
-    33: (Fraction(74, 17), 54),
-    34: (Fraction(83, 19), 55),
-    35: (Fraction(57, 13), 56),
-    36: (Fraction(317, 72), 57),
-    37: (Fraction(53, 12), 57),
-    38: (Fraction(31, 7), 58),
-    39: (Fraction(40, 9), 59),
-    40: (Fraction(49, 11), 60),
-    41: (Fraction(76, 17), 61),
-    42: (Fraction(139, 31), 62),
-    43: (Fraction(139, 31), 62),
-    44: (Fraction(9, 2), 63),
-    45: (Fraction(95, 21), 64),
-    46: (Fraction(68, 15), 65),
-    47: (Fraction(141, 31), 66),
-    48: (Fraction(41, 9), 66),
-    49: (Fraction(32, 7), 67),
-    50: (Fraction(87, 19), 68),
-    51: (Fraction(124, 27), 69),
-    52: (Fraction(23, 5), 69),
-    53: (Fraction(60, 13), 70),
-    54: (Fraction(37, 8), 71),
-    55: (Fraction(51, 11), 72),
-    56: (Fraction(51, 11), 72),
-    57: (Fraction(93, 20), 73),
-    58: (Fraction(14, 3), 74),
-    59: (Fraction(276, 59), 75),
-    60: (Fraction(75, 16), 75),
-    61: (Fraction(61, 13), 76),
-    62: (Fraction(80, 17), 77),
-    63: (Fraction(33, 7), 77),
-    64: (Fraction(85, 18), 78),
-    65: (Fraction(71, 15), 79),
-}
+
+def canonical_sha256(value: object) -> str:
+    text = json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(text).hexdigest()
 
 
 def generalized_binomial(value: Fraction, order: int) -> Fraction:
@@ -121,26 +56,96 @@ def generalized_binomial(value: Fraction, order: int) -> Fraction:
     return result / factorial(order)
 
 
-def verify_shadow_certificates() -> dict[str, dict[str, object]]:
-    table: dict[str, dict[str, object]] = {}
-    previous = 0
-    for dimension, (separator, shadow_lower) in SHADOW_CERTIFICATES.items():
-        cubic_size = generalized_binomial(separator, 3) ** 2
-        quadratic_size = generalized_binomial(separator, 2) ** 2
-        if not cubic_size <= dimension:
-            raise AssertionError((dimension, separator, cubic_size))
-        if not quadratic_size > shadow_lower - 1:
-            raise AssertionError((dimension, separator, quadratic_size))
-        if shadow_lower < previous:
-            raise AssertionError((dimension, shadow_lower, previous))
-        previous = shadow_lower
-        table[str(dimension)] = {
-            "separator": str(separator),
-            "binom_separator_3_squared": str(cubic_size),
-            "binom_separator_2_squared": str(quadratic_size),
-            "integer_shadow_lower_bound": shadow_lower,
+def floor_fraction(value: Fraction) -> int:
+    return value.numerator // value.denominator
+
+
+def certify_shadow_lower(dimension: int) -> dict[str, object]:
+    """Certify ceil(binomial(x,2)^2) where binomial(x,3)^2=dimension."""
+
+    if dimension < 0:
+        raise ValueError(dimension)
+    if dimension == 0:
+        return {
+            "dimension": 0,
+            "integer_shadow_lower_bound": 0,
+            "lower_separator": "0",
+            "upper_separator": "0",
+            "exact_root": True,
         }
-    return table
+
+    for integer_root in range(3, 20):
+        x = Fraction(integer_root)
+        if generalized_binomial(x, 3) ** 2 == dimension:
+            shadow = generalized_binomial(x, 2) ** 2
+            if shadow.denominator != 1:
+                raise AssertionError(shadow)
+            return {
+                "dimension": dimension,
+                "integer_shadow_lower_bound": int(shadow),
+                "lower_separator": str(x),
+                "upper_separator": str(x),
+                "exact_root": True,
+            }
+
+    for denominator in (
+        10,
+        100,
+        1_000,
+        10_000,
+        100_000,
+        1_000_000,
+    ):
+        low = 3 * denominator
+        high = 10 * denominator
+        while low + 1 < high:
+            middle = (low + high) // 2
+            x = Fraction(middle, denominator)
+            if generalized_binomial(x, 3) ** 2 < dimension:
+                low = middle
+            else:
+                high = middle
+
+        lower = Fraction(low, denominator)
+        upper = Fraction(high, denominator)
+        lower_cubic = generalized_binomial(lower, 3) ** 2
+        upper_cubic = generalized_binomial(upper, 3) ** 2
+        if not lower_cubic < dimension < upper_cubic:
+            continue
+
+        lower_shadow = generalized_binomial(lower, 2) ** 2
+        upper_shadow = generalized_binomial(upper, 2) ** 2
+        if floor_fraction(lower_shadow) != floor_fraction(upper_shadow):
+            continue
+
+        integer_lower = floor_fraction(lower_shadow) + 1
+        if not lower_shadow > integer_lower - 1:
+            raise AssertionError((dimension, lower_shadow))
+        if not upper_shadow < integer_lower:
+            raise AssertionError((dimension, upper_shadow))
+        return {
+            "dimension": dimension,
+            "integer_shadow_lower_bound": integer_lower,
+            "lower_separator": str(lower),
+            "upper_separator": str(upper),
+            "exact_root": False,
+        }
+
+    raise AssertionError(f"no exact rational shadow bracket for {dimension}")
+
+
+def shadow_certificates(maximum_dimension: int = 65) -> list[dict[str, object]]:
+    certificates = [
+        certify_shadow_lower(dimension)
+        for dimension in range(maximum_dimension + 1)
+    ]
+    lowers = [
+        int(row["integer_shadow_lower_bound"])
+        for row in certificates
+    ]
+    if lowers != sorted(lowers):
+        raise AssertionError(lowers)
+    return certificates
 
 
 def macaulay_successor_degree_two(value: int) -> int:
@@ -151,31 +156,21 @@ def macaulay_successor_degree_two(value: int) -> int:
 
     remaining = value
     upper = 10**9
-    expansion: list[tuple[int, int]] = []
+    answer = 0
     for degree in (2, 1):
         index = degree - 1
-        while index + 1 < upper and comb(index + 1, degree) <= remaining:
+        while (
+            index + 1 < upper
+            and comb(index + 1, degree) <= remaining
+        ):
             index += 1
-        expansion.append((index, degree))
         remaining -= comb(index, degree)
+        answer += comb(index + 1, degree + 1)
         upper = index
 
     if remaining != 0:
-        raise AssertionError((value, expansion, remaining))
-    return sum(
-        comb(index + 1, degree + 1)
-        for index, degree in expansion
-    )
-
-
-def central_rank_lower(quadratic_dimension: int) -> int | None:
-    if quadratic_dimension in CENTRAL_RANK_LOWER_BY_QUADRATIC_DIMENSION:
-        return CENTRAL_RANK_LOWER_BY_QUADRATIC_DIMENSION[
-            quadratic_dimension
-        ]
-    if quadratic_dimension <= 10:
-        return 0
-    raise AssertionError(quadratic_dimension)
+        raise AssertionError((value, remaining))
+    return answer
 
 
 def projection_cap(fixed_terms: int) -> int:
@@ -186,389 +181,376 @@ def projection_cap(fixed_terms: int) -> int:
 
 
 def central_intersection_lower(fixed_terms: int) -> int:
+    residual_terms = TOTAL_TERMS - fixed_terms
     return max(
         0,
-        PERMANENT_CENTRAL_RANK
-        - (TOTAL_TERMS - fixed_terms) * PER_TERM_CENTRAL_CAP
+        PERMANENT_CENTRAL_DIMENSION
+        - residual_terms * PER_TERM_CENTRAL_CAP,
     )
 
 
-def central_intersection_upper(fixed_terms: int) -> int:
+def central_intersection_upper(
+    fixed_terms: int,
+    shadows: dict[int, int],
+) -> int:
     cap = projection_cap(fixed_terms)
-    start = max(20, central_intersection_lower(fixed_terms))
-    for dimension in range(start, max(SHADOW_CERTIFICATES) + 1):
-        if SHADOW_CERTIFICATES[dimension][1] > cap:
+    start = central_intersection_lower(fixed_terms)
+    for dimension in range(start, max(shadows) + 1):
+        if shadows[dimension] > cap:
             return dimension - 1
-    raise AssertionError(("shadow table too short", fixed_terms, cap))
+    raise AssertionError((fixed_terms, cap))
 
 
-def shadow_lower(dimension: int) -> int:
-    if dimension == 0:
-        return 0
-    return SHADOW_CERTIFICATES[dimension][1]
-
-
-def feasible_epsilon_profiles(
+def initial_states(
     fixed_terms: int,
-    defect_budget: int,
-) -> list[tuple[int, ...]]:
-    maximum_total = (
-        fixed_terms * defect_budget // (fixed_terms - 1)
-    )
-    profiles: list[tuple[int, ...]] = []
+    upper: int,
+) -> list[dict[str, int]]:
+    residual_terms = TOTAL_TERMS - fixed_terms
+    residual_central_cap = residual_terms * PER_TERM_CENTRAL_CAP
+    states: list[dict[str, int]] = []
 
-    def rec(prefix: tuple[int, ...], total: int) -> None:
-        if len(prefix) == fixed_terms:
-            if all(total - value <= defect_budget for value in prefix):
-                profiles.append(prefix)
-            return
-        remaining_capacity = maximum_total - total
-        for value in range(min(PER_TERM_QUADRATIC_CAP, remaining_capacity) + 1):
-            rec(prefix + (value,), total + value)
-
-    rec((), 0)
-    return profiles
-
-
-def component_central_lower_bound(
-    fixed_terms: int,
-    intersection_dimension: int,
-    quadratic_shadow_lower: int,
-) -> dict[str, object]:
-    cap = projection_cap(fixed_terms)
-    defect_budget = cap - quadratic_shadow_lower
-    if defect_budget < 0:
-        raise AssertionError(
-            (fixed_terms, intersection_dimension, defect_budget)
+    for b in range(central_intersection_lower(fixed_terms), upper + 1):
+        maximum_d = min(
+            fixed_terms * PER_TERM_CENTRAL_CAP - b,
+            residual_central_cap
+            - PERMANENT_CENTRAL_DIMENSION
+            + b,
         )
+        if maximum_d < 0:
+            continue
+        for d in range(maximum_d + 1):
+            states.append(
+                {
+                    "b": b,
+                    "d": d,
+                    "h": b + d,
+                }
+            )
+    return states
+
+
+def central_rank_lower(quadratic_dimension: int) -> int | None:
+    if quadratic_dimension in CENTRAL_RANK_LOWER_BY_QUADRATIC_DIMENSION:
+        return CENTRAL_RANK_LOWER_BY_QUADRATIC_DIMENSION[
+            quadratic_dimension
+        ]
+    if quadratic_dimension < 10:
+        return 0
+    raise ValueError(quadratic_dimension)
+
+
+def scalar_component_bound(
+    fixed_terms: int,
+    b: int,
+    shadow_lower: int,
+) -> dict[str, object]:
+    defect_budget = projection_cap(fixed_terms) - shadow_lower
+    if defect_budget < 0:
+        raise AssertionError((fixed_terms, b, defect_budget))
 
     all_zero_relation_cap = defect_budget
-    all_zero_lower = max(
+    all_zero_relation_dimension_cap = (
+        (fixed_terms - 1)
+        * macaulay_successor_degree_two(all_zero_relation_cap)
+    )
+    all_zero_central_lower = max(
         0,
         fixed_terms * PER_TERM_CENTRAL_CAP
-        - 2
-        * (fixed_terms - 1)
-        * macaulay_successor_degree_two(all_zero_relation_cap),
+        - 2 * all_zero_relation_dimension_cap,
     )
 
-    # The all-zero profile is feasible. If even its lower bound is not
-    # above b, component arithmetic cannot universally exclude the lowest
-    # h=b state. Returning zero is conservative and avoids a broad,
-    # logically irrelevant enumeration.
-    if all_zero_lower <= intersection_dimension:
+    if all_zero_central_lower <= b:
         return {
-            "certified_lower_bound": 0,
-            "exact_profile_optimization_performed": False,
-            "all_zero_profile_lower_bound": all_zero_lower,
+            "b": b,
+            "shadow_lower_bound": shadow_lower,
             "defect_budget": defect_budget,
+            "minimum_central_rank_lower_bound": 0,
+            "minimizing_epsilon_profiles": [],
             "reason": (
-                "The feasible all-zero profile already has lower bound "
-                "at most b, so component arithmetic cannot exclude every "
-                "state in this layer."
+                "The all-zero defect profile is not strict; the existing "
+                "componentwise scalar bound cannot universally exclude "
+                "this central layer."
             ),
         }
 
-    minimum: int | None = None
-    minimizers: list[tuple[int, ...]] = []
-    retained_profiles = 0
-    impossible_dimension_twelve_profiles = 0
+    best: int | None = None
+    minimizers: list[list[int]] = []
+    profile_count = 0
 
-    for epsilon in feasible_epsilon_profiles(
+    for epsilon in combinations_with_replacement(
+        range(PER_TERM_QUADRATIC_CAP + 1),
         fixed_terms,
-        defect_budget,
     ):
-        quadratic_dimensions = [
-            PER_TERM_QUADRATIC_CAP - value for value in epsilon
-        ]
-        if 12 in quadratic_dimensions:
-            impossible_dimension_twelve_profiles += 1
+        if 3 in epsilon:
             continue
 
-        # For fixed epsilon, alpha=0 maximizes the quadratic relation cap
-        # and therefore minimizes the certified central-rank lower bound.
+        minimum_alpha = [
+            max(0, value - 12)
+            for value in epsilon
+        ]
+        if any(
+            sum(epsilon)
+            - epsilon[omitted]
+            + minimum_alpha[omitted]
+            > defect_budget
+            for omitted in range(fixed_terms)
+        ):
+            continue
+
+        quadratic_dimensions = [
+            PER_TERM_QUADRATIC_CAP - value
+            for value in epsilon
+        ]
+        quotient_dimensions = [
+            max(12 - value, 0)
+            for value in epsilon
+        ]
         relation_cap = (
             sum(quadratic_dimensions)
-            - quadratic_shadow_lower
-            - max(12 - value for value in epsilon)
+            - shadow_lower
+            - max(quotient_dimensions)
         )
         if relation_cap < 0:
             continue
 
         individual_lowers: list[int] = []
+        profile_impossible = False
         for dimension in quadratic_dimensions:
             lower = central_rank_lower(dimension)
             if lower is None:
-                raise AssertionError(dimension)
+                profile_impossible = True
+                break
             individual_lowers.append(lower)
+        if profile_impossible:
+            continue
 
         relation_dimension_cap = (
             (fixed_terms - 1)
             * macaulay_successor_degree_two(relation_cap)
         )
-        lower = max(
+        central_lower = max(
             0,
-            sum(individual_lowers) - 2 * relation_dimension_cap,
+            sum(individual_lowers)
+            - 2 * relation_dimension_cap,
         )
-        retained_profiles += 1
-        if minimum is None or lower < minimum:
-            minimum = lower
-            minimizers = [epsilon]
-        elif lower == minimum:
-            minimizers.append(epsilon)
+        profile_count += 1
 
-    if minimum is None:
-        raise AssertionError(
-            (fixed_terms, intersection_dimension, defect_budget)
-        )
-    if minimizers != [(0,) * fixed_terms]:
-        raise AssertionError(
-            (fixed_terms, intersection_dimension, minimum, minimizers)
-        )
+        if best is None or central_lower < best:
+            best = central_lower
+            minimizers = [list(epsilon)]
+        elif central_lower == best:
+            minimizers.append(list(epsilon))
+
+    if best is None:
+        raise AssertionError((fixed_terms, b, defect_budget))
+    if minimizers != [[0] * fixed_terms]:
+        raise AssertionError((fixed_terms, b, best, minimizers))
 
     return {
-        "certified_lower_bound": minimum,
-        "exact_profile_optimization_performed": True,
-        "all_zero_profile_lower_bound": all_zero_lower,
+        "b": b,
+        "shadow_lower_bound": shadow_lower,
         "defect_budget": defect_budget,
-        "retained_epsilon_profile_count": retained_profiles,
-        "impossible_dimension_twelve_epsilon_profile_count": (
-            impossible_dimension_twelve_profiles
-        ),
-        "unique_worst_epsilon_profile": list(minimizers[0]),
+        "profile_count": profile_count,
+        "minimum_central_rank_lower_bound": best,
+        "minimizing_epsilon_profiles": minimizers,
+        "reason": "Exact symmetric epsilon-profile optimization.",
     }
 
 
-def build_fixed_q_payload(fixed_terms: int) -> dict[str, object]:
-    if fixed_terms not in FIXED_TERM_COUNTS:
-        raise ValueError(fixed_terms)
-
+def route_for_state(
+    fixed_terms: int,
+    state: dict[str, int],
+) -> dict[str, object]:
+    b = state["b"]
+    d = state["d"]
     residual_terms = TOTAL_TERMS - fixed_terms
-    b_min = central_intersection_lower(fixed_terms)
-    b_max = central_intersection_upper(fixed_terms)
-    cap = projection_cap(fixed_terms)
+    residual_koszul_cap = residual_terms * PER_TERM_KOSZUL_CAP
+    base_residual_lower = PERMANENT_KOSZUL_RANK - AMBIENT_VARIABLES * b
+    required_gain = max(
+        0,
+        residual_koszul_cap + 1 - base_residual_lower,
+    )
+    maximum_gain = AMBIENT_VARIABLES * d
 
-    layers: list[dict[str, object]] = []
-    states: list[dict[str, object]] = []
+    if required_gain == 0:
+        route = "quotient_budget_already_strict"
+        prolongation_cap = None
+    elif maximum_gain < required_gain:
+        route = "structural_exclusion_or_stronger_invariant_required"
+        prolongation_cap = None
+    else:
+        route = "relative_prolongation_cap_can_close"
+        prolongation_cap = maximum_gain - required_gain
 
-    for b in range(b_min, b_max + 1):
-        shadow = shadow_lower(b)
-        component = component_central_lower_bound(
+    return {
+        **state,
+        "minimum_quotient_gain_for_strict_koszul_budget": required_gain,
+        "maximum_possible_quotient_gain": maximum_gain,
+        "sufficient_relative_prolongation_cap": prolongation_cap,
+        "route": route,
+    }
+
+
+def fixed_q_payload(
+    fixed_terms: int,
+    shadows: dict[int, int],
+) -> tuple[dict[str, object], list[dict[str, object]], list[dict[str, object]]]:
+    upper = central_intersection_upper(fixed_terms, shadows)
+    states = initial_states(fixed_terms, upper)
+
+    layer_cache: dict[int, dict[str, object]] = {}
+    for b in sorted({row["b"] for row in states}):
+        layer_cache[b] = scalar_component_bound(
             fixed_terms,
             b,
-            shadow,
+            shadows[b],
         )
-        central_lower = int(component["certified_lower_bound"])
-        central_upper = 2 * b + 80 - 20 * fixed_terms
-        d_max = min(
-            fixed_terms * PER_TERM_CENTRAL_CAP - b,
-            b + 80 - 20 * fixed_terms,
-        )
-        if d_max < 0:
-            raise AssertionError((fixed_terms, b, d_max))
 
-        layers.append(
+    surviving: list[dict[str, object]] = []
+    for state in states:
+        lower = int(
+            layer_cache[state["b"]][
+                "minimum_central_rank_lower_bound"
+            ]
+        )
+        if lower > state["h"]:
+            continue
+        surviving.append(
             {
-                "b": b,
-                "quadratic_shadow_lower_bound": shadow,
-                "projection_cap": cap,
-                "central_rank_upper_from_residual": central_upper,
-                "component_central_rank_lower": central_lower,
-                "component_diagnostic": component,
-                "d_range": [0, d_max],
+                **route_for_state(fixed_terms, state),
+                "component_central_rank_lower_bound": lower,
             }
         )
 
-        required_gain = (
-            residual_terms * PER_TERM_KOSZUL_CAP
-            + 1
-            - (PERMANENT_KOSZUL_RANK - AMBIENT_VARIABLES * b)
-        )
-
-        for d in range(d_max + 1):
-            h = b + d
-            if h < central_lower:
-                route = "component_central_rank_exclusion"
-                prolongation_cap = None
-            elif required_gain <= 0:
-                route = "quotient_koszul_already_strict"
-                prolongation_cap = None
-            elif AMBIENT_VARIABLES * d < required_gain:
-                route = "structural_exclusion_or_stronger_invariant_required"
-                prolongation_cap = None
-            else:
-                route = "relative_prolongation_cap_can_close"
-                prolongation_cap = (
-                    AMBIENT_VARIABLES * d - required_gain
-                )
-
-            states.append(
-                {
-                    "b": b,
-                    "d": d,
-                    "h": h,
-                    "minimum_quotient_gain_for_strict_koszul_budget": (
-                        required_gain
-                    ),
-                    "maximum_possible_quotient_gain": (
-                        AMBIENT_VARIABLES * d
-                    ),
-                    "relative_prolongation_cap_sufficient_for_closure": (
-                        prolongation_cap
-                    ),
-                    "route": route,
-                }
-            )
-
-    route_counts = Counter(row["route"] for row in states)
-    surviving = [
-        row
-        for row in states
-        if row["route"] != "component_central_rank_exclusion"
-    ]
-    p_caps = Counter(
-        int(row["relative_prolongation_cap_sufficient_for_closure"])
+    route_histogram = Counter(str(row["route"]) for row in surviving)
+    prolongation_histogram = Counter(
+        int(row["sufficient_relative_prolongation_cap"])
         for row in surviving
-        if row[
-            "relative_prolongation_cap_sufficient_for_closure"
-        ]
-        is not None
+        if row["sufficient_relative_prolongation_cap"] is not None
     )
-    structural = [
+    unresolved = [
         row
         for row in surviving
-        if row["route"]
-        == "structural_exclusion_or_stronger_invariant_required"
+        if row["route"] != "quotient_budget_already_strict"
     ]
 
-    return {
+    summary = {
         "fixed_terms": fixed_terms,
-        "residual_terms": residual_terms,
-        "projection_cap": cap,
-        "central_intersection_range": [b_min, b_max],
-        "state_count_before_component_exclusions": len(states),
-        "route_counts": dict(sorted(route_counts.items())),
-        "surviving_state_count": len(surviving),
-        "surviving_b_range": [
-            min(int(row["b"]) for row in surviving),
-            max(int(row["b"]) for row in surviving),
+        "central_projection_cap": projection_cap(fixed_terms),
+        "central_intersection_range": [
+            central_intersection_lower(fixed_terms),
+            upper,
         ],
-        "relative_prolongation_cap_histogram": {
-            str(key): value for key, value in sorted(p_caps.items())
+        "initial_state_count": len(states),
+        "component_excluded_state_count": len(states) - len(surviving),
+        "state_count_after_component_pruning": len(surviving),
+        "unresolved_state_count": len(unresolved),
+        "unresolved_b_range": (
+            [
+                min(int(row["b"]) for row in unresolved),
+                max(int(row["b"]) for row in unresolved),
+            ]
+            if unresolved
+            else None
+        ),
+        "route_histogram_after_component_pruning": dict(
+            sorted(route_histogram.items())
+        ),
+        "prolongation_cap_histogram": {
+            str(key): value
+            for key, value in sorted(prolongation_histogram.items())
         },
-        "maximum_required_quotient_gain_among_survivors": max(
-            int(row["minimum_quotient_gain_for_strict_koszul_budget"])
+        "maximum_required_quotient_gain_after_component_pruning": max(
+            int(
+                row[
+                    "minimum_quotient_gain_for_strict_koszul_budget"
+                ]
+            )
             for row in surviving
         ),
         "maximum_structural_gain_deficit": max(
-            int(row["minimum_quotient_gain_for_strict_koszul_budget"])
-            - int(row["maximum_possible_quotient_gain"])
-            for row in structural
+            (
+                int(
+                    row[
+                        "minimum_quotient_gain_for_strict_koszul_budget"
+                    ]
+                )
+                - int(row["maximum_possible_quotient_gain"])
+                for row in surviving
+                if row["route"]
+                == "structural_exclusion_or_stronger_invariant_required"
+            ),
+            default=0,
         ),
-        "layers": layers,
-        "states": states,
     }
+    return summary, list(layer_cache.values()), surviving
 
 
 def build_payload() -> dict[str, object]:
-    shadow_table = verify_shadow_certificates()
-    macaulay = {
-        str(value): macaulay_successor_degree_two(value)
-        for value in range(0, 23)
-    }
-    fixed_q = [
-        build_fixed_q_payload(fixed_terms)
-        for fixed_terms in FIXED_TERM_COUNTS
-    ]
-
-    expected_summary = {
-        4: {
-            "range": [0, 27],
-            "states": 406,
-            "survivors": 260,
-            "routes": {
-                "component_central_rank_exclusion": 146,
-                "quotient_koszul_already_strict": 6,
-                "relative_prolongation_cap_can_close": 60,
-                "structural_exclusion_or_stronger_invariant_required": 194,
-            },
-            "p_caps": {"2": 20, "38": 20, "74": 20},
-        },
-        5: {
-            "range": [20, 44],
-            "states": 325,
-            "survivors": 184,
-            "routes": {
-                "component_central_rank_exclusion": 141,
-                "quotient_koszul_already_strict": 3,
-                "relative_prolongation_cap_can_close": 34,
-                "structural_exclusion_or_stronger_invariant_required": 147,
-            },
-            "p_caps": {"23": 17, "59": 17},
-        },
-        6: {
-            "range": [40, 64],
-            "states": 325,
-            "survivors": 179,
-            "routes": {
-                "component_central_rank_exclusion": 146,
-                "quotient_koszul_already_strict": 3,
-                "relative_prolongation_cap_can_close": 35,
-                "structural_exclusion_or_stronger_invariant_required": 141,
-            },
-            "p_caps": {"8": 17, "44": 18},
-        },
+    certificates = shadow_certificates()
+    shadows = {
+        int(row["dimension"]): int(
+            row["integer_shadow_lower_bound"]
+        )
+        for row in certificates
     }
 
-    for route in fixed_q:
-        q = int(route["fixed_terms"])
-        expected = expected_summary[q]
-        observed = {
-            "range": route["central_intersection_range"],
-            "states": route["state_count_before_component_exclusions"],
-            "survivors": route["surviving_state_count"],
-            "routes": route["route_counts"],
-            "p_caps": route["relative_prolongation_cap_histogram"],
-        }
-        if observed != expected:
-            raise AssertionError((q, observed, expected))
+    summaries: list[dict[str, object]] = []
+    full_layers: dict[str, list[dict[str, object]]] = {}
+    full_states: dict[str, list[dict[str, object]]] = {}
 
-    best_by_survivor_count = min(
-        fixed_q,
-        key=lambda row: int(row["surviving_state_count"]),
-    )
-    if int(best_by_survivor_count["fixed_terms"]) != 6:
-        raise AssertionError(best_by_survivor_count)
+    for fixed_terms in FIXED_TERM_CHOICES:
+        summary, layers, states = fixed_q_payload(
+            fixed_terms,
+            shadows,
+        )
+        summaries.append(summary)
+        full_layers[str(fixed_terms)] = layers
+        full_states[str(fixed_terms)] = states
+
+    expected = {
+        4: (406, 146, 260, 254, 6, 60, 194),
+        5: (325, 141, 184, 181, 3, 34, 147),
+        6: (325, 146, 179, 176, 3, 35, 141),
+    }
+    for summary in summaries:
+        fixed_terms = int(summary["fixed_terms"])
+        routes = summary[
+            "route_histogram_after_component_pruning"
+        ]
+        observed = (
+            int(summary["initial_state_count"]),
+            int(summary["component_excluded_state_count"]),
+            int(summary["state_count_after_component_pruning"]),
+            int(summary["unresolved_state_count"]),
+            int(routes["quotient_budget_already_strict"]),
+            int(routes["relative_prolongation_cap_can_close"]),
+            int(
+                routes[
+                    "structural_exclusion_or_stronger_invariant_required"
+                ]
+            ),
+        )
+        if observed != expected[fixed_terms]:
+            raise AssertionError((fixed_terms, observed))
 
     return {
         "status": "EXACT_LOWER25_FIXED_Q_ROUTE_DIAGNOSTIC_REPLAYED",
-        "target": (
-            "Test fixed-term arithmetic under a hypothetical 24-term "
-            "decomposition of perm_6."
-        ),
-        "shadow_certificates": shadow_table,
-        "macaulay_degree_two_successors": macaulay,
-        "fixed_q_diagnostics": fixed_q,
+        "fixed_q_results": summaries,
         "route_selection": {
-            "fewest_surviving_states_fixed_terms": 6,
-            "fewest_surviving_states": 179,
-            "fewest_structural_states": 141,
-            "assessment": (
-                "No tested fixed-term count produces a compact proof "
-                "frontier. q=6 is numerically smallest, but it still leaves "
-                "179 states, including 141 structural states, and its "
-                "relative-prolongation caps 8 and 44 are tighter than the "
-                "q=5 caps 23 and 59."
-            ),
+            "numerically_smallest_fixed_terms": 6,
+            "fewest_unresolved_states": 176,
+            "selected_for_proof": None,
+            "verdict": "NO_COMPACT_FIXED_Q_FRONTIER",
         },
-        "conclusion": (
-            "The lower-24 component-prolongation proof does not extend "
-            "mechanically to a lower bound of 25. No fixed-q route is "
-            "promoted beyond ROUTE_DIAGNOSTIC."
-        ),
+        "shadow_certificate_sha256": canonical_sha256(certificates),
+        "layer_diagnostics_sha256": canonical_sha256(full_layers),
+        "surviving_states_sha256": canonical_sha256(full_states),
         "claim_boundary": (
-            "This output does not exclude a 24-term decomposition, does "
-            "not prove ChowRank(perm_6)>=25, and does not select q=6 as a "
-            "proof program without an additional structural invariant."
+            "This is a route diagnostic under a hypothetical 24-term "
+            "decomposition. It does not prove ChowRank(perm_6)>=25, "
+            "does not prove any displayed relative-prolongation cap, "
+            "and does not change the certified interval 24..32."
         ),
     }
 
@@ -583,14 +565,7 @@ def main() -> int:
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)
         args.json.write_text(text, encoding="utf-8", newline="\n")
-
-    compact = {
-        "status": payload["status"],
-        "route_selection": payload["route_selection"],
-        "conclusion": payload["conclusion"],
-        "claim_boundary": payload["claim_boundary"],
-    }
-    print(json.dumps(compact, indent=2, sort_keys=True))
+    print(text, end="")
     print("N6_LOWER25_FIXED_Q_DIAGNOSTIC_PASS")
     return 0
 
