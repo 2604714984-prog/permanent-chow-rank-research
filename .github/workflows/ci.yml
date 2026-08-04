@@ -67,3 +67,13 @@ jobs:
         run: |
           python scripts/n6_component_prolongation_exclusion.py \
             --json /tmp/n6_component_prolongation_exclusion.json
+      - name: Replay vector-valued Macaulay audit
+        run: |
+          python scripts/vector_valued_macaulay_audit.py \
+            --json /tmp/vector_valued_macaulay_audit.json
+      - name: Replay n6 fixed-six lower-25 exclusion
+        run: |
+          python scripts/n6_fixed_six_lower25_audit.py \
+            --json /tmp/n6_fixed_six_lower25.json
+      - name: Replay independent n6 fixed-six lower-25 arithmetic
+        run: python scripts/n6_fixed_six_lower25_independent_audit.py

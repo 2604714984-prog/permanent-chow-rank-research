@@ -33,10 +33,12 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Parity-sensitive multishadow asymptotics | proof draft complete | additive scale `Theta(2^n/n^(3/2))`; the odd constant is twice the even constant in `binom(n,floor(n/2))/n` normalization |
 | Fixed-offset multishadow optimization | proof draft complete | among every fixed integer output-degree offset and constant witness defect, the unique asymptotic optimizer is the central lower output degree |
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
+| Vector-valued Macaulay relation cap | proof draft complete; finite interfaces replayed | for `K subset W tensor Sym^2 V`, `dim K^(1)<=dim(K)^{<2>}`; the proof uses a universal Grassmannian kernel and an explicit colored-monomial degeneration |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the former scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
 | `n=6` fixed-four projection frontier | proof draft complete; exact arithmetic replayed | the raw range is `20<=b<=27`; common-quotient and low-relation arguments exclude `b=27,26,25` |
-| `n=6` component-prolongation closure | proof draft complete; exact arithmetic replayed | Macaulay growth and a block-Sylvester inequality exclude every `b=22,23,24` pattern; the three `b=20,21` states are already strict, so `ChowRank(perm_6)>=24` |
+| `n=6` component-prolongation closure | superseded proof draft; exact arithmetic replayed | excludes 23-term decompositions and proves the historical lower bound 24 |
+| `n=6` fixed-six lower-25 closure | proof draft complete; primary and independent arithmetic replayed | fixing six terms in a hypothetical 24-term decomposition gives `40<=b<=64`; vector-valued Macaulay growth and block-Sylvester exclude every state, so `ChowRank(perm_6)>=25` |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
@@ -45,13 +47,13 @@ The repository does **not** own large upstream proof bundles. External submissio
 
 “Proof draft complete” means the argument is written in the repository and its arithmetic implementation is tested. It does **not** mean external peer review or literature novelty review has been completed.
 
-The current certified interval for `n=6` is
+The current in-repository interval for `n=6` is
 
 ```text
-24 <= ChowRank(perm_6) <= 32.
+25 <= ChowRank(perm_6) <= 32.
 ```
 
-No exact-32 claim is made.
+No lower-26, border-lower-25, or exact-32 claim is made.
 
 ## Reviewed general lower-bound table
 
@@ -73,7 +75,7 @@ The current exact-rational multidimensional-shadow certificates give:
 | 15 | 6,440 | 6,879 | 16,384 |
 | 16 | 12,875 | 13,312 | 32,768 |
 
-These are the values of the general multidimensional-shadow theorem. The specialized `n=6` component-prolongation argument improves its row from 23 to the current best in-repository lower bound 24. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
+These are the values of the general multidimensional-shadow theorem. The specialized `n=6` fixed-six relation-module argument improves its row from 23 to the current best in-repository lower bound 25. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
 
 ## Reproduce the deterministic results
 
@@ -92,19 +94,20 @@ python scripts/n6_fixed_four_coupled_frontier.py
 python scripts/n6_extremal_six_plane_audit.py
 python scripts/n6_b24_three_relation_frontier.py
 python scripts/n6_component_prolongation_exclusion.py
+python scripts/vector_valued_macaulay_audit.py
+python scripts/n6_fixed_six_lower25_audit.py
+python scripts/n6_fixed_six_lower25_independent_audit.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
 
 The universal single-term theorem first degenerates the at-most-six-dimensional factor span to a coordinate subspace while keeping the relevant quadratic intersection at fixed dimension. The coordinate audit then supplies the only local cases: no rectangle, one rectangle, or a `K_2,3` / `K_3,2` rectangle space. The last case is eliminated by regenerated integer minors of determinant `-1` in orders 18 and 45.
 
-The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27` and 36 states. Equality at `b=27` forces a common 12-dimensional quadratic quotient, a direct quadratic sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34.
+The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27` and 36 states. Equality at `b=27` forces a common 12-dimensional quadratic quotient, a direct quadratic sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34. Low-relation arguments exclude the next two layers, and componentwise scalar Macaulay growth closes the historical 23-term frontier, proving lower 24.
 
-At `b=26`, 24 exact defect patterns have quadratic relation-kernel cap zero or one. The exact term-profile matrices show that quadratic dimension 15 forces cubic dimension 20 and no pure cube. Directness or one-relation integrability gives central rank at least 60, contradicting the residual upper bound 32.
+The new lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
 
-At `b=25`, the script enumerates 213 labelled defect patterns: 189 have no quadratic relation, 23 have relation-kernel cap one, and a unique all-zero defect pattern has cap two. Quadratic dimensions 13–15 have cubic dimensions at least 18. The unique two-relation pattern lies on the extremal equality locus, so its factor spaces are independent and their squarefree cubic spaces contain no binary cubic. All 213 patterns therefore have central rank at least 78, contradicting the residual upper bound 30.
-
-The remaining layers are closed without classifying ternary cubic relations. If the quadratic relation kernel has dimension `k`, each scalar component of a cubic relation lies in the first prolongation of a `k`-dimensional quadratic space. Macaulay growth bounds that scalar prolongation by `k^{<2>}`. For four components the entire cubic relation kernel is at most `3*k^{<2>}`. A block-Sylvester inequality then gives minimum coupled central ranks 38, 50, and 56 in the layers `b=22,23,24`, against residual upper bounds 24, 26, and 28. The three states at `b=20,21` were already quotient-Koszul strict. This proves the lower bound 24.
+The vector-valued Macaulay audit checks 3,996 distinct colored quadratic weights, all six-part successor inequalities through total dimension 16, and all 2,825 subspaces of a small divided-power `F_2` model. The finite-field calculation is a deterministic counterexample search only; it is not used to transfer an equality to characteristic zero.
 
 The extremal six-plane theorem remains an independent structural result. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components.
 

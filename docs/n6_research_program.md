@@ -2,19 +2,19 @@
 
 ## Status
 
-`OPEN`. The currently proved in-repository interval is
+`OPEN`. The current in-repository proof-draft interval is
 
 \[
-24
+25
 \le
 \operatorname{ChowRank}(\operatorname{perm}_6)
 \le
 32.
 \]
 
-The lower bound 24 is the internal proof draft in
-`docs/n6_component_prolongation_exclusion.md`. The upper bound is Glynn's
-32-term decomposition. No exact-32 claim is made.
+The lower bound 25 is the fixed-six relation-module argument in
+`docs/n6_fixed_six_lower25.md`. The upper bound is Glynn's 32-term
+decomposition. No lower-26, border-lower-25, or exact-32 claim is made.
 
 ## 1. Exact numerical baseline
 
@@ -26,7 +26,7 @@ At central derivative degree three,
 \operatorname{rank}K_{6,3}(\operatorname{perm}_6)=14175.
 \]
 
-One six-factor Chow term contributes at most
+One degree-six Chow term contributes at most
 
 \[
 20
@@ -40,215 +40,261 @@ to the middle catalectic and at most
 
 to the first Koszul flattening.
 
-The proved lower-bound history is
+The current lower-bound history is
 
 ```text
 ordinary first-Koszul ratio:            21
 zero-intersection shadow removal:       22
 multidimensional-shadow intersection:   23
-fixed-four component prolongation:      24
+fixed-four scalar prolongation:         24
+fixed-six vector relation module:       25
 ```
 
-## 2. What closed the 23-term problem
+## 2. What closed the 24-term problem
 
-Under a hypothetical 23-term decomposition, fixing four terms gives a
-nineteen-term residual. Projection and Bukh compression first reduce the
-central intersection to
+Assume a hypothetical 24-term decomposition and fix six terms. The residual
+has eighteen terms. The quadratic projection cap is
 
 \[
-20\le b\le27.
+5\cdot15+3=78.
 \]
 
-The layers `b=27,26,25` are excluded by common-quotient, one-relation, and
-two-relation coupling arguments.
-
-For the remaining layers, let `kappa` be the quadratic relation-kernel
-dimension among the four fixed quadratic derivative spaces. Each component
-of a cubic relation lies in the first prolongation of a scalar quadratic
-space of dimension at most `kappa`. Macaulay growth gives
+Bukh compression and the symmetric middle catalectic give
 
 \[
-\dim P^{(1)}\le\kappa^{\langle2\rangle}.
+40\le b\le64,
 \]
 
-The four-component cubic relation kernel is therefore at most
+where
 
 \[
-3\kappa^{\langle2\rangle}.
+b
+=
+\dim\left(
+\mathcal D_3(\operatorname{perm}_6)
+\cap
+\mathcal D_3(R)
+\right).
 \]
 
-A block-Sylvester inequality converts this into minimum coupled central
-ranks
+The layers `b=40,41` are already first-Koszul strict.
 
-```text
-b=22: 38 > residual upper bound 24
-b=23: 50 > residual upper bound 26
-b=24: 56 > residual upper bound 28
-```
-
-The three states at `b=20,21` were already strict in the quotient-Koszul
-budget. Hence no 23-term decomposition exists.
-
-## 3. Exact residual identity retained for later work
-
-For a fixed partial sum `R`, define
+For the other layers, let
 
 \[
-E=\mathcal D_3(\operatorname{perm}_6),
+\mathcal K
+=
+\ker\left(
+\bigoplus_{i=1}^6\mathcal D_2(T_i)
+\longrightarrow
+\sum_{i=1}^6\mathcal D_2(T_i)
+\right),
 \qquad
-H=\mathcal D_3(R),
-\qquad
-b=\dim(E\cap H).
+\kappa=\dim\mathcal K.
 \]
 
-The exact first-Koszul residual estimate is
+The vector-valued Macaulay theorem gives
+
+\[
+\dim\mathcal K^{(1)}
+\le
+\kappa^{\langle2\rangle}.
+\]
+
+The full cubic relation module is contained in `K^(1)`. A block-Sylvester
+inequality for the six symmetric middle catalectics then gives
+
+\[
+\operatorname{rank}C_{3,3}(R)
+\ge
+\sum_i\operatorname{rank}C_{3,3}(T_i)
+-
+2\kappa^{\langle2\rangle}.
+\]
+
+Exact defect arithmetic excludes all `42<=b<=64`. The smallest strict
+margins are two at `b=43,44`. A second implementation independently scans
+all
+
+\[
+16^6=16,777,216
+\]
+
+labelled quadratic-defect tuples.
+
+The proof preserves the coupled-catalectic boundary: `D_3(R)` is always the
+image of the catalectic of the sum. Literal sums of individual derivative
+spaces are used only as ambient spaces and relation modules.
+
+## 3. The vector-valued Macaulay theorem as a reusable result
+
+For arbitrary finite-dimensional `W,V` and
+
+\[
+\mathcal K\subseteq W\otimes\operatorname{Sym}^2V,
+\qquad
+\dim\mathcal K=k,
+\]
+
+the first prolongation satisfies
 
 \[
 \boxed{
-\operatorname{rank}K_{6,3}(\operatorname{perm}_6-R)
-\ge
-14175-36b+\Gamma_E(H).
+\dim\mathcal K^{(1)}\le k^{\langle2\rangle}.
 }
-\tag{3.1}
 \]
 
-The quotient gain `Gamma` is nonnegative but is not additive term by term
-for a coupled sum. The one-term full-gain theorem remains valid and useful,
-but it does not by itself address the next lower-bound step.
+The proof uses:
 
-## 4. Next milestone: test the 24-term frontier
+1. a universal vector-bundle map over `Gr(k,W tensor Sym^2 V)`;
+2. upper semicontinuity of fiber nullity;
+3. an explicit one-parameter subgroup separating all colored quadratic
+   monomials;
+4. splitting of the coordinate limit by color;
+5. scalar apolar Macaulay growth; and
+6. superadditivity of the degree-two Macaulay successor.
 
-A lower bound of 25 requires excluding a 24-term decomposition. The previous
-four-fixed-term state equations change because the residual now has twenty
-terms:
+The small finite-field calculation in the audit is only a deterministic
+counterexample search. It does not carry the characteristic-zero proof.
 
-- middle-catalectic capacity `20*20=400`;
-- first-Koszul capacity `20*705=14100`;
-- the former lower edge `b>=20` disappears for four fixed terms.
+## 4. Next milestone: test the 25-term frontier
 
-Therefore the lower-24 proof cannot be relabelled mechanically as a
-lower-25 proof.
+A lower bound of 26 requires excluding a 25-term decomposition. The lower-25
+state equations cannot be relabelled mechanically. For a fixed count `q`,
+the residual has `25-q` terms and therefore capacities
 
-The next task is a diagnostic theorem generator for a general number `q` of
-fixed terms. It must compute, without guessed states:
+\[
+20(25-q)
+\]
+
+for the middle catalectic and
+
+\[
+705(25-q)
+\]
+
+for the first Koszul flattening.
+
+The first authorized task is an exact arithmetic diagnostic for a small set
+of candidate fixed counts, initially
+
+\[
+q\in\{6,7,8\}.
+\]
+
+For each `q`, it must derive rather than guess:
 
 1. the projection cap
    \[
-   \dim(E_2\cap\sum_{i=1}^qG_i)\le15(q-1)+3;
+   15(q-1)+3;
    \]
-2. the exact Bukh shadow cap on the central intersection;
-3. the symmetric middle-catalectic state inequalities for a
-   `(24-q)`-term residual;
-4. the quadratic relation-kernel cap;
-5. the componentwise Macaulay cubic-relation cap;
-6. the quotient-Koszul gain still required after the central-rank
-   exclusions.
+2. the exact Bukh central-intersection cap;
+3. the symmetric middle-catalectic inequalities;
+4. the quadratic relation-module cap;
+5. the vector-valued Macaulay cubic-relation cap;
+6. conservative individual central-rank profiles; and
+7. the remaining quotient-Koszul requirement.
 
-The purpose is to choose the smallest mathematically effective fixed-term
-count, not to create a generic state-management framework.
+The goal is to select one compact frontier. It is not to create a generic
+state-management framework.
 
 ## 5. Falsification first
 
-Before promoting a lower-25 route, search for exact counterexamples to its
+Before promoting a lower-26 route, search for exact counterexamples to its
 implicit assumptions:
 
-- structured 24-term decompositions;
-- fixed sums with unusually large quadratic relation kernels;
-- coupled middle-catalectic rank below the proposed block-Sylvester lower
-  bound because one of its hypotheses was misapplied;
-- low quadratic derivative profiles that defeat the conservative term-rank
-  table;
+- structured 25-term decompositions;
+- fixed sums with large quadratic relation modules;
+- relation modules whose prolongations approach the Macaulay cap;
+- coupled middle-catalectic ranks close to the block-Sylvester lower bound;
+- low individual quadratic profiles that erase the numerical margin; and
 - quotient gains too small to close the residual budget.
 
-Finite-field examples are diagnostics only. A dangerous example must be
+Finite-field examples are diagnostics only. Any dangerous example must be
 replayed by exact rational elimination, an integer minor, or a proved
-semicontinuity bridge before it changes a characteristic-zero statement.
+semicontinuity bridge before it changes a characteristic-zero conclusion.
 
-## 6. Recommended minimal sequence
+## 6. Minimal sequence
 
-### N6-14 — general fixed-`q` arithmetic diagnostic
+### N6-15 — fixed-count arithmetic diagnostic
 
-Extend the exact integer formulas to a hypothetical 24-term decomposition
-for `q=4,5,6`. Record every derived state directly from the inequalities.
-Do not import the historical 23-term table.
+Evaluate `q=6,7,8` under a hypothetical 25-term decomposition. Record every
+state directly from the proved inequalities. If all three leave a broad
+frontier, stop extending the current route.
 
-The output is diagnostic until every shadow separator and term-profile
-input is proved.
+### N6-16 — select one frontier
 
-### N6-15 — select one proof frontier
+Choose the smallest `q` with a strict numerical margin and a compact
+relation-module range. Do not combine multiple weak frontiers into a larger
+workflow.
 
-Choose the smallest `q` for which the arithmetic leaves a strict, small
-frontier. Reject any route that leaves a broad positive-dimensional
-classification problem with no numerical margin.
+### N6-17 — classify only surviving term profiles
 
-### N6-16 — classify only the surviving profiles
+If a small frontier exists, classify only the individual quadratic and
+central profiles that attain its minima. Preserve the conservative zero
+lower bound for unresolved low profiles.
 
-If a small frontier exists, classify only the individual quadratic
-profiles and component relation spaces actually appearing there. Do not
-classify all degree-six Chow terms.
+### N6-18 — independent route counterexample search
 
-### N6-17 — exact route counterexample search
+Test structured fixed sums and candidate 25-term decompositions. A
+reproducible counterexample is a valid research result because it prevents a
+speculative proof architecture.
 
-In parallel, test structured fixed sums and candidate 24-term decompositions.
-A reproducible counterexample is a result: it rejects the route and prevents
-a speculative proof architecture.
+### N6-19 — geometry only after finite reduction
 
-### N6-18 — geometry only after finite reduction
-
-Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations,
-managers, registries, dispatchers, or multi-repository orchestration unless
-a theorem first reduces the unresolved locus to a finite and small set.
+Do not introduce SAT/DRAT, Hilbert schemes, Kuranishi calculations, managers,
+registries, dispatchers, or multi-repository orchestration unless a theorem
+first reduces the unresolved locus to a finite and small set.
 
 ## 7. Hidden assumptions
 
-1. A useful fixed-`q` count exists for the 24-term problem.
-2. Componentwise Macaulay growth remains numerically strong when the
-   quadratic relation kernel is larger than five.
-3. Conservative central-rank lower bounds for low quadratic profiles do not
-   erase the margin.
-4. The block-Sylvester lower bound is close enough to the actual coupled
-   rank to be useful.
+1. One of `q=6,7,8` leaves a useful fixed-count frontier.
+2. The vector-valued Macaulay cap remains numerically strong for the larger
+   relation dimensions in the 25-term problem.
+3. Conservative lower bounds for low individual profiles do not erase the
+   margin.
+4. The block-Sylvester estimate is sufficiently close to the actual coupled
+   rank.
 5. The exact value 32 is not contradicted by a shorter decomposition.
 
 None of these assumptions is promoted to a theorem.
 
 ## 8. Assume every assumption is false
 
-Then the lower-24 argument is a local success rather than the beginning of
-a monotone induction. The correct response is to stop extending the same
-fixed-four machinery and pivot to one of:
+Then lower 25 is an endpoint of this central first-Koszul method rather than
+the beginning of a monotone induction. The correct response is to pivot to
+one of:
 
-- a different fixed-term count;
 - a higher Koszul flattening;
 - coupled first and second shadows;
-- a border-versus-ordinary rank separation;
+- a different derivative output degree;
+- a border-versus-ordinary rank separation; or
 - explicit decomposition search.
 
-The repository should not add process complexity merely to preserve the
+The repository must not add process complexity merely to preserve the
 current route.
 
 ## 9. Fail-closed exit criteria
 
-Suspend a lower-25 route if any of the following occurs:
+Suspend the lower-26 route if any of the following occurs:
 
-- a reproducible decomposition with at most 24 terms is found;
-- every tested fixed-term count leaves a large uncontrolled frontier;
-- the componentwise prolongation cap loses all strict central-rank margin;
-- the remaining quotient-gain requirement is not structurally linked to the
-  surviving profiles;
+- a reproducible decomposition with at most 25 terms is found;
+- every tested fixed count leaves a large uncontrolled frontier;
+- vector-valued Macaulay growth loses all strict central-rank margin;
+- unresolved low term profiles determine the minimum without a tractable
+  classification;
 - exact replay requires a large workflow before a finite theorem has been
-  stated;
+  stated; or
 - a claimed characteristic-zero step depends only on finite-field equality
   or random search.
 
 ## 10. Strongest objection
 
-The new lower bound 24 may be an endpoint of this method. In the 24-term
-problem the twenty-term residual saturates the permanent's middle
-catalectic rank, so the central lower edge that made the 23-term frontier
-small disappears. A fixed-`q` refinement may therefore produce many states
-without a usable margin.
+The relation-module method may now be near saturation. Raising the
+hypothetical term count increases the residual capacity while also requiring
+more fixed terms and larger relation spaces. Macaulay growth can then consume
+the entire block-Sylvester margin.
 
-This objection is strong enough to impose a stopping rule: N6-14 must first
-show a compact exact frontier. If it does not, the project should pivot
-rather than add a larger classification layer.
+This objection is decisive enough to impose a stopping rule: the fixed-count
+diagnostic must first exhibit a compact strict frontier. Otherwise the
+project pivots rather than building a larger classification layer.
