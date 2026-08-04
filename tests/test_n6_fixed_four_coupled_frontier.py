@@ -134,6 +134,59 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             )
         )
 
+    def test_b26_defect_pattern_classification(self) -> None:
+        certificate = self.payload["b26_defect_patterns"]
+        self.assertEqual(certificate["pattern_count"], 24)
+        self.assertEqual(
+            certificate["family_histogram"],
+            {
+                "maximal_quadratic_dimensions": 16,
+                "one_quadratic_dimension_defect": 8,
+            },
+        )
+
+        family_a = []
+        family_b_masks: set[int] = set()
+        for pattern in certificate["patterns"]:
+            epsilon = [int(value) for value in pattern["epsilon"]]
+            alpha = [int(value) for value in pattern["alpha"]]
+            self.assertEqual(len(epsilon), 4)
+            self.assertEqual(len(alpha), 4)
+            for omitted in range(4):
+                self.assertLessEqual(
+                    sum(
+                        epsilon[index]
+                        for index in range(4)
+                        if index != omitted
+                    )
+                    + alpha[omitted],
+                    1,
+                )
+
+            if pattern["family"] == "one_quadratic_dimension_defect":
+                family_a.append((epsilon, alpha))
+                self.assertEqual(sum(epsilon), 1)
+                index = epsilon.index(1)
+                self.assertTrue(
+                    all(
+                        alpha[other] == 0
+                        for other in range(4)
+                        if other != index
+                    )
+                )
+                self.assertIn(alpha[index], (0, 1))
+            else:
+                self.assertEqual(
+                    pattern["family"],
+                    "maximal_quadratic_dimensions",
+                )
+                self.assertEqual(epsilon, [0, 0, 0, 0])
+                mask = sum(alpha[index] << index for index in range(4))
+                family_b_masks.add(mask)
+
+        self.assertEqual(len(family_a), 8)
+        self.assertEqual(family_b_masks, set(range(16)))
+
     def test_frozen_summary_matches_generator(self) -> None:
         route_map = {
             "rank_budget_already_strict": "automatic",
@@ -194,6 +247,16 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
                 "forced_central_catalectic_rank": 80,
                 "forced_quadratic_sum_dimension": 60,
                 "residual_central_rank_upper_bound": 34,
+            },
+        )
+        self.assertEqual(
+            self.frozen["b26_defect_patterns"],
+            {
+                "family_counts": {
+                    "maximal_quadratic_dimensions": 16,
+                    "one_quadratic_dimension_defect": 8,
+                },
+                "pattern_count": 24,
             },
         )
 
