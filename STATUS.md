@@ -49,6 +49,7 @@ Status vocabulary:
 | N6-012 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | the `b=25` defect patterns have relation-kernel cap at most two and force central rank at least 78, contradicting the residual upper bound 30 | `docs/n6_b25_two_relation_exclusion.md` |
 | N6-013 | `SUPERSEDED`, `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | componentwise scalar Macaulay prolongation and a block-Sylvester inequality exclude 23-term decompositions, proving the historical lower bound 24 | `docs/n6_component_prolongation_exclusion.md` |
 | N6-014 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | under a hypothetical 24-term decomposition, fixing six terms gives `40<=b<=64`; `b=40,41` are Koszul-strict and G-019 plus block-Sylvester and exact defect arithmetic exclude every `42<=b<=64`, hence `ChowRank(perm_6)>=25` | `docs/n6_fixed_six_lower25.md`, `scripts/n6_fixed_six_lower25_audit.py`, independent `16^6` labelled replay, and compact frozen payload |
+| N6-015 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | under a hypothetical 25-term decomposition, exact `q=6,7,8` fixed-count arithmetic leaves respectively 327, 355, and 635 states after vector-Macaulay central pruning; the structural counts are 269, 290, and 584, so no fixed count is selected and the central first-Koszul route is suspended for lower 26 | `docs/n6_lower26_fixed_q_diagnostic.md`, `scripts/n6_lower26_fixed_q_diagnostic.py`, and frozen table hashes |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
@@ -58,6 +59,7 @@ Status vocabulary:
 - No exact `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
 - N6-014 does not prove `ChowRank(perm_6)>=26`, a border Chow-rank lower bound of 25, or the conjectural exact value 32.
+- N6-015 is a negative route diagnostic. Its state counts do not prove that lower 26 is impossible; they only show that the tested fixed-count central first-Koszul inequalities do not produce a compact frontier.
 - The small `F_2` calculation in the G-019 audit is diagnostic only; the characteristic-zero theorem rests on the universal-bundle and torus-degeneration proof.
 - The frozen rational witnesses certify the displayed general lower bounds but are not proved globally optimal within G-014.
 - G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.
