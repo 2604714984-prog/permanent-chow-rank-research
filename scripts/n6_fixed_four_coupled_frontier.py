@@ -5,18 +5,17 @@ Assume hypothetically that ``perm_6`` has a 23-term Chow decomposition and
 fix four terms with sum ``R``. The proof notes establish:
 
 * the raw projection-shadow frontier has ``20<=b<=27`` and 36 states;
-* for ``20<=b<=27``, the quadratic derivative shadow is at least ``b+21``;
-* the individual quadratic-space defects satisfy the budget ``27-b``;
 * common-quotient rigidity excludes every state with ``b=27``;
-* the current frontier therefore has ``20<=b<=26`` and 28 states;
-* the top layer ``b=26`` has exactly 24 labelled defect patterns;
-* three states are already excluded by the residual rank budget;
-* ten states can be excluded by relative-prolongation caps 23 or 59; and
-* fifteen states require structural exclusion or a stronger invariant.
+* the ``b=26`` layer has exactly 24 labelled defect patterns;
+* a maximal 15-dimensional quadratic derivative space has a 20-dimensional
+  cubic derivative space and contains no pure cube;
+* directness or a one-relation coupling argument excludes every ``b=26``
+  state; and
+* the current frontier has ``20<=b<=25`` and 21 states.
 
-This script checks only the exact arithmetic and state partitions. It does not
-replace the projection, Bukh-shadow, common-quotient, or catalectic arguments
-in the proof notes.
+This script checks the exact arithmetic, derivative profiles, and state
+partitions. It does not replace the projection, Bukh-shadow, common-quotient,
+or coupling arguments in the proof notes.
 """
 
 from __future__ import annotations
@@ -50,12 +49,187 @@ SHADOW_SEPARATORS: dict[int, Fraction] = {
     27: Fraction(106, 25),
 }
 
+Exponent = tuple[int, ...]
+
 
 def generalized_binomial(value: Fraction, order: int) -> Fraction:
     result = Fraction(1)
     for index in range(order):
         result *= value - index
     return result / factorial(order)
+
+
+def compositions(total: int, variables: int) -> list[Exponent]:
+    out: list[Exponent] = []
+
+    def rec(prefix: tuple[int, ...], remaining: int) -> None:
+        if len(prefix) == variables - 1:
+            out.append(prefix + (remaining,))
+            return
+        for value in range(remaining + 1):
+            rec(prefix + (value,), remaining - value)
+
+    rec((), total)
+    return out
+
+
+def exact_rank(matrix: list[list[int]]) -> int:
+    if not matrix:
+        return 0
+    columns = len(matrix[0])
+    if any(len(row) != columns for row in matrix):
+        raise ValueError("ragged matrix")
+
+    data = [[Fraction(value) for value in row] for row in matrix]
+    pivot_row = 0
+    for column in range(columns):
+        pivot = next(
+            (
+                row
+                for row in range(pivot_row, len(data))
+                if data[row][column] != 0
+            ),
+            None,
+        )
+        if pivot is None:
+            continue
+        data[pivot_row], data[pivot] = data[pivot], data[pivot_row]
+        scale = data[pivot_row][column]
+        data[pivot_row] = [value / scale for value in data[pivot_row]]
+        for row in range(len(data)):
+            if row == pivot_row:
+                continue
+            coefficient = data[row][column]
+            if coefficient == 0:
+                continue
+            data[row] = [
+                data[row][index]
+                - coefficient * data[pivot_row][index]
+                for index in range(columns)
+            ]
+        pivot_row += 1
+        if pivot_row == len(data):
+            break
+    return pivot_row
+
+
+def catalectic_matrix(
+    polynomial: dict[Exponent, int],
+    output_degree: int,
+) -> tuple[list[list[int]], list[Exponent]]:
+    variables = len(next(iter(polynomial)))
+    operator_degree = 6 - output_degree
+    rows = compositions(operator_degree, variables)
+    columns = compositions(output_degree, variables)
+    matrix: list[list[int]] = []
+
+    for operator in rows:
+        row: list[int] = []
+        for output in columns:
+            source = tuple(
+                operator[index] + output[index]
+                for index in range(variables)
+            )
+            coefficient = polynomial.get(source, 0)
+            if coefficient:
+                multiplier = 1
+                for source_power, output_power in zip(
+                    source,
+                    output,
+                    strict=True,
+                ):
+                    multiplier *= factorial(source_power) // factorial(
+                        output_power
+                    )
+                coefficient *= multiplier
+            row.append(coefficient)
+        matrix.append(row)
+    return matrix, columns
+
+
+def five_variable_term(support_size: int) -> dict[Exponent, int]:
+    """Return ``x0...x4 * (x0+...+x_{s-1})`` as an exponent map."""
+
+    if not 1 <= support_size <= 5:
+        raise ValueError(support_size)
+    polynomial: dict[Exponent, int] = {}
+    for extra in range(support_size):
+        exponent = [1] * 5
+        exponent[extra] += 1
+        polynomial[tuple(exponent)] = 1
+    return polynomial
+
+
+def independent_six_variable_term() -> dict[Exponent, int]:
+    return {(1, 1, 1, 1, 1, 1): 1}
+
+
+def maximal_quadratic_term_profile() -> dict[str, object]:
+    expected = {
+        1: (11, 14),
+        2: (11, 14),
+        3: (13, 18),
+        4: (14, 20),
+        5: (15, 20),
+    }
+    table: dict[str, dict[str, object]] = {}
+
+    for support_size in range(1, 6):
+        polynomial = five_variable_term(support_size)
+        quadratic_matrix, _ = catalectic_matrix(polynomial, 2)
+        cubic_matrix, cubic_columns = catalectic_matrix(polynomial, 3)
+        quadratic_rank = exact_rank(quadratic_matrix)
+        cubic_rank = exact_rank(cubic_matrix)
+        if (quadratic_rank, cubic_rank) != expected[support_size]:
+            raise AssertionError(
+                (support_size, quadratic_rank, cubic_rank)
+            )
+
+        pure_cube_columns_zero = all(
+            all(row[column] == 0 for row in cubic_matrix)
+            for column, exponent in enumerate(cubic_columns)
+            if max(exponent) == 3
+        )
+        if not pure_cube_columns_zero:
+            raise AssertionError((support_size, "pure cube column"))
+
+        table[str(support_size)] = {
+            "quadratic_dimension": quadratic_rank,
+            "cubic_dimension": cubic_rank,
+            "pure_cube_columns_zero": True,
+        }
+
+    independent = independent_six_variable_term()
+    independent_quadratic, _ = catalectic_matrix(independent, 2)
+    independent_cubic, independent_cubic_columns = catalectic_matrix(
+        independent,
+        3,
+    )
+    independent_profile = {
+        "quadratic_dimension": exact_rank(independent_quadratic),
+        "cubic_dimension": exact_rank(independent_cubic),
+        "pure_cube_columns_zero": all(
+            all(row[column] == 0 for row in independent_cubic)
+            for column, exponent in enumerate(independent_cubic_columns)
+            if max(exponent) == 3
+        ),
+    }
+    if independent_profile != {
+        "quadratic_dimension": 15,
+        "cubic_dimension": 20,
+        "pure_cube_columns_zero": True,
+    }:
+        raise AssertionError(independent_profile)
+
+    return {
+        "factor_span_five_support_table": table,
+        "factor_span_six_independent": independent_profile,
+        "conclusion": (
+            "If a degree-six Chow term has quadratic derivative dimension "
+            "15, then its cubic derivative dimension is 20 and that cubic "
+            "space contains no nonzero pure cube."
+        ),
+    }
 
 
 def bukh_separator_certificate() -> dict[str, object]:
@@ -103,11 +277,8 @@ def exact_shadow_lower_table() -> dict[str, dict[str, object]]:
 
 
 def build_b26_defect_patterns() -> list[dict[str, object]]:
-    """Enumerate every labelled solution of the ``b=26`` defect inequalities."""
-
     patterns: list[dict[str, object]] = []
 
-    # Family A: one epsilon_i=1; only alpha_i may be zero or one.
     for index in range(FIXED_TERMS):
         for alpha_value in (0, 1):
             epsilon = [0] * FIXED_TERMS
@@ -122,7 +293,6 @@ def build_b26_defect_patterns() -> list[dict[str, object]]:
                 }
             )
 
-    # Family B: every epsilon is zero and the four alpha bits are arbitrary.
     for mask in range(1 << FIXED_TERMS):
         alpha = [
             (mask >> index) & 1
@@ -137,16 +307,14 @@ def build_b26_defect_patterns() -> list[dict[str, object]]:
         )
 
     for pattern in patterns:
-        epsilon = pattern["epsilon"]
-        alpha = pattern["alpha"]
-        if not isinstance(epsilon, list) or not isinstance(alpha, list):
-            raise AssertionError(pattern)
+        epsilon = [int(value) for value in pattern["epsilon"]]
+        alpha = [int(value) for value in pattern["alpha"]]
         for omitted in range(FIXED_TERMS):
             left = sum(
-                int(epsilon[index])
+                epsilon[index]
                 for index in range(FIXED_TERMS)
                 if index != omitted
-            ) + int(alpha[omitted])
+            ) + alpha[omitted]
             if left > 1:
                 raise AssertionError((pattern, omitted, left))
 
@@ -230,6 +398,20 @@ def prolongation_histogram(states: list[dict[str, object]]) -> dict[str, int]:
     return {str(key): value for key, value in sorted(counts.items())}
 
 
+def state_frontier(states: list[dict[str, object]]) -> dict[str, object]:
+    if not states:
+        raise ValueError("empty state frontier")
+    return {
+        "central_intersection_range": [
+            min(int(row["central_intersection_b"]) for row in states),
+            max(int(row["central_intersection_b"]) for row in states),
+        ],
+        "state_count": len(states),
+        "route_histogram": histogram(states),
+        "relative_prolongation_cap_histogram": prolongation_histogram(states),
+    }
+
+
 def build_payload() -> dict[str, object]:
     projection_cap = (
         (FIXED_TERMS - 1) * PER_TERM_QUADRATIC_CAP
@@ -239,44 +421,70 @@ def build_payload() -> dict[str, object]:
         raise AssertionError(projection_cap)
 
     shadow_table = exact_shadow_lower_table()
+    derivative_profile = maximal_quadratic_term_profile()
     defect_patterns = build_b26_defect_patterns()
     raw_states = build_raw_states()
-    excluded_states = [
+    excluded_b27 = [
         row for row in raw_states if row["central_intersection_b"] == 27
     ]
-    states = [
+    after_b27 = [
         row for row in raw_states if row["central_intersection_b"] <= 26
     ]
+    excluded_b26 = [
+        row for row in after_b27 if row["central_intersection_b"] == 26
+    ]
+    states = [
+        row for row in after_b27 if row["central_intersection_b"] <= 25
+    ]
 
-    raw_histogram = histogram(raw_states)
-    expected_raw_histogram = {
-        "rank_budget_already_strict": 3,
-        "relative_prolongation_cap_can_close": 12,
-        "structural_exclusion_or_stronger_invariant_required": 21,
-    }
-    if raw_histogram != expected_raw_histogram:
-        raise AssertionError(raw_histogram)
-    if prolongation_histogram(raw_states) != {"23": 6, "59": 6}:
-        raise AssertionError(prolongation_histogram(raw_states))
+    expected_frontiers = (
+        (
+            raw_states,
+            36,
+            {
+                "rank_budget_already_strict": 3,
+                "relative_prolongation_cap_can_close": 12,
+                "structural_exclusion_or_stronger_invariant_required": 21,
+            },
+            {"23": 6, "59": 6},
+        ),
+        (
+            after_b27,
+            28,
+            {
+                "rank_budget_already_strict": 3,
+                "relative_prolongation_cap_can_close": 10,
+                "structural_exclusion_or_stronger_invariant_required": 15,
+            },
+            {"23": 5, "59": 5},
+        ),
+        (
+            states,
+            21,
+            {
+                "rank_budget_already_strict": 3,
+                "relative_prolongation_cap_can_close": 8,
+                "structural_exclusion_or_stronger_invariant_required": 10,
+            },
+            {"23": 4, "59": 4},
+        ),
+    )
+    for rows, count, routes, caps in expected_frontiers:
+        if len(rows) != count:
+            raise AssertionError((len(rows), count))
+        if histogram(rows) != routes:
+            raise AssertionError(histogram(rows))
+        if prolongation_histogram(rows) != caps:
+            raise AssertionError(prolongation_histogram(rows))
 
-    surviving_histogram = histogram(states)
-    expected_surviving_histogram = {
-        "rank_budget_already_strict": 3,
-        "relative_prolongation_cap_can_close": 10,
-        "structural_exclusion_or_stronger_invariant_required": 15,
-    }
-    if surviving_histogram != expected_surviving_histogram:
-        raise AssertionError(surviving_histogram)
-    if prolongation_histogram(states) != {"23": 5, "59": 5}:
-        raise AssertionError(prolongation_histogram(states))
-    if len(excluded_states) != 8 or len(states) != 28:
-        raise AssertionError((len(excluded_states), len(states)))
+    if len(excluded_b27) != 8 or len(excluded_b26) != 7:
+        raise AssertionError((len(excluded_b27), len(excluded_b26)))
 
     maximum_remaining_requirement = max(
-        row["minimum_quotient_gain_for_strict_koszul_budget"]
+        int(row["minimum_quotient_gain_for_strict_koszul_budget"])
         for row in states
     )
-    if maximum_remaining_requirement != 157:
+    if maximum_remaining_requirement != 121:
         raise AssertionError(maximum_remaining_requirement)
 
     defect_family_histogram = dict(
@@ -284,7 +492,7 @@ def build_payload() -> dict[str, object]:
     )
 
     return {
-        "status": "EXACT_INTEGER_FRONTIER_WITH_B27_EXCLUSION_REPLAYED",
+        "status": "EXACT_INTEGER_FRONTIER_THROUGH_B26_EXCLUSION_REPLAYED",
         "hypothesis": "a 23-term Chow decomposition of perm_6",
         "fixed_terms": FIXED_TERMS,
         "residual_terms": RESIDUAL_TERMS,
@@ -293,17 +501,11 @@ def build_payload() -> dict[str, object]:
         "quadratic_intersection_projection_cap": projection_cap,
         "bukh_separator_certificate": bukh_separator_certificate(),
         "exact_shadow_lower_table": shadow_table,
-        "raw_projection_frontier": {
-            "central_intersection_range": [20, 27],
-            "state_count": len(raw_states),
-            "route_histogram": raw_histogram,
-            "relative_prolongation_cap_histogram": prolongation_histogram(
-                raw_states
-            ),
-        },
+        "maximal_quadratic_term_profile": derivative_profile,
+        "raw_projection_frontier": state_frontier(raw_states),
         "common_quotient_b27_exclusion": {
             "excluded_central_intersection": 27,
-            "excluded_state_count": len(excluded_states),
+            "excluded_state_count": len(excluded_b27),
             "individual_quadratic_dimensions": [15, 15, 15, 15],
             "individual_intersection_dimensions": [3, 3, 3, 3],
             "common_quotient_dimension": 12,
@@ -312,23 +514,41 @@ def build_payload() -> dict[str, object]:
             "residual_inequality_upper_bound_on_central_rank": 34,
             "contradiction": "80>34",
         },
+        "frontier_after_b27": state_frontier(after_b27),
         "b26_defect_patterns": {
             "pattern_count": len(defect_patterns),
             "family_histogram": defect_family_histogram,
             "patterns": defect_patterns,
         },
-        "central_intersection_range": [20, 26],
+        "b26_coupling_exclusion": {
+            "excluded_central_intersection": 26,
+            "excluded_state_count": len(excluded_b26),
+            "quadratic_shadow_dimension": 47,
+            "residual_inequality_upper_bound_on_central_rank": 32,
+            "family_a_pattern_count": 8,
+            "family_a_quadratic_sum_is_direct": True,
+            "family_a_central_rank_lower_bound": 60,
+            "family_b_nonzero_alpha_pattern_count": 15,
+            "family_b_nonzero_alpha_quadratic_sum_is_direct": True,
+            "family_b_nonzero_alpha_central_rank": 80,
+            "family_b_zero_alpha_pattern_count": 1,
+            "family_b_zero_alpha_quadratic_relation_kernel_cap": 1,
+            "one_relation_pure_cube_obstruction": True,
+            "family_b_zero_alpha_central_rank": 80,
+            "contradictions": ["60>32", "80>32"],
+        },
+        "central_intersection_range": [20, 25],
         "state_count": len(states),
-        "route_histogram": surviving_histogram,
+        "route_histogram": histogram(states),
         "relative_prolongation_cap_histogram": prolongation_histogram(states),
         "maximum_remaining_gain_requirement": maximum_remaining_requirement,
         "states": states,
-        "excluded_b27_states": excluded_states,
+        "excluded_b27_states": excluded_b27,
+        "excluded_b26_states": excluded_b26,
         "claim_boundary": (
-            "The audit replays the 28-state frontier and 24 b=26 defect "
-            "patterns after the proved b=27 common-quotient exclusion. It "
-            "does not exclude the 15 remaining structural states or "
-            "establish the p<=23 and p<=59 caps."
+            "The audit replays the 21-state frontier after the proved b=27 "
+            "and b=26 exclusions. It does not exclude the 10 remaining "
+            "structural states or establish the p<=23 and p<=59 caps."
         ),
     }
 
