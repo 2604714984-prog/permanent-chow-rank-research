@@ -21,12 +21,12 @@ Status vocabulary:
 | G-003 | `PROOF_DRAFT_COMPLETE` | generalized first-Koszul lower bound `L_K(n)`; unique optimizer `m=ceil(n/2)` | exact formula, optimizer proof, and tests |
 | G-004 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_n)>=binom(n,floor(n/2))+1` for `n>=3` | corollary of G-003 |
 | G-005 | `PROOF_DRAFT_COMPLETE` | zero-intersection shadow-removal lower bound `L_SR(n)` | intersection lemma and double-quotient argument |
-| G-006 | `SUPERSEDED` | `ChowRank(perm_6)>=22` | G-005 with `(m,d,q)=(3,1,1)`; superseded by G-011 |
+| G-006 | `SUPERSEDED` | `ChowRank(perm_6)>=22` | G-005 with `(m,d,q)=(3,1,1)`; superseded by G-011 and N6-013 |
 | G-007 | `PROOF_DRAFT_COMPLETE` | `border-ChowRank(perm_n)>=L_K(n)` | closed determinantal rank locus |
 | G-008 | `PROOF_DRAFT_COMPLETE` | `border-ChowRank(perm_n)>=binom(n,floor(n/2))+1` | central-degree corollary of G-007 |
 | G-009 | `PROOF_DRAFT_COMPLETE` | `L_SR(n)>=L_K(n)+Omega(a^n/sqrt(n))`, `a=(1+sqrt(2))/2` | entropy optimization and Stirling estimates |
 | G-010 | `PROOF_DRAFT_COMPLETE` | even-degree multidimensional-shadow bound | `docs/even_n_multidimensional_shadow_bound.md`; special case of G-014 |
-| G-011 | `PROOF_DRAFT_COMPLETE` | `ChowRank(perm_6)>=23` | G-014 with `m=3`, `q=4`, and complementary intersection cap 40 |
+| G-011 | `SUPERSEDED` | `ChowRank(perm_6)>=23` | G-014 with `m=3`, `q=4`, and complementary intersection cap 40; superseded by N6-013 |
 | G-012 | `PROOF_DRAFT_COMPLETE` | for even `n`, the G-010 additive gain over `L_K(n)` is `(1/(e log 2)+o(1))*binom(n,n/2)/n` | gamma-ratio expansion and one-variable optimization |
 | G-013 | `PROOF_DRAFT_COMPLETE` | the G-010 route independently excludes seven terms for `perm_4` | fix two terms, intersection cap 6, residual rank `464>5*92` |
 | G-014 | `PROOF_DRAFT_COMPLETE` | for arbitrary `n>=4`, `rank K_m(perm_n-R)>=A-n^2 b`, where `b=dim(D_{n-m}(perm_n) intersect D_{n-m}(R))`; Bukh shadows convert this into a computable Chow-rank lower bound | `docs/general_multidimensional_shadow_bound.md` |
@@ -45,18 +45,19 @@ Status vocabulary:
 | N6-009 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | every six-plane `L` with `dim(D_2(perm_6) intersect Sym^2 L)=3` is a disjoint-support `2 x 3` or `3 x 2` tensor-product plane; the reduced extremal locus has 5,580 seven-dimensional components, and each coordinate fixed point has exactly 432 local branches | exact `163/17/13` local certificate, squarefree multiplicity closure, and projective torus globalization; `docs/n6_extremal_six_plane_classification.md` |
 | N6-010 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | equality in the four omitted-factor projection bounds at `b=27` forces a common 12-dimensional quotient, direct quadratic derivative sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34 | `docs/n6_b27_common_quotient_exclusion.md` and revised frontier replay |
 | N6-011 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | at `b=26`, the 24 exact defect patterns either force the quadratic sum to be direct or leave one quadratic relation; maximal quadratic dimension implies cubic dimension 20 and no pure cube, so the one-relation factorization lemma forces central rank at least 60, contradicting the residual upper bound 32 | `docs/n6_b26_one_relation_exclusion.md` and exact term-profile matrices |
-| N6-012 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | at `b=25`, 213 exact defect patterns split into 189 direct, 23 one-relation, and one two-relation pattern; dimensions 13–15 give cubic dimensions at least 18, and the unique two-relation equality pattern has squarefree cubic spaces with no binary cubic; all cases contradict the residual upper bound 30; the current frontier is `20<=b<=24` with 15 states | `docs/n6_b25_two_relation_exclusion.md` and revised `scripts/n6_fixed_four_coupled_frontier.py` |
+| N6-012 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | at `b=25`, 213 exact defect patterns split into 189 direct, 23 one-relation, and one two-relation pattern; all cases contradict the residual upper bound 30 and leave the historical 15-state range `20<=b<=24` | `docs/n6_b25_two_relation_exclusion.md` and `scripts/n6_fixed_four_coupled_frontier.py` |
+| N6-013 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | componentwise Macaulay prolongation and a block-Sylvester inequality exclude every `b=22,23,24` defect pattern; the three `b=20,21` states are already Koszul-strict, hence `ChowRank(perm_6)>=24` | `docs/n6_component_prolongation_exclusion.md`, `scripts/n6_component_prolongation_exclusion.py`, and frozen exact payload |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-018 and N6-006 through N6-012 has not been exhaustively checked.
+- Literature novelty of G-001 through G-018 and N6-006 through N6-013 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
-- No exact `n=6` claim is made; the current in-repository interval is `23<=ChowRank(perm_6)<=32`.
-- The frozen rational witnesses certify the displayed lower bounds but are not proved globally optimal within G-014.
+- No exact `n=6` claim is made; the current in-repository interval is `24<=ChowRank(perm_6)<=32`.
+- The frozen rational witnesses certify the displayed general lower bounds but are not proved globally optimal within G-014.
 - G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.
 - N6-002 shows that coordinate low-catalectic points lie on positive-dimensional branches; it does not classify the full rank-nine locus.
-- N6-003 is a barrier for the current scalar one-step formula only; it does not rule out Chow-realizability restrictions, positive `Gamma`, higher coupled shadows, or different flattenings.
+- N6-003 is a barrier for the former scalar one-step formula only; it does not rule out higher fixed-term arguments, positive quotient gain, higher coupled shadows, or different flattenings.
 - N6-006 and N6-007 are one-term theorems. They do not imply additivity of quotient gain for `K_3(T_1+...+T_q)`.
-- N6-009 classifies individual equality planes and their factor-frame base locus, not four coupled frames.
-- N6-010 through N6-012 remove the `b=27,26,25` layers but do not close the exact-24 target. Six structural states remain, and the relative-prolongation bounds 23 and 59 have not been established on the six addressable states.
+- N6-009 classifies individual equality planes and their factor-frame base locus, not arbitrary coupled frames.
+- N6-013 excludes 23 terms only. It does not prove a 25-term lower bound, a border-rank lower bound of 24, or the conjectural exact value 32.

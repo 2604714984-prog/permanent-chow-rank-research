@@ -1,0 +1,75 @@
+{
+  "all_labelled_pattern_count": 1153,
+  "all_relation_kernel_cap_histogram": {
+    "0": 940,
+    "1": 189,
+    "2": 23,
+    "3": 1
+  },
+  "all_total_epsilon_histogram": {
+    "0": 256,
+    "1": 432,
+    "2": 344,
+    "3": 120,
+    "4": 1
+  },
+  "cap_two_epsilon_type_histogram": {
+    "0,0,0,0": 15,
+    "0,0,0,1": 8
+  },
+  "central_intersection_b": 24,
+  "claim_boundary": "This is a fail-closed route diagnostic. A three-dimensional quadratic relation kernel can support ternary squarefree cubics, so the one- and two-relation exclusions do not settle b=24.",
+  "defect_budget": 3,
+  "profile_realizable_pattern_count": 1137,
+  "profile_realizable_relation_kernel_cap_histogram": {
+    "0": 924,
+    "1": 189,
+    "2": 23,
+    "3": 1
+  },
+  "profile_realizable_total_epsilon_histogram": {
+    "0": 256,
+    "1": 432,
+    "2": 344,
+    "3": 104,
+    "4": 1
+  },
+  "quadratic_dimension_twelve_pattern_count": 16,
+  "quadratic_shadow_dimension": 45,
+  "scope": "dimension-only defect and quadratic-relation frontier at b=24",
+  "status": "EXACT_B24_THREE_RELATION_FRONTIER_REPLAYED",
+  "structural_interpretation": "The unique cap-three pattern has four maximal quadratic derivative spaces and four maximal three-dimensional permanent intersections. The extremal six-plane theorem therefore applies to all four factor spans.",
+  "unique_three_relation_pattern": {
+    "alpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "epsilon": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "individual_intersection_dimensions": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "individual_quadratic_dimensions": [
+      15,
+      15,
+      15,
+      15
+    ],
+    "individual_quotient_dimensions": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "quadratic_relation_kernel_cap": 3
+  }
+}

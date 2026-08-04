@@ -1,0 +1,207 @@
+{
+  "certified_interval": [
+    24,
+    32
+  ],
+  "claim_boundary": "This closes only the 23-term exclusion and does not prove ChowRank(perm_6)>=25, border Chow rank 24, or the conjectural exact value 32.",
+  "conclusion": "Every fixed-four state under a hypothetical 23-term decomposition is contradictory. Therefore ChowRank(perm_6)>=24 over characteristic zero.",
+  "conservative_profile_policy": "Quadratic dimension 12 is rejected as impossible. Quadratic dimension 10 receives central-rank lower bound zero, so the b=22 exclusion does not depend on classifying that profile.",
+  "individual_central_rank_lower_table": {
+    "10": 0,
+    "11": 14,
+    "12": null,
+    "13": 18,
+    "14": 20,
+    "15": 20
+  },
+  "layers": [
+    {
+      "all_labelled_pattern_count": 14877,
+      "all_relation_kernel_cap_histogram": {
+        "0": 10278,
+        "1": 3446,
+        "2": 940,
+        "3": 189,
+        "4": 23,
+        "5": 1
+      },
+      "b": 22,
+      "defect_budget": 5,
+      "maximum_cubic_relation_kernel_cap": 21,
+      "maximum_quadratic_relation_kernel_cap": 5,
+      "maximum_scalar_component_prolongation_cap": 7,
+      "minimum_coupled_central_rank_lower_bound": 38,
+      "profile_feasible_pattern_count": 13161,
+      "profile_feasible_relation_kernel_cap_histogram": {
+        "0": 8818,
+        "1": 3206,
+        "2": 924,
+        "3": 189,
+        "4": 23,
+        "5": 1
+      },
+      "quadratic_dimension_twelve_pattern_count": 1716,
+      "quadratic_shadow_lower_bound": 43,
+      "residual_central_rank_upper_bound": 24,
+      "strict_margin": 14,
+      "unique_worst_pattern": {
+        "alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coupled_central_rank_lower": 38,
+        "cubic_relation_kernel_cap": 21,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_dimensions": [
+          15,
+          15,
+          15,
+          15
+        ],
+        "quadratic_relation_kernel_cap": 5,
+        "scalar_component_prolongation_cap": 7
+      }
+    },
+    {
+      "all_labelled_pattern_count": 4599,
+      "all_relation_kernel_cap_histogram": {
+        "0": 3446,
+        "1": 940,
+        "2": 189,
+        "3": 23,
+        "4": 1
+      },
+      "b": 23,
+      "defect_budget": 4,
+      "maximum_cubic_relation_kernel_cap": 15,
+      "maximum_quadratic_relation_kernel_cap": 4,
+      "maximum_scalar_component_prolongation_cap": 5,
+      "minimum_coupled_central_rank_lower_bound": 50,
+      "profile_feasible_pattern_count": 4343,
+      "profile_feasible_relation_kernel_cap_histogram": {
+        "0": 3206,
+        "1": 924,
+        "2": 189,
+        "3": 23,
+        "4": 1
+      },
+      "quadratic_dimension_twelve_pattern_count": 256,
+      "quadratic_shadow_lower_bound": 44,
+      "residual_central_rank_upper_bound": 26,
+      "strict_margin": 24,
+      "unique_worst_pattern": {
+        "alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coupled_central_rank_lower": 50,
+        "cubic_relation_kernel_cap": 15,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_dimensions": [
+          15,
+          15,
+          15,
+          15
+        ],
+        "quadratic_relation_kernel_cap": 4,
+        "scalar_component_prolongation_cap": 5
+      }
+    },
+    {
+      "all_labelled_pattern_count": 1153,
+      "all_relation_kernel_cap_histogram": {
+        "0": 940,
+        "1": 189,
+        "2": 23,
+        "3": 1
+      },
+      "b": 24,
+      "defect_budget": 3,
+      "maximum_cubic_relation_kernel_cap": 12,
+      "maximum_quadratic_relation_kernel_cap": 3,
+      "maximum_scalar_component_prolongation_cap": 4,
+      "minimum_coupled_central_rank_lower_bound": 56,
+      "profile_feasible_pattern_count": 1137,
+      "profile_feasible_relation_kernel_cap_histogram": {
+        "0": 924,
+        "1": 189,
+        "2": 23,
+        "3": 1
+      },
+      "quadratic_dimension_twelve_pattern_count": 16,
+      "quadratic_shadow_lower_bound": 45,
+      "residual_central_rank_upper_bound": 28,
+      "strict_margin": 28,
+      "unique_worst_pattern": {
+        "alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coupled_central_rank_lower": 56,
+        "cubic_relation_kernel_cap": 12,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_dimensions": [
+          15,
+          15,
+          15,
+          15
+        ],
+        "quadratic_relation_kernel_cap": 3,
+        "scalar_component_prolongation_cap": 4
+      }
+    }
+  ],
+  "macaulay_degree_two_successors": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 4,
+    "4": 5,
+    "5": 7
+  },
+  "remaining_low_layers": [
+    {
+      "b": 20,
+      "d": 0,
+      "nineteen_term_koszul_cap": 13395,
+      "residual_koszul_rank_lower_bound": 13455,
+      "strict_margin": 60
+    },
+    {
+      "b": 21,
+      "d": 0,
+      "nineteen_term_koszul_cap": 13395,
+      "residual_koszul_rank_lower_bound": 13419,
+      "strict_margin": 24
+    },
+    {
+      "b": 21,
+      "d": 1,
+      "nineteen_term_koszul_cap": 13395,
+      "residual_koszul_rank_lower_bound": 13419,
+      "strict_margin": 24
+    }
+  ],
+  "status": "EXACT_N6_FIXED_FOUR_FRONTIER_CLOSED_THROUGH_LOWER_24"
+}

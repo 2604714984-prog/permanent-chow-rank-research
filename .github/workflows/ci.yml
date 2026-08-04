@@ -59,3 +59,11 @@ jobs:
         run: |
           python scripts/n6_extremal_six_plane_audit.py \
             --json /tmp/n6_extremal_six_plane.json
+      - name: Replay n6 b24 three-relation diagnostic
+        run: |
+          python scripts/n6_b24_three_relation_frontier.py \
+            --json /tmp/n6_b24_three_relation_frontier.json
+      - name: Replay n6 component-prolongation exclusion
+        run: |
+          python scripts/n6_component_prolongation_exclusion.py \
+            --json /tmp/n6_component_prolongation_exclusion.json
