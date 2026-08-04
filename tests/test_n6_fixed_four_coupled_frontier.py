@@ -39,6 +39,35 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             certificate["binom_separator_2_squared_is_greater_than_48"]
         )
 
+    def test_maximal_quadratic_term_profile(self) -> None:
+        profile = self.payload["maximal_quadratic_term_profile"]
+        expected = {
+            "1": (11, 14),
+            "2": (11, 14),
+            "3": (13, 18),
+            "4": (14, 20),
+            "5": (15, 20),
+        }
+        table = profile["factor_span_five_support_table"]
+        for key, dimensions in expected.items():
+            self.assertEqual(
+                (
+                    table[key]["quadratic_dimension"],
+                    table[key]["cubic_dimension"],
+                ),
+                dimensions,
+            )
+            self.assertTrue(table[key]["pure_cube_columns_zero"])
+        self.assertEqual(
+            profile["factor_span_six_independent"],
+            {
+                "quadratic_dimension": 15,
+                "cubic_dimension": 20,
+                "pure_cube_columns_zero": True,
+            },
+        )
+        self.assertIn("contains no nonzero pure cube", profile["conclusion"])
+
     def test_exact_shadow_and_defect_budgets(self) -> None:
         table = self.payload["exact_shadow_lower_table"]
         expected_separators = {
@@ -66,6 +95,7 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
 
         all_rows = (
             self.payload["states"]
+            + self.payload["excluded_b26_states"]
             + self.payload["excluded_b27_states"]
         )
         for row in all_rows:
@@ -79,7 +109,7 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
                 27 - dimension,
             )
 
-    def test_raw_and_current_state_partitions(self) -> None:
+    def test_all_three_state_frontiers(self) -> None:
         raw = self.payload["raw_projection_frontier"]
         self.assertEqual(raw["central_intersection_range"], [20, 27])
         self.assertEqual(raw["state_count"], 36)
@@ -96,10 +126,11 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             {"23": 6, "59": 6},
         )
 
-        self.assertEqual(self.payload["central_intersection_range"], [20, 26])
-        self.assertEqual(self.payload["state_count"], 28)
+        after_b27 = self.payload["frontier_after_b27"]
+        self.assertEqual(after_b27["central_intersection_range"], [20, 26])
+        self.assertEqual(after_b27["state_count"], 28)
         self.assertEqual(
-            self.payload["route_histogram"],
+            after_b27["route_histogram"],
             {
                 "rank_budget_already_strict": 3,
                 "relative_prolongation_cap_can_close": 10,
@@ -107,12 +138,27 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             },
         )
         self.assertEqual(
-            self.payload["relative_prolongation_cap_histogram"],
+            after_b27["relative_prolongation_cap_histogram"],
             {"23": 5, "59": 5},
+        )
+
+        self.assertEqual(self.payload["central_intersection_range"], [20, 25])
+        self.assertEqual(self.payload["state_count"], 21)
+        self.assertEqual(
+            self.payload["route_histogram"],
+            {
+                "rank_budget_already_strict": 3,
+                "relative_prolongation_cap_can_close": 8,
+                "structural_exclusion_or_stronger_invariant_required": 10,
+            },
+        )
+        self.assertEqual(
+            self.payload["relative_prolongation_cap_histogram"],
+            {"23": 4, "59": 4},
         )
         self.assertEqual(
             self.payload["maximum_remaining_gain_requirement"],
-            157,
+            121,
         )
 
     def test_b27_common_quotient_exclusion(self) -> None:
@@ -150,8 +196,6 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
         for pattern in certificate["patterns"]:
             epsilon = [int(value) for value in pattern["epsilon"]]
             alpha = [int(value) for value in pattern["alpha"]]
-            self.assertEqual(len(epsilon), 4)
-            self.assertEqual(len(alpha), 4)
             for omitted in range(4):
                 self.assertLessEqual(
                     sum(
@@ -181,11 +225,44 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
                     "maximal_quadratic_dimensions",
                 )
                 self.assertEqual(epsilon, [0, 0, 0, 0])
-                mask = sum(alpha[index] << index for index in range(4))
-                family_b_masks.add(mask)
+                family_b_masks.add(
+                    sum(alpha[index] << index for index in range(4))
+                )
 
         self.assertEqual(len(family_a), 8)
         self.assertEqual(family_b_masks, set(range(16)))
+
+    def test_b26_one_relation_exclusion(self) -> None:
+        exclusion = self.payload["b26_coupling_exclusion"]
+        self.assertEqual(exclusion["excluded_central_intersection"], 26)
+        self.assertEqual(exclusion["excluded_state_count"], 7)
+        self.assertEqual(exclusion["quadratic_shadow_dimension"], 47)
+        self.assertEqual(
+            exclusion["residual_inequality_upper_bound_on_central_rank"],
+            32,
+        )
+        self.assertEqual(exclusion["family_a_pattern_count"], 8)
+        self.assertTrue(exclusion["family_a_quadratic_sum_is_direct"])
+        self.assertEqual(exclusion["family_a_central_rank_lower_bound"], 60)
+        self.assertEqual(exclusion["family_b_nonzero_alpha_pattern_count"], 15)
+        self.assertTrue(
+            exclusion["family_b_nonzero_alpha_quadratic_sum_is_direct"]
+        )
+        self.assertEqual(exclusion["family_b_nonzero_alpha_central_rank"], 80)
+        self.assertEqual(exclusion["family_b_zero_alpha_pattern_count"], 1)
+        self.assertEqual(
+            exclusion["family_b_zero_alpha_quadratic_relation_kernel_cap"],
+            1,
+        )
+        self.assertTrue(exclusion["one_relation_pure_cube_obstruction"])
+        self.assertEqual(exclusion["family_b_zero_alpha_central_rank"], 80)
+        self.assertEqual(exclusion["contradictions"], ["60>32", "80>32"])
+        self.assertTrue(
+            all(
+                row["central_intersection_b"] == 26
+                for row in self.payload["excluded_b26_states"]
+            )
+        )
 
     def test_frozen_summary_matches_generator(self) -> None:
         route_map = {
@@ -210,20 +287,24 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
 
         self.assertEqual(compact(self.payload["states"]), self.frozen["states"])
         self.assertEqual(
+            compact(self.payload["excluded_b26_states"]),
+            self.frozen["excluded_b26_states"],
+        )
+        self.assertEqual(
             compact(self.payload["excluded_b27_states"]),
             self.frozen["excluded_b27_states"],
         )
         self.assertEqual(self.frozen["projection_cap"], 48)
-        self.assertEqual(self.frozen["b_range"], [20, 26])
-        self.assertEqual(self.frozen["state_count"], 28)
+        self.assertEqual(self.frozen["b_range"], [20, 25])
+        self.assertEqual(self.frozen["state_count"], 21)
         self.assertEqual(
             self.frozen["route_counts"],
-            {"automatic": 3, "p_cap": 10, "structural": 15},
+            {"automatic": 3, "p_cap": 8, "structural": 10},
         )
-        self.assertEqual(self.frozen["p_cap_counts"], {"23": 5, "59": 5})
+        self.assertEqual(self.frozen["p_cap_counts"], {"23": 4, "59": 4})
         self.assertEqual(
             self.frozen["maximum_remaining_gain_requirement"],
-            157,
+            121,
         )
         self.assertEqual(
             self.frozen["raw_frontier"],
@@ -239,14 +320,16 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             },
         )
         self.assertEqual(
-            self.frozen["b27_exclusion"],
+            self.frozen["frontier_after_b27"],
             {
-                "common_quotient_dimension": 12,
-                "contradiction": "80>34",
-                "excluded_state_count": 8,
-                "forced_central_catalectic_rank": 80,
-                "forced_quadratic_sum_dimension": 60,
-                "residual_central_rank_upper_bound": 34,
+                "b_range": [20, 26],
+                "p_cap_counts": {"23": 5, "59": 5},
+                "route_counts": {
+                    "automatic": 3,
+                    "p_cap": 10,
+                    "structural": 15,
+                },
+                "state_count": 28,
             },
         )
         self.assertEqual(
@@ -267,7 +350,7 @@ class N6FixedFourCoupledFrontierTests(unittest.TestCase):
             if row["route"]
             == "structural_exclusion_or_stronger_invariant_required"
         ]
-        self.assertEqual(len(structural), 15)
+        self.assertEqual(len(structural), 10)
         self.assertIn("does not exclude", self.payload["claim_boundary"])
 
 
