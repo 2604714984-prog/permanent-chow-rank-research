@@ -33,6 +33,7 @@ Status vocabulary:
 | G-015 | `PROOF_DRAFT_COMPLETE` | reviewed exact-rational bounds include `ChowRank(perm_5)>=13`, `ChowRank(perm_7)>=41`, `ChowRank(perm_9)>=141`, `ChowRank(perm_11)>=506`, and `ChowRank(perm_15)>=6879` | `data/multishadow_bounds.json` and regression tests |
 | G-016 | `PROOF_DRAFT_COMPLETE` | exact refinement `rank K_m(perm_n-R)>=A_{n,m}-n^2 b+Gamma`, where `Gamma` is the quotient Koszul image gain | `docs/quotient_koszul_gain.md` |
 | G-017 | `PROOF_DRAFT_COMPLETE` | the odd-degree one-step multishadow gain is `(2/(e log 2)+o(1))*binom(n,floor(n/2))/n`, twice the even constant in this normalization | `docs/general_multishadow_parity_asymptotics.md` |
+| G-018 | `PROOF_DRAFT_COMPLETE` | among all fixed integer output-degree offsets and fixed constant witness defects, the G-014 parity coefficients are uniquely maximized at the central lower output degree; the constants remain `1/(e log 2)` for even `n` and `2/(e log 2)` for odd `n` in `binom(n,floor(n/2))/n` normalization | `docs/general_multishadow_offset_optimality.md` and exact finite diagnostics |
 | N6-001 | `OPEN` | exclude a 31-term decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the current one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained by an explicit coordinate family | `scripts/n6_multishadow_route_barrier.py` |
@@ -41,10 +42,11 @@ Status vocabulary:
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-017 has not been exhaustively checked.
+- Literature novelty of G-001 through G-018 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact `n=6` claim is made; the current in-repository interval is `23<=ChowRank(perm_6)<=32`.
 - The frozen rational witnesses certify the displayed lower bounds but are not proved globally optimal within G-014.
+- G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.
 - N6-002 shows that coordinate low-catalectic points lie on positive-dimensional branches; it does not classify the full rank-nine locus.
 - N6-003 is a barrier for the current scalar one-step formula only; it does not rule out Chow-realizability restrictions, positive `Gamma`, higher coupled shadows, or different flattenings.
 - N6-004 is an explicit existence certificate, not a uniform gain theorem for arbitrary Chow terms.

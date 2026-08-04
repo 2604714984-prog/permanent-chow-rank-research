@@ -31,6 +31,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Zero-intersection shadow removal | proof draft complete | additive gain at least `Omega(((1+sqrt(2))/2)^n/sqrt(n))` |
 | General multidimensional-shadow bound | proof draft complete | valid for every `n>=4`; reviewed examples include `ChowRank(perm_5)>=13`, `ChowRank(perm_6)>=23`, `ChowRank(perm_7)>=41`, and `ChowRank(perm_9)>=141` |
 | Parity-sensitive multishadow asymptotics | proof draft complete | additive scale `Theta(2^n/n^(3/2))`; the odd constant is twice the even constant in `binom(n,floor(n/2))/n` normalization |
+| Fixed-offset multishadow optimization | proof draft complete | among every fixed integer output-degree offset and constant witness defect, the unique asymptotic optimizer is the central lower output degree |
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the current scalar formula stops at 23 |
 | `n=6` diagonal quotient-gain audit | computation replayed; diagnostic only | one explicit Chow term has the full gain `Gamma=705` and combined rank `14,880` |
@@ -76,13 +77,14 @@ python scripts/check_english_only.py
 python -m unittest discover -s tests -v
 python scripts/generate_bounds.py --max-n 50
 python scripts/generate_multishadow_bounds.py
+python scripts/generate_multishadow_asymptotic_diagnostics.py
 python scripts/generate_even_multishadow_bounds.py
 python scripts/n6_coordinate_secant_audit.py
 python scripts/n6_multishadow_route_barrier.py
 python scripts/n6_quotient_gain_audit.py
 ```
 
-The bound generators use only the Python standard library and exact integer/rational arithmetic. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
+The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
 
 The quotient-gain audit similarly uses a modular rank only as a lower bound. Subadditivity gives the matching characteristic-zero upper bound
 

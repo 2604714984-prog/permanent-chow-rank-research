@@ -26,6 +26,10 @@ jobs:
           python scripts/generate_multishadow_bounds.py \
             --csv /tmp/multishadow_bounds.csv \
             --json /tmp/multishadow_bounds.json
+      - name: Replay parity-asymptotic diagnostics
+        run: |
+          python scripts/generate_multishadow_asymptotic_diagnostics.py \
+            --json /tmp/multishadow_asymptotic_diagnostics.json
       - name: Rebuild even-degree multishadow certificates
         run: |
           python scripts/generate_even_multishadow_bounds.py \
