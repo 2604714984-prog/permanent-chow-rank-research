@@ -1,0 +1,62 @@
+{
+  "b_range": [
+    20,
+    27
+  ],
+  "claim_boundary": "Summary identity only; the generator and proof note carry the full arithmetic and mathematical implications.",
+  "p_cap_counts": {
+    "23": 6,
+    "59": 6
+  },
+  "projection_cap": 48,
+  "route_counts": {
+    "automatic": 3,
+    "p_cap": 12,
+    "structural": 21
+  },
+  "separator": {
+    "binom_x_2_sq": "19496257641/400000000",
+    "binom_x_3_sq": "111624739998121/4000000000000",
+    "x": "427/100"
+  },
+  "state_count": 36,
+  "states": [
+    [20, 0, 20, "automatic", null],
+    [21, 0, 21, "automatic", null],
+    [21, 1, 22, "automatic", null],
+    [22, 0, 22, "structural", null],
+    [22, 1, 23, "p_cap", 23],
+    [22, 2, 24, "p_cap", 59],
+    [23, 0, 23, "structural", null],
+    [23, 1, 24, "structural", null],
+    [23, 2, 25, "p_cap", 23],
+    [23, 3, 26, "p_cap", 59],
+    [24, 0, 24, "structural", null],
+    [24, 1, 25, "structural", null],
+    [24, 2, 26, "structural", null],
+    [24, 3, 27, "p_cap", 23],
+    [24, 4, 28, "p_cap", 59],
+    [25, 0, 25, "structural", null],
+    [25, 1, 26, "structural", null],
+    [25, 2, 27, "structural", null],
+    [25, 3, 28, "structural", null],
+    [25, 4, 29, "p_cap", 23],
+    [25, 5, 30, "p_cap", 59],
+    [26, 0, 26, "structural", null],
+    [26, 1, 27, "structural", null],
+    [26, 2, 28, "structural", null],
+    [26, 3, 29, "structural", null],
+    [26, 4, 30, "structural", null],
+    [26, 5, 31, "p_cap", 23],
+    [26, 6, 32, "p_cap", 59],
+    [27, 0, 27, "structural", null],
+    [27, 1, 28, "structural", null],
+    [27, 2, 29, "structural", null],
+    [27, 3, 30, "structural", null],
+    [27, 4, 31, "structural", null],
+    [27, 5, 32, "structural", null],
+    [27, 6, 33, "p_cap", 23],
+    [27, 7, 34, "p_cap", 59]
+  ],
+  "status": "EXACT_INTEGER_FRONTIER_REPLAYED"
+}
