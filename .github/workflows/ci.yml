@@ -77,3 +77,7 @@ jobs:
             --json /tmp/n6_fixed_six_lower25.json
       - name: Replay independent n6 fixed-six lower-25 arithmetic
         run: python scripts/n6_fixed_six_lower25_independent_audit.py
+      - name: Replay n6 lower-26 fixed-count diagnostic
+        run: |
+          python scripts/n6_lower26_fixed_q_diagnostic.py \
+            --json /tmp/n6_lower26_fixed_q_diagnostic.json
