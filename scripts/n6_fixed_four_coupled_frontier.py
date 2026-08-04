@@ -2,22 +2,20 @@
 """Exact arithmetic audit of the realizability-aware ``n=6`` fixed-four frontier.
 
 Assume hypothetically that ``perm_6`` has a 23-term Chow decomposition and
-fix four terms with sum ``R``. The mathematical note
-``docs/n6_fixed_four_coupled_frontier.md`` proves:
+fix four terms with sum ``R``. The proof notes establish:
 
-* the central intersection ``b`` is at most 27, improving the raw Bukh cap 40;
+* the raw projection-shadow frontier has ``20<=b<=27`` and 36 states;
 * for ``20<=b<=27``, the quadratic derivative shadow is at least ``b+21``;
-* the individual quadratic-space defects satisfy an explicit budget ``27-b``;
-* the central catalectic quotient dimension ``d`` satisfies
-  ``0 <= d <= b-20``;
-* exactly 36 integer states remain;
+* the individual quadratic-space defects satisfy the budget ``27-b``;
+* common-quotient rigidity excludes every state with ``b=27``;
+* the current frontier therefore has ``20<=b<=26`` and 28 states;
 * three states are already excluded by the residual rank budget;
-* twelve states can be excluded by relative-prolongation caps 23 or 59; and
-* twenty-one states require structural exclusion or a stronger invariant.
+* ten states can be excluded by relative-prolongation caps 23 or 59; and
+* fifteen states require structural exclusion or a stronger invariant.
 
-This script checks only the exact arithmetic and state partition. It does not
-replace the torus-degeneration, projection, multidimensional-shadow, or
-coupling arguments in the proof note.
+This script checks only the exact arithmetic and state partitions. It does not
+replace the projection, Bukh-shadow, common-quotient, or catalectic arguments
+in the proof notes.
 """
 
 from __future__ import annotations
@@ -103,7 +101,7 @@ def exact_shadow_lower_table() -> dict[str, dict[str, object]]:
     return table
 
 
-def build_states() -> list[dict[str, object]]:
+def build_raw_states() -> list[dict[str, object]]:
     states: list[dict[str, object]] = []
 
     for intersection_dimension in range(20, 28):
@@ -159,6 +157,19 @@ def build_states() -> list[dict[str, object]]:
     return states
 
 
+def histogram(states: list[dict[str, object]]) -> dict[str, int]:
+    return dict(sorted(Counter(row["route"] for row in states).items()))
+
+
+def prolongation_histogram(states: list[dict[str, object]]) -> dict[str, int]:
+    counts = Counter(
+        row["relative_prolongation_cap_sufficient_for_closure"]
+        for row in states
+        if row["relative_prolongation_cap_sufficient_for_closure"] is not None
+    )
+    return {str(key): value for key, value in sorted(counts.items())}
+
+
 def build_payload() -> dict[str, object]:
     projection_cap = (
         (FIXED_TERMS - 1) * PER_TERM_QUADRATIC_CAP
@@ -168,26 +179,47 @@ def build_payload() -> dict[str, object]:
         raise AssertionError(projection_cap)
 
     shadow_table = exact_shadow_lower_table()
-    states = build_states()
-    route_histogram = Counter(row["route"] for row in states)
-    expected_histogram = {
+    raw_states = build_raw_states()
+    excluded_states = [
+        row for row in raw_states if row["central_intersection_b"] == 27
+    ]
+    states = [
+        row for row in raw_states if row["central_intersection_b"] <= 26
+    ]
+
+    raw_histogram = histogram(raw_states)
+    expected_raw_histogram = {
         "rank_budget_already_strict": 3,
         "relative_prolongation_cap_can_close": 12,
         "structural_exclusion_or_stronger_invariant_required": 21,
     }
-    if dict(route_histogram) != expected_histogram:
-        raise AssertionError(route_histogram)
+    if raw_histogram != expected_raw_histogram:
+        raise AssertionError(raw_histogram)
+    if prolongation_histogram(raw_states) != {"23": 6, "59": 6}:
+        raise AssertionError(prolongation_histogram(raw_states))
 
-    p_cap_histogram = Counter(
-        row["relative_prolongation_cap_sufficient_for_closure"]
+    surviving_histogram = histogram(states)
+    expected_surviving_histogram = {
+        "rank_budget_already_strict": 3,
+        "relative_prolongation_cap_can_close": 10,
+        "structural_exclusion_or_stronger_invariant_required": 15,
+    }
+    if surviving_histogram != expected_surviving_histogram:
+        raise AssertionError(surviving_histogram)
+    if prolongation_histogram(states) != {"23": 5, "59": 5}:
+        raise AssertionError(prolongation_histogram(states))
+    if len(excluded_states) != 8 or len(states) != 28:
+        raise AssertionError((len(excluded_states), len(states)))
+
+    maximum_remaining_requirement = max(
+        row["minimum_quotient_gain_for_strict_koszul_budget"]
         for row in states
-        if row["relative_prolongation_cap_sufficient_for_closure"] is not None
     )
-    if dict(p_cap_histogram) != {23: 6, 59: 6}:
-        raise AssertionError(p_cap_histogram)
+    if maximum_remaining_requirement != 157:
+        raise AssertionError(maximum_remaining_requirement)
 
     return {
-        "status": "EXACT_INTEGER_FRONTIER_REPLAYED",
+        "status": "EXACT_INTEGER_FRONTIER_WITH_B27_EXCLUSION_REPLAYED",
         "hypothesis": "a 23-term Chow decomposition of perm_6",
         "fixed_terms": FIXED_TERMS,
         "residual_terms": RESIDUAL_TERMS,
@@ -196,17 +228,36 @@ def build_payload() -> dict[str, object]:
         "quadratic_intersection_projection_cap": projection_cap,
         "bukh_separator_certificate": bukh_separator_certificate(),
         "exact_shadow_lower_table": shadow_table,
-        "central_intersection_range": [20, 27],
-        "state_count": len(states),
-        "route_histogram": dict(sorted(route_histogram.items())),
-        "relative_prolongation_cap_histogram": {
-            str(key): value for key, value in sorted(p_cap_histogram.items())
+        "raw_projection_frontier": {
+            "central_intersection_range": [20, 27],
+            "state_count": len(raw_states),
+            "route_histogram": raw_histogram,
+            "relative_prolongation_cap_histogram": prolongation_histogram(
+                raw_states
+            ),
         },
+        "common_quotient_b27_exclusion": {
+            "excluded_central_intersection": 27,
+            "excluded_state_count": len(excluded_states),
+            "individual_quadratic_dimensions": [15, 15, 15, 15],
+            "individual_intersection_dimensions": [3, 3, 3, 3],
+            "common_quotient_dimension": 12,
+            "forced_quadratic_sum_dimension": 60,
+            "forced_central_catalectic_rank": 80,
+            "residual_inequality_upper_bound_on_central_rank": 34,
+            "contradiction": "80>34",
+        },
+        "central_intersection_range": [20, 26],
+        "state_count": len(states),
+        "route_histogram": surviving_histogram,
+        "relative_prolongation_cap_histogram": prolongation_histogram(states),
+        "maximum_remaining_gain_requirement": maximum_remaining_requirement,
         "states": states,
+        "excluded_b27_states": excluded_states,
         "claim_boundary": (
-            "The audit proves the numerical frontier and defect budgets only. "
-            "It does not exclude the 21 structural states or establish the "
-            "p<=23 and p<=59 caps."
+            "The audit replays the 28-state frontier after the proved b=27 "
+            "common-quotient exclusion. It does not exclude the 15 remaining "
+            "structural states or establish the p<=23 and p<=59 caps."
         ),
     }
 
