@@ -60,11 +60,12 @@ Status vocabulary:
 | N6-019 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | among the 5,984 normalized one-defect column-sign terms, `perm_6` has exact minimum support 32; the family span has dimension 987 and contains no representation with at most 31 terms | `docs/n6_one_defect_sign_rigidity.md`, primary and independent audits, exact integer minors, and frozen payload |
 | N6-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the 467,264-term normalized two-defect family has exact parity-block ranks `406,406,406,322,322,207` and span dimension 11,533; an explicit quadratic separator gives an exact permanent representation in only 24 base-labelled aggregate spaces, so the N6-019 32-base support mechanism does not extend | `docs/n6_two_defect_sign_block_diagnostic.md`, `scripts/n6_two_defect_sign_block_audit.py`, exact rational elimination, and frozen payload |
 | N6-021 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_AGGREGATE_THEOREM` | the N6-020 separator functions satisfy `rho_2(f)=rho_2(1-f)=46`; therefore the specific 24-base aggregate assignment has exact actual-term cost 744 and cannot yield a decomposition with at most 25 terms | `docs/n6_two_defect_aggregate_atomic_rank.md`, `scripts/n6_two_defect_aggregate_atomic_rank_audit.py`, exact local support classification, and frozen payload |
+| N6-022 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the count-product separator `g=n_4 n_5` gives an exact permanent representation in 16 nonzero base-labelled two-defect aggregate spaces; its fixed-base atomic rank satisfies `31<=rho_2(g)<=36`, so this specific assignment costs between 496 and 576 actual terms | `docs/n6_two_defect_sixteen_base_aggregate.md`, `scripts/n6_two_defect_sixteen_base_aggregate_audit.py`, exact local support enumeration, and frozen payload |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-020 and N6-006 through N6-021 has not been exhaustively checked.
+- Literature novelty of G-001 through G-020 and N6-006 through N6-022 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
@@ -78,6 +79,7 @@ Status vocabulary:
 - N6-019 supplies no unrestricted lower-26 implication and does not change the active interval `25..32`.
 - N6-020 determines linear block ranks and base-aggregate support, not minimum term support. Its 24-base aggregate representation is not a 24-term decomposition and gives no new upper bound.
 - N6-021 proves the exact cost 744 only for the fixed N6-020 aggregate assignment. It is not a lower bound for other aggregate assignments or for the global two-defect family.
+- N6-022 proves only an aggregate-support upper bound of 16 and the fixed-base window `31..36`; it does not prove 16-base minimality or determine the global two-defect minimum.
 - No decomposition with at most 25 two-defect terms has been found or ruled out. Broad sparse optimization remains unauthorized until the aggregate-assignment problem has a compact exact reduction.
 - The small `F_2` calculation in the G-019 audit is diagnostic only; the characteristic-zero theorem rests on the universal-bundle and torus-degeneration proof.
 - The frozen rational witnesses certify the displayed general lower bounds but are not proved globally optimal within G-014.
