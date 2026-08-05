@@ -7,6 +7,7 @@ Status vocabulary:
 - `COMPUTATION_REPLAYED`: deterministic computation rerun successfully.
 - `ROUTE_DIAGNOSTIC`: exact finite result used to assess a proof route, not itself a Chow-rank theorem.
 - `LITERATURE_RECONCILED`: a source-bound full-text comparison with explicit version and claim boundaries.
+- `RESTRICTED_FAMILY_THEOREM`: an exact theorem for a stated proper subclass, with no inference to unrestricted Chow rank.
 - `CONDITIONAL`: depends on evidence not fully regenerated in this repository.
 - `SUPERSEDED`: valid but strictly weaker than a later in-repository result.
 - `CONJECTURE`: proposed statement without proof.
@@ -36,7 +37,7 @@ Status vocabulary:
 | G-017 | `PROOF_DRAFT_COMPLETE` | the odd-degree one-step multishadow gain is `(2/(e log 2)+o(1))*binom(n,floor(n/2))/n`, twice the even constant in this normalization | `docs/general_multishadow_parity_asymptotics.md` |
 | G-018 | `PROOF_DRAFT_COMPLETE` | among all fixed integer output-degree offsets and fixed constant defects, the G-014 parity coefficients are uniquely maximized at the central lower output degree | `docs/general_multishadow_offset_optimality.md` and exact finite diagnostics |
 | G-019 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | for every `K subset W tensor Sym^2 V` of dimension `k`, the vector-valued first prolongation satisfies `dim K^(1)<=k^{<2>}` | universal Grassmannian kernel, explicit colored-monomial one-parameter subgroup, scalar Macaulay growth, superadditivity, and `scripts/vector_valued_macaulay_audit.py` |
-| G-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | the `2^(n-1)` column-uniform Glynn sign products are linearly independent, and the unique expansion of `perm_n` in their span uses every term with nonzero coefficient | Walsh-Hadamard proof and `scripts/glynn_family_rigidity_audit.py`; strict subfamily theorem only |
+| G-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | the `2^(n-1)` fixed column-uniform Glynn sign products are linearly independent, and the unique expansion of `perm_n` in their span uses every term with nonzero coefficient | Walsh-Hadamard proof and `scripts/glynn_family_rigidity_audit.py`; strict subfamily theorem only |
 | N6-001 | `OPEN` | improve the lower bound beyond 25 or find a shorter decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the former one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained | `scripts/n6_multishadow_route_barrier.py` |
@@ -55,13 +56,14 @@ Status vocabulary:
 | N6-016 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | for output degrees `2,3,4`, the first higher-wedge Koszul rank ratios certify only `15,21,16`, identical to the ordinary first-Koszul integer bounds; a dimension-only second shadow is vacuous for `q>=6`; the column-uniform Glynn family requires all 32 terms | `docs/n6_alternative_route_ceiling_comparison.md`, exact torus-block ranks, and G-020 |
 | N6-017 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the output-degree-two homology has dimensions `450` for `perm_6` and `15` for one independent Chow term, closing the exact ranks at `127125` and `8730`; a coupled common-factor six-term family has scalar homology `465`, so monotone scalar homology upper bounds cannot prove lower 26 | `docs/n6_second_koszul_homology_closure.md`, `scripts/n6_second_koszul_homology_audit.py`, and exact sparse replay |
 | N6-018 | `LITERATURE_RECONCILED`, `ROUTE_DIAGNOSTIC` | Xu--Gnang arXiv:2311.05890v2 studies arbitrary complex row-homogeneous tensor-rank terms; version 3 withdraws Theorem 4.2 as incorrect. G-020 is only an independent strict-subfamily rigidity result, and the finite one-defect sign pilot is not redundant with a valid theorem in that paper | `docs/xu_gnang_v2_reconciliation.md`, `docs/n6_sign_family_literature_gate.md`, exact v2 source hashes, and acquisition artifact `8922769747` |
+| N6-019 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | among the 5,984 normalized one-defect column-sign terms, `perm_6` has exact minimum support 32; the family span has dimension 987 and contains no representation with at most 31 terms | `docs/n6_one_defect_sign_rigidity.md`, `scripts/n6_one_defect_sign_rigidity_audit.py`, exact integer minors, and frozen payload |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-020 and N6-006 through N6-018 has not been exhaustively checked.
+- Literature novelty of G-001 through G-020 and N6-006 through N6-019 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
-- No exact `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
+- No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
 - N6-014 does not prove `ChowRank(perm_6)>=26`, a border Chow-rank lower bound of 25, or the conjectural exact value 32.
 - N6-015 through N6-017 are route diagnostics. They do not prove that lower 26 is impossible; they identify tested fixed-count, scalar-shadow, base-ratio, sign-family, and scalar-homology-upper-bound routes that do not supply a strict global margin.
@@ -69,7 +71,8 @@ Status vocabulary:
 - N6-017 does not rule out an exact-value classification, multigraded homology, representation-theoretic homology, or quotient-coupled homology obstructions.
 - N6-018 does not establish or refute the abstract mathematical statement that Glynn is optimal for row-homogeneous tensor rank. It records that the cited version-3 paper withdraws Theorem 4.2 and that the displayed version-2 proof is invalid.
 - G-020 is restricted to the 32 fixed column-uniform Glynn products. It does not control arbitrary row-sign, column-sign, row-homogeneous, or unrestricted Chow terms.
-- A resumed one-defect sign pilot is construction/falsification only. Failure to find a 25-term representation is not a lower bound.
+- N6-019 is exact only for the normalized one-defect sign family. The full column-sign family, row-sign family, arbitrary complex row-homogeneous tensor rank, and unrestricted Chow rank remain open.
+- N6-019 supplies no unrestricted lower-26 implication and does not change the active interval `25..32`.
 - The small `F_2` calculation in the G-019 audit is diagnostic only; the characteristic-zero theorem rests on the universal-bundle and torus-degeneration proof.
 - The frozen rational witnesses certify the displayed general lower bounds but are not proved globally optimal within G-014.
 - G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.
