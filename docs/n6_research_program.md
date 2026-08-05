@@ -308,10 +308,13 @@ G_A
 a_{ij}\in\{\pm1\}.
 \]
 
-The first pilot must not search the full `2^36` family. It must first quotient
-by row signs, column signs, row permutations, column permutations,
-transposition, and global scaling. It may then test only a finite orbit family
-whose representatives and orbit reconstruction are independently checkable.
+The pilot must not search the full `2^36` family. First normalize each column
+factor projectively, for example by fixing `a_0j=1`. Then quotient only by the
+target symmetries that preserve this column-oriented ansatz: row sign scalings,
+row permutations, and column permutations. Transposition does not preserve the
+column-oriented family; it may be used only if row-oriented sign terms are
+explicitly adjoined as a second family. Every orbit representative and orbit
+reconstruction must remain independently checkable.
 
 The pilot asks two exact questions:
 

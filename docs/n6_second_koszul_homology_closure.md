@@ -192,10 +192,13 @@ The audit uses `1<=r<=6`, so at most 31 variables are active.
 
 ### 4.1 Coupled derivative images are reconstructed, not assumed
 
-Because two supports in (4.1) meet only in `c`, every order-three or order-four
-differential operator that is nonzero on one summand is zero on every other
-summand unless it uses only the common variable, which is impossible at those
-orders. Therefore the catalectic images of the sum satisfy
+Two supports in (4.1) meet only in `c`. Any monomial differential operator of
+order three that is nonzero on `T_i` contains at least two variables from
+`B_i`; one of order four contains at least three. It therefore annihilates
+every `T_j` with `j!=i`. Conversely, each coordinate basis element of
+`D_3(T_i)` or `D_2(T_i)` is obtained by its complementary monomial
+differential operator, which isolates that summand. By linearity, the
+catalectic images of the sum satisfy
 
 \[
 D_3(F_r)=\bigoplus_{i=1}^rD_3(T_i),
@@ -405,7 +408,7 @@ merely under the coordinate torus of the permanent.
 The Betti formula (2.1) is from:
 
 - Jarod Alper and Rowan Rowlands, *Syzygies of the apolar ideals of the
-  determinant and permanent*, arXiv:1709.09286, Proposition 5.4.
+  determinant and permanent*, arXiv:1709.09286, Theorem 1.2(b).
 
 The paper explicitly studies the quadratic relations of the permanent apolar
 ideal. This repository does not claim novelty for that formula. The
