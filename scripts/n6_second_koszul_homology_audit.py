@@ -318,7 +318,7 @@ def build_payload() -> dict[str, object]:
             "output_degree_two_rank_window": "closed_exactly",
             "base_rank_ratio": "no_improvement_over_15",
             "scalar_homology_dimension": (
-                "rejected_as_a_standalone_lower_26_invariant"
+                "rejected_as_a_monotone_upper_bound_route_for_lower_26"
             ),
             "multigraded_or_representation_structure": "open_not_promoted",
             "route_selected": "none",
@@ -328,8 +328,9 @@ def build_payload() -> dict[str, object]:
             "beta_2,4 formula for the apolar algebra. The common-factor rank "
             "formula is proved from coupled derivative-space isolation and "
             "explicit pairwise image intersections. The six-term example "
-            "rejects only scalar homology dimension as a standalone lower-bound "
-            "route; it does not rule out multigraded, representation-theoretic, "
+            "rejects only monotone upper-bound comparisons based on scalar "
+            "homology dimension; it does not rule out exact-value, multigraded, "
+            "representation-theoretic, "
             "or quotient-coupled homology obstructions."
         ),
     }
