@@ -111,3 +111,7 @@ jobs:
         run: |
           python scripts/n6_two_defect_sixteen_base_aggregate_audit.py \
             --json /tmp/n6_two_defect_sixteen_base_aggregate_audit.json
+      - name: Replay n6 exact rank-36 separator theorem
+        run: |
+          python scripts/n6_two_defect_separator_rank36_audit.py \
+            --json /tmp/n6_two_defect_separator_rank36_audit.json
