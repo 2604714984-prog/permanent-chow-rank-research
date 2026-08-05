@@ -8,6 +8,7 @@ Status vocabulary:
 - `ROUTE_DIAGNOSTIC`: exact finite result used to assess a proof route, not itself a Chow-rank theorem.
 - `LITERATURE_RECONCILED`: a source-bound full-text comparison with explicit version and claim boundaries.
 - `RESTRICTED_FAMILY_THEOREM`: an exact theorem for a stated proper subclass, with no inference to unrestricted Chow rank.
+- `RESTRICTED_AGGREGATE_THEOREM`: an exact theorem for a fixed aggregate function or fixed aggregate assignment, with no inference to all decompositions in the surrounding family.
 - `CONDITIONAL`: depends on evidence not fully regenerated in this repository.
 - `SUPERSEDED`: valid but strictly weaker than a later in-repository result.
 - `CONJECTURE`: proposed statement without proof.
@@ -55,14 +56,15 @@ Status vocabulary:
 | N6-015 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | under a hypothetical 25-term decomposition, exact `q=6,7,8` fixed-count arithmetic leaves respectively 327, 355, and 635 states after vector-Macaulay central pruning; no fixed count is selected and the central first-Koszul route is suspended for lower 26 | `docs/n6_lower26_fixed_q_diagnostic.md`, `scripts/n6_lower26_fixed_q_diagnostic.py`, and frozen table hashes |
 | N6-016 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | for output degrees `2,3,4`, the first higher-wedge Koszul rank ratios certify only `15,21,16`, identical to the ordinary first-Koszul integer bounds; a dimension-only second shadow is vacuous for `q>=6`; the column-uniform Glynn family requires all 32 terms | `docs/n6_alternative_route_ceiling_comparison.md`, exact torus-block ranks, and G-020 |
 | N6-017 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the output-degree-two homology has dimensions `450` for `perm_6` and `15` for one independent Chow term, closing the exact ranks at `127125` and `8730`; a coupled common-factor six-term family has scalar homology `465`, so monotone scalar homology upper bounds cannot prove lower 26 | `docs/n6_second_koszul_homology_closure.md`, `scripts/n6_second_koszul_homology_audit.py`, and exact sparse replay |
-| N6-018 | `LITERATURE_RECONCILED`, `ROUTE_DIAGNOSTIC` | Xu--Gnang arXiv:2311.05890v2 studies arbitrary complex row-homogeneous tensor-rank terms; version 3 withdraws Theorem 4.2 as incorrect. G-020 is only an independent strict-subfamily rigidity result, and the finite one-defect sign pilot is not redundant with a valid theorem in that paper | `docs/xu_gnang_v2_reconciliation.md`, `docs/n6_sign_family_literature_gate.md`, exact v2 source hashes, and acquisition artifact `8922769747` |
+| N6-018 | `LITERATURE_RECONCILED`, `ROUTE_DIAGNOSTIC` | the repository owner's Xu--Gnang arXiv:2311.05890 line is self-authored, withdrawn, and treated as disproved; its v2 row-homogeneous claim is not a theorem dependency or an external novelty gate | `docs/xu_gnang_v2_reconciliation.md`, exact v2 source hashes, and acquisition artifact `8922769747` |
 | N6-019 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | among the 5,984 normalized one-defect column-sign terms, `perm_6` has exact minimum support 32; the family span has dimension 987 and contains no representation with at most 31 terms | `docs/n6_one_defect_sign_rigidity.md`, primary and independent audits, exact integer minors, and frozen payload |
 | N6-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the 467,264-term normalized two-defect family has exact parity-block ranks `406,406,406,322,322,207` and span dimension 11,533; an explicit quadratic separator gives an exact permanent representation in only 24 base-labelled aggregate spaces, so the N6-019 32-base support mechanism does not extend | `docs/n6_two_defect_sign_block_diagnostic.md`, `scripts/n6_two_defect_sign_block_audit.py`, exact rational elimination, and frozen payload |
+| N6-021 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_AGGREGATE_THEOREM` | the N6-020 separator functions satisfy `rho_2(f)=rho_2(1-f)=46`; therefore the specific 24-base aggregate assignment has exact actual-term cost 744 and cannot yield a decomposition with at most 25 terms | `docs/n6_two_defect_aggregate_atomic_rank.md`, `scripts/n6_two_defect_aggregate_atomic_rank_audit.py`, exact local support classification, and frozen payload |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-020 and N6-006 through N6-020 has not been exhaustively checked.
+- Literature novelty of G-001 through G-020 and N6-006 through N6-021 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
@@ -70,12 +72,13 @@ Status vocabulary:
 - N6-015 through N6-017 are route diagnostics. They do not prove that lower 26 is impossible; they identify tested fixed-count, scalar-shadow, base-ratio, sign-family, and scalar-homology-upper-bound routes that do not supply a strict global margin.
 - N6-017 uses the published Alper--Rowlands `beta_2,4` formula as an external theorem; this repository checks the `n=6` arithmetic, rank consequences, and common-factor falsification family but does not reprove that formula.
 - N6-017 does not rule out an exact-value classification, multigraded homology, representation-theoretic homology, or quotient-coupled homology obstructions.
-- N6-018 does not establish or refute the abstract mathematical statement that Glynn is optimal for row-homogeneous tensor rank. It records that the cited version-3 paper withdraws Theorem 4.2 and that the displayed version-2 proof is invalid.
+- N6-018 is an internal postmortem of a self-authored, withdrawn, disproved line; no result from that paper is used as a positive theorem input.
 - G-020 is restricted to the 32 fixed column-uniform Glynn products. It does not control arbitrary row-sign, column-sign, row-homogeneous, or unrestricted Chow terms.
 - N6-019 is exact only for the normalized one-defect sign family. The full column-sign family, row-sign family, arbitrary complex row-homogeneous tensor rank, and unrestricted Chow rank remain open.
 - N6-019 supplies no unrestricted lower-26 implication and does not change the active interval `25..32`.
 - N6-020 determines linear block ranks and base-aggregate support, not minimum term support. Its 24-base aggregate representation is not a 24-term decomposition and gives no new upper bound.
-- No decomposition with at most 25 two-defect terms has been found or ruled out. A broad sparse solver is not authorized by N6-020.
+- N6-021 proves the exact cost 744 only for the fixed N6-020 aggregate assignment. It is not a lower bound for other aggregate assignments or for the global two-defect family.
+- No decomposition with at most 25 two-defect terms has been found or ruled out. Broad sparse optimization remains unauthorized until the aggregate-assignment problem has a compact exact reduction.
 - The small `F_2` calculation in the G-019 audit is diagnostic only; the characteristic-zero theorem rests on the universal-bundle and torus-degeneration proof.
 - The frozen rational witnesses certify the displayed general lower bounds but are not proved globally optimal within G-014.
 - G-018 proves optimality only for fixed integer output-degree offsets and fixed constant defects; it does not classify `n`-dependent offsets or defects.

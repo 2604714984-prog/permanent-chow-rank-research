@@ -2,8 +2,9 @@
 
 ## Status
 
-`LITERATURE_RECONCILED`, `ONE_DEFECT_THEOREM_COMPLETE`,
-`TWO_DEFECT_DIAGNOSTIC_COMPLETE`.
+`AUTHOR_POSTMORTEM_COMPLETE`, `ONE_DEFECT_THEOREM_COMPLETE`,
+`TWO_DEFECT_BLOCK_DIAGNOSTIC_COMPLETE`,
+`EXPLICIT_AGGREGATE_ATOMIC_RANK_COMPLETE`.
 
 The relevant records are
 
@@ -11,6 +12,7 @@ The relevant records are
 docs/xu_gnang_v2_reconciliation.md
 docs/n6_one_defect_sign_rigidity.md
 docs/n6_two_defect_sign_block_diagnostic.md
+docs/n6_two_defect_aggregate_atomic_rank.md
 ```
 
 No novelty claim and no unrestricted Chow-rank inference is authorized. The
@@ -20,16 +22,20 @@ current interval remains
 25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
-## 1. Source-bound literature result
+## 1. Self-authored withdrawn line
 
-The reviewed paper is
+The paper
 
 - Rongyu Xu and Edinah Gnang, *On the Chow-rank of the permanent*,
-  arXiv:2311.05890.
+  arXiv:2311.05890,
 
-The mathematical full text reviewed is arXiv version 2, submitted on
-2025-01-04. Version 3, submitted on 2025-03-24, is withdrawn with the arXiv
-comment
+is part of the repository owner's own earlier research line. It is treated as
+withdrawn and disproved, not as an external theorem, external novelty gate, or
+positive dependency.
+
+The mathematical full text retained for the postmortem is arXiv version 2,
+submitted on 2025-01-04. Version 3, submitted on 2025-03-24, is withdrawn with
+the arXiv comment
 
 ```text
 Incorrect statement Thm 4.2
@@ -66,9 +72,7 @@ Version 2 studies the row-oriented tensor-rank family
 \]
 
 Its Theorem 4.2 is the withdrawn claim that Glynn is optimal in that family.
-The theorem is not used as a repository dependency, and the displayed v2 proof
-contains unsupported projection-invariance, product-tensor-dependence, and
-automorphism-rigidity implications.
+No claim from that theorem is used in the current repository.
 
 ## 2. Exact family diagram
 
@@ -169,48 +173,95 @@ This proves
 ONE_DEFECT_32_BASE_SUPPORT_ARGUMENT_EXTENDS=false
 ```
 
-but does not produce a 24-term decomposition. Each nonzero aggregate can
-require several two-defect rank-one sign products, and the minimum term support
-inside `F_two_defect` remains open.
+but does not produce a 24-term decomposition.
 
-## 5. Classification of the current results
+## 5. Exact atomic cost of the explicit aggregates
+
+The fixed-base two-defect atomic ranks of the two nonconstant aggregate types
+are now exact:
+
+\[
+\boxed{
+\rho_2(f)=46,
+\qquad
+\rho_2(1-f)=46.
+}
+\]
+
+The lower bound restricts row values to `{0,2,3}`. Every one of the 15 pure
+pair blocks requires at least three local sign atoms. The only two minimum
+three-atom block types contribute opposite lower-order ANOVA vectors. If all
+15 blocks used only 45 atoms, matching the six unary coefficients would force
+signed edge sum three and hence constant `9/8`, not the target constant one.
+A `K3,3` signed-edge construction plus one uniform correction attains 46.
+
+The N6-020 coefficient histogram contains
+
+```text
+8 zero aggregates
+8 nonzero constant aggregates
+16 aggregates proportional to f or 1-f
+```
+
+so the exact actual-term cost of that fixed aggregate assignment is
+
+\[
+8+16\cdot46
+=
+\boxed{744}.
+\]
+
+Therefore
+
+```text
+N6_020_EXPLICIT_AGGREGATE_CAN_YIELD_AT_MOST_25_TERMS=false
+```
+
+This does not lower-bound another aggregate assignment or the global
+`F_two_defect` minimum.
+
+## 6. Classification of the current results
 
 ```text
 G-020=INDEPENDENT_STRICT_SUBFAMILY_RIGIDITY
 N6-019=EXACT_ONE_DEFECT_RESTRICTED_FAMILY_THEOREM
 N6-020=EXACT_TWO_DEFECT_BLOCK_ROUTE_DIAGNOSTIC
+N6-021=EXACT_FIXED_AGGREGATE_ATOMIC_RANK_THEOREM
 ROW_HOMOGENEOUS_OPTIMALITY=NOT_PROVED
 NOVELTY_RELATIVE_TO_ALL_LITERATURE=NOT_ESTABLISHED
 ```
 
-## 6. Next implementation gate
+## 7. Next implementation gate
 
 The full `F_column_sign` family contains `32^6=2^30` normalized indexed terms.
 A direct enumeration, broad orbit registry, SAT model, nonlinear solver, or
 manager/dispatcher layer is not authorized.
 
-The two-defect problem is now a rank-one compression problem inside 24
-base-labelled pairwise aggregates. Further work may resume only after one of
-the following compact interfaces is derived:
+The explicit N6-020 aggregate assignment is now closed as a constructive
+failure: decompressing it costs 744 terms. The next unresolved question is to
+optimize the **aggregate assignment itself** under the 32 Fourier-fiber
+constraints.
 
-1. a rigorous lower bound on the number of sign rank-one pair terms needed by
-   the aggregate types appearing in the explicit 24-base formula; or
-2. a symmetry-reduced exact construction with at most 25 actual terms.
+Further executable work requires a compact exact reduction, preferably one of:
 
-A base-aggregate count is not a term count. Failure to find a short restricted
-decomposition is not an unrestricted lower bound.
+1. a Reed--Muller/Fourier code formulation that lower-bounds total fixed-base
+   atomic cost; or
+2. a small symmetry-reduced aggregate ansatz whose actual term support can be
+   reconstructed exactly.
 
-If neither interface remains small and independently replayable, the sign
+A base-aggregate count is not a term count. A result for one aggregate
+assignment is not a result for all assignments. If the aggregate optimization
+cannot be reduced to a small independently replayable interface, the sign
 route is suspended.
 
-## 7. Current decision
+## 8. Current decision
 
 ```text
-FULL_TEXT_RECONCILIATION=COMPLETE
-XU_GNANG_THEOREM_4_2=WITHDRAWN_IN_V3
+XU_GNANG_LINE=SELF_AUTHORED_WITHDRAWN_DISPROVED
 XU_GNANG_THEOREM_4_2_USED_AS_DEPENDENCY=false
 ONE_DEFECT_SIGN_THEOREM=EXACT_32
 TWO_DEFECT_BLOCK_DIAGNOSTIC=COMPLETE
+N6_020_EXPLICIT_AGGREGATE_ACTUAL_TERM_COST=744
 TWO_DEFECT_TERM_SUPPORT=OPEN
 FULL_COLUMN_SIGN_FAMILY=OPEN
 ROW_HOMOGENEOUS_TENSOR_RANK=OPEN
