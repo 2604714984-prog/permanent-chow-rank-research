@@ -99,3 +99,7 @@ jobs:
             --json /tmp/n6_one_defect_sign_rigidity_audit.json
       - name: Replay independent n6 one-defect feature ranks
         run: python scripts/n6_one_defect_sign_independent_audit.py
+      - name: Replay n6 two-defect parity blocks
+        run: |
+          python scripts/n6_two_defect_sign_block_audit.py \
+            --json /tmp/n6_two_defect_sign_block_audit.json
