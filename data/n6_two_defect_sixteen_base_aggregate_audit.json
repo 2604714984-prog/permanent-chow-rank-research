@@ -1,0 +1,144 @@
+{
+  "aggregate_certificate": {
+    "coefficient_numerator_histogram": {
+      "-2": 8,
+      "0": 16,
+      "2": 8
+    },
+    "exact_assignment_checks": 46656,
+    "formula": "W_a=(chi_31(a)-chi_7(a))*g/32",
+    "nonzero_base_aggregate_count": 16,
+    "nonzero_base_labels": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "separator": "g(r)=n_4(r)*n_5(r)",
+    "support_character": 24,
+    "target_fiber_separator_values": [
+      1
+    ],
+    "target_fiber_size": 720,
+    "target_parity": 31,
+    "zero_base_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "zero_fiber_separator_values": [
+      0
+    ],
+    "zero_fiber_size": 1200,
+    "zero_parity": 7
+  },
+  "claim_boundary": "The 16-base Fourier aggregate representation is exact.  The fixed-base separator rank is only bounded between 31 and 36, so the actual cost of this assignment is between 496 and 576.  No minimum base-support or global two-defect rank claim is made.",
+  "field": "characteristic zero",
+  "fixed_base_atomic_rank_certificate": {
+    "atomic_rank_lower_bound": 31,
+    "atomic_rank_upper_bound": 36,
+    "construction_assignment_checks": 46656,
+    "explicit_one_defect_correction_count": 6,
+    "explicit_pair_atom_count": 30,
+    "forced_lower_anova_if_exactly_30_atoms": {
+      "constant": "15/2",
+      "each_position_row4_unary": "-5/2",
+      "each_position_row5_unary": "-5/2"
+    },
+    "local_dictionary_certificate": {
+      "compatible_support_count": {
+        "1": 0,
+        "2": 1
+      },
+      "local_pure_atom_count": 9,
+      "pure_target": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "restricted_nonconstant_sign_labels": [
+        8,
+        16,
+        24
+      ],
+      "restricted_rows": [
+        0,
+        4,
+        5
+      ],
+      "unique_two_atom_type": {
+        "coefficient_matrix_rank": 2,
+        "coefficients": [
+          "1/4",
+          "1/4"
+        ],
+        "lower_anova": [
+          "1/2",
+          "-1/2",
+          "-1/2",
+          "-1/2",
+          "-1/2"
+        ],
+        "support": [
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ]
+        ]
+      }
+    },
+    "minimum_atoms_per_nonzero_pair_block": 2,
+    "pair_block_count": 15,
+    "target_lower_anova": "zero",
+    "thirty_atom_pure_block_lower_bound": 30,
+    "thirty_atom_representation_possible": false
+  },
+  "route_decision": {
+    "broad_sparse_optimization_authorized": false,
+    "global_two_defect_minimum": "open",
+    "new_nonzero_base_aggregate_count": 16,
+    "previous_nonzero_base_aggregate_count": 24,
+    "sixteen_base_aggregate_representation_exact": true,
+    "sixteen_base_is_minimum": false,
+    "specific_assignment_can_yield_at_most_25_terms": false
+  },
+  "specific_assignment_actual_term_cost_window": {
+    "lower_bound": 496,
+    "upper_bound": 576
+  },
+  "status": "N6_TWO_DEFECT_SIXTEEN_BASE_AGGREGATE_COMPLETE"
+}
