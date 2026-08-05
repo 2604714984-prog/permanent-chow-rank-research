@@ -1,6 +1,6 @@
 {
   "certified_integer_rank_ratio_lower_bound": 15,
-  "claim_boundary": "The exact permanent homology dimension uses the published beta_2,4 formula for the apolar algebra. The common-factor rank formula is proved from coupled derivative-space isolation and explicit pairwise image intersections. The six-term example rejects only scalar homology dimension as a standalone lower-bound route; it does not rule out multigraded, representation-theoretic, or quotient-coupled homology obstructions.",
+  "claim_boundary": "The exact permanent homology dimension uses the published beta_2,4 formula for the apolar algebra. The common-factor rank formula is proved from coupled derivative-space isolation and explicit pairwise image intersections. The six-term example rejects only monotone upper-bound comparisons based on scalar homology dimension; it does not rule out exact-value, multigraded, representation-theoretic, or quotient-coupled homology obstructions.",
   "common_factor_family": {
     "definition": "T_i=c*product(B_i), where the five-element B_i are pairwise disjoint in the 36-dimensional ambient variable space.",
     "pairwise_image_intersection_dimension": 25,
@@ -87,7 +87,7 @@
     "multigraded_or_representation_structure": "open_not_promoted",
     "output_degree_two_rank_window": "closed_exactly",
     "route_selected": "none",
-    "scalar_homology_dimension": "rejected_as_a_standalone_lower_26_invariant"
+    "scalar_homology_dimension": "rejected_as_a_monotone_upper_bound_route_for_lower_26"
   },
   "single_independent_chow_term": {
     "exact_characteristic_zero_second_koszul_rank": 8730,
