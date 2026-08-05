@@ -1,0 +1,65 @@
+name: xu-gnang-source-acquisition
+
+on:
+  push:
+    branches:
+      - research/xu-gnang-fulltext-reconciliation
+    paths:
+      - .github/workflows/xu_gnang_source_acquisition.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download and inspect arXiv source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/xu-gnang/source /tmp/xu-gnang/output
+          curl --fail --location --retry 5 --retry-all-errors \
+            --user-agent 'permanent-chow-rank-research/1.0 (source reconciliation)' \
+            --output /tmp/xu-gnang/output/arxiv_2311.05890_source \
+            'https://arxiv.org/src/2311.05890'
+          sha256sum /tmp/xu-gnang/output/arxiv_2311.05890_source \
+            | tee /tmp/xu-gnang/output/SHA256SUMS.txt
+          file /tmp/xu-gnang/output/arxiv_2311.05890_source \
+            | tee /tmp/xu-gnang/output/FILE_TYPE.txt
+          python - <<'PY'
+          from __future__ import annotations
+          import gzip
+          import shutil
+          import tarfile
+          from pathlib import Path
+
+          archive = Path('/tmp/xu-gnang/output/arxiv_2311.05890_source')
+          out = Path('/tmp/xu-gnang/source')
+          try:
+              with tarfile.open(archive, mode='r:*') as tf:
+                  tf.extractall(out, filter='data')
+          except tarfile.ReadError:
+              with gzip.open(archive, 'rb') as src, (out / 'main.tex').open('wb') as dst:
+                  shutil.copyfileobj(src, dst)
+          PY
+          find /tmp/xu-gnang/source -type f -printf '%P\t%s\n' \
+            | sort | tee /tmp/xu-gnang/output/SOURCE_FILE_MANIFEST.tsv
+          find /tmp/xu-gnang/source -type f \( -name '*.tex' -o -name '*.bib' -o -name '*.sty' \) \
+            -print0 | sort -z | xargs -0 -r sha256sum \
+            > /tmp/xu-gnang/output/EXTRACTED_TEXT_SHA256SUMS.txt
+          cp -a /tmp/xu-gnang/source /tmp/xu-gnang/output/extracted_source
+          grep -RInE 'row[- ]homogeneous|Chow[- ]decomposition|Glynn|Definition|Theorem|Proposition' \
+            /tmp/xu-gnang/source \
+            > /tmp/xu-gnang/output/KEYWORD_HITS.txt || true
+
+      - name: Upload immutable source packet
+        uses: actions/upload-artifact@v4
+        with:
+          name: xu-gnang-arxiv-2311.05890-source
+          path: /tmp/xu-gnang/output
+          if-no-files-found: error
+          retention-days: 30
