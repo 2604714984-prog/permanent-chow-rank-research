@@ -93,3 +93,7 @@ jobs:
         run: |
           python scripts/glynn_family_rigidity_audit.py \
             --json /tmp/glynn_family_rigidity_audit.json
+      - name: Replay n6 one-defect sign-family rigidity
+        run: |
+          python scripts/n6_one_defect_sign_rigidity_audit.py \
+            --json /tmp/n6_one_defect_sign_rigidity_audit.json
