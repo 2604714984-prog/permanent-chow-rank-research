@@ -1,26 +1,26 @@
-# Literature gate for the `n=6` sign-family pilot
+# Literature and implementation boundary for the `n=6` sign families
 
 ## Status
 
-`RESOLVED_WITH_WITHDRAWN_THEOREM_BOUNDARY`.
+`LITERATURE_RECONCILED`, `ONE_DEFECT_PILOT_COMPLETE`.
 
-The full-text reconciliation required by the former gate is complete. The
-result is recorded in
+The full-text Xu--Gnang reconciliation is complete, and the first authorized
+finite sign-family experiment has been replaced by an exact theorem. The two
+results are recorded in
 
 ```text
 docs/xu_gnang_v2_reconciliation.md
+docs/n6_one_defect_sign_rigidity.md
 ```
 
-The finite sign-family pilot may resume only as a restricted exact diagnostic.
 No novelty claim and no unrestricted Chow-rank inference is authorized.
-
 The current interval remains
 
 \[
 25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
-## 1. Source-bound review
+## 1. Source-bound literature result
 
 The reviewed paper is
 
@@ -28,8 +28,8 @@ The reviewed paper is
   arXiv:2311.05890.
 
 The mathematical full text reviewed is arXiv version 2, submitted on
-2025-01-04. The later version 3, submitted on 2025-03-24, is withdrawn with
-the arXiv comment
+2025-01-04. Version 3, submitted on 2025-03-24, is withdrawn with the arXiv
+comment
 
 ```text
 Incorrect statement Thm 4.2
@@ -55,9 +55,7 @@ GitHub Actions run `30987720554` acquired the packet. Artifact
 sha256:dd9d2fa57cfc62b332e496e8613a989184eb3811f494c44e8f4663c0994feade
 ```
 
-## 2. Exact family defined in the paper
-
-Version 2 defines a degree-one row-homogeneous term as
+Version 2 studies the row-oriented tensor-rank family
 
 \[
 \prod_{i=0}^{n-1}
@@ -67,56 +65,21 @@ Version 2 defines a degree-one row-homogeneous term as
 \qquad b_{ij}\in\mathbb C.
 \]
 
-Thus the paper studies the tensor-rank model in which each factor is supported
-on one row. This is a strict subfamily of unrestricted Chow terms.
+Its Theorem 4.2 is the withdrawn claim that Glynn is optimal in that family.
+The theorem is not used as a repository dependency, and the displayed v2 proof
+contains unsupported projection-invariance, product-tensor-dependence, and
+automorphism-rigidity implications.
 
-The relevant source locations are:
+## 2. Exact family diagram
 
-```text
-Definition 3.1: TeX lines 330--337
-row-homogeneous decomposition format and Lemma 4.1: lines 766--905
-Theorem 4.2: lines 977--1099
-parametrization subsection: lines 1199 onward
-```
+Use the classes
 
-## 3. Withdrawal consequence
-
-Theorem 4.2 in version 2 states
-
-```text
-Glynn's row-homogeneous Chow-decomposition is rank revealing.
-```
-
-This is exactly the theorem identified as incorrect by the version-3
-withdrawal comment. It is not used as a theorem input in this repository.
-
-The displayed version-2 proof also contains unsupported implications,
-including:
-
-1. constructing projections toward the coefficient spaces of a hypothetical
-   shorter decomposition without proving that the target polynomial is
-   invariant under those projections;
-2. inferring linear dependence of product tensors from the number of vectors
-   used in each separate factor space; and
-3. inferring linear equivalence from equality of automorphism groups without a
-   rigidity theorem.
-
-The reconciliation note gives exact counterexamples to the second implication
-and records the claim boundary. The repository does not assert that the
-withdrawn theorem is false as an abstract statement; it records that the cited
-paper does not establish it.
-
-## 4. Family inclusion diagram
-
-Use the following classes:
-
-- `F_uniform`: the 32 column-uniform Glynn sign terms from G-020;
+- `F_uniform`: the 32 fixed column-uniform Glynn sign terms;
 - `F_one_defect`: five columns use one normalized sign vector and one column
-  may use another;
+  may use a second;
 - `F_column_sign`: arbitrary normalized column-oriented sign matrices;
 - `F_row_sign`: the transposed row-oriented sign family;
-- `F_row_homogeneous_XG`: arbitrary complex row-homogeneous terms from the
-  paper; and
+- `F_row_homogeneous_XG`: arbitrary complex row-homogeneous terms; and
 - unrestricted Chow terms.
 
 The exact relations are
@@ -130,49 +93,89 @@ F_uniform
     proper subset unrestricted Chow terms
 ```
 
-`F_column_sign` is not literally closed under transposition. Transposition is a
-bijection to the separately defined row-oriented family. Since the permanent
-is transpose invariant, existence and term count transfer between those two
-restricted decomposition problems.
+Transposition is a bijection between the separately defined column- and
+row-oriented sign families; it is not an internal symmetry of the column-only
+ansatz.
 
-## 5. Classification of G-020
+## 3. Completed one-defect theorem
 
-G-020 proves that the 32 fixed Glynn sign products are linearly independent
-and that the permanent's unique expression in their own span uses all 32 with
-nonzero coefficient.
+For `n=6`, the normalized one-defect family has
 
-It does not prove optimality among all row-sign terms or all row-homogeneous
-terms. Its correct classification is
+```text
+indexed entries with uniform duplicates=6144
+unique terms=5984
+linear-span dimension=987
+```
+
+The exact theorem is
+
+\[
+\boxed{
+\operatorname{OneDefectSignRank}(\operatorname{perm}_6)=32.
+}
+\]
+
+The proof Fourier-decomposes the family into 32 row-parity blocks. The additive
+feature ranks are 31 on each of the 31 non-target blocks and 26 on the target
+permutation block. Nonzero integer minors certify every rank lower bound. A
+two-case Fourier-support argument then forces at least one summand for each of
+the 32 base sign labels; Glynn supplies 32.
+
+Consequently
+
+```text
+ONE_DEFECT_DECOMPOSITION_WITH_AT_MOST_25_TERMS=IMPOSSIBLE
+ONE_DEFECT_DECOMPOSITION_WITH_AT_MOST_31_TERMS=IMPOSSIBLE
+ONE_DEFECT_MINIMUM=32
+```
+
+This is a restricted-family theorem. It does not imply row-homogeneous,
+tensor-rank, or unrestricted Chow-rank optimality.
+
+## 4. Classification of G-020 and N6-019
 
 ```text
 G-020=INDEPENDENT_STRICT_SUBFAMILY_RIGIDITY
+N6-019=EXACT_ONE_DEFECT_RESTRICTED_FAMILY_THEOREM
 ROW_HOMOGENEOUS_OPTIMALITY=NOT_PROVED
 NOVELTY_RELATIVE_TO_ALL_LITERATURE=NOT_ESTABLISHED
 ```
 
-## 6. Cleared implementation boundary
+G-020 concerns the span of 32 fixed terms. N6-019 strictly enlarges the term
+family to 5,984 terms and proves the same minimum support 32 inside that larger
+family.
 
-The first resumed pilot must use `F_one_defect`, not the full normalized
-`F_column_sign` family. It may compute only:
+## 5. Next implementation gate
 
-1. the exact span dimension;
-2. exact permanent membership;
-3. whether a representation with at most 25 terms is actually found within the
-   finite family; and
-4. independently reconstructible symmetry orbits.
+The full `F_column_sign` family contains `32^6=2^30` normalized indexed terms.
+A direct enumeration, broad orbit registry, SAT model, nonlinear solver, or
+manager/dispatcher layer is not authorized.
 
-The pilot is a falsification and construction search. Failure to find a short
-representation is not a Chow-rank lower bound. No broad nonlinear solver,
-SAT/DRAT architecture, registry, manager, dispatcher, or unrestricted orbit
-framework is authorized.
+Further work may proceed only after a compact theorem reduces the next family.
+The preferred next question is the **two-defect analytical ceiling**:
 
-## 7. Decision
+- four columns use one base sign vector;
+- at most two designated columns may use independent defect sign vectors;
+- Fourier blocks become pairwise-interaction function spaces on the parity
+  fibers.
+
+Before executable development, derive an exact block-rank formula or a small
+set of integer-minor certificates. Stop if the block kernels no longer admit a
+uniform description or if the finite interface grows beyond independent
+replay.
+
+A failure to find a short representation in any restricted sign family is not
+a lower bound for unrestricted Chow rank.
+
+## 6. Current decision
 
 ```text
 FULL_TEXT_RECONCILIATION=COMPLETE
 XU_GNANG_THEOREM_4_2=WITHDRAWN_IN_V3
 XU_GNANG_THEOREM_4_2_USED_AS_DEPENDENCY=false
-N6_SIGN_PILOT_REDUNDANT_BY_XU_GNANG=false
-N6_SIGN_PILOT_MAY_RESUME_AS_RESTRICTED_DIAGNOSTIC=true
+ONE_DEFECT_SIGN_THEOREM=EXACT_32
+FULL_COLUMN_SIGN_FAMILY=OPEN
+ROW_HOMOGENEOUS_TENSOR_RANK=OPEN
+UNRESTRICTED_CHOW_INTERVAL=25..32
 NOVELTY_CLAIM=FORBIDDEN
 ```
