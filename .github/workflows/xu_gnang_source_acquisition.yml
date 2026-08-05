@@ -38,6 +38,7 @@ jobs:
               "$url" || true)"
             printf '%s\t%s\t%s\n' "$name" "$status" "$url" \
               | tee -a "$out/FETCH_RESULTS.tsv"
+            printf '%s\n' "$status" > "$out/${name}.status"
             if [[ ! -s "$out/${name}" ]]; then
               rm -f "$out/${name}"
             fi
@@ -53,12 +54,6 @@ jobs:
           fetch_candidate arxiv_txt_raw.txt 'https://arxiv-txt.org/raw/pdf/2311.05890'
           fetch_candidate jina_reader.txt 'https://r.jina.ai/https://arxiv.org/pdf/2311.05890'
           fetch_candidate source_browser.zip 'https://arxiv-source-browser.pref.tools/api/api.php?action=source&id=2311.05890'
-
-          find "$out" -maxdepth 1 -type f -printf '%f\t%s\n' \
-            | sort > "$out/FILE_MANIFEST.tsv"
-          find "$out" -maxdepth 1 -type f -print0 \
-            | sort -z | xargs -0 sha256sum > "$out/SHA256SUMS.txt"
-          file "$out"/* > "$out/FILE_TYPES.txt" || true
 
           pdf=''
           for candidate in arxiv_pdf arxiv_pdf_dot_pdf export_arxiv_pdf; do
@@ -78,7 +73,7 @@ jobs:
             fi
           fi
 
-          if [[ -f "$out/source_browser.zip" ]] && file "$out/source_browser.zip" | grep -qi zip; then
+          if [[ -f "$out/source_browser.zip" ]] && head -c 4 "$out/source_browser.zip" | grep -q $'PK\003\004'; then
             mkdir -p "$out/source_browser_extracted"
             unzip -q "$out/source_browser.zip" -d "$out/source_browser_extracted"
           fi
@@ -99,6 +94,13 @@ jobs:
               full_text_found=true
             fi
           done
+
+          find "$out" -maxdepth 1 -type f -printf '%f\t%s\n' \
+            | sort > "$out/FILE_MANIFEST.tsv"
+          find "$out" -maxdepth 1 -type f -print0 \
+            | sort -z | xargs -0 sha256sum > "$out/SHA256SUMS.txt"
+          file "$out"/* > "$out/FILE_TYPES.txt" || true
+
           if [[ "$full_text_found" != true ]]; then
             echo 'No usable full text was recovered.' >&2
             exit 1
