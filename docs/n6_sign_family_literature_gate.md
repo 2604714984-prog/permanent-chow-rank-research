@@ -8,6 +8,7 @@ ONE_DEFECT_THEOREM=COMPLETE
 TWO_DEFECT_BLOCK_DIAGNOSTIC=COMPLETE
 FIRST_AGGREGATE_ATOMIC_RANK=COMPLETE
 SIXTEEN_BASE_AGGREGATE_CONSTRUCTION=COMPLETE
+SIXTEEN_BASE_ATOMIC_RANK=EXACT_36
 GLOBAL_TWO_DEFECT_TERM_SUPPORT=OPEN
 ```
 
@@ -27,6 +28,7 @@ docs/n6_one_defect_sign_rigidity.md
 docs/n6_two_defect_sign_block_diagnostic.md
 docs/n6_two_defect_aggregate_atomic_rank.md
 docs/n6_two_defect_sixteen_base_aggregate.md
+docs/n6_two_defect_separator_rank36.md
 ```
 
 ## 1. Xu--Gnang provenance and claim boundary
@@ -132,7 +134,7 @@ That aggregate assignment is therefore closed as a constructive failure. The
 number 744 is not a lower bound for another assignment or for the global
 two-defect family.
 
-## 6. N6-022: an exact 16-base aggregate construction
+## 6. N6-022 and N6-023: exact cost of the 16-base assignment
 
 Let
 
@@ -141,17 +143,15 @@ g(r)=n_4(r)n_5(r),
 \]
 
 where `n_i(r)` is the number of occurrences of row value `i` in the assignment
-`r`.
-
-Then
+`r`. Then
 
 \[
 g|_{X_{31}}=1,
 \qquad
-g|_{X_7}=0.
+g|_{X_7}=0,
 \]
 
-Consequently
+and
 
 \[
 W_a
@@ -160,52 +160,100 @@ W_a
 \]
 
 is an exact aggregate representation of the permanent. It is nonzero exactly
-when
-
-\[
-\chi_{24}(a)=-1,
-\]
-
-so the nonzero bases are precisely
+on the 16 bases
 
 ```text
 8,9,10,11,12,13,14,15,
 16,17,18,19,20,21,22,23.
 ```
 
-Thus the current exact aggregate-support upper bound is 16 rather than 24.
-No proof that 16 is minimum is claimed.
-
-For one fixed base, the separator satisfies the exact fail-closed window
+N6-022 proved aggregate support at most 16 and the preliminary window
 
 \[
 31\le\rho_2(g)\le36.
 \]
 
-The lower bound restricts row values to `{0,4,5}`. Each of the 15 pure pair
-blocks requires at least two atoms, and the unique two-atom local realization
-forces a nonzero lower-order ANOVA contribution, ruling out a 30-atom global
-expression. The upper bound uses 30 pair atoms and six one-defect corrections.
-
-Therefore the actual cost of this fixed 16-base assignment lies in
+N6-023 closes the interval:
 
 \[
-496\le\text{cost}\le576.
+\boxed{\rho_2(g)=36.}
 \]
 
-It improves the explicit 744-term assignment but remains far above Glynn's 32
-terms.
+### Retraction step
+
+The row retraction
+
+```text
+1,2,3 -> 0
+0,4,5 fixed
+```
+
+fixes `g` and sends every normalized sign label `v` to `v & 24`. It therefore
+reduces the full fixed-base dictionary without increasing support to the four
+labels
+
+```text
+0, 8, 16, 24.
+```
+
+Since the restricted dictionary is a subdictionary of the full one, the two
+atomic ranks are equal.
+
+### Exact lower-bound interface
+
+The nine restricted nonconstant pair atoms have 243 exact support-affine
+spaces over `Q`. Exact affine containment compresses 227 of the 231 spaces of
+support at least four to a size-two or size-three pair representation plus no
+more ordinary atoms than the saved support. Four exceptional spaces remain.
+After normalization the complete global modification dictionary contains
+
+```text
+7 cost-one point bundle types
+2 cost-two point bundle types
+2 cost-three affine bundle types
+```
+
+on each of the 15 column pairs.
+
+The unique size-two realization on all 15 pairs starts with 30 pair atoms and
+requires six ordinary corrections. Every way to spend at most five additional
+atoms is then exhausted exactly. The largest direct layer has 3,277,365
+configurations; the 50,471,421 five-bundle layer is covered by an exact
+meet-in-the-middle certificate. No support at most 35 exists.
+
+The existing 36-atom construction supplies the matching upper bound. Thus the
+specific 16-base assignment has exact actual cost
+
+\[
+16\cdot36=\boxed{576}.
+\]
+
+This closes that construction as a route to a decomposition with at most 25
+terms. It does not prove that 16 is the minimum aggregate support or that every
+two-defect aggregate assignment costs at least 576.
 
 ## 7. Current interpretation
 
-The sign route has now established two distinct facts:
+The sign route has established:
 
-1. aggregate support can be reduced substantially, from 32 to 24 and then 16;
-2. low aggregate support does not imply low actual term support.
+1. the fixed uniform and one-defect families remain rigid at 32 terms;
+2. aggregate support can fall below 32, first to 24 and then to 16;
+3. the two explicit low-base assignments have exact actual costs 744 and 576;
+4. optimizing aggregate support alone is therefore not a useful proxy for
+   actual sign-term support.
 
-The first N6-020 separator had exact fixed-assignment cost 744. The second has
-cost between 496 and 576. Therefore aggregate-support optimization alone is not
-a plausible path to a sub-32 decomposition.
+The two explicit separator constructions are now closed constructive failures.
+The unresolved object is the complete vector-valued assignment
+
+\[
+a\longmapsto W_a
+\]
+
+subject to all 32 Fourier-fiber equations, with objective
+
+\[
+\sum_a\rho_2(W_a).
+\]
 
 ## 8. Next implementation gate
 
@@ -213,16 +261,16 @@ The complete normalized column-sign family has `32^6=2^30` indexed terms. A
 direct dictionary enumeration, generic sparse optimizer, SAT architecture,
 orbit registry, manager, or dispatcher is not authorized.
 
-Further work must reduce to one of the following compact exact interfaces:
+Further sign-family work requires a compact exact theorem, preferably:
 
-1. close the small fixed-base interval `31..36` for `rho_2(g)`;
-2. derive a joint invariant trading aggregate support against fixed-base
-   atomic complexity; or
-3. construct a different aggregate assignment with a rigorously small actual
-   term count, not merely a small base count.
+1. a vector-valued lower bound on `sum_a rho_2(W_a)` derived directly from the
+   Fourier-fiber constraints; or
+2. a symmetry-reduced aggregate assignment with a rigorously reconstructed
+   actual support below 32.
 
-Fail closed if the next step requires a broad search without a theorem that
-makes the search independently replayable.
+Another separator with a small base count but no simultaneous atomic-cost
+control is not enough. Fail closed if the next step requires a broad search
+without a theorem that makes the interface independently replayable.
 
 ## 9. Current decision
 
@@ -232,9 +280,9 @@ XU_GNANG_THEOREM_4_2_USED_AS_DEPENDENCY=false
 ONE_DEFECT_SIGN_RANK=32
 TWO_DEFECT_PARITY_BLOCKS=EXACT
 FIRST_FIXED_AGGREGATE_COST=744
-NEW_AGGREGATE_BASE_SUPPORT_UPPER_BOUND=16
-NEW_FIXED_BASE_ATOMIC_RANK=31..36
-NEW_FIXED_ASSIGNMENT_COST=496..576
+SECOND_AGGREGATE_BASE_SUPPORT=16
+SECOND_FIXED_BASE_ATOMIC_RANK=36
+SECOND_FIXED_ASSIGNMENT_COST=576
 SIXTEEN_BASE_MINIMALITY=NOT_PROVED
 GLOBAL_TWO_DEFECT_MINIMUM=OPEN
 FULL_COLUMN_SIGN_FAMILY=OPEN
