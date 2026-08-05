@@ -87,7 +87,7 @@ class N6SecondKoszulHomologyTests(unittest.TestCase):
         self.assertEqual(decision["base_rank_ratio"], "no_improvement_over_15")
         self.assertEqual(
             decision["scalar_homology_dimension"],
-            "rejected_as_a_standalone_lower_26_invariant",
+            "rejected_as_a_monotone_upper_bound_route_for_lower_26",
         )
         self.assertEqual(
             decision["multigraded_or_representation_structure"],
