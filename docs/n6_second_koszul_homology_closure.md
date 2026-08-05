@@ -319,9 +319,19 @@ h_{2,4}(F_6)=465>450=h_{2,4}(\operatorname{perm}_6).
 \]
 
 The polynomial `F_6` is explicitly represented by six Chow terms. No claim
-about its minimal Chow rank is required. Its existence already shows that a
-universal bound based only on scalar `h_{2,4}` cannot exclude even six-term
-representations and therefore cannot prove lower 26.
+about its minimal Chow rank is required.
+
+Let `M(r)` be any universal upper bound for scalar `h_{2,4}` on forms
+represented by at most `r` Chow terms. The example forces
+
+\[
+M(6)\ge465>450=h_{2,4}(\operatorname{perm}_6).
+\]
+
+Therefore the standard comparison `h_{2,4}(f)>M(r)` cannot prove even that
+`perm_6` needs more than six terms, much less 26. This does not rule out a
+new exact-value classification based on the scalar integer alone; no such
+classification theorem is currently available.
 
 ## 5. Deterministic replay
 
@@ -361,20 +371,21 @@ tests/test_n6_second_koszul_homology.py
 ```text
 OUTPUT_DEGREE_TWO_RANK_WINDOW=CLOSED_EXACTLY
 BASE_RANK_RATIO=15_NO_IMPROVEMENT
-SCALAR_HOMOLOGY_DIMENSION=REJECTED_AS_STANDALONE_LOWER_26_ROUTE
+SCALAR_HOMOLOGY_UPPER_BOUND=REJECTED_FOR_LOWER_26
 MULTIGRADED_OR_REPRESENTATION_STRUCTURE=OPEN_NOT_PROMOTED
 ROUTE_SELECTED=NONE
 ```
 
 The exact homology dimension is mathematically useful: it explains the former
-rank gap and identifies its apolar origin. It is not a viable scalar lower-bound
-invariant. No large representation computation or new state tree is authorized
-from this result alone.
+rank gap and identifies its apolar origin. It is not a viable monotone scalar
+upper-bound invariant. No large representation computation or new state tree is
+authorized from this result alone.
 
 ## 7. Hidden assumptions and strongest objection
 
 The rejected premise was that the size of the higher-Koszul homology should be
-small or nearly additive on short Chow sums. The family (4.1) disproves that
+small or nearly additive on short Chow sums, so that a universal scalar ceiling
+would separate the permanent from low-rank sums. The family (4.1) disproves that
 premise exactly.
 
 The strongest objection is that the permanent's 450-dimensional homology is
