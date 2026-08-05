@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download and inspect full-text candidates
+      - name: Download and inspect versioned full-text candidates
         shell: bash
         run: |
           set -euo pipefail
@@ -44,19 +44,21 @@ jobs:
             fi
           }
 
-          fetch_candidate arxiv_abs.html 'https://arxiv.org/abs/2311.05890'
-          fetch_candidate arxiv_pdf 'https://arxiv.org/pdf/2311.05890'
-          fetch_candidate arxiv_pdf_dot_pdf 'https://arxiv.org/pdf/2311.05890.pdf'
-          fetch_candidate export_arxiv_pdf 'https://export.arxiv.org/pdf/2311.05890'
-          fetch_candidate arxiv_source 'https://arxiv.org/src/2311.05890'
-          fetch_candidate arxiv_eprint 'https://arxiv.org/e-print/2311.05890'
-          fetch_candidate ar5iv.html 'https://ar5iv.labs.arxiv.org/html/2311.05890'
-          fetch_candidate arxiv_txt_raw.txt 'https://arxiv-txt.org/raw/pdf/2311.05890'
-          fetch_candidate jina_reader.txt 'https://r.jina.ai/https://arxiv.org/pdf/2311.05890'
-          fetch_candidate source_browser.zip 'https://arxiv-source-browser.pref.tools/api/api.php?action=source&id=2311.05890'
+          fetch_candidate arxiv_abs_current.html 'https://arxiv.org/abs/2311.05890'
+          fetch_candidate arxiv_abs_v2.html 'https://arxiv.org/abs/2311.05890v2'
+          fetch_candidate arxiv_abs_v1.html 'https://arxiv.org/abs/2311.05890v1'
+          fetch_candidate arxiv_pdf_v2 'https://arxiv.org/pdf/2311.05890v2'
+          fetch_candidate arxiv_pdf_v2_dot_pdf 'https://arxiv.org/pdf/2311.05890v2.pdf'
+          fetch_candidate export_arxiv_pdf_v2 'https://export.arxiv.org/pdf/2311.05890v2'
+          fetch_candidate arxiv_source_v2 'https://arxiv.org/src/2311.05890v2'
+          fetch_candidate arxiv_eprint_v2 'https://arxiv.org/e-print/2311.05890v2'
+          fetch_candidate ar5iv_v2.html 'https://ar5iv.labs.arxiv.org/html/2311.05890v2'
+          fetch_candidate ar5iv_org_v2.html 'https://ar5iv.org/html/2311.05890v2'
+          fetch_candidate jina_reader_v2.txt 'https://r.jina.ai/https://arxiv.org/pdf/2311.05890v2'
+          fetch_candidate source_browser_v2.zip 'https://arxiv-source-browser.pref.tools/api/api.php?action=source&id=2311.05890v2'
 
           pdf=''
-          for candidate in arxiv_pdf arxiv_pdf_dot_pdf export_arxiv_pdf; do
+          for candidate in arxiv_pdf_v2 arxiv_pdf_v2_dot_pdf export_arxiv_pdf_v2; do
             if [[ -f "$out/$candidate" ]] && head -c 5 "$out/$candidate" | grep -q '%PDF'; then
               pdf="$out/$candidate"
               break
@@ -64,33 +66,39 @@ jobs:
           done
 
           if [[ -n "$pdf" ]]; then
-            cp "$pdf" "$out/2311.05890.pdf"
+            cp "$pdf" "$out/2311.05890v2.pdf"
             if command -v pdfinfo >/dev/null 2>&1; then
-              pdfinfo "$out/2311.05890.pdf" > "$out/PDF_INFO.txt" || true
+              pdfinfo "$out/2311.05890v2.pdf" > "$out/PDF_INFO.txt" || true
             fi
             if command -v pdftotext >/dev/null 2>&1; then
-              pdftotext -layout "$out/2311.05890.pdf" "$out/2311.05890.txt"
+              pdftotext -layout "$out/2311.05890v2.pdf" "$out/2311.05890v2.txt"
             fi
           fi
 
-          if [[ -f "$out/source_browser.zip" ]] && head -c 4 "$out/source_browser.zip" | grep -q $'PK\003\004'; then
-            mkdir -p "$out/source_browser_extracted"
-            unzip -q "$out/source_browser.zip" -d "$out/source_browser_extracted"
+          if [[ -f "$out/source_browser_v2.zip" ]] && head -c 4 "$out/source_browser_v2.zip" | grep -q $'PK\003\004'; then
+            mkdir -p "$out/source_browser_v2_extracted"
+            unzip -q "$out/source_browser_v2.zip" -d "$out/source_browser_v2_extracted"
           fi
 
-          if [[ -f "$out/arxiv_source" ]] && file "$out/arxiv_source" | grep -Eqi 'gzip|tar archive'; then
-            mkdir -p "$out/arxiv_source_extracted"
-            tar -xf "$out/arxiv_source" -C "$out/arxiv_source_extracted" || true
+          if [[ -f "$out/arxiv_source_v2" ]] && file "$out/arxiv_source_v2" | grep -Eqi 'gzip|tar archive'; then
+            mkdir -p "$out/arxiv_source_v2_extracted"
+            tar -xf "$out/arxiv_source_v2" -C "$out/arxiv_source_v2_extracted" || true
           fi
 
-          grep -RInE 'row[- ]homogeneous|row homogeneous|Chow[- ]decomposition|Glynn|Definition|Theorem|Proposition' \
+          tmp_hits="$root/KEYWORD_HITS.tmp"
+          grep -RInE 'row[- ]homogeneous|row homogeneous|Chow[- ]decomposition|Glynn|Definition|Theorem|Proposition|Incorrect statement' \
             "$out" \
-            --exclude='*.pdf' --exclude='*.headers' \
-            > "$out/KEYWORD_HITS.txt" || true
+            --exclude='*.pdf' --exclude='*.headers' --exclude='KEYWORD_HITS.txt' \
+            > "$tmp_hits" || true
+          mv "$tmp_hits" "$out/KEYWORD_HITS.txt"
 
           full_text_found=false
-          for candidate in "$out/2311.05890.txt" "$out/arxiv_txt_raw.txt" "$out/jina_reader.txt" "$out/ar5iv.html"; do
-            if [[ -s "$candidate" ]] && grep -Eqi 'row[- ]homogeneous|row homogeneous' "$candidate"; then
+          for candidate in \
+            "$out/2311.05890v2.txt" \
+            "$out/jina_reader_v2.txt" \
+            "$out/ar5iv_v2.html" \
+            "$out/ar5iv_org_v2.html"; do
+            if [[ -s "$candidate" ]] && grep -Eqi 'Chow[-– ]rank|Product Rank|orbital bound' "$candidate"; then
               full_text_found=true
             fi
           done
@@ -102,14 +110,15 @@ jobs:
           file "$out"/* > "$out/FILE_TYPES.txt" || true
 
           if [[ "$full_text_found" != true ]]; then
-            echo 'No usable full text was recovered.' >&2
+            echo 'No usable versioned full text was recovered.' >&2
             exit 1
           fi
 
       - name: Upload immutable source packet
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: xu-gnang-arxiv-2311.05890-source
+          name: xu-gnang-arxiv-2311.05890-versioned-fulltext
           path: /tmp/xu-gnang/output
           if-no-files-found: error
           retention-days: 30
