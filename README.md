@@ -42,6 +42,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` fixed-six lower-25 closure | proof draft complete; primary and independent arithmetic replayed | fixing six terms in a hypothetical 24-term decomposition gives `40<=b<=64`; vector-valued Macaulay growth and block-Sylvester exclude every state, so `ChowRank(perm_6)>=25` |
 | `n=6` lower-26 fixed-count diagnostic | computation replayed; no route selected | `q=6,7,8` leave 327, 355, and 635 states after central pruning, so the central first-Koszul fixed-count route is suspended |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the Glynn sign subfamily still requires all 32 terms |
+| `n=6` second-Koszul homology closure | proof draft complete; computation replayed; diagnostic only | the output-degree-two ranks are exactly `127125` for `perm_6` and `8730` for one independent Chow term; a six-term common-factor family has scalar homology `465>450`, rejecting monotone scalar homology upper bounds for lower 26 |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
@@ -102,6 +103,7 @@ python scripts/n6_fixed_six_lower25_audit.py
 python scripts/n6_fixed_six_lower25_independent_audit.py
 python scripts/n6_lower26_fixed_q_diagnostic.py
 python scripts/n6_second_koszul_rank_audit.py
+python scripts/n6_second_koszul_homology_audit.py
 python scripts/glynn_family_rigidity_audit.py
 ```
 
@@ -115,9 +117,11 @@ The lower-25 proof does not mechanically reuse that state table. Under a hypothe
 
 The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings, a dimension-only second shadow is vacuous at those fixed counts, and the column-uniform Glynn sign family cannot be shortened below 32 terms. These are route-closing results, not a lower-26 theorem.
 
+The output-degree-two homology closure identifies the middle higher-Koszul homology with `Tor_2(A_f,k)_4`. The Alper--Rowlands formula gives dimension 450 for `perm_6`, while a six-factor Chow complete intersection gives 15. Hence the exact ranks are `127125` and `8730`, still yielding ratio 15. An independently reconstructed common-factor family has scalar homology dimensions `15,55,120,210,325,465` for one through six terms, so monotone scalar homology upper bounds cannot separate `perm_6` from low-term sums. Multigraded and representation-theoretic refinements remain open.
+
 The vector-valued Macaulay audit checks 3,996 distinct colored quadratic weights, all six-part successor inequalities through total dimension 16, and all 2,825 subspaces of a small divided-power `F_2` model. The finite-field calculation is a deterministic counterexample search only; it is not used to transfer an equality to characteristic zero.
 
-The first higher-wedge audit splits the `p=2` matrices by exact row-column torus weight and performs sparse rank over `F_1000003`. A modular rank is used only as a characteristic-zero lower bound. At output degree two, the repository records a rank window rather than an unsupported equality.
+The earlier first higher-wedge audit split the `p=2` matrices by exact row-column torus weight and performed sparse rank over `F_1000003`. Its output-degree-two modular value was used only as a characteristic-zero lower bound. The later homology theorem supplies the exact characteristic-zero equality and supersedes the former rank window.
 
 The extremal six-plane theorem remains an independent structural result. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components.
 

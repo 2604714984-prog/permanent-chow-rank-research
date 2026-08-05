@@ -1,0 +1,99 @@
+{
+  "certified_integer_rank_ratio_lower_bound": 15,
+  "claim_boundary": "The exact permanent homology dimension uses the published beta_2,4 formula for the apolar algebra. The common-factor rank formula is proved from coupled derivative-space isolation and explicit pairwise image intersections. The six-term example rejects only monotone upper-bound comparisons based on scalar homology dimension; it does not rule out exact-value, multigraded, representation-theoretic, or quotient-coupled homology obstructions.",
+  "common_factor_family": {
+    "definition": "T_i=c*product(B_i), where the five-element B_i are pairwise disjoint in the 36-dimensional ambient variable space.",
+    "pairwise_image_intersection_dimension": 25,
+    "rows": [
+      {
+        "active_variable_count": 6,
+        "exact_characteristic_zero_second_koszul_rank": 8730,
+        "exact_quadratic_homology_dimension": 15,
+        "modular_second_koszul_rank": 8730,
+        "preceding_first_koszul_rank": 705,
+        "second_derivative_dimension": 15,
+        "second_koszul_domain_dimension": 9450,
+        "term_count": 1
+      },
+      {
+        "active_variable_count": 11,
+        "exact_characteristic_zero_second_koszul_rank": 17435,
+        "exact_quadratic_homology_dimension": 55,
+        "modular_second_koszul_rank": 17435,
+        "preceding_first_koszul_rank": 1410,
+        "second_derivative_dimension": 30,
+        "second_koszul_domain_dimension": 18900,
+        "term_count": 2
+      },
+      {
+        "active_variable_count": 16,
+        "exact_characteristic_zero_second_koszul_rank": 26115,
+        "exact_quadratic_homology_dimension": 120,
+        "modular_second_koszul_rank": 26115,
+        "preceding_first_koszul_rank": 2115,
+        "second_derivative_dimension": 45,
+        "second_koszul_domain_dimension": 28350,
+        "term_count": 3
+      },
+      {
+        "active_variable_count": 21,
+        "exact_characteristic_zero_second_koszul_rank": 34770,
+        "exact_quadratic_homology_dimension": 210,
+        "modular_second_koszul_rank": 34770,
+        "preceding_first_koszul_rank": 2820,
+        "second_derivative_dimension": 60,
+        "second_koszul_domain_dimension": 37800,
+        "term_count": 4
+      },
+      {
+        "active_variable_count": 26,
+        "exact_characteristic_zero_second_koszul_rank": 43400,
+        "exact_quadratic_homology_dimension": 325,
+        "modular_second_koszul_rank": 43400,
+        "preceding_first_koszul_rank": 3525,
+        "second_derivative_dimension": 75,
+        "second_koszul_domain_dimension": 47250,
+        "term_count": 5
+      },
+      {
+        "active_variable_count": 31,
+        "exact_characteristic_zero_second_koszul_rank": 52005,
+        "exact_quadratic_homology_dimension": 465,
+        "modular_second_koszul_rank": 52005,
+        "preceding_first_koszul_rank": 4230,
+        "second_derivative_dimension": 90,
+        "second_koszul_domain_dimension": 56700,
+        "term_count": 6
+      }
+    ]
+  },
+  "literature_source": {
+    "arxiv": "1709.09286",
+    "authors": "Jarod Alper and Rowan Rowlands",
+    "formula": "beta_2_4=2*C(n,2)*C(n,4)",
+    "result": "Proposition 5.4",
+    "title": "Syzygies of the apolar ideals of the determinant and permanent",
+    "verification_scope": "The formula is treated as an external theorem; this audit checks its n=6 arithmetic and the resulting ranks."
+  },
+  "permanent": {
+    "exact_characteristic_zero_second_koszul_rank": 127125,
+    "preceding_first_koszul_rank": 14175,
+    "quadratic_homology_dimension_beta_2_4": 450,
+    "second_koszul_domain_dimension": 141750
+  },
+  "prime": 1000003,
+  "route_decision": {
+    "base_rank_ratio": "no_improvement_over_15",
+    "multigraded_or_representation_structure": "open_not_promoted",
+    "output_degree_two_rank_window": "closed_exactly",
+    "route_selected": "none",
+    "scalar_homology_dimension": "rejected_as_a_monotone_upper_bound_route_for_lower_26"
+  },
+  "single_independent_chow_term": {
+    "exact_characteristic_zero_second_koszul_rank": 8730,
+    "preceding_first_koszul_rank": 705,
+    "quadratic_homology_dimension_beta_2_4": 15,
+    "second_koszul_domain_dimension": 9450
+  },
+  "status": "N6_SECOND_KOSZUL_HOMOLOGY_CLOSED"
+}
