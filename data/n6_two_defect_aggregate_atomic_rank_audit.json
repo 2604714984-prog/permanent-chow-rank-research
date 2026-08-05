@@ -1,0 +1,213 @@
+{
+  "aggregate_formula_certificate": {
+    "coefficient_type_histogram": {
+      "-2,0": 4,
+      "-2,2": 4,
+      "0,-2": 4,
+      "0,0": 8,
+      "0,2": 4,
+      "2,-2": 4,
+      "2,0": 4
+    },
+    "exact_actual_term_cost_for_this_aggregate_assignment": 744,
+    "nonconstant_aggregate_count": 16,
+    "nonzero_constant_aggregate_count": 8,
+    "zero_base_labels": [
+      0,
+      1,
+      6,
+      7,
+      24,
+      25,
+      30,
+      31
+    ]
+  },
+  "claim_boundary": "The rank-46 result is exact for the fixed-base separator f and 1-f. The total 744 is exact only for the explicit N6-020 base-aggregate assignment. Other aggregate assignments and the global two-defect minimum remain open.",
+  "exact_construction_certificate": {
+    "negative_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "one_minus_separator_assignment_checks": 46656,
+    "one_minus_separator_atomic_rank": 46,
+    "pair_atom_count": 45,
+    "positive_edge_graph": "K3,3 on {0,1,2}|{3,4,5}",
+    "positive_edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "separator_assignment_checks": 46656,
+    "separator_atomic_rank": 46,
+    "total_atom_count": 46,
+    "uniform_correction_for_f": "-1/8",
+    "uniform_correction_for_one_minus_f": "9/8"
+  },
+  "field": "characteristic zero",
+  "local_dictionary_certificate": {
+    "compatible_support_count": {
+      "1": 0,
+      "2": 0,
+      "3": 2
+    },
+    "exact_three_atom_types": [
+      {
+        "coefficient_matrix_rank": 3,
+        "coefficients": [
+          "1/4",
+          "1/4",
+          "-1/8"
+        ],
+        "lower_anova": [
+          "3/8",
+          "-1/4",
+          "-1/4",
+          "-1/4",
+          "-1/4"
+        ],
+        "support": [
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            6,
+            6
+          ]
+        ]
+      },
+      {
+        "coefficient_matrix_rank": 3,
+        "coefficients": [
+          "-1/4",
+          "-1/4",
+          "1/8"
+        ],
+        "lower_anova": [
+          "-3/8",
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "support": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            6
+          ]
+        ]
+      }
+    ],
+    "local_atom_count": 9,
+    "pure_target": [
+      [
+        "1/2",
+        "-1/2"
+      ],
+      [
+        "-1/2",
+        "1/2"
+      ]
+    ],
+    "restricted_nonconstant_sign_labels": [
+      2,
+      4,
+      6
+    ],
+    "restricted_rows": [
+      0,
+      2,
+      3
+    ]
+  },
+  "route_decision": {
+    "all_two_defect_decompositions_lower_bounded_by_744": false,
+    "broad_sparse_optimization_authorized": false,
+    "next_compact_question": "optimize the base-aggregate assignment itself, rather than decompressing the N6-020 separator formula",
+    "one_minus_separator_atomic_rank": 46,
+    "separator_atomic_rank": 46,
+    "specific_24_base_aggregate_formula_actual_term_cost": 744,
+    "specific_formula_can_yield_at_most_25_terms": false,
+    "two_defect_minimum_term_support": "open"
+  },
+  "separator_lower_bound_certificate": {
+    "forced_constant_from_45_pair_atoms": "9/8",
+    "forced_signed_edge_sum": 3,
+    "forty_five_atom_representation_possible": false,
+    "minimum_pair_atom_total": 45,
+    "minimum_pair_atoms_per_block": 3,
+    "pair_block_count": 15,
+    "separator_target_constant": "1",
+    "signed_edge_assignments_matching_all_unary_coefficients": 70
+  },
+  "source_formula": "N6-020 quadratic separator and 24-base aggregate representation",
+  "status": "N6_TWO_DEFECT_EXPLICIT_AGGREGATE_ATOMIC_RANK_COMPLETE"
+}
