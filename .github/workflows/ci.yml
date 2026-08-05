@@ -97,3 +97,5 @@ jobs:
         run: |
           python scripts/n6_one_defect_sign_rigidity_audit.py \
             --json /tmp/n6_one_defect_sign_rigidity_audit.json
+      - name: Replay independent n6 one-defect feature ranks
+        run: python scripts/n6_one_defect_sign_independent_audit.py
