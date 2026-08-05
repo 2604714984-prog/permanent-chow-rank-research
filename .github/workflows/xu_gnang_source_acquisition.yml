@@ -17,44 +17,92 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download and inspect arXiv source
+      - name: Download and inspect full-text candidates
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/xu-gnang/source /tmp/xu-gnang/output
-          curl --fail --location --retry 5 --retry-all-errors \
-            --user-agent 'permanent-chow-rank-research/1.0 (source reconciliation)' \
-            --output /tmp/xu-gnang/output/arxiv_2311.05890_source \
-            'https://arxiv.org/src/2311.05890'
-          sha256sum /tmp/xu-gnang/output/arxiv_2311.05890_source \
-            | tee /tmp/xu-gnang/output/SHA256SUMS.txt
-          file /tmp/xu-gnang/output/arxiv_2311.05890_source \
-            | tee /tmp/xu-gnang/output/FILE_TYPE.txt
-          python - <<'PY'
-          from __future__ import annotations
-          import gzip
-          import shutil
-          import tarfile
-          from pathlib import Path
+          root=/tmp/xu-gnang
+          out="$root/output"
+          mkdir -p "$out"
 
-          archive = Path('/tmp/xu-gnang/output/arxiv_2311.05890_source')
-          out = Path('/tmp/xu-gnang/source')
-          try:
-              with tarfile.open(archive, mode='r:*') as tf:
-                  tf.extractall(out, filter='data')
-          except tarfile.ReadError:
-              with gzip.open(archive, 'rb') as src, (out / 'main.tex').open('wb') as dst:
-                  shutil.copyfileobj(src, dst)
-          PY
-          find /tmp/xu-gnang/source -type f -printf '%P\t%s\n' \
-            | sort | tee /tmp/xu-gnang/output/SOURCE_FILE_MANIFEST.tsv
-          find /tmp/xu-gnang/source -type f \( -name '*.tex' -o -name '*.bib' -o -name '*.sty' \) \
-            -print0 | sort -z | xargs -0 -r sha256sum \
-            > /tmp/xu-gnang/output/EXTRACTED_TEXT_SHA256SUMS.txt
-          cp -a /tmp/xu-gnang/source /tmp/xu-gnang/output/extracted_source
-          grep -RInE 'row[- ]homogeneous|Chow[- ]decomposition|Glynn|Definition|Theorem|Proposition' \
-            /tmp/xu-gnang/source \
-            > /tmp/xu-gnang/output/KEYWORD_HITS.txt || true
+          fetch_candidate() {
+            local name="$1"
+            local url="$2"
+            local status
+            status="$(curl --location --retry 3 --retry-all-errors \
+              --user-agent 'permanent-chow-rank-research/1.0 (source reconciliation)' \
+              --silent --show-error \
+              --dump-header "$out/${name}.headers" \
+              --output "$out/${name}" \
+              --write-out '%{http_code}' \
+              "$url" || true)"
+            printf '%s\t%s\t%s\n' "$name" "$status" "$url" \
+              | tee -a "$out/FETCH_RESULTS.tsv"
+            if [[ ! -s "$out/${name}" ]]; then
+              rm -f "$out/${name}"
+            fi
+          }
+
+          fetch_candidate arxiv_abs.html 'https://arxiv.org/abs/2311.05890'
+          fetch_candidate arxiv_pdf 'https://arxiv.org/pdf/2311.05890'
+          fetch_candidate arxiv_pdf_dot_pdf 'https://arxiv.org/pdf/2311.05890.pdf'
+          fetch_candidate export_arxiv_pdf 'https://export.arxiv.org/pdf/2311.05890'
+          fetch_candidate arxiv_source 'https://arxiv.org/src/2311.05890'
+          fetch_candidate arxiv_eprint 'https://arxiv.org/e-print/2311.05890'
+          fetch_candidate ar5iv.html 'https://ar5iv.labs.arxiv.org/html/2311.05890'
+          fetch_candidate arxiv_txt_raw.txt 'https://arxiv-txt.org/raw/pdf/2311.05890'
+          fetch_candidate jina_reader.txt 'https://r.jina.ai/https://arxiv.org/pdf/2311.05890'
+          fetch_candidate source_browser.zip 'https://arxiv-source-browser.pref.tools/api/api.php?action=source&id=2311.05890'
+
+          find "$out" -maxdepth 1 -type f -printf '%f\t%s\n' \
+            | sort > "$out/FILE_MANIFEST.tsv"
+          find "$out" -maxdepth 1 -type f -print0 \
+            | sort -z | xargs -0 sha256sum > "$out/SHA256SUMS.txt"
+          file "$out"/* > "$out/FILE_TYPES.txt" || true
+
+          pdf=''
+          for candidate in arxiv_pdf arxiv_pdf_dot_pdf export_arxiv_pdf; do
+            if [[ -f "$out/$candidate" ]] && head -c 5 "$out/$candidate" | grep -q '%PDF'; then
+              pdf="$out/$candidate"
+              break
+            fi
+          done
+
+          if [[ -n "$pdf" ]]; then
+            cp "$pdf" "$out/2311.05890.pdf"
+            if command -v pdfinfo >/dev/null 2>&1; then
+              pdfinfo "$out/2311.05890.pdf" > "$out/PDF_INFO.txt" || true
+            fi
+            if command -v pdftotext >/dev/null 2>&1; then
+              pdftotext -layout "$out/2311.05890.pdf" "$out/2311.05890.txt"
+            fi
+          fi
+
+          if [[ -f "$out/source_browser.zip" ]] && file "$out/source_browser.zip" | grep -qi zip; then
+            mkdir -p "$out/source_browser_extracted"
+            unzip -q "$out/source_browser.zip" -d "$out/source_browser_extracted"
+          fi
+
+          if [[ -f "$out/arxiv_source" ]] && file "$out/arxiv_source" | grep -Eqi 'gzip|tar archive'; then
+            mkdir -p "$out/arxiv_source_extracted"
+            tar -xf "$out/arxiv_source" -C "$out/arxiv_source_extracted" || true
+          fi
+
+          grep -RInE 'row[- ]homogeneous|row homogeneous|Chow[- ]decomposition|Glynn|Definition|Theorem|Proposition' \
+            "$out" \
+            --exclude='*.pdf' --exclude='*.headers' \
+            > "$out/KEYWORD_HITS.txt" || true
+
+          full_text_found=false
+          for candidate in "$out/2311.05890.txt" "$out/arxiv_txt_raw.txt" "$out/jina_reader.txt" "$out/ar5iv.html"; do
+            if [[ -s "$candidate" ]] && grep -Eqi 'row[- ]homogeneous|row homogeneous' "$candidate"; then
+              full_text_found=true
+            fi
+          done
+          if [[ "$full_text_found" != true ]]; then
+            echo 'No usable full text was recovered.' >&2
+            exit 1
+          fi
 
       - name: Upload immutable source packet
         uses: actions/upload-artifact@v4
