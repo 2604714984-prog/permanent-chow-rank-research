@@ -1,0 +1,112 @@
+{
+  "claim_boundary": "This is an exact theorem only for the normalized one-defect sign family. It is not a lower bound for arbitrary column-sign, row-homogeneous, tensor-rank, or unrestricted Chow decompositions.",
+  "family": {
+    "indexed_term_count_with_uniform_duplicates": 6144,
+    "normalized_sign_vector_count": 32,
+    "sign_span_certificate": {
+      "minor_determinant": -32,
+      "minor_order": 6,
+      "pivot_columns": [0, 1, 2, 3, 4, 5],
+      "pivot_rows": [0, 1, 2, 4, 8, 16],
+      "rank_lower_bound": 6
+    },
+    "unique_term_count": 5984
+  },
+  "field": "characteristic zero",
+  "glynn_upper_bound_certificate": {
+    "coefficient_denominator": 32,
+    "identity_verified_on_all_assignments": 46656,
+    "nonzero_target_coefficients": 720,
+    "zero_non_target_coefficients": 45936
+  },
+  "normalization": "Each column sign vector has row-zero coefficient +1. A nonuniform term has five copies of one sign vector and one copy of a second sign vector.",
+  "one_defect_character_identity": {
+    "checks": 196608,
+    "identity": "chi_base(parity+e_row)*s_(base+defect)(row)=chi_base(parity)*s_defect(row)"
+  },
+  "parity_fiber_certificate": {
+    "canonical_integer_minor_certificates": [
+      {
+        "canonical_parity": 0,
+        "fiber_size": 2256,
+        "minor_determinant": -32,
+        "minor_order": 31,
+        "parity_weight": 0,
+        "pivot_columns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34],
+        "pivot_rows": [0, 376, 752, 1128, 1504, 1880, 96, 152, 208, 264, 320, 16, 32, 48, 64, 80, 11, 18, 24, 28, 30, 21, 17, 25, 22, 23, 26, 19, 20, 29, 31],
+        "rank_lower_bound": 31
+      },
+      {
+        "canonical_parity": 1,
+        "fiber_size": 1712,
+        "minor_determinant": 32,
+        "minor_order": 31,
+        "parity_weight": 1,
+        "pivot_columns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34],
+        "pivot_rows": [0, 376, 752, 992, 1232, 1472, 56, 152, 208, 264, 320, 16, 32, 38, 44, 50, 11, 22, 24, 28, 30, 21, 17, 18, 26, 29, 23, 19, 25, 20, 31],
+        "rank_lower_bound": 31
+      },
+      {
+        "canonical_parity": 3,
+        "fiber_size": 1712,
+        "minor_determinant": -32,
+        "minor_order": 31,
+        "parity_weight": 2,
+        "pivot_columns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34],
+        "pivot_rows": [0, 240, 616, 992, 1232, 1472, 56, 112, 168, 192, 216, 11, 22, 38, 44, 50, 24, 30, 18, 16, 20, 23, 12, 21, 27, 19, 26, 31, 28, 17, 29],
+        "rank_lower_bound": 31
+      },
+      {
+        "canonical_parity": 7,
+        "fiber_size": 1200,
+        "minor_determinant": -32,
+        "minor_order": 31,
+        "parity_weight": 3,
+        "pivot_columns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34],
+        "pivot_rows": [0, 240, 480, 720, 960, 1080, 24, 80, 136, 192, 216, 11, 12, 18, 68, 74, 16, 20, 22, 48, 50, 21, 13, 23, 46, 47, 30, 40, 45, 49, 51],
+        "rank_lower_bound": 31
+      },
+      {
+        "canonical_parity": 15,
+        "fiber_size": 1200,
+        "minor_determinant": -32,
+        "minor_order": 31,
+        "parity_weight": 4,
+        "pivot_columns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34],
+        "pivot_rows": [0, 120, 360, 600, 840, 1080, 24, 48, 72, 96, 336, 30, 12, 6, 18, 218, 32, 17, 14, 22, 200, 33, 23, 19, 13, 199, 144, 180, 192, 198, 201],
+        "rank_lower_bound": 31
+      },
+      {
+        "canonical_parity": 31,
+        "fiber_size": 720,
+        "minor_determinant": 1,
+        "minor_order": 26,
+        "parity_weight": 5,
+        "pivot_columns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28],
+        "pivot_rows": [0, 120, 240, 360, 480, 600, 144, 24, 48, 72, 96, 150, 30, 13, 7, 18, 152, 32, 15, 22, 28, 153, 33, 23, 14, 25],
+        "rank_lower_bound": 26
+      }
+    ],
+    "feature_rank_histogram": {"26": 1, "31": 31},
+    "fiber_size_by_parity_weight": {"0": 2256, "1": 1712, "2": 1712, "3": 1200, "4": 1200, "5": 720},
+    "one_defect_span_dimension": 987,
+    "target_fiber_is_exactly_the_permutation_support": true,
+    "target_fiber_size": 720,
+    "target_parity": 31
+  },
+  "restricted_support_theorem": {
+    "exact_minimum_nonzero_summands": 32,
+    "lower_bound": 32,
+    "proof_role_of_computation": "The five non-target additive-kernel ranks are certified by 31-by-31 integer minors. The target parity fiber is the 720 permutation support. Fourier inversion and the two-case support argument are mathematical steps in the companion note.",
+    "upper_bound": 32
+  },
+  "route_decision": {
+    "full_column_sign_family": "open",
+    "general_chow_rank_changed": false,
+    "minimum_inside_restricted_family": 32,
+    "one_defect_sign_decomposition_with_at_most_25_terms": "impossible",
+    "one_defect_sign_decomposition_with_at_most_31_terms": "impossible",
+    "row_homogeneous_tensor_rank": "open"
+  },
+  "status": "N6_ONE_DEFECT_SIGN_FAMILY_EXACT_32"
+}
