@@ -103,3 +103,7 @@ jobs:
         run: |
           python scripts/n6_two_defect_sign_block_audit.py \
             --json /tmp/n6_two_defect_sign_block_audit.json
+      - name: Replay n6 two-defect aggregate atomic rank
+        run: |
+          python scripts/n6_two_defect_aggregate_atomic_rank_audit.py \
+            --json /tmp/n6_two_defect_aggregate_atomic_rank_audit.json
