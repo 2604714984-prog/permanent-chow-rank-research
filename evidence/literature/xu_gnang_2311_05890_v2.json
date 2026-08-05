@@ -1,0 +1,60 @@
+{
+  "status": "SOURCE_BOUND_FULL_TEXT_RECONCILIATION_COMPLETE",
+  "paper": {
+    "authors": [
+      "Rongyu Xu",
+      "Edinah Gnang"
+    ],
+    "title": "On the Chow-rank of the permanent",
+    "arxiv_id": "2311.05890",
+    "reviewed_version": 2,
+    "reviewed_version_submitted_utc": "2025-01-04",
+    "current_version": 3,
+    "current_version_submitted_utc": "2025-03-24",
+    "current_status": "withdrawn",
+    "withdrawal_comment": "Incorrect statement Thm 4.2"
+  },
+  "acquisition": {
+    "repository": "2604714984-prog/permanent-chow-rank-research",
+    "workflow_run_id": 30987720554,
+    "artifact_id": 8922769747,
+    "artifact_name": "xu-gnang-arxiv-2311.05890-versioned-fulltext",
+    "artifact_digest": "sha256:dd9d2fa57cfc62b332e496e8613a989184eb3811f494c44e8f4663c0994feade",
+    "artifact_created_utc": "2026-08-05T08:07:34Z"
+  },
+  "source_identity": {
+    "pdf_sha256": "fb23abbb5e521e5d72d30dbc5909887e2855fe3ab31e2dfa2f655d4b4705f1e9",
+    "pdf_size_bytes": 248739,
+    "pdf_pages": 29,
+    "arxiv_source_gzip_sha256": "2bc4bd30123c89e64bc27a1977abbdd1ebd760e0f05f0b6132d8c6b298d707b9",
+    "arxiv_source_gzip_size_bytes": 23753,
+    "source_browser_zip_sha256": "cb43a2db07ab6c333df75f05848b24cc37ee971e97245bce26584326481bcc66",
+    "source_browser_zip_size_bytes": 23871,
+    "extracted_tex_path": "Paper1_Determinent_vs_Permenent__1_.tex",
+    "extracted_tex_sha256": "4c7860e4f14030e43a9253be6d7bfa728b4c911fb439f83eda5da379efe41606",
+    "extracted_tex_size_bytes": 123820
+  },
+  "source_locations": {
+    "row_homogeneous_definition": "TeX lines 330-337, Definition 3.1",
+    "decomposition_format_and_lemma": "TeX lines 766-905, Lemma 4.1",
+    "withdrawn_optimality_claim": "TeX lines 977-1099, Theorem 4.2",
+    "parametrization_section": "TeX lines 1199 onward",
+    "parametrization_minimality_dependency": "TeX lines 1224-1235"
+  },
+  "family_scope": {
+    "row_homogeneous_term": "product_i sum_j b_ij x_ij with arbitrary complex b_ij",
+    "model": "row-oriented tensor rank",
+    "relation_to_unrestricted_chow": "strict subfamily",
+    "column_sign_relation": "matrix transposition is a bijection from the column-sign family to the row-sign family"
+  },
+  "repository_verdict": {
+    "theorem_4_2_used_as_dependency": false,
+    "theorem_4_2_proved_false_as_abstract_statement": false,
+    "version_2_displayed_proof_valid": false,
+    "g020_classification": "INDEPENDENT_STRICT_SUBFAMILY_RIGIDITY",
+    "one_defect_sign_pilot_redundant": false,
+    "one_defect_sign_pilot_may_resume": true,
+    "novelty_claim_allowed": false
+  },
+  "claim_boundary": "The source packet and reconciliation do not establish a new Chow-rank or tensor-rank lower bound. They establish version identity, family scope, withdrawal status, and the invalidity of the displayed version-2 proof as a repository dependency."
+}
