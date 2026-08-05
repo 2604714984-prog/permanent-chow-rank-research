@@ -79,6 +79,12 @@ each uniform term has `6*32*32=6144` entries and the same linear span.
 Define `OneDefectSignRank(f)` as the minimum number of nonzero scalar multiples
 of distinct terms (1.3) whose sum is `f`.
 
+Every column-sign product can be projectively normalized to row-zero
+coefficient `+1` in each column; the product of the six normalization scalars
+is absorbed into the coefficient of the Chow term. For `v!=0`, the majority
+sign vector, exceptional column, and defect vector in (1.3) are unique. Thus
+the normalization and the count 5,984 do not hide duplicate nonuniform terms.
+
 ## 2. Parity blocks
 
 For an assignment
@@ -113,13 +119,14 @@ in a one-defect term is
 \tag{2.2}
 \]
 
-The audit verifies the elementary character identity underlying (2.2) in all
+The audit verifies the character identity underlying (2.2) in all
 
 \[
 32^3\cdot6=196608
 \]
 
-cases.
+cases. The proof itself is the displayed character multiplication, not the
+finite check.
 
 For `p in G`, let
 
@@ -207,8 +214,20 @@ p_*= (1,1,1,1,1),
 \]
 
 the fiber `X_(p_*)` consists exactly of the 720 permutations of
-`0,1,...,5`. The rank 26 is the familiar affine-span dimension of permutation
-matrices, including the constant direction.
+`0,1,...,5`. In addition to the five position-constant relations (3.1), the
+five row-total relations
+
+\[
+\sum_{j=0}^{5}e_{j,i}-\sum_{j=0}^{5}e_{j,0},
+\qquad 1\le i\le5,
+\tag{3.4}
+\]
+
+vanish on every permutation assignment. These ten relations are independent
+in characteristic zero, so the target feature rank is at most `36-10=26`.
+The certified `26 x 26` determinant-one minor gives the equal lower bound.
+Thus the target rank is exactly 26 without relying on an unsupported
+finite-field equality.
 
 ### Corollary 3.1 — exact span dimension
 
@@ -221,7 +240,8 @@ There are 31 non-target parity blocks of rank 31 and one target block of rank
 =31\cdot31+26
 =987.
 }
-\tag{3.4}
+\tag{3.5}
+\]
 
 ## 4. The target support is one parity fiber
 
@@ -439,13 +459,16 @@ Run
 ```bash
 python scripts/n6_one_defect_sign_rigidity_audit.py \
   --json /tmp/n6_one_defect_sign_rigidity_audit.json
+python scripts/n6_one_defect_sign_independent_audit.py
 python -m unittest tests.test_n6_one_defect_sign_rigidity -v
+python -m unittest tests.test_n6_one_defect_sign_independent -v
 ```
 
-Expected final marker:
+Expected final markers:
 
 ```text
 N6_ONE_DEFECT_SIGN_RIGIDITY_AUDIT_PASS
+N6_ONE_DEFECT_SIGN_INDEPENDENT_AUDIT_PASS
 ```
 
 The frozen payload is
@@ -454,8 +477,14 @@ The frozen payload is
 data/n6_one_defect_sign_rigidity_audit.json
 ```
 
-The script uses modular elimination only to choose candidate pivot rows and
-columns. Every rank lower bound entering the theorem is then certified by a
-nonzero integer determinant computed with Bareiss elimination. Rank upper
-bounds come from explicit kernel spaces. No random search, floating threshold,
-or finite-field equality carries logical responsibility.
+The primary script uses modular elimination only to choose candidate pivot
+rows and columns. Every rank lower bound entering the theorem is then
+certified by a nonzero integer determinant computed with Bareiss elimination.
+Rank upper bounds come from explicit kernel spaces. No random search, floating
+threshold, or finite-field equality carries logical responsibility.
+
+The independent script does not import the primary implementation. It uses a
+different prime, reconstructs the six canonical parity fibers, verifies the
+explicit five- and ten-dimensional kernel spaces, and obtains the matching
+modular lower ranks. Thus the finite rank interface is replayed by two
+independent implementations.
