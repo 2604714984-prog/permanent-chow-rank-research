@@ -1,0 +1,97 @@
+{
+  "claim_boundary": "The exact rank 36 is for one fixed-base separator and, by the row retraction, for the full fixed-base two-defect sign dictionary. It does not determine the minimum support of perm_6 in the global two-defect family or unrestricted Chow rank.",
+  "exact_atomic_rank": 36,
+  "field": "characteristic zero",
+  "global_support_search_certificate": {
+    "baseline_pair_atom_count": 30,
+    "coverage_counts": {
+      "affine_no_other_exact_span_tests": 5730,
+      "affine_plus_one_cost_one_exact_span_tests": 58800,
+      "affine_plus_one_cost_two_exact_zero_tests": 840,
+      "affine_plus_two_cost_one_exact_zero_tests": 133770,
+      "cost_one_bundle_count_1": 105,
+      "cost_one_bundle_count_2": 5145,
+      "cost_one_bundle_count_3": 156065,
+      "cost_one_bundle_count_4": 3277365,
+      "cost_one_bundle_count_5_covered_by_meet_in_middle": 50471421,
+      "cost_one_three_sum_count": 156065,
+      "cost_one_two_sum_count": 5145,
+      "one_cost_two_plus_one_cost_one": 2940,
+      "one_cost_two_plus_three_cost_one_covered_by_hash": 3745560,
+      "one_cost_two_plus_two_cost_one": 133770,
+      "two_cost_two_bundles": 420,
+      "two_cost_two_plus_one_cost_one": 38220
+    },
+    "lower_bound": 36,
+    "minimum_total_extra_cost_in_directly_enumerated_small_cases": 6,
+    "ordinary_correction_minimum_without_bundles": 6,
+    "small_case_minima": {
+      "cost_one_bundle_count_1": 8,
+      "cost_one_bundle_count_2": 9,
+      "cost_one_bundle_count_3": 9,
+      "no_bundle": 6,
+      "one_cost_two_bundle_with_at_most_one_cost_one_bundle": 10
+    },
+    "support_at_most_35_counterexample_found": false
+  },
+  "local_normal_form_certificate": {
+    "compressed_support_spaces_size_at_least_four": 227,
+    "cost_one_point_bundle_types": [
+      [-3, 2, 2, 2, 2],
+      [-2, 0, 2, 0, 2],
+      [-2, 2, 0, 2, 0],
+      [0, -2, 0, 2, 0],
+      [0, 0, -2, 0, 2],
+      [0, 0, 2, 0, -2],
+      [0, 2, 0, -2, 0]
+    ],
+    "cost_three_affine_bundle_types": [
+      {
+        "base": [-2, 0, 2, 0, 2],
+        "direction": [-4, 8, 0, 8, 0]
+      },
+      {
+        "base": [-2, 2, 0, 2, 0],
+        "direction": [-4, 0, 8, 0, 8]
+      }
+    ],
+    "cost_two_point_bundle_types": [
+      [-4, 2, 4, 2, 4],
+      [-4, 4, 2, 4, 2]
+    ],
+    "exact_local_support_space_count": 243,
+    "exception_supports": [
+      [0, 5, 7, 8],
+      [2, 4, 6, 8],
+      [0, 2, 4, 6, 8],
+      [0, 4, 5, 7, 8]
+    ],
+    "support_space_histogram": {
+      "size_2_affine_dimension_0": 1,
+      "size_3_affine_dimension_0": 11,
+      "size_4_affine_dimension_0": 20,
+      "size_4_affine_dimension_1": 10,
+      "size_5_affine_dimension_1": 77,
+      "size_5_affine_dimension_2": 2,
+      "size_6_affine_dimension_2": 76,
+      "size_7_affine_dimension_3": 36,
+      "size_8_affine_dimension_4": 9,
+      "size_9_affine_dimension_5": 1
+    },
+    "trivial_size_three_types_absorbed_as_one_ordinary_atom": 4
+  },
+  "projection_certificate": {
+    "label_projection": "v -> v & 24",
+    "row_retraction": "1,2,3 -> 0; 0,4,5 fixed",
+    "separator_assignment_checks": 46656,
+    "sign_vector_checks": 192,
+    "support_nonincrease": true
+  },
+  "separator": "g(r)=n_4(r)*n_5(r)",
+  "sixteen_base_assignment_actual_term_cost": 576,
+  "status": "N6_FIXED_BASE_TWO_DEFECT_SEPARATOR_ATOMIC_RANK_EXACT_36",
+  "upper_bound_certificate": {
+    "atom_count": 36,
+    "exact_assignment_checks": 46656
+  }
+}
