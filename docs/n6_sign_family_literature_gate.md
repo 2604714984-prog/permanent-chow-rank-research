@@ -2,106 +2,177 @@
 
 ## Status
 
-`BLOCKED_PENDING_FULL_TEXT_RECONCILIATION`.
+`RESOLVED_WITH_WITHDRAWN_THEOREM_BOUNDARY`.
 
-This gate suspends implementation of the finite column-dependent sign pilot described in Section 7 of `docs/n6_research_program.md`. No sign-family search code, orbit enumerator, SAT layer, or decomposition claim is authorized until the comparison below is complete.
-
-The current Chow-rank interval is unchanged:
-
-\[
-25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
-\]
-
-## 1. Triggering reference
-
-The arXiv record for
-
-- Rongyu Xu and Edinah Gnang, *On the Chow-rank of the permanent*, arXiv:2311.05890,
-
-states in its abstract that the paper:
-
-1. derives Glynn's formula from Ryser's formula;
-2. proves by an orbital argument that Glynn's formula gives an optimal row-homogeneous Chow decomposition of the permanent; and
-3. gives a parametric description of rank-revealing row-homogeneous Chow decompositions.
-
-Only the title, authors, date, and abstract have been independently retrieved in the present review. The full theorem definitions, hypotheses, proof, version differences, and precise meaning of `row-homogeneous` have not yet been ingested into this repository.
-
-## 2. Why this blocks N6-17B
-
-The proposed N6-17B pilot enlarges the column-uniform Glynn family to column-oriented sign terms
-
-\[
-G_A
-=
-\prod_{j=0}^{5}
-\left(
-\sum_{i=0}^{5}a_{ij}x_{ij}
-\right),
-\qquad a_{ij}\in\{\pm1\}.
-\]
-
-The abstract claim about optimal row-homogeneous decompositions may subsume, overlap with, or be logically incomparable to this family. The abstract alone does not determine which. Running a new orbit calculation before resolving that inclusion could duplicate a known theorem or attach an incorrect novelty interpretation to a restricted-family replay.
-
-Therefore the repository fails closed:
+The full-text reconciliation required by the former gate is complete. The
+result is recorded in
 
 ```text
-N6_17B_IMPLEMENTATION=BLOCKED
-NOVELTY_CLAIM=FORBIDDEN
-ROW_HOMOGENEOUS_EQUALS_COLUMN_SIGN_FAMILY=UNVERIFIED
-COLUMN_SIGN_FAMILY_SUBSET_OF_ROW_HOMOGENEOUS=UNVERIFIED
-ROW_HOMOGENEOUS_SUBSET_OF_COLUMN_SIGN_FAMILY=UNVERIFIED
+docs/xu_gnang_v2_reconciliation.md
 ```
 
-## 3. Required family comparison
+The finite sign-family pilot may resume only as a restricted exact diagnostic.
+No novelty claim and no unrestricted Chow-rank inference is authorized.
 
-The full-text review must define and compare the following classes without silently identifying them:
+The current interval remains
 
-- `F_uniform`: the 32 column-uniform Glynn sign products already treated by G-020;
-- `F_one_defect`: terms in which one designated column may use a different normalized sign vector;
-- `F_column_sign`: arbitrary normalized column-oriented sign matrices `A`;
-- `F_row_sign`: the transposed row-oriented analogue;
-- `F_row_homogeneous_XG`: the exact row-homogeneous family defined in arXiv:2311.05890;
+\[
+25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+\]
+
+## 1. Source-bound review
+
+The reviewed paper is
+
+- Rongyu Xu and Edinah Gnang, *On the Chow-rank of the permanent*,
+  arXiv:2311.05890.
+
+The mathematical full text reviewed is arXiv version 2, submitted on
+2025-01-04. The later version 3, submitted on 2025-03-24, is withdrawn with
+the arXiv comment
+
+```text
+Incorrect statement Thm 4.2
+```
+
+The acquired version-2 identities are
+
+```text
+PDF SHA-256
+fb23abbb5e521e5d72d30dbc5909887e2855fe3ab31e2dfa2f655d4b4705f1e9
+
+arXiv source gzip SHA-256
+2bc4bd30123c89e64bc27a1977abbdd1ebd760e0f05f0b6132d8c6b298d707b9
+
+extracted TeX SHA-256
+4c7860e4f14030e43a9253be6d7bfa728b4c911fb439f83eda5da379efe41606
+```
+
+GitHub Actions run `30987720554` acquired the packet. Artifact
+`8922769747` has digest
+
+```text
+sha256:dd9d2fa57cfc62b332e496e8613a989184eb3811f494c44e8f4663c0994feade
+```
+
+## 2. Exact family defined in the paper
+
+Version 2 defines a degree-one row-homogeneous term as
+
+\[
+\prod_{i=0}^{n-1}
+\left(
+\sum_{j=0}^{n-1}b_{ij}x_{ij}
+\right),
+\qquad b_{ij}\in\mathbb C.
+\]
+
+Thus the paper studies the tensor-rank model in which each factor is supported
+on one row. This is a strict subfamily of unrestricted Chow terms.
+
+The relevant source locations are:
+
+```text
+Definition 3.1: TeX lines 330--337
+row-homogeneous decomposition format and Lemma 4.1: lines 766--905
+Theorem 4.2: lines 977--1099
+parametrization subsection: lines 1199 onward
+```
+
+## 3. Withdrawal consequence
+
+Theorem 4.2 in version 2 states
+
+```text
+Glynn's row-homogeneous Chow-decomposition is rank revealing.
+```
+
+This is exactly the theorem identified as incorrect by the version-3
+withdrawal comment. It is not used as a theorem input in this repository.
+
+The displayed version-2 proof also contains unsupported implications,
+including:
+
+1. constructing projections toward the coefficient spaces of a hypothetical
+   shorter decomposition without proving that the target polynomial is
+   invariant under those projections;
+2. inferring linear dependence of product tensors from the number of vectors
+   used in each separate factor space; and
+3. inferring linear equivalence from equality of automorphism groups without a
+   rigidity theorem.
+
+The reconciliation note gives exact counterexamples to the second implication
+and records the claim boundary. The repository does not assert that the
+withdrawn theorem is false as an abstract statement; it records that the cited
+paper does not establish it.
+
+## 4. Family inclusion diagram
+
+Use the following classes:
+
+- `F_uniform`: the 32 column-uniform Glynn sign terms from G-020;
+- `F_one_defect`: five columns use one normalized sign vector and one column
+  may use another;
+- `F_column_sign`: arbitrary normalized column-oriented sign matrices;
+- `F_row_sign`: the transposed row-oriented sign family;
+- `F_row_homogeneous_XG`: arbitrary complex row-homogeneous terms from the
+  paper; and
 - unrestricted Chow terms.
 
-For every claimed inclusion or equality, the review must record the exact definition and theorem location in the paper. Transposition must not be used as a symmetry of `F_column_sign` unless `F_row_sign` is explicitly adjoined.
+The exact relations are
 
-## 4. Minimum evidence packet
+```text
+F_uniform
+    subset F_one_defect
+    subset F_column_sign
+    --transpose bijection--> F_row_sign
+    proper subset F_row_homogeneous_XG
+    proper subset unrestricted Chow terms
+```
 
-Before implementation resumes, add a source-bound note containing:
+`F_column_sign` is not literally closed under transposition. Transposition is a
+bijection to the separately defined row-oriented family. Since the permanent
+is transpose invariant, existence and term count transfer between those two
+restricted decomposition problems.
 
-1. the exact arXiv version reviewed;
-2. a hash or immutable source identity for the PDF or source archive;
-3. the paper's definition of row-homogeneous decomposition;
-4. the precise optimality theorem and the field assumptions;
-5. the parametrization theorem and its scope;
-6. an inclusion diagram for the six families listed above;
-7. a verdict on whether G-020 is a rediscovery, a strict special case, or an independent reformulation; and
-8. a verdict on whether the proposed one-defect or full column-sign pilot asks a genuinely uncovered question.
+## 5. Classification of G-020
 
-An abstract-only comparison is insufficient to clear the gate.
+G-020 proves that the 32 fixed Glynn sign products are linearly independent
+and that the permanent's unique expression in their own span uses all 32 with
+nonzero coefficient.
 
-## 5. Decision table
+It does not prove optimality among all row-sign terms or all row-homogeneous
+terms. Its correct classification is
 
-| Full-text result | Repository action |
-|---|---|
-| The paper already proves optimality for `F_one_defect` or `F_column_sign` | close N6-17B as redundant; retain only an independently replayable reproduction if useful |
-| The paper's family strictly contains G-020 but not the proposed pilot | reclassify G-020 as a known special case; narrow the pilot to the uncovered difference |
-| The paper's family is incomparable with the column-oriented sign family | document the non-inclusion witnesses; only then run a bounded pilot |
-| The definitions or theorem remain ambiguous | keep the route blocked |
-| A shorter exact decomposition is found in the literature | update the upper bound before any further lower-bound work |
+```text
+G-020=INDEPENDENT_STRICT_SUBFAMILY_RIGIDITY
+ROW_HOMOGENEOUS_OPTIMALITY=NOT_PROVED
+NOVELTY_RELATIVE_TO_ALL_LITERATURE=NOT_ESTABLISHED
+```
 
-## 6. Hidden assumptions
+## 6. Cleared implementation boundary
 
-The blocked pilot implicitly assumed that the column-dependent sign direction was not already resolved by existing row-homogeneous work. That assumption is currently unsupported.
+The first resumed pilot must use `F_one_defect`, not the full normalized
+`F_column_sign` family. It may compute only:
 
-It also assumed that a symmetry-reduced exact span computation would add research value. If the published parametrization already describes the relevant family, another enumerator would add reproducibility at most, not a new route.
+1. the exact span dimension;
+2. exact permanent membership;
+3. whether a representation with at most 25 terms is actually found within the
+   finite family; and
+4. independently reconstructible symmetry orbits.
 
-## 7. Assume all assumptions are false
+The pilot is a falsification and construction search. Failure to find a short
+representation is not a Chow-rank lower bound. No broad nonlinear solver,
+SAT/DRAT architecture, registry, manager, dispatcher, or unrestricted orbit
+framework is authorized.
 
-If the paper already covers the proposed family, the correct action is to stop sign-family development and classify the repository result as an independent replay or special-case proof. The current lower bound 25 remains the active endpoint; no replacement architecture is needed.
+## 7. Decision
 
-## 8. Strongest objection
-
-The abstract may use `row-homogeneous` in a narrower sense than the proposed column-dependent sign family, so blocking all implementation may delay a genuinely distinct finite experiment.
-
-That objection is valid but not sufficient to bypass the gate. The cost of reading and mapping the full theorem is small relative to implementing an orbit search under an unverified novelty premise.
+```text
+FULL_TEXT_RECONCILIATION=COMPLETE
+XU_GNANG_THEOREM_4_2=WITHDRAWN_IN_V3
+XU_GNANG_THEOREM_4_2_USED_AS_DEPENDENCY=false
+N6_SIGN_PILOT_REDUNDANT_BY_XU_GNANG=false
+N6_SIGN_PILOT_MAY_RESUME_AS_RESTRICTED_DIAGNOSTIC=true
+NOVELTY_CLAIM=FORBIDDEN
+```
