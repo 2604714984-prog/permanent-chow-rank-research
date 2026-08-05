@@ -1,0 +1,94 @@
+{
+  "aggregate_representation_certificate": {
+    "coefficient_type_histogram": {
+      "-2,0": 4,
+      "-2,2": 4,
+      "0,-2": 4,
+      "0,0": 8,
+      "0,2": 4,
+      "2,-2": 4,
+      "2,0": 4
+    },
+    "exact_assignment_checks": 46656,
+    "formula": "W_a=(chi_31(a)-chi_25(a) + (chi_25(a)-chi_7(a))*f)/32",
+    "logical_role": "exact representation in the sum of 24 base-labelled pairwise aggregate spaces; not a 24-term decomposition",
+    "nonzero_base_aggregate_count": 24,
+    "zero_base_labels": [0, 1, 6, 7, 24, 25, 30, 31]
+  },
+  "claim_boundary": "The exact block ranks and 24-base aggregate representation do not determine the minimum number of two-defect terms. Each base aggregate can require several rank-one sign products. No new upper or lower bound for unrestricted Chow rank is claimed.",
+  "family": {
+    "canonical_block_rows": [
+      {
+        "canonical_parity": 0,
+        "exact_characteristic_zero_rank": 406,
+        "fiber_size": 2256,
+        "kernel_dimension_in_pairwise_space": 0,
+        "modular_crosscheck_rank": 406,
+        "parity_weight": 0
+      },
+      {
+        "canonical_parity": 1,
+        "exact_characteristic_zero_rank": 406,
+        "fiber_size": 1712,
+        "kernel_dimension_in_pairwise_space": 0,
+        "modular_crosscheck_rank": 406,
+        "parity_weight": 1
+      },
+      {
+        "canonical_parity": 3,
+        "exact_characteristic_zero_rank": 406,
+        "fiber_size": 1712,
+        "kernel_dimension_in_pairwise_space": 0,
+        "modular_crosscheck_rank": 406,
+        "parity_weight": 2
+      },
+      {
+        "canonical_parity": 7,
+        "exact_characteristic_zero_rank": 322,
+        "fiber_size": 1200,
+        "kernel_dimension_in_pairwise_space": 84,
+        "modular_crosscheck_rank": 322,
+        "parity_weight": 3
+      },
+      {
+        "canonical_parity": 15,
+        "exact_characteristic_zero_rank": 322,
+        "fiber_size": 1200,
+        "kernel_dimension_in_pairwise_space": 84,
+        "modular_crosscheck_rank": 322,
+        "parity_weight": 4
+      },
+      {
+        "canonical_parity": 31,
+        "exact_characteristic_zero_rank": 207,
+        "fiber_size": 720,
+        "kernel_dimension_in_pairwise_space": 199,
+        "modular_crosscheck_rank": 207,
+        "parity_weight": 5
+      }
+    ],
+    "exact_span_dimension": 11533,
+    "global_pairwise_function_dimension": 406,
+    "indexed_term_count_with_duplicates": 491520,
+    "unique_term_count": 467264
+  },
+  "field": "characteristic zero",
+  "route_decision": {
+    "broad_sparse_optimization_authorized": false,
+    "decomposition_with_at_most_25_terms_found": false,
+    "general_chow_rank_changed": false,
+    "one_defect_32_base_support_argument_extends": false,
+    "two_defect_base_aggregate_support_upper_bound": 24,
+    "two_defect_term_support_determined": false
+  },
+  "separator_certificate": {
+    "formula": "1 - (1/4)*sum_j 1_{r_j in {2,3}} + (1/2)*sum_{j<k} z_j*z_k, z_j=1_{r_j=2}-1_{r_j=3}",
+    "one_fiber_size": 1200,
+    "one_fiber_values": {"1": 1200},
+    "one_parity": 25,
+    "zero_fiber_size": 1200,
+    "zero_fiber_values": {"0": 1200},
+    "zero_parity": 7
+  },
+  "status": "N6_TWO_DEFECT_SIGN_BLOCK_DIAGNOSTIC_COMPLETE"
+}
