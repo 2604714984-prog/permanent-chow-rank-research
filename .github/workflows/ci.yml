@@ -121,3 +121,7 @@ jobs:
             --json /tmp/general_two_defect_count_product_rank_audit.json
       - name: Replay independent count-product finite interfaces
         run: python scripts/general_two_defect_count_product_rank_independent.py
+      - name: Replay n6 recursive-Koszul tensor-rank lower bound
+        run: |
+          python scripts/n6_recursive_koszul_tensor_rank_audit.py \
+            --json /tmp/n6_recursive_koszul_tensor_rank_audit.json
