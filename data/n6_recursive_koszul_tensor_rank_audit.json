@@ -1,0 +1,47 @@
+{
+  "border_tensor_rank_lower_bound": 29,
+  "canonical_edge_stream_sha256": "b06ddee0d9573b2b20e82fb75aa738a5d505190412c15a78959ea63f0aa500f1",
+  "characteristic_zero_rank_lower_bound": 70692,
+  "claim_boundary": "This theorem concerns tensor rank and row-homogeneous or sign subfamilies. It does not prove unrestricted Chow rank at least 29, border Chow rank at least 29, lower 26 for unrestricted Chow rank, or exact row-homogeneous rank 32.",
+  "component_count": 2932,
+  "component_histogram": [
+    {"component_count": 720, "component_order": 1, "component_rank": 1, "rank_contribution": 720},
+    {"component_count": 480, "component_order": 3, "component_rank": 2, "rank_contribution": 960},
+    {"component_count": 540, "component_order": 8, "component_rank": 5, "rank_contribution": 2700},
+    {"component_count": 20, "component_order": 9, "component_rank": 4, "rank_contribution": 80},
+    {"component_count": 360, "component_order": 21, "component_rank": 12, "rank_contribution": 4320},
+    {"component_count": 240, "component_order": 49, "component_rank": 24, "rank_contribution": 5760},
+    {"component_count": 180, "component_order": 55, "component_rank": 29, "rank_contribution": 5220},
+    {"component_count": 12, "component_order": 110, "component_rank": 46, "rank_contribution": 552},
+    {"component_count": 120, "component_order": 125, "component_rank": 58, "rank_contribution": 6960},
+    {"component_count": 180, "component_order": 276, "component_rank": 118, "rank_contribution": 21240},
+    {"component_count": 60, "component_order": 590, "component_rank": 225, "rank_contribution": 13500},
+    {"component_count": 20, "component_order": 1236, "component_rank": 434, "rank_contribution": 8680}
+  ],
+  "generated_integer_entries": 1800000,
+  "matrix_dimension": 162000,
+  "ordinary_tensor_rank_lower_bound": 29,
+  "prime_total_ranks": {
+    "1000003": 70692,
+    "1000033": 70692
+  },
+  "rank_one_normalization": 2500,
+  "restricted_family_intervals": {
+    "row_homogeneous": [29, 32],
+    "two_defect_sign": [29, 32]
+  },
+  "route_decision": {
+    "broad_sign_optimization_authorized": false,
+    "row_homogeneous_decomposition_with_at_most_28_terms": "impossible",
+    "sign_family_can_falsify_unrestricted_lower_26": false,
+    "sign_family_decomposition_with_at_most_25_terms": "impossible"
+  },
+  "source_identity": {
+    "paper": "Han--Ju--Kim, arXiv:2503.12032v1, Theorem 5.6",
+    "upstream_main_commit": "2ebfbf70d7d1474c045bfbc0f7449c7b083667d9",
+    "upstream_per6_blob": "395c0a05148e34507d1ba0cbdb347ae84eea1491",
+    "upstream_rank_helper_blob": "afe1a349e17d2a1b2f11d223aba3a4bbe0988a16",
+    "upstream_repository": "jihan099/RKF"
+  },
+  "status": "N6_RECURSIVE_KOSZUL_TENSOR_RANK_REPLAYED"
+}
