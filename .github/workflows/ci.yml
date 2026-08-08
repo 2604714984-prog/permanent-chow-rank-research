@@ -115,3 +115,9 @@ jobs:
         run: |
           python scripts/n6_two_defect_separator_rank36_audit.py \
             --json /tmp/n6_two_defect_separator_rank36_audit.json
+      - name: Replay general count-product atomic rank
+        run: |
+          python scripts/general_two_defect_count_product_rank_audit.py \
+            --json /tmp/general_two_defect_count_product_rank_audit.json
+      - name: Replay independent count-product finite interfaces
+        run: python scripts/general_two_defect_count_product_rank_independent.py
