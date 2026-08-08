@@ -1,0 +1,110 @@
+{
+  "claim_boundary": "The theorem concerns count-product separators and their fixed aggregate assignment. It does not determine another aggregate assignment, the global two-defect minimum, row-homogeneous tensor rank, or unrestricted Chow rank.",
+  "exact_replays": [
+    {
+      "assignment_checks": 256,
+      "base_labelled_cost": 64,
+      "exact_post_collection_cost": null,
+      "fixed_base_rank": 16,
+      "n": 4,
+      "nonzero_bases": 4,
+      "target_fiber_size": 24,
+      "zero_fiber_size": 32
+    },
+    {
+      "assignment_checks": 3125,
+      "base_labelled_cost": 200,
+      "exact_post_collection_cost": 200,
+      "fixed_base_rank": 25,
+      "n": 5,
+      "nonzero_bases": 8,
+      "target_fiber_size": 120,
+      "zero_fiber_size": 180
+    },
+    {
+      "assignment_checks": 46656,
+      "base_labelled_cost": 576,
+      "exact_post_collection_cost": 576,
+      "fixed_base_rank": 36,
+      "n": 6,
+      "nonzero_bases": 16,
+      "target_fiber_size": 720,
+      "zero_fiber_size": 1200
+    }
+  ],
+  "field": "characteristic zero",
+  "global_double_counting": {
+    "edge_excess_endpoint_multiplicity_cap": 2,
+    "incident_excess_per_zero_unary_vertex": 3,
+    "inequality": "R>=n*(n-1)+E+n-Z>=n^2 because 3Z<=2E"
+  },
+  "local_support_certificate": {
+    "both_endpoint_coordinates_nonpositive": true,
+    "compatible_supports": {
+      "1": 0,
+      "2": 1,
+      "3": 18
+    },
+    "genuine_supports": {
+      "1": 0,
+      "2": 1,
+      "3": 11
+    },
+    "three_atom_endpoint_histogram": {
+      "-1/2,-1": 1,
+      "-1/2,-1/2": 9,
+      "-1/2,0": 3,
+      "-1,-1/2": 1,
+      "0,-1/2": 3,
+      "0,0": 1
+    },
+    "unique_two_atom_expression": {
+      "coefficients": [
+        "1/4",
+        "1/4"
+      ],
+      "left_unary": [
+        "-1/2",
+        "-1/2"
+      ],
+      "right_unary": [
+        "-1/2",
+        "-1/2"
+      ],
+      "support": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ]
+      ]
+    }
+  },
+  "equal_unary_certificate": {
+    "left": {
+      "-1/2": 42,
+      "0": 10
+    },
+    "positive_equal_unary_with_at_most_four_atoms": false,
+    "right": {
+      "-1/2": 42,
+      "0": 10
+    }
+  },
+  "n6_corollary": {
+    "exact_fixed_base_rank": 36,
+    "exact_sixteen_base_assignment_cost": 576,
+    "independent_exhaustive_certificate": "N6-023"
+  },
+  "status": "GENERAL_TWO_DEFECT_COUNT_PRODUCT_RANK_EXACT",
+  "theorem": {
+    "base_labelled_cost": "2^(n-2)*n^2",
+    "exact_post_collection_cost": "2^(n-2)*n^2 for n>=5",
+    "fixed_base_atomic_rank": "rho_2(n_a*n_b)=n^2",
+    "nonzero_base_count": "2^(n-2)",
+    "range": "n>=4"
+  }
+}
