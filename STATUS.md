@@ -19,6 +19,7 @@ Status vocabulary:
 | S3-001 | `VERIFIED_BASELINE` | `ChowRank(perm_3)=4` | reviewed source and exact arithmetic |
 | S4-001 | `VERIFIED_BASELINE`, `COMPUTATION_REPLAYED` | `ChowRank(perm_4)=8` | independent 560/92/659 exact audit |
 | S5-001 | `CONDITIONAL` | `ChowRank(perm_5)=16` | lower-16 overlay replayed; omitted lower-15 SAT layer not regenerated here |
+| S5-D01 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | after removing six incorrectly retained fixed target orbits from every nontrivial C5 character block, the corrected `F_11` aggregate ranks for two named four-term Glynn residuals are `43634` and `43642`, both above `11*3846` | `evidence/small_n/n5_c5_character_certificate_erratum.md` and corrected compact summary; no unrestricted Chow-rank inference |
 | G-001 | `PROOF_DRAFT_COMPLETE` | `dim D_m(perm_n)=binom(n,m)^2` | `docs/general_n_koszul_bounds.md` |
 | G-002 | `PROOF_DRAFT_COMPLETE` | `D_m(perm_n)^(1)=D_{m+1}(perm_n)` for `2<=m<=n-1` | coefficient propagation proof |
 | G-003 | `PROOF_DRAFT_COMPLETE` | generalized first-Koszul lower bound `L_K(n)`; unique optimizer `m=ceil(n/2)` | exact formula, optimizer proof, and tests |
@@ -69,6 +70,7 @@ Status vocabulary:
 
 - Literature novelty of G-001 through G-021 and N6-006 through N6-023 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
+- The large SMS matrices underlying S5-D01 are external evidence. This repository records their corrected aggregate identity and evidence boundary but does not embed or independently regenerate those matrices.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
 - N6-014 does not prove `ChowRank(perm_6)>=26`, a border Chow-rank lower bound of 25, or the conjectural exact value 32.

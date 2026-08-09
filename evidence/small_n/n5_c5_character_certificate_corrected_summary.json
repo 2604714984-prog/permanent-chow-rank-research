@@ -1,0 +1,36 @@
+{
+  "status": "CORRECTED_EXTERNAL_ROUTE_DIAGNOSTIC",
+  "date": "2026-08-09",
+  "scope": "two named four-term Glynn residuals for perm_5",
+  "field": "F_11",
+  "primitive_fifth_roots": [3, 4, 5, 9],
+  "block_shapes": {
+    "trivial": [12360, 9900],
+    "nontrivial": [12354, 9900]
+  },
+  "single_chow_term_rank_upper_bound": 3846,
+  "eleven_term_rank_upper_bound": 42306,
+  "corrected_total_ranks": {
+    "residual_0": 43634,
+    "residual_1": 43642
+  },
+  "margins": {
+    "residual_0": 1328,
+    "residual_1": 1336
+  },
+  "corrected_aggregate": {
+    "name": "n5_glynn_residual_C5_character_certificate_corrected_F11.json",
+    "sha256": "2b254a51d0e641fa60eb0b7ced31f9ea7b299819b9dc49039a27c7a8c58bfb51"
+  },
+  "superseded_aggregate": {
+    "name": "n5_glynn_residual_C5_character_certificate_INVALID_superseded_F11.json",
+    "sha256": "1eaa01886a6371693c4f56b4d63f790da5f3c2afe245785f13e2672aaeb18f45",
+    "status": "INVALID_DO_NOT_CITE"
+  },
+  "evidence_boundary": {
+    "class": "exact finite-field nonzero-minor certificate",
+    "large_sms_matrices_embedded": false,
+    "unrestricted_chow_rank_consequence": false,
+    "changes_S5_001_status": false
+  }
+}
