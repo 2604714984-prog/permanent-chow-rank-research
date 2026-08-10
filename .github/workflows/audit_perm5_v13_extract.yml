@@ -1,0 +1,49 @@
+name: audit-perm5-v13-fulltext-extract
+
+on:
+  push:
+    branches:
+      - audit/perm5-v13-fulltext-extract-20260810
+    paths:
+      - .github/workflows/audit_perm5_v13_extract.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify frozen assets
+        run: python evidence/small_n/v13_pure/verify_assets.py
+
+      - name: Extract reviewer package and PDF text
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=/tmp/perm5_v13_audit
+          mkdir -p "$out/reviewer_zip" "$out/pdf"
+          unzip -q \
+            evidence/small_n/v13_pure/perm345_reviewer_submission_v13_pure_20260810.zip \
+            -d "$out/reviewer_zip"
+          cp evidence/small_n/v13_pure/MANIFEST.json "$out/REPOSITORY_MANIFEST.json"
+          cp evidence/small_n/v13_pure/perm345_chow_rank_v13_pure_reviewer_candidate_20260810.pdf \
+            "$out/pdf/perm345_v13.pdf"
+          pdftotext -layout "$out/pdf/perm345_v13.pdf" "$out/pdf/perm345_v13.txt"
+          find "$out/reviewer_zip" -type f -printf '%P\t%s\n' | sort \
+            > "$out/REVIEWER_ZIP_FILE_MANIFEST.tsv"
+          find "$out/reviewer_zip" -type f -print0 | sort -z | xargs -0 sha256sum \
+            > "$out/REVIEWER_ZIP_SHA256SUMS.txt"
+          sha256sum "$out/pdf/perm345_v13.pdf" "$out/pdf/perm345_v13.txt" \
+            > "$out/PDF_TEXT_SHA256SUMS.txt"
+
+      - name: Upload extracted audit packet
+        uses: actions/upload-artifact@v4
+        with:
+          name: perm5-v13-fulltext-audit-packet
+          path: /tmp/perm5_v13_audit
+          if-no-files-found: error
+          retention-days: 7
