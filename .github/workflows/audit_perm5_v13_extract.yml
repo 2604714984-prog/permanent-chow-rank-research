@@ -20,7 +20,7 @@ jobs:
       - name: Verify frozen assets
         run: python evidence/small_n/v13_pure/verify_assets.py
 
-      - name: Extract reviewer package and PDF text
+      - name: Extract reviewer package
         shell: bash
         run: |
           set -euo pipefail
@@ -32,13 +32,12 @@ jobs:
           cp evidence/small_n/v13_pure/MANIFEST.json "$out/REPOSITORY_MANIFEST.json"
           cp evidence/small_n/v13_pure/perm345_chow_rank_v13_pure_reviewer_candidate_20260810.pdf \
             "$out/pdf/perm345_v13.pdf"
-          pdftotext -layout "$out/pdf/perm345_v13.pdf" "$out/pdf/perm345_v13.txt"
           find "$out/reviewer_zip" -type f -printf '%P\t%s\n' | sort \
             > "$out/REVIEWER_ZIP_FILE_MANIFEST.tsv"
           find "$out/reviewer_zip" -type f -print0 | sort -z | xargs -0 sha256sum \
             > "$out/REVIEWER_ZIP_SHA256SUMS.txt"
-          sha256sum "$out/pdf/perm345_v13.pdf" "$out/pdf/perm345_v13.txt" \
-            > "$out/PDF_TEXT_SHA256SUMS.txt"
+          sha256sum "$out/pdf/perm345_v13.pdf" \
+            > "$out/PDF_SHA256SUMS.txt"
 
       - name: Upload extracted audit packet
         uses: actions/upload-artifact@v4
