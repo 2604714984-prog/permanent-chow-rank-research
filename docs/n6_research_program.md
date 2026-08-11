@@ -301,150 +301,102 @@ Therefore the 16-base assignment costs exactly
 
 actual terms.
 
+### 7.4 Full column-sign and row-sign families
+
+The Boolean monomial slice in `docs/general_column_row_sign_rank.md` removes the
+need to optimize two-defect aggregate assignments.  Every normalized
+column-sign term, with arbitrary signs in every column, restricts to one Walsh
+character on a `32`-point slice.  The permanent restricts to a delta function
+whose 32 Fourier coefficients are all nonzero.  Therefore
+
+\[
+\boxed{
+\operatorname{ColumnSignRank}(\operatorname{perm}_6)
+=
+\operatorname{RowSignRank}(\operatorname{perm}_6)
+=32.}
+\]
+
+The full two-defect family is a subfamily of the column-sign family and contains
+the 32 Glynn terms, so its exact minimum is also 32.
+
 ### Sign-route conclusion
 
 ```text
 UNIFORM_MINIMUM=32
 ONE_DEFECT_MINIMUM=32
+FULL_COLUMN_SIGN_MINIMUM=32
+FULL_ROW_SIGN_MINIMUM=32
+GLOBAL_TWO_DEFECT_MINIMUM=32
 FIRST_TWO_DEFECT_FIXED_ASSIGNMENT_COST=744
 SECOND_TWO_DEFECT_FIXED_ASSIGNMENT_COST=576
-GLOBAL_TWO_DEFECT_MINIMUM=OPEN
+SIGN_ROUTE=CLOSED
 ```
 
-Low aggregate support is not a reliable proxy for actual term support. Both
-explicit separator constructions are closed constructive failures.
+Low aggregate support is not a reliable proxy for actual term support.  The two
+explicit separator constructions remain useful exact examples, but the global
+sign minimum is now closed without optimizing their aggregate costs.
 
-## 8. Current mathematical target: a joint aggregate-cost invariant
+## 8. Sign-route closure
 
-A two-defect decomposition can be grouped by its unique majority base. Let
+The former N6-24 joint aggregate-cost program is cancelled.  Its target was a
+lower bound for a proper subfamily that G-022 now settles by a shorter theorem.
+No full sign dictionary, sparse optimizer, or additional defect hierarchy is
+authorized.
 
-\[
-W_a
-\]
+This closure has no unrestricted consequence.  A general Chow term may have a
+zero row-zero anchor or arbitrary normalized diagonal coefficients.  In
+particular, the diagonal monomial Chow term already restricts to the same delta
+function on the Boolean slice, so the slice cannot lower-bound unrestricted
+Chow rank.
 
-be the pairwise aggregate attached to base label `a in G`. Fourier
-transformation in the base label gives, for every parity `p`, the constraints
+## 9. Current unrestricted target: a coupled inverse-system invariant
 
-\[
-\left.
-\sum_{a\in G}\chi_p(a)W_a
-\right|_{X_p}
-=
-\begin{cases}
-1,&p=31,\\
-0,&p\ne31.
-\end{cases}
-\tag{8.1}
-\]
-
-The actual term objective is
+Let
 
 \[
-\sum_{a\in G}\rho_2(W_a),
-\tag{8.2}
+\mathcal M(f)=\bigoplus_{m=0}^{6}\mathcal D_m(f)
 \]
 
-not the number of nonzero `W_a`.
+with its action by the full algebra of constant-coefficient differential
+operators.  Degreewise dimensions, first higher wedges, scalar second shadows,
+and scalar homology have reached their documented ceilings.  A new invariant
+must use compatibility between degrees and relations, not another scalar sum of
+dimensions.
 
-The next sign-family theorem must act on the complete vector-valued assignment
-`a -> W_a`. Candidate ingredients that remain sufficiently small are:
+The next theorem candidate must satisfy all of the following before any large
+calculation starts:
 
-1. the direct sum of the 15 pure pair ANOVA blocks;
-2. matrix-rank lower bounds on each pair block;
-3. the exact kernels of the 32 parity-fiber restriction maps; and
-4. Fourier/Reed--Muller constraints on the base-label dependence.
+1. it is functorial under `GL(V)`, so arbitrary Chow factors cannot evade it by
+   changing coordinates;
+2. it controls the inverse-system module of a coupled sum rather than replacing
+   it by a literal direct sum of term modules;
+3. it survives the exact six-term common-factor family from N6-017;
+4. its single-term contribution is bounded for dependent and repeated factors;
+5. its finite interface is small enough for exact rational or integer replay.
 
-A useful theorem would prove a lower bound on (8.2) directly, or reduce the
-search for an actual sub-32 decomposition to a small exact interface.
+A concrete first step is to derive one universal inequality for a quotient of
+the relation module of `M(sum_i T_i)` that couples two adjacent derivative
+degrees.  If no such inequality beats the common-factor example on paper, the
+route stops before implementation.
 
-## 9. Hidden assumptions and their negation
+## 10. Falsification and stop rules
 
-### Assumptions
+Every candidate must first be tested against:
 
-1. The two-defect family is broad enough to contain a shorter decomposition
-   near Glynn's construction.
-2. The Fourier-fiber constraints contain a joint cost invariant not visible in
-   base support alone.
-3. Pair-block rank and ordinary corrections can be combined without a broad
-   dictionary search.
-4. A useful reduction remains independently replayable.
+- the six-term common-factor family with scalar homology 465;
+- repeated or dependent factors;
+- sums whose catalectic images overlap heavily;
+- the diagonal-monomial Boolean-slice counterexample; and
+- specialization, to ensure every characteristic-zero inequality is used in
+  the correct semicontinuity direction.
 
-### Assume all are false
+Suspend a route if it reproduces an existing rank ratio, uses only coordinate
+row/column weights, needs a broad state tree before stating a theorem, or
+assumes additivity of derivative images or homology.
 
-Then the sign-family route should stop. The correct state would remain a
-restricted one-defect theorem, exact two-defect block diagnostics, two failed
-separator constructions, and an open unrestricted interval `25..32`.
-
-The program must not build a generic sparse optimizer merely to preserve the
-route.
-
-## 10. Falsification first
-
-Before promoting a joint invariant, search for a compact exact counterexample:
-
-- an aggregate assignment satisfying (8.1) with certified actual support at
-  most 31;
-- a pair-block rank cancellation invalidating a proposed additive lower bound;
-- a base-label Fourier codeword with support below the assumed minimum;
-- a term represented under two different majority bases; or
-- a finite-field compression that disappears over characteristic zero.
-
-A dangerous example changes a characteristic-zero conclusion only after exact
-rational elimination, an integer minor, or a proved semicontinuity bridge.
-
-## 11. Next authorized sequence
-
-### N6-24A — derive the joint lower-bound candidate
-
-Write an explicit inequality
+The active unrestricted interval remains
 
 \[
-L((W_a)_a)
-\le
-\sum_a\rho_2(W_a)
+25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
-
-using pair-block ranks and ordinary support. Prove it for every fixed-base
-atom. Do not implement a search before this inequality is stated.
-
-### N6-24B — optimize the linearized invariant under Fourier fibers
-
-If `L` is explicit, compute its exact ceiling under (8.1) using symmetry and
-rational linear algebra. Proceed only if the ceiling can reach at least 32 or
-produces a small counterexample.
-
-### N6-24C — independent reconstruction
-
-Any promoted finite result must have a second implementation that rebuilds the
-parity fibers, restriction kernels, and objective without importing the first
-generator.
-
-### N6-24D — stop rule
-
-Suspend the sign route if `L` has ceiling below 32, if the optimization needs a
-large nonlinear dictionary before a theorem is stated, or if the finite
-interface cannot be independently reconstructed.
-
-## 12. Fail-closed exit criteria
-
-Suspend a route if any of the following occurs:
-
-- it yields only an already-known integer rank ratio;
-- it needs hundreds of structural states before a new theorem is stated;
-- its shadow dimension is bounded only by the ambient dimension;
-- it assumes equality between a coupled catalectic image and a literal sum;
-- it relies on finite-field equality without characteristic-zero transfer;
-- it optimizes aggregate count while ignoring actual atomic cost;
-- its symmetry quotient cannot be reconstructed independently; or
-- an exact decomposition or counterexample invalidates its premise.
-
-## 13. Strongest objection
-
-Even an exact lower bound of 32 inside the full two-defect sign family would
-remain a theorem for a highly special proper subfamily. It would not prove
-unrestricted Chow rank 32 or lower 26.
-
-That objection is decisive for project scope. N6-24 is authorized only because
-it may either construct a shorter explicit decomposition or supply a reusable
-Fourier-cost invariant. It is not grounds for a full column-sign solver,
-row-homogeneous tensor-rank program, or new process architecture.

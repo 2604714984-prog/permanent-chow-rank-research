@@ -35,6 +35,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | Vector-valued Macaulay relation cap | proof draft complete; finite interfaces replayed | for `K subset W tensor Sym^2 V`, `dim K^(1)<=dim(K)^{<2>}`; the proof uses a universal Grassmannian kernel and an explicit colored-monomial degeneration |
 | Glynn column-uniform sign family | proof draft complete; exact Walsh replay | the `2^(n-1)` sign products are linearly independent and the unique expansion of `perm_n` in their span uses every term |
+| Full column-sign and row-sign families | proof draft complete; exact Walsh replay | a Boolean monomial slice sends every sign term to one Walsh character while `perm_n` becomes a delta function, proving exact restricted rank `2^(n-1)` even for the larger anchored diagonal-sign family |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the former scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
 | `n=6` fixed-four projection frontier | proof draft complete; exact arithmetic replayed | the raw range is `20<=b<=27`; common-quotient and low-relation arguments exclude `b=27,26,25` |
@@ -105,6 +106,7 @@ python scripts/n6_lower26_fixed_q_diagnostic.py
 python scripts/n6_second_koszul_rank_audit.py
 python scripts/n6_second_koszul_homology_audit.py
 python scripts/glynn_family_rigidity_audit.py
+python scripts/general_column_row_sign_rank_audit.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
@@ -115,7 +117,7 @@ The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27
 
 The lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
 
-The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings, a dimension-only second shadow is vacuous at those fixed counts, and the column-uniform Glynn sign family cannot be shortened below 32 terms. These are route-closing results, not a lower-26 theorem.
+The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings and a dimension-only second shadow is vacuous at those fixed counts. The Boolean-slice theorem now closes the full column-sign and row-sign families at 32 terms, but this remains a restricted-family result and is not a lower-26 theorem for unrestricted Chow rank.
 
 The output-degree-two homology closure identifies the middle higher-Koszul homology with `Tor_2(A_f,k)_4`. The Alper--Rowlands formula gives dimension 450 for `perm_6`, while a six-factor Chow complete intersection gives 15. Hence the exact ranks are `127125` and `8730`, still yielding ratio 15. An independently reconstructed common-factor family has scalar homology dimensions `15,55,120,210,325,465` for one through six terms, so monotone scalar homology upper bounds cannot separate `perm_6` from low-term sums. Multigraded and representation-theoretic refinements remain open.
 
