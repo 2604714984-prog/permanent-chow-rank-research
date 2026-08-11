@@ -65,6 +65,7 @@ def main() -> int:
         required = {
             "PACKAGE_MANIFEST.json",
             "REVIEWER_README.md",
+            "requirements-replay.txt",
             "verify_manifest.py",
             "replay_active_proof.py",
             "perm5_one_intersection_flag_standalone_exact.py",
