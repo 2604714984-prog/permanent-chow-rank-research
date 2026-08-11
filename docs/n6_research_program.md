@@ -433,6 +433,14 @@ minimum decomposition with at least four terms already satisfies the proposed
 26, must concern minimum length certified by a different coupled invariant;
 ordinary middle-rank minimality cannot supply the hard case.
 
+G-027 proves the analogous necessary radical bound when the ordinary global
+first-Koszul flattening certifies minimum length.  In the 36-dimensional
+sextic ambient space its conditional radical caps are 10, 10, 11, 14, and 14
+at certified lengths 4, 5, 6, 21, and 25.  But `perm_6` has first-Koszul rank
+14175 against one-term cap 705, so it certifies only 21 terms and does not meet
+the length-25 hypothesis.  The active route must use quotient gain or another
+coupled invariant after terms are fixed, not the global first-Koszul ratio.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
