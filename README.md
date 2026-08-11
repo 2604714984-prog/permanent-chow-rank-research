@@ -38,6 +38,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Full column-sign and row-sign families | proof draft complete; exact Walsh replay | a Boolean monomial slice sends every sign term to one Walsh character while `perm_n` becomes a delta function, proving exact restricted rank `2^(n-1)` even for the larger anchored diagonal-sign family |
 | General relation tableau and central pairing | proof draft complete; exact sparse replay | arbitrary-degree vector Macaulay growth and noncentral block-Sylvester control coupled sums; the exact central correction is a restricted relation pairing, but it can vanish on a strict two-term Chow sum |
 | Central relation-radical falsification | proof draft complete; exact rational replay; diagnostic only | an explicit six-term squarefree presentation has `rho=47` and `rank(beta|R)=24`, so its radical has dimension `23>4(6-1)`; the presentation is not proved minimum, and the minimum-decomposition version remains open |
+| Three-monomial radical classification | proof draft complete; exact rational replay; restricted family | for three distinct squarefree sextic coordinate monomials, central rank above the two-term cap 40 forces radical dimension at most `8=4(3-1)`; the bound is sharp for a certified minimum three-term sum |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the former scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
 | `n=6` fixed-four projection frontier | proof draft complete; exact arithmetic replayed | the raw range is `20<=b<=27`; common-quotient and low-relation arguments exclude `b=27,26,25` |
@@ -111,6 +112,7 @@ python scripts/glynn_family_rigidity_audit.py
 python scripts/general_column_row_sign_rank_audit.py
 python scripts/general_relation_tableau_audit.py
 python scripts/general_relation_radical_counterexample.py
+python scripts/degree6_three_monomial_radical_classification.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.

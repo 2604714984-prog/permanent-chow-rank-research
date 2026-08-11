@@ -417,6 +417,14 @@ next bounded question is therefore whether minimum length itself forces a
 radical cap, or whether an example can be certified minimum by an independent
 Koszul flattening while violating that cap.
 
+G-025 answers the smallest coordinate test case sharply.  For three distinct
+squarefree sextic monomials whose central rank exceeds the two-term cap 40,
+minimum length is three and the radical has dimension at most `8=4(3-1)`;
+equality occurs for a common-four-factor triple.  Its pure Venn-intersection
+proof does not extend to arbitrary Chow factors or to the six fixed terms
+needed in the lower-26 program.  It is a positive unit test for a
+minimum-length radical principle, not that principle itself.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
