@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import ast
+import os
+import subprocess
 import sys
 import unittest
 from fractions import Fraction
@@ -58,6 +61,41 @@ class QuotientGainAndRouteTests(unittest.TestCase):
         self.assertEqual(payload["diagonal_term_koszul_rank_mod_prime"], 705)
         self.assertEqual(payload["combined_koszul_rank_mod_prime"], 14_880)
         self.assertEqual(payload["quotient_koszul_gain_mod_prime"], 705)
+
+    def test_quotient_gain_audit_has_no_optimized_away_asserts(self) -> None:
+        script = SCRIPTS / "n6_quotient_gain_audit.py"
+        tree = ast.parse(script.read_text(encoding="utf-8"), filename=str(script))
+        bare_asserts = [
+            node.lineno
+            for node in ast.walk(tree)
+            if isinstance(node, ast.Assert)
+        ]
+        self.assertEqual(bare_asserts, [])
+
+    def test_fail_closed_check_survives_optimized_mode(self) -> None:
+        environment = os.environ.copy()
+        python_path = [str(SCRIPTS)]
+        if environment.get("PYTHONPATH"):
+            python_path.append(environment["PYTHONPATH"])
+        environment["PYTHONPATH"] = os.pathsep.join(python_path)
+        result = subprocess.run(
+            [
+                sys.executable,
+                "-O",
+                "-c",
+                (
+                    "from n6_quotient_gain_audit import require_equal; "
+                    "require_equal('optimized-mode probe', 1, 2)"
+                ),
+            ],
+            cwd=ROOT,
+            env=environment,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("optimized-mode probe mismatch", result.stderr)
 
     def test_odd_ratio_identity_and_local_koszul_ratio(self) -> None:
         c = Fraction(721_347_521, 1_000_000_000)
