@@ -407,6 +407,16 @@ ambient-vacuous.  G-023 is retained as a structural theorem, not promoted to a
 lower-26 program.  Any successor must control the geometry of the radical or a
 different quotient module, not only its dimension.
 
+G-024 then falsifies the first naive radical controls.  An explicit six-term
+squarefree presentation has `rho=47`, restricted pairing rank 24, and radical
+dimension `23>4(6-1)`.  Its raw derivative shadow from fourth-order relations
+is all of the 47-dimensional central relation space, not the 23-dimensional
+radical.  This does not yet falsify a bound restricted to minimum
+decompositions, because the six-term presentation is not proved minimum.  The
+next bounded question is therefore whether minimum length itself forces a
+radical cap, or whether an example can be certified minimum by an independent
+Koszul flattening while violating that cap.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
