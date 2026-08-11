@@ -46,6 +46,7 @@ Status vocabulary:
 | G-025 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | for three distinct squarefree degree-six coordinate monomials, central rank above 40 certifies Chow rank three and forces central radical dimension at most `8=4(3-1)`; a common-four-factor triple has central rank 44 and attains equality | `docs/degree6_three_monomial_radical_classification.md`, pure Venn-intersection proof, exact rational replay of all 237 ordered types, and `scripts/degree6_three_monomial_radical_classification.py` |
 | G-026 | `PROOF_DRAFT_COMPLETE` | if symmetric maps of rank at most `B` have a `q`-term sum of rank above `(q-1)B`, then their central relation-pairing radical has dimension at most `floor((B-1)/2)`; for degree-six Chow terms this is 9, so every centrally certified minimum decomposition with `q>=4` satisfies the proposed `4(q-1)` cap | `docs/central_minimality_radical_bound.md`, exact central pairing identity and rank arithmetic |
 | G-027 | `PROOF_DRAFT_COMPLETE` | if the standard first-Koszul rank strictly certifies a `q`-term degree-`2m` Chow decomposition in ambient dimension `N`, then `N(rho+delta)<N binom(2m,m)+(q-1)binom(2m,m+1)` and hence `delta<=floor((N binom(2m,m)+(q-1)binom(2m,m+1)-1)/(2N))` | `docs/first_koszul_minimality_radical_bound.md`, first-Koszul image-dimension bound and the exact central pairing identity |
+| G-028 | `PROOF_DRAFT_COMPLETE`, `ROUTE_DIAGNOSTIC` | for fixed sextic Chow terms, quotienting their central first-Koszul maps by `im K_3(perm_6)` gives individually lossless maps and exact gain `Gamma=rank(sum overline K_i)`; block-Sylvester yields `Gamma>=sum r_i-36 rho-eta-j`, where `eta` is internal output overlap and `j` is the aggregate collision with the permanent Koszul image | `docs/quotient_koszul_relation_budget.md`, N6-006 single-term transversality, row-relation injection, and quotient output arithmetic |
 | N6-001 | `OPEN` | improve the lower bound beyond 25 or find a shorter decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the former one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained | `scripts/n6_multishadow_route_barrier.py` |
@@ -73,7 +74,7 @@ Status vocabulary:
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-027 and N6-006 through N6-023 has not been exhaustively checked.
+- Literature novelty of G-001 through G-028 and N6-006 through N6-023 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
@@ -89,6 +90,7 @@ Status vocabulary:
 - G-025 proves the sharp cap `dim rad(beta|R)<=8` only for centrally certified minimum triples of squarefree coordinate sextic monomials. It does not extend to arbitrary Chow factors, four or more terms, or the six-term presentation in G-024.
 - G-026 controls only decompositions whose minimum length is certified by the middle catalecticant itself. Minimum decompositions requiring a different obstruction can have middle rank below `(q-1)B` and are not covered.
 - G-027 controls only decompositions whose minimum length is certified by the ordinary global first-Koszul rank. For `perm_6` that rank certifies 21 terms, not 25, so G-027 is not a lower-26 theorem.
+- G-028 rewrites quotient gain as a coupled relation budget but supplies no uniform bound on the aggregate output terms `eta+j`; its inequality can be vacuous in the large-relation lower-26 states and is not a lower-26 theorem.
 - G-021 controls only the count-product separator and its canonical Fourier aggregate assignment. It does not by itself lower-bound another aggregate assignment; G-022 determines the global two-defect minimum by a different Boolean-slice argument.
 - N6-019 is exact only for the normalized one-defect sign family. G-022 separately closes the full column-sign and row-sign families; arbitrary complex row-homogeneous tensor rank and unrestricted Chow rank remain open.
 - N6-019 supplies no unrestricted lower-26 implication and does not change the active interval `25..32`.

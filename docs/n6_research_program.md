@@ -441,6 +441,21 @@ at certified lengths 4, 5, 6, 21, and 25.  But `perm_6` has first-Koszul rank
 the length-25 hypothesis.  The active route must use quotient gain or another
 coupled invariant after terms are fixed, not the global first-Koszul ratio.
 
+G-028 provides the first exact quotient-level relation budget.  After
+projection away from `im K_3(perm_6)`, every individual fixed-term map retains
+its rank, while the fixed-sum gain obeys
+
+\[
+ \Gamma\ge\sum_i r_i-36\rho-\eta-j.
+\]
+
+Here `rho` is the literal central image-relation dimension, `eta` measures
+relations among the fixed terms' ordinary Koszul output spaces, and `j`
+measures the aggregate collision of their sum with the permanent Koszul image.
+The single-term theorem does not control `eta+j`, and the `36 rho` cap is
+vacuous in many surviving large-relation states.  The next theorem must bound
+the combined output loss, especially `j`, rather than only central relations.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
