@@ -19,6 +19,10 @@ jobs:
         run: python scripts/check_english_only.py
       - name: Unit tests
         run: python -m unittest discover -s tests -v
+      - name: Replay repaired n5 one-intersection endpoint theorem
+        run: python -O scripts/perm5_one_intersection_flag_standalone_exact.py
+      - name: Verify and replay the v14 reviewer packet
+        run: python evidence/small_n/v14_repaired/verify_assets.py --replay
       - name: Rebuild deterministic general bounds
         run: python scripts/generate_bounds.py --max-n 50 --output-dir /tmp/chow-bounds
       - name: Rebuild all-degree multishadow certificates
