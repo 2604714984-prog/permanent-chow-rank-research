@@ -32,6 +32,14 @@ Monomial = tuple[int, int, int]
 SparseColumn = dict[int, int]
 
 
+def require_equal(label: str, actual: int, expected: int) -> None:
+    """Fail closed when a proof-relevant exact invariant changes."""
+    if actual != expected:
+        raise RuntimeError(
+            f"{label} mismatch: expected {expected}, observed {actual}"
+        )
+
+
 def triples() -> list[tuple[int, int, int]]:
     return list(combinations(range(N), 3))
 
@@ -51,8 +59,8 @@ def build_pair_maps() -> tuple[dict[tuple[int, int], int], dict[tuple[int, int],
             wedge[(a, b)] = index
             index += 1
 
-    assert len(sym) == 666
-    assert len(wedge) == 630
+    require_equal("symmetric-pair basis dimension", len(sym), 666)
+    require_equal("exterior-pair basis dimension", len(wedge), 630)
     return sym, wedge
 
 
@@ -144,8 +152,8 @@ def build_payload() -> dict[str, object]:
         for chosen in combinations(diagonal_variables, 3)
     ]
 
-    assert len(matching_basis) == 400
-    assert len(diagonal_basis) == 20
+    require_equal("permanent central dimension", len(matching_basis), 400)
+    require_equal("diagonal-term central dimension", len(diagonal_basis), 20)
 
     pivots: dict[int, SparseColumn] = {}
     permanent_rank = add_space(matching_basis, pivots, sym_index, wedge_index)
@@ -155,10 +163,10 @@ def build_payload() -> dict[str, object]:
     separate_pivots: dict[int, SparseColumn] = {}
     term_rank = add_space(diagonal_basis, separate_pivots, sym_index, wedge_index)
 
-    assert permanent_rank == 14_175
-    assert term_rank == 705
-    assert quotient_gain == 705
-    assert combined_rank == 14_880
+    require_equal("permanent Koszul rank modulo prime", permanent_rank, 14_175)
+    require_equal("diagonal-term Koszul rank modulo prime", term_rank, 705)
+    require_equal("quotient Koszul gain modulo prime", quotient_gain, 705)
+    require_equal("combined Koszul rank modulo prime", combined_rank, 14_880)
 
     return {
         "status": "COMPUTATION_REPLAYED",
