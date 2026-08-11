@@ -1,19 +1,21 @@
-# The v13 finite-combinatorial proof of `ChowRank(perm_5)=16`
+# Historical v13 candidate for `ChowRank(perm_5)=16`
 
 ## Status
 
-The v13 manuscript gives a complete internal proof draft over fields of
-characteristic zero:
+This document records the historical v13 candidate. A later external audit did
+not accept it as a closed proof: the universal one-intersection implication and
+the binary-cubic exclusion were not established with sufficient rigor. The
+displayed equality below was therefore a v13 claim, not an audit-accepted
+theorem:
 
 ```text
 ChowRank(perm_5) = 16.
 ```
 
-The lower bound is program-free in the precise logical sense that no program
-output is a premise of the proof. The argument still uses explicit finite
-case classifications and integer tables. It is therefore a pure
-finite-combinatorial proof, not a case-free conceptual proof. Independent
-external review and proof-assistant formalization remain pending.
+The repaired v14 draft supersedes this candidate. It uses a characteristic-zero
+closed projective incidence degeneration and an exact replayable endpoint
+certificate. See `docs/perm5_lower16_v14_mathematical_repairs.md` and
+`evidence/small_n/v14_repaired/`.
 
 ## What v13 changes
 
@@ -100,8 +102,10 @@ Consequently, equality occurs at exactly four coordinate terminals: the common
 envelope `W_M=q(Sym^2 M)` and three column-permuted length-two terminals. The
 manuscript excludes the three length-two terminals by the local length-two
 argument and excludes `W_M` by the same-row valuative theorem and two-row
-closure. Together with the route 1--8 reductions, this proves the lower bound
-16. Glynn's formula supplies the upper bound 16.
+closure. V13 asserted that these steps, together with the route 1--8 reductions,
+proved the lower bound 16. The external audit found that assertion incomplete;
+the missing implications are addressed only in the superseding v14 draft.
+Glynn's formula independently supplies the upper bound 16.
 
 ## Exact diagnostics and reproducibility
 
@@ -123,10 +127,15 @@ It contains no historical multi-gigabyte SAT/DRAT asset.
 
 ## Evidence labels
 
-- **Proved in the internal manuscript:** the characteristic-zero lower and
-  upper bounds giving exact rank 16.
+- **Claimed, but not accepted as closed, in v13:** the characteristic-zero lower
+  bound 16.
+- **Proved independently of the disputed step:** the upper bound 16 from
+  Glynn's decomposition.
 - **Exact diagnostic:** the 32,768-subset rational comparison and the 3,003
   ten-plane extremum replay.
 - **Historical finite-field or random experiments:** not theorem inputs.
-- **Still unresolved:** independent external review, proof-assistant
-  formalization, literature novelty review, and the exact rank for `n>=6`.
+- **Superseded by v14:** the two mathematical gaps and the finite endpoint
+  premise are repaired in a new internal draft, still awaiting fresh external
+  review.
+- **Still unresolved:** proof-assistant formalization, literature novelty
+  review, and the exact rank for `n>=6`.
