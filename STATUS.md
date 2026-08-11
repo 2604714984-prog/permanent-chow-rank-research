@@ -41,6 +41,7 @@ Status vocabulary:
 | G-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | the `2^(n-1)` fixed column-uniform Glynn sign products are linearly independent, and the unique expansion of `perm_n` in their span uses every term with nonzero coefficient | Walsh-Hadamard proof and `scripts/glynn_family_rigidity_audit.py`; strict subfamily theorem only |
 | G-021 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_AGGREGATE_THEOREM` | for every `n>=4` and distinct nonzero rows `a,b`, the fixed-base normalized two-defect atomic rank of `g_ab=n_a n_b` is exactly `n^2`; the corresponding Fourier assignment has `2^(n-2)` nonzero bases and base-labelled cost `2^(n-2)n^2`, which is also the exact post-collection cost for `n>=5` | `docs/general_two_defect_count_product_rank.md`, exact nine-atom star classification, primary and independent audits, and frozen summary |
 | G-022 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | for every `n>=2`, the full column-sign and row-sign ranks of `perm_n` are both exactly `2^(n-1)`; the lower bound also holds for the larger anchored diagonal-sign family | `docs/general_column_row_sign_rank.md`, Boolean monomial slice, full Walsh support, and `scripts/general_column_row_sign_rank_audit.py` |
+| G-023 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | arbitrary-degree vector-valued Macaulay growth gives `kappa_(m+1)<=kappa_m^{<m>}` for literal derivative-space relations; noncentral block-Sylvester gives `rank C_(n-m,m)(sum T_i)>=C-kappa_m-kappa_(n-m)`; centrally the exact correction is `rank(sum A_i)=C-2rho+rank(beta|R)`, but a strict two-term Chow sum with four common factors has correction zero | `docs/general_relation_tableau_pairing.md`, exact sparse monomial-pair ranks, repeated-term and common-factor boundary checks, and `scripts/general_relation_tableau_audit.py` |
 | N6-001 | `OPEN` | improve the lower bound beyond 25 or find a shorter decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the former one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained | `scripts/n6_multishadow_route_barrier.py` |
@@ -68,7 +69,7 @@ Status vocabulary:
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-022 and N6-006 through N6-023 has not been exhaustively checked.
+- Literature novelty of G-001 through G-023 and N6-006 through N6-023 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
@@ -79,6 +80,7 @@ Status vocabulary:
 - N6-018 is an internal postmortem of a self-authored, withdrawn, disproved line; no result from that paper is used as a positive theorem input.
 - G-020 is restricted to the 32 fixed column-uniform Glynn products. It does not control arbitrary row-sign, column-sign, row-homogeneous, or unrestricted Chow terms.
 - G-022 closes the full column-sign and row-sign families, but it still does not control terms with zero anchors or arbitrary normalized diagonal coefficients, arbitrary complex row-homogeneous products, or unrestricted Chow rank.
+- G-023 supplies exact GL-covariant coupled formulas but no positive dimension-only pairing gain: two nonmergeable Chow terms with four common factors have `rho=4` and `rank(beta|R)=0`; the unrefined two-step Macaulay cap is vacuous at the lower-26 maximum `kappa_2=37`.
 - G-021 controls only the count-product separator and its canonical Fourier aggregate assignment. It does not by itself lower-bound another aggregate assignment; G-022 determines the global two-defect minimum by a different Boolean-slice argument.
 - N6-019 is exact only for the normalized one-defect sign family. G-022 separately closes the full column-sign and row-sign families; arbitrary complex row-homogeneous tensor rank and unrestricted Chow rank remain open.
 - N6-019 supplies no unrestricted lower-26 implication and does not change the active interval `25..32`.

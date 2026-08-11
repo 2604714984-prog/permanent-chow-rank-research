@@ -1,0 +1,401 @@
+{
+  "claim_boundary": "No ChowRank(perm_6)>=26 conclusion is obtained.",
+  "common_factor_boundary": [
+    {
+      "coupled_central_rank": 20,
+      "coupled_quadratic_rank": 15,
+      "kappa_2": 0,
+      "kappa_3": 0,
+      "kappa_4": 0,
+      "term_count": 1
+    },
+    {
+      "coupled_central_rank": 40,
+      "coupled_quadratic_rank": 30,
+      "kappa_2": 0,
+      "kappa_3": 0,
+      "kappa_4": 0,
+      "term_count": 2
+    },
+    {
+      "coupled_central_rank": 60,
+      "coupled_quadratic_rank": 45,
+      "kappa_2": 0,
+      "kappa_3": 0,
+      "kappa_4": 0,
+      "term_count": 3
+    },
+    {
+      "coupled_central_rank": 80,
+      "coupled_quadratic_rank": 60,
+      "kappa_2": 0,
+      "kappa_3": 0,
+      "kappa_4": 0,
+      "term_count": 4
+    },
+    {
+      "coupled_central_rank": 100,
+      "coupled_quadratic_rank": 75,
+      "kappa_2": 0,
+      "kappa_3": 0,
+      "kappa_4": 0,
+      "term_count": 5
+    },
+    {
+      "coupled_central_rank": 120,
+      "coupled_quadratic_rank": 90,
+      "kappa_2": 0,
+      "kappa_3": 0,
+      "kappa_4": 0,
+      "term_count": 6
+    }
+  ],
+  "field": "characteristic zero with modular nonzero-minor diagnostics",
+  "macaulay_two_step_0_through_37": [
+    {
+      "kappa_2": 0,
+      "kappa_3_cap": 0,
+      "kappa_4_cap": 0,
+      "two_sided_relation_loss_cap": 0
+    },
+    {
+      "kappa_2": 1,
+      "kappa_3_cap": 1,
+      "kappa_4_cap": 1,
+      "two_sided_relation_loss_cap": 2
+    },
+    {
+      "kappa_2": 2,
+      "kappa_3_cap": 2,
+      "kappa_4_cap": 2,
+      "two_sided_relation_loss_cap": 4
+    },
+    {
+      "kappa_2": 3,
+      "kappa_3_cap": 4,
+      "kappa_4_cap": 5,
+      "two_sided_relation_loss_cap": 8
+    },
+    {
+      "kappa_2": 4,
+      "kappa_3_cap": 5,
+      "kappa_4_cap": 6,
+      "two_sided_relation_loss_cap": 10
+    },
+    {
+      "kappa_2": 5,
+      "kappa_3_cap": 7,
+      "kappa_4_cap": 9,
+      "two_sided_relation_loss_cap": 14
+    },
+    {
+      "kappa_2": 6,
+      "kappa_3_cap": 10,
+      "kappa_4_cap": 15,
+      "two_sided_relation_loss_cap": 21
+    },
+    {
+      "kappa_2": 7,
+      "kappa_3_cap": 11,
+      "kappa_4_cap": 16,
+      "two_sided_relation_loss_cap": 23
+    },
+    {
+      "kappa_2": 8,
+      "kappa_3_cap": 13,
+      "kappa_4_cap": 19,
+      "two_sided_relation_loss_cap": 27
+    },
+    {
+      "kappa_2": 9,
+      "kappa_3_cap": 16,
+      "kappa_4_cap": 25,
+      "two_sided_relation_loss_cap": 34
+    },
+    {
+      "kappa_2": 10,
+      "kappa_3_cap": 20,
+      "kappa_4_cap": 35,
+      "two_sided_relation_loss_cap": 45
+    },
+    {
+      "kappa_2": 11,
+      "kappa_3_cap": 21,
+      "kappa_4_cap": 36,
+      "two_sided_relation_loss_cap": 47
+    },
+    {
+      "kappa_2": 12,
+      "kappa_3_cap": 23,
+      "kappa_4_cap": 39,
+      "two_sided_relation_loss_cap": 51
+    },
+    {
+      "kappa_2": 13,
+      "kappa_3_cap": 26,
+      "kappa_4_cap": 45,
+      "two_sided_relation_loss_cap": 58
+    },
+    {
+      "kappa_2": 14,
+      "kappa_3_cap": 30,
+      "kappa_4_cap": 55,
+      "two_sided_relation_loss_cap": 69
+    },
+    {
+      "kappa_2": 15,
+      "kappa_3_cap": 35,
+      "kappa_4_cap": 70,
+      "two_sided_relation_loss_cap": 85
+    },
+    {
+      "kappa_2": 16,
+      "kappa_3_cap": 36,
+      "kappa_4_cap": 71,
+      "two_sided_relation_loss_cap": 87
+    },
+    {
+      "kappa_2": 17,
+      "kappa_3_cap": 38,
+      "kappa_4_cap": 74,
+      "two_sided_relation_loss_cap": 91
+    },
+    {
+      "kappa_2": 18,
+      "kappa_3_cap": 41,
+      "kappa_4_cap": 80,
+      "two_sided_relation_loss_cap": 98
+    },
+    {
+      "kappa_2": 19,
+      "kappa_3_cap": 45,
+      "kappa_4_cap": 90,
+      "two_sided_relation_loss_cap": 109
+    },
+    {
+      "kappa_2": 20,
+      "kappa_3_cap": 50,
+      "kappa_4_cap": 105,
+      "two_sided_relation_loss_cap": 125
+    },
+    {
+      "kappa_2": 21,
+      "kappa_3_cap": 56,
+      "kappa_4_cap": 126,
+      "two_sided_relation_loss_cap": 147
+    },
+    {
+      "kappa_2": 22,
+      "kappa_3_cap": 57,
+      "kappa_4_cap": 127,
+      "two_sided_relation_loss_cap": 149
+    },
+    {
+      "kappa_2": 23,
+      "kappa_3_cap": 59,
+      "kappa_4_cap": 130,
+      "two_sided_relation_loss_cap": 153
+    },
+    {
+      "kappa_2": 24,
+      "kappa_3_cap": 62,
+      "kappa_4_cap": 136,
+      "two_sided_relation_loss_cap": 160
+    },
+    {
+      "kappa_2": 25,
+      "kappa_3_cap": 66,
+      "kappa_4_cap": 146,
+      "two_sided_relation_loss_cap": 171
+    },
+    {
+      "kappa_2": 26,
+      "kappa_3_cap": 71,
+      "kappa_4_cap": 161,
+      "two_sided_relation_loss_cap": 187
+    },
+    {
+      "kappa_2": 27,
+      "kappa_3_cap": 77,
+      "kappa_4_cap": 182,
+      "two_sided_relation_loss_cap": 209
+    },
+    {
+      "kappa_2": 28,
+      "kappa_3_cap": 84,
+      "kappa_4_cap": 210,
+      "two_sided_relation_loss_cap": 238
+    },
+    {
+      "kappa_2": 29,
+      "kappa_3_cap": 85,
+      "kappa_4_cap": 211,
+      "two_sided_relation_loss_cap": 240
+    },
+    {
+      "kappa_2": 30,
+      "kappa_3_cap": 87,
+      "kappa_4_cap": 214,
+      "two_sided_relation_loss_cap": 244
+    },
+    {
+      "kappa_2": 31,
+      "kappa_3_cap": 90,
+      "kappa_4_cap": 220,
+      "two_sided_relation_loss_cap": 251
+    },
+    {
+      "kappa_2": 32,
+      "kappa_3_cap": 94,
+      "kappa_4_cap": 230,
+      "two_sided_relation_loss_cap": 262
+    },
+    {
+      "kappa_2": 33,
+      "kappa_3_cap": 99,
+      "kappa_4_cap": 245,
+      "two_sided_relation_loss_cap": 278
+    },
+    {
+      "kappa_2": 34,
+      "kappa_3_cap": 105,
+      "kappa_4_cap": 266,
+      "two_sided_relation_loss_cap": 300
+    },
+    {
+      "kappa_2": 35,
+      "kappa_3_cap": 112,
+      "kappa_4_cap": 294,
+      "two_sided_relation_loss_cap": 329
+    },
+    {
+      "kappa_2": 36,
+      "kappa_3_cap": 120,
+      "kappa_4_cap": 330,
+      "two_sided_relation_loss_cap": 366
+    },
+    {
+      "kappa_2": 37,
+      "kappa_3_cap": 121,
+      "kappa_4_cap": 331,
+      "two_sided_relation_loss_cap": 368
+    }
+  ],
+  "n6_route_decision": "The exact pairing correction can vanish for a strict two-term Chow sum, and the two-step dimension cap is ambient-vacuous at kappa_2=37.",
+  "repeated_term_boundary": [
+    {
+      "coupled_rank": 20,
+      "individual_rank_sum": 40,
+      "relation_dimension": 20,
+      "relation_pairing_rank": 20,
+      "term_count": 2
+    },
+    {
+      "coupled_rank": 20,
+      "individual_rank_sum": 60,
+      "relation_dimension": 40,
+      "relation_pairing_rank": 40,
+      "term_count": 3
+    },
+    {
+      "coupled_rank": 20,
+      "individual_rank_sum": 80,
+      "relation_dimension": 60,
+      "relation_pairing_rank": 60,
+      "term_count": 4
+    },
+    {
+      "coupled_rank": 20,
+      "individual_rank_sum": 100,
+      "relation_dimension": 80,
+      "relation_pairing_rank": 80,
+      "term_count": 5
+    },
+    {
+      "coupled_rank": 20,
+      "individual_rank_sum": 120,
+      "relation_dimension": 100,
+      "relation_pairing_rank": 100,
+      "term_count": 6
+    }
+  ],
+  "squarefree_degree_six_pair_overlaps": [
+    {
+      "ambient_cubic_monomials": 220,
+      "formula_rank": 40,
+      "merges_to_one_chow_term": false,
+      "overlap": 0,
+      "rank_mod_1000003": 40,
+      "relation_dimension": 0,
+      "relation_pairing_rank": 0,
+      "strict_nonmerge_two_term_example": false
+    },
+    {
+      "ambient_cubic_monomials": 165,
+      "formula_rank": 40,
+      "merges_to_one_chow_term": false,
+      "overlap": 1,
+      "rank_mod_1000003": 40,
+      "relation_dimension": 0,
+      "relation_pairing_rank": 0,
+      "strict_nonmerge_two_term_example": false
+    },
+    {
+      "ambient_cubic_monomials": 120,
+      "formula_rank": 40,
+      "merges_to_one_chow_term": false,
+      "overlap": 2,
+      "rank_mod_1000003": 40,
+      "relation_dimension": 0,
+      "relation_pairing_rank": 0,
+      "strict_nonmerge_two_term_example": false
+    },
+    {
+      "ambient_cubic_monomials": 84,
+      "formula_rank": 38,
+      "merges_to_one_chow_term": false,
+      "overlap": 3,
+      "rank_mod_1000003": 38,
+      "relation_dimension": 1,
+      "relation_pairing_rank": 0,
+      "strict_nonmerge_two_term_example": false
+    },
+    {
+      "ambient_cubic_monomials": 56,
+      "formula_rank": 32,
+      "merges_to_one_chow_term": false,
+      "overlap": 4,
+      "rank_mod_1000003": 32,
+      "relation_dimension": 4,
+      "relation_pairing_rank": 0,
+      "strict_nonmerge_two_term_example": true
+    },
+    {
+      "ambient_cubic_monomials": 35,
+      "formula_rank": 20,
+      "merges_to_one_chow_term": true,
+      "overlap": 5,
+      "rank_mod_1000003": 20,
+      "relation_dimension": 10,
+      "relation_pairing_rank": 0,
+      "strict_nonmerge_two_term_example": false
+    },
+    {
+      "ambient_cubic_monomials": 20,
+      "formula_rank": 20,
+      "merges_to_one_chow_term": true,
+      "overlap": 6,
+      "rank_mod_1000003": 20,
+      "relation_dimension": 20,
+      "relation_pairing_rank": 20,
+      "strict_nonmerge_two_term_example": false
+    }
+  ],
+  "status": "GENERAL_RELATION_TABLEAU_PAIRING_REPLAYED",
+  "theorems": {
+    "block_sylvester": "rank C_(n-m,m)(sum T_i) >= C-kappa_m-kappa_(n-m)",
+    "central_pairing": "rank(sum A_i)=C-2rho+rank(beta restricted to R)",
+    "tableau_growth": "kappa_(m+1) <= kappa_m^{<m>}",
+    "vector_macaulay": "dim K^(1) <= dim(K)^{<d>}"
+  }
+}

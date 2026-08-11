@@ -380,6 +380,33 @@ the relation module of `M(sum_i T_i)` that couples two adjacent derivative
 degrees.  If no such inequality beats the common-factor example on paper, the
 route stops before implementation.
 
+That first step is now completed in G-023.  Literal relation dimensions satisfy
+
+\[
+\kappa_{m+1}\le\kappa_m^{\langle m\rangle},
+\]
+
+and the coupled noncentral catalectic obeys
+
+\[
+\operatorname{rank}C_{n-m,m}\left(\sum_iT_i\right)
+\ge C-\kappa_m-\kappa_{n-m}.
+\]
+
+At the center there is an exact extra term
+
+\[
+\operatorname{rank}\left(\sum_iA_i\right)
+=C-2\rho+\operatorname{rank}(\beta|_{\mathcal R}).
+\]
+
+The dimension-only route nevertheless fails.  Two squarefree degree-six Chow
+terms sharing four factors form a strict rank-two sum with `rho=4` and zero
+pairing correction.  Moreover the two-step cap at `kappa_2=37` is 331 and hence
+ambient-vacuous.  G-023 is retained as a structural theorem, not promoted to a
+lower-26 program.  Any successor must control the geometry of the radical or a
+different quotient module, not only its dimension.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
