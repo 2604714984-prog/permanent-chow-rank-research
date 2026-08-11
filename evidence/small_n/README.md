@@ -10,7 +10,7 @@ This directory stores small independent audit artifacts and immutable identities
 | `perm345_v9_ams_hardened_reviewer.pdf` | `a5d2360b70dc3faba1a6ffcac6dc1345b839214e94b7c8791200ccb3448117de` | no |
 | `perm345_reviewer_submission_v13_pure_20260810.zip` | `afa3e8165bb7d7f90de46c983d5de971f38289906735369aac34f4b27f9b7edd` | yes |
 | `perm345_chow_rank_v13_pure_reviewer_candidate_20260810.pdf` | `02a08c053375d9cde315073e5f068fcc758e5df9038a228b0f8507882371c61e` | yes |
-| `perm345_reviewer_submission_v14_repaired_20260812.zip` | `8ffd39148549543ee1d9c624ca8dc9dea44209f185800df67dab6c87419f3e51` | yes |
+| `perm345_reviewer_submission_v14_repaired_20260812.zip` | `ce8f639c532b754b4e0a8eec959d97e461426c9f9402b923d6a13056f46dff33` | yes |
 | `perm345_chow_rank_v14_repaired_zh_ams.pdf` | `960402fcb7bf16b51fc7c1fb4e641c5e982583a15ef1f38a9f5e6e866f94a7c8` | yes |
 
 The Git blob identities of the legacy v9 audit files are recorded in
