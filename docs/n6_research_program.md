@@ -425,6 +425,14 @@ proof does not extend to arbitrary Chow factors or to the six fixed terms
 needed in the lower-26 program.  It is a positive unit test for a
 minimum-length radical principle, not that principle itself.
 
+G-026 isolates the remaining obstruction further.  If the middle
+catalecticant itself certifies a sextic decomposition as minimum, the exact
+pairing identity forces radical dimension at most nine.  Hence every such
+minimum decomposition with at least four terms already satisfies the proposed
+`4(q-1)` cap.  A genuine counterexample, or a theorem strong enough for lower
+26, must concern minimum length certified by a different coupled invariant;
+ordinary middle-rank minimality cannot supply the hard case.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
