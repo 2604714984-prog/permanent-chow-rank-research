@@ -864,3 +864,37 @@ preserves all forty.  Thus the known `336/203` intersection dimensions, even
 with inverse-system closure, impose no nontrivial uniform connecting-rank
 bound.  Any continuation must use realization by the actual six-term
 `H` and twenty-term `Q=P-H`, not just Hilbert dimensions.
+
+## 2026-08-13: frame components and the genuine near-extremal six-plane stratum
+
+N6-042 refines the remaining `b=64` geometry without claiming a global
+fiber bound.  Once the extremal six-plane `L` is fixed, equality of the
+twelve-dimensional quotient spaces determines the fifteen-dimensional
+squarefree Chow space and hence its unordered projective factor frame.  The
+five components of the coordinate extremal base locus yield `5^6=15625`
+ordered component assignments.  Hall matching classifies exactly `14810` as
+admissible and `815` as inadmissible.  Every admissible projective-frame
+branch contains a coordinate point whose fixed-quotient tangent is zero, so
+the fiber-dimension theorem gives generic quasi-finiteness on each branch.
+An explicit noncoordinate frame also has exact affine tangent rank 210, with
+the remaining six directions equal to factor scalings.  None of this controls
+all exceptional fibers across different six-planes, so it does not exclude
+`b=64`.
+
+N6-043 establishes a pure near-extremal theorem:
+
+\[
+ \dim L\le5\quad\Longrightarrow\quad
+ \dim\bigl(E_2\cap\operatorname{Sym}^2L\bigr)\le1.
+\]
+
+It follows that an `epsilon=0`, five-span Chow term has `alpha>=2`, while
+`alpha=1` forces six-dimensional factor span.  For six coordinate edges the
+rectangle count is only `0,1,3`; nevertheless this fixed-point fact does not
+collapse the rank-two locus to the extremal locus.  An explicit family
+`L_(S,t)(lambda)` has intersection dimension exactly two for every nonzero
+`lambda`, and its six grid generators give actual Chow terms with
+`(epsilon,alpha)=(0,1)`.  Coordinate one-rectangle frames similarly realize
+`(0,2)`.  Thus the remaining `b=61,62,63` work must couple several terms and
+their common permanent quotient; neither defect value can be removed
+termwise.
