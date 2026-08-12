@@ -57,6 +57,23 @@ class N6MinimumSixPermutationCollisionTests(unittest.TestCase):
             self.payload["compatible_with_q6_central_necessary_condition"]
         )
 
+    def test_all_six_permutation_monomial_fibers_have_b_at_most_two(self) -> None:
+        self.assertEqual(
+            self.payload["normalized_six_permutation_fibers_checked"], 46_656
+        )
+        self.assertEqual(
+            self.payload["normalized_fiber_intersection_histogram"],
+            {"1": 45_936, "2": 720},
+        )
+        self.assertEqual(
+            self.payload["general_six_permutation_monomial_intersection_cap_b"],
+            2,
+        )
+        self.assertEqual(
+            self.payload["enumeration_role"],
+            "independent exact diagnostic, not a theorem premise",
+        )
+
     def test_frozen_payload(self) -> None:
         frozen = json.loads(DATA.read_text(encoding="utf-8"))
         self.assertEqual(self.payload, frozen)

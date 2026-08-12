@@ -38,6 +38,55 @@ def term_edges(permutation: tuple[int, ...]) -> tuple[int, ...]:
     return tuple(row * 6 + full[row] for row in range(6))
 
 
+def normalized_fiber_intersection_count(phi: tuple[int, ...]) -> int:
+    if len(phi) != 6 or any(index < 0 or index >= 6 for index in phi):
+        raise ValueError(phi)
+    selected = [
+        permutation + tuple(value + 3 for value in PERMUTATIONS[phi[index]])
+        for index, permutation in enumerate(PERMUTATIONS)
+    ]
+    count = 0
+    for rows in itertools.combinations(range(6), 3):
+        image_sets = [tuple(sorted(permutation[row] for row in rows))
+                      for permutation in selected]
+        if len(set(image_sets)) != 1:
+            continue
+        columns = image_sets[0]
+        restrictions = {
+            tuple(columns.index(permutation[row]) for row in rows)
+            for permutation in selected
+        }
+        if len(restrictions) == 6:
+            count += 1
+    return count
+
+
+def normalized_fiber_classification() -> dict[str, object]:
+    histogram: dict[int, int] = {}
+    bijective_count = 0
+    formula_verified = True
+    for phi in itertools.product(range(6), repeat=6):
+        intersection = normalized_fiber_intersection_count(phi)
+        histogram[intersection] = histogram.get(intersection, 0) + 1
+        bijective = len(set(phi)) == 6
+        bijective_count += int(bijective)
+        formula_verified &= intersection == 1 + int(bijective)
+    expected_histogram = {1: 45_936, 2: 720}
+    if histogram != expected_histogram or bijective_count != 720 or not formula_verified:
+        raise AssertionError((histogram, bijective_count, formula_verified))
+    return {
+        "normalized_six_permutation_fibers_checked": 6**6,
+        "normalized_fiber_intersection_histogram": {
+            str(value): count for value, count in sorted(histogram.items())
+        },
+        "normalized_fiber_maximum_b": 2,
+        "two_intersections_exactly_when_complement_map_is_bijective": True,
+        "general_six_permutation_monomial_intersection_cap_b": 2,
+        "general_cap_proof_type": "pure finite combinatorial proof",
+        "enumeration_role": "independent exact diagnostic, not a theorem premise",
+    }
+
+
 def middle_catalectic_certificate() -> dict[str, object]:
     divisor_sets: list[set[tuple[int, ...]]] = []
     complement_pairs: list[tuple[tuple[int, ...], tuple[int, ...]]] = []
@@ -242,6 +291,7 @@ def build_payload() -> dict[str, object]:
         ),
         **middle_catalectic_certificate(),
         **collision_certificate(),
+        **normalized_fiber_classification(),
         "conclusion": (
             "A Chow-rank-six fixed sum can have rho=0, eta=0, and aggregate "
             "collision j=72 with im K_3(perm_6)."

@@ -34,16 +34,25 @@
     }
   ],
   "displayed_chow_rank_upper_bound": 6,
+  "enumeration_role": "independent exact diagnostic, not a theorem premise",
   "exact_chow_rank": 6,
   "explicit_collision_direct_sum_rank_over_Q": 72,
   "explicit_collision_is_full_intersection": true,
   "family": "sum over pi in S_3 of the top 3x3 permutation monomial times the identically indexed bottom 3x3 permutation monomial",
   "field": "Q",
   "finite_field_or_random_input": false,
+  "general_cap_proof_type": "pure finite combinatorial proof",
+  "general_six_permutation_monomial_intersection_cap_b": 2,
   "hypothetical_25_term_q6_required_minimum_b": 20,
   "individual_chow_term_central_rank_cap": 20,
   "internal_output_relation_dimension_eta": 0,
   "method": "pure middle-catalectic certificate plus exact rational torus-block elimination",
+  "normalized_fiber_intersection_histogram": {
+    "1": 45936,
+    "2": 720
+  },
+  "normalized_fiber_maximum_b": 2,
+  "normalized_six_permutation_fibers_checked": 46656,
   "ordinary_six_output_span_rank_over_Q": 4230,
   "permanent_central_derivative_intersection_dimension_b": 2,
   "permanent_koszul_rank_over_Q": 14175,
@@ -108,5 +117,6 @@
     "2": 18,
     "6": 2
   },
-  "top_cubic_permanent_collision_rank_over_Q": 36
+  "top_cubic_permanent_collision_rank_over_Q": 36,
+  "two_intersections_exactly_when_complement_map_is_bijective": true
 }

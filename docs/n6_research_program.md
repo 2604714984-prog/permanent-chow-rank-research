@@ -485,6 +485,15 @@ in a hypothetical 25-term decomposition has `b>=20`.  The next bounded target
 is therefore a high-intersection aggregate inequality, not another
 minimum-length criterion.
 
+N6-027 closes the permutation-monomial version of that target.  A pure
+normalization argument proves that any six permutation monomials cover at most
+two cubic-subpermanent weights, so their central intersection satisfies
+`b<=2`.  The lower-26 six-fixed frontier forces `b>=20`; coordinate
+permutation monomials therefore cannot model the relevant high-intersection
+geometry.  Further enumeration of this subfamily has no value.  The next
+object must be a genuinely non-coordinate six-term Chow sum or a general
+high-intersection theorem.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:

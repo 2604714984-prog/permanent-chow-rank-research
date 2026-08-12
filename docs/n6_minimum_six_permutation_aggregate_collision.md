@@ -157,7 +157,56 @@ A hypothetical 25-term decomposition with six fixed terms necessarily has
 fixed-sum-only bounds, but leaves open a theorem using the high-intersection
 condition `b>=20` together with the residual rank capacity.
 
-## 6. Reproduction
+## 6. No six permutation monomials reach the high-intersection frontier
+
+The preceding value `b=2` is maximal in the entire six-permutation-monomial
+family.
+
+### Theorem 6.1
+
+For any six degree-six permutation monomials, with repetitions allowed, if
+`H` is the span of their middle derivative spaces, then
+
+\[
+ \dim(D_3(\operatorname{perm}_6)\cap H)\leq2.       \tag{6.1}
+\]
+
+### Proof
+
+The cubic subpermanents of `perm_6` occupy distinct row-column weights.  A
+subpermanent lies in the coordinate-monomial space `H` exactly when all its
+six matching monomials occur as middle divisors of the selected permutation
+monomials.  If no subpermanent is covered, (6.1) is immediate.
+
+Otherwise normalize one covered block to the top `3 x 3` block.  Its six
+matchings require six distinct selected permutations.  Label them by their
+top restrictions `pi in S_3`.  Their bottom restrictions define an arbitrary
+function
+
+\[
+ \phi:S_3\longrightarrow S_3.                     \tag{6.2}
+\]
+
+Consider another three-row set.  If it contains one or two top rows, the
+images of those rows vary through more than one top-column set as `pi` ranges
+over all of `S_3`.  Hence the six selected permutations do not map that row
+set to one fixed three-column set, so it cannot support a covered
+subpermanent.  The only candidates are therefore the original top block and
+the complementary bottom block.  The bottom block is covered exactly when
+the six values of `phi` are distinct.  Thus there are one or two covered
+subpermanents, proving (6.1).
+
+This pure argument also handles repetitions: fewer than six distinct selected
+permutations cannot cover even the first six matchings.  The exact audit
+independently enumerates all `6^6=46,656` functions in (6.2), obtaining 45,936
+families with intersection one and `6!=720` families with intersection two.
+The enumeration is a diagnostic, not a premise of the theorem.
+
+Consequently no six-fixed permutation-monomial configuration can enter the
+hypothetical lower-26 frontier `b>=20`.  Any relevant high-intersection
+geometry must use genuinely non-coordinate Chow terms.
+
+## 7. Reproduction
 
 Run
 
