@@ -631,3 +631,95 @@ integer minor nonzero modulo the prime.  The irreducibility of the linear-
 substitution space lets the maximum-rank locus of the current flattening meet
 the nonempty source and target rank-open loci.  This is a route ceiling, not a
 Chow-rank upper bound; the unrestricted interval remains `26..32`.
+
+## 2026-08-13: hereditary central minimality is not a Koszul collision bound
+
+G-034 gives a characteristic-zero counterexample to the most direct
+central-only successor to N6-032.  A six-variable three-term block has exact
+middle ranks `(0,20,40,56)` according to the number of selected terms.  Three
+explicit 40 by 40 integer minors certify the pair ranks, and the completed
+56 by 56 middle determinant is
+
+\[
+6438146982013471831931322630144\ne0.
+\]
+
+Four disjoint copies of this block, plus eight carefully chosen squarefree
+coordinate terms, give twenty terms.  Coordinate-support intersections are
+at most two, so every sub-sum of `s` terms has exact middle rank
+
+\[
+20s-4\,\#\{\text{completed three-term blocks}\}\ge20s-16>20(s-1).
+\]
+
+Thus every nonempty displayed sub-sum is centrally certified minimum, the
+full rank is 384, and all twenty individual terms have rank 20.  Nevertheless
+the completed block has ambient middle third-Koszul rank 329070.  The entire
+twenty-term sum therefore has rank at most 2384640, a collision of at least
+286260 relative to twenty one-term caps.  Two completed blocks also give a
+six-term two-sided defect `c+s-r=658140` inside the four-block sum.
+
+This polynomial is not `perm_6` and has no permanent-specific
+`Q=perm_6-H` or colored quotient-relation geometry.  The result is a route
+barrier, not a rank theorem: lower 27 must use the relative position inside
+the permanent derivative tower.  The ordinary interval stays `26..32`.
+
+## 2026-08-13: exact cross-degree consequences still do not close lower 27
+
+N6-037 extracts the strongest current scalar consequences from a hypothetical
+26-term decomposition.  For the twenty-term residual, write `rho` for the
+ordinary middle relation dimension and `delta` for the radical of its middle
+relation pairing.  Exact central bookkeeping gives
+
+\[
+\rho+\delta\le16,
+\]
+
+so vector Macaulay growth bounds the quartic relation dimension by 25.  The
+320-dimensional colored middle quotient-relation module alone would force
+only 74 quadratic relations.  The permanent-specific intersection is much
+stronger: a 336-dimensional subspace of `E_3\cap G_3` has lower shadow at
+least 203, and hence
+
+\[
+\dim(E_2\cap G_2)\ge203
+\]
+
+together with at least 203 colored quadratic quotient relations.
+
+The dual fixed-six argument is also exact.  If
+`b=dim(E_3\cap H_3)` lies in `45..64`, the quartic intersection
+`J_4=E_4\cap H_4` is at most `15..22`, with the worst value 22 at `b=64`.
+Combining these bounds gives only `dim G_2>=204` in the worst state, far below
+the twenty-term cap 300.  An explicit aggregate integer state satisfies all
+of the displayed scalar dimension consequences, but it is deliberately not
+claimed to arise from Chow terms or any polynomial.  Thus the next missing
+input is geometric: a coupled fixed-six off-central constraint, not another
+scalar shadow inequality.  The ordinary interval remains `26..32`.
+
+## 2026-08-13: full middle rank does not control scalar Koszul homology
+
+G-035 computes four exact characteristic-zero normal-form witnesses for a
+single sextic Chow term with middle rank 20.  Their active third-Koszul
+homology profiles at exterior degrees zero through three are
+
+\[
+(0,0,0,20),\quad(0,0,10,10),\quad
+(0,1,20,20),\quad(0,25,48,25).
+\]
+
+After embedding the active factor span into the 36 permanent variables, the
+corresponding scalar homology dimensions are respectively
+
+\[
+20,\quad320,\quad1105,\quad13961.
+\]
+
+Thus middle rank 20 does not justify replacing every full term by the
+independent-factor homology contribution 20.  The script also constructs the
+twenty canonical cycles indexed by triples of labelled factors and computes
+their images modulo boundaries; the four ranks are `20,10,16,20`.  This
+presentation-valued map retains structure discarded by the scalar Betti
+number, but no subadditive or permanent-relative inequality has yet been
+proved for it.  The result is a route barrier and candidate interface, not a
+lower-27 theorem; the ordinary interval remains `26..32`.

@@ -1,0 +1,220 @@
+{
+  "arithmetic": "exact integers and Fraction over Q",
+  "claim_boundary": "The relation, shadow, and dual-intersection statements are exact characteristic-zero consequences. The integer state is diagnostic only. Nothing here excludes a 26-term decomposition, proves ChowRank(perm_6)>=27, or makes a border-rank claim.",
+  "conditional_on": "a hypothetical 26-term Chow decomposition of perm_6",
+  "fixed_six_dual_quartic_intersection_table": [
+    {
+      "dual_middle_annihilator_dimension": 355,
+      "dual_quadratic_shadow_lower": 210,
+      "lower_separator": "738/125",
+      "middle_intersection_b": 45,
+      "quartic_intersection_upper": 15,
+      "upper_separator": "1181/200"
+    },
+    {
+      "dual_middle_annihilator_dimension": 354,
+      "dual_quadratic_shadow_lower": 210,
+      "lower_separator": "5901/1000",
+      "middle_intersection_b": 46,
+      "quartic_intersection_upper": 15,
+      "upper_separator": "2951/500"
+    },
+    {
+      "dual_middle_annihilator_dimension": 353,
+      "dual_quadratic_shadow_lower": 209,
+      "lower_separator": "5899/1000",
+      "middle_intersection_b": 47,
+      "quartic_intersection_upper": 16,
+      "upper_separator": "59/10"
+    },
+    {
+      "dual_middle_annihilator_dimension": 352,
+      "dual_quadratic_shadow_lower": 209,
+      "lower_separator": "5897/1000",
+      "middle_intersection_b": 48,
+      "quartic_intersection_upper": 16,
+      "upper_separator": "2949/500"
+    },
+    {
+      "dual_middle_annihilator_dimension": 351,
+      "dual_quadratic_shadow_lower": 209,
+      "lower_separator": "1179/200",
+      "middle_intersection_b": 49,
+      "quartic_intersection_upper": 16,
+      "upper_separator": "737/125"
+    },
+    {
+      "dual_middle_annihilator_dimension": 350,
+      "dual_quadratic_shadow_lower": 208,
+      "lower_separator": "1473/250",
+      "middle_intersection_b": 50,
+      "quartic_intersection_upper": 17,
+      "upper_separator": "5893/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 349,
+      "dual_quadratic_shadow_lower": 208,
+      "lower_separator": "589/100",
+      "middle_intersection_b": 51,
+      "quartic_intersection_upper": 17,
+      "upper_separator": "5891/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 348,
+      "dual_quadratic_shadow_lower": 208,
+      "lower_separator": "736/125",
+      "middle_intersection_b": 52,
+      "quartic_intersection_upper": 17,
+      "upper_separator": "5889/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 347,
+      "dual_quadratic_shadow_lower": 207,
+      "lower_separator": "2943/500",
+      "middle_intersection_b": 53,
+      "quartic_intersection_upper": 18,
+      "upper_separator": "5887/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 346,
+      "dual_quadratic_shadow_lower": 207,
+      "lower_separator": "5883/1000",
+      "middle_intersection_b": 54,
+      "quartic_intersection_upper": 18,
+      "upper_separator": "1471/250"
+    },
+    {
+      "dual_middle_annihilator_dimension": 345,
+      "dual_quadratic_shadow_lower": 207,
+      "lower_separator": "11763/2000",
+      "middle_intersection_b": 55,
+      "quartic_intersection_upper": 18,
+      "upper_separator": "3676/625"
+    },
+    {
+      "dual_middle_annihilator_dimension": 344,
+      "dual_quadratic_shadow_lower": 206,
+      "lower_separator": "5879/1000",
+      "middle_intersection_b": 56,
+      "quartic_intersection_upper": 19,
+      "upper_separator": "147/25"
+    },
+    {
+      "dual_middle_annihilator_dimension": 343,
+      "dual_quadratic_shadow_lower": 206,
+      "lower_separator": "1469/250",
+      "middle_intersection_b": 57,
+      "quartic_intersection_upper": 19,
+      "upper_separator": "5877/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 342,
+      "dual_quadratic_shadow_lower": 206,
+      "lower_separator": "29373/5000",
+      "middle_intersection_b": 58,
+      "quartic_intersection_upper": 19,
+      "upper_separator": "58747/10000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 341,
+      "dual_quadratic_shadow_lower": 205,
+      "lower_separator": "734/125",
+      "middle_intersection_b": 59,
+      "quartic_intersection_upper": 20,
+      "upper_separator": "5873/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 340,
+      "dual_quadratic_shadow_lower": 205,
+      "lower_separator": "587/100",
+      "middle_intersection_b": 60,
+      "quartic_intersection_upper": 20,
+      "upper_separator": "5871/1000"
+    },
+    {
+      "dual_middle_annihilator_dimension": 339,
+      "dual_quadratic_shadow_lower": 204,
+      "lower_separator": "5867/1000",
+      "middle_intersection_b": 61,
+      "quartic_intersection_upper": 21,
+      "upper_separator": "1467/250"
+    },
+    {
+      "dual_middle_annihilator_dimension": 338,
+      "dual_quadratic_shadow_lower": 204,
+      "lower_separator": "1173/200",
+      "middle_intersection_b": 62,
+      "quartic_intersection_upper": 21,
+      "upper_separator": "2933/500"
+    },
+    {
+      "dual_middle_annihilator_dimension": 337,
+      "dual_quadratic_shadow_lower": 204,
+      "lower_separator": "5863/1000",
+      "middle_intersection_b": 63,
+      "quartic_intersection_upper": 21,
+      "upper_separator": "733/125"
+    },
+    {
+      "dual_middle_annihilator_dimension": 336,
+      "dual_quadratic_shadow_lower": 203,
+      "lower_separator": "293/50",
+      "middle_intersection_b": 64,
+      "quartic_intersection_upper": 22,
+      "upper_separator": "5861/1000"
+    }
+  ],
+  "macaulay_endpoint_checks": {
+    "16_degree_3_successor": 25,
+    "73_degree_2_successor": 314,
+    "74_degree_2_successor": 322,
+    "least_k_with_k_degree_2_successor_at_least_320": 74
+  },
+  "scalar_nonclosure_witness": {
+    "classification": "AGGREGATE_INTEGER_DIAGNOSTIC_ONLY",
+    "fixed_six": {
+      "middle_intersection_b": 64,
+      "middle_rank_h": 120,
+      "quadratic_intersection_a2": 78,
+      "quadratic_rank": 90,
+      "quartic_intersection_c4": 22
+    },
+    "twenty_term_residual": {
+      "colored_middle_quotient_relations": 340,
+      "colored_quadratic_quotient_relations": 278,
+      "coupled_middle_intersection_with_E3": 336,
+      "coupled_middle_quotient_mod_E3": 56,
+      "coupled_middle_rank_g3": 392,
+      "coupled_quadratic_intersection_with_E2": 203,
+      "coupled_quadratic_rank": 220,
+      "literal_middle_intersection_with_E3": 336,
+      "literal_middle_quotient_mod_E3": 60,
+      "literal_middle_sum_dimension": 396,
+      "literal_quadratic_intersection_with_E2": 203,
+      "literal_quadratic_sum_dimension": 225,
+      "middle_pairing_radical_dimension_delta3": 4,
+      "ordinary_middle_relation_dimension_rho3": 4,
+      "ordinary_quadratic_relation_dimension_kappa2": 75,
+      "ordinary_quartic_relation_dimension_kappa4": 5,
+      "sum_individual_middle_ranks_C3": 400,
+      "sum_individual_quadratic_ranks_C2": 300
+    },
+    "warning": "This is not a family of Chow terms, a polynomial, or a geometric counterexample. It only shows simultaneous feasibility of the listed scalar rank, relation, shadow, and double-quotient bounds."
+  },
+  "status": "EXACT_N6_LOWER27_CROSS_DEGREE_RELATION_FRONTIER",
+  "twenty_term_residual": {
+    "colored_middle_quotient_relation_lower": 320,
+    "colored_quadratic_relation_lower_from_macaulay_only": 74,
+    "colored_quadratic_relation_lower_from_shadow": 203,
+    "middle_rank_lower": 384,
+    "middle_to_quadratic_shadow_certificate": {
+      "dimension": 336,
+      "integer_shadow_lower_bound": 203,
+      "lower_separator": "293/50",
+      "upper_separator": "5861/1000"
+    },
+    "ordinary_middle_relation_plus_radical_upper": 16,
+    "ordinary_quartic_relation_upper": 25,
+    "sum_individual_middle_ranks_upper": 400
+  }
+}
