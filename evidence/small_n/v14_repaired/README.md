@@ -38,6 +38,12 @@ uncontrolled replay side effects are not published.
 The reviewer ZIP performs all active `n=3`, `n=4`, and new `n=5` exact checks
 in that temporary copy and can optionally rebuild the 50-page PDF.  No
 historical 10 GB asset is included.
+
+`REVIEW_BOUNDARY.json` binds the clean main-target proof commit and tree, the
+unchanged PDF and ZIP identities, the hardened verifier blob, and the local
+validation classification.  The exact-head hosted CI run is bound separately
+in the pull-request conversation so that recording the run ID does not mutate
+the reviewed tree.
 The `n=5` endpoint verifier itself uses only the Python standard library;
 `python-flint` is required only by the independent `n=4` replay.
 
