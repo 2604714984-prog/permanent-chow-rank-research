@@ -8,7 +8,7 @@ This note strengthens N6-025 by giving a six-term fixed sum whose displayed
 Chow decomposition is provably minimum, whose central derivative spaces have
 no relations, and whose individual Koszul output spaces have no internal
 relations, but whose aggregate output still meets the permanent Koszul image
-in dimension 72.  It disproves several possible shortcuts for G-028.  It is
+in dimension 72.  It disproves several possible shortcuts for G-029.  It is
 not a decomposition of `perm_6` and does not change the unrestricted interval
 
 \[
@@ -65,7 +65,7 @@ inequality.  Hence
 \]
 
 The six central derivative spaces are a direct sum, so the central relation
-dimension in G-028 is
+dimension in G-029 is
 
 \[
  \rho=0.                                           \tag{2.3}
@@ -138,7 +138,7 @@ hypothesis:
 4. vanishing internal output relation dimension `eta` forces aggregate
    transversality.
 
-A successful successor to G-028 must control the combined loss in the actual
+A successful successor to G-029 must control the combined loss in the actual
 permanent residual configuration; it cannot control `j` solely through
 minimum length, `rho`, or `eta`.
 

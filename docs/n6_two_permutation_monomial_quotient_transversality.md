@@ -122,7 +122,7 @@ reconstructed deterministically.
 
 ## 5. Boundary for lower 26
 
-The theorem shows that the aggregate collision `j` from G-028 does not appear
+The theorem shows that the aggregate collision `j` from G-029 does not appear
 for two permutation monomials.  It does not imply the same statement for:
 
 - three or more permutation monomials;

@@ -1,0 +1,309 @@
+{
+  "all_degree_rows_sha256": "abf7d56e0df8efbb0e24456bf11acc9ae4b505b0fce5c8b8929637cc7b5460df",
+  "boolean_weight_supports_checked_through_n12": 16365,
+  "claim_boundary": "The theorem applies only to invariants that factor through the scalar derivative-dimension profile. It does not constrain Koszul maps, cross-degree incidence, multigraded syzygies, representation-valued homology, quotient geometry, or coupled relation modules.",
+  "next_route": "Any route to the conjectural 2^(n-1) lower bound must use structure discarded by the scalar profile, such as maps between derivative degrees or relations among summands.",
+  "selected_rows": [
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 2,
+        "denominator": 2,
+        "numerator": 3
+      },
+      "central_bound": 2,
+      "central_degrees": [
+        1
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "5e809d67b3c62ab495ddf0c1aadf3ef504fdc75da32f5b3bf5730b4888efd554",
+      "glynn_to_profile_ceiling": {
+        "denominator": 1,
+        "numerator": 1
+      },
+      "glynn_upper_bound": 2,
+      "n": 2
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 3,
+        "denominator": 2,
+        "numerator": 5
+      },
+      "central_bound": 3,
+      "central_degrees": [
+        1,
+        2
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "1591e1b088bf3ebb8dc5610f85e975f51c2bd5a615d30a31809ec6f5ddbc2cfd",
+      "glynn_to_profile_ceiling": {
+        "denominator": 3,
+        "numerator": 4
+      },
+      "glynn_upper_bound": 4,
+      "n": 3
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 5,
+        "denominator": 8,
+        "numerator": 35
+      },
+      "central_bound": 6,
+      "central_degrees": [
+        2
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "b5e8938e063deeaee8b21a8a2629320395585583cc64b49412478c5524fd7543",
+      "glynn_to_profile_ceiling": {
+        "denominator": 3,
+        "numerator": 4
+      },
+      "glynn_upper_bound": 8,
+      "n": 4
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 8,
+        "denominator": 8,
+        "numerator": 63
+      },
+      "central_bound": 10,
+      "central_degrees": [
+        2,
+        3
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "d8e104704e0755b731a9d8a68e0223728c320c07c7f33ffb5f0860119154d0ac",
+      "glynn_to_profile_ceiling": {
+        "denominator": 5,
+        "numerator": 8
+      },
+      "glynn_upper_bound": 16,
+      "n": 5
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 15,
+        "denominator": 16,
+        "numerator": 231
+      },
+      "central_bound": 20,
+      "central_degrees": [
+        3
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "92d39312053b0b0b5adc573e271639b053109a75e9efa54cc81ffacc2fc37a82",
+      "glynn_to_profile_ceiling": {
+        "denominator": 5,
+        "numerator": 8
+      },
+      "glynn_upper_bound": 32,
+      "n": 6
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 27,
+        "denominator": 16,
+        "numerator": 429
+      },
+      "central_bound": 35,
+      "central_degrees": [
+        3,
+        4
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "b38cbf686f79a491b9b99b495ce15319a056a11dd5e4830ebe70ed84620039df",
+      "glynn_to_profile_ceiling": {
+        "denominator": 35,
+        "numerator": 64
+      },
+      "glynn_upper_bound": 64,
+      "n": 7
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 51,
+        "denominator": 128,
+        "numerator": 6435
+      },
+      "central_bound": 70,
+      "central_degrees": [
+        4
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "b544ff67803ed5f3cf953ce54912c6021e6c40f4ea97e503c0f4d828d3d40b31",
+      "glynn_to_profile_ceiling": {
+        "denominator": 35,
+        "numerator": 64
+      },
+      "glynn_upper_bound": 128,
+      "n": 8
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 95,
+        "denominator": 128,
+        "numerator": 12155
+      },
+      "central_bound": 126,
+      "central_degrees": [
+        4,
+        5
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "75ec1c3c7473bc38a2fe961f663f22252ce2d370592ced89808533dfd2d5edf4",
+      "glynn_to_profile_ceiling": {
+        "denominator": 63,
+        "numerator": 128
+      },
+      "glynn_upper_bound": 256,
+      "n": 9
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 181,
+        "denominator": 256,
+        "numerator": 46189
+      },
+      "central_bound": 252,
+      "central_degrees": [
+        5
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "fe8d0d3f870a77f7dfd4d2f323087a0c360f93119975b7274c14fbe6f43cbdd1",
+      "glynn_to_profile_ceiling": {
+        "denominator": 63,
+        "numerator": 128
+      },
+      "glynn_upper_bound": 512,
+      "n": 10
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 345,
+        "denominator": 256,
+        "numerator": 88179
+      },
+      "central_bound": 462,
+      "central_degrees": [
+        5,
+        6
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "f2f7cf3f24b3fde8c99dd1531b128683b633a2d6729e19ea8fc74f250998d5f2",
+      "glynn_to_profile_ceiling": {
+        "denominator": 231,
+        "numerator": 512
+      },
+      "glynn_upper_bound": 1024,
+      "n": 11
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 661,
+        "denominator": 1024,
+        "numerator": 676039
+      },
+      "central_bound": 924,
+      "central_degrees": [
+        6
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "7e9cf157581ac8b84d670c243d3b32c07c69b6056d6b74f9be5d7b522df581be",
+      "glynn_to_profile_ceiling": {
+        "denominator": 231,
+        "numerator": 512
+      },
+      "glynn_upper_bound": 2048,
+      "n": 12
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 131461,
+        "denominator": 262144,
+        "numerator": 34461632205
+      },
+      "central_bound": 184756,
+      "central_degrees": [
+        10
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "e07c276bfab6692262bc4e00b0968598cc7e3fb0301a9d712650b1be25ec9612",
+      "glynn_to_profile_ceiling": {
+        "denominator": 46189,
+        "numerator": 131072
+      },
+      "glynn_upper_bound": 524288,
+      "n": 20
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 110142475,
+        "denominator": 67108864,
+        "numerator": 7391536347803839
+      },
+      "central_bound": 155117520,
+      "central_degrees": [
+        15
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "edf36d3d6f3a705cd2b1adcc25b885e9b3d57d46781db34c5c84b0e2fb5d9795",
+      "glynn_to_profile_ceiling": {
+        "denominator": 9694845,
+        "numerator": 33554432
+      },
+      "glynn_upper_bound": 536870912,
+      "n": 30
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 97777236746,
+        "denominator": 274877906944,
+        "numerator": 26876802183334044115405
+      },
+      "central_bound": 137846528820,
+      "central_degrees": [
+        20
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "a5cd9bb756427c173344e11cb23ea30d25b57e0f656c4c52792fde678e9d2513",
+      "glynn_to_profile_ceiling": {
+        "denominator": 34461632205,
+        "numerator": 137438953472
+      },
+      "glynn_upper_bound": 549755813888,
+      "n": 40
+    },
+    {
+      "all_degree_direct_sum_ratio": {
+        "ceiling": 89609514959901,
+        "denominator": 140737488355328,
+        "numerator": 12611418068195524166851562157
+      },
+      "central_bound": 126410606437752,
+      "central_degrees": [
+        25
+      ],
+      "deterministic_weight_check_count": 7,
+      "full_profile_sha256": "59c457381f0cddfb0facc88d1be1dd71739ce2e4de751c5881458dfbb4ff9dd4",
+      "glynn_to_profile_ceiling": {
+        "denominator": 15801325804719,
+        "numerator": 70368744177664
+      },
+      "glynn_upper_bound": 562949953421312,
+      "n": 50
+    }
+  ],
+  "status": "GENERAL_DERIVATIVE_PROFILE_CEILING_REPLAYED",
+  "tested_degree_range": [
+    2,
+    50
+  ],
+  "theorem": {
+    "asymptotic_missing_factor": "The Glynn upper bound divided by the profile ceiling is asymptotic to sqrt(pi*n/8).",
+    "profile_ceiling": "Every monotone, positively homogeneous, subadditive Chow-rank lower-bound functional that factors only through (dim D_0(f),...,dim D_n(f)) is at most binom(n,floor(n/2)) on perm_n.",
+    "weighted_direct_sum_corollary": "Every nonnegative weighted direct sum of scalar catalecticants has normalized rank ratio at most the central binomial coefficient; equality requires support only in central degree(s)."
+  },
+  "validated_degree_count": 49
+}

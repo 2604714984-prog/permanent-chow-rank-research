@@ -1,0 +1,279 @@
+{
+  "all_rows_sha256": "d995e8558bf83644b76051eb938fabbf9a2121157176b45bb9e510331f60b08e",
+  "claim_boundary": "This theorem determines the rank of one coefficient slice in an anchored column-homogeneous dictionary. It does not construct an n-term decomposition of the full permanent, determine arbitrary row-homogeneous tensor rank, or change unrestricted Chow rank.",
+  "deterministic_anchored_slice_coefficients_checked": 24570,
+  "field": "characteristic zero",
+  "n6": {
+    "anchored_continuous_slice_rank": 6,
+    "boolean_dimension": 5,
+    "column_sign_slice_rank": 32,
+    "unrestricted_chow_rank_changed": false
+  },
+  "route_decision": "The Boolean diagonal slice cannot prove arbitrary anchored row- or column-homogeneous rank larger than n. The exponential sign lower bound relies essentially on the discrete plus/minus-one dictionary.",
+  "selected_rows": [
+    {
+      "boolean_assignment_checks": 2,
+      "construction_point_count": 2,
+      "construction_points": [0, 1],
+      "construction_weights": [
+        {"denominator": 1, "numerator": -1},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "d": 1,
+      "exact_affine_segre_rank": 2,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 2
+    },
+    {
+      "boolean_assignment_checks": 4,
+      "construction_point_count": 3,
+      "construction_points": [0, 1, 2],
+      "construction_weights": [
+        {"denominator": 2, "numerator": 1},
+        {"denominator": 1, "numerator": -1},
+        {"denominator": 2, "numerator": 1}
+      ],
+      "d": 2,
+      "exact_affine_segre_rank": 3,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 3
+    },
+    {
+      "boolean_assignment_checks": 8,
+      "construction_point_count": 4,
+      "construction_points": [0, 1, 2, 3],
+      "construction_weights": [
+        {"denominator": 6, "numerator": -1},
+        {"denominator": 2, "numerator": 1},
+        {"denominator": 2, "numerator": -1},
+        {"denominator": 6, "numerator": 1}
+      ],
+      "d": 3,
+      "exact_affine_segre_rank": 4,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 4
+    },
+    {
+      "boolean_assignment_checks": 16,
+      "construction_point_count": 5,
+      "construction_points": [0, 1, 2, 3, 4],
+      "construction_weights": [
+        {"denominator": 24, "numerator": 1},
+        {"denominator": 6, "numerator": -1},
+        {"denominator": 4, "numerator": 1},
+        {"denominator": 6, "numerator": -1},
+        {"denominator": 24, "numerator": 1}
+      ],
+      "d": 4,
+      "exact_affine_segre_rank": 5,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 5
+    },
+    {
+      "boolean_assignment_checks": 32,
+      "construction_point_count": 6,
+      "construction_points": [0, 1, 2, 3, 4, 5],
+      "construction_weights": [
+        {"denominator": 120, "numerator": -1},
+        {"denominator": 24, "numerator": 1},
+        {"denominator": 12, "numerator": -1},
+        {"denominator": 12, "numerator": 1},
+        {"denominator": 24, "numerator": -1},
+        {"denominator": 120, "numerator": 1}
+      ],
+      "d": 5,
+      "exact_affine_segre_rank": 6,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 6
+    },
+    {
+      "boolean_assignment_checks": 64,
+      "construction_point_count": 7,
+      "construction_points": [0, 1, 2, 3, 4, 5, 6],
+      "construction_weights": [
+        {"denominator": 720, "numerator": 1},
+        {"denominator": 120, "numerator": -1},
+        {"denominator": 48, "numerator": 1},
+        {"denominator": 36, "numerator": -1},
+        {"denominator": 48, "numerator": 1},
+        {"denominator": 120, "numerator": -1},
+        {"denominator": 720, "numerator": 1}
+      ],
+      "d": 6,
+      "exact_affine_segre_rank": 7,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 7
+    },
+    {
+      "boolean_assignment_checks": 128,
+      "construction_point_count": 8,
+      "construction_points": [0, 1, 2, 3, 4, 5, 6, 7],
+      "construction_weights": [
+        {"denominator": 5040, "numerator": -1},
+        {"denominator": 720, "numerator": 1},
+        {"denominator": 240, "numerator": -1},
+        {"denominator": 144, "numerator": 1},
+        {"denominator": 144, "numerator": -1},
+        {"denominator": 240, "numerator": 1},
+        {"denominator": 720, "numerator": -1},
+        {"denominator": 5040, "numerator": 1}
+      ],
+      "d": 7,
+      "exact_affine_segre_rank": 8,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 8
+    },
+    {
+      "boolean_assignment_checks": 256,
+      "construction_point_count": 9,
+      "construction_points": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "construction_weights": [
+        {"denominator": 40320, "numerator": 1},
+        {"denominator": 5040, "numerator": -1},
+        {"denominator": 1440, "numerator": 1},
+        {"denominator": 720, "numerator": -1},
+        {"denominator": 576, "numerator": 1},
+        {"denominator": 720, "numerator": -1},
+        {"denominator": 1440, "numerator": 1},
+        {"denominator": 5040, "numerator": -1},
+        {"denominator": 40320, "numerator": 1}
+      ],
+      "d": 8,
+      "exact_affine_segre_rank": 9,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 9
+    },
+    {
+      "boolean_assignment_checks": 1024,
+      "construction_point_count": 11,
+      "construction_points": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "construction_weights": [
+        {"denominator": 3628800, "numerator": 1},
+        {"denominator": 362880, "numerator": -1},
+        {"denominator": 80640, "numerator": 1},
+        {"denominator": 30240, "numerator": -1},
+        {"denominator": 17280, "numerator": 1},
+        {"denominator": 14400, "numerator": -1},
+        {"denominator": 17280, "numerator": 1},
+        {"denominator": 30240, "numerator": -1},
+        {"denominator": 80640, "numerator": 1},
+        {"denominator": 362880, "numerator": -1},
+        {"denominator": 3628800, "numerator": 1}
+      ],
+      "d": 10,
+      "exact_affine_segre_rank": 11,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 11
+    },
+    {
+      "boolean_assignment_checks": 4096,
+      "construction_point_count": 13,
+      "construction_points": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "construction_weights": [
+        {"denominator": 479001600, "numerator": 1},
+        {"denominator": 39916800, "numerator": -1},
+        {"denominator": 7257600, "numerator": 1},
+        {"denominator": 2177280, "numerator": -1},
+        {"denominator": 967680, "numerator": 1},
+        {"denominator": 604800, "numerator": -1},
+        {"denominator": 518400, "numerator": 1},
+        {"denominator": 604800, "numerator": -1},
+        {"denominator": 967680, "numerator": 1},
+        {"denominator": 2177280, "numerator": -1},
+        {"denominator": 7257600, "numerator": 1},
+        {"denominator": 39916800, "numerator": -1},
+        {"denominator": 479001600, "numerator": 1}
+      ],
+      "d": 12,
+      "exact_affine_segre_rank": 13,
+      "hamming_weight_coefficients": [
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 0},
+        {"denominator": 1, "numerator": 1}
+      ],
+      "lower_bound_induction_value": 13
+    }
+  ],
+  "status": "GENERAL_AFFINE_SEGRE_SLICE_RANK_REPLAYED",
+  "tested_tensor_order_range": [1, 12],
+  "theorem": {
+    "affine_segre_rank": "The affine-chart Segre rank of e_1^(tensor d) is exactly d+1.",
+    "permanent_slice_consequence": "For the n x n permanent Boolean diagonal slice, the exact rank in the anchored continuous column-homogeneous dictionary is n.",
+    "sign_contrast": "The same slice has exact rank 2^(n-1) in the sign dictionary but only n in the continuous affine chart."
+  },
+  "validated_order_count": 12
+}

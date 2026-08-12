@@ -4,26 +4,26 @@
 
 ```text
 XU_GNANG_AUTHOR_POSTMORTEM=COMPLETE
-ONE_DEFECT_THEOREM=COMPLETE
-TWO_DEFECT_BLOCK_DIAGNOSTIC=COMPLETE
-FIRST_AGGREGATE_ATOMIC_RANK=COMPLETE
-SIXTEEN_BASE_AGGREGATE_CONSTRUCTION=COMPLETE
-SIXTEEN_BASE_ATOMIC_RANK=EXACT_36
-GLOBAL_TWO_DEFECT_TERM_SUPPORT=OPEN
+FULL_COLUMN_SIGN_THEOREM=EXACT_32
+FULL_ROW_SIGN_THEOREM=EXACT_32
+ONE_DEFECT_THEOREM=EXACT_32
+TWO_DEFECT_MINIMUM=EXACT_32
+SIGN_FAMILY_CONSTRUCTION_ROUTE=CLOSED
 ```
 
-The current unrestricted interval remains
+The unrestricted interval remains
 
 \[
 25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
-No result in this file changes that interval.
+The exact sign-family theorem does not change this interval.
 
 The detailed records are
 
 ```text
 docs/xu_gnang_v2_reconciliation.md
+docs/general_column_sign_rigidity.md
 docs/n6_one_defect_sign_rigidity.md
 docs/n6_two_defect_sign_block_diagnostic.md
 docs/n6_two_defect_aggregate_atomic_rank.md
@@ -31,25 +31,12 @@ docs/n6_two_defect_sixteen_base_aggregate.md
 docs/n6_two_defect_separator_rank36.md
 ```
 
-## 1. Xu--Gnang provenance and claim boundary
+## 1. Provenance boundary
 
 Rongyu Xu and Edinah Gnang, *On the Chow-rank of the permanent*,
-arXiv:2311.05890, belongs to the repository owner's own earlier research
-line. It is treated as withdrawn and disproved, not as an external theorem,
-external novelty gate, or positive dependency.
-
-The retained v2 source identities are
-
-```text
-PDF SHA-256
-fb23abbb5e521e5d72d30dbc5909887e2855fe3ab31e2dfa2f655d4b4705f1e9
-
-source gzip SHA-256
-2bc4bd30123c89e64bc27a1977abbdd1ebd760e0f05f0b6132d8c6b298d707b9
-
-extracted TeX SHA-256
-4c7860e4f14030e43a9253be6d7bfa728b4c911fb439f83eda5da379efe41606
-```
+arXiv:2311.05890, belongs to the repository owner's earlier research line. It
+is treated as withdrawn and disproved, not as an external theorem, novelty
+gate, or positive dependency.
 
 Version 3 was withdrawn with the comment
 
@@ -57,7 +44,7 @@ Version 3 was withdrawn with the comment
 Incorrect statement Thm 4.2
 ```
 
-No claim from that theorem is used in the current repository.
+No claim from that theorem is used here.
 
 ## 2. Family diagram
 
@@ -71,223 +58,155 @@ F_uniform
     proper subset unrestricted Chow terms
 ```
 
-A theorem for any one of the proper subfamilies is not an unrestricted
-Chow-rank theorem.
+The first four column-oriented families now all have exact minimum 32 for
+`perm_6`. The row-sign family also has exact minimum 32. Arbitrary complex
+row-homogeneous and unrestricted Chow terms remain outside the theorem.
 
-## 3. N6-019: exact one-defect rigidity
+## 3. General full-sign theorem
 
-The normalized one-defect family has
+For every `n>=2`, a normalized column-sign term has the form
+
+\[
+\prod_{j=0}^{n-1}
+\left(
+\sum_i\varepsilon_{ij}x_{ij}
+\right),
+\qquad
+\varepsilon_{ij}\in\{\pm1\},
+\qquad
+\varepsilon_{0j}=1.
+\]
+
+Retain the coefficients of the `2^(n-1)` monomials
+
+\[
+x_{00}
+\prod_{j=1}^{n-1}
+\begin{cases}
+x_{jj},&s_j=1,\\
+x_{0j},&s_j=0.
+\end{cases}
+\]
+
+The permanent restricts to the delta function at the all-ones mask. Every
+normalized column-sign term restricts to a Walsh character determined only by
+its diagonal sign vector. Walsh inversion gives a nonzero aggregate
+coefficient for every one of the `2^(n-1)` signatures.
+
+Glynn supplies the matching number of terms. Therefore
+
+\[
+\boxed{
+\operatorname{ColumnSignRank}(\operatorname{perm}_n)
+=
+\operatorname{RowSignRank}(\operatorname{perm}_n)
+=
+2^{n-1}.
+}
+\]
+
+The same lower bound holds in the larger anchored family where off-diagonal
+coefficients are arbitrary, every row-zero coefficient is nonzero, and every
+normalized diagonal ratio is `+1` or `-1`.
+
+## 4. Exact `n=6` consequence
+
+The normalized full column-sign family contains
+
+\[
+2^{30}=1,073,741,824
+\]
+
+terms. They split into 32 diagonal signature classes, each of size
+
+\[
+2^{25}=33,554,432.
+\]
+
+Any column-sign decomposition of `perm_6` must have a nonzero aggregate in
+every signature class. Hence:
+
+```text
+uniform sign minimum=32
+one-defect sign minimum=32
+two-defect sign minimum=32
+full column-sign minimum=32
+full row-sign minimum=32
+```
+
+No sign-family decomposition with at most 31 terms exists.
+
+## 5. Earlier one- and two-defect results
+
+The general theorem determines the minimum support, but the earlier finite
+work remains valid structural evidence.
+
+### One defect
 
 ```text
 unique terms=5984
 linear-span dimension=987
+minimum support=32
 ```
 
-and
-
-\[
-\boxed{
-\operatorname{OneDefectSignRank}(\operatorname{perm}_6)=32.
-}
-\]
-
-Therefore it contains no decomposition with at most 31 terms. This is a
-restricted-family theorem only.
-
-## 4. N6-020: exact two-defect parity blocks
-
-The normalized two-defect family has
+### Two defects
 
 ```text
 unique terms=467264
-global pairwise-function dimension=406
-exact family-span dimension=11533
+pairwise-function dimension=406
+family-span dimension=11533
+parity-block ranks=406,406,406,322,322,207
+minimum support=32
 ```
 
-Its parity-block ranks by parity Hamming weight are
+The earlier 24-base and 16-base aggregate representations are not term
+decompositions. Their exact decompression costs remain
 
 ```text
-406, 406, 406, 322, 322, 207.
+first fixed assignment=744
+second fixed assignment=576
 ```
 
-The first separator `f` gave an exact representation using 24 nonzero
-base-labelled aggregate spaces. This disproved mechanical extension of the
-one-defect 32-base support argument, but it did not give 24 Chow terms.
+These computations explain how aggregate support can fall below 32 while
+actual sign-term support remains at least 32.
 
-## 5. N6-021: atomic cost of the first aggregate assignment
+## 6. Why the theorem does not restore row-homogeneous optimality
 
-For the N6-020 separator,
+For an arbitrary complex row- or column-homogeneous term, normalized diagonal
+ratios are arbitrary field elements. Its Boolean-slice vector is a general
+rank-one tensor rather than a Walsh character. The discrete character-basis
+argument no longer applies.
 
-\[
-\rho_2(f)=\rho_2(1-f)=46.
-\]
-
-The fixed N6-020 coefficient histogram contains eight nonzero constant
-aggregates and sixteen nonconstant aggregates proportional to `f` or `1-f`.
-Hence its exact actual-term cost is
-
-\[
-8+16\cdot46=744.
-\]
-
-That aggregate assignment is therefore closed as a constructive failure. The
-number 744 is not a lower bound for another assignment or for the global
-two-defect family.
-
-## 6. N6-022 and N6-023: exact cost of the 16-base assignment
-
-Let
-
-\[
-g(r)=n_4(r)n_5(r),
-\]
-
-where `n_i(r)` is the number of occurrences of row value `i` in the assignment
-`r`. Then
-
-\[
-g|_{X_{31}}=1,
-\qquad
-g|_{X_7}=0,
-\]
-
-and
-
-\[
-W_a
-=
-\frac{\chi_{31}(a)-\chi_7(a)}{32}\,g
-\]
-
-is an exact aggregate representation of the permanent. It is nonzero exactly
-on the 16 bases
+Therefore:
 
 ```text
-8,9,10,11,12,13,14,15,
-16,17,18,19,20,21,22,23.
+FULL_COLUMN_SIGN_RANK=32
+FULL_ROW_SIGN_RANK=32
+ARBITRARY_COMPLEX_ROW_HOMOGENEOUS_RANK=OPEN
+UNRESTRICTED_CHOW_RANK=25..32
 ```
 
-N6-022 proved aggregate support at most 16 and the preliminary window
+## 7. Route decision
 
-\[
-31\le\rho_2(g)\le36.
-\]
+The sign-family construction route is closed. No further defect-level
+expansion, full dictionary enumeration, sparse optimizer, SAT architecture,
+or orbit registry is authorized.
 
-N6-023 closes the interval:
+A shorter unrestricted decomposition, if it exists, must leave the sign and
+anchored diagonal-sign families. Future construction searches must use a
+compact genuinely complex ansatz and require exact algebraic reconstruction.
 
-\[
-\boxed{\rho_2(g)=36.}
-\]
-
-### Retraction step
-
-The row retraction
-
-```text
-1,2,3 -> 0
-0,4,5 fixed
-```
-
-fixes `g` and sends every normalized sign label `v` to `v & 24`. It therefore
-reduces the full fixed-base dictionary without increasing support to the four
-labels
-
-```text
-0, 8, 16, 24.
-```
-
-Since the restricted dictionary is a subdictionary of the full one, the two
-atomic ranks are equal.
-
-### Exact lower-bound interface
-
-The nine restricted nonconstant pair atoms have 243 exact support-affine
-spaces over `Q`. Exact affine containment compresses 227 of the 231 spaces of
-support at least four to a size-two or size-three pair representation plus no
-more ordinary atoms than the saved support. Four exceptional spaces remain.
-After normalization the complete global modification dictionary contains
-
-```text
-7 cost-one point bundle types
-2 cost-two point bundle types
-2 cost-three affine bundle types
-```
-
-on each of the 15 column pairs.
-
-The unique size-two realization on all 15 pairs starts with 30 pair atoms and
-requires six ordinary corrections. Every way to spend at most five additional
-atoms is then exhausted exactly. The largest direct layer has 3,277,365
-configurations; the 50,471,421 five-bundle layer is covered by an exact
-meet-in-the-middle certificate. No support at most 35 exists.
-
-The existing 36-atom construction supplies the matching upper bound. Thus the
-specific 16-base assignment has exact actual cost
-
-\[
-16\cdot36=\boxed{576}.
-\]
-
-This closes that construction as a route to a decomposition with at most 25
-terms. It does not prove that 16 is the minimum aggregate support or that every
-two-defect aggregate assignment costs at least 576.
-
-## 7. Current interpretation
-
-The sign route has established:
-
-1. the fixed uniform and one-defect families remain rigid at 32 terms;
-2. aggregate support can fall below 32, first to 24 and then to 16;
-3. the two explicit low-base assignments have exact actual costs 744 and 576;
-4. optimizing aggregate support alone is therefore not a useful proxy for
-   actual sign-term support.
-
-The two explicit separator constructions are now closed constructive failures.
-The unresolved object is the complete vector-valued assignment
-
-\[
-a\longmapsto W_a
-\]
-
-subject to all 32 Fourier-fiber equations, with objective
-
-\[
-\sum_a\rho_2(W_a).
-\]
-
-## 8. Next implementation gate
-
-The complete normalized column-sign family has `32^6=2^30` indexed terms. A
-direct dictionary enumeration, generic sparse optimizer, SAT architecture,
-orbit registry, manager, or dispatcher is not authorized.
-
-Further sign-family work requires a compact exact theorem, preferably:
-
-1. a vector-valued lower bound on `sum_a rho_2(W_a)` derived directly from the
-   Fourier-fiber constraints; or
-2. a symmetry-reduced aggregate assignment with a rigorously reconstructed
-   actual support below 32.
-
-Another separator with a small base count but no simultaneous atomic-cost
-control is not enough. Fail closed if the next step requires a broad search
-without a theorem that makes the interface independently replayable.
-
-## 9. Current decision
+## 8. Current decision
 
 ```text
 XU_GNANG_LINE=SELF_AUTHORED_WITHDRAWN_DISPROVED
 XU_GNANG_THEOREM_4_2_USED_AS_DEPENDENCY=false
-ONE_DEFECT_SIGN_RANK=32
-TWO_DEFECT_PARITY_BLOCKS=EXACT
-FIRST_FIXED_AGGREGATE_COST=744
-SECOND_AGGREGATE_BASE_SUPPORT=16
-SECOND_FIXED_BASE_ATOMIC_RANK=36
-SECOND_FIXED_ASSIGNMENT_COST=576
-SIXTEEN_BASE_MINIMALITY=NOT_PROVED
-GLOBAL_TWO_DEFECT_MINIMUM=OPEN
-FULL_COLUMN_SIGN_FAMILY=OPEN
+GENERAL_FULL_COLUMN_SIGN_RANK=2^(n-1)
+GENERAL_FULL_ROW_SIGN_RANK=2^(n-1)
+N6_FULL_COLUMN_SIGN_RANK=32
+N6_TWO_DEFECT_MINIMUM=32
+SIGN_DEFECT_EXPANSION_AUTHORIZED=false
 ROW_HOMOGENEOUS_TENSOR_RANK=OPEN
 UNRESTRICTED_CHOW_INTERVAL=25..32
-BROAD_SPARSE_OPTIMIZATION_AUTHORIZED=false
 NOVELTY_CLAIM=FORBIDDEN
 ```

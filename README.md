@@ -35,7 +35,8 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | Vector-valued Macaulay relation cap | proof draft complete; finite interfaces replayed | for `K subset W tensor Sym^2 V`, `dim K^(1)<=dim(K)^{<2>}`; the proof uses a universal Grassmannian kernel and an explicit colored-monomial degeneration |
 | Glynn column-uniform sign family | proof draft complete; exact Walsh replay | the `2^(n-1)` sign products are linearly independent and the unique expansion of `perm_n` in their span uses every term |
-| Full column-sign and row-sign families | proof draft complete; exact Walsh replay | a Boolean monomial slice sends every sign term to one Walsh character while `perm_n` becomes a delta function, proving exact restricted rank `2^(n-1)` even for the larger anchored diagonal-sign family |
+| Scalar derivative-profile ceiling | proof draft complete; exact replay | every monotone homogeneous subadditive profile method is capped at `binom(n,floor(n/2))`; nonnegative weighted scalar catalecticant sums cannot beat the central degree |
+| Full column-sign and row-sign families | proof draft complete; primary and independent Walsh replay | `ColumnSignRank(perm_n)=RowSignRank(perm_n)=2^(n-1)`; the same lower bound holds for arbitrary off-diagonal coefficients with nonzero row-zero anchors and sign-valued normalized diagonal ratios |
 | General relation tableau and central pairing | proof draft complete; exact sparse replay | arbitrary-degree vector Macaulay growth and noncentral block-Sylvester control coupled sums; the exact central correction is a restricted relation pairing, but it can vanish on a strict two-term Chow sum |
 | Central relation-radical falsification | proof draft complete; exact rational replay; diagnostic only | an explicit six-term squarefree presentation has `rho=47` and `rank(beta|R)=24`, so its radical has dimension `23>4(6-1)`; the presentation is not proved minimum, and the minimum-decomposition version remains open |
 | Three-monomial radical classification | proof draft complete; exact rational replay; restricted family | for three distinct squarefree sextic coordinate monomials, central rank above the two-term cap 40 forces radical dimension at most `8=4(3-1)`; the bound is sharp for a certified minimum three-term sum |
@@ -48,7 +49,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` component-prolongation closure | superseded proof draft; exact arithmetic replayed | excludes 23-term decompositions and proves the historical lower bound 24 |
 | `n=6` fixed-six lower-25 closure | proof draft complete; primary and independent arithmetic replayed | fixing six terms in a hypothetical 24-term decomposition gives `40<=b<=64`; vector-valued Macaulay growth and block-Sylvester exclude every state, so `ChowRank(perm_6)>=25` |
 | `n=6` lower-26 fixed-count diagnostic | computation replayed; no route selected | `q=6,7,8` leave 327, 355, and 635 states after central pruning, so the central first-Koszul fixed-count route is suspended |
-| `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the Glynn sign subfamily still requires all 32 terms |
+| `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` second-Koszul homology closure | proof draft complete; computation replayed; diagnostic only | the output-degree-two ranks are exactly `127125` for `perm_6` and `8730` for one independent Chow term; a six-term common-factor family has scalar homology `465>450`, rejecting monotone scalar homology upper bounds for lower 26 |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
@@ -60,17 +61,17 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` six column-uniform sign-term residual exclusion | proof draft complete; restricted fixed part; pure proof | six distinct column-uniform sign terms have coupled central dimension `h=120` and intersection `b<=40`, contradicting the residual necessity `h<=2b-20` in every hypothetical 25-term decomposition, even if the other nineteen terms are arbitrary |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
-| Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
+| Exact unrestricted general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
 “Proof draft complete” means the argument is written in the repository and its arithmetic implementation is tested. It does **not** mean external peer review or literature novelty review has been completed.
 
-The current in-repository interval for `n=6` is
+The current in-repository unrestricted interval for `n=6` is
 
 ```text
 25 <= ChowRank(perm_6) <= 32.
 ```
 
-No lower-26, border-lower-25, or exact-32 claim is made.
+The full sign-family rank is exactly 32, but no lower-26, border-lower-25, or exact unrestricted-32 claim is made.
 
 ## Reviewed general lower-bound table
 
@@ -125,9 +126,16 @@ python scripts/general_column_row_sign_rank_audit.py
 python scripts/general_relation_tableau_audit.py
 python scripts/general_relation_radical_counterexample.py
 python scripts/degree6_three_monomial_radical_classification.py
+python scripts/general_derivative_profile_ceiling_audit.py
+python scripts/general_column_sign_rigidity_audit.py
+python scripts/general_column_sign_rigidity_independent.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
+
+The scalar derivative-profile theorem proves a structural ceiling rather than a numerical promotion. Even using all derivative degrees with arbitrary nonnegative weights cannot beat the central binomial coefficient. The raw adjacent differentiation-map kernel dimension is also determined by the profile. The general program therefore moves to coordinate-invariant natural maps, higher compatibility quotients, syzygies, and coupled relation modules.
+
+The full column-sign theorem uses a Boolean diagonal coefficient slice. Every normalized column-sign term becomes one Walsh character determined by its diagonal signs, while the permanent becomes a delta function. Walsh inversion forces all `2^(n-1)` signature aggregates to be nonzero, and Glynn supplies the matching upper bound. For `n=6`, this closes the entire `2^30` normalized column-sign family at 32 terms without enumerating it. Arbitrary complex row-homogeneous and unrestricted Chow terms remain outside the theorem.
 
 The universal single-term theorem first degenerates the at-most-six-dimensional factor span to a coordinate subspace while keeping the relevant quadratic intersection at fixed dimension. The coordinate audit then supplies the only local cases: no rectangle, one rectangle, or a `K_2,3` / `K_3,2` rectangle space. The last case is eliminated by regenerated integer minors of determinant `-1` in orders 18 and 45.
 

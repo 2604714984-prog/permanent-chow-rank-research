@@ -340,7 +340,7 @@ sign minimum is now closed without optimizing their aggregate costs.
 ## 8. Sign-route closure
 
 The former N6-24 joint aggregate-cost program is cancelled.  Its target was a
-lower bound for a proper subfamily that G-022 now settles by a shorter theorem.
+lower bound for a proper subfamily that G-023 now settles by a shorter theorem.
 No full sign dictionary, sparse optimizer, or additional defect hierarchy is
 authorized.
 
@@ -380,7 +380,7 @@ the relation module of `M(sum_i T_i)` that couples two adjacent derivative
 degrees.  If no such inequality beats the common-factor example on paper, the
 route stops before implementation.
 
-That first step is now completed in G-023.  Literal relation dimensions satisfy
+That first step is now completed in G-024.  Literal relation dimensions satisfy
 
 \[
 \kappa_{m+1}\le\kappa_m^{\langle m\rangle},
@@ -403,11 +403,11 @@ At the center there is an exact extra term
 The dimension-only route nevertheless fails.  Two squarefree degree-six Chow
 terms sharing four factors form a strict rank-two sum with `rho=4` and zero
 pairing correction.  Moreover the two-step cap at `kappa_2=37` is 331 and hence
-ambient-vacuous.  G-023 is retained as a structural theorem, not promoted to a
+ambient-vacuous.  G-024 is retained as a structural theorem, not promoted to a
 lower-26 program.  Any successor must control the geometry of the radical or a
 different quotient module, not only its dimension.
 
-G-024 then falsifies the first naive radical controls.  An explicit six-term
+G-025 then falsifies the first naive radical controls.  An explicit six-term
 squarefree presentation has `rho=47`, restricted pairing rank 24, and radical
 dimension `23>4(6-1)`.  Its raw derivative shadow from fourth-order relations
 is all of the 47-dimensional central relation space, not the 23-dimensional
@@ -417,7 +417,7 @@ next bounded question is therefore whether minimum length itself forces a
 radical cap, or whether an example can be certified minimum by an independent
 Koszul flattening while violating that cap.
 
-G-025 answers the smallest coordinate test case sharply.  For three distinct
+G-026 answers the smallest coordinate test case sharply.  For three distinct
 squarefree sextic monomials whose central rank exceeds the two-term cap 40,
 minimum length is three and the radical has dimension at most `8=4(3-1)`;
 equality occurs for a common-four-factor triple.  Its pure Venn-intersection
@@ -425,7 +425,7 @@ proof does not extend to arbitrary Chow factors or to the six fixed terms
 needed in the lower-26 program.  It is a positive unit test for a
 minimum-length radical principle, not that principle itself.
 
-G-026 isolates the remaining obstruction further.  If the middle
+G-027 isolates the remaining obstruction further.  If the middle
 catalecticant itself certifies a sextic decomposition as minimum, the exact
 pairing identity forces radical dimension at most nine.  Hence every such
 minimum decomposition with at least four terms already satisfies the proposed
@@ -433,7 +433,7 @@ minimum decomposition with at least four terms already satisfies the proposed
 26, must concern minimum length certified by a different coupled invariant;
 ordinary middle-rank minimality cannot supply the hard case.
 
-G-027 proves the analogous necessary radical bound when the ordinary global
+G-028 proves the analogous necessary radical bound when the ordinary global
 first-Koszul flattening certifies minimum length.  In the 36-dimensional
 sextic ambient space its conditional radical caps are 10, 10, 11, 14, and 14
 at certified lengths 4, 5, 6, 21, and 25.  But `perm_6` has first-Koszul rank
@@ -441,7 +441,7 @@ at certified lengths 4, 5, 6, 21, and 25.  But `perm_6` has first-Koszul rank
 the length-25 hypothesis.  The active route must use quotient gain or another
 coupled invariant after terms are fixed, not the global first-Koszul ratio.
 
-G-028 provides the first exact quotient-level relation budget.  After
+G-029 provides the first exact quotient-level relation budget.  After
 projection away from `im K_3(perm_6)`, every individual fixed-term map retains
 its rank, while the fixed-sum gain obeys
 

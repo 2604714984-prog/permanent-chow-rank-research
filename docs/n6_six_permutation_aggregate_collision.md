@@ -36,7 +36,7 @@ Let
  \boxed{\dim(S\cap Y_P)=36.}                       \tag{1.1}
 \]
 
-In the notation of G-028, this family has
+In the notation of G-029, this family has
 
 \[
  \eta=1143,
