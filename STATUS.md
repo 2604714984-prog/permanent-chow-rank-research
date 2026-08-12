@@ -18,7 +18,7 @@ Status vocabulary:
 |---|---|---|---|
 | S3-001 | `VERIFIED_BASELINE` | `ChowRank(perm_3)=4` | reviewed source and exact arithmetic |
 | S4-001 | `VERIFIED_BASELINE`, `COMPUTATION_REPLAYED` | `ChowRank(perm_4)=8` | independent 560/92/659 exact audit |
-| S5-001 | `CONDITIONAL` | `ChowRank(perm_5)=16` | lower-16 overlay replayed; omitted lower-15 SAT layer not regenerated here |
+| S5-001 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | `ChowRank(perm_5)=16` over characteristic-zero fields | repaired v14 draft: closed projective incidence degeneration in characteristic zero plus an exact integral/modular endpoint certificate over 886,464 flags; conditional model-assisted audit found no new fatal defect, but named independent human review remains pending |
 | G-001 | `PROOF_DRAFT_COMPLETE` | `dim D_m(perm_n)=binom(n,m)^2` | `docs/general_n_koszul_bounds.md` |
 | G-002 | `PROOF_DRAFT_COMPLETE` | `D_m(perm_n)^(1)=D_{m+1}(perm_n)` for `2<=m<=n-1` | coefficient propagation proof |
 | G-003 | `PROOF_DRAFT_COMPLETE` | generalized first-Koszul lower bound `L_K(n)`; unique optimizer `m=ceil(n/2)` | exact formula, optimizer proof, and tests |
@@ -68,7 +68,7 @@ Status vocabulary:
 ## Unverified items
 
 - Literature novelty of G-001 through G-021 and N6-006 through N6-023 has not been exhaustively checked.
-- No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
+- External audit rejected v13 as a closed proof because its universal one-intersection implication and binary-cubic exclusion were not established. The v14 draft repairs those two gaps and replays the finite endpoint premise. A later model-assisted audit conditionally passed the mathematical repair without finding a counterexample or new fatal defect; named independent human review and proof-assistant formalization remain incomplete.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
 - N6-014 does not prove `ChowRank(perm_6)>=26`, a border Chow-rank lower bound of 25, or the conjectural exact value 32.

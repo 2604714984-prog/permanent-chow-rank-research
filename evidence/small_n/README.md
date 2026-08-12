@@ -8,11 +8,24 @@ This directory stores small independent audit artifacts and immutable identities
 |---|---|---|
 | `perm345_reviewer_submission_20260802_v9_ams_hardened.zip` | `70b9a059389b6cf7b4c2988f9f012d06a14b86963775df4fe619ddce61016309` | no |
 | `perm345_v9_ams_hardened_reviewer.pdf` | `a5d2360b70dc3faba1a6ffcac6dc1345b839214e94b7c8791200ccb3448117de` | no |
+| `perm345_reviewer_submission_v13_pure_20260810.zip` | `afa3e8165bb7d7f90de46c983d5de971f38289906735369aac34f4b27f9b7edd` | yes |
+| `perm345_chow_rank_v13_pure_reviewer_candidate_20260810.pdf` | `02a08c053375d9cde315073e5f068fcc758e5df9038a228b0f8507882371c61e` | yes |
+| `perm345_reviewer_submission_v14_repaired_20260812.zip` | `ce8f639c532b754b4e0a8eec959d97e461426c9f9402b923d6a13056f46dff33` | yes |
+| `perm345_chow_rank_v14_repaired_zh_ams.pdf` | `960402fcb7bf16b51fc7c1fb4e641c5e982583a15ef1f38a9f5e6e866f94a7c8` | yes |
 
-The exact Git blob identities of the committed audit files are recorded in `CONTENT_IDENTITIES.md`.
+The Git blob identities of the legacy v9 audit files are recorded in
+`CONTENT_IDENTITIES.md`; the v13 and v14 files use the SHA-256 release manifests
+in `v13_pure/MANIFEST.json` and `v14_repaired/MANIFEST.json`.
 
 ## Independent-review status
 
 - `n=3`: accepted.
 - `n=4`: independently exact-replayed.
-- `n=5`: no new fatal mathematical counterexample found; lower-16 overlay substantially replayed; full external verdict remains conditional because the omitted lower-15 SAT/DRAT layer was not independently regenerated in the review environment.
+- `n=5`: external audit did not accept v13 as a closed proof. The repaired v14 internal draft supplies the missing characteristic-zero closed-incidence degeneration and replaces the unsupported terminal premise by an exact, independently replayable 886,464-flag certificate. A later model-assisted audit conditionally passed the repairs without finding a new fatal mathematical defect. Named independent human review is pending.
+
+The rejected v13 candidate is retained in `v13_pure/` for history only. The
+repaired PDF, reviewer ZIP, immutable manifest, and active verifier are stored
+in `v14_repaired/`; the English mathematical repair note is
+`docs/perm5_lower16_v14_mathematical_repairs.md`.  The reviewer-facing
+all-orders formal-rigidity and relative-Grassmannian arguments are extracted in
+`docs/perm5_v14_nonfinite_bridge_notes.md`.

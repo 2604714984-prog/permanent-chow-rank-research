@@ -24,7 +24,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 |---|---|---|
 | `n=3` | accepted baseline | `ChowRank(perm_3)=4` |
 | `n=4` | independently exact-replayed | `ChowRank(perm_4)=8` |
-| `n=5` | conditional external review | source submission claims `16`; the lower-16 overlay was replayed, while the omitted ~10 GB lower-15 SAT layer has not been independently regenerated here |
+| `n=5` | repaired proof draft complete; conditional model-assisted external audit | `ChowRank(perm_5)=16`; v14 supplies a characteristic-zero projective degeneration and a deterministic exact endpoint certificate over 886,464 flags; named independent human review remains pending |
 | General derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
 | General first-Koszul bound | proof draft complete | exact formula; its unique optimizing output degree is `m=ceil(n/2)` |
 | Border Chow-rank bound | proof draft complete | the determinantal first-Koszul obstruction gives `border-ChowRank(perm_n)>=L_K(n)` |
@@ -85,6 +85,7 @@ These are the values of the general multidimensional-shadow theorem. The special
 
 ```bash
 python scripts/check_english_only.py
+python evidence/small_n/v14_repaired/verify_assets.py --replay
 python -m unittest discover -s tests -v
 python scripts/generate_bounds.py --max-n 50
 python scripts/generate_multishadow_bounds.py

@@ -1,0 +1,22 @@
+{
+  "format": "perm345-v13-release-assets-v1",
+  "status": "PROOF_DRAFT_COMPLETE_EXTERNAL_REVIEW_PENDING",
+  "artifacts": [
+    {
+      "file": "perm345_chow_rank_v13_pure_reviewer_candidate_20260810.pdf",
+      "bytes": 3356995,
+      "sha256": "02A08C053375D9CDE315073E5F068FCC758E5DF9038A228B0F8507882371C61E"
+    },
+    {
+      "file": "perm345_reviewer_submission_v13_pure_20260810.zip",
+      "bytes": 1274242,
+      "sha256": "AFA3E8165BB7D7F90DE46C983D5DE971F38289906735369AAC34F4B27F9B7EDD"
+    }
+  ],
+  "pdf_pages": 47,
+  "pdf_embedded_files": 101,
+  "zip_entries": 105,
+  "program_output_is_proof_premise": false,
+  "case_free_conceptual_proof_claimed": false,
+  "external_review_complete": false
+}
