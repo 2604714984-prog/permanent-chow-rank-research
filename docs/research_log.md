@@ -1399,3 +1399,27 @@ endpoint.  This stronger model still identifies all six factor spaces with a
 single abstract six-space and does not realize their ambient pairwise
 transversality, literal-direct quadratic Chow planes, or the common-section
 cocycle.  Those cross-color constraints remain the live input.
+
+N6-063 resolves one fixed singular layer.  In
+`V=A_3 tensor B_4`, let `E_34=S_0(A_3) tensor S_0(B_4)` and let
+`beta_x:V->E_34^*` be polarized evaluation.  The projective Fano scheme of
+six-planes on which every `beta_x` has rank at most nine consists of exactly
+18 reduced coordinate points: the twelve `K_2,3` rectangles and the six
+`K_3,2` rectangles.  Three forbidden support graphs classify the torus-fixed
+points, while exact kernel/cokernel pairings kill every Grassmann tangent
+weight at both rectangle types.  Connected-torus projectivity then promotes
+the fixed-point calculation to the whole scheme.
+
+For the 324 ordered rectangle pairs, the cross-image dimension distribution
+is
+
+\[
+ 3:18,\quad 6:36,\quad 9:120,\quad 12:6,\quad 15:72,\quad 18:72,
+\]
+
+and dimension at most three occurs only on the diagonal.  Hence fixed
+complementary six-planes in `A_3 tensor B_4` cannot have a fifteen-dimensional
+cross-free quadratic kernel.  This does not globalize through an arbitrary
+twelve-plane degeneration: complementary planes can collide in the special
+fiber.  The result is therefore a strict fixed-layer exclusion, not a proof
+of the `b=50` endpoint or lower 28.
