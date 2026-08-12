@@ -70,6 +70,8 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` weight-refined connecting barrier | pure Tor and weight theorem; exact rational replay | `H_(3,6)(perm_6)` consists of forty explicit row/column-heavy lines; the `336/203` intersection dimensions plus inverse-system closure permit connecting-kernel endpoints 0 and 40, so Chow realizability of `Q=P-H` is essential |
 | `n=6` `b=64` frame-component specialization | pure component theorem; exact finite and strict modular replay | fixing the extremal six-plane makes the quotient map injective; Hall matching classifies all `5^6` component assignments, every admissible branch is generically quasi-finite, and one reduced noncoordinate fiber is certified, but exceptional cross-plane collisions remain open |
 | `n=6` near-extremal six-plane frontier | pure dimension-five theorem; exact rational local replay | `dim L<=5` forces `dim(E_2 intersect Sym^2 L)<=1`; the six-plane rank-two stratum is nonempty and contains actual Chow terms with defects `(epsilon,alpha)=(0,1)`, so these terms require coupled rather than termwise exclusion |
+| `n=6` `b=64` prolongation exclusion | pure projective fixed-point theorem; exact integer replay | the endpoint would require `dim(E_2+F)^(1)>=456`, while all 18,564 torus-fixed incidence candidates give the universal upper bound 436; hence `b=64` is impossible |
+| `n=6` near-extremal quotient pruning | pure quotient-distance and prolongation theorems; exact rational/integer replay | distinct explicit star quotients intersect in dimension at most 11; independently, the extremal prolongation cap removes 21 scalar states, leaving `60,7,7` at `b=61,62,63`, but no complete layer is yet excluded |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot prove lower 27 and does not change `26<=ChowRank(perm_6)<=32` |
 | `n=6` linear-restriction Koszul--Young ceiling | proof draft complete; pure triangular and strict modular replay | after every linear restriction to `1<=k<=36` variables, every standard Koszul--Young ratio is still strictly below 26; linear compression cannot rescue a lower-27 proof by this family |
@@ -161,6 +163,9 @@ python scripts/n6_near_extremal_fixed_six_layers.py
 python scripts/n6_weight_refined_connecting_barrier.py
 python scripts/n6_b64_frame_component_specialization.py
 python scripts/n6_near_extremal_six_plane_frontier.py
+python scripts/n6_b64_prolongation_exclusion.py
+python scripts/n6_near_extremal_star_quotient_rigidity.py
+python scripts/n6_near_extremal_prolongation_pruning.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.

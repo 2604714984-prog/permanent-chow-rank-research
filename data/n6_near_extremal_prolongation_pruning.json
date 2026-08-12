@@ -1,0 +1,951 @@
+{
+  "arithmetic": "exact integer filtering of frozen scalar states",
+  "claim_boundary": "The replay excludes only the listed canonical scalar states.  It does not exclude any complete b=61,62,63 layer, assert that a retained state is geometrically realizable, exclude a hypothetical 26-term decomposition, prove ChowRank(perm_6)>=27, or make a border-rank claim.",
+  "layers": [
+    {
+      "excluded_scalar_state_count": 13,
+      "excluded_state_identifiers": [
+        "N6-041-B61-S003",
+        "N6-041-B61-S005",
+        "N6-041-B61-S006",
+        "N6-041-B61-S012",
+        "N6-041-B61-S013",
+        "N6-041-B61-S015",
+        "N6-041-B61-S016",
+        "N6-041-B61-S018",
+        "N6-041-B61-S019",
+        "N6-041-B61-S020",
+        "N6-041-B61-S029",
+        "N6-041-B61-S030",
+        "N6-041-B61-S031"
+      ],
+      "excluded_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 78,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 90,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S003",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 1,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S005",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 2,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S006",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S012",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 1,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S013",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S015",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 1,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S016",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 118,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B61-S018",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 118,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B61-S019",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 118,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B61-S020",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S029",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S030",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 459,
+          "state_identifier": "N6-041-B61-S031",
+          "strict_contradiction_gap": 23,
+          "universal_extremal_prolongation_cap": 436
+        }
+      ],
+      "middle_intersection_b": 61,
+      "remaining_scalar_state_count": 60,
+      "remaining_state_identifiers": [
+        "N6-041-B61-S001",
+        "N6-041-B61-S002",
+        "N6-041-B61-S004",
+        "N6-041-B61-S007",
+        "N6-041-B61-S008",
+        "N6-041-B61-S009",
+        "N6-041-B61-S010",
+        "N6-041-B61-S011",
+        "N6-041-B61-S014",
+        "N6-041-B61-S017",
+        "N6-041-B61-S021",
+        "N6-041-B61-S022",
+        "N6-041-B61-S023",
+        "N6-041-B61-S024",
+        "N6-041-B61-S025",
+        "N6-041-B61-S026",
+        "N6-041-B61-S027",
+        "N6-041-B61-S028",
+        "N6-041-B61-S032",
+        "N6-041-B61-S033",
+        "N6-041-B61-S034",
+        "N6-041-B61-S035",
+        "N6-041-B61-S036",
+        "N6-041-B61-S037",
+        "N6-041-B61-S038",
+        "N6-041-B61-S039",
+        "N6-041-B61-S040",
+        "N6-041-B61-S041",
+        "N6-041-B61-S042",
+        "N6-041-B61-S043",
+        "N6-041-B61-S044",
+        "N6-041-B61-S045",
+        "N6-041-B61-S046",
+        "N6-041-B61-S047",
+        "N6-041-B61-S048",
+        "N6-041-B61-S049",
+        "N6-041-B61-S050",
+        "N6-041-B61-S051",
+        "N6-041-B61-S052",
+        "N6-041-B61-S053",
+        "N6-041-B61-S054",
+        "N6-041-B61-S055",
+        "N6-041-B61-S056",
+        "N6-041-B61-S057",
+        "N6-041-B61-S058",
+        "N6-041-B61-S059",
+        "N6-041-B61-S060",
+        "N6-041-B61-S061",
+        "N6-041-B61-S062",
+        "N6-041-B61-S063",
+        "N6-041-B61-S064",
+        "N6-041-B61-S065",
+        "N6-041-B61-S066",
+        "N6-041-B61-S067",
+        "N6-041-B61-S068",
+        "N6-041-B61-S069",
+        "N6-041-B61-S070",
+        "N6-041-B61-S071",
+        "N6-041-B61-S072",
+        "N6-041-B61-S073"
+      ],
+      "source_scalar_state_count": 73
+    },
+    {
+      "excluded_scalar_state_count": 4,
+      "excluded_state_identifiers": [
+        "N6-041-B62-S002",
+        "N6-041-B62-S003",
+        "N6-041-B62-S005",
+        "N6-041-B62-S006"
+      ],
+      "excluded_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 78,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 90,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 458,
+          "state_identifier": "N6-041-B62-S002",
+          "strict_contradiction_gap": 22,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 1,
+          "required_common_prolongation_dimension": 458,
+          "state_identifier": "N6-041-B62-S003",
+          "strict_contradiction_gap": 22,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 458,
+          "state_identifier": "N6-041-B62-S005",
+          "strict_contradiction_gap": 22,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 458,
+          "state_identifier": "N6-041-B62-S006",
+          "strict_contradiction_gap": 22,
+          "universal_extremal_prolongation_cap": 436
+        }
+      ],
+      "middle_intersection_b": 62,
+      "remaining_scalar_state_count": 7,
+      "remaining_state_identifiers": [
+        "N6-041-B62-S001",
+        "N6-041-B62-S004",
+        "N6-041-B62-S007",
+        "N6-041-B62-S008",
+        "N6-041-B62-S009",
+        "N6-041-B62-S010",
+        "N6-041-B62-S011"
+      ],
+      "source_scalar_state_count": 11
+    },
+    {
+      "excluded_scalar_state_count": 4,
+      "excluded_state_identifiers": [
+        "N6-041-B63-S002",
+        "N6-041-B63-S003",
+        "N6-041-B63-S005",
+        "N6-041-B63-S006"
+      ],
+      "excluded_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 78,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 90,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B63-S002",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 1,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B63-S003",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B63-S005",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "quadratic_relation_dimension_kappa2": 0,
+          "required_common_prolongation_dimension": 457,
+          "state_identifier": "N6-041-B63-S006",
+          "strict_contradiction_gap": 21,
+          "universal_extremal_prolongation_cap": 436
+        }
+      ],
+      "middle_intersection_b": 63,
+      "remaining_scalar_state_count": 7,
+      "remaining_state_identifiers": [
+        "N6-041-B63-S001",
+        "N6-041-B63-S004",
+        "N6-041-B63-S007",
+        "N6-041-B63-S008",
+        "N6-041-B63-S009",
+        "N6-041-B63-S010",
+        "N6-041-B63-S011"
+      ],
+      "source_scalar_state_count": 11
+    }
+  ],
+  "source_state_table": "N6-041",
+  "status": "EXACT_N6_NEAR_EXTREMAL_PROLONGATION_PRUNING",
+  "strict_conclusion": {
+    "excluded_scalar_states_by_b": {
+      "61": 13,
+      "62": 4,
+      "63": 4
+    },
+    "remaining_scalar_states_by_b": {
+      "61": 60,
+      "62": 7,
+      "63": 7
+    }
+  },
+  "universal_extremal_prolongation_cap": 436,
+  "universal_extremal_prolongation_cap_source": "N6-044"
+}

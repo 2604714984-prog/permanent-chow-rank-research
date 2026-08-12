@@ -898,3 +898,45 @@ collapse the rank-two locus to the extremal locus.  An explicit family
 `(0,2)`.  Thus the remaining `b=61,62,63` work must couple several terms and
 their common permanent quotient; neither defect value can be removed
 termwise.
+
+## 2026-08-13: the `b=64` endpoint is excluded
+
+N6-044 replaces the insufficient generic-specialization argument by a global
+projective maximum argument.  For an actual extremal quadratic Chow space
+`F`, the function
+
+\[
+ h(L,F)=\dim(E_2+F)^{(1)}
+\]
+
+is upper semicontinuous on the projective graph closure of the extremal frame
+locus.  Its maximum therefore occurs at a row-column-torus fixed pair.  A
+fixed extremal six-plane is coordinate `K_(2,3)` or `K_(3,2)`.  Its symmetric
+square has fifteen one-dimensional weight blocks and three two-dimensional
+rectangle blocks; including the three permanent lines leaves exactly 18,564
+fixed fifteen-plane candidates.  A complete integer coefficient-component
+enumeration gives
+
+\[
+ \dim(E_2+F)^{(1)}\le436.
+\]
+
+The `b=64` endpoint would instead force the same space to contain
+`E_3+H_3`, of dimension `400+120-64=456`.  This contradiction excludes
+`b=64`.  It is the first eliminated high-intersection endpoint, not a proof
+of lower 27.
+
+N6-045 proves that two distinct thirteen-dimensional quotient spaces in the
+explicit near-extremal star family intersect in dimension at most eleven;
+equality of the quotient spaces determines the full fifteen-dimensional Chow
+quadratic space.  Hence a common quotient of dimension at most fourteen can
+contain at most one such star term when the six-term quadratic relation
+dimension is at most two.  This excludes only conditional star-family
+subloci, because the full `alpha=1` locus remains unclassified.
+
+N6-046 applies the N6-044 cap to the exact N6-041 state table.  Whenever
+`t_2=12` and one fixed term is extremal, its quotient fills the global
+twelve-plane and `E_2+F_i=E_2+H_2`.  The required prolongation dimension is
+at least `400+h-b>=457`, contradicting 436.  This removes `13,4,4` scalar
+states and leaves `60,7,7` at `b=61,62,63`.  No complete layer is yet
+excluded.
