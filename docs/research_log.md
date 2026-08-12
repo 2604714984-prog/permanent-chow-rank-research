@@ -815,3 +815,52 @@ cases, force the finite parameters to `-1`, where a final partition
 functional gives a contradiction.  Glynn supplies `1+6+15+10=32`, so this
 non-sign enlargement still has exact rank 32.  It remains a symmetric
 restricted family and does not settle unrestricted Chow rank.
+
+## 2026-08-13: high-intersection lower-27 geometry and the Tor frontier
+
+N6-040 starts the geometric analysis of the exact `b=64` fixed-six endpoint.
+The endpoint forces six fifteen-dimensional quadratic spaces `F_i` to be
+direct while all six have the same twelve-dimensional image `W` modulo the
+permanent quadratic space.  For every coordinate `K_(2,3)` or transposed
+`K_(3,2)` quotient `W_S`, a decomposable-quadric lemma proves that an actual
+Chow space above `W_S` must equal the coordinate space `F_S`.  Hence six such
+lifts cannot be direct, excluding all 600 coordinate common quotients.  The
+600 quotient signatures are pairwise distinct.  At an honest coordinate
+frame, the fixed-quotient linearization is an `897 by 216` integer matrix of
+exact rank 210; the remaining six directions are precisely factor scalings.
+This proves a reduced coordinate fiber, but noncoordinate common quotients
+remain open, so `b=64` is not yet excluded.
+
+N6-041 treats the adjacent layers `b=61,62,63`.  Exact defect arithmetic and
+cubic-relation factorization give
+
+\[
+h=120\quad(b=62,63),
+\qquad h\in\{118,120\}\quad(b=61),
+\]
+
+with `h=118` possible only for the fixed-term defect profile `(0^5,2)`.
+The twenty-term residual then has middle rank at least `398,396,396,394` in
+the four resulting cases, so at least `19,18,18,17` residual terms have full
+middle rank 20.  The necessary scalar state counts shrink to `73,11,11`.
+Several subbranches force four or five extremal rectangle terms to share one
+common twelve-dimensional quotient.  The unclassified one- and
+two-dimensional permanent-intersection strata remain the obstruction.
+
+G-040 identifies the correct weight-refined connecting map.  The permanent
+third-Koszul homology is the direct sum of twenty row-heavy and twenty
+column-heavy one-dimensional torus weights, and the connecting image is
+
+\[
+\ker\!\left[
+\operatorname{Tor}_3(A_P,k)_6\longrightarrow
+\operatorname{Tor}_3(S/(I_P+I_Q),k)_6
+\right].
+\]
+
+An exact matching-erasure inverse submodule has dimensions `(F_3,F_2)=(380,225)`
+but kills all forty weight classes, whereas the full permanent inverse system
+preserves all forty.  Thus the known `336/203` intersection dimensions, even
+with inverse-system closure, impose no nontrivial uniform connecting-rank
+bound.  Any continuation must use realization by the actual six-term
+`H` and twenty-term `Q=P-H`, not just Hilbert dimensions.

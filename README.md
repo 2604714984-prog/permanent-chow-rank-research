@@ -65,6 +65,9 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` fixed-six off-central `C_(4,2)` ceiling | proof draft complete; exact rational/integer replay | `t_2<=90-Shadow(b)` and `rank C_(4,2)(Q)<=315-Shadow(b)<=251`; at `b=64`, `(h,d_2,a_2,t_2)=(120,90,78,12)` and the residual rank lies in `215..237`, ruling out only the naive rank-above-300 criterion |
 | `n=6` same-operator colored mapping cone | pure exact sequences; exact rational replay | synchronized colored relations sharpen the cubic lower bound from 320 to 336; ordinary relation dimension neither determines nor monotonically lower-controls the labelled quotient kernel, so weight-refined connecting maps remain necessary along this route |
 | `n=6` symmetric two-level orbit rank | pure restricted-family theorem; exact symbolic replay | allowing arbitrary complex two-level ratios in the full `S_6` row-subset orbit ansatz still requires exactly 32 terms; the only 31-term orbit shape is excluded by explicit determinants and a final partition functional |
+| `n=6` `b=64` common-quotient rigidity | pure coordinate-fiber theorem; exact finite and strict modular replay | the endpoint forces six direct quadratic spaces over one common `W_12`; all 600 coordinate rectangle quotients have a unique actual Chow-space lift and are excluded, with fixed-fiber tangent rank 210 modulo six factor scalings; noncoordinate quotients remain open |
+| `n=6` near-extremal fixed-six layers | proof draft complete; exact integer replay | at `b=62,63` the fixed central rank is 120, while at `b=61` it is 118 or 120; the scalar frontier has `73,11,11` states and several branches force four or five rectangle terms over a common `W_12`, but no layer is yet excluded |
+| `n=6` weight-refined connecting barrier | pure Tor and weight theorem; exact rational replay | `H_(3,6)(perm_6)` consists of forty explicit row/column-heavy lines; the `336/203` intersection dimensions plus inverse-system closure permit connecting-kernel endpoints 0 and 40, so Chow realizability of `Q=P-H` is essential |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot prove lower 27 and does not change `26<=ChowRank(perm_6)<=32` |
 | `n=6` linear-restriction Koszul--Young ceiling | proof draft complete; pure triangular and strict modular replay | after every linear restriction to `1<=k<=36` variables, every standard Koszul--Young ratio is still strictly below 26; linear compression cannot rescue a lower-27 proof by this family |
@@ -151,6 +154,9 @@ python scripts/general_derivative_profile_ceiling_audit.py
 python scripts/general_higher_wedge_psi_barrier.py
 python scripts/general_column_sign_rigidity_audit.py
 python scripts/general_column_sign_rigidity_independent.py
+python scripts/n6_b64_common_quotient_rigidity.py
+python scripts/n6_near_extremal_fixed_six_layers.py
+python scripts/n6_weight_refined_connecting_barrier.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
