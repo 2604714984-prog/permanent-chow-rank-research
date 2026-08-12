@@ -1154,3 +1154,24 @@ current unrestricted ordinary interval is
 The product-shadow proof and the low-layer enumeration were independently
 replayed.  This conclusion is only about ordinary Chow rank in characteristic
 zero; it proves neither border rank at least 27 nor exact ordinary rank 32.
+
+## 2026-08-13: common `W_15` and quadratic directness do not control the cubic intersection
+
+G-043 records a strict obstruction to one tempting continuation of the old
+all-`alpha=3` analysis.  Let the six sign rows be the all-plus row and the
+five rows obtained by flipping one of the last five signs, and use each row
+uniformly in all six columns.  The resulting six actual Chow terms have
+quadratic spaces which are literal direct and share one common quotient
+fifteen-plane.  Exact characteristic-zero elimination gives
+
+\[
+ (d_2,a_2,t_2,h,b)=(90,75,15,120,0).
+\]
+
+The determinant `(-2)^5` proves both quadratic and cubic block independence.
+The repeated-row cubic coefficients then force zero intersection with the
+permanent cubic space.  Thus the construction is not a residual state for
+the lower-27 proof and changes no rank bound.  It does prove that neither a
+common `W_15` nor pairwise quadratic intersection can provide the next
+general obstruction: any continuation must retain the cubic
+permanent-intersection condition.
