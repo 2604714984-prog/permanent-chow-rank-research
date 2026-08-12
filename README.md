@@ -90,6 +90,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` lower-28 fixed-six frontier | proof draft complete; independently audited exact integer replay; partial | conditional averaging, product shadows, and literal six-color lifting exclude every layer except one all-`alpha=3` state at `b=50`; no lower-28 claim is made |
 | `n=6` literal-six shadow exclusion | pure characteristic-zero theorem; exact integer replay | any residual six-color literal span meets the permanent cubic space in dimension at least `100-b`; for `b<=47` its shadow is at least 81, contradicting the universal six-term quadratic projection cap 78 |
 | `n=6` separated `alpha=3` exclusion | pure coupling theorem; exact integer replay; restricted family | six column-separated or row-separated terms with the common-`W_15`, direct quadratic/cubic data of the `b=50` endpoint satisfy `b<=40`; general nonseparated configurations remain open |
+| `n=6` transverse-pair rigidity | pure characteristic-zero theorem; exact rational replay; restricted open locus | one pair whose twelve-dimensional section-difference shadow projects fully to two rows or two columns forces all six endpoint terms to be separated and hence `b<=40`; every pairwise row/column projection must therefore be singular in any surviving `b=50` configuration |
 | `n=6` central-to-quadratic converse barrier | pure characteristic-zero counterexample; exact rational replay | two Chow terms have literal relation dimensions `(kappa_2,kappa_3,kappa_4)=(1,0,0)` and coupled ranks `(29,40,29)`; central and quartic literal directness do not force quadratic literal directness |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot supply the now-proved coupled lower bound 27 |
@@ -203,6 +204,7 @@ python scripts/n6_lower27_completion.py
 python scripts/n6_lower28_fixed_six_partial.py
 python scripts/n6_literal_six_shadow_b34_47_exclusion.py
 python scripts/n6_alpha3_separated_block_exclusion.py
+python scripts/n6_two_row_transverse_rigidity.py
 python scripts/n6_central_neardirect_quadratic_barrier.py
 ```
 
