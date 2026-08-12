@@ -1,0 +1,99 @@
+{
+  "claim_boundary": "This is a route counterexample, not a permanent decomposition and not a Chow-rank or border-rank bound. It blocks counting full-middle-rank summands with the uncolored aggregate-boundary quotient. A genuinely colored or equation-coupled presentation may still work.",
+  "definition": "For a tuple of factored sextics, the aggregate labelled presentation is the sum of its twenty factor-triple cycles, mapped to the universal third-Koszul kernel modulo the sum of the term boundary spaces.",
+  "field": "characteristic zero",
+  "five_full_span_saturation_certificate": {
+    "aggregate_labelled_presentation_rank": 0,
+    "boundary_rank_progression_mod_prime": [
+      190,
+      380,
+      570,
+      760,
+      840
+    ],
+    "factor_matrix_integer_determinants": [
+      1,
+      184,
+      -68,
+      9,
+      -15
+    ],
+    "labelled_cycle_count": 100,
+    "positive_fitting_minors": "all vanish because the specialized map is zero",
+    "prime": 1000003,
+    "selected_boundary_column_count": 840,
+    "triangular_minor_diagonal_product_mod_prime": 859612,
+    "universal_domain_dimension": 1120,
+    "universal_kernel_dimension": 840
+  },
+  "status": "G037_LABELLED_CYCLE_FITTING_ROUTE_BLOCKED",
+  "theorem": "Five explicit full-factor-span rank-20 Chow terms have aggregate boundary sum equal to the entire 840-dimensional universal Koszul kernel. Consequently all one hundred factor-labelled cycles vanish in the aggregate quotient and every positive determinantal/Fitting rank of this quotient presentation is zero.",
+  "two_term_exact_profiles": [
+    {
+      "arithmetic": "exact Fraction elimination over Q",
+      "boundary_intersection_dimension": 0,
+      "boundary_sum_rank": 380,
+      "cycle_intersection_dimension": 0,
+      "cycle_sum_rank": 40,
+      "individual_boundary_ranks": [
+        190,
+        190
+      ],
+      "individual_cycle_ranks": [
+        20,
+        20
+      ],
+      "individual_images_modulo_aggregate_boundary": [
+        19,
+        17
+      ],
+      "intersection_of_the_two_quotient_images": 3,
+      "joint_kernel_dimension": 7,
+      "joint_labelled_presentation_rank": 33,
+      "name": "two_full_span_terms",
+      "verified_derivative_dimensions": [
+        {
+          "D3_dimension": 20,
+          "D4_dimension": 15
+        },
+        {
+          "D3_dimension": 20,
+          "D4_dimension": 15
+        }
+      ]
+    },
+    {
+      "arithmetic": "exact Fraction elimination over Q",
+      "boundary_intersection_dimension": 0,
+      "boundary_sum_rank": 380,
+      "cycle_intersection_dimension": 0,
+      "cycle_sum_rank": 40,
+      "individual_boundary_ranks": [
+        190,
+        190
+      ],
+      "individual_cycle_ranks": [
+        20,
+        20
+      ],
+      "individual_images_modulo_aggregate_boundary": [
+        20,
+        10
+      ],
+      "intersection_of_the_two_quotient_images": 2,
+      "joint_kernel_dimension": 12,
+      "joint_labelled_presentation_rank": 28,
+      "name": "full_span_plus_uniform_five_span_term",
+      "verified_derivative_dimensions": [
+        {
+          "D3_dimension": 20,
+          "D4_dimension": 15
+        },
+        {
+          "D3_dimension": 20,
+          "D4_dimension": 15
+        }
+      ]
+    }
+  ]
+}

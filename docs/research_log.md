@@ -723,3 +723,52 @@ presentation-valued map retains structure discarded by the scalar Betti
 number, but no subadditive or permanent-relative inequality has yet been
 proved for it.  The result is a route barrier and candidate interface, not a
 lower-27 theorem; the ordinary interval remains `26..32`.
+
+## 2026-08-13: three more dimension-only lower-27 routes close
+
+N6-038 proves that the fixed-six noncentral quadratic quotient becomes small
+when the middle intersection is large.  If `m_b` is the exact `3->2` shadow
+of the `b`-dimensional middle intersection, then
+
+\[
+t_2\le90-m_b,
+\qquad
+\operatorname{rank}C_{4,2}(Q)\le225+t_2\le315-m_b\le251.
+\]
+
+Thus the proposed universal criterion
+`rank C_(4,2)(Q)>20*15=300` cannot exclude the twenty-term residual.  At the
+endpoint `b=64`, the scalar state closes exactly as
+
+\[
+(h,d_2,a_2,t_2)=(120,90,78,12),
+\qquad
+215\le\operatorname{rank}C_{4,2}(Q)\le237.
+\]
+
+This does not rule out a sharper scalar theorem using termwise structure or
+equality classification.
+
+G-036 retains all twenty summand labels through an abstract coordinate
+initial module.  The permanent-relative cubic kernel bound strengthens from
+320 to 336, but a sharp capacity-constrained Macaulay calculation forces only
+169 quadratic dimensions, or 171 when every label is active.  An explicit
+all-label coordinate module has cubic relation dimension 336, quadratic
+relation dimension exactly 203, per-label caps 20 and 12, and zero central
+defect for every nonempty subset.  It is not Chow-realizable data; it proves
+that labels, capacities, coordinate initiality, differentiation, and scalar
+heredity alone cannot improve 203.
+
+G-037 tests the ordinary aggregate factor-labelled cycle presentation left by
+G-035.  For two full-span terms its exact quotient rank is already only 33
+instead of 40.  Five explicit full-span rank-20 terms have aggregate boundary
+rank 840 modulo `1000003`, matching the pure six-variable Koszul-kernel upper
+bound.  Hence their boundary sum is the whole kernel in characteristic zero,
+and all one hundred labelled cycles vanish in the aggregate quotient.  This
+blocks the uncolored Fitting-rank continuation, but not a genuinely colored
+mapping-cone or common-domain construction.
+
+Together these barriers identify the remaining interface: a successful
+argument must simultaneously retain the common differential-operator domain,
+the summand colors, and the equation `Q=P-H`.  The ordinary interval remains
+`26..32`.
