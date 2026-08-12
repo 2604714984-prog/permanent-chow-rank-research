@@ -59,19 +59,29 @@ For every such subset, the radical of the central relation pairing has
 dimension at most nine.  At least twelve of the twenty residual terms have
 individual middle-catalectic rank 20.
 
+If `G=im C_(3,3)(Q)`, then the residual also satisfies
+
+\[
+ \boxed{336\le\dim(E\cap G)\le380.}                \tag{1.5}
+\]
+
+The literal sum of the twenty individual middle images has quotient dimension
+between 20 and 64 modulo `E`, and the colored relation space modulo `E` has
+dimension at least 320.
+
 ## 2. The maximum individual middle rank is 20
 
 Write
 
 \[
- A_i=C_{3,3}(T_i),\quad U_i=\operatorname{im}A_i,quad
- r_i=\dim U_i,quad r=\max_i r_i,
+ A_i=C_{3,3}(T_i),\quad U_i=\operatorname{im}A_i,\quad
+ r_i=\dim U_i,\quad r=\max_i r_i,
 \]
 
 and
 
 \[
- D=\dim\sum_iU_i,qquad R=\sum_i r_i.
+ D=\dim\sum_iU_i,\qquad R=\sum_i r_i.
 \]
 
 Every `U_i` is disjoint from `E`, by the essential-variable theorem for
@@ -86,7 +96,7 @@ Thus `z>=r`.  Let `rho` be the relation dimension among the `U_i`, and let
 identity gives
 
 \[
- 400=R-2\rho+\tau,qquad \rho=R-D,
+ 400=R-2\rho+\tau,\qquad \rho=R-D,
 \]
 
 and hence
@@ -252,7 +262,67 @@ at least 384.  N6-031 says every non-full term loses at least two from the
 cap 20.  Total deficit is at most 16, so at most eight terms are non-full;
 at least twelve have middle rank 20.  This finishes the proof.
 
-## 5. Reproduction and boundary
+## 5. The high-incidence quotient forced by the residual
+
+Retain the six-term space `H`, put `h=dim H`, `b=dim(E cap H)`, and write
+
+\[
+ G=\operatorname{im}C_{3,3}(Q),\qquad g=\dim G.
+\]
+
+Since `C_(3,3)(Q)=C_(3,3)(P)-C_(3,3)(T_1+...+T_6)`, one has
+
+\[
+ E+G=E+H.
+\]
+
+Therefore
+
+\[
+ \dim(E\cap G)=g-h+b
+ \ge400-b
+ \ge336.                                           \tag{5.1}
+\]
+
+For the upper bound, let `L=sum_(i=7)^26 U_i` be the literal sum of the
+twenty individual middle images and let `C=sum_(i=7)^26 dim U_i`.  At least
+one of these images has dimension 20.  Every individual image is disjoint
+from `E`, so its image in `(L+E)/E` is still 20-dimensional.  Hence
+
+\[
+ \dim((L+E)/E)\ge20.
+\]
+
+Because `dim L<=C<=400`, it follows that
+
+\[
+ \dim(E\cap L)\le380.                               \tag{5.2}
+\]
+
+Since `G` is contained in `L`, equations (5.1)--(5.2) prove (1.5).  They also
+give
+
+\[
+ 20\le \dim((L+E)/E)\le400-336=64.                 \tag{5.3}
+\]
+
+The kernel of the colored quotient map
+
+\[
+ \bigoplus_{i=7}^{26}U_i\longrightarrow(L+E)/E
+\]
+
+therefore has dimension at least
+
+\[
+ C-64\ge384-64=320.                                \tag{5.4}
+\]
+
+This large quotient-relation module is the precise next interface: its
+derivatives are quadratic relations modulo `D_2(P)`, and a successful
+lower-27 obstruction must retain that cross-degree compatibility.
+
+## 6. Reproduction and boundary
 
 Run
 
@@ -268,7 +338,9 @@ arithmetic.
 
 The remaining problem is geometric: exclude a twenty-term residual whose
 every sub-sum is centrally certified minimum, whose full middle rank is at
-least 384, which contains at least twelve full-rank Chow terms, and which is
-the difference of `perm_6` and six Chow terms.  None of the current scalar
+least 384, whose permanent intersection lies between 336 and 380, whose
+colored quotient-relation space has dimension at least 320, which contains
+at least twelve full-rank Chow terms, and which is the difference of `perm_6`
+and six Chow terms.  None of the current scalar
 shadow or submodular inequalities excludes this structure.  Therefore N6-032
 is not a lower-27 theorem and makes no border-rank claim.

@@ -241,6 +241,15 @@
   "maximum_individual_middle_rank_forced": 20,
   "minimum_number_of_full_middle_rank_residual_terms": 12,
   "rank_19_excluded_by": "N6-031",
+  "residual_colored_relations_mod_permanent_lower": 320,
+  "residual_literal_quotient_dimension_window": [
+    20,
+    64
+  ],
+  "residual_permanent_middle_intersection_window": [
+    336,
+    380
+  ],
   "selected_six_intersection_cut": {
     "first_shadow_excluded_b": 65,
     "high_branch": "b>=52 uses the exact fixed-six layer table",

@@ -408,3 +408,10 @@ This does not prove lower 27.  It replaces a broad scalar parameter frontier
 by one geometric target: rule out a hereditary central-minimal twenty-term
 residual that differs from `perm_6` by six Chow terms.  Repeating the same
 scalar shadow or submodular inequalities leaves that target feasible.
+
+The residual middle image meets `D_3(perm_6)` in dimension `336..380`.
+Modulo the permanent middle space, the literal span of the twenty individual
+middle images has dimension `20..64`, so its colored quotient-relation kernel
+has dimension at least 320.  This makes the next interface cross-degree and
+module-valued: differentiate those 320 relations into the quadratic quotient
+module while retaining the central relation pairing.

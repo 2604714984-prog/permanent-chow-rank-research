@@ -123,6 +123,9 @@ def build_payload() -> dict[str, object]:
         "fixed_six_high_layer_table": high_layers,
         "twenty_term_residual_middle_rank_lower": 384,
         "twenty_term_residual_exact_chow_rank": 20,
+        "residual_permanent_middle_intersection_window": [336, 380],
+        "residual_literal_quotient_dimension_window": [20, 64],
+        "residual_colored_relations_mod_permanent_lower": 320,
         "hereditary_subset_middle_rank_bounds": hereditary,
         "hereditary_consequence": (
             "Every nonempty subset of the displayed twenty residual terms is "

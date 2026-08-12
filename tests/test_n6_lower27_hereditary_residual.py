@@ -61,6 +61,20 @@ class N6Lower27HereditaryResidualTests(unittest.TestCase):
             12,
         )
 
+    def test_residual_incidence_window(self) -> None:
+        self.assertEqual(
+            self.payload["residual_permanent_middle_intersection_window"],
+            [336, 380],
+        )
+        self.assertEqual(
+            self.payload["residual_literal_quotient_dimension_window"],
+            [20, 64],
+        )
+        self.assertEqual(
+            self.payload["residual_colored_relations_mod_permanent_lower"],
+            320,
+        )
+
     def test_claim_boundary(self) -> None:
         self.assertIn(
             "does not prove ChowRank(perm_6)>=27",

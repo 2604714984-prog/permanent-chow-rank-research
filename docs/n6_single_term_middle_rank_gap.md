@@ -192,7 +192,7 @@ Suppose `r=5`.  Choose five independent factors as coordinates.  Up to
 permuting and rescaling the factors, the sixth factor has the normal form
 
 \[
- x_1+\cdots+x_s,qquad 1\le s\le5,                \tag{3.1}
+ x_1+\cdots+x_s,\qquad 1\le s\le5,               \tag{3.1}
 \]
 
 where `s` is the support size of the unique dependence.  Exact rational row
