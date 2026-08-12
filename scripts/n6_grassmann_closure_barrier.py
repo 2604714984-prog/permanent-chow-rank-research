@@ -115,6 +115,15 @@ def full_frame(sign: int, t: int | Fraction) -> list[list[Fraction]]:
     return [sym_product(plane[c], plane[d]) for c, d in combinations(range(N), 2)]
 
 
+def symmetric_square_plane(sign: int, t: int | Fraction) -> list[list[Fraction]]:
+    plane = factor_plane(sign, t)
+    return [
+        sym_product(plane[c], plane[d])
+        for c in range(N)
+        for d in range(c, N)
+    ]
+
+
 def difference_space() -> list[list[Fraction]]:
     return [
         add(sym_product(u(c), v(d)), sym_product(u(d), v(c)))
@@ -185,6 +194,8 @@ def nonzero_fiber_audit(t: int) -> dict[str, object]:
     minus_plane = factor_plane(-1, t)
     plus_frame = full_frame(+1, t)
     minus_frame = full_frame(-1, t)
+    plus_symmetric_square = symmetric_square_plane(+1, t)
+    minus_symmetric_square = symmetric_square_plane(-1, t)
     difference = difference_space()
     normalized_differences = [
         scale(Fraction(1, 2 * t), add(plus, scale(-1, minus)))
@@ -197,10 +208,17 @@ def nonzero_fiber_audit(t: int) -> dict[str, object]:
         "exterior_determinant": int(determinant_q(plus_plane + minus_plane)),
         "full_frame_ranks": [rank_q(plus_frame), rank_q(minus_frame)],
         "full_frame_sum_rank": rank_q(plus_frame + minus_frame),
+        "symmetric_square_sum_rank": rank_q(
+            plus_symmetric_square + minus_symmetric_square
+        ),
         "D_rank": rank_q(difference),
         "D_contained_in_full_frame_sum": (
             rank_q(plus_frame + minus_frame + difference)
             == rank_q(plus_frame + minus_frame)
+        ),
+        "D_contained_in_symmetric_square_sum": (
+            rank_q(plus_symmetric_square + minus_symmetric_square + difference)
+            == rank_q(plus_symmetric_square + minus_symmetric_square)
         ),
         "normalized_section_difference_equals_fixed_D": normalized_differences
         == difference,
@@ -219,6 +237,8 @@ def special_fiber_audit() -> dict[str, object]:
     minus_plane = factor_plane(-1, 0)
     plus_frame = full_frame(+1, 0)
     minus_frame = full_frame(-1, 0)
+    plus_symmetric_square = symmetric_square_plane(+1, 0)
+    minus_symmetric_square = symmetric_square_plane(-1, 0)
     difference = difference_space()
     derivatives = derivative_span(difference)
     flat_factor_sum = [u(column) for column in range(N)] + plus_plane
@@ -236,6 +256,13 @@ def special_fiber_audit() -> dict[str, object]:
         "D_contained_in_actual_full_frame_sum": (
             rank_q(plus_frame + minus_frame + difference)
             == rank_q(plus_frame + minus_frame)
+        ),
+        "colliding_symmetric_square_sum_rank": rank_q(
+            plus_symmetric_square + minus_symmetric_square
+        ),
+        "D_contained_in_actual_symmetric_square_sum": (
+            rank_q(plus_symmetric_square + minus_symmetric_square + difference)
+            == rank_q(plus_symmetric_square + minus_symmetric_square)
         ),
         "flat_limit_factor_sum_rank": rank_q(flat_factor_sum),
         "D_derivative_contained_in_flat_factor_sum": (
@@ -262,8 +289,10 @@ def build_payload() -> dict[str, object]:
         assert row["exterior_determinant"] == 64 * row["t"] ** 6
         assert row["full_frame_ranks"] == [15, 15]
         assert row["full_frame_sum_rank"] == 30
+        assert row["symmetric_square_sum_rank"] == 42
         assert row["D_rank"] == 15
         assert row["D_contained_in_full_frame_sum"]
+        assert row["D_contained_in_symmetric_square_sum"]
         assert row["normalized_section_difference_equals_fixed_D"]
         assert row["common_quotient_image_dimension"] == 15
         assert row["quotient_images_are_equal"]
@@ -274,6 +303,8 @@ def build_payload() -> dict[str, object]:
     assert not special["derivative_contained_in_actual_plane_sum"]
     assert special["colliding_full_frame_sum_rank"] == 15
     assert not special["D_contained_in_actual_full_frame_sum"]
+    assert special["colliding_symmetric_square_sum_rank"] == 21
+    assert not special["D_contained_in_actual_symmetric_square_sum"]
     assert special["flat_limit_factor_sum_rank"] == 12
     assert special["D_derivative_contained_in_flat_factor_sum"]
     assert special["flat_limit_full_frame_sum_rank"] == 30

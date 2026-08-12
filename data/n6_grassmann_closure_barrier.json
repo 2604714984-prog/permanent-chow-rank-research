@@ -6,6 +6,7 @@
     "nonzero_parameters_replayed": [
       {
         "D_contained_in_full_frame_sum": true,
+        "D_contained_in_symmetric_square_sum": true,
         "D_rank": 15,
         "common_quotient_image_dimension": 15,
         "exterior_determinant": 46656,
@@ -21,10 +22,12 @@
         "full_frame_sum_rank": 30,
         "normalized_section_difference_equals_fixed_D": true,
         "quotient_images_are_equal": true,
+        "symmetric_square_sum_rank": 42,
         "t": -3
       },
       {
         "D_contained_in_full_frame_sum": true,
+        "D_contained_in_symmetric_square_sum": true,
         "D_rank": 15,
         "common_quotient_image_dimension": 15,
         "exterior_determinant": 64,
@@ -40,10 +43,12 @@
         "full_frame_sum_rank": 30,
         "normalized_section_difference_equals_fixed_D": true,
         "quotient_images_are_equal": true,
+        "symmetric_square_sum_rank": 42,
         "t": -1
       },
       {
         "D_contained_in_full_frame_sum": true,
+        "D_contained_in_symmetric_square_sum": true,
         "D_rank": 15,
         "common_quotient_image_dimension": 15,
         "exterior_determinant": 64,
@@ -59,10 +64,12 @@
         "full_frame_sum_rank": 30,
         "normalized_section_difference_equals_fixed_D": true,
         "quotient_images_are_equal": true,
+        "symmetric_square_sum_rank": 42,
         "t": 1
       },
       {
         "D_contained_in_full_frame_sum": true,
+        "D_contained_in_symmetric_square_sum": true,
         "D_rank": 15,
         "common_quotient_image_dimension": 15,
         "exterior_determinant": 4096,
@@ -78,15 +85,18 @@
         "full_frame_sum_rank": 30,
         "normalized_section_difference_equals_fixed_D": true,
         "quotient_images_are_equal": true,
+        "symmetric_square_sum_rank": 42,
         "t": 2
       }
     ],
     "special_fiber": {
       "D_contained_in_actual_full_frame_sum": false,
+      "D_contained_in_actual_symmetric_square_sum": false,
       "D_contained_in_flat_full_frame_sum": true,
       "D_derivative_contained_in_flat_factor_sum": true,
       "colliding_factor_plane_rank": 6,
       "colliding_full_frame_sum_rank": 15,
+      "colliding_symmetric_square_sum_rank": 21,
       "derivative_contained_in_actual_plane_sum": false,
       "first_order_relative_graph_map_matrix": [
         [

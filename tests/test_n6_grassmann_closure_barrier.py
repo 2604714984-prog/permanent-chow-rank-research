@@ -33,6 +33,8 @@ class GrassmannClosureBarrierTests(unittest.TestCase):
             self.assertEqual(row["factor_plane_sum_rank"], 12)
             self.assertEqual(row["full_frame_sum_rank"], 30)
             self.assertTrue(row["D_contained_in_full_frame_sum"])
+            self.assertEqual(row["symmetric_square_sum_rank"], 42)
+            self.assertTrue(row["D_contained_in_symmetric_square_sum"])
             self.assertTrue(row["normalized_section_difference_equals_fixed_D"])
             self.assertTrue(row["quotient_images_are_equal"])
 
@@ -42,6 +44,8 @@ class GrassmannClosureBarrierTests(unittest.TestCase):
         self.assertEqual(special["fixed_D_derivative_rank"], 12)
         self.assertFalse(special["derivative_contained_in_actual_plane_sum"])
         self.assertFalse(special["D_contained_in_actual_full_frame_sum"])
+        self.assertEqual(special["colliding_symmetric_square_sum_rank"], 21)
+        self.assertFalse(special["D_contained_in_actual_symmetric_square_sum"])
 
     def test_first_order_and_flat_data_repair_this_family(self):
         special = self.payload["family"]["special_fiber"]
