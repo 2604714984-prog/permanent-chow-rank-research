@@ -87,7 +87,8 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` `b=59` scalar frontier | pure finite enumeration; exact integer replay | the same 367 necessary scalar states occur; all but the unique all-`alpha=3`, `t_2=15` state are excluded, and its required prolongation dimension rises to 461 |
 | `n=6` product-shadow theorem | pure characteristic-zero theorem; exact integer DP replay | torus specialization and two-sided colex compression reduce every `b`-plane in the permanent cubic derivative space to a Ferrers support; the exact product shadow exceeds the fixed-six projection cap 78 for every `53<=b<=64` |
 | `n=6` ordinary lower-27 completion | proof draft complete; independently audited exact integer replay | the product-shadow theorem removes `b=53,...,64`; exhaustive conservative defect/Macaulay arithmetic gives `h>2b` for every `45<=b<=52`, ruling out every hypothetical 26-term decomposition and proving `ChowRank(perm_6)>=27` |
-| `n=6` lower-28 fixed-six frontier | proof draft complete; independently audited exact integer replay; partial | under a hypothetical minimum 27-term decomposition, conditional averaging forces maximum single-term middle rank 20; product shadows and existing prolongation caps leave only `b=34,...,46` plus one all-`alpha=3` state at `b=50`; no lower-28 claim is made |
+| `n=6` lower-28 fixed-six frontier | proof draft complete; independently audited exact integer replay; partial | conditional averaging, product shadows, and literal six-color lifting exclude every layer except one all-`alpha=3` state at `b=50`; no lower-28 claim is made |
+| `n=6` literal-six shadow exclusion | pure characteristic-zero theorem; exact integer replay | any residual six-color literal span meets the permanent cubic space in dimension at least `100-b`; for `b<=47` its shadow is at least 81, contradicting the universal six-term quadratic projection cap 78 |
 | `n=6` separated `alpha=3` exclusion | pure coupling theorem; exact integer replay; restricted family | six column-separated or row-separated terms with the common-`W_15`, direct quadratic/cubic data of the `b=50` endpoint satisfy `b<=40`; general nonseparated configurations remain open |
 | `n=6` central-to-quadratic converse barrier | pure characteristic-zero counterexample; exact rational replay | two Chow terms have literal relation dimensions `(kappa_2,kappa_3,kappa_4)=(1,0,0)` and coupled ranks `(29,40,29)`; central and quartic literal directness do not force quadratic literal directness |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
@@ -200,6 +201,7 @@ python scripts/n6_b59_scalar_frontier.py
 python scripts/n6_product_shadow_b53_64_exclusion.py
 python scripts/n6_lower27_completion.py
 python scripts/n6_lower28_fixed_six_partial.py
+python scripts/n6_literal_six_shadow_b34_47_exclusion.py
 python scripts/n6_alpha3_separated_block_exclusion.py
 python scripts/n6_central_neardirect_quadratic_barrier.py
 ```

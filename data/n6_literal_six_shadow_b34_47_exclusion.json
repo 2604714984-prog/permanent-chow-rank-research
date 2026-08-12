@@ -1,0 +1,211 @@
+{
+  "claim_boundary": "This certificate does not exclude the all-alpha-three b=50 endpoint, prove ChowRank(perm_6)>=28, determine the exact ordinary rank, or make a border-rank claim.",
+  "conclusion": "The literal-six shadow argument excludes every N6-058 residual layer b=34,...,46; it also gives a new proof at b=47, which had already been excluded by a prolongation cap.",
+  "exact_product_shadow_at_53": {
+    "first_ferrers_witness": [
+      20,
+      13,
+      10,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "memoized_dp_state_count": 1895,
+    "minimizer_count": 28,
+    "minimum": 81
+  },
+  "excluded_b_values": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "hypothesis": "the N6-058 fixed-six reduction under a hypothetical 27-term ordinary Chow decomposition of perm_6",
+  "literal_complement_dimension_cap": 300,
+  "literal_complement_term_count": 15,
+  "literal_six_term_count": 6,
+  "lower_28_frontier_after_N6_060": [
+    50
+  ],
+  "lower_28_frontier_before_N6_060": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    50
+  ],
+  "permanent_middle_dimension": 400,
+  "residual_term_count": 21,
+  "rows": [
+    {
+      "b": 34,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 366,
+      "dim_E3_intersect_literal_six_lower": 66,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 35,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 365,
+      "dim_E3_intersect_literal_six_lower": 65,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 36,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 364,
+      "dim_E3_intersect_literal_six_lower": 64,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 37,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 363,
+      "dim_E3_intersect_literal_six_lower": 63,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 38,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 362,
+      "dim_E3_intersect_literal_six_lower": 62,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 39,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 361,
+      "dim_E3_intersect_literal_six_lower": 61,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 40,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 360,
+      "dim_E3_intersect_literal_six_lower": 60,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 41,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 359,
+      "dim_E3_intersect_literal_six_lower": 59,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 42,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 358,
+      "dim_E3_intersect_literal_six_lower": 58,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 43,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 357,
+      "dim_E3_intersect_literal_six_lower": 57,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 44,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 356,
+      "dim_E3_intersect_literal_six_lower": 56,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 45,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 355,
+      "dim_E3_intersect_literal_six_lower": 55,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 46,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 354,
+      "dim_E3_intersect_literal_six_lower": 54,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    },
+    {
+      "b": 47,
+      "chosen_subspace_dimension": 53,
+      "dim_E3_intersect_G3_lower": 353,
+      "dim_E3_intersect_literal_six_lower": 53,
+      "exact_product_shadow_lower": 81,
+      "excluded": true,
+      "six_term_quadratic_projection_cap": 78
+    }
+  ],
+  "single_term_middle_rank_cap": 20,
+  "six_term_quadratic_projection_cap": 78,
+  "status": [
+    "PURE_LINEAR_ALGEBRA_REDUCTION",
+    "EXACT_INTEGER_DP_REPLAY",
+    "B34_TO_B47_EXCLUDED",
+    "LOWER_28_FRONTIER_REDUCED_TO_B50",
+    "N6-060"
+  ],
+  "strict_shadow_excess": 3,
+  "universal_lower_bound": "dim(E3 intersect L_A) >= 100-b"
+}

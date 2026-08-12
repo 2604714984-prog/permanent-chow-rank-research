@@ -1267,3 +1267,27 @@ directness do not force quadratic literal directness.  The example only
 blocks a converse requiring zero quadratic relations; it does not rule out
 all quantitative relation-shadow inequalities and does not realize the
 permanent-relative endpoint.
+
+N6-060 bypasses that converse and removes every remaining low layer.  Let
+`G=D_3(Q)` be the coupled cubic space of the twenty-one residual terms,
+`S=E_3 intersect G`, and let `L` be their literal cubic sum.  The symmetric
+double quotient and `E_3+G=E_3+H_3` give
+
+\[
+ \dim S\ge400-b.
+\]
+
+For any six residual terms, write their literal sum as `L_A` and the sum of
+the other fifteen spaces as `L_B`.  Since `dim L_B<=300` and `L=L_A+L_B`,
+
+\[
+ \dim(S\cap L_A)\ge100-b.
+\]
+
+Thus every `b<=47` layer contains a 53-plane in `E_3` whose derivative
+shadow lies in the quadratic literal span of six Chow terms.  N6-056 forces
+that shadow to have dimension at least 81, while the universal fixed-six
+projection cap is 78.  This contradiction excludes `b=34,...,47` without
+identifying any coupled sub-sum with its literal span.  The lower-28
+fixed-six frontier is now the single all-`alpha=3`, `b=50` endpoint.  It is
+still unresolved, so no ordinary lower-28 or border-rank conclusion is made.
