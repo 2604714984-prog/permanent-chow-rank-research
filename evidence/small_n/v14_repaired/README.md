@@ -24,12 +24,20 @@ Run the outer and clean inner checks with:
 
 ```text
 python -m pip install python-flint==0.8.0
-python verify_assets.py --replay
+python -B verify_assets.py --replay
 ```
 
-The reviewer ZIP verifies its frozen manifest before and after replay, performs
-all active `n=3`, `n=4`, and new `n=5` exact checks in a temporary copy, and can
-optionally rebuild the 50-page PDF.  No historical 10 GB asset is included.
+The outer verifier requires the manifest to contain exactly the named PDF and
+reviewer ZIP, with unique names, positive byte counts, and syntactically valid
+SHA-256 values.  It verifies the extracted package manifest before replay and
+again after replay, so a replay program that changes a controlled file cannot
+return a false pass.  Inner programs run with `python -B` and
+`PYTHONDONTWRITEBYTECODE=1`; extraction is temporary, so cache files and other
+uncontrolled replay side effects are not published.
+
+The reviewer ZIP performs all active `n=3`, `n=4`, and new `n=5` exact checks
+in that temporary copy and can optionally rebuild the 50-page PDF.  No
+historical 10 GB asset is included.
 The `n=5` endpoint verifier itself uses only the Python standard library;
 `python-flint` is required only by the independent `n=4` replay.
 

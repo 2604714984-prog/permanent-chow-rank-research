@@ -21,9 +21,11 @@ in `v13_pure/MANIFEST.json` and `v14_repaired/MANIFEST.json`.
 
 - `n=3`: accepted.
 - `n=4`: independently exact-replayed.
-- `n=5`: external audit did not accept v13 as a closed proof. The repaired v14 internal draft supplies the missing characteristic-zero closed-incidence degeneration and replaces the unsupported terminal premise by an exact, independently replayable 886,464-flag certificate. Fresh independent review is pending.
+- `n=5`: external audit did not accept v13 as a closed proof. The repaired v14 internal draft supplies the missing characteristic-zero closed-incidence degeneration and replaces the unsupported terminal premise by an exact, independently replayable 886,464-flag certificate. A later model-assisted audit conditionally passed the repairs without finding a new fatal mathematical defect. Named independent human review is pending.
 
 The rejected v13 candidate is retained in `v13_pure/` for history only. The
 repaired PDF, reviewer ZIP, immutable manifest, and active verifier are stored
 in `v14_repaired/`; the English mathematical repair note is
-`docs/perm5_lower16_v14_mathematical_repairs.md`.
+`docs/perm5_lower16_v14_mathematical_repairs.md`.  The reviewer-facing
+all-orders formal-rigidity and relative-Grassmannian arguments are extracted in
+`docs/perm5_v14_nonfinite_bridge_notes.md`.

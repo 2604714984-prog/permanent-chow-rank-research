@@ -11,7 +11,7 @@ Audited head: `649ab071eeef40a32bdfefc9a831d210cb072839`
 ```text
 FATAL_LOGICAL_DEFECT_FOUND=false
 LOWER_16_PROOF_CHAIN=PASS_ON_SECOND_PASS
-EXACT_COMPUTATION_REPLAY=PASS
+INTERNAL_EXACT_COMPUTATION_REPLAY=PASS
 PROGRAM_FREE_CHARACTERIZATION=REJECT
 FRESH_INDEPENDENT_HUMAN_REVIEW=PENDING
 ```
@@ -31,6 +31,11 @@ by reproducible exact enumeration.
 
 This is a second internal adversarial audit, not a substitute for fresh
 independent human review or proof-assistant formalization.
+
+Here, an "independent replay" means that the replay implementation reconstructs
+its input instead of importing the original generator.  It does not mean that
+the execution was performed by an independent reviewer.  No frozen external
+machine receipt is claimed by this report.
 
 ## Frozen artifacts
 
@@ -143,9 +148,9 @@ original generator.
 All 58 states are excluded, hence the repaired chain proves the lower bound 16.
 Glynn's 16-term identity supplies the matching upper bound.
 
-## Independent replay summary
+## Internal exact replay summary
 
-The following high-risk finite components were replayed from the extracted
+The following high-risk finite components were replayed internally from the extracted
 reviewer packet with bytecode generation disabled:
 
 - package manifest before and after replay: 110 files, pass;
