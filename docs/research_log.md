@@ -571,3 +571,30 @@ one-term caps by 44605.  Consequently any hypothetical split
 two-sided row/column overlap defect at least 44605 with the permanent matrix.
 This is a sharper coupled target, not lower 27: no general upper bound on that
 aggregate defect is yet proved.
+
+## 2026-08-12: the psi chart has no binomial higher-wedge amplification
+
+G-033 closes another tempting interpretation of the general psi theorem.
+For `n=3`, let `E=D_2(perm_3)` and adjoin the square `q=x_00^2`.  At exterior
+degree three there are `binom(8,3)=56` nonzero raw columns from `q`, but nine
+explicit independent characteristic-zero relations place nine combinations
+inside `delta_(2,3)(E tensor Lambda^3 V)`.  Their `q`-wedge supports are
+pairwise disjoint, so the quotient gain is at most 47.
+
+Exact sparse elimination over `Fraction` gives the complete gain profile
+
+\[
+(1,8,28,47,32,0,0,0,0)
+\]
+
+for exterior degrees `0..8`, proving that the degree-three gain is exactly
+47.  Thus the pure `p=1` theorem remains valid, but it cannot be exterior-
+shadowed into a universal `binom(n^2-1,p)` gain.  Higher relative Koszul
+homology, not the first psi kernel alone, controls the extension.
+
+The two-Chow counterexample has also been replayed at every internal exterior
+degree.  Its output intersections are `(0,18,96,100,48,9,0)`; in the
+36-variable ambient middle third-Koszul map the loss is 10,810.  These two
+results jointly rule out the idea that merely increasing the exterior degree
+restores additivity.  The lower-27 target remains the equation-specific
+two-sided overlap defect 44,605.

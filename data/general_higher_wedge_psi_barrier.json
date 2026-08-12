@@ -1,0 +1,55 @@
+{
+  "base_koszul_ranks": [
+    9,
+    80,
+    315,
+    720,
+    934,
+    720,
+    315,
+    80,
+    9
+  ],
+  "claim_boundary": "This refutes the naive higher-wedge extrapolation of the one-direction psi theorem. It does not refute the proved p=1 theorem and gives no Chow-rank bound.",
+  "derivative_output_degree": 2,
+  "extended_koszul_ranks": [
+    10,
+    88,
+    343,
+    767,
+    966,
+    720,
+    315,
+    80,
+    9
+  ],
+  "field": "Q",
+  "n": 3,
+  "naive_binomial_extrapolation": [
+    1,
+    8,
+    28,
+    56,
+    70,
+    56,
+    28,
+    8,
+    1
+  ],
+  "new_direction": "x_00^2",
+  "p3_exact_gain": 47,
+  "p3_explicit_independent_relations": 9,
+  "p3_new_source_dimension": 56,
+  "quotient_gains": [
+    1,
+    8,
+    28,
+    47,
+    32,
+    0,
+    0,
+    0,
+    0
+  ],
+  "status": "EXACT_RATIONAL_HIGHER_WEDGE_PSI_BARRIER"
+}

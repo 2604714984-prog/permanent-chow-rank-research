@@ -45,6 +45,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Quotient Koszul relation budget | proof draft complete; diagnostic only | after quotienting by `im K_3(perm_6)`, the fixed-sum gain is the rank of a sum of individually lossless maps and satisfies `Gamma>=sum r_i-36 rho-eta-j`; the unresolved aggregate collision `j` prevents a lower-26 conclusion |
 | General quadratic psi chart | pure proof draft; exact replay for `n=3..6` | for every `n>=3`, `ker psi_v=span([v^2])`; one new quadratic direction adds at least `n^2-1` first-Koszul dimensions, but gains from several directions need not add |
 | General derivative-degree psi chart | pure proof draft; selected exact replay through `n=6` | for every `n>=3` and `2<=m<=n-1`, `ker psi_(m,v)=span([v^m])`; one new degree-`m` direction adds at least `n^2-1`, without an additivity claim |
+| Higher-wedge psi extrapolation barrier | pure counterexample; exact rational replay | at `n=3,m=2,p=3`, adjoining `x_00^2` has quotient gain exactly `47<binom(8,3)=56`; nine explicit independent relations show that the proved `p=1` chart has no formal binomial amplification |
 | Two-Chow central/Koszul separation | pure proof draft; exact rational replay | two full-rank sextic Chow terms can have disjoint 20-dimensional middle images while their internal Koszul-output intersections are `(0,18,96,100,48,9,0)` across wedge degrees `0..6`; after embedding in 36 variables the middle third-Koszul loss is `10,810`, so higher wedges can amplify rather than remove the collision |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the former scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
@@ -137,6 +138,7 @@ python scripts/general_relation_tableau_audit.py
 python scripts/general_relation_radical_counterexample.py
 python scripts/degree6_three_monomial_radical_classification.py
 python scripts/general_derivative_profile_ceiling_audit.py
+python scripts/general_higher_wedge_psi_barrier.py
 python scripts/general_column_sign_rigidity_audit.py
 python scripts/general_column_sign_rigidity_independent.py
 ```
