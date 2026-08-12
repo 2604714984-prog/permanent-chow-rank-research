@@ -467,10 +467,23 @@ coordinate monomials, before attempting arbitrary fixed six-term geometry.
 N6-025 then shows that aggregate collision eventually occurs inside the same
 permutation subfamily.  Six terms sharing three complement edges and ranging
 over a `3 x 3` permutation block have `j=36`; the collision is exactly the
-36-dimensional Koszul image of that cubic subpermanent.  However their sum is
-three common factors times `perm_3` and therefore shortens from six Chow terms
-to four.  Hence unconditional aggregate transversality is false, while the
-minimum-fixed-sum version remains viable and is now the precise target.
+36-dimensional Koszul image of that cubic subpermanent.  Their sum shortens
+from six Chow terms to four, so this first example does not test minimum fixed
+sums.
+
+N6-026 closes that loophole.  Pair each top-block permutation monomial with
+the identically indexed bottom-block permutation monomial.  The resulting
+six-term sum has a unimodular middle catalectic of rank 120 and therefore exact
+Chow rank six.  Nevertheless its individual output spaces form a direct sum
+(`eta=0`), its central derivative spaces form a direct sum (`rho=0`), and its
+aggregate collision is `j=72`.  Thus minimum length, middle-catalectic
+certification, and vanishing central/internal relations cannot control `j`.
+The active target must now use compatibility with the residual equation
+`perm_6=R+Q`, rather than an invariant of the fixed sum `R` alone.  Indeed the
+N6-026 example has central intersection `b=2`, whereas every six-fixed state
+in a hypothetical 25-term decomposition has `b>=20`.  The next bounded target
+is therefore a high-intersection aggregate inequality, not another
+minimum-length criterion.
 
 ## 10. Falsification and stop rules
 

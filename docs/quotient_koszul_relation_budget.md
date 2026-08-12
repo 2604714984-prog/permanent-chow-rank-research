@@ -215,3 +215,21 @@ No such uniform inequality is proved here.  Equation (5.1) is the precise
 finite interface that a successor must address.  A bound on `rho` alone, or
 another repetition of single-term full gain, cannot control the aggregate
 collision `j`.
+
+N6-026 gives a sharp warning about the form of any successor.  It constructs
+a fixed sum of exact Chow rank six with
+
+\[
+ \rho=0,\qquad \eta=0,\qquad j=72.
+\]
+
+Therefore neither minimum length nor any inequality bounding `j` solely by
+`rho` and `eta` can prove (5.1).  A lower-26 argument must use the additional
+residual constraint that the fixed sum is a partial sum in an equality
+`perm_6=R+Q` with `Q` of Chow rank at most `25-q`, or replace this scalar
+relation budget by a genuinely coupled invariant.
+
+For the N6-026 example the central intersection with the permanent derivative
+space is only `b=2`.  The lower-26 six-fixed frontier instead forces `b>=20`.
+Thus the smallest surviving refinement is to combine aggregate collision with
+this high-intersection condition; N6-026 does not falsify such a statement.
