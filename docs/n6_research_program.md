@@ -502,6 +502,15 @@ each term to be matchings, hence every term to be a permutation monomial,
 contradicting N6-027.  Therefore `b<=19` for all six coordinate monomials.
 The high-intersection frontier is now provably non-coordinate.
 
+N6-029 also excludes the first natural non-coordinate model.  Six distinct
+column-uniform sign terms have twenty identical middle-catalectic blocks.  A
+short Boolean Fourier argument makes every block rank six, so `h=120`, while
+their subpermanent intersection is `b=20(6-rank D)<=40`.  A nineteen-term
+residual would require `h<=2b-20<=60`, an immediate contradiction.  This is a
+mixed-decomposition exclusion: the residual terms are unrestricted.  The
+remaining frontier is therefore not represented by coordinate monomials or
+column-uniform sign terms.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
