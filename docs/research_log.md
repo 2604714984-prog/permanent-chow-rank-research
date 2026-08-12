@@ -1475,3 +1475,31 @@ the equality hooks.  G-048 proves that this containment plus pairwise
 transversality is still insufficient: the actual section differences,
 common quotient, cocycle and Chow-frame realizability remain necessary.  No
 lower-28 or border-rank conclusion is made.
+
+G-049 identifies why the most direct torus-closure attempt cannot supply that
+missing pair data.  In a coordinate $K_{2,6}$ block, the complementary planes
+
+\[
+ L_t=(v+tu)\otimes C,
+ \qquad
+ M_t=(v-tu)\otimes C
+\]
+
+have full-frame quadratic spaces with the same quotient and the fixed
+normalized section difference
+
+\[
+ D=(uv+vu)\otimes S_0(C),
+ \qquad \dim D=15,
+ \qquad \dim\partial D=12.
+\]
+
+At $t=0$ the factor planes collide, while $D$ and its shadow do not move.
+Consequently neither $\partial D\subset L+M$ nor
+$D\subset\operatorname{Sym}^2L+\operatorname{Sym}^2M$ survives in the raw
+Grassmann tuple.  The flat twelve- and thirty-dimensional sums do survive,
+and the blow-up of the diagonal records the full-rank relative tangent
+$2I$.  Thus any valid fixed-layer reduction must retain equivalent
+first-order or complete-collineation data.  This pair-level family embeds in
+the standard $b=50$ hook but does not realize the full six-term endpoint and
+makes no lower-28 claim.

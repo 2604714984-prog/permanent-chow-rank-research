@@ -1,0 +1,165 @@
+{
+  "claim_boundary": "This is one exact two-frame common-quotient collision embedded in the standard b=50 quadratic hook. It proves that the raw conditions partial(D) subset L+M and D subset Sym2(L)+Sym2(M) are not closed when L and M collide. It is not a complete six-term b=50 configuration, does not satisfy all fifteen section-difference cocycles, and does not refute lower 28. The flat limit and the full-rank first-order relative graph map retain the missing data.",
+  "family": {
+    "factor_planes": "L_t=(v+t*u) tensor C6, M_t=(v-t*u) tensor C6",
+    "fixed_section_difference": "D=(u*v+v*u) tensor S0(C6)",
+    "nonzero_parameters_replayed": [
+      {
+        "D_contained_in_full_frame_sum": true,
+        "D_rank": 15,
+        "common_quotient_image_dimension": 15,
+        "exterior_determinant": 46656,
+        "factor_plane_ranks": [
+          6,
+          6
+        ],
+        "factor_plane_sum_rank": 12,
+        "full_frame_ranks": [
+          15,
+          15
+        ],
+        "full_frame_sum_rank": 30,
+        "normalized_section_difference_equals_fixed_D": true,
+        "quotient_images_are_equal": true,
+        "t": -3
+      },
+      {
+        "D_contained_in_full_frame_sum": true,
+        "D_rank": 15,
+        "common_quotient_image_dimension": 15,
+        "exterior_determinant": 64,
+        "factor_plane_ranks": [
+          6,
+          6
+        ],
+        "factor_plane_sum_rank": 12,
+        "full_frame_ranks": [
+          15,
+          15
+        ],
+        "full_frame_sum_rank": 30,
+        "normalized_section_difference_equals_fixed_D": true,
+        "quotient_images_are_equal": true,
+        "t": -1
+      },
+      {
+        "D_contained_in_full_frame_sum": true,
+        "D_rank": 15,
+        "common_quotient_image_dimension": 15,
+        "exterior_determinant": 64,
+        "factor_plane_ranks": [
+          6,
+          6
+        ],
+        "factor_plane_sum_rank": 12,
+        "full_frame_ranks": [
+          15,
+          15
+        ],
+        "full_frame_sum_rank": 30,
+        "normalized_section_difference_equals_fixed_D": true,
+        "quotient_images_are_equal": true,
+        "t": 1
+      },
+      {
+        "D_contained_in_full_frame_sum": true,
+        "D_rank": 15,
+        "common_quotient_image_dimension": 15,
+        "exterior_determinant": 4096,
+        "factor_plane_ranks": [
+          6,
+          6
+        ],
+        "factor_plane_sum_rank": 12,
+        "full_frame_ranks": [
+          15,
+          15
+        ],
+        "full_frame_sum_rank": 30,
+        "normalized_section_difference_equals_fixed_D": true,
+        "quotient_images_are_equal": true,
+        "t": 2
+      }
+    ],
+    "special_fiber": {
+      "D_contained_in_actual_full_frame_sum": false,
+      "D_contained_in_flat_full_frame_sum": true,
+      "D_derivative_contained_in_flat_factor_sum": true,
+      "colliding_factor_plane_rank": 6,
+      "colliding_full_frame_sum_rank": 15,
+      "derivative_contained_in_actual_plane_sum": false,
+      "first_order_relative_graph_map_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "first_order_relative_graph_map_rank": 6,
+      "fixed_D_derivative_rank": 12,
+      "fixed_D_rank": 15,
+      "flat_limit_factor_sum_rank": 12,
+      "flat_limit_full_frame_sum_rank": 30,
+      "leading_complementarity_determinant_coefficient": 64,
+      "order_of_complementarity_determinant": 6,
+      "t": 0
+    }
+  },
+  "standard_b50_hook_embedding": {
+    "D_is_contained_in_hook": true,
+    "D_second_shadow_dimension": 12,
+    "D_shadow_is_contained_in_hook_shadow": true,
+    "fixed_D_dimension": 15,
+    "standard_b50_hook_quadratic_dimension": 75,
+    "standard_b50_hook_second_shadow_dimension": 23
+  },
+  "status": [
+    "PURE_EXPLICIT_DEGENERATION",
+    "EXACT_QQ_REPLAY",
+    "GRASSMANN_INCIDENCE_ROUTE_BARRIER",
+    "G-049"
+  ]
+}
