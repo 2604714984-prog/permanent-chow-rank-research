@@ -1458,8 +1458,12 @@ every irreducible component as a Boolean-branch closure or its transpose.
 The same exact families have second shadow contained in a 23-dimensional
 linear hook.  A second product-shadow calculation gives the matching
 universal lower bound 23, so every point of every component, including its
-boundary, has second-shadow dimension 23; boundary hooks are understood only
-as projective limits of finite Boolean charts.
+boundary, has second-shadow dimension 23.  More precisely, the projective
+flag variety \(\operatorname{Fl}(3,4;6)\times\operatorname{Gr}(5,6)\) maps
+to the Grassmannian by
+\(R_3\subset R_4,C_5\mapsto R_4\otimes C_5+R_3\otimes k^6\).  Its image is
+closed, so boundary second shadows remain genuine flag hooks even when they
+leave a chosen finite Boolean chart.
 
 At the `b=50` endpoint, the five pair section-difference spaces relative to
 one color span `K=E_2 intersect H_2`.  Their individual `15->12` shadow
@@ -1470,8 +1474,8 @@ transverse, and give
  \partial K=\sum_iL_i=:M,\qquad\dim M=23.
 \]
 
-Thus all six factor planes lie in one 23-plane which is a projective limit of
-the equality hooks.  G-048 proves that this containment plus pairwise
+Thus all six factor planes lie in one genuine 23-dimensional flag hook.
+G-048 proves that this containment plus pairwise
 transversality is still insufficient: the actual section differences,
 common quotient, cocycle and Chow-frame realizability remain necessary.  No
 lower-28 or border-rank conclusion is made.

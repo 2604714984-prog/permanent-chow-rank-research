@@ -5,7 +5,7 @@
     "all_selected_chart_jacobians_are_identity": true,
     "count": 240
   },
-  "claim_boundary": "This classifies the rank-seventy-five product-shadow equality locus as Boolean-shear branch closures and proves second shadow twenty-three. Boundary second shadows are limits of finite Boolean-sheared hooks; no single finite shear chart is asserted at every boundary point. It does not by itself exclude the b=50 Chow endpoint; actual section differences, the common quotient, and Chow realizability remain necessary.",
+  "claim_boundary": "This classifies the rank-seventy-five product-shadow equality locus as Boolean-shear branch closures and proves second shadow twenty-three. Boundary second shadows remain genuine projective flag hooks, although no single finite Boolean-shear chart is asserted at every boundary point. It does not by itself exclude the b=50 Chow endpoint; actual section differences, the common quotient, and Chow realizability remain necessary.",
   "linear_incidence": {
     "free_component_count": 16,
     "free_group_sizes": [
@@ -27,6 +27,7 @@
     "rref_is_exactly_the_forbidden_unit_vectors": true
   },
   "second_product_shadow": {
+    "boundary_second_shadows_remain_genuine_flag_hooks": true,
     "equality_branch_second_shadow_dimension": 23,
     "first_ferrers_witness": [
       15,

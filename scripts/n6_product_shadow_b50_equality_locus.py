@@ -417,12 +417,13 @@ def build_payload():
             "universal_minimum_at_dimension_75": second_minimum,
             "first_ferrers_witness": list(second_witness),
             "equality_branch_second_shadow_dimension": 23,
+            "boundary_second_shadows_remain_genuine_flag_hooks": True,
         },
         "claim_boundary": (
             "This classifies the rank-seventy-five product-shadow equality locus "
             "as Boolean-shear branch closures and proves second shadow twenty-three. "
-            "Boundary second shadows are limits of finite Boolean-sheared hooks; "
-            "no single finite shear chart is asserted at every boundary point. "
+            "Boundary second shadows remain genuine projective flag hooks, although "
+            "no single finite Boolean-shear chart is asserted at every boundary point. "
             "It does not by itself exclude the b=50 Chow endpoint; actual section "
             "differences, the common quotient, and Chow realizability remain necessary."
         ),

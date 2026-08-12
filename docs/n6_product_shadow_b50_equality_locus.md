@@ -263,10 +263,29 @@ the containment is equality:
 Consequently every finite-parameter point on a displayed branch has a
 23-dimensional second shadow of the form (5.1).  On the projective closure,
 second-shadow rank is at most 23 by specialization and at least 23 by the
-universal lower bound, so it remains exactly 23.  Boundary points are asserted
-only to have second shadows that are limits of the hooks (5.1); they need not
-admit the same finite Boolean-shear coordinates or themselves be expressible
-by (5.1) in a finite branch chart.
+universal lower bound, so it remains exactly 23.
+
+There is a slightly stronger intrinsic description at the boundary.  The
+projective parameter space
+
+\[
+ \operatorname{Fl}(3,4;k^6)\times\operatorname{Gr}(5,k^6)
+\]
+
+maps regularly to \(\operatorname{Gr}(23,k^6\otimes k^6)\) by
+
+\[
+ (R_3\subset R_4,C_5)\longmapsto
+ R_4\otimes C_5+R_3\otimes k^6.
+\tag{5.3}
+\]
+
+Indeed, the intersection is the constant-rank space \(R_3\otimes C_5\), so
+the displayed sum is a rank-23 subbundle image.  The parameter space is
+projective, hence its image is closed.  Every finite Boolean branch has the
+form (5.3) in degree one, and therefore every boundary second shadow is still
+a genuine flag hook (5.3).  It may leave the chosen finite Boolean-shear
+chart, but it does not leave the projective flag-hook image.
 
 ## 6. Boundary and replay
 
@@ -301,9 +320,9 @@ It follows that
 \]
 
 Since \(\partial S=K\), the present theorem proves that this common
-23-plane \(M\) is a projective limit of Boolean-sheared hooks.  It does not
-assert that a boundary \(M\) itself has finite coordinates of the form
-(5.1).  G-048 shows that containment in a 23-plane of the hook type, even
+23-plane \(M\) is a genuine flag hook of the form (5.3), although it need not
+belong to the chosen finite Boolean-shear chart.  G-048 shows that containment
+in a 23-plane of the hook type, even
 together with pairwise transversality, does not by itself force an N6-061
 transverse pair.  Excluding the Chow endpoint still requires using the
 section-difference spaces, their common quotient and cocycle, or Chow-frame

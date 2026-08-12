@@ -46,6 +46,11 @@ class ProductShadowB50EqualityLocusTests(unittest.TestCase):
         self.assertEqual(self.payload["transpose_hook"]["free_group_sizes"], [3, 4, 4, 5])
         self.assertEqual(self.payload["second_product_shadow"]["universal_minimum_at_dimension_75"], 23)
         self.assertEqual(self.payload["second_product_shadow"]["equality_branch_second_shadow_dimension"], 23)
+        self.assertTrue(
+            self.payload["second_product_shadow"][
+                "boundary_second_shadows_remain_genuine_flag_hooks"
+            ]
+        )
 
 
 if __name__ == "__main__":
