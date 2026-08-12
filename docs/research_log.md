@@ -415,3 +415,34 @@ middle images has dimension `20..64`, so its colored quotient-relation kernel
 has dimension at least 320.  This makes the next interface cross-degree and
 module-valued: differentiate those 320 relations into the quadratic quotient
 module while retaining the central relation pairing.
+
+## 2026-08-12: the psi chart and one-direction gain hold for all `n>=3`
+
+The relative-kernel identity
+
+\[
+\ker\psi_v\simeq R_v(E)/E^{(1)},
+\qquad E=\mathcal D_{n-2}(\operatorname{perm}_n),
+\]
+
+reduces the chart theorem to a cubic prolongation calculation.  In a
+coordinate direction, the coefficient graph in every three-row,
+three-column block is `K_(3,3)` with at most one edge removed, so it remains
+connected.  A row-column torus degeneration carries an arbitrary direction
+with one nonzero coordinate to that coordinate case without increasing the
+relative prolongation dimension.  Therefore
+
+\[
+\ker\psi_v=\operatorname{span}([v^2])
+\]
+
+for every `n>=3`.  Since a nonzero quadratic permanent derivative has rank at
+least four, the original `n=4` argument now gives a gain of `n^2-1` for every
+single new quadratic direction.  Exact weighted coefficient constraints
+replay the full/relative prolongation dimensions for `n=3,4,5,6` as
+`1/2`, `16/17`, `100/101`, and `400/401`.
+
+This closes the single-direction generalization question, but not the
+multi-direction one: the images associated with distinct new quadratic
+directions can collide, so the gains cannot be summed without a new coupled
+argument.
