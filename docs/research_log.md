@@ -1423,3 +1423,13 @@ cross-free quadratic kernel.  This does not globalize through an arbitrary
 twelve-plane degeneration: complementary planes can collide in the special
 fiber.  The result is therefore a strict fixed-layer exclusion, not a proof
 of the `b=50` endpoint or lower 28.
+
+G-048 blocks a tempting dimension-only use of the 23-dimensional hook.  An
+explicit rational arrangement places six six-planes in the standard hook so
+that every two planes are transverse and their total span is the whole hook.
+Nevertheless, every one of the 45 potentially full two-row projections has
+rank ten, and all other two-row and two-column projections are singular on
+the ambient hook already.  Thus hook containment, pairwise transversality and
+total span 23 do not force an N6-061 transverse pair.  The example has no
+section-difference spaces in `E_2`, common quotient, cocycle or Chow frames;
+those actual structures remain available and cannot be discarded.

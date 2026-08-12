@@ -95,6 +95,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` fixed `K_3,4` Fano exclusion | pure characteristic-zero projective theorem; exact finite replay | the rank-at-most-nine six-plane Fano scheme in `A_3 tensor B_4` consists of 18 reduced coordinate rectangles, and its cross-image-at-most-three pair incidence is diagonal; this excludes actual complementary pairs only in the fixed layer |
 | `n=6` colored-differential barrier | explicit characteristic-zero linear model; exact modular certificate | all endpoint subset caps and the canonical common kernels coexist with surjective colored shadows in four, five, and six colors; any successful continuation must use actual Chow coproduct or integrability structure |
 | `n=6` squarefree-coproduct colored barrier | canonical per-color coproduct construction; exact modular upper certificates | six squarefree cubic coproducts have total kernel exactly 50 while every proper color-subset kernel obeys the endpoint cap; the missing constraints are cross-color ambient directness and the common-section cocycle |
+| `n=6` hook-plane projection barrier | explicit rational Grassmann arrangement; exact rational replay | six pairwise-transverse six-planes span a 23-dimensional equality hook while every candidate two-row and two-column pair projection is singular; hook dimensions alone cannot trigger transverse-pair rigidity |
 | `n=6` central-to-quadratic converse barrier | pure characteristic-zero counterexample; exact rational replay | two Chow terms have literal relation dimensions `(kappa_2,kappa_3,kappa_4)=(1,0,0)` and coupled ranks `(29,40,29)`; central and quartic literal directness do not force quadratic literal directness |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot supply the now-proved coupled lower bound 27 |
@@ -213,6 +214,7 @@ python scripts/n6_coordinate_product_shadow_b50_equality.py
 python scripts/n6_k34_rank_nine_fano_exclusion.py
 python scripts/n6_colored_differential_barrier.py
 python scripts/n6_squarefree_coproduct_colored_barrier.py
+python scripts/n6_hook_plane_projection_barrier.py
 python scripts/n6_central_neardirect_quadratic_barrier.py
 ```
 
