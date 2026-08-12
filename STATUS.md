@@ -6,6 +6,7 @@ Status vocabulary:
 - `PROOF_DRAFT_COMPLETE`: complete internal proof draft; not externally reviewed.
 - `COMPUTATION_REPLAYED`: deterministic computation rerun successfully.
 - `ROUTE_DIAGNOSTIC`: exact finite result used to assess a proof route, not itself a Chow-rank theorem.
+- `ROUTE_BARRIER`: a proved ceiling or obstruction showing that a stated class of methods cannot reach the target.
 - `LITERATURE_RECONCILED`: a source-bound full-text comparison with explicit version and claim boundaries.
 - `RESTRICTED_FAMILY_THEOREM`: an exact theorem for a stated proper subclass, with no inference to unrestricted Chow rank.
 - `RESTRICTED_AGGREGATE_THEOREM`: an exact theorem for a fixed aggregate function or fixed aggregate assignment, with no inference to all decompositions in the surrounding family.
@@ -40,6 +41,7 @@ Status vocabulary:
 | G-019 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | for every `K subset W tensor Sym^2 V` of dimension `k`, the vector-valued first prolongation satisfies `dim K^(1)<=k^{<2>}` | universal Grassmannian kernel, explicit colored-monomial one-parameter subgroup, scalar Macaulay growth, superadditivity, and `scripts/vector_valued_macaulay_audit.py` |
 | G-020 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | the `2^(n-1)` fixed column-uniform Glynn sign products are linearly independent, and the unique expansion of `perm_n` in their span uses every term with nonzero coefficient | Walsh-Hadamard proof and `scripts/glynn_family_rigidity_audit.py`; strict subfamily theorem only |
 | G-021 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_AGGREGATE_THEOREM` | for every `n>=4` and distinct nonzero rows `a,b`, the fixed-base normalized two-defect atomic rank of `g_ab=n_a n_b` is exactly `n^2`; the corresponding Fourier assignment has `2^(n-2)` nonzero bases and base-labelled cost `2^(n-2)n^2`, which is also the exact post-collection cost for `n>=5` | `docs/general_two_defect_count_product_rank.md`, exact nine-atom star classification, primary and independent audits, and frozen summary |
+| G-022 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_BARRIER` | every monotone, positively homogeneous, subadditive Chow-rank lower-bound functional that factors only through the scalar derivative profile is at most `binom(n,floor(n/2))` on `perm_n`; every nonnegative weighted direct sum of scalar catalecticants has the same ceiling | `docs/general_derivative_profile_ceiling.md`, `scripts/general_derivative_profile_ceiling_audit.py`, 16,365 Boolean weight supports, and the frozen compact payload |
 | N6-001 | `OPEN` | improve the lower bound beyond 25 or find a shorter decomposition of `perm_6` | `docs/n6_research_program.md` |
 | N6-002 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | all 79,800 coordinate pairs in `D_3(perm_6)` have first-catalectic ranks `9,13,15,16,17,18`; the coordinate rank-nine tangent space has affine dimension 19 | `scripts/n6_coordinate_secant_audit.py` |
 | N6-003 | `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | exact optimization of the former one-step Bukh-shadow formula over `m=2,3,4` stops at 23; its central `q=4` shadow cap 40 is attained | `scripts/n6_multishadow_route_barrier.py` |
@@ -67,8 +69,10 @@ Status vocabulary:
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-021 and N6-006 through N6-023 has not been exhaustively checked.
+- Literature novelty of G-001 through G-022 and N6-006 through N6-023 has not been exhaustively checked.
 - External audit rejected v13 as a closed proof because its universal one-intersection implication and binary-cubic exclusion were not established. The v14 draft repairs those two gaps and replays the finite endpoint premise. A later model-assisted audit conditionally passed the mathematical repair without finding a counterexample or new fatal defect; named independent human review and proof-assistant formalization remain incomplete.
+- G-022 covers only profile methods satisfying coordinate monotonicity, subadditivity, positive homogeneity, and one-term normalization. It does not constrain nonmonotone rules or invariants using cross-degree maps, multigrading, syzygies, quotient geometry, representation theory, or coupled relation modules.
+- The scalar kernel dimension of the raw adjacent differentiation map is profile-determined. Target-side row-column torus weights are not automatically termwise invariants for arbitrarily oriented Chow summands; any such use still requires an orientation-independent cap.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
 - N6-014 does not prove `ChowRank(perm_6)>=26`, a border Chow-rank lower bound of 25, or the conjectural exact value 32.
