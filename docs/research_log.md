@@ -547,3 +547,27 @@ This does not change the rank interval.  Together N6-033 and N6-034 remove
 both standard families in Guan's interface from the lower-27 search.  The
 remaining work must use a genuinely different Schur functor, a coupled or
 recursive construction, or nonlinear geometry of the hereditary residual.
+
+## 2026-08-12: exact middle third-Koszul rank and overlap target
+
+N6-035 computes the next middle complex rank exactly:
+
+\[
+\operatorname{rank}\delta_{3,3}(\operatorname{perm}_6)=2715505.
+\]
+
+The kernel modulo the preceding image has dimension forty.  These classes
+are explicit: choose three rows, sum the 120 source vectors indexed by a
+three-column subpermanent and a matching from the chosen rows to the
+complementary columns, and then transpose.  Every output coefficient cancels
+in a pair with opposite exterior sign.  The forty torus weights are distinct
+and absent from the preceding source.  A representative 120-column block has
+exact rational rank 119.  The resulting characteristic-zero upper rank agrees
+with the full integer-matrix rank modulo `1000003`.
+
+One Chow term has exact rank 133545, so the permanent rank exceeds twenty
+one-term caps by 44605.  Consequently any hypothetical split
+`perm_6=H+Q` with six and twenty Chow terms forces the matrix of `H` to have
+two-sided row/column overlap defect at least 44605 with the permanent matrix.
+This is a sharper coupled target, not lower 27: no general upper bound on that
+aggregate defect is yet proved.

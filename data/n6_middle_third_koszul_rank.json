@@ -1,0 +1,45 @@
+{
+  "characteristic_zero_exact_rank": 2715505,
+  "characteristic_zero_rank_upper": 2715505,
+  "claim_boundary": "The exact permanent rank exceeds twenty one-term caps by 44605. A hypothetical six-term complement must absorb this as a two-sided row/column overlap defect. No upper bound excluding that defect is proved, so this is not a lower-27 theorem.",
+  "domain_dimension": 2856000,
+  "explicit_homology_dimension_lower": 40,
+  "heavy_replay": null,
+  "heavy_replay_performed": false,
+  "hypothetical_six_term_two_sided_overlap_defect_lower": 44605,
+  "margin_above_twenty_term_cap": 44605,
+  "modular_rank_lower": 2715505,
+  "preceding_image_exact_rank": 140455,
+  "prime": 1000003,
+  "representative_exact_audit": {
+    "all_ones_cycle_nonzero_entries": 0,
+    "column_count": 120,
+    "exact_nullity": 1,
+    "exact_rational_rank": 119,
+    "row_support_count": 540
+  },
+  "representative_weight": {
+    "column_weight": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "row_weight": [
+      2,
+      2,
+      2,
+      0,
+      0,
+      0
+    ]
+  },
+  "row_heavy_weight_count": 20,
+  "single_chow_term_exact_rank": 133545,
+  "status": "N6_MIDDLE_THIRD_KOSZUL_RANK_REPLAYED",
+  "theorem": "The middle third-Koszul map of perm_6 has exact characteristic-zero rank 2715505 and forty-dimensional Koszul homology in this strand.",
+  "transpose_weight_count": 20,
+  "twenty_term_rank_cap": 2670900
+}
