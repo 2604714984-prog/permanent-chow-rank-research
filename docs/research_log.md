@@ -1352,3 +1352,27 @@ This is a finite coordinate theorem.  A noncoordinate equality plane can
 degenerate to a hook without being recovered from that special fiber, so the
 result does not classify the full equality locus or remove the unresolved
 all-`alpha=3`, `b=50` Chow endpoint.
+
+G-046 records a complementary colored-differential barrier.  Six colors of
+twenty Vandermonde columns in a seventy-dimensional subspace of
+`Q^5 tensor Q^15` give subset kernels of dimensions
+
+\[
+ (0,0,0,10,30,50)
+\]
+
+for one through six colors.  These obey every recorded `b=50` subset cap.
+After the five coordinate contractions, every four-, five-, and six-color
+shadow is nevertheless the full canonical sum kernel, of dimension 45, 60,
+and 75 respectively.  The script checks all 63 nonempty color subsets.  Its
+modular rank is a characteristic-zero certificate because the same nonzero
+Vandermonde pivot lifts the kernel basis over the localization at the prime,
+while containment in the canonical kernel gives the matching rational upper
+bound.
+
+Thus common kernels, subset dimensions, and even maximal colored-shadow ranks
+do not contradict the endpoint as abstract linear data.  The construction is
+not a Chow derivative tower or a permanent-relative configuration.  It shows
+that a further argument must use actual squarefree coproduct, factor-frame
+integrability, or common-section cocycle structure; it neither realizes nor
+excludes the `b=50` state.

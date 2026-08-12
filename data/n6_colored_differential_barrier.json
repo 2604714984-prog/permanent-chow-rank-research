@@ -1,0 +1,75 @@
+{
+  "all_63_nonempty_color_subsets_checked": true,
+  "base_field": "Q",
+  "by_color_count": {
+    "1": {
+      "K_I_dimension_over_Q": 0,
+      "S_I_dimension_over_Q": 0,
+      "b50_product_shadow_cap": 0,
+      "colored_shadow_rank_over_Q": 0,
+      "every_subset_shadow_equals_K_I": true,
+      "number_of_subsets": 6
+    },
+    "2": {
+      "K_I_dimension_over_Q": 15,
+      "S_I_dimension_over_Q": 0,
+      "b50_product_shadow_cap": 2,
+      "colored_shadow_rank_over_Q": 0,
+      "every_subset_shadow_equals_K_I": false,
+      "number_of_subsets": 15
+    },
+    "3": {
+      "K_I_dimension_over_Q": 30,
+      "S_I_dimension_over_Q": 0,
+      "b50_product_shadow_cap": 10,
+      "colored_shadow_rank_over_Q": 0,
+      "every_subset_shadow_equals_K_I": false,
+      "number_of_subsets": 20
+    },
+    "4": {
+      "K_I_dimension_over_Q": 45,
+      "S_I_dimension_over_Q": 10,
+      "b50_product_shadow_cap": 20,
+      "colored_shadow_rank_over_Q": 45,
+      "every_subset_shadow_equals_K_I": true,
+      "number_of_subsets": 15
+    },
+    "5": {
+      "K_I_dimension_over_Q": 60,
+      "S_I_dimension_over_Q": 30,
+      "b50_product_shadow_cap": 40,
+      "colored_shadow_rank_over_Q": 60,
+      "every_subset_shadow_equals_K_I": true,
+      "number_of_subsets": 6
+    },
+    "6": {
+      "K_I_dimension_over_Q": 75,
+      "S_I_dimension_over_Q": 50,
+      "b50_product_shadow_cap": 50,
+      "colored_shadow_rank_over_Q": 75,
+      "every_subset_shadow_equals_K_I": true,
+      "number_of_subsets": 1
+    }
+  },
+  "claim_boundary": "This is an abstract colored linear-differential model, not a family of sextic Chow terms, not a permanent derivative configuration, and not a b=50 or 27-term decomposition. It omits the squarefree cubic coproduct, factor-frame integrability, and common-section cocycle constraints of actual Chow terms. It proves only that a route using the recorded common kernels, subset caps, and colored-shadow ranks cannot close the endpoint without such additional structure.",
+  "construction": {
+    "K_I": "kernel of the sum map from the I-indexed copies of W to W",
+    "S_I": "kernel of the sum of beta_i over colors in I",
+    "U_dimension": 5,
+    "W_dimension": 15,
+    "Z_dimension": 70,
+    "Z_embedding": "the first 70 coordinate axes of U tensor W in five row-major blocks of length 15",
+    "beta_columns": "v_t=(1,t,...,t^69), t=1,...,120, grouped into six consecutive colors",
+    "color_dimension": 20,
+    "colored_differentials": "the five U-coordinate contractions of beta_i, taken colorwise",
+    "colors": 6
+  },
+  "exact_rank_certificate": {
+    "prime": 1000003,
+    "prime_exceeds_all_vandermonde_nodes": true,
+    "rational_beta_rank_reason": "every required square Vandermonde minor on distinct integer nodes is nonzero over Q",
+    "rational_shadow_rank_reason": "the displayed Vandermonde pivot minor is nonzero modulo the prime, so the reduced-echelon kernel basis lifts over Z localized at that prime; the computed colored-shadow matrix is its reduction, hence rational rank is at least modular rank, while containment in K_I gives the matching upper bound"
+  },
+  "status": "EXACT_ABSTRACT_COLORED_DIFFERENTIAL_BARRIER_G046",
+  "strict_conclusion": "The common K_I incidence, all b=50 subset dimension caps, and even surjective colored shadows for every four-, five-, and six-color subset are jointly consistent over Q. Those data alone cannot exclude the b=50 endpoint."
+}
