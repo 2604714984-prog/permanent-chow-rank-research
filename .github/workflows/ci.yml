@@ -127,3 +127,8 @@ jobs:
             --json /tmp/general_two_defect_count_product_rank_audit.json
       - name: Replay independent count-product finite interfaces
         run: python scripts/general_two_defect_count_product_rank_independent.py
+      - name: Replay general derivative-profile ceiling
+        run: |
+          python scripts/general_derivative_profile_ceiling_audit.py \
+            --max-n 50 \
+            --json /tmp/general_derivative_profile_ceiling.json
