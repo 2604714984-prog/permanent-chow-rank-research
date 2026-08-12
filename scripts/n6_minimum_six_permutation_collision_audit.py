@@ -82,6 +82,8 @@ def normalized_fiber_classification() -> dict[str, object]:
         "normalized_fiber_maximum_b": 2,
         "two_intersections_exactly_when_complement_map_is_bijective": True,
         "general_six_permutation_monomial_intersection_cap_b": 2,
+        "general_six_coordinate_monomial_strict_intersection_cap_b": 19,
+        "coordinate_monomial_cap_proof_type": "pure counting and equality-case proof",
         "general_cap_proof_type": "pure finite combinatorial proof",
         "enumeration_role": "independent exact diagnostic, not a theorem premise",
     }

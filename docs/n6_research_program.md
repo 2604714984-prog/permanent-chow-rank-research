@@ -494,6 +494,14 @@ geometry.  Further enumeration of this subfamily has no value.  The next
 object must be a genuinely non-coordinate six-term Chow sum or a general
 high-intersection theorem.
 
+N6-028 closes the larger coordinate-monomial family without enumeration.  Six
+degree-six coordinate monomials provide at most 120 cubic derivative
+monomials, while every covered subpermanent consumes six disjoint matching
+monomials.  Equality at `b=20` would force all twenty derivative monomials of
+each term to be matchings, hence every term to be a permutation monomial,
+contradicting N6-027.  Therefore `b<=19` for all six coordinate monomials.
+The high-intersection frontier is now provably non-coordinate.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:

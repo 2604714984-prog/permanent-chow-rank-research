@@ -33,6 +33,7 @@
       ]
     }
   ],
+  "coordinate_monomial_cap_proof_type": "pure counting and equality-case proof",
   "displayed_chow_rank_upper_bound": 6,
   "enumeration_role": "independent exact diagnostic, not a theorem premise",
   "exact_chow_rank": 6,
@@ -42,6 +43,7 @@
   "field": "Q",
   "finite_field_or_random_input": false,
   "general_cap_proof_type": "pure finite combinatorial proof",
+  "general_six_coordinate_monomial_strict_intersection_cap_b": 19,
   "general_six_permutation_monomial_intersection_cap_b": 2,
   "hypothetical_25_term_q6_required_minimum_b": 20,
   "individual_chow_term_central_rank_cap": 20,

@@ -206,7 +206,55 @@ Consequently no six-fixed permutation-monomial configuration can enter the
 hypothetical lower-26 frontier `b>=20`.  Any relevant high-intersection
 geometry must use genuinely non-coordinate Chow terms.
 
-## 7. Reproduction
+## 7. No six coordinate monomials reach the frontier
+
+The preceding exclusion extends from permutation monomials to arbitrary
+degree-six coordinate monomials, including repeated variables.
+
+### Theorem 7.1
+
+Let `T_1,...,T_6` be coordinate monomials of degree six and put
+
+\[
+ H=D_3(T_1)+\cdots+D_3(T_6).
+\]
+
+Then
+
+\[
+ \boxed{\dim(D_3(\operatorname{perm}_6)\cap H)\leq19.} \tag{7.1}
+\]
+
+### Proof
+
+Each `D_3(T_i)` is spanned by at most `binom(6,3)=20` coordinate cubic
+monomials, so `dim H<=120`.  The 400 cubic subpermanents have distinct
+row-column weights.  Each is a sum of six partial permutation monomials, and
+the six-monomial supports belonging to different row-column weights are
+disjoint.  Since `H` is a coordinate-monomial space, every dimension in the
+intersection consumes all six coordinate monomials of one such weight.
+Therefore
+
+\[
+ 6\dim(D_3(\operatorname{perm}_6)\cap H)
+ \leq\dim H\leq120.                               \tag{7.2}
+\]
+
+Suppose equality 20 held in (7.2).  Then `H` would contain exactly 120
+distinct cubic monomials, all belonging to the twenty covered subpermanents.
+Every `T_i` would have twenty distinct cubic divisors, so it would be
+squarefree on six variables.  Moreover every three-subset of its six-variable
+support would be a partial permutation matching.  No two support variables
+can share a row or column: adjoining any third support variable would
+otherwise produce a nonmatching three-subset.  Thus every `T_i` is a
+permutation monomial.  Theorem 6.1 then gives intersection dimension at most
+two, contradicting equality 20.  This proves (7.1).
+
+Consequently every coordinate-monomial six-fixed sum misses the necessary
+lower-26 condition `b>=20`.  The remaining geometry requires non-coordinate
+linear factors; further coordinate-support enumeration cannot close lower 26.
+
+## 8. Reproduction
 
 Run
 

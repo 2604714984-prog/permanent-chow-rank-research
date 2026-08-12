@@ -74,6 +74,18 @@ class N6MinimumSixPermutationCollisionTests(unittest.TestCase):
             "independent exact diagnostic, not a theorem premise",
         )
 
+    def test_six_coordinate_monomials_miss_b_twenty(self) -> None:
+        self.assertEqual(
+            self.payload[
+                "general_six_coordinate_monomial_strict_intersection_cap_b"
+            ],
+            19,
+        )
+        self.assertEqual(
+            self.payload["coordinate_monomial_cap_proof_type"],
+            "pure counting and equality-case proof",
+        )
+
     def test_frozen_payload(self) -> None:
         frozen = json.loads(DATA.read_text(encoding="utf-8"))
         self.assertEqual(self.payload, frozen)
