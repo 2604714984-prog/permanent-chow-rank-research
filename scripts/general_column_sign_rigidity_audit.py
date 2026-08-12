@@ -233,12 +233,12 @@ def verify_glynn_full_assignments(n: int) -> dict[str, int]:
             target_count += 1
         else:
             zero_count += 1
-    require(target_count == 1 if n == 1 else target_count == 1, "unreachable")
-    # For n>=2, the nonzero assignments are precisely the n! permutations.
+
     factorial = 1
     for value in range(2, n + 1):
         factorial *= value
     require(target_count == factorial, (n, target_count, factorial))
+    require(zero_count == n**n - factorial, (n, zero_count))
     return {
         "assignment_checks": correct,
         "permutation_assignments": target_count,
