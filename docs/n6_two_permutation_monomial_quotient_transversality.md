@@ -132,4 +132,3 @@ for two permutation monomials.  It does not imply the same statement for:
 
 Therefore it supplies a positive exact unit test for the quotient relation
 budget, not an unrestricted lower-bound improvement.
-

@@ -144,4 +144,3 @@ The six-term example in
 hypothesis: its middle rank is 50, far below the five-term sextic cap 100.
 Thus it disproves an unconditional presentation-wise cap without contradicting
 Theorem 1.1.
-

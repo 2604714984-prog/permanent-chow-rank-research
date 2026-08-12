@@ -223,4 +223,3 @@ The audit reconstructs every relation-pairing matrix and performs exact
 40, maximum radical dimension eight, and four ordered equality types.  It also
 reconstructs the sharpness witness's central matrix directly and obtains rank
 44.  No finite-field computation or random search enters the certificate.
-

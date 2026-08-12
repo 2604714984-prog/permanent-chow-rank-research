@@ -152,4 +152,3 @@ elimination in every row-column torus block.  It verifies both inclusions of
 the explicit 36-dimensional collision subspace and proves that the full
 intersection has no additional directions.  No random or finite-field rank is
 used in the certificate.
-

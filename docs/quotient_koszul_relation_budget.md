@@ -215,4 +215,3 @@ No such uniform inequality is proved here.  Equation (5.1) is the precise
 finite interface that a successor must address.  A bound on `rho` alone, or
 another repetition of single-term full gain, cannot control the aggregate
 collision `j`.
-
