@@ -87,6 +87,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` `b=59` scalar frontier | pure finite enumeration; exact integer replay | the same 367 necessary scalar states occur; all but the unique all-`alpha=3`, `t_2=15` state are excluded, and its required prolongation dimension rises to 461 |
 | `n=6` product-shadow theorem | pure characteristic-zero theorem; exact integer DP replay | torus specialization and two-sided colex compression reduce every `b`-plane in the permanent cubic derivative space to a Ferrers support; the exact product shadow exceeds the fixed-six projection cap 78 for every `53<=b<=64` |
 | `n=6` ordinary lower-27 completion | proof draft complete; independently audited exact integer replay | the product-shadow theorem removes `b=53,...,64`; exhaustive conservative defect/Macaulay arithmetic gives `h>2b` for every `45<=b<=52`, ruling out every hypothetical 26-term decomposition and proving `ChowRank(perm_6)>=27` |
+| `n=6` lower-28 fixed-six frontier | proof draft complete; independently audited exact integer replay; partial | under a hypothetical minimum 27-term decomposition, conditional averaging forces maximum single-term middle rank 20; product shadows and existing prolongation caps leave only `b=34,...,46` plus one all-`alpha=3` state at `b=50`; no lower-28 claim is made |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot supply the now-proved coupled lower bound 27 |
 | `n=6` linear-restriction Koszul--Young ceiling | proof draft complete; pure triangular and strict modular replay | after every linear restriction to `1<=k<=36` variables, every standard Koszul--Young ratio is still strictly below 26; linear compression cannot rescue a lower-27 proof by this family |
@@ -196,6 +197,7 @@ python scripts/n6_pairing_parity_counterexample.py
 python scripts/n6_b59_scalar_frontier.py
 python scripts/n6_product_shadow_b53_64_exclusion.py
 python scripts/n6_lower27_completion.py
+python scripts/n6_lower28_fixed_six_partial.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.

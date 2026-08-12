@@ -1,0 +1,1250 @@
+{
+  "claim_boundary": "This is a necessary-state reduction under a hypothetical 27-term ordinary Chow decomposition. It does not exclude any of the remaining b=34,...,46 layers or the all-alpha-three b=50 endpoint, prove ChowRank(perm_6)>=28, determine the exact ordinary rank, or make a border-rank claim.",
+  "closest_endpoint_b34": {
+    "all_21_individual_middle_ranks_forced": 20,
+    "h87_relation_pairing_loss_rho_plus_delta_upper": 1,
+    "h88_pairing_radical_delta": 0,
+    "h88_relation_dimension_rho": 0,
+    "h88_residual_middle_rank_exact": 420,
+    "intersection_b": 34,
+    "residual_middle_rank_lower_if_h87": 419,
+    "residual_middle_rank_lower_if_h88": 420,
+    "selected_six_middle_rank_integer_window": [
+      87,
+      88
+    ],
+    "sum_of_21_individual_middle_ranks": 420
+  },
+  "conditional_average": "h>=ceil(r+5*(400-tau-r)/26)",
+  "global_exact_identity": "R=400+2z+tau with z>=r and R<=27r",
+  "high_layer_prolongation_pruning": {
+    "frozen_caps": {
+      "12": 436,
+      "13": 440,
+      "14": 453,
+      "15": 458
+    },
+    "layers": [
+      {
+        "b": 47,
+        "cases": [
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 112,
+            "kappa2": 3,
+            "required_prolongation_lower": 465,
+            "t2_upper": 12,
+            "term_cap_kind": "all extremal"
+          }
+        ],
+        "excluded_case_count": 1,
+        "scalar_case_count": 1
+      },
+      {
+        "b": 48,
+        "cases": [
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 2,
+            "required_prolongation_lower": 468,
+            "t2_upper": 13,
+            "term_cap_kind": "extremal or alpha one"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 112,
+            "kappa2": 3,
+            "required_prolongation_lower": 464,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal or alpha one"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 2,
+            "required_prolongation_lower": 468,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal or alpha one"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 1,
+            "required_prolongation_lower": 468,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal or alpha one"
+          }
+        ],
+        "excluded_case_count": 4,
+        "scalar_case_count": 4
+      },
+      {
+        "b": 49,
+        "cases": [
+          {
+            "a2_lower": 75,
+            "applicable_cap": 453,
+            "d2": 89,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 1,
+            "required_prolongation_lower": 469,
+            "t2_upper": 14,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 2,
+            "required_prolongation_lower": 467,
+            "t2_upper": 13,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 112,
+            "kappa2": 3,
+            "required_prolongation_lower": 463,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 1,
+            "required_prolongation_lower": 469,
+            "t2_upper": 13,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 2,
+            "required_prolongation_lower": 467,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 0,
+            "required_prolongation_lower": 469,
+            "t2_upper": 13,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 1,
+            "required_prolongation_lower": 467,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 1,
+            "required_prolongation_lower": 469,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 0,
+            "required_prolongation_lower": 469,
+            "t2_upper": 12,
+            "term_cap_kind": "extremal, alpha one, or alpha two"
+          }
+        ],
+        "excluded_case_count": 9,
+        "scalar_case_count": 9
+      },
+      {
+        "b": 50,
+        "cases": [
+          {
+            "a2_lower": 75,
+            "applicable_cap": null,
+            "d2": 90,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": false,
+            "h_lower": 120,
+            "kappa2": 0,
+            "required_prolongation_lower": 470,
+            "t2_upper": 15,
+            "term_cap_kind": "possible all alpha three endpoint"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 453,
+            "d2": 89,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 1,
+            "required_prolongation_lower": 468,
+            "t2_upper": 14,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 2,
+            "required_prolongation_lower": 466,
+            "t2_upper": 13,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "excluded": true,
+            "h_lower": 112,
+            "kappa2": 3,
+            "required_prolongation_lower": 462,
+            "t2_upper": 12,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 453,
+            "d2": 89,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 120,
+            "kappa2": 0,
+            "required_prolongation_lower": 470,
+            "t2_upper": 14,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 1,
+            "required_prolongation_lower": 468,
+            "t2_upper": 13,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 2,
+            "required_prolongation_lower": 466,
+            "t2_upper": 12,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 0,
+            "required_prolongation_lower": 468,
+            "t2_upper": 13,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 116,
+            "kappa2": 1,
+            "required_prolongation_lower": 466,
+            "t2_upper": 12,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 440,
+            "d2": 88,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 120,
+            "kappa2": 0,
+            "required_prolongation_lower": 470,
+            "t2_upper": 13,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 1,
+            "required_prolongation_lower": 468,
+            "t2_upper": 12,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              2
+            ],
+            "excluded": true,
+            "h_lower": 118,
+            "kappa2": 0,
+            "required_prolongation_lower": 468,
+            "t2_upper": 12,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          },
+          {
+            "a2_lower": 75,
+            "applicable_cap": 436,
+            "d2": 87,
+            "epsilon": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            "excluded": true,
+            "h_lower": 120,
+            "kappa2": 0,
+            "required_prolongation_lower": 470,
+            "t2_upper": 12,
+            "term_cap_kind": "contains an alpha zero, one, or two term"
+          }
+        ],
+        "excluded_case_count": 12,
+        "scalar_case_count": 13
+      },
+      {
+        "b": 51,
+        "cases": [
+          {
+            "a2": 78,
+            "applicable_cap": 436,
+            "d2": 90,
+            "epsilon_alpha_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "excluded": true,
+            "h_lower": 120,
+            "kappa2": 0,
+            "required_prolongation_lower": 469,
+            "t2": 12
+          }
+        ],
+        "excluded_case_count": 1,
+        "scalar_case_count": 1
+      },
+      {
+        "b": 52,
+        "cases": [
+          {
+            "a2": 78,
+            "applicable_cap": 436,
+            "d2": 90,
+            "epsilon_alpha_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "excluded": true,
+            "h_lower": 120,
+            "kappa2": 0,
+            "required_prolongation_lower": 468,
+            "t2": 12
+          }
+        ],
+        "excluded_case_count": 1,
+        "scalar_case_count": 1
+      }
+    ],
+    "remaining_b50_scalar_endpoint": {
+      "a2": 75,
+      "a2_lower": 75,
+      "alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "applicable_cap": null,
+      "d2": 90,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excluded": false,
+      "h": 120,
+      "h_lower": 120,
+      "kappa2": 0,
+      "required_prolongation_lower": 470,
+      "t2": 15,
+      "t2_upper": 15,
+      "term_cap_kind": "possible all alpha three endpoint"
+    }
+  },
+  "hypothesis": "a hypothetical minimum 27-term Chow decomposition of perm_6",
+  "intersection_window_after_product_shadow": [
+    34,
+    52
+  ],
+  "low_maximum_rank_branches_excluded": [
+    {
+      "contradiction": "product shadow exceeds fixed-six projection cap",
+      "exact_product_shadow_at_b_lower": 90,
+      "fixed_six_quadratic_projection_cap": 58,
+      "global_extra_span_z_upper": 16,
+      "individual_quadratic_rank_cap": 11,
+      "maximum_individual_middle_rank": 16,
+      "pairing_rank_tau_upper_at_z_upper": 0,
+      "selected_six_intersection_b_lower": 74,
+      "selected_six_middle_rank_lower": 90
+    },
+    {
+      "contradiction": "product shadow exceeds fixed-six projection cap",
+      "exact_product_shadow_at_b_lower": 84,
+      "fixed_six_quadratic_projection_cap": 58,
+      "global_extra_span_z_upper": 29,
+      "individual_quadratic_rank_cap": 11,
+      "maximum_individual_middle_rank": 17,
+      "pairing_rank_tau_upper_at_z_upper": 1,
+      "selected_six_intersection_b_lower": 62,
+      "selected_six_middle_rank_lower": 91
+    },
+    {
+      "contradiction": "product shadow exceeds fixed-six projection cap",
+      "exact_product_shadow_at_b_lower": 75,
+      "fixed_six_quadratic_projection_cap": 68,
+      "global_extra_span_z_upper": 43,
+      "individual_quadratic_rank_cap": 13,
+      "maximum_individual_middle_rank": 18,
+      "pairing_rank_tau_upper_at_z_upper": 0,
+      "selected_six_intersection_b_lower": 49,
+      "selected_six_middle_rank_lower": 92
+    }
+  ],
+  "maximum_individual_middle_rank_forced": 20,
+  "rank_19_excluded_by": "N6-031",
+  "rank_20_selection_consequence": "h>=ceil((860-5b)/8)",
+  "remaining_integer_rows": [
+    {
+      "admissible_symmetric_epsilon_type_count": 1338,
+      "b": 34,
+      "combined_middle_rank_lower": 87,
+      "defect_budget": 19,
+      "exact_product_shadow_minimum": 59,
+      "feasible_symmetric_epsilon_type_count": 760,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 45,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 19
+      },
+      "gap_lower_minus_upper": -1,
+      "impossible_quadratic_rank_twelve_type_count": 578,
+      "profile_middle_rank_lower": 30,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 87,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 88
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1083,
+      "b": 35,
+      "combined_middle_rank_lower": 86,
+      "defect_budget": 18,
+      "exact_product_shadow_minimum": 60,
+      "feasible_symmetric_epsilon_type_count": 622,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 41,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 18
+      },
+      "gap_lower_minus_upper": -4,
+      "impossible_quadratic_rank_twelve_type_count": 461,
+      "profile_middle_rank_lower": 38,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 86,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 90
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1083,
+      "b": 36,
+      "combined_middle_rank_lower": 85,
+      "defect_budget": 18,
+      "exact_product_shadow_minimum": 60,
+      "feasible_symmetric_epsilon_type_count": 622,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 41,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 18
+      },
+      "gap_lower_minus_upper": -7,
+      "impossible_quadratic_rank_twelve_type_count": 461,
+      "profile_middle_rank_lower": 38,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 85,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 92
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1083,
+      "b": 37,
+      "combined_middle_rank_lower": 85,
+      "defect_budget": 18,
+      "exact_product_shadow_minimum": 60,
+      "feasible_symmetric_epsilon_type_count": 622,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 41,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 18
+      },
+      "gap_lower_minus_upper": -9,
+      "impossible_quadratic_rank_twelve_type_count": 461,
+      "profile_middle_rank_lower": 38,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 85,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 94
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1083,
+      "b": 38,
+      "combined_middle_rank_lower": 84,
+      "defect_budget": 18,
+      "exact_product_shadow_minimum": 60,
+      "feasible_symmetric_epsilon_type_count": 622,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 41,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 18
+      },
+      "gap_lower_minus_upper": -12,
+      "impossible_quadratic_rank_twelve_type_count": 461,
+      "profile_middle_rank_lower": 38,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 84,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 96
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1083,
+      "b": 39,
+      "combined_middle_rank_lower": 84,
+      "defect_budget": 18,
+      "exact_product_shadow_minimum": 60,
+      "feasible_symmetric_epsilon_type_count": 622,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 41,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 18
+      },
+      "gap_lower_minus_upper": -14,
+      "impossible_quadratic_rank_twelve_type_count": 461,
+      "profile_middle_rank_lower": 38,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 84,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 98
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1083,
+      "b": 40,
+      "combined_middle_rank_lower": 83,
+      "defect_budget": 18,
+      "exact_product_shadow_minimum": 60,
+      "feasible_symmetric_epsilon_type_count": 622,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 41,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 18
+      },
+      "gap_lower_minus_upper": -17,
+      "impossible_quadratic_rank_twelve_type_count": 461,
+      "profile_middle_rank_lower": 38,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 83,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 100
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 243,
+      "b": 41,
+      "combined_middle_rank_lower": 82,
+      "defect_budget": 12,
+      "exact_product_shadow_minimum": 66,
+      "feasible_symmetric_epsilon_type_count": 152,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 23,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 12
+      },
+      "gap_lower_minus_upper": -20,
+      "impossible_quadratic_rank_twelve_type_count": 91,
+      "profile_middle_rank_lower": 74,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 82,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 102
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 95,
+      "b": 42,
+      "combined_middle_rank_lower": 88,
+      "defect_budget": 9,
+      "exact_product_shadow_minimum": 69,
+      "feasible_symmetric_epsilon_type_count": 64,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 16,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 9
+      },
+      "gap_lower_minus_upper": -16,
+      "impossible_quadratic_rank_twelve_type_count": 31,
+      "profile_middle_rank_lower": 88,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 82,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 104
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 95,
+      "b": 43,
+      "combined_middle_rank_lower": 88,
+      "defect_budget": 9,
+      "exact_product_shadow_minimum": 69,
+      "feasible_symmetric_epsilon_type_count": 64,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 16,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 9
+      },
+      "gap_lower_minus_upper": -18,
+      "impossible_quadratic_rank_twelve_type_count": 31,
+      "profile_middle_rank_lower": 88,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 81,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 106
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 31,
+      "b": 44,
+      "combined_middle_rank_lower": 98,
+      "defect_budget": 6,
+      "exact_product_shadow_minimum": 72,
+      "feasible_symmetric_epsilon_type_count": 24,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 1,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        "quadratic_relation_cap": 1
+      },
+      "gap_lower_minus_upper": -10,
+      "impossible_quadratic_rank_twelve_type_count": 7,
+      "profile_middle_rank_lower": 98,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 80,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 108
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 31,
+      "b": 45,
+      "combined_middle_rank_lower": 98,
+      "defect_budget": 6,
+      "exact_product_shadow_minimum": 72,
+      "feasible_symmetric_epsilon_type_count": 24,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 1,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        "quadratic_relation_cap": 1
+      },
+      "gap_lower_minus_upper": -12,
+      "impossible_quadratic_rank_twelve_type_count": 7,
+      "profile_middle_rank_lower": 98,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 80,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 110
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 31,
+      "b": 46,
+      "combined_middle_rank_lower": 98,
+      "defect_budget": 6,
+      "exact_product_shadow_minimum": 72,
+      "feasible_symmetric_epsilon_type_count": 24,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 1,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        "quadratic_relation_cap": 1
+      },
+      "gap_lower_minus_upper": -14,
+      "impossible_quadratic_rank_twelve_type_count": 7,
+      "profile_middle_rank_lower": 98,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 79,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 112
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 7,
+      "b": 47,
+      "combined_middle_rank_lower": 112,
+      "defect_budget": 3,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 4,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 3
+      },
+      "gap_lower_minus_upper": -2,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "profile_middle_rank_lower": 112,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 79,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 114
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 7,
+      "b": 48,
+      "combined_middle_rank_lower": 112,
+      "defect_budget": 3,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 4,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 3
+      },
+      "gap_lower_minus_upper": -4,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "profile_middle_rank_lower": 112,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 78,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 116
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 7,
+      "b": 49,
+      "combined_middle_rank_lower": 112,
+      "defect_budget": 3,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 4,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 3
+      },
+      "gap_lower_minus_upper": -6,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "profile_middle_rank_lower": 112,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 77,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 118
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 7,
+      "b": 50,
+      "combined_middle_rank_lower": 112,
+      "defect_budget": 3,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 4,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 3
+      },
+      "gap_lower_minus_upper": -8,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "profile_middle_rank_lower": 112,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 77,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 120
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1,
+      "b": 51,
+      "combined_middle_rank_lower": 120,
+      "defect_budget": 0,
+      "exact_product_shadow_minimum": 78,
+      "feasible_symmetric_epsilon_type_count": 1,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 0,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 0
+      },
+      "gap_lower_minus_upper": -2,
+      "impossible_quadratic_rank_twelve_type_count": 0,
+      "profile_middle_rank_lower": 120,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 76,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 122
+    },
+    {
+      "admissible_symmetric_epsilon_type_count": 1,
+      "b": 52,
+      "combined_middle_rank_lower": 120,
+      "defect_budget": 0,
+      "exact_product_shadow_minimum": 78,
+      "feasible_symmetric_epsilon_type_count": 1,
+      "first_profile_minimizer": {
+        "cubic_relation_cap": 0,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadratic_relation_cap": 0
+      },
+      "gap_lower_minus_upper": -4,
+      "impossible_quadratic_rank_twelve_type_count": 0,
+      "profile_middle_rank_lower": 120,
+      "profile_minimizer_count": 1,
+      "selection_middle_rank_lower": 75,
+      "twenty_one_term_residual_middle_rank_upper_for_h": 124
+    }
+  ],
+  "remaining_intersection_layers_after_existing_caps": [
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    50
+  ],
+  "residual_capacity_consequence": "h<=2b+20",
+  "status": [
+    "PURE_SYMBOLIC_REDUCTION",
+    "EXACT_INTEGER_STATE_REPLAY",
+    "LOWER_28_FIXED_SIX_PARTIAL",
+    "N6-058"
+  ],
+  "strict_conclusion": "The reused fixed-six, average-subset, product-shadow, and scalar profile interfaces do not prove lower 28. The product shadow first reduces to b=34,...,52; existing term prolongation caps then exclude b=47,48,49,51,52 and all b=50 scalar states except the all-alpha-three endpoint. At b=34, h is 87 or 88 and every residual term has middle rank 20; the residual relation-pairing loss is at most one, and at h=88 the 21 individual middle images are direct."
+}

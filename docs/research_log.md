@@ -1198,3 +1198,47 @@ not be even.  This two-term counterexample does not realize the permanent-
 relative endpoint; it shows only that any lower-28 obstruction for the
 near-direct residual must use its position relative to `E_3(perm_6)`, not
 relation parity alone.
+
+## 2026-08-13: the fixed-six lower-28 frontier
+
+N6-058 starts from a hypothetical minimum 27-term decomposition.  If `r` is
+the largest individual middle rank and `D=400+z` is the dimension of the
+literal middle span, the exact relation-pairing identity and conditional
+six-subset averaging give
+
+\[
+ R=400+2z+\tau,
+ \qquad
+ h\ge\left\lceil r+\frac5{26}(400-\tau-r)\right\rceil.
+\]
+
+The branches `r=16,17,18` contradict the exact product shadows at fixed-six
+intersection dimensions 74, 62, and 49; rank 19 is already impossible.
+Thus `r=20`.  Eliminating `z` gives
+
+\[
+ h\ge\left\lceil\frac{860-5b}{8}\right\rceil,
+ \qquad h\le2b+20,
+\]
+
+and hence initially `34<=b<=52`.  Exact defect profiles and the proved
+extremal, `alpha=1`, and `alpha=2` prolongation caps exclude the complete
+layers `b=47,48,49,51,52`.  At `b=50` all scalar refinements are excluded
+except
+
+\[
+ \varepsilon=0^6,quad\alpha=3^6,quad\kappa_2=0,quad
+ (d_2,a_2,t_2)=(90,75,15),quad h=120.
+\]
+
+The current necessary fixed-six frontier for lower 28 is therefore
+
+\[
+ b\in\{34,35,\ldots,46,50\}.
+\]
+
+At `b=34`, one has `h=87` or 88; all twenty-one residual terms have middle
+rank 20, and their relation-pairing loss is at most one.  In the `h=88`
+branch the twenty-one middle images are literal direct.  These are structural
+targets, not contradictions.  N6-058 is a partial ordinary-rank reduction
+and makes no lower-28, exact-rank, or border-rank claim.
