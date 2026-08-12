@@ -1012,3 +1012,47 @@ N6-047, N6-048, and N6-049 removes respectively 226, 51, and 6 states.  The
 with the six `alpha` values forming an arbitrary multiset from
 `{0,1,2,3}`.  Thus the next geometric target is one global fifteen-dimensional
 quotient, not the discarded 367-state scalar search.
+
+## 2026-08-13: the `b=60` layer reduces to one coupled state
+
+N6-051 extends the extremal fixed-point calculation to global quotient
+dimension fifteen.  The 18,564 local twelve-axis spaces reduce to 1,683
+stabilizer orbits.  For every representative the replay maximizes over all
+`binom(429,3)=13,067,054` triples of ambient extra axes, using exact sparse
+block corrections and ten read-only worker processes.  The resulting
+modular nullity upper certificate is 458.  The same compactification covers
+the actual `alpha=1` closure.  Since every N6-050 survivor requires
+prolongation dimension at least 460, this excludes 56 states containing an
+extremal term and 21 further states containing an `alpha=1` term.
+
+N6-052 treats an actual `alpha=2` term at the same global quotient dimension.
+The one-rectangle branch has twelve support shapes.  Their 465,120 raw local
+quotients reduce under the actual support automorphism groups to 173,388
+representatives; every representative is tested against all 427 permissible
+extra axes.  The universal characteristic-zero upper bound is again 458.
+The three-rectangle branch is already contained in N6-051.  Six more states
+are excluded, leaving exactly
+
+\[
+ b60\_state\_366=((0,3))^6.
+\]
+
+G-042 proves why the individual-cap route stops here.  For
+
+\[
+ T=\prod_{c=0}^5x_{5c}
+\]
+
+the actual `alpha=3` quadratic Chow space has
+
+\[
+ \dim(E_2+\mathcal D_2(T))^{(1)}
+ =\binom63^2+5\binom63+\binom63=520.
+\]
+
+Rational coefficient constraints and modular blocks independently reproduce
+520.  The coordinate common quotient over this example has a unique actual
+Chow lift, but literal directness can be lost in a torus degeneration.  The
+remaining state must therefore use simultaneously that six fifteen-planes
+share one quotient and are literal direct; no further universal
+individual-term prolongation bound can finish it.

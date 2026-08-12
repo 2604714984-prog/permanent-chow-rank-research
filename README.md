@@ -77,6 +77,9 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` `alpha=2` prolongation exclusion | pure projective theorem; exact integer replay | an auxiliary six-plane covers both five- and six-dimensional factor spans; the universal term cap is 453, below the final `b=61` requirement 459, so the complete layers `b=61,62,63,64` are impossible |
 | `n=6` arbitrary quotient-prolongation barrier | explicit characteristic-zero counterexample; exact rational replay | one thirteen-dimensional coordinate quotient has first prolongation 475, so dimension-only caps are false; the actual extremal/`alpha=1`/`alpha=2` incidence hypotheses are essential |
 | `n=6` `b=60` scalar frontier | pure finite enumeration; exact integer replay | all 367 necessary states are classified; the existing term caps remove every state with quotient dimension at most 14, leaving exactly 84 states, all with `t_2=15`, direct quadratic sum, and fixed middle rank 120 |
+| `n=6` global `t_2=15` prolongation cap | pure projective fixed-point theorem; exact parallel modular replay | a fifteen-dimensional quotient containing an extremal term, or lying in the actual `alpha=1` closure, has prolongation dimension at most 458; this removes 77 of the 84 `b=60` states |
+| `n=6` `alpha=2`, `t_2=15` cap | pure projective fixed-point theorem; exact parallel modular replay | all one-rectangle fixed limits and the three-rectangle boundary have cap 458; six more `b=60` states are excluded, leaving only the all-`alpha=3` state |
+| `n=6` individual `alpha=3` barrier | pure exact counterexample; exact rational/modular replay | the same-row Chow term has prolongation dimension exactly 520, so the last `b=60` state requires a genuinely six-term common-quotient/directness argument rather than another individual cap |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot prove lower 27 and does not change `26<=ChowRank(perm_6)<=32` |
 | `n=6` linear-restriction Koszul--Young ceiling | proof draft complete; pure triangular and strict modular replay | after every linear restriction to `1<=k<=36` variables, every standard Koszul--Young ratio is still strictly below 26; linear compression cannot rescue a lower-27 proof by this family |
@@ -176,6 +179,9 @@ python scripts/n6_alpha1_prolongation_closure.py
 python scripts/n6_alpha2_prolongation_exclusion.py
 python scripts/n6_arbitrary_quotient_prolongation_barrier.py
 python scripts/n6_b60_scalar_frontier.py
+python scripts/n6_global_t15_prolongation_cap.py
+python scripts/n6_alpha2_t15_prolongation_cap.py
+python scripts/n6_alpha3_individual_prolongation_barrier.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.

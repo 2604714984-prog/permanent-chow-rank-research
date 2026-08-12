@@ -1,0 +1,1946 @@
+{
+  "ambient_extra_axis_choices_per_qF": 427,
+  "arithmetic": "exact ranks modulo 1000003; modular nullities are rigorous characteristic-zero upper bounds",
+  "claim_boundary": "The theorem does not exclude the all-alpha-three state, exclude the b=60 layer, prove ChowRank(perm_6)>=27, or make a border-rank claim.",
+  "one_rectangle_prolongation_upper_cap_t15": 458,
+  "one_rectangle_support_orbit_count": 12,
+  "one_rectangle_support_rows": [
+    {
+      "automorphism_action_count": 4,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "prolongation_upper_cap": 458,
+      "qF_orbit_representative_count": 10292,
+      "qF_orbit_size_histogram": {
+        "1": 64,
+        "2": 1108,
+        "4": 9120
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 453,
+        "extra_axis": [
+          "square",
+          6
+        ],
+        "extra_axis_increment": 5,
+        "global_representative_index": 72,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "row",
+            0,
+            0,
+            3
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "row",
+            0,
+            1,
+            3
+          ],
+          [
+            "square",
+            2
+          ],
+          [
+            "row",
+            0,
+            2,
+            3
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            2
+          ],
+          [
+            "square",
+            3
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            3
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "support_index": 0
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "support_index": 0
+    },
+    {
+      "automorphism_action_count": 4,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "prolongation_upper_cap": 447,
+      "qF_orbit_representative_count": 9892,
+      "qF_orbit_size_histogram": {
+        "1": 16,
+        "2": 380,
+        "4": 9496
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 439,
+        "extra_axis": [
+          "row",
+          1,
+          1,
+          3
+        ],
+        "extra_axis_increment": 8,
+        "global_representative_index": 10399,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            3
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            1,
+            3
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            1,
+            0,
+            3
+          ],
+          [
+            "square",
+            7
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "support_index": 1
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "support_index": 1
+    },
+    {
+      "automorphism_action_count": 1,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 64,
+      "prolongation_upper_cap": 450,
+      "qF_orbit_representative_count": 38760,
+      "qF_orbit_size_histogram": {
+        "1": 38760
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 445,
+        "extra_axis": [
+          "square",
+          12
+        ],
+        "extra_axis_increment": 5,
+        "global_representative_index": 20668,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            2
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            "square",
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "column",
+            0,
+            1,
+            2
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "support_index": 2
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "support_index": 2
+    },
+    {
+      "automorphism_action_count": 2,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 32,
+      "prolongation_upper_cap": 445,
+      "qF_orbit_representative_count": 19608,
+      "qF_orbit_size_histogram": {
+        "1": 456,
+        "2": 19152
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 440,
+        "extra_axis": [
+          "square",
+          7
+        ],
+        "extra_axis_increment": 5,
+        "global_representative_index": 61853,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "square",
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            "column",
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "support_index": 3
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "support_index": 3
+    },
+    {
+      "automorphism_action_count": 2,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 96,
+      "prolongation_upper_cap": 445,
+      "qF_orbit_representative_count": 19608,
+      "qF_orbit_size_histogram": {
+        "1": 456,
+        "2": 19152
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 442,
+        "extra_axis": [
+          "column",
+          0,
+          0,
+          2
+        ],
+        "extra_axis_increment": 3,
+        "global_representative_index": 81471,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "square",
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "square",
+            7
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "support_index": 4
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "support_index": 4
+    },
+    {
+      "automorphism_action_count": 2,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 32,
+      "prolongation_upper_cap": 445,
+      "qF_orbit_representative_count": 19608,
+      "qF_orbit_size_histogram": {
+        "1": 456,
+        "2": 19152
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 442,
+        "extra_axis": [
+          "column",
+          1,
+          0,
+          2
+        ],
+        "extra_axis_increment": 3,
+        "global_representative_index": 101315,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            2
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            1,
+            2
+          ],
+          [
+            "square",
+            7
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            0,
+            1
+          ],
+          [
+            "square",
+            12
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "support_index": 5
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "support_index": 5
+    },
+    {
+      "automorphism_action_count": 4,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "prolongation_upper_cap": 458,
+      "qF_orbit_representative_count": 10292,
+      "qF_orbit_size_histogram": {
+        "1": 64,
+        "2": 1108,
+        "4": 9120
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 453,
+        "extra_axis": [
+          "square",
+          18
+        ],
+        "extra_axis_increment": 5,
+        "global_representative_index": 118289,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            2
+          ],
+          [
+            "column",
+            0,
+            0,
+            3
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "column",
+            0,
+            1,
+            2
+          ],
+          [
+            "column",
+            0,
+            1,
+            3
+          ],
+          [
+            "square",
+            12
+          ],
+          [
+            "column",
+            0,
+            2,
+            3
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "support_index": 6
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "support_index": 6
+    },
+    {
+      "automorphism_action_count": 4,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "prolongation_upper_cap": 447,
+      "qF_orbit_representative_count": 9892,
+      "qF_orbit_size_histogram": {
+        "1": 16,
+        "2": 380,
+        "4": 9496
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 439,
+        "extra_axis": [
+          "column",
+          1,
+          1,
+          3
+        ],
+        "extra_axis_increment": 8,
+        "global_representative_index": 128422,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            2
+          ],
+          [
+            "rectangle",
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            3
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            1,
+            2
+          ],
+          [
+            "rectangle",
+            1,
+            3,
+            0,
+            1
+          ],
+          [
+            "square",
+            7
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "support_index": 7
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "support_index": 7
+    },
+    {
+      "automorphism_action_count": 2,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 96,
+      "prolongation_upper_cap": 445,
+      "qF_orbit_representative_count": 19608,
+      "qF_orbit_size_histogram": {
+        "1": 456,
+        "2": 19152
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 442,
+        "extra_axis": [
+          "column",
+          1,
+          0,
+          2
+        ],
+        "extra_axis_increment": 3,
+        "global_representative_index": 141107,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            2
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            1,
+            2
+          ],
+          [
+            "square",
+            7
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            0,
+            1
+          ],
+          [
+            "square",
+            12
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "support_index": 8
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "support_index": 8
+    },
+    {
+      "automorphism_action_count": 8,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 24,
+      "prolongation_upper_cap": 438,
+      "qF_orbit_representative_count": 5276,
+      "qF_orbit_size_histogram": {
+        "1": 8,
+        "2": 92,
+        "4": 710,
+        "8": 4466
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 435,
+        "extra_axis": [
+          "square",
+          12
+        ],
+        "extra_axis_increment": 3,
+        "global_representative_index": 159020,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            1,
+            2
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            7
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            "square",
+            14
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "support_index": 9
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "support_index": 9
+    },
+    {
+      "automorphism_action_count": 8,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 24,
+      "prolongation_upper_cap": 438,
+      "qF_orbit_representative_count": 5276,
+      "qF_orbit_size_histogram": {
+        "1": 8,
+        "2": 92,
+        "4": 710,
+        "8": 4466
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 435,
+        "extra_axis": [
+          "square",
+          12
+        ],
+        "extra_axis_increment": 3,
+        "global_representative_index": 164296,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            1,
+            2
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            7
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            "square",
+            14
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "support_index": 10
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "support_index": 10
+    },
+    {
+      "automorphism_action_count": 8,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 72,
+      "prolongation_upper_cap": 438,
+      "qF_orbit_representative_count": 5276,
+      "qF_orbit_size_histogram": {
+        "1": 8,
+        "2": 92,
+        "4": 710,
+        "8": 4466
+      },
+      "raw_local_qF_count": 38760,
+      "sample_maximizer": {
+        "base_prolongation_dimension": 435,
+        "extra_axis": [
+          "square",
+          12
+        ],
+        "extra_axis_increment": 3,
+        "global_representative_index": 169572,
+        "qF_axes": [
+          [
+            "square",
+            0
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            2,
+            1,
+            2
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            0,
+            2
+          ],
+          [
+            "square",
+            7
+          ],
+          [
+            "rectangle",
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            "square",
+            14
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "support_index": 11
+      },
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "support_index": 11
+    }
+  ],
+  "prime": 1000003,
+  "qF_orbit_representative_count_across_shapes": 173388,
+  "raw_local_qF_count_per_support_orbit": 38760,
+  "raw_support_orbit_qF_configuration_count": 465120,
+  "reduced_qF_extra_axis_evaluations": 74036676,
+  "state_pruning": {
+    "excluded_by_alpha2_t15_cap_count": 6,
+    "excluded_state_ids": [
+      "b60_state_354",
+      "b60_state_357",
+      "b60_state_362",
+      "b60_state_363",
+      "b60_state_364",
+      "b60_state_365"
+    ],
+    "input_state_count": 7,
+    "remaining_profile": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "remaining_state_count": 1,
+    "remaining_state_ids": [
+      "b60_state_366"
+    ]
+  },
+  "status": "N6_052_ALPHA2_T15_PROLONGATION_CAP",
+  "strict_conclusion": "Every actual alpha-two term inside a global t=15 quadratic space gives prolongation dimension at most 458. The six remaining N6-051 states containing alpha two are impossible; only the all-alpha-three state b60_state_366 remains.",
+  "three_rectangle_prolongation_upper_cap_t15_from_N6_051": 458,
+  "universal_alpha2_t15_prolongation_upper_cap": 458
+}
