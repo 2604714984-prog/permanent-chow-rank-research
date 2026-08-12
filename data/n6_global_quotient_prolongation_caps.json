@@ -1,0 +1,812 @@
+{
+  "arithmetic": "complete torus-fixed enumeration and exact modular ranks; modular nullities are characteristic-zero upper bounds",
+  "claim_boundary": "The theorem does not exclude the fourteen states with no extremal rectangle term and does not yet prove ChowRank(perm_6)>=27.",
+  "fixed_point_cap_audit": {
+    "ambient_axis_pair_shared_cubic_block_histogram": {
+      "0": 77040,
+      "1": 16200,
+      "6": 3780
+    },
+    "characteristic_zero_prolongation_upper_caps": {
+      "12": 436,
+      "13": 440,
+      "14": 448
+    },
+    "fixed_W_count": 18564,
+    "fixed_W_orbit_representative_count": 1683,
+    "fixed_W_orbit_size_histogram": {
+      "1": 3,
+      "12": 1426,
+      "2": 6,
+      "3": 17,
+      "6": 231
+    },
+    "local_quotient_axis_count": 18,
+    "maximizer_representation_counts": {
+      "12": 1,
+      "13": 5,
+      "14": 8
+    },
+    "prime": 1000003,
+    "quadratic_quotient_dimension": 441,
+    "sample_maximizers": {
+      "12": {
+        "W_axes": [
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            1,
+            0,
+            2
+          ],
+          [
+            "row",
+            1,
+            1,
+            2
+          ],
+          [
+            "square",
+            0
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "square",
+            7
+          ]
+        ],
+        "extra_axes": []
+      },
+      "13": {
+        "W_axes": [
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "rectangle",
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            1,
+            0,
+            2
+          ],
+          [
+            "square",
+            0
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "square",
+            7
+          ]
+        ],
+        "extra_axes": [
+          [
+            "row",
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      "14": {
+        "W_axes": [
+          [
+            "column",
+            0,
+            0,
+            1
+          ],
+          [
+            "column",
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            1
+          ],
+          [
+            "row",
+            0,
+            0,
+            2
+          ],
+          [
+            "row",
+            0,
+            1,
+            2
+          ],
+          [
+            "row",
+            1,
+            0,
+            1
+          ],
+          [
+            "row",
+            1,
+            0,
+            2
+          ],
+          [
+            "row",
+            1,
+            1,
+            2
+          ],
+          [
+            "square",
+            0
+          ],
+          [
+            "square",
+            1
+          ],
+          [
+            "square",
+            6
+          ],
+          [
+            "square",
+            7
+          ]
+        ],
+        "extra_axes": [
+          [
+            "column",
+            0,
+            0,
+            2
+          ],
+          [
+            "column",
+            0,
+            1,
+            2
+          ]
+        ]
+      }
+    }
+  },
+  "state_exclusions": [
+    {
+      "b": 61,
+      "canonical_state_count": 73,
+      "excluded_state_count": 61,
+      "excluded_state_ids": [
+        "b61_state_000",
+        "b61_state_001",
+        "b61_state_002",
+        "b61_state_003",
+        "b61_state_004",
+        "b61_state_005",
+        "b61_state_006",
+        "b61_state_007",
+        "b61_state_008",
+        "b61_state_009",
+        "b61_state_010",
+        "b61_state_011",
+        "b61_state_012",
+        "b61_state_013",
+        "b61_state_014",
+        "b61_state_015",
+        "b61_state_016",
+        "b61_state_017",
+        "b61_state_018",
+        "b61_state_019",
+        "b61_state_020",
+        "b61_state_021",
+        "b61_state_022",
+        "b61_state_023",
+        "b61_state_024",
+        "b61_state_025",
+        "b61_state_026",
+        "b61_state_027",
+        "b61_state_028",
+        "b61_state_029",
+        "b61_state_030",
+        "b61_state_031",
+        "b61_state_032",
+        "b61_state_033",
+        "b61_state_034",
+        "b61_state_035",
+        "b61_state_036",
+        "b61_state_037",
+        "b61_state_038",
+        "b61_state_039",
+        "b61_state_040",
+        "b61_state_041",
+        "b61_state_042",
+        "b61_state_043",
+        "b61_state_044",
+        "b61_state_045",
+        "b61_state_046",
+        "b61_state_047",
+        "b61_state_048",
+        "b61_state_049",
+        "b61_state_050",
+        "b61_state_051",
+        "b61_state_052",
+        "b61_state_053",
+        "b61_state_054",
+        "b61_state_055",
+        "b61_state_056",
+        "b61_state_057",
+        "b61_state_058",
+        "b61_state_059",
+        "b61_state_060"
+      ],
+      "remaining_state_count": 12,
+      "remaining_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_061",
+          "t2": 14
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_062",
+          "t2": 13
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_063",
+          "t2": 13
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_064",
+          "t2": 14
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_065",
+          "t2": 13
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_066",
+          "t2": 13
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_067",
+          "t2": 13
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_068",
+          "t2": 14
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_069",
+          "t2": 14
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_070",
+          "t2": 14
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_071",
+          "t2": 14
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "h": 120,
+          "state_id": "b61_state_072",
+          "t2": 14
+        }
+      ]
+    },
+    {
+      "b": 62,
+      "canonical_state_count": 11,
+      "excluded_state_count": 10,
+      "excluded_state_ids": [
+        "b62_state_000",
+        "b62_state_001",
+        "b62_state_002",
+        "b62_state_003",
+        "b62_state_004",
+        "b62_state_005",
+        "b62_state_006",
+        "b62_state_007",
+        "b62_state_008",
+        "b62_state_009"
+      ],
+      "remaining_state_count": 1,
+      "remaining_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "h": 120,
+          "state_id": "b62_state_010",
+          "t2": 13
+        }
+      ]
+    },
+    {
+      "b": 63,
+      "canonical_state_count": 11,
+      "excluded_state_count": 10,
+      "excluded_state_ids": [
+        "b63_state_000",
+        "b63_state_001",
+        "b63_state_002",
+        "b63_state_003",
+        "b63_state_004",
+        "b63_state_005",
+        "b63_state_006",
+        "b63_state_007",
+        "b63_state_008",
+        "b63_state_009"
+      ],
+      "remaining_state_count": 1,
+      "remaining_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "h": 120,
+          "state_id": "b63_state_010",
+          "t2": 13
+        }
+      ]
+    }
+  ],
+  "status": "N6_047_GLOBAL_QUOTIENT_PROLONGATION_CAPS",
+  "strict_conclusion": "Every b=61,62,63 canonical state containing at least one extremal rectangle term is impossible. The remaining counts are 12,1,1."
+}
