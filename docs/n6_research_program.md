@@ -464,6 +464,14 @@ factor overlap, but it remains a restricted two-term coordinate theorem.  The
 next finite falsification target is three permutation monomials or two general
 coordinate monomials, before attempting arbitrary fixed six-term geometry.
 
+N6-025 then shows that aggregate collision eventually occurs inside the same
+permutation subfamily.  Six terms sharing three complement edges and ranging
+over a `3 x 3` permutation block have `j=36`; the collision is exactly the
+36-dimensional Koszul image of that cubic subpermanent.  However their sum is
+three common factors times `perm_3` and therefore shortens from six Chow terms
+to four.  Hence unconditional aggregate transversality is false, while the
+minimum-fixed-sum version remains viable and is now the precise target.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
