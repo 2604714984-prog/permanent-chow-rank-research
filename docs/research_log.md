@@ -1433,3 +1433,45 @@ the ambient hook already.  Thus hook containment, pairwise transversality and
 total span 23 do not force an N6-061 transverse pair.  The example has no
 section-difference spaces in `E_2`, common quotient, cocycle or Chow frames;
 those actual structures remain available and cannot be discarded.
+
+N6-064 upgrades the coordinate hook theorem to the complete
+characteristic-zero equality locus.  At a standard coordinate hook, the
+incidence of a fifty-plane and its 75-dimensional derivative image has a
+16-dimensional linear kernel, split into torus-weight groups of sizes
+`3,5,4,4`.  Formal elimination of the transverse variables leaves 1,140
+grounded quadratic equations in the 136 quadratic monomials.  Exact rational
+row reduction gives precisely the 25 squarefree products joining two
+different variables inside one group.  Their ideal is the intersection of
+240 four-dimensional coordinate facet primes.
+
+For every facet, an exact four-parameter Boolean-replacement family satisfies
+both derivative containments identically over the integer polynomial ring,
+and four selected Grassmann coordinates have identity parameter Jacobian.
+The branch tangent primes and the 25-generator lower inclusion therefore
+sandwich the complete tangent-cone ideal.  Intersecting the 240 formal branch
+ideals gives a nested ideal with the same initial ideal; completeness of the
+power-series ring and successive leading-form subtraction prove equality of
+the formal ideals.  Hence there are no hidden local branches.  Projectivity,
+connected-torus stability and N6-062A globalize this to a classification of
+every irreducible component as a Boolean-branch closure or its transpose.
+
+The same exact families have second shadow contained in a 23-dimensional
+linear hook.  A second product-shadow calculation gives the matching
+universal lower bound 23, so every point of every component, including its
+boundary, has second-shadow dimension 23; boundary hooks are understood only
+as projective limits of finite Boolean charts.
+
+At the `b=50` endpoint, the five pair section-difference spaces relative to
+one color span `K=E_2 intersect H_2`.  Their individual `15->12` shadow
+equalities force all six factor spans to be six-dimensional and pairwise
+transverse, and give
+
+\[
+ \partial K=\sum_iL_i=:M,\qquad\dim M=23.
+\]
+
+Thus all six factor planes lie in one 23-plane which is a projective limit of
+the equality hooks.  G-048 proves that this containment plus pairwise
+transversality is still insufficient: the actual section differences,
+common quotient, cocycle and Chow-frame realizability remain necessary.  No
+lower-28 or border-rank conclusion is made.

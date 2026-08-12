@@ -92,6 +92,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` separated `alpha=3` exclusion | pure coupling theorem; exact integer replay; restricted family | six column-separated or row-separated terms with the common-`W_15`, direct quadratic/cubic data of the `b=50` endpoint satisfy `b<=40`; general nonseparated configurations remain open |
 | `n=6` transverse-pair rigidity | pure characteristic-zero theorem; exact rational replay; restricted open locus | one pair whose twelve-dimensional section-difference shadow projects fully to two rows or two columns forces all six endpoint terms to be separated and hence `b<=40`; every pairwise row/column projection must therefore be singular in any surviving `b=50` configuration |
 | `n=6` coordinate product-shadow equality | pure finite-support theorem; exact integer replay | every coordinate fifty-plane with product shadow 75 is one of two transposed hook supports; its second shadow has dimension 23, but no noncoordinate equality classification or lower-28 conclusion is claimed |
+| `n=6` full product-shadow equality locus | pure characteristic-zero formal/projective theorem; exact rational and symbolic replay | the complete equality locus is the union of closures of 240 four-parameter Boolean-replacement branches and their transposes; every equality plane has second shadow 23 |
 | `n=6` fixed `K_3,4` Fano exclusion | pure characteristic-zero projective theorem; exact finite replay | the rank-at-most-nine six-plane Fano scheme in `A_3 tensor B_4` consists of 18 reduced coordinate rectangles, and its cross-image-at-most-three pair incidence is diagonal; this excludes actual complementary pairs only in the fixed layer |
 | `n=6` colored-differential barrier | explicit characteristic-zero linear model; exact modular certificate | all endpoint subset caps and the canonical common kernels coexist with surjective colored shadows in four, five, and six colors; any successful continuation must use actual Chow coproduct or integrability structure |
 | `n=6` squarefree-coproduct colored barrier | canonical per-color coproduct construction; exact modular upper certificates | six squarefree cubic coproducts have total kernel exactly 50 while every proper color-subset kernel obeys the endpoint cap; the missing constraints are cross-color ambient directness and the common-section cocycle |
@@ -211,6 +212,7 @@ python scripts/n6_literal_six_shadow_b34_47_exclusion.py
 python scripts/n6_alpha3_separated_block_exclusion.py
 python scripts/n6_two_row_transverse_rigidity.py
 python scripts/n6_coordinate_product_shadow_b50_equality.py
+python scripts/n6_product_shadow_b50_equality_locus.py
 python scripts/n6_k34_rank_nine_fano_exclusion.py
 python scripts/n6_colored_differential_barrier.py
 python scripts/n6_squarefree_coproduct_colored_barrier.py
