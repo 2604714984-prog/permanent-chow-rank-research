@@ -37,13 +37,14 @@ The repository contains:
 - a quotient-Koszul gain formula;
 - a vector-valued Macaulay prolongation theorem;
 - the specialized `n=6` lower bound 25;
-- exact rigidity in several sign subfamilies; and
+- exact full column-sign and row-sign rank `2^(n-1)`;
+- a larger anchored diagonal-sign rigidity theorem; and
 - a general count-product atomic-rank theorem for a restricted aggregate.
 
 These results establish the correct exponential scale but do not recover the
-factor needed to reach `2^(n-1)`.
+factor needed to prove unrestricted rank `2^(n-1)`.
 
-## 2. New barrier: scalar derivative profiles are exhausted
+## 2. Scalar derivative profiles are exhausted
 
 Let
 
@@ -70,12 +71,52 @@ Consequences:
 MORE_SCALAR_CATALECTICANT_DEGREES=NO
 BLOCK_DIAGONAL_SCALAR_CATALECTICANTS=NO
 NONNEGATIVE_WEIGHTED_PROFILE_OPTIMIZATION=NO
+RAW_ADJACENT_KERNEL_DIMENSIONS=NO
 ```
 
-The missing information must lie in maps between the derivative spaces or in
-relations among summands.
+The raw map
 
-## 3. Main object: the complete derivative tower
+\[
+V^*\otimes\mathcal D_m(f)
+\longrightarrow
+\mathcal D_{m-1}(f)
+\]
+
+is surjective, so its kernel dimension is itself determined by the scalar
+profile. The missing information must lie in higher compatibility, quotient
+geometry, or relations among summands.
+
+## 3. The sign construction route is closed
+
+The Boolean diagonal-slice theorem gives
+
+\[
+\operatorname{ColumnSignRank}(\operatorname{perm}_n)
+=
+\operatorname{RowSignRank}(\operatorname{perm}_n)
+=
+2^{n-1}.
+\]
+
+The same lower bound holds when all off-diagonal coefficients are arbitrary,
+provided every row-zero anchor is nonzero and each normalized diagonal ratio
+is a sign.
+
+Consequences:
+
+```text
+UNIFORM_SIGN_SEARCH=CLOSED
+ONE_DEFECT_SIGN_SEARCH=CLOSED
+TWO_DEFECT_SIGN_SEARCH=CLOSED
+FULL_COLUMN_SIGN_SEARCH=CLOSED
+ANCHORED_DIAGONAL_SIGN_SEARCH=CLOSED
+```
+
+A shorter decomposition, if it exists, must use genuinely complex diagonal
+ratios, vanishing anchors, or factors that mix the row-column structure. No
+further sign defect hierarchy or full sign dictionary optimizer is authorized.
+
+## 4. Main object: the complete derivative tower
 
 For a degree-`n` form `f`, define
 
@@ -103,7 +144,7 @@ A decomposition
 must therefore generate the double-Boolean module from `r` single-Boolean
 modules, subject to coupled cancellations.
 
-## 4. North-star invariant
+## 5. North-star invariant
 
 Seek an invariant `Phi` of differential modules satisfying:
 
@@ -132,7 +173,7 @@ The target is
 \Phi(\mathcal M(\operatorname{perm}_n))=2^{n-1}.
 \]
 
-A weaker but still decisive target is the recurrence
+A weaker but decisive target is the recurrence
 
 \[
 \Phi(\mathcal M(\operatorname{perm}_n))
@@ -140,27 +181,9 @@ A weaker but still decisive target is the recurrence
 2\Phi(\mathcal M(\operatorname{perm}_{n-1})).
 \]
 
-The invariant must not factor through the scalar Hilbert profile, by the new
-ceiling theorem.
+The invariant must not factor through the scalar Hilbert profile.
 
-## 5. First workstream: natural cross-degree maps
-
-The raw adjacent differentiation map
-
-\[
-V^*\otimes\mathcal D_m(f)
-\longrightarrow
-\mathcal D_{m-1}(f)
-\]
-
-is always surjective. Its kernel dimension is
-
-\[
-(\dim V)\dim\mathcal D_m(f)-\dim\mathcal D_{m-1}(f),
-\]
-
-so its scalar dimension is already determined by the derivative profile. It
-does not evade the new ceiling theorem.
+## 6. Main workstream: natural cross-degree maps
 
 The first useful candidates must retain higher compatibility, for example:
 
@@ -184,8 +207,8 @@ Before computing a large character table, prove that the candidate is either:
 
 ### NGEN-02 — exact low-`n` natural-map table
 
-For `n=5,6`, inventory a small list of natural Koszul or Young complexes.
-For each candidate, compute:
+For `n=5,6`, inventory a small list of natural Koszul or Young complexes. For
+each candidate, compute:
 
 - exact permanent rank;
 - exact generic one-term rank;
@@ -201,7 +224,7 @@ the theorem-bearing quantity must be coordinate invariant.
 The search is diagnostic. Promotion requires a written map, a one-term cap,
 and a sum inequality.
 
-## 6. Promotion gates
+## 7. Promotion gates
 
 A candidate route is promoted only if one of the following occurs:
 
@@ -225,21 +248,33 @@ A candidate is rejected if:
 - the finite interface requires a large workflow before the mathematical
   invariant is stated.
 
-## 7. Parallel falsification thread
+## 8. Parallel falsification thread
 
-The conjecture itself remains unproved. Maintain one small construction thread
-at `n=6`:
+The conjecture remains unproved. Maintain one small construction thread at
+`n=6`, but exclude the sign and anchored diagonal-sign families already closed
+by the exact theorem.
 
-- test only symmetry-reduced complex-coefficient ansatzes;
-- treat numerical solutions as candidates;
-- require exact algebraic reconstruction and symbolic verification before
-  recording an upper bound;
-- treat search failure as no lower-bound evidence.
+Authorized ansatzes must be genuinely different, for example:
+
+- symmetry-reduced complex diagonal ratios outside `{+1,-1}`;
+- a small number of row-column orbit types with exact complex parameters;
+- block-recursive factors that mix several rows or columns; or
+- candidates suggested by numerical homotopy and then reconstructed exactly.
+
+Evidence boundary:
+
+```text
+numerical solution=candidate only
+finite-field solution=diagnostic only
+exact algebraic reconstruction=required
+symbolic coefficient verification=required
+search failure=no lower-bound evidence
+```
 
 Do not enumerate the full unrestricted parameter space and do not build a
 generic solver framework without a compact ansatz.
 
-## 8. Border-rank gate
+## 9. Border-rank gate
 
 Before making secant-variety equations a mainline strategy, determine whether
 
@@ -253,11 +288,11 @@ If it is 7, a closed secant obstruction cannot reproduce the ordinary rank-8
 theorem and ordinary-rank-specific valuative structure is necessary.
 
 If it is 8, representation-theoretic equations for secant Chow varieties
-remain a plausible general route.
+remain plausible.
 
 This is a distinct gate, not a prerequisite for NGEN-01.
 
-## 9. Hidden assumptions
+## 10. Hidden assumptions
 
 1. The conjectural exact value is true.
 2. Cross-degree relation data retain the missing factor.
@@ -270,14 +305,14 @@ Then the correct outcome is a barrier theorem plus an exact shorter
 decomposition, not additional process. The program should pivot to
 construction and ordinary-versus-border separation.
 
-## 10. Strongest objection
+## 11. Strongest objection
 
 Syzygy and representation data may still be only a repackaging of partial
 derivatives, and subadditivity may fail under cancellation. This objection is
 decisive: no character table is a result by itself. The first theorem-bearing
 deliverable must prove the one-term cap and the sum inequality.
 
-## 11. Minimal implementation plan
+## 12. Minimal implementation plan
 
 ```text
 one combinatorial generator
@@ -293,7 +328,7 @@ The first implementation should cover `n=5,6` in memory and write immutable
 JSON summaries. Native acceleration is not authorized until a measured
 bottleneck exists.
 
-## 12. Immediate next task
+## 13. Immediate next task
 
 Create a compact inventory of the `GL(V)`-natural maps already implicit in the
 repository:

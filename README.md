@@ -34,30 +34,31 @@ The repository does **not** own large upstream proof bundles. External submissio
 | Fixed-offset multishadow optimization | proof draft complete | among every fixed integer output-degree offset and constant witness defect, the unique asymptotic optimizer is the central lower output degree |
 | Quotient Koszul gain | proof draft complete | exact residual refinement `rank K_m(perm_n-R)>=A-n^2 b+Gamma` |
 | Vector-valued Macaulay relation cap | proof draft complete; finite interfaces replayed | for `K subset W tensor Sym^2 V`, `dim K^(1)<=dim(K)^{<2>}`; the proof uses a universal Grassmannian kernel and an explicit colored-monomial degeneration |
-| Glynn column-uniform sign family | proof draft complete; exact Walsh replay | the `2^(n-1)` sign products are linearly independent and the unique expansion of `perm_n` in their span uses every term |
+| Scalar derivative-profile ceiling | proof draft complete; exact replay | every monotone homogeneous subadditive profile method is capped at `binom(n,floor(n/2))`; nonnegative weighted scalar catalecticant sums cannot beat the central degree |
+| Full column-sign and row-sign families | proof draft complete; primary and independent Walsh replay | `ColumnSignRank(perm_n)=RowSignRank(perm_n)=2^(n-1)`; the same lower bound holds for arbitrary off-diagonal coefficients with nonzero row-zero anchors and sign-valued normalized diagonal ratios |
 | `n=6` one-step route barrier | computation replayed; diagnostic only | exact continuous optimization of the former scalar formula stops at 23 |
 | `n=6` universal single-term full gain | proof draft complete | every nonzero degree-six Chow term `T`, including degenerate terms, satisfies `im K_3(perm_6) intersect im K_3(T)=0`, hence `Gamma=rank K_3(T)` |
 | `n=6` fixed-four projection frontier | proof draft complete; exact arithmetic replayed | the raw range is `20<=b<=27`; common-quotient and low-relation arguments exclude `b=27,26,25` |
 | `n=6` component-prolongation closure | superseded proof draft; exact arithmetic replayed | excludes 23-term decompositions and proves the historical lower bound 24 |
 | `n=6` fixed-six lower-25 closure | proof draft complete; primary and independent arithmetic replayed | fixing six terms in a hypothetical 24-term decomposition gives `40<=b<=64`; vector-valued Macaulay growth and block-Sylvester exclude every state, so `ChowRank(perm_6)>=25` |
 | `n=6` lower-26 fixed-count diagnostic | computation replayed; no route selected | `q=6,7,8` leave 327, 355, and 635 states after central pruning, so the central first-Koszul fixed-count route is suspended |
-| `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the Glynn sign subfamily still requires all 32 terms |
+| `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` second-Koszul homology closure | proof draft complete; computation replayed; diagnostic only | the output-degree-two ranks are exactly `127125` for `perm_6` and `8730` for one independent Chow term; a six-term common-factor family has scalar homology `465>450`, rejecting monotone scalar homology upper bounds for lower 26 |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
-| Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
+| Exact unrestricted general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
 “Proof draft complete” means the argument is written in the repository and its arithmetic implementation is tested. It does **not** mean external peer review or literature novelty review has been completed.
 
-The current in-repository interval for `n=6` is
+The current in-repository unrestricted interval for `n=6` is
 
 ```text
 25 <= ChowRank(perm_6) <= 32.
 ```
 
-No lower-26, border-lower-25, or exact-32 claim is made.
+The full sign-family rank is exactly 32, but no lower-26, border-lower-25, or exact unrestricted-32 claim is made.
 
 ## Reviewed general lower-bound table
 
@@ -106,9 +107,16 @@ python scripts/n6_lower26_fixed_q_diagnostic.py
 python scripts/n6_second_koszul_rank_audit.py
 python scripts/n6_second_koszul_homology_audit.py
 python scripts/glynn_family_rigidity_audit.py
+python scripts/general_derivative_profile_ceiling_audit.py
+python scripts/general_column_sign_rigidity_audit.py
+python scripts/general_column_sign_rigidity_independent.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
+
+The scalar derivative-profile theorem proves a structural ceiling rather than a numerical promotion. Even using all derivative degrees with arbitrary nonnegative weights cannot beat the central binomial coefficient. The raw adjacent differentiation-map kernel dimension is also determined by the profile. The general program therefore moves to coordinate-invariant natural maps, higher compatibility quotients, syzygies, and coupled relation modules.
+
+The full column-sign theorem uses a Boolean diagonal coefficient slice. Every normalized column-sign term becomes one Walsh character determined by its diagonal signs, while the permanent becomes a delta function. Walsh inversion forces all `2^(n-1)` signature aggregates to be nonzero, and Glynn supplies the matching upper bound. For `n=6`, this closes the entire `2^30` normalized column-sign family at 32 terms without enumerating it. Arbitrary complex row-homogeneous and unrestricted Chow terms remain outside the theorem.
 
 The universal single-term theorem first degenerates the at-most-six-dimensional factor span to a coordinate subspace while keeping the relevant quadratic intersection at fixed dimension. The coordinate audit then supplies the only local cases: no rectangle, one rectangle, or a `K_2,3` / `K_3,2` rectangle space. The last case is eliminated by regenerated integer minors of determinant `-1` in orders 18 and 45.
 
@@ -116,7 +124,7 @@ The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27
 
 The lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
 
-The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings, a dimension-only second shadow is vacuous at those fixed counts, and the column-uniform Glynn sign family cannot be shortened below 32 terms. These are route-closing results, not a lower-26 theorem.
+The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings and a dimension-only second shadow is vacuous at those fixed counts. These are route-closing results, not a lower-26 theorem.
 
 The output-degree-two homology closure identifies the middle higher-Koszul homology with `Tor_2(A_f,k)_4`. The Alper--Rowlands formula gives dimension 450 for `perm_6`, while a six-factor Chow complete intersection gives 15. Hence the exact ranks are `127125` and `8730`, still yielding ratio 15. An independently reconstructed common-factor family has scalar homology dimensions `15,55,120,210,325,465` for one through six terms, so monotone scalar homology upper bounds cannot separate `perm_6` from low-term sums. Multigraded and representation-theoretic refinements remain open.
 

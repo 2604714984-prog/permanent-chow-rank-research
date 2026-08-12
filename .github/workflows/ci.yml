@@ -132,3 +132,9 @@ jobs:
           python scripts/general_derivative_profile_ceiling_audit.py \
             --max-n 50 \
             --json /tmp/general_derivative_profile_ceiling.json
+      - name: Replay full column-sign rigidity
+        run: |
+          python scripts/general_column_sign_rigidity_audit.py \
+            --json /tmp/general_column_sign_rigidity.json
+      - name: Replay independent n6 full-sign rigidity
+        run: python scripts/general_column_sign_rigidity_independent.py

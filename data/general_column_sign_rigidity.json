@@ -1,0 +1,47 @@
+{
+  "all_degree_rows_sha256": "257a9dab63b629bfdee0f250f1b29a7e7b19b85cdc742eabb7b1717f02ed8974",
+  "claim_boundary": "The theorem is exact only for the column-sign family, its transpose, and the stated anchored diagonal-sign enlargement. It does not control arbitrary complex row-homogeneous terms or unrestricted Chow decompositions.",
+  "field": "characteristic zero; the proof works in every characteristic not equal to two",
+  "n6": {
+    "anchored_rational_slice_coefficients_checked": 1024,
+    "coefficient_denominator": 32,
+    "diagonal_signature_count": 32,
+    "exact_column_sign_rank": 32,
+    "exact_row_sign_rank": 32,
+    "forced_nonzero_signature_aggregates": 32,
+    "glynn_full_assignment_check": {
+      "assignment_checks": 46656,
+      "permutation_assignments": 720,
+      "zero_nonpermutation_assignments": 45936
+    },
+    "n": 6,
+    "negative_aggregate_count": 16,
+    "nonzero_aggregate_coefficient_count": 32,
+    "normalized_column_sign_family_size": 1073741824,
+    "normalized_sign_slice_coefficients_checked": 3072,
+    "orthogonality_scale": 32,
+    "positive_aggregate_count": 16,
+    "target_mask": 31,
+    "terms_per_signature": 33554432,
+    "walsh_dimension": 32
+  },
+  "n6_consequences": {
+    "full_column_sign_rank": 32,
+    "full_row_sign_rank": 32,
+    "one_defect_sign_rank": 32,
+    "sub_32_sign_decomposition_exists": false,
+    "two_defect_sign_rank": 32,
+    "uniform_sign_rank": 32
+  },
+  "status": "GENERAL_COLUMN_SIGN_RIGIDITY_REPLAYED",
+  "tested_degree_range": [2, 10],
+  "theorem": {
+    "column_sign_rank": "ColumnSignRank(perm_n)=2^(n-1)",
+    "larger_family": "The same lower bound holds when all off-diagonal coefficients are arbitrary, provided each row-zero anchor is nonzero and each normalized diagonal ratio is plus or minus one.",
+    "row_sign_rank": "RowSignRank(perm_n)=2^(n-1)"
+  },
+  "total_anchored_rational_slice_coefficients_checked": 349524,
+  "total_glynn_assignment_checks_n2_through_n6": 50068,
+  "total_normalized_sign_slice_coefficients_checked": 1048572,
+  "validated_degree_count": 9
+}
