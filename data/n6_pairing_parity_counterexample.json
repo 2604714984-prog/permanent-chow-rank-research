@@ -1,0 +1,120 @@
+{
+  "arithmetic": "integer construction and exact rational elimination",
+  "claim_boundary": "This is a two-term route counterexample. It is not a 27-term decomposition of perm_6, does not realize the b=34 relative position against E3(perm_6), and neither proves nor refutes the ordinary lower bound 28 or any border-rank statement.",
+  "direct_middle_catalectic_rank_of_T1_plus_T2": 39,
+  "middle_derivative_data": {
+    "explicit_relation": [
+      0,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -3,
+      3,
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -3,
+      3,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "explicit_relation_residual_is_zero": true,
+    "individual_ranks": [
+      20,
+      20
+    ],
+    "intersection_dimension": 1,
+    "relation_dimension": 1,
+    "sum_of_spaces_dimension": 39
+  },
+  "relation_pairing": {
+    "first_component_value": -24,
+    "relation_is_nonisotropic": true,
+    "restricted_pairing_rank": 1,
+    "second_component_value": 0,
+    "total_value": -24
+  },
+  "status": "EXACT_N6_PAIRING_PARITY_COUNTEREXAMPLE",
+  "strict_conclusion": "A one-dimensional central relation among full-middle-rank sextic Chow terms need not be isotropic. The central rank defect can be one, so neither even-defect nor relation-parity alone excludes the lower-28 b=34 endpoint.",
+  "terms": {
+    "T1": "x0*x1*x2*x3*x4*x5",
+    "T2_factor_coefficient_rows": [
+      [
+        1,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        -1
+      ],
+      [
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ]
+    ],
+    "T2_factor_matrix_determinant": 1
+  }
+}

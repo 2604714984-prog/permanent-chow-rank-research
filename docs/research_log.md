@@ -1188,3 +1188,13 @@ enumeration confirms that all 1,837,392 rectangle-free coordinate supports
 give distinct signatures.  The theorem is deliberately coordinate: it does
 not assert noncoordinate fiber injectivity or preserve six-space directness
 under degeneration.
+
+G-044 removes another false shortcut for the next lower-bound stage.  Two
+explicit full-middle-rank Chow terms in six variables have cubic derivative
+spaces of total dimension 39.  Their unique relation has nonzero self-pairing
+`-24`, and direct expansion gives central catalectic rank exactly 39.  Thus a
+one-dimensional relation need not be isotropic and the central defect need
+not be even.  This two-term counterexample does not realize the permanent-
+relative endpoint; it shows only that any lower-28 obstruction for the
+near-direct residual must use its position relative to `E_3(perm_6)`, not
+relation parity alone.

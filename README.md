@@ -83,6 +83,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` row/column `alpha=3` coupling | pure coupling theorem; exact rational replay | over the same-row or same-column common quotient, six literal-direct lifts force a sign-matrix rank at least four and hence permanent middle intersection at most 40, excluding both dangerous 520-dimensional endpoint families from the `b=60` state |
 | `n=6` `alpha=3` common-quotient barrier | pure characteristic-zero counterexample; exact rational replay | six actual quadratic Chow spaces are literal direct and share one `W_15`, with `(d_2,a_2,t_2,h,b)=(90,75,15,120,0)`; common quotient plus directness alone cannot replace the cubic permanent-intersection condition |
 | `n=6` coordinate `alpha=3` quotient injectivity | pure support-recovery theorem; exact finite replay | all 1,837,392 rectangle-free coordinate six-edge supports have distinct quotient `W_15` signatures; this coordinate injectivity does not extend literal directness through arbitrary noncoordinate degenerations |
+| `n=6` pairing-parity barrier | pure characteristic-zero counterexample; exact rational replay | two full-middle-rank Chow terms have one nonisotropic central relation and sum rank exactly 39; one-dimensional relation loss need not be even, so the lower-28 near-direct endpoint requires permanent-relative geometry |
 | `n=6` `b=59` scalar frontier | pure finite enumeration; exact integer replay | the same 367 necessary scalar states occur; all but the unique all-`alpha=3`, `t_2=15` state are excluded, and its required prolongation dimension rises to 461 |
 | `n=6` product-shadow theorem | pure characteristic-zero theorem; exact integer DP replay | torus specialization and two-sided colex compression reduce every `b`-plane in the permanent cubic derivative space to a Ferrers support; the exact product shadow exceeds the fixed-six projection cap 78 for every `53<=b<=64` |
 | `n=6` ordinary lower-27 completion | proof draft complete; independently audited exact integer replay | the product-shadow theorem removes `b=53,...,64`; exhaustive conservative defect/Macaulay arithmetic gives `h>2b` for every `45<=b<=52`, ruling out every hypothetical 26-term decomposition and proving `ChowRank(perm_6)>=27` |
@@ -191,6 +192,7 @@ python scripts/n6_alpha3_individual_prolongation_barrier.py
 python scripts/n6_alpha3_row_column_coupling_exclusion.py
 python scripts/n6_alpha3_common_quotient_counterexample.py
 python scripts/n6_alpha3_coordinate_quotient_injectivity.py
+python scripts/n6_pairing_parity_counterexample.py
 python scripts/n6_b59_scalar_frontier.py
 python scripts/n6_product_shadow_b53_64_exclusion.py
 python scripts/n6_lower27_completion.py
