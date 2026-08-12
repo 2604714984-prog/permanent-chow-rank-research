@@ -1175,3 +1175,16 @@ the lower-27 proof and changes no rank bound.  It does prove that neither a
 common `W_15` nor pairwise quadratic intersection can provide the next
 general obstruction: any continuation must retain the cubic
 permanent-intersection condition.
+
+N6-055 supplies the complementary positive coordinate theorem.  For a
+rectangle-free six-edge support, the fifteen quotient axes record all
+same-row and same-column pairs and the unordered endpoint labels of every
+disjoint pair.  These data recover every labelled vertex degree, all edges
+incident with a degree-at-least-two vertex, and finally the remaining
+degree-one matching.  The two-edge matching case is resolved by comparing
+its row-pair axes with the already recovered neighbour set.  Hence the
+coordinate quotient signature determines the support.  An independent
+enumeration confirms that all 1,837,392 rectangle-free coordinate supports
+give distinct signatures.  The theorem is deliberately coordinate: it does
+not assert noncoordinate fiber injectivity or preserve six-space directness
+under degeneration.

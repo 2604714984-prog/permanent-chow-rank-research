@@ -1,0 +1,12 @@
+{
+  "all_coordinate_six_cell_supports": 1947792,
+  "arithmetic": "integer exhaustive regression plus a pure recovery theorem",
+  "axes_per_signature": 15,
+  "claim_boundary": "This is a coordinate theorem. It does not prove injectivity on noncoordinate alpha-three Chow frames or exclude the coupled six-term b=60 incidence.",
+  "collision_count": 0,
+  "distinct_quotient_signatures": 1837392,
+  "rectangle_free_coordinate_supports": 1837392,
+  "signature_axis_universe_dimension": 405,
+  "status": "EXACT_N6_ALPHA3_COORDINATE_QUOTIENT_INJECTIVITY",
+  "strict_conclusion": "The quotient signature map is injective on all coordinate six-cell supports with no rectangle."
+}
