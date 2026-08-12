@@ -365,7 +365,46 @@ In the normalization `binom(n,floor(n/2))/n`, the odd constant is twice the even
 - The route-barrier and diagonal-term scripts are exact deterministic diagnostics.
 - The route barrier is a limitation of the current scalar one-step formula, not an upper bound on Chow rank.
 - No uniform `Gamma>=661` theorem has been proved.
-- The current interval remains
+- N6-030 later closes the ordinary lower bound 26, so the current interval is
   \[
-  23\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+  26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
   \]
+
+## 2026-08-12: the single-term middle rank 19 is impossible
+
+For a sextic Chow term with four-dimensional factor span, the determinant of
+the 20 by 20 middle catalectic is, up to a nonzero scalar, the squared product
+of the fifteen four-factor brackets.  If one bracket vanishes, a direct
+`10 -> 9` apolar-kernel construction supplies a second kernel vector in
+addition to the pure normal-direction cube, so the determinant vanishes to
+order at least two.  Multidegree forces the factorization.  An exact integer
+witness gives determinant `440301256704` and constant `2304^2` in the audit
+bases.
+
+The five-dimensional dependence normal forms have middle ranks
+`14,14,18,20,20`; dimensions at most three have rank at most 10 and dimension
+six has rank 20.  Hence rank 19 never occurs for one sextic Chow term.  This
+removes the `r_max=19` branch of the current lower-27 central frontier, but the
+`r_max=20` branch remains open.
+
+## 2026-08-12: a hereditary central-minimal twenty-term residual
+
+N6-032 sharpens the surviving lower-27 branch.  Conditional six-subset
+selection, the single-term rank gap, two low-rank shadow contradictions, and
+the exact fixed-six table force a complement `Q` of twenty displayed terms
+with
+
+\[
+\operatorname{rank}C_{3,3}(Q)\ge384.
+\]
+
+For every `s` of those terms, subtraction of the other `20-s` terms gives
+middle rank at least `20s-16>20(s-1)`.  Thus every nonempty sub-sum is a
+minimum Chow decomposition certified by its middle catalectic; its central
+relation-pairing radical is at most nine.  The rank-19 gap also forces at
+least twelve of the twenty individual terms to have middle rank 20.
+
+This does not prove lower 27.  It replaces a broad scalar parameter frontier
+by one geometric target: rule out a hereditary central-minimal twenty-term
+residual that differs from `perm_6` by six Chow terms.  Repeating the same
+scalar shadow or submodular inequalities leaves that target feasible.

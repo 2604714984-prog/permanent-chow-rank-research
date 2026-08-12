@@ -1,0 +1,49 @@
+{
+  "arithmetic": "exact integers and Fraction over Q",
+  "claim_boundary": "This is a single-Chow-term rank-gap theorem. It does not prove ChowRank(perm_6)>=27 or determine ChowRank(perm_6).",
+  "excluded_middle_rank": 19,
+  "factor_span_at_most_three_rank_cap": 10,
+  "factor_span_five_support_profiles": {
+    "1": 14,
+    "2": 14,
+    "3": 18,
+    "4": 20,
+    "5": 20
+  },
+  "factor_span_four": {
+    "bracket_product_squared": 82944,
+    "bracket_values": {
+      "1234": 1,
+      "1235": 1,
+      "1236": 4,
+      "1245": -1,
+      "1246": -3,
+      "1256": 1,
+      "1345": 1,
+      "1346": 2,
+      "1356": -2,
+      "1456": 1,
+      "2345": -1,
+      "2346": -1,
+      "2356": 3,
+      "2456": -2,
+      "3456": 1
+    },
+    "consequence": "all four-subsets independent gives rank 20; any dependent four-subset gives corank at least two",
+    "dependent_witness_rank": 18,
+    "determinant_formula": "det(C_3,3)=2304^2*product_{|I|=4}[I]^2 in the stated standard derivative and monomial bases",
+    "formula_constant": 5308416,
+    "full_rank_witness": [
+      [1, 0, 0, 0],
+      [0, 1, 0, 0],
+      [0, 0, 1, 0],
+      [0, 0, 0, 1],
+      [1, 1, 1, 1],
+      [1, 2, 3, 4]
+    ],
+    "witness_determinant": 440301256704,
+    "witness_rank": 20
+  },
+  "factor_span_six_rank": 20,
+  "theorem": "A nonzero degree-six Chow term over characteristic zero never has middle catalectic rank 19."
+}
