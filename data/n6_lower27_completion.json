@@ -1,0 +1,1883 @@
+{
+  "arithmetic": "pure inequalities plus exhaustive exact integer profile enumeration",
+  "claim_boundary": "This is an ordinary Chow-rank lower bound conditional only on the cited proved fixed-six interfaces. It does not prove border Chow rank at least 27 and does not determine the exact ordinary rank inside 27,...,32.",
+  "dependencies": {
+    "N6_056_excluded_range": [
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "fixed_six_surviving_range": [
+      45,
+      64
+    ],
+    "projection_cap": 78,
+    "single_term_quadratic_middle_profiles": {
+      "0_to_10": 0,
+      "11": 14,
+      "12": "impossible",
+      "13": 18,
+      "14": 20,
+      "15": 20
+    }
+  },
+  "low_layers": [
+    {
+      "b": 45,
+      "defect_budget": 6,
+      "enumerated_symmetric_epsilon_type_count": 31,
+      "exact_product_shadow_minimum": 72,
+      "feasible_symmetric_epsilon_type_count": 24,
+      "impossible_quadratic_rank_twelve_type_count": 7,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 98,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 1
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 98,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 100,
+          "cubic_relation_cap": 10,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 6
+        },
+        {
+          "coupled_middle_rank_lower": 106,
+          "cubic_relation_cap": 7,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 5
+        },
+        {
+          "coupled_middle_rank_lower": 108,
+          "cubic_relation_cap": 5,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 4
+        },
+        {
+          "coupled_middle_rank_lower": 110,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            14
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 98,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 100,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 110,
+          "cubic_relation_cap": 5,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 4
+        },
+        {
+          "coupled_middle_rank_lower": 110,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            14
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 100,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            5
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            14
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            14
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            18,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 8,
+      "twenty_term_residual_middle_rank_upper": 90
+    },
+    {
+      "b": 46,
+      "defect_budget": 6,
+      "enumerated_symmetric_epsilon_type_count": 31,
+      "exact_product_shadow_minimum": 72,
+      "feasible_symmetric_epsilon_type_count": 24,
+      "impossible_quadratic_rank_twelve_type_count": 7,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 98,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 1
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 98,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 100,
+          "cubic_relation_cap": 10,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 6
+        },
+        {
+          "coupled_middle_rank_lower": 106,
+          "cubic_relation_cap": 7,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 5
+        },
+        {
+          "coupled_middle_rank_lower": 108,
+          "cubic_relation_cap": 5,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 4
+        },
+        {
+          "coupled_middle_rank_lower": 110,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            14
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 98,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 100,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 110,
+          "cubic_relation_cap": 5,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 4
+        },
+        {
+          "coupled_middle_rank_lower": 110,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            14
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 100,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            5
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            0
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            14
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            4
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            14
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 114,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            18,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            18,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 6,
+      "twenty_term_residual_middle_rank_upper": 92
+    },
+    {
+      "b": 47,
+      "defect_budget": 3,
+      "enumerated_symmetric_epsilon_type_count": 7,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 112,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 18,
+      "twenty_term_residual_middle_rank_upper": 94
+    },
+    {
+      "b": 48,
+      "defect_budget": 3,
+      "enumerated_symmetric_epsilon_type_count": 7,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 112,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 16,
+      "twenty_term_residual_middle_rank_upper": 96
+    },
+    {
+      "b": 49,
+      "defect_budget": 3,
+      "enumerated_symmetric_epsilon_type_count": 7,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 112,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 14,
+      "twenty_term_residual_middle_rank_upper": 98
+    },
+    {
+      "b": 50,
+      "defect_budget": 3,
+      "enumerated_symmetric_epsilon_type_count": 7,
+      "exact_product_shadow_minimum": 75,
+      "feasible_symmetric_epsilon_type_count": 6,
+      "impossible_quadratic_rank_twelve_type_count": 1,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 112,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 112,
+          "cubic_relation_cap": 4,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 3
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 2,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 2
+        },
+        {
+          "coupled_middle_rank_lower": 116,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 1,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 1
+        },
+        {
+          "coupled_middle_rank_lower": 118,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            18
+          ],
+          "quadratic_relation_cap": 0
+        },
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 12,
+      "twenty_term_residual_middle_rank_upper": 100
+    },
+    {
+      "b": 51,
+      "defect_budget": 0,
+      "enumerated_symmetric_epsilon_type_count": 1,
+      "exact_product_shadow_minimum": 78,
+      "feasible_symmetric_epsilon_type_count": 1,
+      "impossible_quadratic_rank_twelve_type_count": 0,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 120,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 18,
+      "twenty_term_residual_middle_rank_upper": 102
+    },
+    {
+      "b": 52,
+      "defect_budget": 0,
+      "enumerated_symmetric_epsilon_type_count": 1,
+      "exact_product_shadow_minimum": 78,
+      "feasible_symmetric_epsilon_type_count": 1,
+      "impossible_quadratic_rank_twelve_type_count": 0,
+      "minimizers": [
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "minimum_coupled_middle_rank_lower": 120,
+      "profiles": [
+        {
+          "coupled_middle_rank_lower": 120,
+          "cubic_relation_cap": 0,
+          "epsilon": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "individual_middle_rank_lowers": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "quadratic_relation_cap": 0
+        }
+      ],
+      "strict_margin": 16,
+      "twenty_term_residual_middle_rank_upper": 104
+    }
+  ],
+  "ordinary_rank_interval": [
+    27,
+    32
+  ],
+  "status": "EXACT_N6_ORDINARY_CHOW_RANK_LOWER_27_COMPLETION",
+  "strict_conclusion": "Every fixed-six layer b=45,...,52 contradicts h<=2b, while N6-056 excludes b=53,...,64. Therefore a 26-term Chow decomposition of perm_6 does not exist. Together with the existing lower bound 26, ChowRank(perm_6)>=27."
+}

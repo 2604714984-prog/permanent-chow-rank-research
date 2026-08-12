@@ -82,8 +82,10 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` individual `alpha=3` barrier | pure exact counterexample; exact rational/modular replay | the same-row Chow term has prolongation dimension exactly 520, so the last `b=60` state requires a genuinely six-term common-quotient/directness argument rather than another individual cap |
 | `n=6` row/column `alpha=3` coupling | pure coupling theorem; exact rational replay | over the same-row or same-column common quotient, six literal-direct lifts force a sign-matrix rank at least four and hence permanent middle intersection at most 40, excluding both dangerous 520-dimensional endpoint families from the `b=60` state |
 | `n=6` `b=59` scalar frontier | pure finite enumeration; exact integer replay | the same 367 necessary scalar states occur; all but the unique all-`alpha=3`, `t_2=15` state are excluded, and its required prolongation dimension rises to 461 |
+| `n=6` product-shadow theorem | pure characteristic-zero theorem; exact integer DP replay | torus specialization and two-sided colex compression reduce every `b`-plane in the permanent cubic derivative space to a Ferrers support; the exact product shadow exceeds the fixed-six projection cap 78 for every `53<=b<=64` |
+| `n=6` ordinary lower-27 completion | proof draft complete; independently audited exact integer replay | the product-shadow theorem removes `b=53,...,64`; exhaustive conservative defect/Macaulay arithmetic gives `h>2b` for every `45<=b<=52`, ruling out every hypothetical 26-term decomposition and proving `ChowRank(perm_6)>=27` |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
-| `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot prove lower 27 and does not change `26<=ChowRank(perm_6)<=32` |
+| `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot supply the now-proved coupled lower bound 27 |
 | `n=6` linear-restriction Koszul--Young ceiling | proof draft complete; pure triangular and strict modular replay | after every linear restriction to `1<=k<=36` variables, every standard Koszul--Young ratio is still strictly below 26; linear compression cannot rescue a lower-27 proof by this family |
 | `n=6` complete shifted-partial ceiling | pure dimension theorem; exact integer replay | for every derivative degree and every nonnegative shift, the rank ratio is at most `843600/35009<25`; the entire shifted-partial family cannot even certify lower 26 |
 | `n=6` middle third-Koszul rank | proof draft complete; exact local and strict modular replay; lower-27 interface | exact rank `2715505`, forty explicit homology classes, and one-term cap `133545`; a hypothetical six-term complement must create two-sided row/column overlap defect at least `44605` |
@@ -105,10 +107,10 @@ The repository does **not** own large upstream proof bundles. External submissio
 The current in-repository unrestricted interval for `n=6` is
 
 ```text
-26 <= ChowRank(perm_6) <= 32.
+27 <= ChowRank(perm_6) <= 32.
 ```
 
-The full sign-family rank is exactly 32. The new lower bound 26 is for ordinary Chow rank; no border-lower-26 or exact unrestricted-32 claim is made.
+The full sign-family rank is exactly 32. The lower bound 27 is for ordinary Chow rank; no border-lower-27 or exact unrestricted-32 claim is made.
 
 ## Reviewed general lower-bound table
 
@@ -130,7 +132,7 @@ The current exact-rational multidimensional-shadow certificates give:
 | 15 | 6,440 | 6,879 | 16,384 |
 | 16 | 12,875 | 13,312 | 32,768 |
 
-These are the values of the general multidimensional-shadow theorem. The specialized `n=6` average-subset argument improves its row from 23 to the current best in-repository proof-draft lower bound 26. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
+These are the values of the general multidimensional-shadow theorem.  For `n=6`, the average-subset argument first improves the row from 23 to 26, and the fixed-six product-shadow completion gives the current best in-repository proof-draft lower bound 27. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
 
 ## Reproduce the deterministic results
 
@@ -186,6 +188,8 @@ python scripts/n6_alpha2_t15_prolongation_cap.py
 python scripts/n6_alpha3_individual_prolongation_barrier.py
 python scripts/n6_alpha3_row_column_coupling_exclusion.py
 python scripts/n6_b59_scalar_frontier.py
+python scripts/n6_product_shadow_b53_64_exclusion.py
+python scripts/n6_lower27_completion.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
@@ -202,9 +206,11 @@ The lower-25 proof does not mechanically reuse that state table. Under a hypothe
 
 The lower-26 fixed-count diagnostic tests `q=6,7,8` under a hypothetical 25-term decomposition and leaves hundreds of states when the fixed subset is arbitrary. N6-030 supplies the missing selection step. If `U_i` are the individual middle-catalectic images, condition on a term of maximum central rank and apply submodular averaging to the other five choices. The relation-pairing identity then selects six indices with coupled central rank at least 87. The nineteen-term residual forces central intersection `b>=54`. Exact rational Bukh-shadow endpoints and an integer enumeration of at most 33 symmetric defect profiles per terminal layer prove the universal fixed-six cap `b<=53`. This contradiction proves the ordinary lower bound 26. The argument does not prove border rank 26 or exact unrestricted rank 32.
 
-For the lower-27 program, the single-term central rank 19 is now excluded. In factor-span dimension four, a dependent four-set produces two independent cubic apolar operators; divisibility and multidegree then factor the 20 by 20 determinant as a nonzero constant times the squared product of all four-factor brackets. The five-dimensional dependence normal forms have exact ranks `14,14,18,20,20`. Thus the surviving maximum-single-term-rank frontier is forced to rank 20, but this does not yet close lower 27.
+For the lower-27 program, the single-term central rank 19 is excluded. In factor-span dimension four, a dependent four-set produces two independent cubic apolar operators; divisibility and multidegree then factor the 20 by 20 determinant as a nonzero constant times the squared product of all four-factor brackets. The five-dimensional dependence normal forms have exact ranks `14,14,18,20,20`. Thus the surviving maximum-single-term-rank frontier is forced to rank 20; this is one input to the later fixed-six completion.
 
-The next reduction selects six terms from any hypothetical 26-term decomposition and forces the twenty-term residual to have middle-catalectic rank at least 384. Hence every `s`-term sub-sum of that residual has middle rank at least `20s-16`, strictly certifying Chow rank `s`; every central relation-pairing radical is at most nine and at least twelve residual summands have individual middle rank 20. Its middle image intersects the permanent middle space in dimension `336..380`, and its colored relation space modulo the permanent has dimension at least 320. The unresolved step is to exclude this hereditary central-minimal residual using that cross-degree quotient module. Scalar shadow and submodular averaging alone do not do so.
+The next reduction selects six terms from any hypothetical 26-term decomposition and forces the twenty-term residual to have middle-catalectic rank at least 384. Hence every `s`-term sub-sum of that residual has middle rank at least `20s-16`, strictly certifying Chow rank `s`; every central relation-pairing radical is at most nine and at least twelve residual summands have individual middle rank 20. Its middle image intersects the permanent middle space in dimension `336..380`, and its colored relation space modulo the permanent has dimension at least 320. Several direct cross-degree approaches stop at this point, but the later product-shadow theorem bypasses that obstruction.
+
+The lower-27 completion works inside the fixed-six cubic intersection `S=E_3 intersect H_3`.  Row-column torus specialization sends any `b`-plane `S` to a coordinate support without increasing its derivative shadow.  Successive colex compression in the row- and column-triple factors produces a Ferrers diagram, whose shadow is the exact integer potential `sum_i w_i k(lambda_i)`.  A 2,309-state dynamic program proves that this shadow exceeds the projection cap 78 for every `53<=b<=64`.  For `45<=b<=52`, the remaining defect budget is only 6, 3, or 0.  Exhausting every conservative six-term quadratic-defect profile and applying vector-valued Macaulay growth plus block-Sylvester gives `h` lower bounds `98,98,112,112,112,112,120,120`, all strictly larger than the twenty-term residual necessity `h<=2b`.  This rules out 26 terms and proves the ordinary interval `27..32`; it makes no border-rank or exact-rank-32 claim.
 
 The output-degree-two homology closure identifies the middle higher-Koszul homology with `Tor_2(A_f,k)_4`. The Alper--Rowlands formula gives dimension 450 for `perm_6`, while a six-factor Chow complete intersection gives 15. Hence the exact ranks are `127125` and `8730`, still yielding ratio 15. An independently reconstructed common-factor family has scalar homology dimensions `15,55,120,210,325,465` for one through six terms, so monotone scalar homology upper bounds cannot separate `perm_6` from low-term sums. Multigraded and representation-theoretic refinements remain open.
 

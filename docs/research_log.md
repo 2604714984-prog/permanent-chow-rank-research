@@ -1081,3 +1081,76 @@ caps exclude 366 of them; the unique survivor is again the all-`alpha=3`,
 `t_2=15` state, now requiring prolongation dimension at least 461.  Thus the
 coupled common-quotient problem persists unchanged, with one extra unit of
 strict margin.
+
+## 2026-08-13: exact product shadows exclude `b=53,...,64`
+
+N6-056 replaces the continuous two-dimensional shadow estimate by an exact
+product-poset theorem for every subspace of the permanent cubic derivative
+space.  The 400 subpermanents form distinct one-dimensional weights for the
+row-column torus.  Specializing a `b`-plane to a torus-fixed coordinate
+subspace can only decrease the rank of its derivative shadow.  Compressing
+the coordinate support first in the column-triple fibers and then in the
+row-triple fibers does not increase the product lower shadow and produces a
+Ferrers diagram `lambda`.
+
+For the twenty colex-ordered triples, the exact shadow is
+
+\[
+ \Phi(\lambda)=\sum_{i=0}^{19}w_i k(\lambda_i).
+\]
+
+The one-factor data `k,w` are reconstructed combinatorially, and a 2,309-state
+integer dynamic program minimizes this potential for every size from 40 to
+65.  The minima for `b=53,...,64` are
+
+\[
+ 81,81,81,83,83,83,84,84,84,84,84,84,
+\]
+
+all strictly larger than the fixed-six projection cap 78.  Consequently every
+fixed-six central-intersection layer `53<=b<=64` is impossible.  This theorem
+uses no random, floating-point, or finite-field inference.
+
+## 2026-08-13: the ordinary lower bound 27 is complete
+
+N6-057 combines the product-shadow theorem with the exact low-layer defect
+arithmetic.  A hypothetical 26-term decomposition leaves twenty terms after
+fixing six.  If `h` is the fixed-six middle rank and
+`b=dim(E_3 intersect H_3)`, the symmetric double-quotient inequality gives
+
+\[
+ \operatorname{rank} C_{3,3}(Q)\ge400+h-2b.
+\]
+
+The twenty-term cap therefore forces `h<=2b`.  Earlier reductions give
+`45<=b<=64`, and N6-056 has already removed `b>=53`.
+
+For the remaining layers, the exact product shadows give defect budgets
+`D=6` at `b=45,46`, `D=3` at `b=47,...,50`, and `D=0` at `b=51,52`.
+An exhaustive enumeration of all nondecreasing six-tuples
+`epsilon_i=15-dim D_2(T_i)` satisfying the necessary omitted-factor bound
+uses the proved individual term profiles, the monotone degree-two Macaulay
+successor, and the block-Sylvester inequality.  The resulting lower bounds
+for `h` are
+
+\[
+ 98,98,112,112,112,112,120,120,
+\]
+
+with strict margins over `2b` equal to
+
+\[
+ 8,6,18,16,14,12,18,16.
+\]
+
+Thus every layer contradicts the twenty-term residual cap, and no 26-term
+decomposition exists.  Together with Glynn's 32-term decomposition, the
+current unrestricted ordinary interval is
+
+\[
+ \boxed{27\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32}.
+\]
+
+The product-shadow proof and the low-layer enumeration were independently
+replayed.  This conclusion is only about ordinary Chow rank in characteristic
+zero; it proves neither border rank at least 27 nor exact ordinary rank 32.
