@@ -143,47 +143,63 @@ A weaker but still decisive target is the recurrence
 The invariant must not factor through the scalar Hilbert profile, by the new
 ceiling theorem.
 
-## 5. First workstream: multigraded adjacent-degree relations
+## 5. First workstream: natural cross-degree maps
 
-The smallest useful structure beyond dimensions is the family of kernels and
-cokernels of
+The raw adjacent differentiation map
 
 \[
 V^*\otimes\mathcal D_m(f)
 \longrightarrow
-\mathcal D_{m-1}(f).
+\mathcal D_{m-1}(f)
 \]
 
-Retain the row-column torus grading and, where practical, the
-`S_n x S_n` character.
+is always surjective. Its kernel dimension is
 
-### NGEN-01 — exact low-`n` character tables
+\[
+(\dim V)\dim\mathcal D_m(f)-\dim\mathcal D_{m-1}(f),
+\]
 
-For `n=3,...,8`:
+so its scalar dimension is already determined by the derivative profile. It
+does not evade the new ceiling theorem.
 
-1. construct the adjacent-degree incidence maps directly from subset
-   combinatorics;
-2. compute exact torus-weight multiplicities of kernels and cokernels;
-3. aggregate to symmetric-group character data only after the torus table is
-   independently replayed;
-4. bind every table to the exact definition and code hash.
+The first useful candidates must retain higher compatibility, for example:
 
-### NGEN-02 — one-term formula
+- Koszul homology after quotienting universal commutation relations;
+- Young or Schur flattenings;
+- Fitting ranks of coupled relation modules; or
+- natural maps between several derivative degrees.
 
-Derive the same objects for an independent Chow term analytically. Degenerate
-terms require a proved specialization bound; generic calculations alone are
-insufficient.
+### NGEN-01 — coordinate-invariance gate
 
-### NGEN-03 — functional search
+The permanent has a row-column torus, but arbitrary Chow summands do not
+respect that torus. A permanent-side weight multiplicity is not automatically
+a valid termwise charge.
 
-Search for a nonnegative functional on the multigraded relation data that:
+Before computing a large character table, prove that the candidate is either:
 
-- is bounded by one on every Chow term;
-- is monotone under submodules;
-- is subadditive under coupled sums; and
-- exceeds the scalar profile ceiling on the permanent.
+1. a natural `GL(V)`-equivariant map whose rank is coordinate invariant and
+   has a uniform one-term cap; or
+2. a target-torus functional with an orientation-independent cap over every
+   `GL(V)` translate of a Chow term.
 
-The search is diagnostic. Promotion requires a written invariant and proof.
+### NGEN-02 — exact low-`n` natural-map table
+
+For `n=5,6`, inventory a small list of natural Koszul or Young complexes.
+For each candidate, compute:
+
+- exact permanent rank;
+- exact generic one-term rank;
+- a proved degenerate one-term upper bound; and
+- the common-factor adversarial value.
+
+### NGEN-03 — promotion
+
+Promote only a candidate whose rank ratio exceeds the scalar profile ceiling
+and survives the adversarial family. Torus weights may diagnose the matrix, but
+the theorem-bearing quantity must be coordinate invariant.
+
+The search is diagnostic. Promotion requires a written map, a one-term cap,
+and a sum inequality.
 
 ## 6. Promotion gates
 
@@ -246,7 +262,7 @@ This is a distinct gate, not a prerequisite for NGEN-01.
 1. The conjectural exact value is true.
 2. Cross-degree relation data retain the missing factor.
 3. A useful invariant can be made subadditive under coupled sums.
-4. Low-`n` character patterns stabilize sufficiently to suggest a formula.
+4. Low-`n` natural-map patterns stabilize sufficiently to suggest a formula.
 
 ### Assume all are false
 
@@ -265,7 +281,7 @@ deliverable must prove the one-term cap and the sum inequality.
 
 ```text
 one combinatorial generator
-one exact character-table format
+one exact comparison format
 one independent verifier
 no database
 no manager
@@ -273,25 +289,32 @@ no dispatcher
 no registry
 ```
 
-The first implementation should cover `n<=8` in memory and write immutable
+The first implementation should cover `n=5,6` in memory and write immutable
 JSON summaries. Native acceleration is not authorized until a measured
 bottleneck exists.
 
 ## 12. Immediate next task
 
-Implement NGEN-01 only for the central adjacent-degree map at `n=5,6`:
+Create a compact inventory of the `GL(V)`-natural maps already implicit in the
+repository:
 
-\[
-V^*\otimes\mathcal D_{\lceil n/2\rceil}(f)
-\longrightarrow
-\mathcal D_{\lceil n/2\rceil-1}(f).
-\]
+1. first Koszul flattening;
+2. first higher-wedge Koszul flattening;
+3. second-Koszul homology;
+4. vector-valued first prolongation; and
+5. one small Young flattening candidate from the literature interface.
 
-Record the torus-weight kernel multiplicities for:
+For `n=5,6`, record for each map:
 
-1. `perm_n`;
-2. one independent Chow term; and
-3. the common-factor adversarial family already used against scalar homology.
+```text
+permanent rank
+generic one-term rank
+proved degenerate one-term cap
+integer rank-ratio lower bound
+common-factor adversarial result
+profile-determined or genuinely cross-degree
+```
 
-Stop after this comparison. Extend to all degrees only if a permanent-specific
-weight class survives both one-term and common-factor falsification.
+This is a ceiling comparison, not a new framework. Select at most one map for
+further development, and only if its `n=6` ceiling can exceed 25 or its
+structure suggests a uniform recurrence.
