@@ -379,24 +379,62 @@ and the full relation module
 A general-`n` lower bound must charge compatibility across degrees or relations
 among summands. Merely adding scalar degree bounds is now ruled out.
 
+### 7.1 The raw adjacent relation dimension is still profile data
+
+For every form `f` and every `m>=1`, total differentiation gives a surjection
+
+\[
+\mu_m(f):
+V^*\otimes\mathcal D_m(f)
+\longrightarrow
+\mathcal D_{m-1}(f).
+\]
+
+Surjectivity follows because every derivative of order `n-m+1` is one
+additional first derivative of a derivative of order `n-m`. Hence
+
+\[
+\dim\ker\mu_m(f)
+=
+(\dim V)h_m(f)-h_{m-1}(f).
+\]
+
+The scalar dimension of this first adjacent relation space therefore contains
+no information beyond the derivative profile. Merely tabulating these kernel
+dimensions does not evade Theorem 3.1.
+
+The first potentially new object is a higher compatibility quotient, such as
+Koszul homology, a Young flattening, or a coupled relation module. Even there,
+a scalar total dimension may be too weak.
+
 ## 8. Next research gate
 
-The first authorized experiment is deliberately small.
+The first gate is **coordinate invariance**. The row-column torus stabilizes the
+permanent but does not stabilize an arbitrary Chow summand. A functional of
+permanent-side torus weights is not automatically bounded termwise after an
+arbitrary change of coordinates.
 
-1. For `n<=8`, compute the row-column multigraded character of the first
-   relation spaces between adjacent derivative degrees for the permanent.
-2. Derive the corresponding character formula for one independent Chow term.
-3. Search for a positive functional on character multiplicities that is
-   monotone under submodules and subadditive under sums.
-4. Promote a candidate only if it either:
-   - certifies at least 26 for `perm_6`; or
-   - yields a uniform doubling recurrence
-     \[
-     R_n\ge2R_{n-1}.
-     \]
+A candidate is authorized only if it is either:
+
+1. the rank of a natural `GL(V)`-equivariant construction with a proved
+   uniform cap for every Chow term; or
+2. a target-torus functional with a proved orientation-independent cap over
+   the full `GL(V)` orbit of one Chow term.
+
+The first experiment should compare a small list of `GL(V)`-natural Koszul or
+Young complexes at `n=5,6`. For each candidate:
+
+- derive the generic and degenerate one-term cap;
+- replay the permanent rank exactly;
+- test the common-factor adversarial family; and
+- stop unless it exceeds 25 at `n=6` or suggests a uniform doubling
+  recurrence.
+
+Torus-weight decompositions may be used to discover or verify a natural map,
+but they are not by themselves a decomposition lower bound.
 
 No manager, registry, generic SAT layer, or large state tree is justified
-before such a functional is stated.
+before such a map and its one-term cap are stated.
 
 ## 9. Hidden assumptions and strongest objection
 
