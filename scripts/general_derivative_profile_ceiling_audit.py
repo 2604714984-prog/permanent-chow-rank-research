@@ -216,12 +216,32 @@ def build_payload(max_n: int = DEFAULT_MAX_N) -> dict[str, object]:
         raise ValueError("max_n must be at least 3")
 
     rows = [validate_degree(n) for n in range(2, max_n + 1)]
+    rows_encoded = (
+        json.dumps(rows, sort_keys=True, separators=(",", ":")) + "\n"
+    ).encode("utf-8")
+    selected_degrees = sorted(
+        {
+            *range(2, min(max_n, 12) + 1),
+            *(
+                degree
+                for degree in (20, 30, 40, max_n)
+                if degree <= max_n
+            ),
+        }
+    )
+    selected_rows = [
+        rows[degree - 2]
+        for degree in selected_degrees
+    ]
     boolean_supports_checked = validate_boolean_weight_supports(
         min(max_n, 12)
     )
     return {
         "status": "GENERAL_DERIVATIVE_PROFILE_CEILING_REPLAYED",
         "tested_degree_range": [2, max_n],
+        "validated_degree_count": len(rows),
+        "all_degree_rows_sha256": hashlib.sha256(rows_encoded).hexdigest(),
+        "selected_rows": selected_rows,
         "boolean_weight_supports_checked_through_n12": (
             boolean_supports_checked
         ),
@@ -243,7 +263,6 @@ def build_payload(max_n: int = DEFAULT_MAX_N) -> dict[str, object]:
                 "asymptotic to sqrt(pi*n/8)."
             ),
         },
-        "rows": rows,
         "claim_boundary": (
             "The theorem applies only to invariants that factor through the "
             "scalar derivative-dimension profile. It does not constrain "
