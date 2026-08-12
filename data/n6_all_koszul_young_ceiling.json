@@ -1,0 +1,190 @@
+{
+  "claim_boundary": "This is a route ceiling, not an upper bound on ChowRank(perm_6). The ordinary interval remains 26 <= ChowRank(perm_6) <= 32.",
+  "global_strict_ratio_upper": [
+    24907497593,
+    958842950
+  ],
+  "heavy_certificate_summaries": {
+    "m2_p3": {
+      "domain_dimension": 1606500,
+      "histogram_entries": 17,
+      "maximum_block_column_count": 600,
+      "modular_rank": 1347444,
+      "weight_block_count": 54216
+    },
+    "m4_p3": {
+      "domain_dimension": 1606500,
+      "histogram_entries": 16,
+      "maximum_block_column_count": 925,
+      "modular_rank": 1583856,
+      "weight_block_count": 128016
+    },
+    "m5_p2": {
+      "domain_dimension": 22680,
+      "histogram_entries": 5,
+      "maximum_block_column_count": 60,
+      "modular_rank": 22644,
+      "weight_block_count": 8316
+    }
+  },
+  "heavy_replay": {},
+  "heavy_replay_performed": false,
+  "internal_coordinate_term_ranks": {
+    "1": [
+      6,
+      15,
+      20,
+      15,
+      6,
+      1,
+      0
+    ],
+    "2": [
+      15,
+      70,
+      105,
+      84,
+      35,
+      6,
+      0
+    ],
+    "3": [
+      20,
+      105,
+      216,
+      190,
+      84,
+      15,
+      0
+    ],
+    "4": [
+      15,
+      84,
+      190,
+      216,
+      105,
+      20,
+      0
+    ],
+    "5": [
+      6,
+      35,
+      84,
+      105,
+      70,
+      15,
+      0
+    ],
+    "6": [
+      1,
+      6,
+      15,
+      20,
+      15,
+      6,
+      0
+    ]
+  },
+  "noncandidate_max_ratio": [
+    649264000,
+    25269513
+  ],
+  "prime": 1000003,
+  "raw_dimension_candidates_above_26": [
+    {
+      "output_degree": 3,
+      "wedge_degree": 10
+    },
+    {
+      "output_degree": 3,
+      "wedge_degree": 11
+    },
+    {
+      "output_degree": 3,
+      "wedge_degree": 12
+    },
+    {
+      "output_degree": 3,
+      "wedge_degree": 13
+    },
+    {
+      "output_degree": 3,
+      "wedge_degree": 14
+    },
+    {
+      "output_degree": 4,
+      "wedge_degree": 21
+    },
+    {
+      "output_degree": 4,
+      "wedge_degree": 22
+    },
+    {
+      "output_degree": 4,
+      "wedge_degree": 23
+    },
+    {
+      "output_degree": 4,
+      "wedge_degree": 24
+    },
+    {
+      "output_degree": 4,
+      "wedge_degree": 25
+    }
+  ],
+  "refined_representatives": [
+    {
+      "bounding_side": "domain",
+      "margin_below_26_terms": 540037397,
+      "output_degree": 3,
+      "permanent_rank_upper": 98421150643,
+      "shadow_rank_lower": 3253591757,
+      "shadow_source": "exact rank delta_(4,1)=8064",
+      "single_term_rank": 3806199540,
+      "wedge_degree": 10
+    },
+    {
+      "bounding_side": "domain",
+      "margin_below_26_terms": 201771963,
+      "output_degree": 3,
+      "permanent_rank_upper": 224167478337,
+      "shadow_rank_lower": 16154640063,
+      "shadow_source": "exact rank delta_(4,3)=1583856",
+      "single_term_rank": 8629586550,
+      "wedge_degree": 11
+    },
+    {
+      "bounding_side": "target",
+      "margin_below_26_terms": 14008012364,
+      "output_degree": 3,
+      "permanent_rank_upper": 433087869076,
+      "shadow_rank_lower": 86839790924,
+      "shadow_source": "modular lower rank delta_(2,3)>=1347444",
+      "single_term_rank": 17195995440,
+      "wedge_degree": 12
+    },
+    {
+      "bounding_side": "target",
+      "margin_below_26_terms": 1025645900,
+      "output_degree": 3,
+      "permanent_rank_upper": 786114727600,
+      "shadow_rank_lower": 68052142400,
+      "shadow_source": "exact rank delta_(2,1)=7700",
+      "single_term_rank": 30274629750,
+      "wedge_degree": 13
+    },
+    {
+      "bounding_side": "target",
+      "margin_below_26_terms": 65907457260,
+      "output_degree": 3,
+      "permanent_rank_upper": 1163459639100,
+      "shadow_rank_lower": 89318436900,
+      "shadow_source": "exact rank delta_(2,1)=7700",
+      "single_term_rank": 47283349860,
+      "wedge_degree": 14
+    }
+  ],
+  "status": "N6_ALL_STANDARD_KOSZUL_YOUNG_CEILING_REPLAYED",
+  "theorem": "Every standard Koszul--Young flattening of perm_6 has rank strictly less than 26 times the maximum rank of one Chow term; therefore this entire family cannot certify Chow rank at least 27.",
+  "transpose_duality": "(m,p) <-> (7-m,35-p)"
+}

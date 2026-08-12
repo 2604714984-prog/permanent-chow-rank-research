@@ -485,3 +485,36 @@ each, and the full `(2,2)` block contributes 36.  Exact coefficient
 constraints over `Fraction` independently reproduce the 48-dimensional
 space.  Thus even a residual family with full single-term middle ranks and
 direct central images still requires a genuine cross-degree collision bound.
+
+## 2026-08-12: every standard Koszul--Young flattening stops below 27
+
+N6-033 exhausts all maps
+
+\[
+\delta_{m,p}:D_m(\operatorname{perm}_6)\otimes\Lambda^pV
+\longrightarrow D_{m-1}(\operatorname{perm}_6)\otimes\Lambda^{p+1}V.
+\]
+
+Exact rational elimination gives the maximum one-term rank in every one of
+the 216 degree/wedge states.  Raw source-target dimensions leave only ten
+states that might have ratio above 26.  Transpose duality reduces these to
+`(m,p)=(3,10..14)`.
+
+An exterior-shadow lemma propagates a certified low-wedge image to every
+higher wedge degree.  Sparse exact integer matrices split into row-column
+weight blocks; elimination modulo `1000003` gives ranks `22644`, `1583856`,
+and `1347444` in the three required states.  The first two meet independent
+`delta^2=0` upper bounds and are exact in characteristic zero; the third is
+used only as a strict characteristic-zero lower bound.
+
+After inserting the forced adjacent images, the largest remaining ratio is
+
+\[
+\frac{24907497593}{958842950}<26.
+\]
+
+Thus no standard Koszul--Young flattening can certify lower 27 for
+`perm_6`.  This is a complete route ceiling, not a rank upper bound; the
+ordinary interval remains `26..32`.  Any successful next invariant must use
+quotients, coupling, recursion, additional Young symmetrization, or nonlinear
+geometry rather than a larger exterior degree in the same standard complex.
