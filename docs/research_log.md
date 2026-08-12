@@ -1056,3 +1056,28 @@ Chow lift, but literal directness can be lost in a torus degeneration.  The
 remaining state must therefore use simultaneously that six fifteen-planes
 share one quotient and are literal direct; no further universal
 individual-term prolongation bound can finish it.
+
+N6-053 resolves the two coordinate endpoint families where the individual
+prolongation reaches 520.  For a row-separated term parameterized by a row
+vector `u`, the common quotient remembers the projective coordinate-square
+vector `(u_r^2)`.  Six literal-direct lifts therefore give six distinct sign
+rows modulo global sign.  If their normalized sign matrix has rank `r`, the
+hypercube intersection bound forces `r>=4`.  In each of the twenty column
+triple blocks the permanent intersection has dimension `6-r`, and hence
+
+\[
+ b=20(6-r)\le40<60.
+\]
+
+The transposed argument handles the same-column family.  An exact rational
+example attains 40.  The coordinate quotient-map differential has full rank
+210 at 74 of the 76 rectangle-free support orbits and rank 205 precisely at
+these row/column families.  This remains a local diagnostic; it does not yet
+classify all noncoordinate common-quotient fibers.
+
+N6-054 repeats the exact scalar reduction at `b=59`.  The Bukh shadow is
+still 75, so the same 367 necessary states occur.  The existing prolongation
+caps exclude 366 of them; the unique survivor is again the all-`alpha=3`,
+`t_2=15` state, now requiring prolongation dimension at least 461.  Thus the
+coupled common-quotient problem persists unchanged, with one extra unit of
+strict margin.
