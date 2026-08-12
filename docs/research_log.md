@@ -598,3 +598,36 @@ degree.  Its output intersections are `(0,18,96,100,48,9,0)`; in the
 results jointly rule out the idea that merely increasing the exterior degree
 restores additivity.  The lower-27 target remains the equation-specific
 two-sided overlap defect 44,605.
+
+## 2026-08-12: linear compression cannot rescue standard Koszul--Young
+
+N6-036 closes linear restriction followed by one standard Koszul--Young
+flattening as a route to lower 27.  For every target dimension `1<=k<=36`,
+every output degree and every exterior degree, the exact certified ratio is
+strictly below 26.  The global largest upper ratio remains the uncompressed
+value
+
+\[
+\frac{24907497593}{958842950}<26.
+\]
+
+Dimensions at most eighteen follow from the derivative-space cap and explicit
+one-term denominators.  For `19<=k<=29`, deterministic coordinate graphs give
+pure unitriangular minors in the adjacent Koszul maps.  The derivative basis
+audit requires both the residual subgraph and its complement to have perfect
+matchings; omitting the complementary condition was detected during the
+internal replay and corrected before publication.  Exterior-degree-four
+source minors close the exceptional dimensions 22, 25, and 28.
+
+For `30<=k<=35`, the source minors remain unitriangular and exact.  Six
+deterministic sparse eliminations modulo `1000003` give target ranks
+
+\[
+(650316,749786,856000,968883,1088402,1214569).
+\]
+
+Each is a strict characteristic-zero lower bound because it certifies an
+integer minor nonzero modulo the prime.  The irreducibility of the linear-
+substitution space lets the maximum-rank locus of the current flattening meet
+the nonempty source and target rank-open loci.  This is a route ceiling, not a
+Chow-rank upper bound; the unrestricted interval remains `26..32`.
