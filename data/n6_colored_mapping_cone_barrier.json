@@ -1,0 +1,62 @@
+{
+  "claim_boundary": "The exact examples show that ordinary middle relation dimension does not determine the labelled quotient kernel, does not make it monotone increasing, and does not upper-bound it directly. They do not exclude every inequality using additional term or permanent data. This is not a permanent decomposition, does not rule out a weight-refined permanent-specific cone, and proves neither ChowRank(perm_6)>=27 nor any border-rank statement.",
+  "counterexample": "The G-034 triple and the two-full-span G-037 pair both have ordinary middle relation dimension four, but their labelled presentation kernels are zero and seven. The rank-five pair has ordinary relation dimension two and labelled kernel twelve.",
+  "exact_relation_homology_rows": [
+    {
+      "aggregate_boundary_rank": 570,
+      "boundary_plus_labelled_rank": 630,
+      "evidence": "The middle rank 56 is replayed by the G-034 Bareiss certificate; the 570/60/630 ranks are reconstructed here over Q in its six-variable completed block.",
+      "individual_middle_ranks": [
+        20,
+        20,
+        20
+      ],
+      "labelled_cycle_rank": 60,
+      "labelled_presentation_kernel": 0,
+      "labelled_presentation_rank": 60,
+      "literal_middle_sum_rank": 56,
+      "name": "g034_completed_three_term_block",
+      "ordinary_middle_relation_dimension": 4
+    },
+    {
+      "aggregate_boundary_rank": 380,
+      "individual_middle_ranks": [
+        20,
+        20
+      ],
+      "labelled_cycle_rank": 40,
+      "labelled_presentation_kernel": 7,
+      "labelled_presentation_rank": 33,
+      "literal_middle_sum_rank": 36,
+      "name": "two_full_span_terms",
+      "ordinary_middle_relation_dimension": 4
+    },
+    {
+      "aggregate_boundary_rank": 380,
+      "individual_middle_ranks": [
+        20,
+        20
+      ],
+      "labelled_cycle_rank": 40,
+      "labelled_presentation_kernel": 12,
+      "labelled_presentation_rank": 28,
+      "literal_middle_sum_rank": 38,
+      "name": "full_span_plus_uniform_five_span_term",
+      "ordinary_middle_relation_dimension": 2
+    }
+  ],
+  "field": "characteristic zero",
+  "mapping_cone_identity": "For P=H+Q, put K_m(f)=ker C_(6-m,m)(f) and J_m^diag=C(P)(K_m(Q))=C(H)(K_m(Q)). Then 0 -> K_m(P) intersect K_m(H) -> K_m(Q) -> J_m^diag -> 0 is exact. The last map sends x to C(P)x=C(H)x. This is the same-operator mapping-cone interface; it gives no additive inclusion among K_m(P), K_m(H), and K_m(Q).",
+  "ordinary_relation_complex": "Ordinary output relations allow unrelated preimages in the term images. The synchronized subspace is the image of one common operator and is strictly more structured.",
+  "permanent_data_not_used_by_counterexample": {
+    "dim_E2_intersect_G2_lower": 203,
+    "dim_E3_intersect_G3_lower": 336,
+    "dim_H_3_6_perm6": 40,
+    "fixed_six_middle_intersection_range": [
+      45,
+      64
+    ]
+  },
+  "status": "G039_COLORED_MAPPING_CONE_SCALAR_ROUTE_BLOCKED",
+  "synchronized_colored_middle_lower": 336
+}
