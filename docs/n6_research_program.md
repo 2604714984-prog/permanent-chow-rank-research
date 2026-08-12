@@ -456,6 +456,14 @@ The single-term theorem does not control `eta+j`, and the `36 rho` cap is
 vacuous in many surviving large-relation states.  The next theorem must bound
 the combined output loss, especially `j`, rather than only central relations.
 
+N6-024 checks the smallest nontrivial aggregate collision exactly.  For every
+pair of permutation monomials, all eleven relative cycle types satisfy `j=0`;
+even the types with 143 or 36 internal output relations remain transverse to
+the permanent Koszul image.  This is evidence that `j` is not forced by simple
+factor overlap, but it remains a restricted two-term coordinate theorem.  The
+next finite falsification target is three permutation monomials or two general
+coordinate monomials, before attempting arbitrary fixed six-term geometry.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:

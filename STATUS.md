@@ -70,11 +70,12 @@ Status vocabulary:
 | N6-021 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_AGGREGATE_THEOREM` | the N6-020 separator functions satisfy `rho_2(f)=rho_2(1-f)=46`; therefore the specific 24-base aggregate assignment has exact actual-term cost 744 and cannot yield a decomposition with at most 25 terms | `docs/n6_two_defect_aggregate_atomic_rank.md`, `scripts/n6_two_defect_aggregate_atomic_rank_audit.py`, exact local support classification, and frozen payload |
 | N6-022 | `SUPERSEDED`, `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC` | the count-product separator `g=n_4 n_5` gives an exact permanent representation in 16 nonzero base-labelled two-defect aggregate spaces; the former atomic-rank window `31<=rho_2(g)<=36` is superseded by N6-023 | `docs/n6_two_defect_sixteen_base_aggregate.md`, `scripts/n6_two_defect_sixteen_base_aggregate_audit.py`, exact local support enumeration, and frozen payload |
 | N6-023 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_AGGREGATE_THEOREM` | `rho_2(n_4n_5)=36`, so the N6-022 sixteen-base assignment has exact cost 576; G-021 now supplies a short general star/double-counting proof, while the original exact normal-form and meet-in-the-middle calculation remains an independent exhaustive certificate | `docs/general_two_defect_count_product_rank.md`, `docs/n6_two_defect_separator_rank36.md`, primary and independent G-021 audits, and the original N6-023 frozen payload |
+| N6-024 | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `RESTRICTED_FAMILY_THEOREM` | for every pair of degree-six permutation monomials, the sum of their central first-Koszul output spaces is disjoint from `im K_3(perm_6)`; exact two-output span ranks by relative cycle type are `705,1267,1374`, and `1410` for the remaining eight types, with aggregate collision `j=0` in all eleven cases | `docs/n6_two_permutation_monomial_quotient_transversality.md`, exact rational row-column torus blocks, and `scripts/n6_two_permutation_monomial_quotient_audit.py` |
 | C-001 | `CONJECTURE` | `ChowRank(perm_n)=2^(n-1)` for all `n>=2` | Glynn upper bound; exact only for reviewed small `n` |
 
 ## Unverified items
 
-- Literature novelty of G-001 through G-028 and N6-006 through N6-023 has not been exhaustively checked.
+- Literature novelty of G-001 through G-028 and N6-006 through N6-024 has not been exhaustively checked.
 - No independent full replay of the omitted lower-15 SAT/DRAT layer for `n=5` is stored here.
 - No exact unrestricted `n=6` claim is made; the current in-repository interval is `25<=ChowRank(perm_6)<=32`.
 - N6-014 has an internal adversarial review and two independent finite replays but has not received external mathematical peer review.
@@ -91,6 +92,7 @@ Status vocabulary:
 - G-026 controls only decompositions whose minimum length is certified by the middle catalecticant itself. Minimum decompositions requiring a different obstruction can have middle rank below `(q-1)B` and are not covered.
 - G-027 controls only decompositions whose minimum length is certified by the ordinary global first-Koszul rank. For `perm_6` that rank certifies 21 terms, not 25, so G-027 is not a lower-26 theorem.
 - G-028 rewrites quotient gain as a coupled relation budget but supplies no uniform bound on the aggregate output terms `eta+j`; its inequality can be vacuous in the large-relation lower-26 states and is not a lower-26 theorem.
+- N6-024 proves two-term quotient transversality only for permutation monomials. It does not cover arbitrary coordinate monomials, arbitrary Chow terms, or the six-to-eight fixed sums required by the lower-26 diagnostic.
 - G-021 controls only the count-product separator and its canonical Fourier aggregate assignment. It does not by itself lower-bound another aggregate assignment; G-022 determines the global two-defect minimum by a different Boolean-slice argument.
 - N6-019 is exact only for the normalized one-defect sign family. G-022 separately closes the full column-sign and row-sign families; arbitrary complex row-homogeneous tensor rank and unrestricted Chow rank remain open.
 - N6-019 supplies no unrestricted lower-26 implication and does not change the active interval `25..32`.

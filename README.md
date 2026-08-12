@@ -52,6 +52,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` second-Koszul homology closure | proof draft complete; computation replayed; diagnostic only | the output-degree-two ranks are exactly `127125` for `perm_6` and `8730` for one independent Chow term; a six-term common-factor family has scalar homology `465>450`, rejecting monotone scalar homology upper bounds for lower 26 |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
 | `n=6` coordinate-monomial audit | computation replayed; theorem input | all 167 coordinate orbits replay the exact local rectangle-space certificate used by the universal theorem |
+| `n=6` two-permutation-monomial quotient transversality | proof draft complete; exact rational replay; restricted family | all 11 relative cycle types have aggregate collision `j=0`; the sum of either pair of permutation-monomial Koszul output spaces remains disjoint from `im K_3(perm_6)` |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
 | Exact general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
@@ -101,6 +102,7 @@ python scripts/n6_coordinate_secant_audit.py
 python scripts/n6_multishadow_route_barrier.py
 python scripts/n6_quotient_gain_audit.py
 python scripts/n6_coordinate_monomial_full_gain_audit.py
+python scripts/n6_two_permutation_monomial_quotient_audit.py
 python scripts/n6_fixed_four_coupled_frontier.py
 python scripts/n6_extremal_six_plane_audit.py
 python scripts/n6_b24_three_relation_frontier.py
