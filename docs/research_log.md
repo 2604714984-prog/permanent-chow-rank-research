@@ -1376,3 +1376,26 @@ not a Chow derivative tower or a permanent-relative configuration.  It shows
 that a further argument must use actual squarefree coproduct, factor-frame
 integrability, or common-section cocycle structure; it neither realizes nor
 excludes the `b=50` state.
+
+G-047 strengthens this obstruction by replacing every arbitrary color map
+with the canonical squarefree coproduct
+
+\[
+ \bigwedge^3\mathbb Q^6\longrightarrow
+ \mathbb Q^6\mathbin\otimes\bigwedge^2\mathbb Q^6,
+\]
+
+followed by an invertible color-dependent map on the quadratic factor.  Six
+fixed upper-triangular maps use a common sixty-coordinate support plus five
+disjoint-pair shears, each of which can add at most two new coordinates.
+Hence the total image has rational dimension at most 70.  Its modular rank is
+70, so the six-color kernel has rational dimension exactly 50.  For each of
+the other 62 nonempty color subsets, modular nullity gives a rational kernel
+upper bound; the maxima for one through six colors are
+`(0,0,0,18,34,50)`, all within the endpoint caps.
+
+Thus even the correct per-color squarefree coproduct does not close the
+endpoint.  This stronger model still identifies all six factor spaces with a
+single abstract six-space and does not realize their ambient pairwise
+transversality, literal-direct quadratic Chow planes, or the common-section
+cocycle.  Those cross-color constraints remain the live input.
