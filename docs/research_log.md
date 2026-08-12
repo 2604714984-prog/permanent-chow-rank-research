@@ -940,3 +940,75 @@ twelve-plane and `E_2+F_i=E_2+H_2`.  The required prolongation dimension is
 at least `400+h-b>=457`, contradicting 436.  This removes `13,4,4` scalar
 states and leaves `60,7,7` at `b=61,62,63`.  No complete layer is yet
 excluded.
+
+## 2026-08-13: the complete layers `b=61,62,63,64` are excluded
+
+N6-047 globalizes the prolongation calculation while retaining one actual
+extremal term.  A projective maximum argument reduces every ambient quotient
+extension to a torus-fixed incidence.  Complete weight-block enumeration
+gives the characteristic-zero upper bounds
+
+\[
+ 436,\qquad440,\qquad448
+\]
+
+for global quotient dimensions `12,13,14`.  The finite calculation ranges
+over all 18,564 local twelve-axis candidates and all required ambient extra
+axes; modular ranks are used only in the valid upper-bound direction for the
+characteristic-zero kernel.  These caps remove `61,10,10` of the N6-041
+states at `b=61,62,63`.
+
+N6-048 treats every actual term with `(epsilon,alpha)=(0,1)` without
+classifying the components of that locus.  On the projective graph closure,
+a torus-fixed auxiliary six-plane is coordinate `K_(2,3)` or `K_(3,2)`.
+The boundary intersection has dimension two or three, so its quotient is a
+local thirteen-axis space or an extremal twelve-axis space.  N6-047 then
+gives universal caps 440 and 448 after zero or one further quotient
+direction.  Exact state replay eliminates all `b=62,63` states and leaves
+only `b61_state_072`.
+
+N6-049 closes that final state.  A term with `(epsilon,alpha)=(0,2)` may have
+factor span five or six; choosing an auxiliary containing six-plane keeps
+both cases in one projective incidence.  At a fixed point the coordinate
+six-edge graph has one or three rectangles.  The three-rectangle case is
+covered by N6-047.  The twelve one-rectangle support orbits contain all
+109,800 labelled supports, and all `binom(20,14)=38,760` fixed quotient
+spaces per orbit have prolongation dimension at most 453.  The remaining
+state requires at least
+
+\[
+ 400+120-61=459,
+\]
+
+a contradiction.  Together with N6-044, the four complete layers
+`b=61,62,63,64` are impossible.  This is substantial lower-27 progress, but
+the layers `b=45..60` remain and the ordinary interval is still `26..32`.
+
+G-041 records the necessary route barrier.  An explicit thirteen-axis
+quotient in one row has exact rational first-prolongation dimension 475.
+Therefore no theorem using only `E_2 subset A` and `dim(A/E_2)=13` can supply
+the needed bound.  The actual-term incidence retained in N6-047--049 is a
+genuine mathematical hypothesis, not an expositional convenience.
+
+N6-050 gives the complete next scalar layer.  At `b=60` the exact shadow is
+75 and the defect budget is three.  Exhaustive integer enumeration produces
+367 permutation classes.  The quadratic-relation dimensions have histogram
+
+\[
+ 294,62,10,1
+\]
+
+at `kappa_2=0,1,2,3`.  All ten two-relation states are still cubic-direct;
+the unique three-relation state is kept honestly at the interval
+`112<=h<=120` and is already excluded at its lower endpoint.  Applying
+N6-047, N6-048, and N6-049 removes respectively 226, 51, and 6 states.  The
+84 survivors are exactly
+
+\[
+ \varepsilon=(0^6),\quad\kappa_2=0,\quad
+ (d_2,a_2,t_2)=(90,75,15),\quad h=120,
+\]
+
+with the six `alpha` values forming an arbitrary multiset from
+`{0,1,2,3}`.  Thus the next geometric target is one global fifteen-dimensional
+quotient, not the discarded 367-state scalar search.

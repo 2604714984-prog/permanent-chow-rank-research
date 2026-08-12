@@ -1,0 +1,634 @@
+{
+  "arithmetic": "exact integer pruning using frozen N6-041 states and N6-047 caps",
+  "claim_boundary": "The result is conditional on the fixed-six reduction of a hypothetical twenty-six-term decomposition. It does not exclude the single b=61 state, prove ChowRank(perm_6)>=27, or make a border-rank claim.",
+  "layers": [
+    {
+      "b": 61,
+      "canonical_state_count": 73,
+      "excluded_state_count": 72,
+      "excluded_states": [
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_000"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_001"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_002"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_003"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_004"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_005"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_006"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_007"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_008"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_009"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_010"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_011"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_012"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_013"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_014"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_015"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_016"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b61_state_017"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b61_state_018"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b61_state_019"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_020"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_021"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_022"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_023"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_024"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_025"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_026"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_027"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_028"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_029"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_030"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_031"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_032"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_033"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_034"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_035"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_036"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_037"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_038"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_039"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_040"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_041"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_042"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_043"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_044"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_045"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_046"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_047"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_048"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_049"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_050"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_051"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_052"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_053"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_054"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_055"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_056"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_057"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_058"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_059"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_060"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_061"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_062"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_063"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_064"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_065"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_066"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_067"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_068"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_069"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_070"
+        },
+        {
+          "applicable_upper_cap": 448,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 459,
+          "state_id": "b61_state_071"
+        }
+      ],
+      "remaining_state_count": 1,
+      "remaining_states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "state_id": "b61_state_072",
+          "t2": 14
+        }
+      ]
+    },
+    {
+      "b": 62,
+      "canonical_state_count": 11,
+      "excluded_state_count": 11,
+      "excluded_states": [
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_000"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_001"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_002"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_003"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_004"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_005"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_006"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_007"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_008"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_009"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 458,
+          "state_id": "b62_state_010"
+        }
+      ],
+      "remaining_state_count": 0,
+      "remaining_states": []
+    },
+    {
+      "b": 63,
+      "canonical_state_count": 11,
+      "excluded_state_count": 11,
+      "excluded_states": [
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_000"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_001"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_002"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_003"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_004"
+        },
+        {
+          "applicable_upper_cap": 436,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_005"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_006"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_007"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_008"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-047 extremal-term cap",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_009"
+        },
+        {
+          "applicable_upper_cap": 440,
+          "reason": "N6-048 universal alpha-one cap at t2=13 or 14",
+          "required_prolongation_dimension": 457,
+          "state_id": "b63_state_010"
+        }
+      ],
+      "remaining_state_count": 0,
+      "remaining_states": []
+    }
+  ],
+  "pure_alpha1_prolongation_caps": {
+    "13": 440,
+    "14": 448
+  },
+  "status": "N6_048_ALPHA1_PROLONGATION_CLOSURE",
+  "strict_conclusion": "The complete b=62 and b=63 layers are impossible. One canonical all-alpha-two t2=14 state remains at b=61."
+}

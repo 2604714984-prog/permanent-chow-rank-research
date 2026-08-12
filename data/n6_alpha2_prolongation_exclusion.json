@@ -1,0 +1,721 @@
+{
+  "all_alpha2_state_certificate": {
+    "epsilon_alpha_pairs": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "fixed_middle_rank_h": 120,
+    "global_quotient_dimension_t2": 14,
+    "middle_intersection_b": 61,
+    "required_prolongation_dimension": 459,
+    "state_identifier": "b61_state_072"
+  },
+  "arithmetic": "exact integer coefficient-component upper bounds",
+  "claim_boundary": "This excludes only the all-alpha-two scalar state b61_state_072. It does not by itself exclude the other b=61 states, a hypothetical 26-term decomposition, prove ChowRank(perm_6)>=27, or make a border-rank claim.",
+  "coordinate_six_edge_graph_rectangle_counts": [
+    0,
+    1,
+    3
+  ],
+  "one_rectangle_marked_orbit_input_count": 488,
+  "one_rectangle_marked_support_count": 109800,
+  "one_rectangle_support_orbit_count": 12,
+  "one_rectangle_support_rows": [
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "maximizer_count": 36,
+      "prolongation_upper_cap": 453,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_00",
+      "upper_bound_histogram": {
+        "424": 25,
+        "425": 84,
+        "426": 338,
+        "427": 890,
+        "428": 1479,
+        "429": 2230,
+        "430": 2444,
+        "431": 2634,
+        "432": 2834,
+        "433": 2850,
+        "434": 3320,
+        "435": 3478,
+        "436": 3398,
+        "437": 3050,
+        "438": 2409,
+        "439": 1824,
+        "440": 1262,
+        "441": 848,
+        "442": 447,
+        "443": 242,
+        "444": 295,
+        "445": 360,
+        "446": 391,
+        "447": 486,
+        "448": 366,
+        "449": 274,
+        "450": 258,
+        "451": 122,
+        "452": 86,
+        "453": 36
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "maximizer_count": 6,
+      "prolongation_upper_cap": 443,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_01",
+      "upper_bound_histogram": {
+        "424": 51,
+        "425": 264,
+        "426": 951,
+        "427": 1942,
+        "428": 3278,
+        "429": 4218,
+        "430": 4422,
+        "431": 4316,
+        "432": 4370,
+        "433": 4070,
+        "434": 3626,
+        "435": 2902,
+        "436": 2204,
+        "437": 1150,
+        "438": 600,
+        "439": 224,
+        "440": 109,
+        "441": 48,
+        "442": 9,
+        "443": 6
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 64,
+      "maximizer_count": 4,
+      "prolongation_upper_cap": 445,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_02",
+      "upper_bound_histogram": {
+        "425": 13,
+        "426": 246,
+        "427": 880,
+        "428": 1872,
+        "429": 3092,
+        "430": 4278,
+        "431": 5071,
+        "432": 4898,
+        "433": 4449,
+        "434": 3878,
+        "435": 3186,
+        "436": 2473,
+        "437": 1744,
+        "438": 1077,
+        "439": 682,
+        "440": 377,
+        "441": 260,
+        "442": 183,
+        "443": 83,
+        "444": 14,
+        "445": 4
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 32,
+      "maximizer_count": 1,
+      "prolongation_upper_cap": 442,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_03",
+      "upper_bound_histogram": {
+        "424": 115,
+        "425": 676,
+        "426": 1625,
+        "427": 3284,
+        "428": 5029,
+        "429": 6272,
+        "430": 5930,
+        "431": 4790,
+        "432": 3641,
+        "433": 2435,
+        "434": 1912,
+        "435": 1371,
+        "436": 902,
+        "437": 510,
+        "438": 196,
+        "439": 63,
+        "440": 8,
+        "442": 1
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 96,
+      "maximizer_count": 1,
+      "prolongation_upper_cap": 442,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_04",
+      "upper_bound_histogram": {
+        "422": 41,
+        "423": 318,
+        "424": 1219,
+        "425": 2846,
+        "426": 4754,
+        "427": 5940,
+        "428": 5865,
+        "429": 5017,
+        "430": 3770,
+        "431": 2913,
+        "432": 2234,
+        "433": 1592,
+        "434": 1185,
+        "435": 728,
+        "436": 251,
+        "437": 35,
+        "438": 51,
+        "442": 1
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 32,
+      "maximizer_count": 1,
+      "prolongation_upper_cap": 442,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_05",
+      "upper_bound_histogram": {
+        "424": 115,
+        "425": 676,
+        "426": 1625,
+        "427": 3284,
+        "428": 5029,
+        "429": 6272,
+        "430": 5930,
+        "431": 4790,
+        "432": 3641,
+        "433": 2435,
+        "434": 1912,
+        "435": 1371,
+        "436": 902,
+        "437": 510,
+        "438": 196,
+        "439": 63,
+        "440": 8,
+        "442": 1
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "maximizer_count": 36,
+      "prolongation_upper_cap": 453,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_06",
+      "upper_bound_histogram": {
+        "424": 25,
+        "425": 84,
+        "426": 338,
+        "427": 890,
+        "428": 1479,
+        "429": 2230,
+        "430": 2444,
+        "431": 2634,
+        "432": 2834,
+        "433": 2850,
+        "434": 3320,
+        "435": 3478,
+        "436": 3398,
+        "437": 3050,
+        "438": 2409,
+        "439": 1824,
+        "440": 1262,
+        "441": 848,
+        "442": 447,
+        "443": 242,
+        "444": 295,
+        "445": 360,
+        "446": 391,
+        "447": 486,
+        "448": 366,
+        "449": 274,
+        "450": 258,
+        "451": 122,
+        "452": 86,
+        "453": 36
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 12,
+      "maximizer_count": 6,
+      "prolongation_upper_cap": 443,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_07",
+      "upper_bound_histogram": {
+        "424": 51,
+        "425": 264,
+        "426": 951,
+        "427": 1942,
+        "428": 3278,
+        "429": 4218,
+        "430": 4422,
+        "431": 4316,
+        "432": 4370,
+        "433": 4070,
+        "434": 3626,
+        "435": 2902,
+        "436": 2204,
+        "437": 1150,
+        "438": 600,
+        "439": 224,
+        "440": 109,
+        "441": 48,
+        "442": 9,
+        "443": 6
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 96,
+      "maximizer_count": 1,
+      "prolongation_upper_cap": 442,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_08",
+      "upper_bound_histogram": {
+        "422": 41,
+        "423": 318,
+        "424": 1219,
+        "425": 2846,
+        "426": 4754,
+        "427": 5940,
+        "428": 5865,
+        "429": 5017,
+        "430": 3770,
+        "431": 2913,
+        "432": 2234,
+        "433": 1592,
+        "434": 1185,
+        "435": 728,
+        "436": 251,
+        "437": 35,
+        "438": 51,
+        "442": 1
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 24,
+      "maximizer_count": 2,
+      "prolongation_upper_cap": 435,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_09",
+      "upper_bound_histogram": {
+        "421": 44,
+        "422": 524,
+        "423": 2050,
+        "424": 4692,
+        "425": 8154,
+        "426": 9110,
+        "427": 6914,
+        "428": 4616,
+        "429": 2068,
+        "430": 368,
+        "431": 178,
+        "432": 40,
+        "435": 2
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 24,
+      "maximizer_count": 2,
+      "prolongation_upper_cap": 435,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_10",
+      "upper_bound_histogram": {
+        "421": 44,
+        "422": 524,
+        "423": 2050,
+        "424": 4692,
+        "425": 8154,
+        "426": 9110,
+        "427": 6914,
+        "428": 4616,
+        "429": 2068,
+        "430": 368,
+        "431": 178,
+        "432": 40,
+        "435": 2
+      }
+    },
+    {
+      "fixed_A_count": 38760,
+      "local_quotient_axis_count": 20,
+      "marked_support_count": 72,
+      "maximizer_count": 2,
+      "prolongation_upper_cap": 435,
+      "support": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "support_orbit_identifier": "one_rectangle_shape_11",
+      "upper_bound_histogram": {
+        "420": 20,
+        "421": 222,
+        "422": 1192,
+        "423": 3220,
+        "424": 5916,
+        "425": 8742,
+        "426": 8002,
+        "427": 5898,
+        "428": 3814,
+        "429": 1504,
+        "430": 14,
+        "431": 214,
+        "435": 2
+      }
+    }
+  ],
+  "one_rectangle_universal_prolongation_cap": 453,
+  "status": "EXACT_N6_ALPHA2_PROLONGATION_EXCLUSION",
+  "strict_conclusion": "The all-alpha-two state b61_state_072 is impossible: its prolongation dimension is at least 459, whereas every torus-fixed limit has upper bound at most max(453,448)=453.",
+  "three_rectangle_N6_047_interface": "For r=dim(E2 intersection F)=1,2,3, q(F) has dimension 14,13,12 and the fixed A/E2 adds 0,1,2 arbitrary axes; all are covered by the N6-047 t=14 cap 448.",
+  "three_rectangle_extremal_t14_cap_from_N6_047": 448,
+  "three_rectangle_limit_intersection_dimensions_covered": [
+    1,
+    2,
+    3
+  ]
+}

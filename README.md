@@ -72,6 +72,11 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` near-extremal six-plane frontier | pure dimension-five theorem; exact rational local replay | `dim L<=5` forces `dim(E_2 intersect Sym^2 L)<=1`; the six-plane rank-two stratum is nonempty and contains actual Chow terms with defects `(epsilon,alpha)=(0,1)`, so these terms require coupled rather than termwise exclusion |
 | `n=6` `b=64` prolongation exclusion | pure projective fixed-point theorem; exact integer replay | the endpoint would require `dim(E_2+F)^(1)>=456`, while all 18,564 torus-fixed incidence candidates give the universal upper bound 436; hence `b=64` is impossible |
 | `n=6` near-extremal quotient pruning | pure quotient-distance and prolongation theorems; exact rational/integer replay | distinct explicit star quotients intersect in dimension at most 11; independently, the extremal prolongation cap removes 21 scalar states, leaving `60,7,7` at `b=61,62,63`, but no complete layer is yet excluded |
+| `n=6` global quotient-prolongation caps | pure projective fixed-point theorem; exact modular upper certificates | a quadratic space containing one actual extremal term has first-prolongation dimension at most `436,440,448` when its permanent quotient has dimension `12,13,14`; this removes `61,10,10` states at `b=61,62,63` |
+| `n=6` `alpha=1` closure | pure projective theorem; exact state replay | actual `alpha=1` terms, including every fixed boundary degeneration, have caps `440,448` after zero or one extra quotient direction; all `b=62,63` states and all but one `b=61` state are excluded |
+| `n=6` `alpha=2` prolongation exclusion | pure projective theorem; exact integer replay | an auxiliary six-plane covers both five- and six-dimensional factor spans; the universal term cap is 453, below the final `b=61` requirement 459, so the complete layers `b=61,62,63,64` are impossible |
+| `n=6` arbitrary quotient-prolongation barrier | explicit characteristic-zero counterexample; exact rational replay | one thirteen-dimensional coordinate quotient has first prolongation 475, so dimension-only caps are false; the actual extremal/`alpha=1`/`alpha=2` incidence hypotheses are essential |
+| `n=6` `b=60` scalar frontier | pure finite enumeration; exact integer replay | all 367 necessary states are classified; the existing term caps remove every state with quotient dimension at most 14, leaving exactly 84 states, all with `t_2=15`, direct quadratic sum, and fixed middle rank 120 |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` complete standard Koszul--Young ceiling | proof draft complete; exact rational and strict modular replay | for every output degree and every exterior degree, the rank ratio is strictly below 26; this entire standard flattening family cannot prove lower 27 and does not change `26<=ChowRank(perm_6)<=32` |
 | `n=6` linear-restriction Koszul--Young ceiling | proof draft complete; pure triangular and strict modular replay | after every linear restriction to `1<=k<=36` variables, every standard Koszul--Young ratio is still strictly below 26; linear compression cannot rescue a lower-27 proof by this family |
@@ -166,6 +171,11 @@ python scripts/n6_near_extremal_six_plane_frontier.py
 python scripts/n6_b64_prolongation_exclusion.py
 python scripts/n6_near_extremal_star_quotient_rigidity.py
 python scripts/n6_near_extremal_prolongation_pruning.py
+python scripts/n6_global_quotient_prolongation_caps.py
+python scripts/n6_alpha1_prolongation_closure.py
+python scripts/n6_alpha2_prolongation_exclusion.py
+python scripts/n6_arbitrary_quotient_prolongation_barrier.py
+python scripts/n6_b60_scalar_frontier.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
