@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "This family cannot certify Chow rank at least 26. This is a method ceiling and does not change 26 <= ChowRank(perm_6) <= 32.",
+  "finite_state_count": 350,
+  "finite_total_degree_range": [
+    0,
+    52
+  ],
+  "global_ratio_upper": [
+    843600,
+    35009
+  ],
+  "integer_lower_bound_ceiling": 25,
+  "maximizing_state": {
+    "output_degree": 3,
+    "permanent_rank_upper": 3374400,
+    "shift": 3,
+    "single_term_rank": 140036,
+    "total_degree": 6
+  },
+  "status": "N6_ALL_SHIFTED_PARTIAL_CEILING_REPLAYED",
+  "tail_ratio_at_start": [
+    1138511,
+    48230
+  ],
+  "tail_start_total_degree": 53,
+  "theorem": "Every shifted-partial flattening of perm_6 has rank at most 843600/35009 times the maximum rank of one Chow term."
+}

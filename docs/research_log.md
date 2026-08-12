@@ -518,3 +518,32 @@ Thus no standard Koszul--Young flattening can certify lower 27 for
 ordinary interval remains `26..32`.  Any successful next invariant must use
 quotients, coupling, recursion, additional Young symmetrization, or nonlinear
 geometry rather than a larger exterior degree in the same standard complex.
+
+## 2026-08-12: every shifted-partial flattening stops below 26
+
+N6-034 exhausts the second Young-flattening family highlighted by Guan.  For
+output derivative degree `m` and shift `ell`, the exact maximum one-term rank
+is the degree-`m+ell` Hilbert function of the squarefree degree-`m` monomial
+ideal on six active variables, extended by thirty inactive variables:
+
+\[
+B_{m,\ell}=\sum_{s=m}^{\min(6,m+\ell)}
+\binom6s\binom{m+\ell+29}{s+29}.
+\]
+
+The permanent rank is bounded by the smaller source-target dimension.  Exact
+integer evaluation through total degree 52 has unique largest dimension ratio
+
+\[
+\frac{843600}{35009}<25
+\]
+
+at `(m,ell)=(3,3)`.  For total degree at least 53, retaining only the
+full-six-support summand of `B` gives a strictly decreasing closed-form tail
+already below this value.  Hence no shifted-partial flattening, at any shift,
+can certify lower 26 for `perm_6`.
+
+This does not change the rank interval.  Together N6-033 and N6-034 remove
+both standard families in Guan's interface from the lower-27 search.  The
+remaining work must use a genuinely different Schur functor, a coupled or
+recursive construction, or nonlinear geometry of the hereditary residual.
