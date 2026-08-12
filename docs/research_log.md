@@ -1242,3 +1242,28 @@ rank 20, and their relation-pairing loss is at most one.  In the `h=88`
 branch the twenty-one middle images are literal direct.  These are structural
 targets, not contradictions.  N6-058 is a partial ordinary-rank reduction
 and makes no lower-28, exact-rank, or border-rank claim.
+
+N6-059 excludes the remaining `b=50` state for the complete separated
+families.  If all six terms have one factor in each fixed column, their
+quadratic and cubic spaces split into fifteen column-pair blocks and twenty
+column-triple blocks.  Directness and the common `W_15` force every quadratic
+block to meet the permanent quadratic block in dimension five.  A pure
+one-factor shadow lemma then bounds each cubic permanent intersection block
+by two, and therefore
+
+\[
+ b\le20\cdot2=40.
+\]
+
+Transposition gives the same conclusion for row-separated terms.  This is a
+restricted structural theorem; arbitrary nonseparated common-quotient
+configurations remain in the `b=50` frontier.
+
+G-045 records a separate obstruction at the `b=34` end.  For two squarefree
+sextic monomials whose supports meet in two variables, the literal relation
+dimensions in degrees two, three, and four are `(1,0,0)`, while the coupled
+derivative ranks are `(29,40,29)`.  Thus central and quartic literal
+directness do not force quadratic literal directness.  The example only
+blocks a converse requiring zero quadratic relations; it does not rule out
+all quantitative relation-shadow inequalities and does not realize the
+permanent-relative endpoint.
