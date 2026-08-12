@@ -7,7 +7,7 @@
 The current in-repository interval remains
 
 \[
-25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
+26\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
 \]
 
 This note compares three genuinely different next-step ideas after the fixed-count central first-Koszul route was suspended:

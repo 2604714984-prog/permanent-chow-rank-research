@@ -49,7 +49,7 @@ decomposition. It closes only the explicit aggregate construction of N6-020.
 The unrestricted interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 ## 1. Fixed-base atoms

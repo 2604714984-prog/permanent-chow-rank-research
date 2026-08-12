@@ -49,6 +49,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` component-prolongation closure | superseded proof draft; exact arithmetic replayed | excludes 23-term decompositions and proves the historical lower bound 24 |
 | `n=6` fixed-six lower-25 closure | proof draft complete; primary and independent arithmetic replayed | fixing six terms in a hypothetical 24-term decomposition gives `40<=b<=64`; vector-valued Macaulay growth and block-Sylvester exclude every state, so `ChowRank(perm_6)>=25` |
 | `n=6` lower-26 fixed-count diagnostic | computation replayed; no route selected | `q=6,7,8` leave 327, 355, and 635 states after central pruning, so the central first-Koszul fixed-count route is suspended |
+| `n=6` average-subset lower-26 closure | proof draft complete; exact rational/integer replay | submodular averaging selects six terms of any hypothetical 25-term decomposition with central rank at least 82; the residual forces `b>=51`, while the exact fixed-six shadow/Macaulay cap gives `b<=50`, so `ChowRank(perm_6)>=26` |
 | `n=6` alternative-route ceilings | proof draft complete; computation replayed; diagnostic only | the first higher-wedge ratios at output degrees `2,3,4` remain `15,21,16`; a scalar second shadow is vacuous for `q>=6`; the full sign-family construction route is closed at 32 by the general Boolean-slice theorem |
 | `n=6` second-Koszul homology closure | proof draft complete; computation replayed; diagnostic only | the output-degree-two ranks are exactly `127125` for `perm_6` and `8730` for one independent Chow term; a six-term common-factor family has scalar homology `465>450`, rejecting monotone scalar homology upper bounds for lower 26 |
 | `n=6` extremal six-plane classification | proof draft complete; exact local replay | equality `dim(D_2(perm_6) intersect Sym^2 L)=3` forces a disjoint-support `2 x 3` or `3 x 2` tensor plane; the reduced locus has 5,580 seven-dimensional components |
@@ -68,10 +69,10 @@ The repository does **not** own large upstream proof bundles. External submissio
 The current in-repository unrestricted interval for `n=6` is
 
 ```text
-25 <= ChowRank(perm_6) <= 32.
+26 <= ChowRank(perm_6) <= 32.
 ```
 
-The full sign-family rank is exactly 32, but no lower-26, border-lower-25, or exact unrestricted-32 claim is made.
+The full sign-family rank is exactly 32. The new lower bound 26 is for ordinary Chow rank; no border-lower-26 or exact unrestricted-32 claim is made.
 
 ## Reviewed general lower-bound table
 
@@ -93,7 +94,7 @@ The current exact-rational multidimensional-shadow certificates give:
 | 15 | 6,440 | 6,879 | 16,384 |
 | 16 | 12,875 | 13,312 | 32,768 |
 
-These are the values of the general multidimensional-shadow theorem. The specialized `n=6` fixed-six relation-module argument improves its row from 23 to the current best in-repository lower bound 25. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
+These are the values of the general multidimensional-shadow theorem. The specialized `n=6` average-subset argument improves its row from 23 to the current best in-repository proof-draft lower bound 26. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
 
 ## Reproduce the deterministic results
 
@@ -119,6 +120,7 @@ python scripts/vector_valued_macaulay_audit.py
 python scripts/n6_fixed_six_lower25_audit.py
 python scripts/n6_fixed_six_lower25_independent_audit.py
 python scripts/n6_lower26_fixed_q_diagnostic.py
+python scripts/n6_lower26_average_subset_audit.py
 python scripts/n6_second_koszul_rank_audit.py
 python scripts/n6_second_koszul_homology_audit.py
 python scripts/glynn_family_rigidity_audit.py
@@ -143,7 +145,7 @@ The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27
 
 The lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
 
-The lower-26 fixed-count diagnostic then tests `q=6,7,8` under a hypothetical 25-term decomposition. It leaves hundreds of structural states and selects no fixed count. The alternative-route comparison independently shows that the first higher-wedge rank ratios do not improve the ordinary first-Koszul integer ceilings and a dimension-only second shadow is vacuous at those fixed counts. The Boolean-slice theorem now closes the full column-sign and row-sign families at 32 terms, but this remains a restricted-family result and is not a lower-26 theorem for unrestricted Chow rank.
+The lower-26 fixed-count diagnostic tests `q=6,7,8` under a hypothetical 25-term decomposition and leaves hundreds of states when the fixed subset is arbitrary. N6-030 supplies the missing selection step. If `U_i` are the individual middle-catalectic images, submodular averaging and the relation-pairing identity select six indices with coupled central rank at least 82. The nineteen-term residual then forces central intersection `b>=51`. Exact rational Bukh-shadow endpoints and an integer enumeration of at most 64 symmetric defect profiles per terminal layer prove the universal fixed-six cap `b<=50`. This contradiction proves the ordinary lower bound 26. The argument does not prove border rank 26 or exact unrestricted rank 32.
 
 The output-degree-two homology closure identifies the middle higher-Koszul homology with `Tor_2(A_f,k)_4`. The Alper--Rowlands formula gives dimension 450 for `perm_6`, while a six-factor Chow complete intersection gives 15. Hence the exact ranks are `127125` and `8730`, still yielding ratio 15. An independently reconstructed common-factor family has scalar homology dimensions `15,55,120,210,325,465` for one through six terms, so monotone scalar homology upper bounds cannot separate `perm_6` from low-term sums. Multigraded and representation-theoretic refinements remain open.
 

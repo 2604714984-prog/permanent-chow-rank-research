@@ -103,7 +103,7 @@ coordinate invariance
 ```
 
 Select at most one continuation. The continuation must either exceed the
-current `n=6` lower bound 25, yield a uniform doubling recurrence, or improve
+current `n=6` proof-draft lower bound 26, yield a uniform doubling recurrence, or improve
 the central-binomial asymptotic scale by an unbounded factor.
 
 No further sign hierarchy, generic sparse solver, manager, registry,
@@ -115,5 +115,5 @@ The affine-Segre result is a rank theorem for one coefficient slice, not for
 the full permanent polynomial. The unrestricted `n=6` interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]

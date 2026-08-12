@@ -396,7 +396,8 @@ proof makes no characteristic-two claim.
 
 A general Chow factor may mix variables from different rows and columns and
 need not have a nonzero row-zero anchor. Such a term need not restrict to one
-Walsh character. The unrestricted interval for `perm_6` remains `25..32`.
+Walsh character. The unrestricted proof-draft interval for `perm_6` is now
+`26..32` by the separate N6-030 average-subset theorem.
 
 ## 11. Deterministic replay
 

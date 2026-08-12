@@ -16,7 +16,7 @@ The trusted small-`n` boundary is now:
 n=3: exact 4
 n=4: exact 8
 n=5: repaired internal computer-assisted proof draft for exact 16
-n=6: 25 <= ChowRank(perm_6) <= 32
+n=6: 26 <= ChowRank(perm_6) <= 32
 ```
 
 The `n=5` v14 proof is canonical on `main`; its role in this program is a

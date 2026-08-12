@@ -11,7 +11,7 @@ Xu--Gnang, *On the Chow-rank of the permanent*, arXiv:2311.05890.
 The current repository interval is unchanged:
 
 \[
-25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 No claim from the withdrawn paper is used as a theorem input.
@@ -309,7 +309,7 @@ incorrect theorem statement and that its displayed proof is invalid.
 The repository continues to treat
 
 \[
-25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32
+26\le \operatorname{ChowRank}(\operatorname{perm}_6)\le32
 \]
 
 as the active interval.

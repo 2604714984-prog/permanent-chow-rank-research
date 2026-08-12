@@ -142,7 +142,7 @@ Walsh characters. The proof supplies no lower bound in that family.
 
 False. General Chow factors may mix all matrix variables and need not possess
 the anchor/diagonal-sign structure. The unrestricted `n=6` interval remains
-`25..32`.
+`26..32` by the separate N6-030 average-subset theorem.
 
 ## 10. Evidence boundary
 

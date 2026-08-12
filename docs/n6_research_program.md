@@ -5,21 +5,21 @@
 `OPEN`. The current in-repository proof-draft interval is
 
 \[
-25
+26
 \le
 \operatorname{ChowRank}(\operatorname{perm}_6)
 \le
 32.
 \]
 
-The lower bound 25 is the fixed-six relation-module argument in
-`docs/n6_fixed_six_lower25.md`. The upper bound is Glynn's 32-term
-decomposition. No lower-26, border-lower-25, or exact-32 claim is made.
+The lower bound 26 is the average-subset argument in
+`docs/n6_lower26_average_subset_closure.md`. The upper bound is Glynn's
+32-term decomposition. No border-lower-26 or exact-32 claim is made.
 
-The central first-Koszul fixed-count route, the first higher-wedge ratio route,
-the scalar second-shadow route, the scalar second-Koszul homology route, and
-two explicit low-base sign-aggregate constructions have now been tested. None
-proves lower 26 or produces a sub-32 decomposition.
+The original fixed-count state route did not prove lower 26 by itself. The new
+selection theorem averages over all six-subsets, forces one subset into the
+already excluded high-intersection range, and closes lower 26. No sub-32
+decomposition is known.
 
 ## 1. Exact numerical baseline
 
@@ -42,6 +42,7 @@ zero-intersection shadow removal:       22
 multidimensional-shadow intersection:   23
 fixed-four scalar prolongation:         24
 fixed-six vector relation module:       25
+average-six-subset selection:           26
 ```
 
 ## 2. What closed the 24-term problem
@@ -139,6 +140,24 @@ fixed terms:
 Six fixed terms are arithmetically smallest, but the frontier is not compact.
 No fixed count is selected and the central first-Koszul state route is
 suspended for lower 26.
+
+### 4.1 Average-subset closure
+
+The diagnostic failed only because an arbitrary six-subset can lie in one of
+the 327 surviving states. Under a hypothetical 25-term decomposition, let
+`U_i` be the individual middle-catalectic images. The rank function
+
+\[
+S\longmapsto\dim\sum_{i\in S}U_i
+\]
+
+is submodular. Since every `U_i` is transverse to the permanent central image,
+the full span and the relation-pairing identity imply that the average of
+`2D_S-R_S` over six-subsets is at least `408/5`. Hence some six-subset has
+coupled central rank at least 82. Its nineteen-term residual forces `b>=51`.
+The exact high-intersection part of the same fixed-six diagnostic proves
+`b<=50`: the fourteen layers `51..64` are centrally strict and `b>=65` violates
+the Bukh-shadow projection cap. This proves the ordinary lower bound 26.
 
 ## 5. Completed alternative-route diagnostics
 
@@ -403,9 +422,8 @@ At the center there is an exact extra term
 The dimension-only route nevertheless fails.  Two squarefree degree-six Chow
 terms sharing four factors form a strict rank-two sum with `rho=4` and zero
 pairing correction.  Moreover the two-step cap at `kappa_2=37` is 331 and hence
-ambient-vacuous.  G-024 is retained as a structural theorem, not promoted to a
-lower-26 program.  Any successor must control the geometry of the radical or a
-different quotient module, not only its dimension.
+ambient-vacuous.  G-024 alone is not a lower-26 theorem. N6-030 later combines
+its nonnegative relation-pairing correction with submodular subset selection.
 
 G-025 then falsifies the first naive radical controls.  An explicit six-term
 squarefree presentation has `rho=47`, restricted pairing rank 24, and radical
@@ -422,24 +440,22 @@ squarefree sextic monomials whose central rank exceeds the two-term cap 40,
 minimum length is three and the radical has dimension at most `8=4(3-1)`;
 equality occurs for a common-four-factor triple.  Its pure Venn-intersection
 proof does not extend to arbitrary Chow factors or to the six fixed terms
-needed in the lower-26 program.  It is a positive unit test for a
+formerly sought in the lower-26 program.  It is a positive unit test for a
 minimum-length radical principle, not that principle itself.
 
 G-027 isolates the remaining obstruction further.  If the middle
 catalecticant itself certifies a sextic decomposition as minimum, the exact
 pairing identity forces radical dimension at most nine.  Hence every such
 minimum decomposition with at least four terms already satisfies the proposed
-`4(q-1)` cap.  A genuine counterexample, or a theorem strong enough for lower
-26, must concern minimum length certified by a different coupled invariant;
-ordinary middle-rank minimality cannot supply the hard case.
+`4(q-1)` cap.  This route did not itself close lower 26; N6-030 bypasses the
+minimum-decomposition radical question by selecting a high-rank six-subset.
 
 G-028 proves the analogous necessary radical bound when the ordinary global
 first-Koszul flattening certifies minimum length.  In the 36-dimensional
 sextic ambient space its conditional radical caps are 10, 10, 11, 14, and 14
 at certified lengths 4, 5, 6, 21, and 25.  But `perm_6` has first-Koszul rank
 14175 against one-term cap 705, so it certifies only 21 terms and does not meet
-the length-25 hypothesis.  The active route must use quotient gain or another
-coupled invariant after terms are fixed, not the global first-Koszul ratio.
+the length-25 hypothesis.  Thus this theorem alone did not close lower 26.
 
 G-029 provides the first exact quotient-level relation budget.  After
 projection away from `im K_3(perm_6)`, every individual fixed-term map retains
@@ -511,6 +527,13 @@ mixed-decomposition exclusion: the residual terms are unrestricted.  The
 remaining frontier is therefore not represented by coordinate monomials or
 column-uniform sign terms.
 
+N6-030 closes the unrestricted lower-26 problem without classifying that
+remaining frontier. The key is to select, rather than preassign, the six fixed
+terms. Submodular averaging gives a six-subset with central rank at least 82;
+the residual inequality sends it to `b>=51`, exactly where the earlier
+fixed-six vector-Macaulay table has a strict margin in every layer. This is an
+ordinary-rank proof and does not imply the analogous border-rank bound.
+
 ## 10. Falsification and stop rules
 
 Every candidate must first be tested against:
@@ -529,5 +552,5 @@ assumes additivity of derivative images or homology.
 The active unrestricted interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]

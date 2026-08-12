@@ -20,7 +20,7 @@ The reviewed claim is only
 
 for the fixed-base normalized two-defect sign dictionary. It implies that the
 specific N6-022 16-base aggregate assignment costs exactly 576 terms. The
-active unrestricted interval remains `25..32`.
+active unrestricted proof-draft interval is now `26..32` by N6-030.
 
 ## 1. Retraction is support nonincreasing
 

@@ -12,7 +12,7 @@ in dimension 72.  It disproves several possible shortcuts for G-029.  It is
 not a decomposition of `perm_6` and does not change the unrestricted interval
 
 \[
-25\leq\operatorname{ChowRank}(\operatorname{perm}_6)\leq32.
+26\leq\operatorname{ChowRank}(\operatorname{perm}_6)\leq32.
 \]
 
 ## 1. The fixed sum

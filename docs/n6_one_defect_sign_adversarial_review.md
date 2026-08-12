@@ -18,7 +18,7 @@ The reviewed claim is only
 \operatorname{OneDefectSignRank}(\operatorname{perm}_6)=32.
 \]
 
-The active unrestricted interval remains `25..32`.
+The active unrestricted proof-draft interval is now `26..32` by N6-030.
 
 ## 1. Normalization and duplicate terms
 
