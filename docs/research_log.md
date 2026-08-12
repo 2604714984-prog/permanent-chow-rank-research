@@ -446,3 +446,42 @@ This closes the single-direction generalization question, but not the
 multi-direction one: the images associated with distinct new quadratic
 directions can collide, so the gains cannot be summed without a new coupled
 argument.
+
+## 2026-08-12: the psi chart extends through the derivative tower
+
+The quadratic proof uses only three features that persist at every degree
+`2<=m<=n-1`: the derivative space is spanned by matching subpermanents, its
+full prolongation is the next derivative space, and deleting the connections
+labelled by one coordinate leaves each matching coefficient graph connected.
+This gives the pure theorem
+
+\[
+ \ker\psi_{m,v}=\operatorname{span}([v^m])
+\]
+
+for every nonzero `v`.  A nonzero element of the degree-`m` permanent
+derivative space has at least `m^2` essential variables, so the same two-power
+argument proves a one-direction first-Koszul gain of `n^2-1`.
+
+At the `n=6` middle degree this yields chart rank 8035 and raises the base
+first-Koszul image from 14175 to at least 14210 after adjoining one cubic
+direction.  Exact coefficient constraints over `Fraction` replay eight
+selected `(n,m)` cases through `(6,3)`.  This does not solve the active
+multi-direction collision problem.
+
+## 2026-08-12: central direct sums can still have Koszul collisions
+
+A compact pure counterexample now prevents an incorrect lower-27 shortcut.
+Split six variables into two three-planes and compare the coordinate product
+with the product obtained from the three pair sums in each block.  The two
+middle derivative spaces have dimension 20 and intersect trivially.  Their
+40-dimensional sum nevertheless has first prolongation dimension 48, rather
+than the literal `15+15=30`.  The first-Koszul output intersection therefore
+has dimension 18 in every ambient dimension at least six.
+
+The prolongation calculation is bidegree-pure: the two endpoint cubic pencils
+have zero first prolongation, the `(3,1)` and `(1,3)` blocks contribute six
+each, and the full `(2,2)` block contributes 36.  Exact coefficient
+constraints over `Fraction` independently reproduce the 48-dimensional
+space.  Thus even a residual family with full single-term middle ranks and
+direct central images still requires a genuine cross-degree collision bound.

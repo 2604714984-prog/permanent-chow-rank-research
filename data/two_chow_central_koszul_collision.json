@@ -1,0 +1,26 @@
+{
+  "central_sum_first_prolongation_dimension": 48,
+  "claim_boundary": "This is a two-term counterexample to inferring first-Koszul transversality from central-image transversality. It is not a decomposition of a permanent and gives no Chow-rank upper bound.",
+  "combined_first_koszul_image_rank": 192,
+  "combined_literal_fourth_rank": 30,
+  "combined_literal_middle_rank": 40,
+  "field": "Q",
+  "first_koszul_image_intersection_dimension": 18,
+  "individual_first_koszul_ranks": [
+    105,
+    105
+  ],
+  "individual_fourth_derivative_ranks": [
+    15,
+    15
+  ],
+  "individual_middle_ranks": [
+    20,
+    20
+  ],
+  "method": "exact coefficient constraints over Fraction",
+  "middle_image_intersection_dimension": 0,
+  "pencil_conciseness_square_map_determinant": 2,
+  "status": "EXACT_TWO_CHOW_CENTRAL_KOSZUL_COLLISION_REPLAY",
+  "three_factor_change_determinant": -2
+}
