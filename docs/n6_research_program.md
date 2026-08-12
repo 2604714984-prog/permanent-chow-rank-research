@@ -152,11 +152,11 @@ S\longmapsto\dim\sum_{i\in S}U_i
 \]
 
 is submodular. Since every `U_i` is transverse to the permanent central image,
-the full span and the relation-pairing identity imply that the average of
-`2D_S-R_S` over six-subsets is at least `408/5`. Hence some six-subset has
-coupled central rank at least 82. Its nineteen-term residual forces `b>=51`.
-The exact high-intersection part of the same fixed-six diagnostic proves
-`b<=50`: the fourteen layers `51..64` are centrally strict and `b>=65` violates
+condition on a term of maximum central rank and average the other five choices.
+The relation-pairing identity gives average lower bound `260/3`, so some
+six-subset has coupled central rank at least 87. Its nineteen-term residual
+forces `b>=54`. The exact high-intersection part of the same fixed-six
+diagnostic proves `b<=53`: the eleven layers `54..64` are centrally strict and `b>=65` violates
 the Bukh-shadow projection cap. This proves the ordinary lower bound 26.
 
 ## 5. Completed alternative-route diagnostics
@@ -529,8 +529,8 @@ column-uniform sign terms.
 
 N6-030 closes the unrestricted lower-26 problem without classifying that
 remaining frontier. The key is to select, rather than preassign, the six fixed
-terms. Submodular averaging gives a six-subset with central rank at least 82;
-the residual inequality sends it to `b>=51`, exactly where the earlier
+terms. Conditional submodular averaging gives a six-subset with central rank
+at least 87; the residual inequality sends it to `b>=54`, exactly where the earlier
 fixed-six vector-Macaulay table has a strict margin in every layer. This is an
 ordinary-rank proof and does not imply the analogous border-rank bound.
 

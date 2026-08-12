@@ -3,7 +3,7 @@
 
 The mathematical proof selects six terms by submodular averaging.  The only
 finite interface checked here is the already established fixed-six central
-pruning at intersection dimensions 51 through 64, plus the shadow cutoff at
+pruning at intersection dimensions 54 through 64, plus the shadow cutoff at
 65.  All arithmetic is over the integers and ``Fraction``.
 """
 
@@ -173,7 +173,7 @@ def build_payload() -> dict[str, object]:
             ("colored Macaulay interface", value),
         )
 
-    layers = [central_layer(dimension) for dimension in range(51, 65)]
+    layers = [central_layer(dimension) for dimension in range(54, 65)]
     cutoff = exact_shadow_certificate(65)
     require(
         cutoff["integer_shadow_lower_bound"]
@@ -181,28 +181,35 @@ def build_payload() -> dict[str, object]:
         cutoff,
     )
 
-    # If r is the largest individual central rank, then
-    # D >= 400+r and R <= 25r, so 2D-R >= 800-23r >= 340.
-    total_pairing_floor = min(
-        2 * (PERM_CENTRAL_RANK + largest_rank)
-        - TOTAL_TERMS * largest_rank
+    # Fix a term of largest rank r.  Conditional submodular averaging over
+    # six-subsets containing it gives
+    # r + (5/24)(2D-R-r) >= r + (5/24)(800-24r) >= 260/3.
+    conditional_average_floor = min(
+        Fraction(largest_rank)
+        + Fraction(FIXED_TERMS - 1, TOTAL_TERMS - 1)
+        * (
+            2 * (PERM_CENTRAL_RANK + largest_rank)
+            - TOTAL_TERMS * largest_rank
+            - largest_rank
+        )
         for largest_rank in range(TERM_CENTRAL_CAP + 1)
     )
-    require(total_pairing_floor == 340, total_pairing_floor)
-    average_floor = Fraction(FIXED_TERMS, TOTAL_TERMS) * total_pairing_floor
-    selected_six_lower = (average_floor.numerator + average_floor.denominator - 1) // average_floor.denominator
-    require(average_floor == Fraction(408, 5), average_floor)
-    require(selected_six_lower == 82, selected_six_lower)
+    require(conditional_average_floor == Fraction(260, 3), conditional_average_floor)
+    selected_six_lower = (
+        conditional_average_floor.numerator
+        + conditional_average_floor.denominator
+        - 1
+    ) // conditional_average_floor.denominator
+    require(selected_six_lower == 87, selected_six_lower)
 
     forced_intersection = (selected_six_lower + 20 + 1) // 2
-    require(forced_intersection == 51, forced_intersection)
+    require(forced_intersection == 54, forced_intersection)
 
     return {
         "status": "EXACT_N6_LOWER26_AVERAGE_SUBSET_CERTIFICATE",
         "hypothetical_total_terms": TOTAL_TERMS,
         "selected_term_count": FIXED_TERMS,
-        "total_relation_pairing_floor": total_pairing_floor,
-        "uniform_six_subset_average_floor": str(average_floor),
+        "conditional_six_subset_average_floor": str(conditional_average_floor),
         "selected_six_central_rank_lower_bound": selected_six_lower,
         "residual_forced_intersection_lower_bound": forced_intersection,
         "fixed_six_central_exclusion_layers": layers,

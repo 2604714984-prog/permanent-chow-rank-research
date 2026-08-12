@@ -20,21 +20,23 @@ class N6Lower26AverageSubsetTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.payload = AUDIT.build_payload()
 
-    def test_average_selects_central_rank_at_least_82(self) -> None:
-        self.assertEqual(self.payload["total_relation_pairing_floor"], 340)
-        self.assertEqual(self.payload["uniform_six_subset_average_floor"], "408/5")
+    def test_average_selects_central_rank_at_least_87(self) -> None:
+        self.assertEqual(
+            self.payload["conditional_six_subset_average_floor"],
+            "260/3",
+        )
         self.assertEqual(
             self.payload["selected_six_central_rank_lower_bound"],
-            82,
+            87,
         )
         self.assertEqual(
             self.payload["residual_forced_intersection_lower_bound"],
-            51,
+            54,
         )
 
     def test_every_high_intersection_layer_is_strict(self) -> None:
         layers = self.payload["fixed_six_central_exclusion_layers"]
-        self.assertEqual([row["b"] for row in layers], list(range(51, 65)))
+        self.assertEqual([row["b"] for row in layers], list(range(54, 65)))
         self.assertTrue(
             all(
                 row["central_rank_lower_bound"]
@@ -44,7 +46,7 @@ class N6Lower26AverageSubsetTests(unittest.TestCase):
         )
         self.assertEqual(
             [row["central_rank_lower_bound"] for row in layers],
-            [88, 88, 92, 96, 98, 98, 100, 110, 112, 112, 116, 118, 118, 120],
+            [96, 98, 98, 100, 110, 112, 112, 116, 118, 118, 120],
         )
 
     def test_shadow_cutoff(self) -> None:

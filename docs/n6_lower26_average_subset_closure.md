@@ -5,7 +5,7 @@
 `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`.
 
 The selection argument is a characteristic-zero proof.  Its finite interface
-is the fourteen-row exact integer table in Section 5, independently regenerated
+is the eleven-row exact integer table in Section 5, regenerated
 by
 
 ```text
@@ -118,7 +118,7 @@ Sum this inequality over all `k`-subsets.  Every index occurs in exactly
 `binom(n-1,k-1)` of them, whereas there are `binom(n,k)` subsets.  Since
 `sum_i a_i=f([n])`, division by `binom(n,k)` gives (3.1). ∎
 
-## 4. Some six terms have central rank at least 82
+## 4. Some six terms have central rank at least 87
 
 Assume for contradiction that
 
@@ -162,17 +162,6 @@ Choose an index with `r_i=r`.  By (2.1), `E cap U_i=0`, so
  \tag{4.3}
 \]
 
-Combining (4.2) and (4.3),
-
-\[
- 2D-R
- \geq
- 2(400+r)-25r
- =800-23r
- \geq340.
- \tag{4.4}
-\]
-
 For a subset `S`, write
 
 \[
@@ -181,20 +170,33 @@ For a subset `S`, write
  R_S=\sum_{i\in S}r_i.
 \]
 
-Lemma 3.1 and elementary averaging of `R_S` give
+Fix an index `j` for which `r_j=r` and average only over six-subsets containing
+`j`. Apply Lemma 3.1 to the contracted submodular function
 
 \[
- \mathbb E_{|S|=6}(2D_S-R_S)
+ A\longmapsto
+ \dim\left(U_j+\sum_{i\in A}U_i\right)-r
+\]
+
+on the other 24 indices. Elementary averaging of `R_S` then gives
+
+\[
+ \begin{aligned}
+ \mathbb E_{|S|=6,\ j\in S}(2D_S-R_S)
  \geq
- \frac6{25}(2D-R)
- \geq\frac{408}{5}.
+ r+\frac5{24}(2D-R-r)\\
+ \geq
+ r+\frac5{24}(800-24r)
+ =\frac{500}{3}-4r
+ \geq\frac{260}{3}.
+ \end{aligned}
  \tag{4.5}
 \]
 
 Therefore some six-subset `S` satisfies
 
 \[
- 2D_S-R_S\geq82.
+ 2D_S-R_S\geq87.
  \tag{4.6}
 \]
 
@@ -209,7 +211,7 @@ Apply (2.2) to these six central catalectics.  With
 we obtain
 
 \[
- \boxed{h\geq82.}
+ \boxed{h\geq87.}
  \tag{4.7}
 \]
 
@@ -236,11 +238,11 @@ or
 Equations (4.7) and (4.8) force
 
 \[
- \boxed{b\geq51.}
+ \boxed{b\geq54.}
  \tag{4.9}
 \]
 
-## 5. Exact fixed-six cap `b<=50`
+## 5. Exact fixed-six cap `b<=53`
 
 We recall the finite interface in a form tailored to (4.9).
 
@@ -293,9 +295,6 @@ The following table enumerates only the nondecreasing six-tuples
 
 | `b` | `m_b` | `D_b` | lower bound (5.3) | residual upper `2b-20` | margin |
 |---:|---:|---:|---:|---:|---:|
-| 51 | 69 | 9 | 88 | 82 | 6 |
-| 52 | 69 | 9 | 88 | 84 | 4 |
-| 53 | 70 | 8 | 92 | 86 | 6 |
 | 54 | 71 | 7 | 96 | 88 | 8 |
 | 55 | 72 | 6 | 98 | 90 | 8 |
 | 56 | 72 | 6 | 98 | 92 | 6 |
@@ -308,7 +307,7 @@ The following table enumerates only the nondecreasing six-tuples
 | 63 | 77 | 1 | 118 | 106 | 12 |
 | 64 | 78 | 0 | 120 | 108 | 12 |
 
-Thus every layer `51<=b<=64` is impossible.  At `b=65` the exact shadow is
+Thus every layer `54<=b<=64` is impossible.  At `b=65` the exact shadow is
 
 \[
  m_{65}=79>78,
@@ -317,7 +316,7 @@ Thus every layer `51<=b<=64` is impossible.  At `b=65` the exact shadow is
 so every `b>=65` is already excluded by the quadratic projection cap.  Hence
 
 \[
- \boxed{b\leq50.}
+ \boxed{b\leq53.}
  \tag{5.4}
 \]
 
@@ -327,10 +326,10 @@ This contradicts (4.9), proving (1.1).
 
 The proof is not pure in the narrow sense of avoiding every finite table.
 The submodular selection, relation-pairing argument, and reduction to
-`b>=51` are purely mathematical.  The final cap uses:
+`b>=54` are purely mathematical.  The final cap uses:
 
 - exact rational separators for the Bukh-shadow endpoints;
-- integer enumeration of at most 64 symmetric defect profiles in any row;
+- integer enumeration of at most 33 symmetric defect profiles in any row;
 - exact Macaulay expansions through relation dimension nine; and
 - the previously proved individual profile table (5.2).
 
