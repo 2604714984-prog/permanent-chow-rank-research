@@ -138,3 +138,8 @@ jobs:
             --json /tmp/general_column_sign_rigidity.json
       - name: Replay independent n6 full-sign rigidity
         run: python scripts/general_column_sign_rigidity_independent.py
+      - name: Replay affine-Segre Boolean-slice ceiling
+        run: |
+          python scripts/general_affine_segre_slice_rank_audit.py \
+            --max-d 12 \
+            --json /tmp/general_affine_segre_slice_rank.json
