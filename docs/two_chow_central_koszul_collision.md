@@ -67,6 +67,56 @@ If `dim V=N`, then
 In particular, in the 36-variable ambient space used for `perm_6`, the two
 individual ranks are 705 while their output sum has rank 1392, not 1410.
 
+### Theorem 1.2 -- the collision grows at higher wedge degree
+
+Inside the six-dimensional factor span, let `r_p` be the rank of
+
+\[
+\delta_{3,p}((U_0+U_1)\otimes\Lambda^p(A\oplus B)).
+\]
+
+Then
+
+\[
+\boxed{(r_0,r_1,\ldots,r_6)=(40,192,336,280,120,21,0).}
+\tag{1.5}
+\]
+
+The corresponding one-term profile is
+
+\[
+(20,105,216,190,84,15,0),
+\]
+
+so the intersection dimensions at the seven internal wedge degrees are
+
+\[
+\boxed{(0,18,96,100,48,9,0).}
+\tag{1.6}
+\]
+
+After embedding in the 36-dimensional permanent variable space, preserving
+the number of exterior factors in the thirty-dimensional inactive complement
+gives
+
+\[
+\boxed{
+\operatorname{rank}\delta_{3,3}(U_0+U_1)=256,280,
+}
+\tag{1.7}
+\]
+
+whereas the sum of the two individual ranks is `2*133545=267090`.  Thus the
+third-Koszul output intersection has dimension
+
+\[
+\boxed{10,810.}
+\tag{1.8}
+\]
+
+In particular, raising the exterior degree amplifies rather than removes the
+counterexample's aggregate collision.
+
 ## 2. The middle derivative spaces are disjoint
 
 For a ternary cubic `p`, write `D_r(p)` for its output-degree-`r` derivative
@@ -87,7 +137,7 @@ and define `Q_B,Q'_B` analogously.  Explicitly,
 Modulo `Q_A`, the three pairwise products of
 
 \[
- a_1+a_2,quad a_1+a_3,quad a_2+a_3
+ a_1+a_2,\quad a_1+a_3,\quad a_2+a_3
 \]
 
 are respectively `a_1^2,a_2^2,a_3^2`.  Hence
@@ -96,9 +146,9 @@ are respectively `a_1^2,a_2^2,a_3^2`.  Hence
  Q_A\oplus Q'_A=\operatorname{Sym}^2A,            \tag{2.1}
 \]
 
-and similarly `Q_B direct_sum Q'_B=Sym^2 B`.
+and similarly \(Q_B\oplus Q'_B=\operatorname{Sym}^2B\).
 
-The central derivative space of a product on `A direct_sum B` splits by
+The central derivative space of a product on \(A\oplus B\) splits by
 bidegree:
 
 \[
@@ -111,7 +161,7 @@ spaces for `T_0` and `T_1` complementary.  At the two endpoint bidegrees,
 `p_A,p'_A` and `p_B,p'_B` are linearly independent.  Therefore (2.2) proves
 (1.2), and each `U_i` has dimension 20.
 
-Writing `F=U_0 direct_sum U_1`, the same argument gives the more useful
+Writing \(F=U_0\oplus U_1\), the same argument gives the more useful
 description
 
 \[
@@ -175,12 +225,12 @@ Therefore
  \boxed{\dim F^{(1)}=0+6+36+6+0=48.}             \tag{4.2}
 \]
 
-The same calculation remains valid after embedding `A direct_sum B` in a
-larger `V`: a quartic involving a variable outside `A direct_sum B` cannot
+The same calculation remains valid after embedding \(A\oplus B\) in a
+larger `V`: a quartic involving a variable outside \(A\oplus B\) cannot
 have all derivatives in `F`.
 
-For any subspace `W subset Sym^3 V`, the kernel of the first Koszul map on
-`W tensor V` is `W^(1)`.  Each `U_i` is the middle derivative space of a
+For any subspace \(W\subset\operatorname{Sym}^3V\), the kernel of the first
+Koszul map on \(W\otimes V\) is `W^(1)`.  Each `U_i` is the middle derivative space of a
 six-independent-factor term, so
 
 \[
@@ -212,12 +262,15 @@ python -m unittest tests/test_two_chow_central_koszul_collision.py
 
 The script constructs the two central derivative spaces, verifies their
 combined rank 40, and builds all coefficient constraints defining the first
-prolongation of their sum.  Exact elimination over `Fraction` gives nullity
-48 and hence Koszul intersection 18.  No finite-field or floating-point
-inference is used.
+prolongation of their sum.  It also constructs the seven internal exterior
+maps.  Exact elimination over `Fraction` gives nullity 48, the complete rank
+profile (1.5), and hence intersections (1.3) and (1.6).  Formula (1.7) is the
+exact binomial convolution with the inactive exterior factors.  No
+finite-field or floating-point inference is used.
 
 The theorem closes one tempting lower-27 shortcut.  Even when every residual
 term has full middle rank and the individual middle images are in direct sum,
-ordinary first-Koszul output collisions need not vanish.  A successful
-lower-27 argument must retain the actual cross-degree relation module or the
-specific equation with `perm_6`; central transversality alone is insufficient.
+Koszul output collisions need not vanish, and the collision can become much
+larger at higher wedge degree.  A successful lower-27 argument must retain
+the actual cross-degree relation module or the specific equation with
+`perm_6`; central transversality alone is insufficient.

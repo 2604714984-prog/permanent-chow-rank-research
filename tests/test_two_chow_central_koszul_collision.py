@@ -37,6 +37,24 @@ class TwoChowCentralKoszulCollisionTests(unittest.TestCase):
         self.assertEqual(self.payload["combined_first_koszul_image_rank"], 192)
         self.assertEqual(self.payload["first_koszul_image_intersection_dimension"], 18)
 
+    def test_higher_wedge_collision_profile(self) -> None:
+        self.assertEqual(
+            self.payload["all_internal_wedge_koszul_ranks"],
+            [40, 192, 336, 280, 120, 21, 0],
+        )
+        self.assertEqual(
+            self.payload["all_internal_wedge_intersection_dimensions"],
+            [0, 18, 96, 100, 48, 9, 0],
+        )
+        self.assertEqual(
+            self.payload["ambient_36_middle_third_koszul_rank"],
+            256_280,
+        )
+        self.assertEqual(
+            self.payload["ambient_36_third_koszul_intersection_dimension"],
+            10_810,
+        )
+
     def test_frozen_payload_matches_replay(self) -> None:
         frozen = json.loads(
             (

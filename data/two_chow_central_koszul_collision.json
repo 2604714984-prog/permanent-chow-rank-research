@@ -1,6 +1,27 @@
 {
+  "all_internal_wedge_intersection_dimensions": [
+    0,
+    18,
+    96,
+    100,
+    48,
+    9,
+    0
+  ],
+  "all_internal_wedge_koszul_ranks": [
+    40,
+    192,
+    336,
+    280,
+    120,
+    21,
+    0
+  ],
+  "ambient_36_middle_third_koszul_rank": 256280,
+  "ambient_36_third_koszul_intersection_dimension": 10810,
+  "ambient_36_two_individual_third_koszul_rank_sum": 267090,
   "central_sum_first_prolongation_dimension": 48,
-  "claim_boundary": "This is a two-term counterexample to inferring first-Koszul transversality from central-image transversality. It is not a decomposition of a permanent and gives no Chow-rank upper bound.",
+  "claim_boundary": "This is a two-term counterexample to inferring Koszul transversality at either first or higher wedge degree from central-image transversality. It is not a decomposition of a permanent and gives no Chow-rank upper bound.",
   "combined_first_koszul_image_rank": 192,
   "combined_literal_fourth_rank": 30,
   "combined_literal_middle_rank": 40,
@@ -20,6 +41,15 @@
   ],
   "method": "exact coefficient constraints over Fraction",
   "middle_image_intersection_dimension": 0,
+  "one_term_internal_wedge_koszul_ranks": [
+    20,
+    105,
+    216,
+    190,
+    84,
+    15,
+    0
+  ],
   "pencil_conciseness_square_map_determinant": 2,
   "status": "EXACT_TWO_CHOW_CENTRAL_KOSZUL_COLLISION_REPLAY",
   "three_factor_change_determinant": -2

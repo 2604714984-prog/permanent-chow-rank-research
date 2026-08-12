@@ -14,6 +14,7 @@ import argparse
 import json
 from fractions import Fraction
 from itertools import combinations, combinations_with_replacement
+from math import comb
 from pathlib import Path
 
 
@@ -153,6 +154,65 @@ def prolongation_dimension(central_columns: list[list[Fraction]]) -> int:
     return len(MONOMIALS[4]) - rank(constraints)
 
 
+def insertion_sign(variable: int, wedge: tuple[int, ...]) -> int:
+    return -1 if sum(entry < variable for entry in wedge) % 2 else 1
+
+
+def internal_koszul_rank(
+    central_columns: list[list[Fraction]],
+    wedge_degree: int,
+) -> int:
+    if wedge_degree == N:
+        return 0
+    source_wedges = list(combinations(range(N), wedge_degree))
+    target_wedges = list(combinations(range(N), wedge_degree + 1))
+    target_wedge_index = {
+        wedge: index for index, wedge in enumerate(target_wedges)
+    }
+    columns: list[list[Fraction]] = []
+    row_count = len(MONOMIALS[2]) * len(target_wedges)
+    for cubic in central_columns:
+        for wedge in source_wedges:
+            wedge_set = set(wedge)
+            column = [Fraction(0) for _ in range(row_count)]
+            for position, monomial in enumerate(MONOMIALS[3]):
+                coefficient = cubic[position]
+                if not coefficient:
+                    continue
+                for variable in set(monomial):
+                    if variable in wedge_set:
+                        continue
+                    derivative = list(monomial)
+                    multiplicity = derivative.count(variable)
+                    derivative.remove(variable)
+                    output_wedge = tuple(sorted((variable,) + wedge))
+                    row = (
+                        INDEX[2][tuple(derivative)] * len(target_wedges)
+                        + target_wedge_index[output_wedge]
+                    )
+                    column[row] += (
+                        coefficient
+                        * multiplicity
+                        * insertion_sign(variable, wedge)
+                    )
+            columns.append(column)
+    return rank(transpose(columns))
+
+
+def ambient_rank(
+    internal_ranks: list[int],
+    wedge_degree: int,
+    ambient_dimension: int = 36,
+) -> int:
+    inactive = ambient_dimension - N
+    return sum(
+        comb(inactive, inactive_wedge)
+        * internal_ranks[wedge_degree - inactive_wedge]
+        for inactive_wedge in range(wedge_degree + 1)
+        if 0 <= wedge_degree - inactive_wedge < len(internal_ranks)
+    )
+
+
 def determinant(matrix: list[list[int]]) -> int:
     rational = [[Fraction(entry) for entry in row] for row in matrix]
     value = Fraction(1)
@@ -199,6 +259,33 @@ def build_payload() -> dict[str, object]:
     if (one_term_rank, combined_rank, intersection) != (105, 192, 18):
         raise AssertionError((one_term_rank, combined_rank, intersection))
 
+    internal_profile = [
+        internal_koszul_rank(central_columns, wedge_degree)
+        for wedge_degree in range(N + 1)
+    ]
+    expected_internal_profile = [40, 192, 336, 280, 120, 21, 0]
+    if internal_profile != expected_internal_profile:
+        raise AssertionError(internal_profile)
+    one_term_internal_profile = [20, 105, 216, 190, 84, 15, 0]
+    internal_intersections = [
+        2 * one_term - combined
+        for one_term, combined in zip(
+            one_term_internal_profile,
+            internal_profile,
+            strict=True,
+        )
+    ]
+    expected_internal_intersections = [0, 18, 96, 100, 48, 9, 0]
+    if internal_intersections != expected_internal_intersections:
+        raise AssertionError(internal_intersections)
+    ambient_third_rank = ambient_rank(internal_profile, 3)
+    one_term_ambient_third_rank = 133_545
+    ambient_third_intersection = (
+        2 * one_term_ambient_third_rank - ambient_third_rank
+    )
+    if (ambient_third_rank, ambient_third_intersection) != (256_280, 10_810):
+        raise AssertionError((ambient_third_rank, ambient_third_intersection))
+
     triangle = [[1, 1, 0], [1, 0, 1], [0, 1, 1]]
     square_coefficient_map = [[0, 1, 1], [1, 0, 1], [1, 1, 0]]
     return {
@@ -218,10 +305,21 @@ def build_payload() -> dict[str, object]:
         "individual_first_koszul_ranks": [one_term_rank, one_term_rank],
         "combined_first_koszul_image_rank": combined_rank,
         "first_koszul_image_intersection_dimension": intersection,
+        "all_internal_wedge_koszul_ranks": internal_profile,
+        "one_term_internal_wedge_koszul_ranks": one_term_internal_profile,
+        "all_internal_wedge_intersection_dimensions": internal_intersections,
+        "ambient_36_middle_third_koszul_rank": ambient_third_rank,
+        "ambient_36_two_individual_third_koszul_rank_sum": (
+            2 * one_term_ambient_third_rank
+        ),
+        "ambient_36_third_koszul_intersection_dimension": (
+            ambient_third_intersection
+        ),
         "claim_boundary": (
-            "This is a two-term counterexample to inferring first-Koszul "
-            "transversality from central-image transversality. It is not a "
-            "decomposition of a permanent and gives no Chow-rank upper bound."
+            "This is a two-term counterexample to inferring Koszul "
+            "transversality at either first or higher wedge degree from "
+            "central-image transversality. It is not a decomposition of a "
+            "permanent and gives no Chow-rank upper bound."
         ),
     }
 
