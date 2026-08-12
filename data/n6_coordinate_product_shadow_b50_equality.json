@@ -1,0 +1,126 @@
+{
+  "b": 50,
+  "claim_boundary": "This classifies coordinate fifty-supports with product lower shadow seventy-five. It does not classify noncoordinate subspaces, the rank-at-most-seventy-five determinantal scheme, or unrestricted Chow decompositions.",
+  "coordinate_equality_types_up_to_row_column_permutations": [
+    "row_hook",
+    "transpose_hook"
+  ],
+  "hook_replays": [
+    {
+      "first_product_shadow_size": 75,
+      "orientation": "row_hook",
+      "second_product_shadow_size": 23,
+      "support_size": 50
+    },
+    {
+      "first_product_shadow_size": 75,
+      "orientation": "transpose",
+      "second_product_shadow_size": 23,
+      "support_size": 50
+    }
+  ],
+  "minimizing_ferrers_partitions": [
+    [
+      20,
+      10,
+      10,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "minimum_first_product_shadow": 75,
+  "original_row_degree_profiles_preserved_by_double_compression": [
+    [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      20,
+      10,
+      10,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "small_equality_replay": {
+    "all_four_triple_families_are_complete_on_four_vertices": true,
+    "all_ten_triple_families_are_complete_on_five_vertices": true,
+    "four_triples_shadow_six_family_count": 15,
+    "ten_triples_shadow_ten_family_count": 6
+  },
+  "status": [
+    "PURE_COORDINATE_PRODUCT_SHADOW_EQUALITY_THEOREM",
+    "EXACT_SMALL_KRUSKAL_KATONA_REPLAY",
+    "N6-062A"
+  ]
+}

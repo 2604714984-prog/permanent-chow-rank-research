@@ -1320,3 +1320,35 @@ for all fifteen term pairs, every projection of the twelve-dimensional pair
 shadow onto two complete rows and onto two complete columns is singular.
 The theorem excludes the transverse locus only.  It neither eliminates that
 closed exceptional locus nor proves ordinary or border lower 28.
+
+## 2026-08-13: coordinate equality at the product-shadow endpoint
+
+N6-062A classifies the torus-fixed equality supports behind the last
+`b=50` state.  If a coordinate support `A` in the twenty-by-twenty
+row-triple/column-triple grid has size 50 and product lower shadow 75, then,
+up to independent row and column permutations, it is
+
+\[
+ A=\left(\binom U3\mathbin\times\binom V3\right)
+   \mathbin\cup
+   \left(\binom{U_0}3\mathbin\times\binom{[6]}3\right),
+ \qquad |U|=4,\ |U_0|=3,\ |V|=5,
+\]
+
+or its transpose.  The two colex compressions preserve the decreasing row
+degree profile: the intermediate column heights are its conjugate and the
+final Ferrers row lengths are the conjugate again.  The exact dynamic program
+leaves only the profiles `(20,10,10,10)` and `(4^10,1^10)`.  Reapplying the
+one-factor equality bounds directly to the original support forces the two
+hook forms; it does not reverse a compression.  Each hook has first shadow 75
+and second shadow
+
+\[
+ |(U\mathbin\times V)\cup(U_0\mathbin\times[6])|
+ =4\cdot5+3\cdot6-3\cdot5=23.
+\]
+
+This is a finite coordinate theorem.  A noncoordinate equality plane can
+degenerate to a hook without being recovered from that special fiber, so the
+result does not classify the full equality locus or remove the unresolved
+all-`alpha=3`, `b=50` Chow endpoint.
