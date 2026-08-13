@@ -2,7 +2,13 @@ name: exact-bound-tests
 
 on:
   push:
+    branches:
+      - main
   pull_request:
+
+concurrency:
+  group: exact-bound-tests-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -15,8 +21,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install symbolic replay dependency
-        run: python -m pip install sympy==1.14.0
+      - name: Install unit-test dependencies
+        run: python -m pip install sympy==1.14.0 numpy==2.4.6
       - name: English-only proof tree
         run: python scripts/check_english_only.py
       - name: Unit tests
