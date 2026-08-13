@@ -2038,3 +2038,47 @@ realizability remains open; in particular the biflag geometry and the
 \(t_2>15\) standard-hook states lie outside N6-072's common-\(W_{15}\) input.
 This is a strict ten-state frontier, not an exclusion of global \(b=34\),
 ordinary lower 29, exact rank 32, or border rank.
+
+N6-103 adds a global container that was invisible in the scalar table. Fix
+one all-zero critical six-set \(C\). For every one of the at least nineteen
+epsilon-zero residual terms \(j\), the hereditary seven-set equality gives
+
+\[
+ U_j\subset E_3+L_C,\qquad
+ F_j\subset A_2:=E_2+\sum_{i\in C}F_i,\qquad
+ \dim A_2=225+t_2\le243.
+\]
+
+At \(a_2=72\), the graph of nonzero pair intersections among the six
+quadratic spaces has spanning-forest size at most \(\kappa_2\), so its
+complement is connected. For \(\kappa_2\ge1\), every complementary edge
+carries a section-difference space of dimension at least thirteen, whose
+product shadow has dimension twelve. The corresponding factor six-planes
+are transverse, and connectivity proves that all six factor planes span the
+23-dimensional N6-101 second shadow.
+
+For \((a_2,\kappa_2,t_2)=(72,3,15)\), the quotient is the common
+\(W_{15}\). A strengthened separated-block count allowing three quadratic
+relations gives the exact central bound \(33<46\), so an invertible row or
+column block is impossible. In the standard flag-hook geometry the remaining
+all-singular configuration is excluded by the directness-free core of the
+N6-072 block proof. Therefore the standard hook and its transpose are
+excluded in this scalar state. The biflag rectangle hook at the same state,
+the other nine scalar states, global \(b=34\), ordinary lower 29, exact rank
+32, and border rank remain open.
+
+The common container also forces a global all-singular reduction. The
+critical six quadratic spaces have sum dimension 87. Adding any external
+epsilon-zero term gives an all-zero seven-set whose relation kernel is at
+most three, so its sum dimension is exactly 102. Thus every external
+quadratic space is direct from the critical sum, and each external-critical
+pair has a fifteen-dimensional section difference and a transverse
+twelve-dimensional factor shadow. If any of the at least nineteen terms had
+an invertible row or column block, N6-069 would propagate common separation;
+the new three-relation separated bound would then give \(46\le33\).
+Consequently all row and column blocks of all nineteen zero-defect terms are
+singular. Moreover, the common container prolongation contains
+\(E_3+L_C\), of dimension 474. The existing \(t_2=15\) actual-term cap is
+at most 458 when \(\alpha\le2\), so all nineteen terms must have
+\(\alpha=3\). This sharper statement still does not exclude the biflag
+hook.

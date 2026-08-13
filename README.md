@@ -255,6 +255,7 @@ python scripts/n6_lower29_b34_x67_68_exclusion.py
 python scripts/n6_lower29_b34_x66_global_frontier.py
 python scripts/n6_product_shadow_b46_equality_locus.py
 python scripts/n6_lower29_b34_critical_six_scalar_frontier.py
+python scripts/n6_lower29_b34_common_container_standard_hook.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
