@@ -1688,3 +1688,67 @@ at \(b=47,48,49\) have the same unresolved issue: N6-072 uses the
 \(b=31,\ldots,49\).  The next minimal theorem is a
 noncoordinate `49 -> 75` equality classification or an extension theorem to
 the `50 -> 75` hook locus.  No ordinary lower-29 or border-rank claim is made.
+
+## 2026-08-13: the 47--49 extension ladder and the defect-six boundary
+
+N6-073, N6-076, and N6-078 close the three product-shadow-75 plateaux in
+dimensions 49, 48, and 47. At every coordinate fixed point the full
+incidence tangent variables split into the 16 parent variables and the
+relative Grassmann variables. After eliminating the linear equations, the
+complete grounded quadratic initial ideal is the same radical 25-generator
+ideal as in N6-064; no relative-variable monomial occurs. The 240 Boolean
+parent branches, with the corresponding relative Grassmann bundle, give the
+reverse initial inclusion. Complete local lifting and projective torus
+globalization therefore show that every such 47-, 48-, or 49-plane extends
+to a 50-plane with the same 75-dimensional first shadow. N6-064 then gives
+the genuine 23-dimensional flag hook.
+
+The 48-plane proof covers all 36 stabilizer orbits of two-cell deletions from
+a hook, and the 47-plane proof covers all 224 stabilizer orbits of three-cell
+deletions. These are exact local certificates supporting pure
+original-support classifications, not finite-field guesses about a general
+point.
+
+Applying the extension ladder to the hereditary and fixed-six endpoints
+excludes
+
+\[
+ b=31,32,33,47,48,49.
+\]
+
+Together with N6-074, the strict ordinary lower-29 fixed-six frontier is now
+
+\[
+ \boxed{34\le b\le46}.
+\]
+
+The next layer is qualitatively different. For \(b=34\), the best subset
+size is seven: a 66-dimensional local central intersection has exact product
+shadow 87 against the seven-term projection cap 93.
+
+N6-080 adds a termwise constraint that the previous conservative integer
+tables had not used. If
+
+\[
+ \varepsilon=15-\dim\mathcal D_2(T)>0,
+\]
+
+then the six factors of \(T\) span at most five dimensions. N6-043 gives
+\(\dim(E_2\cap\operatorname{Sym}^2L)\le1\), so necessarily
+\(\alpha\ge2\). At defect six this reduces the 31 symmetric epsilon types
+to 18. Their relation-kernel envelope has 56 states; the existing
+prolongation caps strictly exclude 43. The remaining 13 have quotient
+upper-bound histogram
+
+\[
+ \{15:6,\ 16:4,\ 17:2,\ 18:1\}.
+\]
+
+Ten of those thirteen already have literal cubic directness because
+\(\kappa_2\le1\) and the relevant Chow cubic normal forms contain no pure
+cube. The unresolved inputs are now sharply localized: the
+\(t_2=15\) packets require every epsilon-zero term to have alpha three, while
+the other seven states require new coupled or termwise control at quotient
+dimensions 16--18. N6-080 is conditional on reaching the local
+66-dimensional equality packet; it does not exclude global \(b=34\), prove
+ordinary lower 29, or imply a border-rank bound.

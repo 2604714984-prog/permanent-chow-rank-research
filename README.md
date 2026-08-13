@@ -224,6 +224,15 @@ python scripts/n6_colored_differential_barrier.py
 python scripts/n6_squarefree_coproduct_colored_barrier.py
 python scripts/n6_hook_plane_projection_barrier.py
 python scripts/n6_central_neardirect_quadratic_barrier.py
+python scripts/n6_all_singular_hook_exclusion.py
+python scripts/n6_lower29_fixed_six_arithmetic.py
+python scripts/n6_product_shadow_b49_equality_locus.py
+python scripts/n6_product_shadow_b48_equality_locus.py
+python scripts/n6_product_shadow_b47_equality_locus.py
+python scripts/n6_lower29_b31_b49_exclusion.py
+python scripts/n6_lower29_b32_b48_exclusion.py
+python scripts/n6_lower29_b33_b47_exclusion.py
+python scripts/n6_lower29_q7_defect_six_frontier.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.

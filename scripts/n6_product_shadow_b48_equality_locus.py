@@ -272,12 +272,13 @@ def local_certificate(
     orbit_size: int,
     profile: tuple[int, ...],
     kind: str,
+    child_dimension: int = 48,
 ) -> dict[str, object]:
     parent = b50.incidence_data(transpose)
     parent_support = set(parent["support"])
     shadow = set(parent["shadow"])
     support = parent_support - deleted
-    assert len(support) == 48 and b50.product_shadow(support) == shadow
+    assert len(support) == child_dimension and b50.product_shadow(support) == shadow
     prolongation = coordinate_prolongation(shadow)
     assert prolongation == parent_support
     child = b49.incidence_data(support, shadow)
@@ -300,9 +301,10 @@ def local_certificate(
         for missing in sorted(deleted)
     ]
     assert len(set(parent_map)) == 16
-    assert len(set(relative_map)) == 96
+    relative_dimension = child_dimension * (50 - child_dimension)
+    assert len(set(relative_map)) == relative_dimension
     assert set(parent_map).isdisjoint(relative_map)
-    assert child["free_dimension"] == 112
+    assert child["free_dimension"] == 16 + relative_dimension
 
     groups: dict[tuple[str, int], list[int]] = defaultdict(list)
     for index, component in enumerate(parent["components"]):
@@ -394,6 +396,15 @@ def local_certificate(
     assert not raw_relative_monomials
     assert term_count_histogram == {1: nonzero_rows}
     assert coefficient_histogram == {2: nonzero_rows}
+    branch_dimension = 4 + relative_dimension
+    relative_branch_certificate = {
+        "count": 240,
+        "dimension": branch_dimension,
+        "n6064_boolean_jacobian_is_exact_4_by_4_identity": True,
+        f"tautological_grassmannian_chart_jacobian_is_{relative_dimension}_by_{relative_dimension}_identity": True,
+        "replayed_free_coordinate_sets_are_disjoint": set(parent_map).isdisjoint(relative_map),
+        "combined_block_jacobian_rank": branch_dimension,
+    }
     return {
         "orientation": "transpose_hook" if transpose else "row_hook",
         "orbit_index_within_orientation": orbit_index,
@@ -434,14 +445,7 @@ def local_certificate(
             "raw_relative_monomial_count": len(raw_relative_monomials),
             "row_span_is_exactly_the_twenty_five_forbidden_units": raw_monomials == forbidden,
         },
-        "relative_boolean_branches": {
-            "count": 240,
-            "dimension": 100,
-            "n6064_boolean_jacobian_is_exact_4_by_4_identity": True,
-            "tautological_grassmannian_chart_jacobian_is_96_by_96_identity": True,
-            "replayed_free_coordinate_sets_are_disjoint": set(parent_map).isdisjoint(relative_map),
-            "combined_block_jacobian_rank": 100,
-        },
+        "relative_boolean_branches": relative_branch_certificate,
     }
 
 
