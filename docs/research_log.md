@@ -1792,6 +1792,36 @@ The strict consequence is now
  \boxed{x_A\le77,\qquad f_A\le77}
 \]
 
-for every residual seven-set in any global \(b=34\) survivor. The next
-unresolved object is the \(77\to90\) equality locus. Global \(b=34\),
-ordinary lower 29, exact rank 32, and every border-rank claim remain open.
+for every residual seven-set in any global \(b=34\) survivor.
+
+N6-088 continues the same-shadow extension through the three-cell deletion
+layer. The six compressed equality profiles are exactly the row-product
+profiles
+
+\[
+ (20,20,20,17),\quad (20,20,19,18),\quad (20,19,19,19)
+\]
+
+and their transposes. Original-support equality forces a unique parent
+\(80\)-plane. The \(2{,}464{,}800\) coordinate children split into 66
+stabilizer orbits. Every orbit has 239 linear variables, decomposing as the
+eight parent variables plus the 231-dimensional \(\operatorname{Gr}(77,80)\)
+fiber; the grounded quadratic ideal is again the same twelve-generator
+\(I(K_4)+I(K_4)\), with no relative-variable term. The formal and projective
+argument therefore extends every \(77\to90\) equality plane to its product
+parent.
+
+N6-089 applies N6-083 to this extension. At \(f_A=77\), the existing ten
+prolongation exclusions and the strengthened literal floors leave only the
+seven-term direct/common-\(W_{15}\) endpoint. Its required prolongation
+dimension is 463, so every epsilon-zero term is forced to alpha three; the
+product second shadow then triggers the already proved actual endpoint
+exclusion. Hence the strict consequence is now
+
+\[
+ \boxed{x_A\le76,\qquad f_A\le76}.
+\]
+
+The next unresolved object is the \(76\to90\) equality locus. Global
+\(b=34\), ordinary lower 29, exact rank 32, and every border-rank claim remain
+open.
