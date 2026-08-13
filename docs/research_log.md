@@ -1827,7 +1827,7 @@ The next unresolved object is the \(76\to90\) equality locus. Global
 open.
 
 N6-090 replaces the next four deletion-by-deletion computations by one
-uniform stability theorem. For every dimension (73\le s\le76), the exact
+uniform stability theorem. For every dimension \(73\le s\le76\), the exact
 first product-shadow minimum remains 90 and every coordinate equality
 support is a deletion of at most seven cells from a unique N6-082 product
 parent. At the parent, each of the eight free linear components has restricted
@@ -1835,23 +1835,47 @@ tangent-source vertex cut eight. Every grounded eta variable has eight source
 witnesses, while each of the twelve forbidden quadratic monomials is supported
 by forty different cubic sources. Thus seven deletions preserve the exact
 linear decomposition and the parent initial ideal
-(I(K_4)+I(K_4)). The relative Grassmann branches and projective torus
-globalization extend every (s\to90) equality plane to its (80\to90)
+\(I(K_4)+I(K_4)\). The relative Grassmann branches and projective torus
+globalization extend every \(s\to90\) equality plane to its \(80\to90\)
 product parent.
 
-N6-091 then descends through (s=76,75,74,73). The defect-three relation
+N6-091 then descends through \(s=76,75,74,73\). The defect-three relation
 envelope is unchanged, while the required prolongation dimensions increase to
-(464,465,466,467). All ten (t_2\le14) states remain strictly excluded;
-the unique direct/common-(W_{15}) endpoint is excluded by N6-083 after the
+\(464,465,466,467\). All ten \(t_2\le14\) states remain strictly excluded;
+the unique direct/common-\(W_{15}\) endpoint is excluded by N6-083 after the
 N6-090 extension. Consequently every residual seven-set in a global
-(b=34) survivor now satisfies
+\(b=34\) survivor now satisfies
 
 \[
  \boxed{x_A\le72,\qquad f_A\le72}.
 \]
 
-This does not exclude global (b=34). The next shortening layer is not a
-further product deletion: the exact minimum changes to (m_{72}=89). Its
-equality locus and the resulting defect-four actual packet are the next open
-objects. Ordinary lower 29, exact rank 32, and all border-rank claims remain
-open.
+This does not exclude global \(b=34\). The next shortening layer is not a
+further product deletion: the exact minimum changes to \(m_{72}=89\).
+
+N6-092 classifies that new equality locus. The two coordinate profiles are
+\((20,20,16,16)\) and \((4^{16},2^4)\). In original support, each is obtained
+from a unique product \(80\)-plane by removing all eight cubic sources of one
+quadratic product cell; hence there are 2700 coordinate fixed points. The
+complete local linearization has twenty variables. Its grounded initial ideal
+is the sum of clique ideals on group sizes
+
+\[
+ (4,4,2,2,4,4),
+\]
+
+with exact rank 26. All 1024 six-dimensional Boolean branches satisfy the
+degree-three-to-two and degree-two-to-one containments symbolically. Formal
+lifting and projective globalization show that every \(72\to89\) point lies
+in a partitioned product \(80\to90\) parent and has second shadow 24. The four
+new Boolean groups move the missing quadratic direction and are not assumed
+to transport actual Chow frames.
+
+N6-093 recomputes the defect-four seven-term arithmetic at this layer. Of 21
+scalar states, eighteen are excluded by existing prolongation caps. Three
+actual packets remain: a direct \(t_2=16\) packet; an all-epsilon-zero packet
+with one quadratic relation and common \(W_{15}\); and a \(t_2=15\) packet
+with one positive-epsilon defective term. Thus \(x_A=72\) and global
+\(b=34\) remain open. The first new target is the one-relation
+common-\(W_{15}\) packet. Ordinary lower 29, exact rank 32, and every
+border-rank claim remain open.
