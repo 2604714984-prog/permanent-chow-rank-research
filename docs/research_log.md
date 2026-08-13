@@ -1507,3 +1507,21 @@ $2I$.  Thus any valid fixed-layer reduction must retain equivalent
 first-order or complete-collineation data.  This pair-level family embeds in
 the standard $b=50$ hook but does not realize the full six-term endpoint and
 makes no lower-28 claim.
+
+N6-065 excludes the simplest exceptional pattern left by G-049.  Suppose all
+six factor planes collide at one valuation level to the same complete row
+slice $p\otimes C$.  The leading normal graph
+$\phi:C\to(A/\langle p\rangle)\otimes C$ can produce permanent rectangles
+only when
+
+\[
+ \phi(e_c)=w\otimes e_c
+\]
+
+for one $w\in A/\langle p\rangle$.  Exact rational elimination of 825 sparse
+equations in 180 coefficients gives rank 175 and the predicted five-dimensional
+kernel.  If the five leading section-difference spaces are direct, their five
+vectors $w$ form a basis; the resulting 75-plane has derivative shadow 36,
+contradicting the endpoint value 23.  Transposition excludes a common column
+slice.  This is a single-level result only: unequal valuations, collision
+trees, and later clusters with new base slices remain unresolved.
