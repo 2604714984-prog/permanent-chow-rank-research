@@ -1620,3 +1620,68 @@ the current ordinary interval is
 This is not an exact-rank-32 result, not a border-Chow-rank lower bound, and
 not a proof of the general conjecture
 \(\operatorname{ChowRank}(\operatorname{perm}_n)=2^{n-1}\).
+
+## 2026-08-13: the first lower-29 frontier
+
+For a hypothetical minimum 28-term expression, the fixed-six conditional
+average has denominator 27 and leaves 22 residual terms.  The low individual
+middle-rank branches 16, 17, and 18 are still impossible, so the maximum
+individual middle rank is 20.  The selected six-term state satisfies
+
+\[
+ h\ge\left\lceil\frac{1640-10b}{17}\right\rceil,
+ \qquad h\le2b+40.
+\]
+
+For example, at rank 18 the residual upper bound is
+\(h\le 2b+(22\cdot18-400)=2b-4\), while the conditional-average elimination
+gives
+\(h\ge\lceil(1876-10b)/17\rceil\).  These force \(b\ge45\), whereas the
+six-term product-shadow cap 68 forces \(b\le41\).  The rank-16 and rank-17
+branches are even more strongly inconsistent.  Thus this reduction really
+does reach the rank-20 branch; it is not an assumption imported from the
+27-term argument.
+
+The initial scalar window is \(22\le b\le52\).  Adapting the N6-060 literal
+six-color lift to a sixteen-term residual complement gives, for every
+residual six-set \(A\),
+
+\[
+ \dim(E_3\cap L_A)\ge80-b.
+\]
+
+Since the exact product shadow at 53 is 81, above the six-term quadratic cap
+78, the layers \(b=22,\ldots,27\) are impossible.  At \(b=28,29\), the local
+intersection has dimension 52 or 51 and shadow 78.  The omitted-factor
+equalities force six extremal, quadratic-direct terms with a common
+twelve-dimensional quotient.  The universal extremal prolongation cap is
+436, while \(E_3+L_A\) has dimension at least 468, a contradiction.
+
+At \(b=30\), every residual six-set has local intersection 50 after the
+51/52 cases are removed.  More explicitly, \(\dim S\ge370\), while for a
+six-set \(A\) and its sixteen-term complement \(B\), the kernel of
+\(S\to L/L_A\) is 50 and its image has dimension at most
+\(\dim L_B\le320\).  Equality is therefore forced throughout:
+\(\dim S=370\), \(\dim L_B=320\), and every such complement is middle-direct.
+Every residual six-set lies in a sixteen-set, so it too is middle-direct.
+Self-adjointness of the middle catalecticants then makes its coupled image the
+full literal 120-plane.  The existing fixed-six
+profile and prolongation caps then leave only the all-`alpha=3`,
+common-\(W_{15}\), quadratic-direct configuration.  N6-064 supplies the
+23-dimensional flag hook and N6-069 plus N6-072 exclude its invertible-block
+and all-singular alternatives.  Thus \(b=30\) is also impossible.
+
+The first surviving layer is \(b=31\).  Here \(\dim S\ge369\).  A value at
+least 370, or a six-set kernel of dimension at least 50, would return to the
+already excluded local 50/51/52 cases.  Hence \(\dim S=369\), every residual
+six-set kernel has dimension exactly 49, and every sixteen-term complement
+again has full dimension 320.  Thus every residual six-set is forced into a
+49-dimensional permanent-cubic intersection with 75-dimensional shadow.
+Exact coordinate classification finds 36,000 such
+supports, each with a unique extension to one of the N6-064 50-dimensional
+hook supports.  This does not yet globalize: extendability is a closed
+kernel-jump condition, so a torus-specialized coordinate point may extend
+even when a general noncoordinate point does not.  The current lower-29
+frontier is therefore \(b=31,\ldots,46\).  The next minimal theorem is a
+noncoordinate `49 -> 75` equality classification or an extension theorem to
+the `50 -> 75` hook locus.  No ordinary lower-29 or border-rank claim is made.
