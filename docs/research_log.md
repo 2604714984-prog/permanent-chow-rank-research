@@ -2175,3 +2175,39 @@ only on three five-dimensional product branches per chart. N6-068 excludes
 an actual complementary pair throughout both \(3\times4\) charts. The four
 \(4\times3\) endpoint charts remain, so this is not yet an exclusion of the
 full biflag branch or a proof of ordinary lower 29.
+
+N6-107 closes the three remaining \(4\times3\) affine graph charts and
+globalizes the six local results. For the two-core-column, one-core-column,
+and tail-row representatives, discard only the linear quotient weights
+touched by the biflag-truncated graph targets. The resulting exact rational
+matrices have ranks \(114,102,104\), hence kernels \(18,30,28\). Explicit
+vectors identify these kernels as respectively \(6,6,4\) genuine product
+factor directions plus \(12,24,24\) truncated directions. Every torus weight
+outside the displayed kernels has leakage rank at least six.
+
+After substitution into the full graph equations, there is one pure
+quotient weight per truncated coordinate. Their fixed-coordinate ranks are
+
+\[
+ 6^{12},\qquad6^{24},\qquad6^{24}.
+\]
+
+Thus all truncated coordinates vanish. The first two charts consist only of
+products \(R_4\otimes B'_3\); the tail chart consists only of products
+\(A'_4\otimes C_3\). Together with the N6-105 core chart and the two N6-106
+charts, this covers all six coordinate fixed-point orbits of
+
+\[
+ Z=\{U\in\operatorname{Gr}(12,M):
+       \dim(K\cap\operatorname{Sym}^2U)\ge15\}.
+\]
+
+The locus \(Z\) is projective and torus-stable. Every irreducible component
+contains a coordinate fixed point, and the corresponding affine theorem
+places a neighborhood inside the closed union of the two product Grassmann
+images. Closedness then places the whole component in that product locus.
+Hence every \(U\in Z\) is \(A_3\otimes B_4\) or \(A_4\otimes B_3\), and
+N6-068 excludes an actual complementary Chow pair. This closes the biflag
+branch left by N6-103 at
+\((a_2,\kappa_2,t_2)=(72,3,15)\). The other nine N6-102 scalar states remain,
+so N6-107 does not prove ordinary lower 29, exact rank 32, or border rank.

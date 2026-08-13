@@ -102,9 +102,10 @@ sets and computing their ranks over \(\mathbb Q\) proves
 \tag{2.4}
 \]
 
-The projectivized rank-at-most-three locus is torus-stable. If it contained
-a point outside the kernel, its torus-orbit closure would contain a fixed
-point outside the kernel, contradicting (2.4). Hence on the
+Pass to the torus representation obtained by quotienting the graph-variable
+space by the displayed kernel. The projectivized rank-at-most-three locus in
+this quotient is torus-stable. If it were nonempty, its torus-orbit closure
+would contain a fixed weight line, contradicting (2.4). Hence on the
 missing-wing-column chart every desired graph has the form
 
 \[
