@@ -2483,3 +2483,34 @@ exist. Projective globalization now shows that every component whose fixed
 point has rank exactly six is noncomplementary. A surviving complementary
 rank-at-most-six component must specialize to one of the lower rank-three or
 rank-five fixed strata; those larger normal cones remain the next open step.
+
+## 2026-08-13: the rank-five \(3\times4\) normal strata are noncomplementary
+
+N6-114 closes the two rank-five fixed orbits left by N6-113. At either
+coordinate point, the exceptional rank-at-most-six condition is that a linear
+normal Schur matrix of size \(31\times13\) have rank at most one. The 48
+normal variables split into 20 and 26 torus weight spaces, respectively, with
+largest dimension eight. Exact streaming elimination retains at most 36
+independent quadratic minor rows. In 19 of the first 20 groups and 24 of the
+second 26 groups, that span contains every coefficient square, so the
+projective rank-one locus is empty in characteristic zero.
+
+The sole row-\((4+2)\) survivor has an eight-dimensional quadratic span in
+four variables and exactly two reduced points. The two row-\((3+3)\)
+survivors each have a 20-dimensional span in six variables and one reduced
+point. At their finite row-scaled representatives, one local model is a
+smooth one-dimensional diagonal curve. The other row-\((4+2)\) point and
+both row-\((3+3)\) endpoints have exact linear rank 69 in 72 variables. Their
+quadratic Schur cokernel has rank one, with unique forbidden monomial
+\(x_1x_2\). Explicit symbolic two-parameter branches give the reverse
+initial-ideal inclusion, hence the completed local ideal is exactly
+\((x_1x_2)\).
+
+Every displayed branch has cross rank six and sum rank at most ten. Because
+the third-row normal block is exactly linear, row scaling identifies these
+finite representatives with the strict-transform normal charts. Projective
+torus globalization therefore rules out every complementary component through
+a rank-five fixed point. Combining N6-113 and N6-114 leaves only the
+rank-three \(K_{2,3}/K_{3,2}\) normal cones in the twelve-dimensional product
+equality case. The full \(\kappa_2=0\) exclusion and ordinary lower 29 remain
+open.
