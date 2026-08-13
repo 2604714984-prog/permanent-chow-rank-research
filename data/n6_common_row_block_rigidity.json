@@ -1,0 +1,52 @@
+{
+  "arithmetic": "exact integers and rational elimination; no floating point",
+  "claim_boundary": "The all-row-block-singular and all-column-block-singular layer remains open. The replay checks only three elementary matrix lemmas and one monomial sample; the arbitrary theorem is pure. This does not prove ChowRank(perm_6)>=28 and makes no border-rank claim.",
+  "pure_theorem": {
+    "actual_pair_forced_to_common_coordinate_column_separation": true,
+    "b50_propagates_by_N6_061_and_is_excluded_by_N6_059": true,
+    "one_invertible_row_block_forces_both_blocks_invertible": true,
+    "survivor_all_row_and_column_blocks_singular": true,
+    "transpose_forces_common_coordinate_row_separation": true
+  },
+  "regression": {
+    "dimension_S0": 15,
+    "linear_system_nullities": {
+      "CZ_in_S0": 1,
+      "RZ_plus_ZR_transpose": 0,
+      "TZ_equals_ZT_transpose": 1
+    },
+    "linear_system_ranks": {
+      "CZ_in_S0": 35,
+      "RZ_plus_ZR_transpose": 36,
+      "TZ_equals_ZT_transpose": 35
+    },
+    "monomial_normalizer_sample": {
+      "image_rank": 15,
+      "permutation": [
+        2,
+        0,
+        5,
+        1,
+        4,
+        3
+      ],
+      "preserves_S0": true,
+      "scales": [
+        1,
+        -2,
+        3,
+        -4,
+        5,
+        -6
+      ]
+    },
+    "unknown_matrix_dimension": 36
+  },
+  "status": [
+    "PURE_COMMON_ROW_BLOCK_RIGIDITY",
+    "EXACT_QQ_LINEAR_ALGEBRA_REGRESSION",
+    "B50_INVERTIBLE_BLOCK_EXCLUDED",
+    "N6-069"
+  ],
+  "strict_conclusion": "At the b=50 common-W15 endpoint, any actual pair with one invertible row or column block is forced into common coordinate separation; propagation and N6-059 exclude that endpoint branch."
+}
