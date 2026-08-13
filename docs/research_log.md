@@ -2211,3 +2211,21 @@ N6-068 excludes an actual complementary Chow pair. This closes the biflag
 branch left by N6-103 at
 \((a_2,\kappa_2,t_2)=(72,3,15)\). The other nine N6-102 scalar states remain,
 so N6-107 does not prove ordinary lower 29, exact rank 32, or border rank.
+
+The same certificates sharpen the product-globalization threshold from
+fifteen to thirteen. The N6-105 coordinate histogram has no values from
+thirteen through seventeen; every local effective leakage gap and every pure
+truncated/corner gap is six; and the core mixed-product upper bound is twelve.
+Consequently every twelve-plane \(U\subset M\) with
+
+\[
+ \dim(K\cap\operatorname{Sym}^2U)\ge13
+\]
+
+is already a product. For the \(a_2=72,\kappa_2=1,2\) states, N6-103 gives
+complementary-edge section differences of dimension at least thirteen or
+fourteen, so their pair shadows are products as well. This does not yet
+exclude them: N6-068 uses a full fifteen-dimensional actual section
+difference. The remaining problem is therefore a product-pair theorem for
+partial common quotient dimensions thirteen and fourteen, not another
+biflag \(U\)-classification.

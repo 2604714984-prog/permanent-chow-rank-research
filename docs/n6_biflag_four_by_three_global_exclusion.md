@@ -49,8 +49,8 @@ core chart are:
 
 At each point write a nearby twelve-plane as a graph. There are 132 graph
 coordinates and eighteen base permanent rectangles. As in N6-106, retaining
-a fifteen-plane inside those eighteen rectangles allows leakage rank at most
-three.
+a thirteen-plane inside those eighteen rectangles allows leakage rank at most
+five.
 
 ## 2. Effective linear quotients
 
@@ -100,7 +100,7 @@ enumeration proves, on all three charts,
 \]
 
 Pass to the torus representation obtained by quotienting the graph-variable
-space by the displayed kernel. The projectivized rank-at-most-three locus in
+space by the displayed kernel. The projectivized rank-at-most-five locus in
 this quotient is torus-stable. Every nonempty projective torus-stable closed
 set contains a fixed point, while every fixed weight line has rank at least
 six by (2.3). Thus the quotient locus is empty, and every point of the desired
@@ -171,7 +171,7 @@ Let
 
 \[
  Z=\{U\in\operatorname{Gr}(12,M):
-       \dim(K\cap\operatorname{Sym}^2U)\ge15\}.
+       \dim(K\cap\operatorname{Sym}^2U)\ge13\}.
 \tag{5.1}
 \]
 
@@ -179,7 +179,8 @@ This is a closed projective determinantal locus, preserved by the diagonal
 row-column torus. The torus weights of the twenty-three cells of \(M\) are
 distinct, so its fixed points in \(\operatorname{Gr}(12,M)\) are coordinate
 twelve-planes. N6-105 enumerated all of them: precisely 34 fixed points lie
-in \(Z\), in six stabilizer orbits.
+in \(Z\), in six stabilizer orbits. Its exact histogram has no coordinate
+intersection dimension from thirteen through seventeen.
 
 The six fixed-point charts are now covered:
 
@@ -225,6 +226,15 @@ Thus \(U\in Z\), and (5.3) makes it a product. N6-068 proves that no actual
 complementary Chow pair has such a product shadow. This excludes the biflag
 branch (0.2). Together with N6-103, both second-shadow shapes are now
 impossible in that one scalar state.
+
+There is also a strict partial consequence for the \(a_2=72\) states with
+\(\kappa_2=1,2\). N6-103 supplies, on every complementary edge of the
+critical intersection graph, an actual section-difference space of dimension
+at least thirteen or fourteen. Its twelve-plane shadow lies in \(Z\), so
+(5.3) makes that shadow a product. N6-068, however, uses the full
+fifteen-dimensional section-difference space. Excluding actual product pairs
+with only thirteen or fourteen common quotient directions is a new open
+interface; it is not claimed here.
 
 The other nine states in the N6-102 table remain. In particular N6-107 does
 not prove ordinary lower 29, determine exact Chow rank 32, or give a

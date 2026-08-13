@@ -49,11 +49,12 @@ class TestN6107(unittest.TestCase):
         globalization = self.payload["globalization"]
         self.assertEqual(globalization["coordinate_fixed_point_count"], 34)
         self.assertEqual(sum(globalization["local_chart_coverage"].values()), 6)
-        self.assertIn("Every U in Z is a product", globalization["conclusion"])
+        self.assertIn("at least 13 is a product", globalization["conclusion"])
 
     def test_claim_boundary(self) -> None:
         self.assertIn("other nine", self.payload["remaining_lower29_frontier"])
         self.assertIn("does not prove ordinary lower 29", self.payload["remaining_lower29_frontier"])
+        self.assertIn("13- or 14-dimensional", self.payload["partial_section_difference_consequence"])
 
     def test_frozen_payload(self) -> None:
         self.assertEqual(json.loads(DATA.read_text(encoding="utf-8")), self.payload)
@@ -61,4 +62,3 @@ class TestN6107(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

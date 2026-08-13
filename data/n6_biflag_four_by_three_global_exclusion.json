@@ -11,7 +11,7 @@
     "minimum_fixed_weight_rank": 6,
     "orbit_certificates": [
       {
-        "conclusion": "Every rank-at-most-three leakage point has zero exception parameters.",
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
         "coordinate_exception_ranks_over_Q": [
           6,
           6,
@@ -32,10 +32,10 @@
         "mode": "column",
         "name": "4x3_two_core_columns",
         "pure_exception_weight_count": 12,
-        "rank_allowed_by_retaining_15_of_18_rectangles": 3
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5
       },
       {
-        "conclusion": "Every rank-at-most-three leakage point has zero exception parameters.",
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
         "coordinate_exception_ranks_over_Q": [
           6,
           6,
@@ -68,10 +68,10 @@
         "mode": "column",
         "name": "4x3_one_core_column",
         "pure_exception_weight_count": 24,
-        "rank_allowed_by_retaining_15_of_18_rectangles": 3
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5
       },
       {
-        "conclusion": "Every rank-at-most-three leakage point has zero exception parameters.",
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
         "coordinate_exception_ranks_over_Q": [
           6,
           6,
@@ -104,13 +104,13 @@
         "mode": "row",
         "name": "4x3_tail_row",
         "pure_exception_weight_count": 24,
-        "rank_allowed_by_retaining_15_of_18_rectangles": 3
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5
       }
     ]
   },
   "globalization": {
     "closed_product_locus": "Gr(3,R) x Gr(4,C) union Gr(4,R) x Gr(3,C)",
-    "conclusion": "Every U in Z is a product A3 tensor B4 or A4 tensor B3.",
+    "conclusion": "Every U with dim(K intersect Sym^2(U)) at least 13 is a product A3 tensor B4 or A4 tensor B3.",
     "coordinate_fixed_point_count": 34,
     "coordinate_orbit_count": 6,
     "local_chart_coverage": {
@@ -118,7 +118,7 @@
       "N6-106_3x4": 2,
       "N6-107_remaining_4x3": 3
     },
-    "projective_locus": "Z={U in Gr(12,M): dim(K intersect Sym^2(U)) at least 15}"
+    "projective_locus": "Z={U in Gr(12,M): dim(K intersect Sym^2(U)) at least 13}"
   },
   "linear_graph_reduction": {
     "minimum_rank_outside_every_kernel": 6,
@@ -249,8 +249,9 @@
         ]
       }
     ],
-    "rank_allowed_by_retaining_15_of_18_rectangles": 3
+    "rank_allowed_by_retaining_13_of_18_rectangles": 5
   },
+  "partial_section_difference_consequence": "At the a2=72 states with kappa2=1 or 2, every complementary-edge pair shadow carrying a 13- or 14-dimensional section difference is also a product. Excluding such partial actual section differences is a new open interface; N6-068 requires the full dimension fifteen.",
   "product_dimension_gate": {
     "noncore_R4_tensor_B3": {
       "branch_count": 9,

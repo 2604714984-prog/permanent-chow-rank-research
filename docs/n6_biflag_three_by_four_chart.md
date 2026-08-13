@@ -1,7 +1,7 @@
 # The biflag \(3\times4\) graph charts
 
 **Status.** `EXACT_QQ_BIFLAG_3X4_GRAPH_REDUCTION`,
-`PURE_3X4_PRODUCT_DIMENSION_GATE`,
+`PURE_3X4_THRESHOLD13_PRODUCT_DIMENSION_GATE`,
 `CERTIFIED_BIFLAG_3X4_ACTUAL_PAIR_EXCLUDED` (N6-106). The base field is
 algebraically closed of characteristic zero.
 
@@ -45,8 +45,8 @@ graph lifts define a leakage matrix with eighteen columns in
 \tag{1.2}
 \]
 
-If \(\dim(K\cap\operatorname{Sym}^2U)\ge15\), this matrix has rank at most
-three. This elementary observation is the only determinantal input below.
+If \(\dim(K\cap\operatorname{Sym}^2U)\ge13\), this matrix has rank at most
+five. This elementary observation is the only determinantal input below.
 
 ## 2. Linear-only quotient reductions
 
@@ -103,7 +103,7 @@ sets and computing their ranks over \(\mathbb Q\) proves
 \]
 
 Pass to the torus representation obtained by quotienting the graph-variable
-space by the displayed kernel. The projectivized rank-at-most-three locus in
+space by the displayed kernel. The projectivized rank-at-most-five locus in
 this quotient is torus-stable. If it were nonempty, its torus-orbit closure
 would contain a fixed weight line, contradicting (2.4). Hence on the
 missing-wing-column chart every desired graph has the form
@@ -163,8 +163,8 @@ The graph now factors exactly:
 \tag{3.4}
 \]
 
-Thus every high-intersection twelve-plane in either graph chart is a genuine
-product
+Thus every twelve-plane with intersection dimension at least thirteen in
+either graph chart is a genuine product
 
 \[
  U=A'_3\otimes B'_4.
@@ -174,7 +174,7 @@ product
 ## 4. The product dimension gate
 
 It remains to determine which products in (3.5) have intersection dimension
-at least fifteen. Let
+at least thirteen. Let
 
 \[
  P=\operatorname{Sym}^2A'_3\cap S_0(R),\qquad
@@ -201,7 +201,7 @@ restriction is \(b\), and the sixth ambient restriction is zero. Hence
 Therefore
 
 \[
- \dim(P\otimes Q)\ge15
+ \dim(P\otimes Q)\ge13
  \quad\Longleftrightarrow\quad
  |\operatorname{supp}(a)|\le1.
 \tag{4.3}
@@ -217,7 +217,7 @@ Every twelve-plane \(U\subset M\) that projects isomorphically to a
 coordinate \(3\times4\) product and satisfies
 
 \[
- \dim(E_2\cap\operatorname{Sym}^2U)\ge15
+ \dim(E_2\cap\operatorname{Sym}^2U)\ge13
 \]
 
 is a product \(A'_3\otimes B'_4\), with the missing-row functional supported

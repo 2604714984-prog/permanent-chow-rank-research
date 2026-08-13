@@ -294,8 +294,8 @@ def exception_certificate(
         "pure_exception_weight_count": len(pure_exception_keys),
         "coordinate_exception_ranks_over_Q": coordinate_ranks,
         "minimum_fixed_weight_rank": min(coordinate_ranks),
-        "rank_allowed_by_retaining_15_of_18_rectangles": 3,
-        "conclusion": "Every rank-at-most-three leakage point has zero exception parameters.",
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5,
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
     }
 
 
@@ -326,7 +326,7 @@ def build_payload() -> dict[str, object]:
         "linear_graph_reduction": {
             "orbit_certificates": linear,
             "minimum_rank_outside_every_kernel": 6,
-            "rank_allowed_by_retaining_15_of_18_rectangles": 3,
+            "rank_allowed_by_retaining_13_of_18_rectangles": 5,
         },
         "exception_reduction": {
             "orbit_certificates": exception,
@@ -352,7 +352,7 @@ def build_payload() -> dict[str, object]:
         },
         "globalization": {
             "projective_locus": (
-                "Z={U in Gr(12,M): dim(K intersect Sym^2(U)) at least 15}"
+                "Z={U in Gr(12,M): dim(K intersect Sym^2(U)) at least 13}"
             ),
             "coordinate_fixed_point_count": 34,
             "coordinate_orbit_count": 6,
@@ -365,13 +365,20 @@ def build_payload() -> dict[str, object]:
                 "Gr(3,R) x Gr(4,C) union Gr(4,R) x Gr(3,C)"
             ),
             "conclusion": (
-                "Every U in Z is a product A3 tensor B4 or A4 tensor B3."
+                "Every U with dim(K intersect Sym^2(U)) at least 13 is a product "
+                "A3 tensor B4 or A4 tensor B3."
             ),
         },
         "actual_pair_consequence": (
             "N6-068 excludes an actual complementary Chow pair on every product U in Z. "
             "Therefore the biflag second-shadow branch at "
             "(a2,kappa2,t2)=(72,3,15) is impossible."
+        ),
+        "partial_section_difference_consequence": (
+            "At the a2=72 states with kappa2=1 or 2, every complementary-edge pair "
+            "shadow carrying a 13- or 14-dimensional section difference is also a product. "
+            "Excluding such partial actual section differences is a new open interface; "
+            "N6-068 requires the full dimension fifteen."
         ),
         "remaining_lower29_frontier": (
             "The other nine N6-102 scalar states remain. In particular this theorem does "

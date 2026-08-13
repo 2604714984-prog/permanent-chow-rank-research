@@ -49,6 +49,7 @@ class TestN6106(unittest.TestCase):
         gate = self.payload["product_dimension_gate"]
         self.assertEqual(gate["row_parameter_support_at_most_one"]["intersection_dimensions"], [15, 18])
         self.assertEqual(gate["row_parameter_support_at_least_two"]["intersection_dimensions"], [10, 12])
+        self.assertIn("at least 13", gate["conclusion"])
 
     def test_claim_boundary(self) -> None:
         boundary = self.payload["claim_boundary"]

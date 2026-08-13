@@ -484,9 +484,9 @@ def corner_defect_certificate(
         "pure_corner_defect_quotient_weight_count": len(pure_defect_keys),
         "coordinate_corner_defect_ranks_over_Q": coordinate_ranks,
         "minimum_fixed_weight_rank": min(coordinate_ranks),
-        "rank_allowed_by_a_fifteen_plane": 3,
+        "rank_allowed_by_a_thirteen_plane": 5,
         "conclusion": (
-            "Every rank-at-most-three leakage point has zero tail parameters and "
+            "Every rank-at-most-five leakage point has zero tail parameters and "
             "gamma=a tensor b."
         ),
     }
@@ -516,7 +516,7 @@ def build_payload() -> dict[str, object]:
     return {
         "status": [
             "EXACT_QQ_BIFLAG_3X4_GRAPH_REDUCTION",
-            "PURE_3X4_PRODUCT_DIMENSION_GATE",
+            "PURE_3X4_THRESHOLD13_PRODUCT_DIMENSION_GATE",
             "CERTIFIED_BIFLAG_3X4_ACTUAL_PAIR_EXCLUDED",
             "N6-106",
         ],
@@ -533,7 +533,7 @@ def build_payload() -> dict[str, object]:
                 "twelve-coordinate corner gamma, and on the missing-core-column orbit "
                 "twelve additional tail coordinates"
             ),
-            "rank_allowed_by_retaining_15_of_18_rectangles": 3,
+            "rank_allowed_by_retaining_13_of_18_rectangles": 5,
         },
         "tail_and_corner_defect_reduction": {
             "orbit_certificates": corner,
@@ -556,13 +556,14 @@ def build_payload() -> dict[str, object]:
                 "intersection_dimensions": [10, 12],
             },
             "conclusion": (
-                "Intersection dimension at least 15 holds exactly when the missing-row "
+                "Intersection dimension at least 13 holds exactly when the missing-row "
                 "functional uses at most one selected coordinate."
             ),
         },
         "actual_pair_consequence": (
-            "N6-068 excludes every actual complementary Chow pair on both complete 3x4 "
-            "graph charts."
+            "Every graph-chart U with intersection dimension at least 13 is a product. "
+            "N6-068 excludes an actual complementary Chow pair when its full "
+            "fifteen-dimensional section-difference space is present."
         ),
         "remaining_geometric_interface": (
             "The four 4x3 endpoint orbits remain, although the core orbit was excluded "
