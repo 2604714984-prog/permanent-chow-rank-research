@@ -2418,3 +2418,36 @@ row slices.
 This strengthens the product endpoint but does not classify the thousands
 of nonproduct threshold-twelve planes in the two N6-101 geometries. The
 full \(\kappa_2=0\) six-color exclusion remains open.
+
+## 2026-08-13: nonproduct (e=12) pair components are diagonal
+
+N6-112 treats the threshold-twelve planes left open by N6-111. For each of
+the standard and biflag N6-101 coordinate hooks it enumerates all
+
+\[
+ \binom{23}{12}=1,352,078
+\]
+
+coordinate twelve-planes. The standard intersection histogram above twelve
+is (4872,3,6,34) in dimensions (12,14,15,18); the biflag histogram is
+(5124,34) in dimensions (12,18). All dimension-twelve supports are
+nonproduct, while every larger support is a (2\times6), (3\times4), or
+(4\times3) product.
+
+For an (e=12) support the quadratic twelve-plane is unique. Encoding its
+rectangle permanents by their two opposite-corner edges gives the complete
+coordinate cross-free pair count: 4,704 standard and 4,920 biflag supports
+have exactly one ordered pair, always (P=Q); the remaining 168 and 204
+supports have none. At every one of the 9,624 fixed endpoints, the full
+(432\times72) Jacobian in the two Grassmann pair variables has rank 72
+over \(\mathbf F_2\), hence also over \(\mathbf Q\).
+
+The formal implicit-function theorem makes (P,Q) unique relative to the
+base data. Since the incidence is invariant under swapping them, uniqueness
+forces (P=Q) on the entire completed germ. Projective torus globalization
+then puts every component with an (e=12) fixed point in the diagonal, so it
+cannot contain an actual complementary pair. The remaining actual-pair
+components must specialize to 43 standard or 34 biflag product supports.
+The (3\times4/4\times3) twelve-dimensional equality case is still open, so
+this does not yet exclude the full \(\kappa_2=0\) branches or prove ordinary
+lower 29.
