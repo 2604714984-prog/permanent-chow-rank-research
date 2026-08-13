@@ -1,0 +1,143 @@
+{
+  "claim_boundary": "This proves the 79-to-80 same-shadow extension and second shadow 24. It does not classify 78-planes, does not by itself exclude an actual seven-frame x=79 packet, does not exclude global b=34, and makes no border-rank claim.",
+  "coordinate_fixed_points": {
+    "all_children_have_first_shadow_90": true,
+    "distinct_coordinate_79_plane_count": 2400,
+    "every_coordinate_equality_support_has_a_unique_80_plane_product_parent": true,
+    "labelled_80_plane_parent_count": 30,
+    "labelled_parent_cell_deletions": 2400,
+    "minimizing_ferrers_profiles": [
+      [
+        20,
+        20,
+        20,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3
+      ]
+    ],
+    "minimum_first_product_shadow": 90,
+    "original_support_classification_proved_without_reverse_compression": true,
+    "parent_multiplicity_histogram": {
+      "1": 2400
+    }
+  },
+  "formal_germ": {
+    "boolean_component_count": 16,
+    "complete_formal_germ_is_union_of_relative_hyperplane_branches": true,
+    "component_dimension": 81,
+    "forbidden_quadratic_generator_count": 12,
+    "initial_ideal_is_parent_J_extended_by_79_smooth_variables": true,
+    "linear_dimension": 87,
+    "parent_boolean_variable_count": 8,
+    "smooth_relative_hyperplane_factor_dimension": 79
+  },
+  "local_representatives": [
+    {
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 167085,
+        "nonzero_raw_row_count": 1422,
+        "raw_coefficient_histogram": {
+          "2": 1422
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "coordinate_prolongation_is_the_unique_80_plane_parent": true,
+        "eta_only_root_count": 0,
+        "free_dimension": 87,
+        "parent_and_relative_coordinates_are_disjoint": true,
+        "parent_linear_dimension": 8,
+        "relative_hyperplane_dimension": 79
+      },
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "combined_block_jacobian_rank": 81,
+        "count": 16,
+        "dimension": 81,
+        "n6082_boolean_jacobian_is_exact_2_by_2_identity": true,
+        "tautological_hyperplane_chart_jacobian_is_79_by_79_identity": true
+      }
+    },
+    {
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 167085,
+        "nonzero_raw_row_count": 1422,
+        "raw_coefficient_histogram": {
+          "2": 1422
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "coordinate_prolongation_is_the_unique_80_plane_parent": true,
+        "eta_only_root_count": 0,
+        "free_dimension": 87,
+        "parent_and_relative_coordinates_are_disjoint": true,
+        "parent_linear_dimension": 8,
+        "relative_hyperplane_dimension": 79
+      },
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "combined_block_jacobian_rank": 81,
+        "count": 16,
+        "dimension": 81,
+        "n6082_boolean_jacobian_is_exact_2_by_2_identity": true,
+        "tautological_hyperplane_chart_jacobian_is_79_by_79_identity": true
+      }
+    }
+  ],
+  "projective_globalization": {
+    "every_79_to_90_plane_extends_to_an_80_to_90_plane_with_the_same_90_shadow": true,
+    "every_79_to_90_plane_has_second_shadow_dimension_24": true,
+    "extension_is_unique_locally_at_every_torus_fixed_point": true,
+    "proof_interface": "The relative projective hyperplane bundle over the N6-082 product locus is closed. At every fixed point the complete germ equals its sixteen relative branches. Every projective torus-stable component contains such a fixed point, hence is contained in the closed relative image.",
+    "second_shadow_is_partitioned_4_by_6_product_or_transpose": true
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_B79_EQUALITY_LOCUS_EXTENSION",
+    "EXACT_INTEGER_LINEAR_AND_QUADRATIC_ELIMINATION",
+    "N6-084"
+  ]
+}

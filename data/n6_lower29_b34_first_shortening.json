@@ -1,0 +1,292 @@
+{
+  "claim_boundary": "This certificate does not exclude either branch of the alternative, does not exclude global b=34, does not prove ChowRank(perm_6)>=29, and makes no border-rank claim.",
+  "conditional_f80_state_pruning": {
+    "defect_budget": 3,
+    "exact_product_shadow": 90,
+    "existing_cap_excluded_count": 10,
+    "forced_x_A": 80,
+    "hypothesis": "some residual seven-set A has f_A=80",
+    "pre_geometry_survivor_count": 1,
+    "state_count": 11,
+    "states": [
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 140,
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "excluded_by_existing_cap": false,
+        "existing_cap": null,
+        "kappa2": 0,
+        "required_prolongation_lower": 460,
+        "t2_upper": 15
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 138,
+        "d2": 104,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 453,
+        "kappa2": 1,
+        "required_prolongation_lower": 458,
+        "t2_upper": 14
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 136,
+        "d2": 103,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 440,
+        "kappa2": 2,
+        "required_prolongation_lower": 456,
+        "t2_upper": 13
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 132,
+        "d2": 102,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 436,
+        "kappa2": 3,
+        "required_prolongation_lower": 452,
+        "t2_upper": 12
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 140,
+        "d2": 104,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 453,
+        "kappa2": 0,
+        "required_prolongation_lower": 460,
+        "t2_upper": 14
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 138,
+        "d2": 103,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 440,
+        "kappa2": 1,
+        "required_prolongation_lower": 458,
+        "t2_upper": 13
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 136,
+        "d2": 102,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 436,
+        "kappa2": 2,
+        "required_prolongation_lower": 456,
+        "t2_upper": 12
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 138,
+        "d2": 103,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 440,
+        "kappa2": 0,
+        "required_prolongation_lower": 458,
+        "t2_upper": 13
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 136,
+        "d2": 102,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 436,
+        "kappa2": 1,
+        "required_prolongation_lower": 456,
+        "t2_upper": 12
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 140,
+        "d2": 103,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 440,
+        "kappa2": 0,
+        "required_prolongation_lower": 460,
+        "t2_upper": 13
+      },
+      {
+        "a2_lower": 90,
+        "conservative_h_lower": 138,
+        "d2": 102,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "excluded_by_existing_cap": true,
+        "existing_cap": 436,
+        "kappa2": 1,
+        "required_prolongation_lower": 458,
+        "t2_upper": 12
+      }
+    ]
+  },
+  "global_hypothesis": {
+    "coupled_residual_intersection_floor": 366,
+    "fixed_terms": 6,
+    "global_b": 34,
+    "residual_terms": 22,
+    "total_terms": 28
+  },
+  "next_geometric_target": "Classify or exclude the actual seven-frame 80-to-90 endpoint; separately, continue shortening the branch in which every seven-set has f_A<=79.",
+  "seven_set_shortening": {
+    "every_f_A_upper": 80,
+    "every_fifteen_set_literal_dimension_floor": 286,
+    "every_seven_set_literal_dimension_floor": 126,
+    "exact_product_shadow_table_66_to_81": {
+      "66": 87,
+      "67": 87,
+      "68": 87,
+      "69": 89,
+      "70": 89,
+      "71": 89,
+      "72": 89,
+      "73": 90,
+      "74": 90,
+      "75": 90,
+      "76": 90,
+      "77": 90,
+      "78": 90,
+      "79": 90,
+      "80": 90,
+      "81": 96
+    },
+    "quadratic_projection_cap": 93,
+    "universal_x_A_upper": 80
+  },
+  "status": "N6_081_B34_FIRST_SHORTENING_EXACT_ENDPOINT",
+  "strict_conclusion": "Any global b=34 survivor either has f_A<=79 for every residual seven-set A, or contains the displayed exact 80-to-90 common-W15 seven-frame endpoint.",
+  "unique_endpoint": {
+    "a2": 90,
+    "all_quotient_images_equal_one_common_W15": true,
+    "alpha": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "alpha_at_most_two_cap": 458,
+    "central_first_shadow_dimension": 90,
+    "central_space_dimension": 80,
+    "d2": 105,
+    "epsilon": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "kappa2": 0,
+    "literal_middle_dimension": 140,
+    "required_prolongation_lower": 460,
+    "seven_middle_spaces_literal_direct": true,
+    "seven_quadratic_spaces_literal_direct": true,
+    "six_anchor_differences_span_the_90_plane": true,
+    "strict_cap_gap": 2,
+    "t2": 15
+  }
+}

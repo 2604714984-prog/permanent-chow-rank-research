@@ -1752,3 +1752,46 @@ the other seven states require new coupled or termwise control at quotient
 dimensions 16--18. N6-080 is conditional on reaching the local
 66-dimensional equality packet; it does not exclude global \(b=34\), prove
 ordinary lower 29, or imply a border-rank bound.
+
+## 2026-08-13: the \(b=34\) product-shadow-90 shortening ladder
+
+N6-081 replaces the conditional 66-plane packet by the first hereditary
+seven-set shortening statement. The exact product-shadow jump
+\(m_{80}=90<m_{81}=96\), against the seven-term cap 93, gives
+\(x_A,f_A\le80\). If \(f_A=80\), eleven scalar relation states remain before
+prolongation; ten are excluded by the existing \(t_2\le14\) caps, and the
+last is forced to seven literal-direct quadratic spaces over one common
+\(W_{15}\).
+
+N6-082 classifies the full \(80\to90\) equality locus. There are thirty
+coordinate fixed points. Their complete incidence tangent space has eight
+variables, the grounded quadratic initial ideal is
+\(I(K_4)+I(K_4)\), and its sixteen two-dimensional branches are actual
+partitioned row shears or their transposes. Formal lifting and projective
+torus globalization show that every equality point has a genuine
+\(4\times6\) product second shadow of dimension 24.
+
+N6-083 excludes the resulting actual seven-frame endpoint. If a row or
+column block is invertible, common-quotient rigidity makes all seven frames
+separated and reduces their row factors to seven of the eight projective
+four-variable sign lines. Exact rational character ranks are
+\((7,6,7,3)\), so the cubic permanent intersection is only \(3\cdot20=60\).
+If all active blocks are singular, common-quotient synchronization makes
+each of the four active row blocks rank at most one, incompatible with a
+rank-six factor frame.
+
+N6-084 and N6-086 prove the relative \(79\to80\) and \(78\to80\) same-shadow
+extensions. The former has local dimension \(8+79=87\). The latter checks
+all fourteen stabilizer orbits of two-cell deletions and has local dimension
+\(8+156=164\). In both cases the only quadratic initial ideal is the same
+twelve-generator parent ideal, with no relative-variable generator.
+N6-085 and N6-087 apply the actual endpoint exclusion to these two layers.
+The strict consequence is now
+
+\[
+ \boxed{x_A\le77,\qquad f_A\le77}
+\]
+
+for every residual seven-set in any global \(b=34\) survivor. The next
+unresolved object is the \(77\to90\) equality locus. Global \(b=34\),
+ordinary lower 29, exact rank 32, and every border-rank claim remain open.

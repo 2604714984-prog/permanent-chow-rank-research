@@ -1,0 +1,150 @@
+{
+  "all_singular_branch": {
+    "contradiction": true,
+    "each_of_four_active_row_blocks_has_rank_at_most_one": true,
+    "factor_frame_rank_upper": 4,
+    "required_factor_frame_rank": 6,
+    "same_row_common_quotient_synchronization_reapplied_to_seven_colors": true
+  },
+  "claim_boundary": "This removes only the x=80 branch of the N6-081 alternative. It does not exclude the remaining f_A<=79 branch, does not exclude global b=34, does not prove ChowRank(perm_6)>=29, and makes no border-rank claim.",
+  "endpoint_input": {
+    "all_middle_spaces_literal_direct": true,
+    "all_quadratic_spaces_literal_direct": true,
+    "central_dimension": 80,
+    "common_quotient_dimension": 15,
+    "first_shadow_dimension": 90,
+    "middle_space_dimension_each": 20,
+    "quadratic_space_dimension_each": 15,
+    "quadratic_spaces": 7,
+    "second_shadow_dimension": 24,
+    "second_shadow_is_partitioned_4_by_6_product_or_transpose": true,
+    "six_anchor_differences_span_the_90_plane": true
+  },
+  "invertible_block_branch": {
+    "contradicts_required_dimension": 80,
+    "n6069_reapplied_in_partitioned_product_coordinates": true,
+    "n6070_pair_rigidity_forces_each_term_to_have_one_fixed_row_line": true,
+    "one_invertible_row_block_forces_a_column_separated_pair": true,
+    "resulting_cubic_permanent_intersection_dimension": 60,
+    "seven_independent_row_squares_are_seven_of_eight_projective_sign_lines": true,
+    "shared_quotient_domain_argument_propagates_column_separation_to_all_seven_terms": true,
+    "sign_cube_exact_certificate": {
+      "all_cases_have_rank_signature_7_6_7_3": true,
+      "cubic_squarefree_dimension": 4,
+      "projective_sign_line_count": 8,
+      "quadratic_squarefree_dimension": 6,
+      "rows": [
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        },
+        {
+          "cubic_squarefree_intersection_dimension": 3,
+          "omitted_sign_line": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "quadratic_squarefree_intersection_dimension": 6,
+          "seven_cubic_powers_rank": 7,
+          "seven_quadratic_powers_rank": 7
+        }
+      ],
+      "seven_of_eight_case_count": 8
+    }
+  },
+  "pairwise_transversality": {
+    "containment_upper_from_two_factor_spans": 12,
+    "difference_plane_dimension": 15,
+    "every_pair_of_factor_six_planes_is_complementary": true,
+    "sum_of_the_seven_factor_planes_is_the_24_plane": true,
+    "universal_difference_shadow_lower": 12
+  },
+  "status": [
+    "PURE_ACTUAL_SEVEN_FRAME_X80_ENDPOINT_EXCLUSION",
+    "EXACT_QQ_SIGN_CUBE_REPLAY",
+    "N6-083"
+  ],
+  "strict_conclusion": "The exact common-W15 seven-frame 80-to-90 endpoint in N6-081 is not Chow realizable. Therefore every global b=34 survivor must satisfy f_A<=79 for every residual seven-set A."
+}

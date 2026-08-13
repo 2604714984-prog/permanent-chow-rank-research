@@ -1,0 +1,53 @@
+{
+  "claim_boundary": "This excludes only the x_A=78 layer. It does not classify 77-planes, does not exclude global b=34, does not prove ChowRank(perm_6)>=29, and makes no border-rank claim.",
+  "conditional_x78_packet": {
+    "alpha_at_most_two_cap": 458,
+    "exact_first_shadow_dimension": 90,
+    "excluded": true,
+    "forced_a2": 90,
+    "forced_alpha": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "forced_common_W15": true,
+    "forced_literal_middle_dimension": 140,
+    "n6083_actual_block_dichotomy_reapplies_because_78_is_greater_than_60": true,
+    "n6086_extends_to_partitioned_80_to_90_product_locus": true,
+    "quadratic_projection_cap": 93,
+    "relation_state_count": 11,
+    "required_prolongation_lower": 462,
+    "strict_cap_gap": 4,
+    "t_at_most_14_states_excluded_count": 10,
+    "unique_pre_geometry_state": {
+      "d2": 105,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kappa2": 0,
+      "t2": 15
+    }
+  },
+  "improved_literal_floors": {
+    "every_fifteen_set_literal_dimension_floor": 288,
+    "every_seven_set_literal_dimension_floor": 128
+  },
+  "input_after_n6085": "every residual seven-set has x_A<=78 and f_A<=78",
+  "next_target": "the 77-to-90 equality locus and the next hereditary shortening step",
+  "status": [
+    "PURE_B34_SEVEN_SET_X78_EXCLUSION",
+    "EXACT_RELATION_STATE_REPLAY",
+    "N6-087"
+  ],
+  "strict_conclusion": "Every global b=34 survivor satisfies x_A<=77 and f_A<=77 for every residual seven-set A."
+}
