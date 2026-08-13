@@ -2385,3 +2385,36 @@ hence equal, \(L_i\oplus L_j\). The six factor planes are pairwise transverse
 and their sum is the N6-101 23-plane. The remaining problem is now the
 actual six-color exclusion inside the standard and biflag 23-planes, not a
 pair-shadow collision.
+
+## 2026-08-13: the partial \(2\times6\) threshold drops to twelve
+
+N6-111 extends the N6-109 two-row theorem from dimension thirteen to
+dimension twelve. The multiplier defect allowed by a twelve-plane is three,
+still below the exact nonscalar torus-fixed minimum five. All 455 coordinate
+twelve-edge subspaces retain at least six perfect matchings, so every
+twelve-plane in \(S_0(k^6)\) contains an invertible matrix.
+
+The only new ratio-algebra possibility is a three-dimensional invariant
+space. The coordinate maxima of
+
+\[
+ T(H,Z)=\{B\in S_0:BZ\subset H\}
+\]
+
+for dimensions one through five are \((11,10,12,10,11)\). The rank-twelve
+locus has twenty fixed points, with \(H\) and \(Z\) complementary coordinate
+three-planes. Its exact \(54\times18\) tangent matrix has rank eighteen, so
+the projective locus consists only of those reduced points.
+
+At a standard point, \(Q\) consists of the twelve zero-diagonal symmetric
+matrices whose lower-right \(3\times3\) block vanishes. Ratios by a cross
+perfect matching generate the full 27-dimensional block upper parabolic.
+Its six-dimensional submodules in \(k^2\otimes k^6\) are
+\(k^2\otimes H_3\) and \(p\otimes k^6\); only two submodules of the latter
+kind can be complementary. Thus every actual complementary pair in a
+twelve-dimensional full \(2\times6\) section is again a pair of complete
+row slices.
+
+This strengthens the product endpoint but does not classify the thousands
+of nonproduct threshold-twelve planes in the two N6-101 geometries. The
+full \(\kappa_2=0\) six-color exclusion remains open.
