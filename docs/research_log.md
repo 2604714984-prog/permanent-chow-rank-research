@@ -1900,3 +1900,47 @@ The \(x_A=72\) frontier now consists of two packets: the direct \(t_2=16\)
 packet and the one-positive-epsilon defective \(t_2=15\) packet. Global
 \(b=34\), ordinary lower 29, exact rank 32, and all border-rank claims remain
 open.
+
+N6-095 computes the first global \(t_2=16\) prolongation cap. At an
+extremal coordinate six-plane, a fixed sixteen-dimensional quotient is a
+local twelve-axis plane plus four arbitrary axes.  Möbius inversion in the
+3136 cubic weight blocks reduces the exact four-axis optimization to the
+exhaustive pair-, triple-, and quadruple-correction cases.  Across all 1683
+local quotient orbits the modular nullity maximum is 462, a rigorous
+characteristic-zero upper bound.  The same fixed reduction covers the
+actual alpha-one closure.
+
+N6-096 treats the missing alpha-two one-rectangle boundary. It exhausts
+173388 local quotient orbits and evaluates 3849632 interacting axis pairs
+after a certified pruning step: an independent all-block audit proves that
+one shared cubic block contributes at most one unit of pair correction.  The
+twelve support caps are
+
+\[
+464,455,456,453,453,453,464,455,453,445,445,445.
+\]
+
+Thus a direct \(x_A=72\) packet containing any term with
+\(\alpha\le2\) has prolongation dimension at most 464, below the required
+468.
+
+N6-097 closes both residual packets by six-term shortening. In the direct
+packet, N6-096 first forces all seven alpha values to equal three.  Omitting
+any one of the seven literal-direct twenty-dimensional cubic spaces leaves
+at least a 52-plane inside the remaining six.  Its product shadow has
+dimension at least \(m_{52}=78\), whereas the six all-alpha-three quadratic
+spaces have permanent relation space of dimension at most \(90-15=75\).
+For the one-defective packet, omit the defective term; the six full terms
+have common quotient \(W_{15}\), so the same relation space has dimension
+exactly 75 and the identical \(78\le75\) contradiction applies.
+
+Together with N6-094, all three N6-093 packets are impossible.  The strict
+updated shortening statement is
+
+\[
+\boxed{x_A\le71}
+\]
+
+for every residual seven-set in a global \(b=34\) survivor.  The layers
+\(x_A\le71\), global \(b=34\), ordinary lower 29, exact rank 32, and all
+border-rank claims remain open.

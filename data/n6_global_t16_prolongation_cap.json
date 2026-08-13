@@ -1,0 +1,127 @@
+{
+  "ambient_quotient_axis_count": 441,
+  "arithmetic": "exact ranks modulo 1000003; modular nullities are rigorous characteristic-zero upper bounds",
+  "characteristic_zero_prolongation_upper_cap_t16": 462,
+  "claim_boundary": "This cap covers the extremal and alpha-one closures. The one-rectangle alpha-two boundary requires a separate exhaustive calculation. It makes no border-rank or lower29 claim by itself.",
+  "extra_axis_count": 4,
+  "extra_axis_quadruples_per_W": 1391641251,
+  "fixed_W_count": 18564,
+  "fixed_W_orbit_representative_count": 1683,
+  "fixed_W_orbit_size_histogram": {
+    "1": 3,
+    "12": 1426,
+    "2": 6,
+    "3": 17,
+    "6": 231
+  },
+  "fixed_cubic_weight_block_count": 3136,
+  "local_quotient_axis_count": 18,
+  "prime": 1000003,
+  "represented_fixed_configurations": 25834428183564,
+  "sample_maximizer": {
+    "W_axes": [
+      [
+        "column",
+        0,
+        0,
+        1
+      ],
+      [
+        "column",
+        1,
+        0,
+        1
+      ],
+      [
+        "rectangle",
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        "row",
+        0,
+        0,
+        1
+      ],
+      [
+        "row",
+        0,
+        0,
+        2
+      ],
+      [
+        "row",
+        0,
+        1,
+        2
+      ],
+      [
+        "row",
+        1,
+        0,
+        1
+      ],
+      [
+        "row",
+        1,
+        0,
+        2
+      ],
+      [
+        "square",
+        0
+      ],
+      [
+        "square",
+        1
+      ],
+      [
+        "square",
+        6
+      ],
+      [
+        "square",
+        7
+      ]
+    ],
+    "base_prolongation_dimension": 432,
+    "extra_axes": [
+      [
+        "row",
+        0,
+        0,
+        3
+      ],
+      [
+        "row",
+        0,
+        1,
+        3
+      ],
+      [
+        "row",
+        0,
+        2,
+        3
+      ],
+      [
+        "row",
+        1,
+        1,
+        2
+      ]
+    ],
+    "four_axis_increment": 30,
+    "maximizer_source": "pair",
+    "nonzero_correction_counts": {
+      "2": 1423,
+      "3": 7925,
+      "4": 8092
+    },
+    "representative_index": 484
+  },
+  "status": "N6_095_GLOBAL_T16_PROLONGATION_CAP",
+  "strict_conclusion": "The projective fixed-point reduction and exhaustive four-axis optimization give the characteristic-zero upper cap 462 for a sixteen-dimensional global quadratic quotient containing an extremal actual term or a term on the actual alpha-one closure."
+}
