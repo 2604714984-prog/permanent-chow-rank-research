@@ -1681,7 +1681,10 @@ Exact coordinate classification finds 36,000 such
 supports, each with a unique extension to one of the N6-064 50-dimensional
 hook supports.  This does not yet globalize: extendability is a closed
 kernel-jump condition, so a torus-specialized coordinate point may extend
-even when a general noncoordinate point does not.  The current lower-29
-frontier is therefore \(b=31,\ldots,46\).  The next minimal theorem is a
+even when a general noncoordinate point does not.  The all-`alpha=3` states
+at \(b=47,48,49\) have the same unresolved issue: N6-072 uses the
+50-dimensional N6-064 hook theorem and cannot be applied directly to a
+47-, 48-, or 49-plane.  The current lower-29 frontier is therefore
+\(b=31,\ldots,49\).  The next minimal theorem is a
 noncoordinate `49 -> 75` equality classification or an extension theorem to
 the `50 -> 75` hook locus.  No ordinary lower-29 or border-rank claim is made.
