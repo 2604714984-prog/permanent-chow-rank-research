@@ -1,0 +1,54 @@
+{
+  "claim_boundary": "Every same-row projection annihilates E2, so it also annihilates all delta_i. Thus six-color directness supplies no additional single-row equation capable of removing the local rank-five Cremona freedom in G-050. The theorem does not exclude the all-singular layer or the b=50 endpoint, prove lower 28, or make a border-rank claim. A further argument must combine distinct-row or distinct-column blocks using the full permanent quotient, or use the global K75 shadow geometry.",
+  "directness_reformulation": "With section lifts s_i:W->F_i and delta_i=s_i-s_1, literal directness of the six F_i is equivalent to injectivity of Delta=(delta_2,...,delta_6):W^5->E2; its image is K75.",
+  "pure_conclusion": "For each ambient row r, the six maps mu_(i,r) factor as theta_r composed with the six isomorphisms S0->W. Therefore their ranks and images are common. In the all-singular layer, one rank-five block with full-support kernel forces all six blocks in that row to have rank five, full-support kernels, and one common five-dimensional image plane. The transposed statement holds for ambient columns.",
+  "rank_five_kernel_support_replay": [
+    {
+      "exact_compression_rank": 15,
+      "formula_rank": 15,
+      "kernel_representative": [1, 1, 1, 1, 1, 1],
+      "kernel_zero_count": 0,
+      "row_block_rank": 5
+    },
+    {
+      "exact_compression_rank": 14,
+      "formula_rank": 14,
+      "kernel_representative": [0, 1, 1, 1, 1, 1],
+      "kernel_zero_count": 1,
+      "row_block_rank": 5
+    },
+    {
+      "exact_compression_rank": 13,
+      "formula_rank": 13,
+      "kernel_representative": [0, 0, 1, 1, 1, 1],
+      "kernel_zero_count": 2,
+      "row_block_rank": 5
+    },
+    {
+      "exact_compression_rank": 12,
+      "formula_rank": 12,
+      "kernel_representative": [0, 0, 0, 1, 1, 1],
+      "kernel_zero_count": 3,
+      "row_block_rank": 5
+    },
+    {
+      "exact_compression_rank": 11,
+      "formula_rank": 11,
+      "kernel_representative": [0, 0, 0, 0, 1, 1],
+      "kernel_zero_count": 4,
+      "row_block_rank": 5
+    },
+    {
+      "exact_compression_rank": 10,
+      "formula_rank": 10,
+      "kernel_representative": [0, 0, 0, 0, 0, 1],
+      "kernel_zero_count": 5,
+      "row_block_rank": 5
+    }
+  ],
+  "status": [
+    "PURE_SIX_COLOR_ROW_RANK_SYNCHRONIZATION",
+    "EXACT_QQ_RANK_FORMULA_REGRESSION",
+    "N6-071"
+  ]
+}
