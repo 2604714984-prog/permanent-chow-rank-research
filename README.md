@@ -308,6 +308,8 @@ The extremal six-plane theorem remains an independent structural result. At a co
 
 The remaining `K_3,2` rank-three product stratum contains genuine complementary cross-rank-six points, so the relaxed cross-free incidence cannot simply be declared empty. N6-115 classifies the induced complementary `2+2` column equality locus: it consists of harmonic graph pairs along a coordinate matching. The resulting common-`A_3` product family has a 12-dimensional cross-free kernel but both Chow-block projections have rank only 9, so it cannot be an actual 12-dimensional section difference. A bounded streaming screen of `2*6!*2^5=46,080` signed-permutation graphs finds four rank-six `K_3,2` candidates and none at `K_2,3`; all four survivors have exact rational block rank 9. Exhaustion of every rank-three formal component remains open.
 
+At the other `K_3,2` first-order pattern, represented by one cross-row elementary graph move, N6-116 computes the full `360 x 72` linear Schur system (rank 64) and its quadratic cokernel. The seven surviving quadrics form a squarefree monomial ideal with four maximal facets. Every facet moves the pair inside a common coordinate eight-space, so the reduced quadratic tangent-cone support is noncomplementary. The remaining issue is all-order: quadratic containment alone does not prove that a corrected formal branch stays in that eight-space union.
+
 ## Layout
 
 ```text

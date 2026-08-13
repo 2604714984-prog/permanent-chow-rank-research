@@ -1,0 +1,213 @@
+{
+  "certificate": "N6-116",
+  "status": "EXACT_SINGLE_CROSS_LINEAR_AND_QUADRATIC_TANGENT_CONE_REDUCTION",
+  "field": "characteristic zero",
+  "local_system": {
+    "base": {
+      "cross_rank_over_QQ": 6,
+      "sum_rank_over_QQ": 7
+    },
+    "linear_system_shape": [
+      360,
+      72
+    ],
+    "modular_linear_rank_lower_bound": 64,
+    "explicit_QQ_kernel_dimension": 8,
+    "exact_QQ_linear_rank": 64,
+    "tangent_variable_labels": [
+      [
+        {
+          "side": "L",
+          "target": 6,
+          "source": 0,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 6,
+          "source": 0,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 7,
+          "source": 0,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 7,
+          "source": 0,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 10,
+          "source": 0,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 10,
+          "source": 0,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 6,
+          "source": 1,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 6,
+          "source": 1,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 10,
+          "source": 1,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 10,
+          "source": 1,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 2,
+          "source": 0,
+          "coefficient": -1
+        },
+        {
+          "side": "L",
+          "target": 6,
+          "source": 4,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 2,
+          "source": 0,
+          "coefficient": 1
+        },
+        {
+          "side": "M",
+          "target": 6,
+          "source": 4,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 6,
+          "source": 8,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 6,
+          "source": 8,
+          "coefficient": 1
+        }
+      ],
+      [
+        {
+          "side": "L",
+          "target": 6,
+          "source": 9,
+          "coefficient": -1
+        },
+        {
+          "side": "M",
+          "target": 6,
+          "source": 9,
+          "coefficient": 1
+        }
+      ]
+    ],
+    "quadratic_monomial_count": 36,
+    "quadratic_cokernel_rank_over_QQ": 7,
+    "quadratic_initial_generators": [
+      "x1*x2",
+      "x1*x4",
+      "x1*x5",
+      "x2*x5",
+      "x4*x5",
+      "x4*x6",
+      "x4*x7"
+    ],
+    "squarefree_initial_ideal": true,
+    "maximal_facets": [
+      [
+        0,
+        1,
+        3,
+        6,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        3,
+        6,
+        7
+      ],
+      [
+        0,
+        3,
+        5,
+        6,
+        7
+      ]
+    ],
+    "facet_extra_coordinate_sets": [
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "every_facet_moves_inside_a_common_eight_space": true
+  },
+  "claim": "the reduced quadratic tangent-cone support at the K32 single-cross rank-six point has four coordinate facets, and every facet changes the pair inside a common eight-dimensional coordinate ambient",
+  "boundary": {
+    "not_proved": [
+      "the completed local germ is contained in the union of the four eight-space incidences",
+      "the three nonlinearly obstructed facets have no higher-order separating branches",
+      "all rank-three K23/K32 components are exhausted",
+      "the kappa2=0 six-color endpoint or ordinary lower 29"
+    ]
+  }
+}

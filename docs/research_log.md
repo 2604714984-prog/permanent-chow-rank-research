@@ -2556,3 +2556,29 @@ formal branch through the \(K_{3,2}\) fixed point is of this form, nor does it
 exclude every \(K_{2,3}\) formal branch. That formal exhaustion is now the
 remaining product-pair step before returning to the full six-color
 \(\kappa_2=0\) geometry.
+
+## 2026-08-14: the single-cross tangent cone has four eight-space facets
+
+N6-116 studies the second first-order pattern at the (K_{3,2}) rank-three
+point. At the finite pair obtained from the single anti-diagonal move
+(00\mapsto12), the cross rank is six but the sum of the planes has dimension
+only seven.
+
+The exact Schur linearization is a (360\times72) integer matrix of rational
+rank 64. After substituting its eight explicit kernel directions, the
+quadratic cokernel has rank seven and initial ideal
+
+\[
+ (x_1x_2,x_1x_4,x_1x_5,x_2x_5,x_4x_5,x_4x_6,x_4x_7).
+\]
+
+Its four maximal independent facets use, respectively, only the outside
+coordinate sets ({12,13}), ({12,22}), ({12,22}), and
+({02,12}). Thus every reduced quadratic tangent-cone facet varies the two
+planes inside one common coordinate eight-space and is noncomplementary at
+first order.
+
+This is not yet an all-order formal exclusion. Three facets do not integrate
+as straight graph lines and may require nonlinear corrections. The next task
+is to show that such corrections either remain in the eight-space union or
+raise the cross rank above six. No lower-29 or border-rank claim is made.
