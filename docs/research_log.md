@@ -2229,3 +2229,53 @@ exclude them: N6-068 uses a full fifteen-dimensional actual section
 difference. The remaining problem is therefore a product-pair theorem for
 partial common quotient dimensions thirteen and fourteen, not another
 biflag \(U\)-classification.
+
+N6-108 supplies that missing partial product-pair theorem.  For
+
+\[
+ V=k^3\otimes k^4,
+ \qquad E_{34}=S_0(k^3)\otimes S_0(k^4),
+\]
+
+let \(\beta:V\times V\to E_{34}^{*}\) be polarized evaluation.  The exact
+coordinate scan checks all \(\binom{12}{6}^2=853,776\) ordered fixed pairs.
+Exactly ninety have cross dimension at most five, in four stabilizer orbits:
+diagonal \(K_{2,3}\), diagonal \(K_{3,2}\), diagonal row profile \((4,2)\),
+and row profile \((3,3)\) with intersection four.
+
+At the two rank-five representatives, the determinantal tangent matrix is
+\(403\times72\) of exact rational rank sixty-four.  Eight explicit integer
+kernel vectors span the kernel and are entirely internal to the common
+two-row eight-space; equivalently all forty-eight pure normal linear forms
+belong to the initial ideal.  At the rank-three representatives, the
+\(3\times3\) minors of the \(33\times15\) leading normal matrix are treated
+weight by weight.  Every pure-normal group has full cubic rank.  In the three
+mixed \(K_{2,3}\) groups the total/internal ranks are respectively
+
+\[
+ (119,3),\qquad(55,3),\qquad(19,3),
+\]
+
+so the exact cubic initial ideal again contains every monomial involving a
+normal variable.  Thus the projectivized relative normal cones are empty;
+the \(K_{3,2}\) points are isolated and every other component stays in a
+common eight-space.  Such a component cannot contain complementary
+six-planes.  Projective torus globalization proves
+
+\[
+ \dim\langle\beta(L,M)\rangle\ge6
+\]
+
+for every complementary pair.
+
+A cross-free thirteen-plane in the full eighteen-dimensional \(E_{34}\)
+would force cross rank at most five.  In the fifteen-dimensional column
+branch it forces rank at most two there, and the three missing directions
+still give full \(E_{34}\)-rank at most five.  Hence the thirteen- and
+fourteen-dimensional product-pair layers left by N6-107 are impossible, as
+is the transpose.  Thus the biflag \(\kappa_2=1,2\) layers are closed, and
+N6-107 had already closed \(\kappa_2=3\).  At \(\kappa_2=0\), however, the
+guaranteed difference has dimension only twelve, so both second-shadow
+geometries remain open; the standard-hook \(\kappa_2=1,2\) alternatives also
+remain open.  Hence N6-108 is not an ordinary lower-29, exact-rank-32, or
+border-rank theorem.
