@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "The exclusion uses the ordinary-rank b=50 reduction, the N6-064 flag-hook theorem, and the N6-069 all-singular reduction. It does not prove exact rank 32, does not give a border-rank lower bound, and does not prove the general conjecture ChowRank(perm_n)=2^(n-1).",
+  "finite_hook_case_routing": [
+    {
+      "full_row_count_m": 3,
+      "label_class_count_q": 3,
+      "proof_branch": "requires_m3_parallel_argument",
+      "q_at_most_4": true
+    },
+    {
+      "full_row_count_m": 4,
+      "label_class_count_q": 4,
+      "proof_branch": "requires_m4_column_argument",
+      "q_at_most_4": true
+    },
+    {
+      "full_row_count_m": 5,
+      "label_class_count_q": 5,
+      "proof_branch": "excluded_by_q_le_4",
+      "q_at_most_4": false
+    },
+    {
+      "full_row_count_m": 6,
+      "label_class_count_q": 6,
+      "proof_branch": "excluded_by_q_le_4",
+      "q_at_most_4": false
+    }
+  ],
+  "s0_action_rank_profile": [
+    {"exact_rank_of_S0_times_y": 5, "support_size": 1},
+    {"exact_rank_of_S0_times_y": 5, "support_size": 2},
+    {"exact_rank_of_S0_times_y": 6, "support_size": 3},
+    {"exact_rank_of_S0_times_y": 6, "support_size": 4},
+    {"exact_rank_of_S0_times_y": 6, "support_size": 5},
+    {"exact_rank_of_S0_times_y": 6, "support_size": 6}
+  ],
+  "status": [
+    "PURE_ALL_SINGULAR_FLAG_HOOK_EXCLUSION",
+    "EXACT_QQ_ELEMENTARY_REGRESSION",
+    "N6-072"
+  ],
+  "strict_conclusion": "Under the previously proved unique b=50 common-W15 endpoint, the flag-hook second shadow and the N6-069 all-singular block condition are incompatible. Hence ordinary ChowRank(perm_6)>=28. Together with the 32-term Glynn decomposition, 28<=ChowRank(perm_6)<=32.",
+  "wedge_space_intersections": {
+    "pair_intersection_dimension": 1,
+    "triple_intersection_dimension": 0
+  }
+}
