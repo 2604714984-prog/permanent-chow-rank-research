@@ -2582,3 +2582,37 @@ This is not yet an all-order formal exclusion. Three facets do not integrate
 as straight graph lines and may require nonlinear corrections. The next task
 is to show that such corrections either remain in the eight-space union or
 raise the cross rank above six. No lower-29 or border-rank claim is made.
+
+## 2026-08-14: fixed-matching row twists are scalar
+
+N6-117 enlarges the harmless common-(A_3) family before proving it rigid.
+Fix a (2+2) matching of the four column coordinates and let an invertible
+graph map act by arbitrary (S,R\in\operatorname{GL}(A_3)) on its two
+matched column classes.
+
+The mixed-column cross image projects surjectively to two copies of
+(S_0(A_3)^*). Indeed, an annihilator pair ((B,C)) would satisfy
+(B=CR) from one mixed orientation and (B=-R^{\mathsf T}C) from the
+other. Transposing the first equation gives the opposite equality, hence
+(B=C=0).
+
+The same-class column edges are disjoint from this six-dimensional mixed
+image. Their two maps are
+
+\[
+ B\longmapsto S^{\mathsf T}B-BS,
+ \qquad
+ B\longmapsto R^{\mathsf T}B-BR.
+\]
+
+Full cross rank at most six forces both maps to vanish. A pure matrix-unit
+argument, replayed as a (27\times9) rational system of rank eight, says that
+the only such endomorphisms are scalars. Therefore every fixed-matching
+rank-six graph is exactly a common-(A_3) product pair and has Chow-block
+projection rank at most nine by N6-115.
+
+A streamed diagnostic over all (3^9=19{,}683) row twists in the symmetric
+(T=S\otimes I_2) family finds 12,792 invertible matrices and only the two
+nonzero scalars at cross rank at most six. This finite-field equality is not
+used in the characteristic-zero proof. The remaining structural gap is the
+existence of the matching for a completely general invertible graph.

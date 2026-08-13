@@ -310,6 +310,8 @@ The remaining `K_3,2` rank-three product stratum contains genuine complementary 
 
 At the other `K_3,2` first-order pattern, represented by one cross-row elementary graph move, N6-116 computes the full `360 x 72` linear Schur system (rank 64) and its quadratic cokernel. The seven surviving quadrics form a squarefree monomial ideal with four maximal facets. Every facet moves the pair inside a common coordinate eight-space, so the reduced quadratic tangent-cone support is noncomplementary. The remaining issue is all-order: quadratic containment alone does not prove that a corrected formal branch stays in that eight-space union.
 
+Within the full invertible graph family that preserves a fixed `2+2` column matching, N6-117 removes every nonscalar row twist. Projection of the mixed-column cross image to two column edges is always six-dimensional. The two remaining same-class edges are commutator maps `S^T B-BS` and `R^T B-BR`; cross rank six forces them to vanish, and a pure `3 x 3` matrix lemma makes both row blocks scalar. Thus this entire matched family reduces to the harmless common-`A_3` product component of N6-115. What remains is to prove that every complementary rank-six graph preserves some such column matching.
+
 ## Layout
 
 ```text

@@ -1,0 +1,65 @@
+{
+  "certificate": "N6-117",
+  "status": "PURE_BLOCK_DIAGONAL_K32_GRAPH_RIGIDITY; EXACT_QQ_COMMUTATOR_REPLAY; BOUNDED_F3_DIAGNOSTIC",
+  "field": "algebraically closed characteristic zero",
+  "commutator_scalar_lemma": {
+    "coefficient_matrix_shape": [
+      27,
+      9
+    ],
+    "exact_QQ_rank": 8,
+    "exact_QQ_nullity": 1,
+    "kernel_generator": "identity_3"
+  },
+  "exact_examples": {
+    "examples": [
+      {
+        "name": "scalar_scalar",
+        "sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 6
+      },
+      {
+        "name": "nonscalar_scalar",
+        "sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 15
+      },
+      {
+        "name": "shear_scalar",
+        "sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 11
+      }
+    ]
+  },
+  "finite_field_row_twist_screen": {
+    "status": "COMPLETE_F3_RESTRICTED_FAMILY_DIAGNOSTIC_ONLY",
+    "candidate_count": 19683,
+    "invertible_matrix_count": 12792,
+    "cross_rank_histogram": {
+      "8": 6,
+      "16": 786,
+      "13": 492,
+      "17": 5280,
+      "12": 39,
+      "15": 608,
+      "14": 1854,
+      "11": 42,
+      "18": 3632,
+      "6": 2,
+      "10": 51
+    },
+    "rank_at_most_six_count": 2,
+    "all_low_rank_matrices_are_nonzero_scalars": true,
+    "not_used_for_characteristic_zero_proof": true
+  },
+  "pure_theorem": {
+    "hypothesis": "T:A3 tensor <e0,e1> to A3 tensor <e2,e3> is block diagonal with invertible row blocks S,R; L=graph(T), M=graph(-T)",
+    "conclusion": "E34 cross rank at most six forces S and R scalar; hence the pair is common-A3 product and its twelve-kernel block ranks are at most nine"
+  },
+  "boundary": {
+    "not_proved": [
+      "a general invertible graph T with cross rank at most six preserves a two-plus-two column matching",
+      "the full K23/K32 formal germ exhaustion",
+      "the kappa2=0 six-color endpoint or ordinary lower 29"
+    ]
+  }
+}
