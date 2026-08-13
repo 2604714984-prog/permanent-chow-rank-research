@@ -1,0 +1,460 @@
+{
+  "arithmetic": "All replayed eliminations use integer equality components and nonzero integer multiples of single monomials; division over Q gives the stated unit RREF. No finite-field rank is used to prove the characteristic-zero theorem.",
+  "claim_boundary": "This is an ordinary characteristic-zero theorem for the rank-at-most-75 product-shadow locus at dimension 49. It is not a border-rank theorem and does not by itself close ordinary rank 29: the fixed-six argument must still be connected, and the all-alpha-three b=47 and b=48 layers are not treated here.",
+  "coordinate_fixed_points": {
+    "all_children_have_first_shadow_75": true,
+    "all_small_equality_families_have_the_claimed_clique_or_one_deletion_form": {
+      "size_10_shadow_10": true,
+      "size_19_shadow_15": true,
+      "size_3_shadow_6": true,
+      "size_4_shadow_6": true,
+      "size_9_shadow_10": true
+    },
+    "distinct_coordinate_equality_support_count": 36000,
+    "every_coordinate_equality_support_has_a_unique_fifty_hook_parent": true,
+    "labelled_fifty_hook_count": 720,
+    "labelled_parent_cell_deletions": 36000,
+    "minimizing_ferrers_profiles": [
+      [
+        20,
+        10,
+        10,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        19,
+        10,
+        10,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "minimum_first_product_shadow": 75,
+    "parent_multiplicity_histogram": {
+      "1": 36000
+    },
+    "profile_counts": [
+      {
+        "count": 10800,
+        "profile": [
+          20,
+          10,
+          10,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 7200,
+        "profile": [
+          19,
+          10,
+          10,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 3600,
+        "profile": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 14400,
+        "profile": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "small_equality_family_counts": {
+      "four_triples_shadow_six": 15,
+      "nine_triples_shadow_ten": 60,
+      "nineteen_triples_shadow_fifteen": 20,
+      "ten_triples_shadow_ten": 6,
+      "three_triples_shadow_six": 60
+    }
+  },
+  "formal_germ": {
+    "boolean_component_count": 240,
+    "complete_formal_germ_is_union_of_relative_boolean_branches": true,
+    "component_dimension": 53,
+    "forbidden_quadratic_generator_count": 25,
+    "initial_ideal_is_parent_J_extended_by_49_smooth_variables": true,
+    "linear_dimension": 65,
+    "parent_boolean_variable_count": 16,
+    "proof_interface": "The twenty-five grounded initial forms give J inside the initial ideal. The projective hyperplane bundle over the 240 exact N6-064 branches gives the reverse tangent-cone inclusion; closed filtered-ideal lifting then identifies the complete ideals.",
+    "smooth_relative_hyperplane_factor_dimension": 49
+  },
+  "local_representatives": [
+    {
+      "deleted_cell": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 25,
+        "forbidden_unit_count": 25,
+        "grounded_equation_count": 114288,
+        "nonzero_raw_row_count": 1122,
+        "parent_group_sizes": [
+          3,
+          4,
+          4,
+          5
+        ],
+        "raw_coefficient_histogram": {
+          "2": 1122
+        },
+        "raw_hyperplane_monomial_count": 0,
+        "raw_non_forbidden_monomial_count": 0,
+        "raw_rows_are_nonzero_integer_multiples_of_single_monomials": true,
+        "row_span_is_exactly_the_twenty_five_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_is_the_unique_hook_parent": true,
+        "coordinate_prolongation_weight_count": 50,
+        "eta_only_root_count": 0,
+        "eta_root_count": 16,
+        "free_dimension": 65,
+        "full_parent_plus_hyperplane_jacobian_rank": 65,
+        "parent_linear_dimension": 16,
+        "relative_hyperplane_dimension": 49
+      },
+      "orientation": "row_hook",
+      "profile": "19,10,10,10",
+      "relative_boolean_branches": {
+        "combined_block_jacobian_rank": 53,
+        "count": 240,
+        "dimension": 53,
+        "n6064_boolean_jacobian_is_exact_4_by_4_identity": true,
+        "replayed_free_coordinate_sets_are_disjoint": true,
+        "tautological_hyperplane_chart_jacobian_is_49_by_49_identity": true
+      }
+    },
+    {
+      "deleted_cell": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 25,
+        "forbidden_unit_count": 25,
+        "grounded_equation_count": 114312,
+        "nonzero_raw_row_count": 1116,
+        "parent_group_sizes": [
+          3,
+          4,
+          4,
+          5
+        ],
+        "raw_coefficient_histogram": {
+          "2": 1116
+        },
+        "raw_hyperplane_monomial_count": 0,
+        "raw_non_forbidden_monomial_count": 0,
+        "raw_rows_are_nonzero_integer_multiples_of_single_monomials": true,
+        "row_span_is_exactly_the_twenty_five_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_is_the_unique_hook_parent": true,
+        "coordinate_prolongation_weight_count": 50,
+        "eta_only_root_count": 0,
+        "eta_root_count": 16,
+        "free_dimension": 65,
+        "full_parent_plus_hyperplane_jacobian_rank": 65,
+        "parent_linear_dimension": 16,
+        "relative_hyperplane_dimension": 49
+      },
+      "orientation": "row_hook",
+      "profile": "20,10,10,9",
+      "relative_boolean_branches": {
+        "combined_block_jacobian_rank": 53,
+        "count": 240,
+        "dimension": 53,
+        "n6064_boolean_jacobian_is_exact_4_by_4_identity": true,
+        "replayed_free_coordinate_sets_are_disjoint": true,
+        "tautological_hyperplane_chart_jacobian_is_49_by_49_identity": true
+      }
+    },
+    {
+      "deleted_cell": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 25,
+        "forbidden_unit_count": 25,
+        "grounded_equation_count": 114288,
+        "nonzero_raw_row_count": 1122,
+        "parent_group_sizes": [
+          3,
+          4,
+          4,
+          5
+        ],
+        "raw_coefficient_histogram": {
+          "2": 1122
+        },
+        "raw_hyperplane_monomial_count": 0,
+        "raw_non_forbidden_monomial_count": 0,
+        "raw_rows_are_nonzero_integer_multiples_of_single_monomials": true,
+        "row_span_is_exactly_the_twenty_five_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_is_the_unique_hook_parent": true,
+        "coordinate_prolongation_weight_count": 50,
+        "eta_only_root_count": 0,
+        "eta_root_count": 16,
+        "free_dimension": 65,
+        "full_parent_plus_hyperplane_jacobian_rank": 65,
+        "parent_linear_dimension": 16,
+        "relative_hyperplane_dimension": 49
+      },
+      "orientation": "transpose_hook",
+      "profile": "4^9,3,1^10",
+      "relative_boolean_branches": {
+        "combined_block_jacobian_rank": 53,
+        "count": 240,
+        "dimension": 53,
+        "n6064_boolean_jacobian_is_exact_4_by_4_identity": true,
+        "replayed_free_coordinate_sets_are_disjoint": true,
+        "tautological_hyperplane_chart_jacobian_is_49_by_49_identity": true
+      }
+    },
+    {
+      "deleted_cell": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 25,
+        "forbidden_unit_count": 25,
+        "grounded_equation_count": 114312,
+        "nonzero_raw_row_count": 1116,
+        "parent_group_sizes": [
+          3,
+          4,
+          4,
+          5
+        ],
+        "raw_coefficient_histogram": {
+          "2": 1116
+        },
+        "raw_hyperplane_monomial_count": 0,
+        "raw_non_forbidden_monomial_count": 0,
+        "raw_rows_are_nonzero_integer_multiples_of_single_monomials": true,
+        "row_span_is_exactly_the_twenty_five_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_is_the_unique_hook_parent": true,
+        "coordinate_prolongation_weight_count": 50,
+        "eta_only_root_count": 0,
+        "eta_root_count": 16,
+        "free_dimension": 65,
+        "full_parent_plus_hyperplane_jacobian_rank": 65,
+        "parent_linear_dimension": 16,
+        "relative_hyperplane_dimension": 49
+      },
+      "orientation": "transpose_hook",
+      "profile": "4^10,1^9,0",
+      "relative_boolean_branches": {
+        "combined_block_jacobian_rank": 53,
+        "count": 240,
+        "dimension": 53,
+        "n6064_boolean_jacobian_is_exact_4_by_4_identity": true,
+        "replayed_free_coordinate_sets_are_disjoint": true,
+        "tautological_hyperplane_chart_jacobian_is_49_by_49_identity": true
+      }
+    }
+  ],
+  "projective_globalization": {
+    "every_49_plane_with_first_shadow_75_extends_to_a_50_plane_with_first_shadow_75": true,
+    "every_irreducible_component_contains_a_coordinate_torus_fixed_point": true,
+    "first_shadow_equals_the_parent_first_shadow": true,
+    "relative_grassmannian_image_is_projective_and_closed": true,
+    "second_shadow_dimension": 23,
+    "second_shadow_is_a_projective_flag_hook": true
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_B49_EQUALITY_LOCUS_CLASSIFICATION",
+    "EXACT_INTEGER_LINEAR_AND_QUADRATIC_ELIMINATION",
+    "EXACT_RELATIVE_240_BRANCH_REPLAY",
+    "N6-073"
+  ]
+}
