@@ -1,0 +1,123 @@
+{
+  "all_rank_one_branch": {
+    "distinct_quotient_signature_count": 720,
+    "excluded": true,
+    "permutation_matching_support_count": 720,
+    "reason": "Injectivity forces all six row labels and all six column labels to be permutations, so every frame is a coordinate matching. Coordinate quotient injectivity then makes all common-W frames identical."
+  },
+  "biflag": {
+    "column_contraction_dimensions": [
+      5,
+      4,
+      0
+    ],
+    "flags": "R4 subset R5 and C3 subset C5",
+    "row_contraction_dimensions": [
+      5,
+      3,
+      0
+    ],
+    "shape": "R4 tensor C5 + R5 tensor C3"
+  },
+  "block_dichotomy": "At every nonzero coordinate contraction N of dimension d>=2, either all colors have rank d with common image N, or all blocks have rank at most one, zero quadratic compression, coordinate domain covectors, and image lines spanning N.",
+  "claim_boundary": "This is a strict normal-form reduction for the N6-103 biflag survivor. It does not exclude the four anchor combinations, the biflag branch, ordinary lower 29, exact rank 32, or border rank.",
+  "coordinate_contraction_signatures": {
+    "column_high_wing_zero": [
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        5,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        1
+      ],
+      [
+        4,
+        2,
+        0
+      ],
+      [
+        4,
+        1,
+        1
+      ],
+      [
+        3,
+        3,
+        0
+      ],
+      [
+        3,
+        2,
+        1
+      ]
+    ],
+    "row_high_short_zero": [
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        5,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        1
+      ],
+      [
+        4,
+        2,
+        0
+      ],
+      [
+        4,
+        1,
+        1
+      ]
+    ]
+  },
+  "status": [
+    "PURE_BIFLAG_COMMON_QUOTIENT_ANCHOR_REDUCTION",
+    "EXACT_COORDINATE_MATCHING_REPLAY",
+    "N6-104"
+  ],
+  "surviving_anchor_ranks": {
+    "column": [
+      4,
+      5
+    ],
+    "four_combinations": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "row": [
+      3,
+      5
+    ]
+  }
+}

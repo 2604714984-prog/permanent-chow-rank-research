@@ -2082,3 +2082,26 @@ singular. Moreover, the common container prolongation contains
 at most 458 when \(\alpha\le2\), so all nineteen terms must have
 \(\alpha=3\). This sharper statement still does not exclude the biflag
 hook.
+
+N6-104 starts the biflag-specific analysis. Coordinate row contractions of
+\(R_4\otimes C_5+R_5\otimes C_3\) have dimensions (5,3,0), with at least
+four five-dimensional rows; coordinate column contractions have dimensions
+(5,4,0), with at least three five-dimensional columns. Common-
+\(W_{15}\) synchronization gives a dichotomy at each nonzero contraction:
+either all colors have full contraction rank and the same image, or every
+block has rank at most one with a coordinate domain covector.
+
+If every row and column used the rank-one branch, injectivity would force
+each frame to be supported on a six-cell permutation matching. The 720 such
+supports have 720 distinct exact quotient signatures by N6-043, so six
+different common-quotient frames cannot occur. Consequently every biflag
+survivor contains both a common-rank row anchor and a common-rank column
+anchor. Only four rank combinations remain:
+
+\[
+ (3,4),\quad(3,5),\quad(5,4),\quad(5,5).
+\]
+
+The rank-five cases meet the G-050 Cremona barrier; the rank-three/four
+cross-anchor compatibility is new. This is a normal-form reduction, not an
+exclusion of the biflag branch or a proof of ordinary lower 29.
