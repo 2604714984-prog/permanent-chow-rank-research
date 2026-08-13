@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -58,6 +59,10 @@ class N6Alpha2T15ProlongationCapTest(unittest.TestCase):
         )
         self.assertEqual(pruning["remaining_profile"], [[0, 3]] * 6)
 
+    @unittest.skipUnless(
+        os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
+        "set RUN_EXPENSIVE_REPLAYS=1 to rebuild the 74,036,676-evaluation certificate",
+    )
     def test_full_parallel_replay(self) -> None:
         completed = subprocess.run(
             [

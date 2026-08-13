@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -37,6 +38,10 @@ class N6GlobalT16ProlongationCapTest(unittest.TestCase):
         self.assertEqual(sample["four_axis_increment"], 30)
         self.assertEqual(len(sample["extra_axes"]), 4)
 
+    @unittest.skipUnless(
+        os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
+        "set RUN_EXPENSIVE_REPLAYS=1 to rebuild the global t16 certificate",
+    )
     def test_full_parallel_replay(self) -> None:
         completed = subprocess.run(
             [
