@@ -1567,3 +1567,56 @@ The result allows arbitrary rooted-tree shape and valuation orders only when
 the final 75-plane has this row-pure form.  Partial Smith packets, column
 jets, changing column frames, and \(\operatorname{End}(S_0(C))\)-valued
 gauges remain open.
+
+## 2026-08-13: the ordinary lower bound 28 is complete
+
+N6-068 through N6-071 isolate the actual-pair structure at the final
+all-`alpha=3`, `b=50` endpoint.  Product `3 x 4` and `4 x 3` pair shadows are
+excluded, an invertible row or column frame block forces common separation,
+and the common quotient synchronizes the ranks and images of all six
+same-row and same-column quadratic compression maps.  The latter statement
+retains the true permanent quotient; it does not discard the wedge
+coordinates.
+
+N6-072 combines that synchronization with the N6-064 second-shadow theorem.
+After transposition if necessary, the common factor-span shadow is a genuine
+flag hook
+
+\[
+ M=R_4\otimes C_5+R_3\otimes C,
+ \qquad R_3\subset R_4.
+\]
+
+Every coordinate row whose restriction to \(R_3\) is nonzero has full
+contraction \(C\).  The all-singular reduction forces all six color blocks in
+such a row to be rank-one coordinate-domain maps whose image lines form a
+basis.  Comparing two full rows in the true diagonal-plus-wedge quotient
+makes their factor labels synchronize across the six colors.  If \(m\) is
+the number of full rows and \(q\) the number of synchronized label classes,
+factor injectivity gives \(q\ge m\), while definition gives \(q\le m\).
+Thus \(q=m\); long-column contraction gives \(q\le4\), excluding
+\(m=5,6\).
+
+For \(m=4\), the two nonfull blocks would increase every long-column rank
+from four to \(4+t\), so they must vanish, contradicting factor injectivity.
+For \(m=3\), the three nonfull rows use the three complementary factor
+labels.  Column contraction requires exactly one of them to be nonzero in
+every long column.  Their pairwise common wedge images instead force the
+three row vectors to be parallel color by color, so the number of nonzero
+entries in a column is zero or three.  This is the final contradiction.
+The transposed hook is identical.
+
+Two independent proof audits found no fatal, major, or minor issue after two
+local exposition repairs.  The exact rational regression checks the
+elementary \(S_0y\) ranks, the threefold wedge-space intersection, and the
+finite \((m,q)\) routing; it does not replace the pure proof.  Since N6-060
+had reduced a hypothetical 27-term decomposition to precisely this endpoint,
+the current ordinary interval is
+
+\[
+ \boxed{28\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32}.
+\]
+
+This is not an exact-rank-32 result, not a border-Chow-rank lower bound, and
+not a proof of the general conjecture
+\(\operatorname{ChowRank}(\operatorname{perm}_n)=2^{n-1}\).

@@ -87,12 +87,13 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` `b=59` scalar frontier | pure finite enumeration; exact integer replay | the same 367 necessary scalar states occur; all but the unique all-`alpha=3`, `t_2=15` state are excluded, and its required prolongation dimension rises to 461 |
 | `n=6` product-shadow theorem | pure characteristic-zero theorem; exact integer DP replay | torus specialization and two-sided colex compression reduce every `b`-plane in the permanent cubic derivative space to a Ferrers support; the exact product shadow exceeds the fixed-six projection cap 78 for every `53<=b<=64` |
 | `n=6` ordinary lower-27 completion | proof draft complete; independently audited exact integer replay | the product-shadow theorem removes `b=53,...,64`; exhaustive conservative defect/Macaulay arithmetic gives `h>2b` for every `45<=b<=52`, ruling out every hypothetical 26-term decomposition and proving `ChowRank(perm_6)>=27` |
-| `n=6` lower-28 fixed-six frontier | proof draft complete; independently audited exact integer replay; partial | conditional averaging, product shadows, and literal six-color lifting exclude every layer except one all-`alpha=3` state at `b=50`; no lower-28 claim is made |
+| `n=6` lower-28 fixed-six reduction | proof draft complete; independently audited exact integer replay | conditional averaging, product shadows, and literal six-color lifting reduce every hypothetical 27-term decomposition to one all-`alpha=3` state at `b=50` |
 | `n=6` literal-six shadow exclusion | pure characteristic-zero theorem; exact integer replay | any residual six-color literal span meets the permanent cubic space in dimension at least `100-b`; for `b<=47` its shadow is at least 81, contradicting the universal six-term quadratic projection cap 78 |
 | `n=6` separated `alpha=3` exclusion | pure coupling theorem; exact integer replay; restricted family | six column-separated or row-separated terms with the common-`W_15`, direct quadratic/cubic data of the `b=50` endpoint satisfy `b<=40`; general nonseparated configurations remain open |
 | `n=6` transverse-pair rigidity | pure characteristic-zero theorem; exact rational replay; restricted open locus | one pair whose twelve-dimensional section-difference shadow projects fully to two rows or two columns forces all six endpoint terms to be separated and hence `b<=40`; every pairwise row/column projection must therefore be singular in any surviving `b=50` configuration |
 | `n=6` coordinate product-shadow equality | pure finite-support theorem; exact integer replay | every coordinate fifty-plane with product shadow 75 is one of two transposed hook supports; its second shadow has dimension 23, but no noncoordinate equality classification or lower-28 conclusion is claimed |
 | `n=6` full product-shadow equality locus | pure characteristic-zero formal/projective theorem; exact rational and symbolic replay | the complete equality locus is the union of closures of 240 four-parameter Boolean-replacement branches and their transposes; every equality plane has second shadow 23 |
+| `n=6` all-singular hook exclusion | pure characteristic-zero theorem; independently audited exact rational replay | the common quotient synchronizes all six row and column block images; the 23-dimensional flag hook leaves only three or four full contractions, and the remaining label and column-rank cases are contradictory, excluding the last `b=50` endpoint and proving `ChowRank(perm_6)>=28` |
 | `n=6` fixed `K_3,4` Fano exclusion | pure characteristic-zero projective theorem; exact finite replay | the rank-at-most-nine six-plane Fano scheme in `A_3 tensor B_4` consists of 18 reduced coordinate rectangles, and its cross-image-at-most-three pair incidence is diagonal; this excludes actual complementary pairs only in the fixed layer |
 | `n=6` colored-differential barrier | explicit characteristic-zero linear model; exact modular certificate | all endpoint subset caps and the canonical common kernels coexist with surjective colored shadows in four, five, and six colors; any successful continuation must use actual Chow coproduct or integrability structure |
 | `n=6` squarefree-coproduct colored barrier | canonical per-color coproduct construction; exact modular upper certificates | six squarefree cubic coproducts have total kernel exactly 50 while every proper color-subset kernel obeys the endpoint cap; the missing constraints are cross-color ambient directness and the common-section cocycle |
@@ -121,10 +122,10 @@ The repository does **not** own large upstream proof bundles. External submissio
 The current in-repository unrestricted interval for `n=6` is
 
 ```text
-27 <= ChowRank(perm_6) <= 32.
+28 <= ChowRank(perm_6) <= 32.
 ```
 
-The full sign-family rank is exactly 32. The lower bound 27 is for ordinary Chow rank; no border-lower-27 or exact unrestricted-32 claim is made.
+The full sign-family rank is exactly 32. The lower bound 28 is for ordinary Chow rank; no border-lower-28 or exact unrestricted-32 claim is made.
 
 ## Reviewed general lower-bound table
 
@@ -146,7 +147,7 @@ The current exact-rational multidimensional-shadow certificates give:
 | 15 | 6,440 | 6,879 | 16,384 |
 | 16 | 12,875 | 13,312 | 32,768 |
 
-These are the values of the general multidimensional-shadow theorem.  For `n=6`, the average-subset argument first improves the row from 23 to 26, and the fixed-six product-shadow completion gives the current best in-repository proof-draft lower bound 27. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
+These are the values of the general multidimensional-shadow theorem.  For `n=6`, the average-subset argument first improves the row from 23 to 26, the fixed-six product-shadow argument gives 27, and the common-quotient flag-hook exclusion gives the current best in-repository proof-draft lower bound 28. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
 
 ## Reproduce the deterministic results
 
