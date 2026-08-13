@@ -1525,3 +1525,21 @@ vectors $w$ form a basis; the resulting 75-plane has derivative shadow 36,
 contradicting the endpoint value 23.  Transposition excludes a common column
 slice.  This is a single-level result only: unequal valuations, collision
 trees, and later clusters with new base slices remain unresolved.
+
+N6-066 removes the exceptional vertical orbit that appears when a
+\(K_{3,4}\) rectangle space loses all three quadrics over one column pair.
+For the resulting fifteen-plane \(D\), the rank-at-most-six Fano scheme of
+six-planes is exactly the one reduced point
+
+\[
+ A_3\otimes\langle f_0,f_1\rangle.
+\]
+
+The torus-fixed classification reduces to a twelve-vertex bad-pair graph;
+among all 924 coordinate six-supports only this \(3\times2\) rectangle
+survives.  Six rank-six points give a \(36\times36\) nonzero tangent minor
+modulo \(1000003\), a valid characteristic-zero lower-rank certificate.
+Hence two complementary six-planes cannot both be cross-free for this
+\(D\).  Row-column permutations and transposition give the symmetric cases.
+This is a fixed special-orbit theorem, not a resolution of the full
+\(b=50\) endpoint.

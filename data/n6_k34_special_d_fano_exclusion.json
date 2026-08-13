@@ -1,0 +1,43 @@
+{
+  "status": [
+    "PURE_SPECIAL_D_FANO_EXCLUSION",
+    "EXACT_MODULAR_TANGENT_CERTIFICATE",
+    "N6-066"
+  ],
+  "space": {
+    "ambient_dimension": 12,
+    "special_quadratic_dimension": 15,
+    "missing_column_pair": [0, 1]
+  },
+  "fixed_support_scan": {
+    "coordinate_six_plane_count": 924,
+    "pair_sum_rank_histogram": {"4": 9, "6": 27, "8": 24, "9": 6},
+    "bad_pair_count": 30,
+    "compatible_six_supports": [[0, 1, 4, 5, 8, 9]],
+    "compatible_support_coordinates": [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0], [2, 1]],
+    "l0_binary_point_maximum_rank": 6
+  },
+  "tangent_certificate": {
+    "prime": 1000003,
+    "grassmann_tangent_dimension": 36,
+    "rank_six_points_in_l0_coordinates": [
+      [0, 0, 0, 1, 1, 0],
+      [0, 0, 0, 1, 1, 1],
+      [0, 0, 1, 0, 0, 1],
+      [0, 0, 1, 0, 1, 1],
+      [0, 1, 0, 0, 1, 0],
+      [1, 0, 0, 0, 0, 1]
+    ],
+    "nonzero_equation_counts_by_point": [16, 18, 16, 18, 16, 16],
+    "stacked_equation_count": 100,
+    "stacked_rank_growth": [6, 12, 18, 24, 30, 36],
+    "certified_tangent_dimension": 0
+  },
+  "pure_theorem": {
+    "rank_six_fano_scheme_is_one_reduced_point": true,
+    "unique_plane": "A3 tensor span(b0,b1)",
+    "complementary_cross_free_pair_is_impossible": true,
+    "transpose_and_coordinate_permutations_apply": true
+  },
+  "claim_boundary": "This excludes an actual complementary pair only for the special coordinate fifteen-plane obtained by deleting one column-pair fiber from the fixed K3,4 rectangle space. It does not classify the other vertical orbits, exclude the full b=50 endpoint, or prove ChowRank(perm_6)>=28."
+}

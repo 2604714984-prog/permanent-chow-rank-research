@@ -216,6 +216,7 @@ python scripts/n6_product_shadow_b50_equality_locus.py
 python scripts/n6_grassmann_closure_barrier.py
 python scripts/n6_common_rowslice_collision_exclusion.py
 python scripts/n6_k34_rank_nine_fano_exclusion.py
+python scripts/n6_k34_special_d_fano_exclusion.py
 python scripts/n6_colored_differential_barrier.py
 python scripts/n6_squarefree_coproduct_colored_barrier.py
 python scripts/n6_hook_plane_projection_barrier.py
