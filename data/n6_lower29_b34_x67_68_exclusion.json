@@ -1,0 +1,152 @@
+{
+  "claim_boundary": "This excludes only x_A=67,68 after N6-098. The x_A<=66 layers and global b=34 remain open. It does not prove ordinary lower29 and makes no border-rank claim.",
+  "equality_route": {
+    "N6_064_gives_a_genuine_23_dimensional_flag_hook": true,
+    "N6_069_and_N6_072_exclude_the_actual_six_frame_endpoint": true,
+    "N6_076_or_N6_078_extends_it_to_a_50_plane_with_the_same_shadow": true,
+    "a_47_or_48_plane_with_shadow_at_most_75_has_shadow_exactly_75": true,
+    "a_dimension_89_quadratic_equality_sum_is_excluded_by_the_t14_cap": true,
+    "a_dimension_90_t15_equality_with_alpha_at_most_two_is_excluded_by_the_t15_cap": true,
+    "the_remaining_equality_case_has_six_full_alpha_three_terms_and_common_W15": true,
+    "the_selected_six_terms_then_are_full_literal_direct_and_share_W15": true
+  },
+  "high_t_arguments": {
+    "all_three_high_t_states_have_seven_literal_direct_twenty_dimensional_cubic_spaces": true,
+    "dimension_89_equality_fallback": "If the retained quadratic sum has dimension 89 and permanent relation dimension 75, its quotient has dimension 14. The six cubic spaces are literal direct of dimension 120; m_53=81>75 bounds their permanent intersection by 52, so the required prolongation is at least 468, contradicting the t14 cap 453.",
+    "dimension_90_equality_alpha_fallback": "If the retained quadratic sum has dimension 90 and quotient dimension 15 but some full term has alpha at most 2, quadratic directness makes the six cubic spaces direct of dimension 120. Again their permanent intersection is at most 52, so 468 contradicts the t15 cap 458.",
+    "direct_t17_t18": "Some deletion has loss at most floor(t/7)<=2, hence the retained quotient span has dimension at least 15.",
+    "one_defective_t17": "Failure for the defective deletion costs at least 3 and failure for each of six full deletions costs at least 4, totaling at least 27>17.",
+    "one_relation_t17": "If every deletion had relation dimension at least 76, active relation colors would have loss at least 3 and inactive colors loss at least 4; support size at least 2 gives total loss at least 21>17.",
+    "therefore_some_six_term_permanent_relation_dimension_is_at_most_75": true
+  },
+  "input_after_N6_098": "every residual seven-set has x_A<=68",
+  "layer_exclusions": [
+    {
+      "central_dimension": 68,
+      "defect_six_relation_state_count": 56,
+      "excluded": true,
+      "high_t_state_count": 3,
+      "old_cap_excluded_count": 43,
+      "pre_new_argument_state_count": 13,
+      "product_shadow_first_minimizer": [
+        20,
+        10,
+        10,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "product_shadow_minimizer_count": 8,
+      "product_shadow_minimum": 75,
+      "required_prolongation_lower_by_open_state": {
+        "0": 472,
+        "1": 472,
+        "10": 472,
+        "11": 470,
+        "12": 472,
+        "2": 468,
+        "3": 464,
+        "4": 472,
+        "5": 472,
+        "6": 468,
+        "7": 470,
+        "8": 470,
+        "9": 472
+      },
+      "same_shadow_extension_interface": "N6_076",
+      "six_term_shortening_dimension": 48,
+      "t15_t16_state_count": 10
+    },
+    {
+      "central_dimension": 67,
+      "defect_six_relation_state_count": 56,
+      "excluded": true,
+      "high_t_state_count": 3,
+      "old_cap_excluded_count": 43,
+      "pre_new_argument_state_count": 13,
+      "product_shadow_first_minimizer": [
+        20,
+        10,
+        10,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "product_shadow_minimizer_count": 14,
+      "product_shadow_minimum": 75,
+      "required_prolongation_lower_by_open_state": {
+        "0": 473,
+        "1": 473,
+        "10": 473,
+        "11": 471,
+        "12": 473,
+        "2": 469,
+        "3": 465,
+        "4": 473,
+        "5": 473,
+        "6": 469,
+        "7": 471,
+        "8": 471,
+        "9": 473
+      },
+      "same_shadow_extension_interface": "N6_078",
+      "six_term_shortening_dimension": 47,
+      "t15_t16_state_count": 10
+    }
+  ],
+  "low_t_argument": {
+    "every_six_term_deletion_retains_a_full_fifteen_dimensional_quotient_image": true,
+    "six_term_permanent_relation_dimension_is_at_most_75": true,
+    "strict_caps_force_every_epsilon_zero_term_to_have_alpha_three": true,
+    "t15_alpha_two_cap_from_N6_052": 458,
+    "t15_alpha_zero_or_one_cap_from_N6_051": 458,
+    "t16_alpha_two_cap_from_N6_096": 464,
+    "t16_alpha_zero_or_one_cap_from_N6_095": 462
+  },
+  "quotient_deletion_loss_lemma": {
+    "dual_proof": "The dual spaces supported only on color j are linearly direct: restricting a relation among them to Q_j kills every other summand.",
+    "statement": "For subspaces Q_1,...,Q_7 with total span dimension t, put delta_j=t-dim(sum_{i not equal j}Q_i). Then sum_j delta_j<=t."
+  },
+  "relation_envelope": {
+    "old_cap_excluded_count": 43,
+    "open_state_count_before_new_argument": 13,
+    "state_count": 56,
+    "t15_t16_states": 10,
+    "t17_t18_states": 3
+  },
+  "status": [
+    "PURE_B34_DEFECT_SIX_X67_X68_EXCLUSION",
+    "EXACT_RELATION_ENVELOPE_REPLAY",
+    "N6-099"
+  ],
+  "strict_conclusion": "All thirteen defect-six states at x_A=67,68 are excluded by the termwise t15/t16 caps or the quotient deletion-loss lemma, followed by N6-076/N6-078 and flag-hook actual-frame rigidity. Hence every actual b=34 survivor has x_A<=66 for every residual seven-set.",
+  "updated_residual_seven_set_upper": 66
+}

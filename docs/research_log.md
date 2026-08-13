@@ -1944,3 +1944,97 @@ updated shortening statement is
 for every residual seven-set in a global \(b=34\) survivor.  The layers
 \(x_A\le71\), global \(b=34\), ordinary lower 29, exact rank 32, and all
 border-rank claims remain open.
+
+N6-098 continues the same shortening through dimensions 71, 70, and 69.
+The first product shadow remains 89, so the exact defect-four replay leaves
+the same three packets as N6-093. In every packet one can omit a term so
+that the remaining six quadratic spaces are literal direct and their
+permanent relation space has dimension at most 75. The retained central
+dimensions are 51, 50, and 49. The first gives the strict contradiction
+\(m_{51}=78>75\). At dimensions 50 and 49, equality gives a common
+\(W_{15}\); N6-064 or N6-073 makes the second shadow a genuine flag hook,
+and the N6-069/N6-072 actual-frame dichotomy excludes it. Hence every
+residual seven-set in a global \(b=34\) survivor now satisfies
+
+\[
+ \boxed{x_A\le68}.
+\]
+
+The \(x_A\le68\) layers, global \(b=34\), ordinary lower 29, exact rank 32,
+and all border-rank claims remain open.
+
+N6-099 treats the next defect-six plateau at dimensions 68 and 67. The
+N6-080 envelope has 56 states; older caps remove 43. The new \(t_2=15,16\)
+caps force every full term in ten remaining states to have \(\alpha=3\), so
+six-term deletion leaves permanent quadratic relation dimension at most 75.
+For the three \(t_2=17,18\) states, a pure quotient-loss lemma gives the same
+bound: if \(\delta_j\) is the span loss after deleting color \(j\), then
+\(\sum_j\delta_j\le t\). The direct, one-relation, and one-defective cases
+would otherwise require total losses respectively larger than their
+17- or 18-dimensional quotient spans. The retained 48- and 47-planes have
+the minimum shadow 75; N6-076/N6-078 extend them to the N6-064 flag-hook
+locus, and N6-069/N6-072 exclude the actual frames. Consequently
+
+\[
+ \boxed{x_A\le66}.
+\]
+
+The \(x_A\le66\) layers, global \(b=34\), ordinary lower 29, exact rank 32,
+and all border-rank claims remain open.
+
+N6-100 connects this upper bound back to the global fixed-six arithmetic.
+N6-074 gives \(f_A\ge66\) for every residual seven-set, so N6-099 forces
+\(f_A=x_A=66\) for every one of them. All dimension inequalities become
+equalities: the global central space has dimension 366, every fifteen
+residual cubic images are literal direct of total dimension 300, and every
+seven-term literal/coupled image has dimension 140. Thus every seven-set
+lies in one of the thirteen exact N6-080 states.
+
+The N6-099 quotient-loss argument selects inside every seven-set a six-set
+whose quadratic permanent relation space has dimension at most 75. Its
+central intersection is forced to have dimension exactly 46; a larger
+intersection would enter N6-078 or the \(t_2=14\) prolongation contradiction.
+Its product shadow lies between \(m_{46}=72\) and 75, and the complementary
+sixteen cubic images are literal direct. This critical actual six-term
+\(46\to(72\text{--}75)\) configuration is the first unresolved \(b=34\)
+layer. Ordinary lower 29, exact rank 32, and all border-rank claims remain
+open.
+
+N6-101 classifies the new \(46\to72\) equality locus rather than assuming
+that it extends to the old 50-plane locus. The exact Ferrers program has four
+profiles, and a direct original-support argument identifies 7200 coordinate
+fixed points in four symmetry orbits. Their full incidence tangent spaces
+have dimension 20. The grounded quadratic initial ideals are radical graph
+edge ideals with 31 or 32 generators; all maximal independent facets have
+dimension five, with 960 or 900 facets according to the coordinate type.
+Exact symbolic replay on every stabilizer orbit verifies both derivative
+containments and an identity branch Jacobian. Complete filtered lifting and
+projective torus globalization give
+
+\[
+ \dim S=46,\quad\dim\partial S=72
+ \quad\Longrightarrow\quad\dim\partial^2S=23.
+\]
+
+The second shadow is either the standard flag hook, the distinct biflag
+rectangle hook \(R_4\otimes C_5+R_5\otimes C_3\), or a transpose. The biflag
+case is genuine new geometry and is not silently identified with N6-064.
+
+N6-102 then uses the fact that every residual seven-set lies in one of the
+thirteen N6-080 states. Across all 22 residual terms, the only possible
+epsilon profiles are
+
+\[
+ 0^{22},\ 0^{21}1,\ 0^{21}2,\ 0^{20}1^2,
+ \ 0^{20}12,\ 0^{19}1^3.
+\]
+
+Hence the critical seven-set and selected six-set may be chosen entirely
+from epsilon-zero terms. Exact scalar pruning leaves only ten
+\((\kappa_2,a_2,t_2)\) states: four with \(a_2=72\), three with \(a_2=73\),
+two with \(a_2=74\), and one with \(a_2=75\). The four \(a_2=72\) states now
+have the N6-101 second-shadow classification, but actual six-color
+realizability remains open; in particular the biflag geometry and the
+\(t_2>15\) standard-hook states lie outside N6-072's common-\(W_{15}\) input.
+This is a strict ten-state frontier, not an exclusion of global \(b=34\),
+ordinary lower 29, exact rank 32, or border rank.

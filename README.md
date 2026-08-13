@@ -94,7 +94,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` coordinate product-shadow equality | pure finite-support theorem; exact integer replay | every coordinate fifty-plane with product shadow 75 is one of two transposed hook supports; its second shadow has dimension 23, but no noncoordinate equality classification or lower-28 conclusion is claimed |
 | `n=6` full product-shadow equality locus | pure characteristic-zero formal/projective theorem; exact rational and symbolic replay | the complete equality locus is the union of closures of 240 four-parameter Boolean-replacement branches and their transposes; every equality plane has second shadow 23 |
 | `n=6` all-singular hook exclusion | pure characteristic-zero theorem; independently audited exact rational replay | the common quotient synchronizes all six row and column block images; the 23-dimensional flag hook leaves only three or four full contractions, and the remaining label and column-rank cases are contradictory, excluding the last `b=50` endpoint and proving `ChowRank(perm_6)>=28` |
-| `n=6` lower-29 fixed-six frontier | pure fixed-six and equality-locus reductions; exact integer/rational replay; partial | the 47--49 extension ladder excludes `b=31,32,33,47,48,49`; the strict frontier is `34<=b<=46`; at `b=34`, every residual seven-set shortening has dimension at most 72, the `72->89->24` equality layer is classified, and its one-relation common-quotient packet is excluded, leaving two actual packets |
+| `n=6` lower-29 fixed-six frontier | pure fixed-six and equality-locus reductions; exact integer/rational replay; partial | the 47--49 extension ladder excludes `b=31,32,33,47,48,49`; the strict frontier is `34<=b<=46`; at `b=34`, every residual seven-set is forced to the hereditary 66-plane layer, an all-`epsilon=0` critical six-set has dimension 46 and one of ten scalar states, and its exact 72-shadow cases have a 23-dimensional standard-flag or biflag-rectangle second shadow |
 | `n=6` fixed `K_3,4` Fano exclusion | pure characteristic-zero projective theorem; exact finite replay | the rank-at-most-nine six-plane Fano scheme in `A_3 tensor B_4` consists of 18 reduced coordinate rectangles, and its cross-image-at-most-three pair incidence is diagonal; this excludes actual complementary pairs only in the fixed layer |
 | `n=6` colored-differential barrier | explicit characteristic-zero linear model; exact modular certificate | all endpoint subset caps and the canonical common kernels coexist with surjective colored shadows in four, five, and six colors; any successful continuation must use actual Chow coproduct or integrability structure |
 | `n=6` squarefree-coproduct colored barrier | canonical per-color coproduct construction; exact modular upper certificates | six squarefree cubic coproducts have total kernel exactly 50 while every proper color-subset kernel obeys the endpoint cap; the missing constraints are cross-color ambient directness and the common-section cocycle |
@@ -250,6 +250,11 @@ python scripts/n6_b34_x72_one_relation_exclusion.py
 python scripts/n6_global_t16_prolongation_cap.py
 python scripts/n6_alpha2_t16_prolongation_cap.py
 python scripts/n6_lower29_b34_x72_exclusion.py
+python scripts/n6_lower29_b34_x69_71_exclusion.py
+python scripts/n6_lower29_b34_x67_68_exclusion.py
+python scripts/n6_lower29_b34_x66_global_frontier.py
+python scripts/n6_product_shadow_b46_equality_locus.py
+python scripts/n6_lower29_b34_critical_six_scalar_frontier.py
 ```
 
 The bound generators use only the Python standard library and exact integer/rational arithmetic. The asymptotic diagnostic evaluates exact finite certificates with `Fraction`; decimal constants are display-only checks of the proved formulas. The coordinate tangent audit uses a finite-field rank only in the valid direction: a rank-381 certificate modulo `1,000,003`, together with 19 explicit characteristic-zero tangent directions, proves exact affine tangent dimension 19 over `Q`.
