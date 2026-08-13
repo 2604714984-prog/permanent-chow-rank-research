@@ -1543,3 +1543,27 @@ Hence two complementary six-planes cannot both be cross-free for this
 \(D\).  Row-column permutations and transposition give the symmetric cases.
 This is a fixed special-orbit theorem, not a resolution of the full
 \(b=50\) endpoint.
+
+N6-067 extends the collision exclusion across arbitrarily many valuation
+levels under one explicit tensor hypothesis.  If the saturated flat limit is
+
+\[
+ K_0=Q\otimes S_0(C)\subset E_2,
+ \qquad \dim Q=5,
+\]
+
+let \(R=\partial_AQ\) and \(r=\dim R\).  The coordinate-square restrictions
+on any, possibly noncoordinate, \(r\)-plane span at least an \(r\)-dimensional
+space.  Therefore
+
+\[
+ \dim(\operatorname{Sym}^2R\cap E_A)\le\binom r2.
+\]
+
+Since it contains the five-plane \(Q\), one has \(r\ge4\), while tensor
+contraction gives
+\(\dim\partial K_0=6r\ge24\).  This contradicts the equality-limit value 23.
+The result allows arbitrary rooted-tree shape and valuation orders only when
+the final 75-plane has this row-pure form.  Partial Smith packets, column
+jets, changing column frames, and \(\operatorname{End}(S_0(C))\)-valued
+gauges remain open.
