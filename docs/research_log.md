@@ -2514,3 +2514,45 @@ a rank-five fixed point. Combining N6-113 and N6-114 leaves only the
 rank-three \(K_{2,3}/K_{3,2}\) normal cones in the twelve-dimensional product
 equality case. The full \(\kappa_2=0\) exclusion and ordinary lower 29 remain
 open.
+
+## 2026-08-13: the common-\(A_3\) rank-six component loses three frame directions
+
+The rank-three boundary is not empty. For complementary two-planes
+
+\[
+ P=\langle e_0+a e_2,e_1+b e_3\rangle,\qquad
+ Q=\langle e_0-a e_2,e_1-b e_3\rangle
+\]
+
+in the four-dimensional column factor, the six-planes
+\(L=A_3\otimes P\) and \(M=A_3\otimes Q\) are complementary and have full
+\(E_{34}\)-cross rank exactly six. Thus the relaxed cross-free kernel really
+has dimension twelve.
+
+N6-115 proves a pure converse for the column problem. If complementary
+two-planes in \(k^4\) have zero-diagonal cross rank at most two, the four
+coordinate covectors split into two matched pairs, and within each pair the
+two planes occur with opposite slopes. This is the harmonic graph family
+above, up to a coordinate permutation.
+
+The twelve-dimensional product kernel is nevertheless not an actual Chow
+section difference. Its projection to either block lies in
+\(S_0(A_3)\otimes\operatorname{Sym}^2(P_2)\), of dimension nine. Exact
+rational replay gives projection rank exactly nine on the displayed family,
+whereas an actual twelve-dimensional graph requires both projections to be
+injective.
+
+As a bounded diagnostic, the script streams \(6!2^5=23{,}040\) signed
+permutation graphs at each rank-three fixed type. The \(K_{3,2}\) scan has
+exactly four modular rank-six survivors; each is recomputed over
+\(\mathbf Q\), is complementary, and has block ranks \((9,9)\). The
+\(K_{2,3}\) scan has no rank-six survivor. At a generic product point the
+72-variable determinantal tangent system has exact rank 70, matching the
+two-parameter product family.
+
+This identifies one smooth complementary component and explains why it is
+harmless for Chow frames. It does not yet prove that every complementary
+formal branch through the \(K_{3,2}\) fixed point is of this form, nor does it
+exclude every \(K_{2,3}\) formal branch. That formal exhaustion is now the
+remaining product-pair step before returning to the full six-color
+\(\kappa_2=0\) geometry.

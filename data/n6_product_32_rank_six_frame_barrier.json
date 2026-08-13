@@ -1,0 +1,283 @@
+{
+  "certificate": "N6-115",
+  "status": "PURE_COMPLEMENTARY_2_PLUS_2_COLUMN_EQUALITY_CLASSIFICATION; PURE_COMMON_A_PRODUCT_FRAME_BARRIER; EXACT_BOUNDED_SIGNED_PERMUTATION_AND_TANGENT_REPLAY",
+  "field": "algebraically closed characteristic zero",
+  "prime_used_only_for_rank_lower_bounds": 1000003,
+  "column_graph_symbolic_certificate": {
+    "cross_matrix_shape": [
+      4,
+      6
+    ],
+    "nonzero_three_minor_count": 19,
+    "selected_minor_factors": [
+      "(a-c)(a+c)",
+      "(b-d)(b+d)"
+    ],
+    "complementarity_factors": [
+      "a-c",
+      "b-d"
+    ],
+    "rank_at_most_two_forces": [
+      "c=-a",
+      "d=-b"
+    ],
+    "substitution_kills_every_three_minor": true
+  },
+  "finite_field_counterexample_screen": {
+    "status": "COMPLETE_F3_COUNTEREXAMPLE_SCREEN_ONLY",
+    "grassmannian_point_count": 130,
+    "ordered_pair_count": 16900,
+    "complementary_cross_rank_at_most_two_count": 12,
+    "all_twelve_pairs_are_harmonic_graph_pairs": true,
+    "not_used_for_characteristic_zero_proof": true
+  },
+  "common_A_product_family": {
+    "representative": {
+      "target_permutation": [
+        2,
+        3,
+        6,
+        7,
+        10,
+        11
+      ],
+      "signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ambient_sum_rank_over_QQ": 12,
+      "cross_rank_over_QQ": 6,
+      "cross_free_kernel_dimension": 12,
+      "left_block_projection_rank_over_QQ": 9,
+      "right_block_projection_rank_over_QQ": 9
+    },
+    "determinantal_tangent_equation_shape": [
+      360,
+      72
+    ],
+    "modular_tangent_rank_lower_bound": 70,
+    "explicit_product_family_dimension_lower_bound": 2,
+    "exact_characteristic_zero_tangent_dimension": 2,
+    "column_cross_rank": 2,
+    "column_cross_free_kernel_dimension": 4,
+    "column_block_projection_rank": 3,
+    "E34_cross_rank": 6,
+    "E34_cross_free_kernel_dimension": 12,
+    "E34_block_projection_rank": 9
+  },
+  "bounded_signed_permutation_scan": {
+    "K32": {
+      "candidate_count": 23040,
+      "streaming_rank_histogram_mod_prime": {
+        "12": 288,
+        "14": 888,
+        "10": 12,
+        "6": 4,
+        "15": 2336,
+        "16": 2880,
+        "18": 5184,
+        "13": 240,
+        "11": 48,
+        "17": 11136,
+        "8": 24
+      },
+      "modular_rank_six_candidates": [
+        {
+          "target_permutation": [
+            2,
+            3,
+            6,
+            7,
+            10,
+            11
+          ],
+          "signs": [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        },
+        {
+          "target_permutation": [
+            2,
+            3,
+            6,
+            7,
+            10,
+            11
+          ],
+          "signs": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "target_permutation": [
+            3,
+            2,
+            7,
+            6,
+            11,
+            10
+          ],
+          "signs": [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        },
+        {
+          "target_permutation": [
+            3,
+            2,
+            7,
+            6,
+            11,
+            10
+          ],
+          "signs": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "K23": {
+      "candidate_count": 23040,
+      "streaming_rank_histogram_mod_prime": {
+        "17": 7968,
+        "18": 10464,
+        "16": 3264,
+        "15": 1248,
+        "14": 96
+      },
+      "modular_rank_six_candidates": []
+    },
+    "K32_exact_QQ_rank_six_candidates": [
+      {
+        "target_permutation": [
+          2,
+          3,
+          6,
+          7,
+          10,
+          11
+        ],
+        "signs": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "ambient_sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 6,
+        "cross_free_kernel_dimension": 12,
+        "left_block_projection_rank_over_QQ": 9,
+        "right_block_projection_rank_over_QQ": 9
+      },
+      {
+        "target_permutation": [
+          2,
+          3,
+          6,
+          7,
+          10,
+          11
+        ],
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "ambient_sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 6,
+        "cross_free_kernel_dimension": 12,
+        "left_block_projection_rank_over_QQ": 9,
+        "right_block_projection_rank_over_QQ": 9
+      },
+      {
+        "target_permutation": [
+          3,
+          2,
+          7,
+          6,
+          11,
+          10
+        ],
+        "signs": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "ambient_sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 6,
+        "cross_free_kernel_dimension": 12,
+        "left_block_projection_rank_over_QQ": 9,
+        "right_block_projection_rank_over_QQ": 9
+      },
+      {
+        "target_permutation": [
+          3,
+          2,
+          7,
+          6,
+          11,
+          10
+        ],
+        "signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "ambient_sum_rank_over_QQ": 12,
+        "cross_rank_over_QQ": 6,
+        "cross_free_kernel_dimension": 12,
+        "left_block_projection_rank_over_QQ": 9,
+        "right_block_projection_rank_over_QQ": 9
+      }
+    ],
+    "all_rank_six_candidates_fail_actual_block_injectivity": true
+  },
+  "pure_theorem": {
+    "column_statement": "complementary two-planes P,Q in k4 with S0(k4) cross rank at most two are harmonic graph pairs along one coordinate matching",
+    "product_statement": "for L=A3 tensor P2 and M=A3 tensor Q2, a twelve-dimensional E34 cross-free kernel has block projection rank at most nine and cannot be an actual twelve-dimensional Chow section difference"
+  },
+  "boundary": {
+    "not_proved": [
+      "every complementary K32 rank-six component is a common-A product component",
+      "the complete K23/K32 formal rank-three normal-cone classification",
+      "the kappa2=0 six-color endpoint",
+      "ordinary lower 29 or exact ChowRank(perm6)=32",
+      "any border-rank statement"
+    ]
+  }
+}

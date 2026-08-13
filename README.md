@@ -306,6 +306,8 @@ The earlier first higher-wedge audit split the `p=2` matrices by exact row-colum
 
 The extremal six-plane theorem remains an independent structural result. At a coordinate `K_2,3` point, the exact local rank chart has Jacobian rank `163`, a 17-dimensional tensor-product tangent kernel, and 13 independent second-order disjoint-support obstructions. A squarefree multiplicity comparison gives exactly 432 local branches; projective torus globalization gives 5,580 seven-dimensional support components.
 
+The remaining `K_3,2` rank-three product stratum contains genuine complementary cross-rank-six points, so the relaxed cross-free incidence cannot simply be declared empty. N6-115 classifies the induced complementary `2+2` column equality locus: it consists of harmonic graph pairs along a coordinate matching. The resulting common-`A_3` product family has a 12-dimensional cross-free kernel but both Chow-block projections have rank only 9, so it cannot be an actual 12-dimensional section difference. A bounded streaming screen of `2*6!*2^5=46,080` signed-permutation graphs finds four rank-six `K_3,2` candidates and none at `K_2,3`; all four survivors have exact rational block rank 9. Exhaustion of every rank-three formal component remains open.
+
 ## Layout
 
 ```text
