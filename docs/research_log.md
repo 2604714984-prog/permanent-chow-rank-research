@@ -2451,3 +2451,35 @@ components must specialize to 43 standard or 34 biflag product supports.
 The (3\times4/4\times3) twelve-dimensional equality case is still open, so
 this does not yet exclude the full \(\kappa_2=0\) branches or prove ordinary
 lower 29.
+
+## 2026-08-13: the rank-six (3\times4) fixed stratum is noncomplementary
+
+N6-113 begins the last product equality case. The complete 853,776-pair
+coordinate enumeration in (A_3\otimes B_4) finds 18 rank-three, 72
+rank-five, and 2,424 rank-six ordered pairs. The rank-six set has twenty
+row-column-swap orbits and no complementary fixed pair.
+
+Eighteen orbits, containing 2,268 pairs, lie in a common coordinate
+(2\times4) eight-space. Their exact first Schur maps have rank 48 on the
+48 normal graph variables and vanish on all 24 internal variables. Since
+every internal pair automatically has cross rank at most six, formal
+implicit elimination keeps the complete germ in the eight-space. The first
+exceptional diagonal orbit has row profile ((4,1,1)); its 36 difference
+variables have full rank, so swap symmetry forces the full germ to remain
+diagonal.
+
+At the final staircase profile ((3,2,1)), exact linear elimination leaves
+eleven tangent weights. The quadratic Schur cokernel has rank twenty and is
+the squarefree edge ideal with twenty explicit monomial generators. Its nine
+maximal independent facets cannot support the torus weight
+
+\[
+ (-2,0,2;-3,-1,1,3)
+\]
+
+of the complement determinant. Thus that determinant vanishes in the entire
+completed local ring, even though two separating tangent directions really
+exist. Projective globalization now shows that every component whose fixed
+point has rank exactly six is noncomplementary. A surviving complementary
+rank-at-most-six component must specialize to one of the lower rank-three or
+rank-five fixed strata; those larger normal cones remain the next open step.
