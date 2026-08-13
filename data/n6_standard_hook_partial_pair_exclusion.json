@@ -1,0 +1,360 @@
+{
+  "a2_72_standard_hook_application": {
+    "K26_edge_consequence": "both endpoint factor planes are complete row slices",
+    "K34_K43_edges_excluded_by": "N6-108",
+    "complementary_relation_graph_connected": true,
+    "final_contradiction": "Connectivity makes all six factor planes complete row slices, so their sum has dimension divisible by 6, not 23.",
+    "newly_excluded_kappa2_values": [
+      1,
+      2
+    ]
+  },
+  "certificate": "N6-109",
+  "claim_boundary": "This closes the a2=72, kappa2=1,2 standard-hook branches only. The kappa2=0 standard and biflag branches and all a2=73,74,75 states remain open; this is not ordinary lower 29, exact ChowRank(perm_6)=32, or a border-rank theorem.",
+  "coordinate_threshold_thirteen": {
+    "coordinate_twelve_plane_count": 1352078,
+    "fixed_profiles": [
+      {
+        "count": 3,
+        "intersection_dimension": 15,
+        "row_degree_profile": [
+          6,
+          6,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 10,
+        "intersection_dimension": 18,
+        "row_degree_profile": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "count": 30,
+        "intersection_dimension": 18,
+        "row_degree_profile": [
+          4,
+          4,
+          4,
+          0
+        ]
+      }
+    ],
+    "histogram_from_ten_up": {
+      "10": 7200,
+      "11": 270,
+      "12": 6120,
+      "15": 3,
+      "18": 40
+    },
+    "no_coordinate_values_thirteen_fourteen_sixteen_seventeen": true,
+    "threshold_thirteen_fixed_point_count": 43
+  },
+  "field": "algebraically closed, characteristic zero",
+  "nonlinear_product_corner_certificates": [
+    {
+      "allowed_leakage": 5,
+      "compatible_corner_defect_ranks": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "compatible_corner_defects": 12,
+      "conclusion": "Every compatible corner equals a tensor b, and every missing-corner product a tensor b vanishes.",
+      "missing_corner_product_ranks": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "missing_corner_products": 12,
+      "name": "K34_core_columns",
+      "pure_compatible_defect_weights": 12,
+      "pure_missing_corner_product_weights": 12
+    },
+    {
+      "allowed_leakage": 5,
+      "compatible_corner_defect_ranks": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "compatible_corner_defects": 12,
+      "conclusion": "Every compatible corner equals a tensor b, and every missing-corner product a tensor b vanishes.",
+      "missing_corner_product_ranks": [],
+      "missing_corner_products": 0,
+      "name": "K34_with_fourth_row",
+      "pure_compatible_defect_weights": 12,
+      "pure_missing_corner_product_weights": 0
+    }
+  ],
+  "partial_two_row_rigidity": {
+    "invertible_member": {
+      "conclusion": "every thirteen-plane in S0 contains an invertible member",
+      "coordinate_thirteen_planes": 105,
+      "minimum_matching_count_after_deleting_two_edges": 9,
+      "perfect_matchings_of_K6": 15
+    },
+    "multiplier_projective_fixed_ranks": {
+      "conclusion": "XQ subset S0 and dim Q at least 13 force X scalar",
+      "minimum_non_scalar_diagonal_rank": 5,
+      "off_diagonal_matrix_unit_rank_set": [
+        5
+      ],
+      "rank_allowed_by_a_thirteen_plane": 2
+    },
+    "partial_transverse_theorem": "If D subset E26 has dimension at least 13, shadow dimension 12, and full projection to two rows, then U=P2 tensor k6; for an actual complementary block pair, L=p tensor k6 and M=q tensor k6.",
+    "ratio_algebra": {
+      "conclusion": "Alg(Q B0^-1)=End(k^6)",
+      "coordinate_invariant_pair_maxima_by_dimension": {
+        "1": 11,
+        "2": 10,
+        "3": 12,
+        "4": 10,
+        "5": 11
+      },
+      "maximum": 12,
+      "required_Q_dimension": 13
+    }
+  },
+  "pure_product_globalization": {
+    "method": "projective torus components and relative normal cones",
+    "product_dimension_gate": {
+      "2x6": [
+        15
+      ],
+      "3x4": [
+        15,
+        18
+      ],
+      "4x3": [
+        15,
+        18
+      ]
+    },
+    "statement": "Every U in Gr(12,M) with dim(K intersect Sym2 U)>=13 is a product of type 2x6, 3x4, or 4x3."
+  },
+  "relative_normal_leakage_certificates": [
+    {
+      "allowed_leakage_at_threshold_thirteen": 2,
+      "base_intersection_dimension": 15,
+      "exact_QQ_linear_rank": 130,
+      "graph_variables": 132,
+      "kernel_dimension": 2,
+      "kernel_equals_product_tangent": true,
+      "minimum_nonproduct_fixed_weight_leakage_rank": 5,
+      "name": "K26",
+      "weight_group_signature_histogram": [
+        {
+          "group_count": 110,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 5,
+          "output_weight_count": 5,
+          "variable_count": 1
+        },
+        {
+          "group_count": 2,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 5,
+          "output_weight_count": 15,
+          "variable_count": 5
+        },
+        {
+          "group_count": 2,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 5,
+          "output_weight_count": 15,
+          "variable_count": 6
+        }
+      ]
+    },
+    {
+      "allowed_leakage_at_threshold_thirteen": 5,
+      "base_intersection_dimension": 18,
+      "exact_QQ_linear_rank": 121,
+      "graph_variables": 132,
+      "kernel_dimension": 11,
+      "kernel_equals_product_tangent": true,
+      "minimum_nonproduct_fixed_weight_leakage_rank": 6,
+      "name": "K34_core_columns",
+      "weight_group_signature_histogram": [
+        {
+          "group_count": 96,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 6,
+          "variable_count": 1
+        },
+        {
+          "group_count": 8,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 9,
+          "variable_count": 3
+        },
+        {
+          "group_count": 3,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 12,
+          "variable_count": 4
+        }
+      ]
+    },
+    {
+      "allowed_leakage_at_threshold_thirteen": 5,
+      "base_intersection_dimension": 18,
+      "exact_QQ_linear_rank": 124,
+      "graph_variables": 132,
+      "kernel_dimension": 8,
+      "kernel_equals_product_tangent": true,
+      "minimum_nonproduct_fixed_weight_leakage_rank": 6,
+      "name": "K34_with_sixth_column",
+      "weight_group_signature_histogram": [
+        {
+          "group_count": 99,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 6,
+          "variable_count": 1
+        },
+        {
+          "group_count": 8,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 9,
+          "variable_count": 3
+        },
+        {
+          "group_count": 3,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 12,
+          "variable_count": 3
+        }
+      ]
+    },
+    {
+      "allowed_leakage_at_threshold_thirteen": 5,
+      "base_intersection_dimension": 18,
+      "exact_QQ_linear_rank": 125,
+      "graph_variables": 132,
+      "kernel_dimension": 7,
+      "kernel_equals_product_tangent": true,
+      "minimum_nonproduct_fixed_weight_leakage_rank": 6,
+      "name": "K34_with_fourth_row",
+      "weight_group_signature_histogram": [
+        {
+          "group_count": 100,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 6,
+          "variable_count": 1
+        },
+        {
+          "group_count": 4,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 9,
+          "variable_count": 2
+        },
+        {
+          "group_count": 4,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 9,
+          "variable_count": 3
+        },
+        {
+          "group_count": 3,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 12,
+          "variable_count": 4
+        }
+      ]
+    },
+    {
+      "allowed_leakage_at_threshold_thirteen": 5,
+      "base_intersection_dimension": 18,
+      "exact_QQ_linear_rank": 126,
+      "graph_variables": 132,
+      "kernel_dimension": 6,
+      "kernel_equals_product_tangent": true,
+      "minimum_nonproduct_fixed_weight_leakage_rank": 6,
+      "name": "K43",
+      "weight_group_signature_histogram": [
+        {
+          "group_count": 99,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 6,
+          "variable_count": 1
+        },
+        {
+          "group_count": 3,
+          "kernel_dimension": 0,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 12,
+          "variable_count": 3
+        },
+        {
+          "group_count": 6,
+          "kernel_dimension": 1,
+          "minimum_rank_outside_kernel": 6,
+          "output_weight_count": 12,
+          "variable_count": 4
+        }
+      ]
+    }
+  ],
+  "remaining_frontier": {
+    "a2_72": [
+      "kappa2=0 standard hook",
+      "kappa2=0 biflag"
+    ],
+    "higher_a2": [
+      73,
+      74,
+      75
+    ]
+  },
+  "standard_hook": {
+    "M": "R4 tensor C5 + R3 tensor C6",
+    "dimension": 23,
+    "dimension_of_K": 75,
+    "intrinsic_quadratic_space": "K=E2 intersect Sym^2(M)"
+  },
+  "status": "CERTIFIED_STANDARD_HOOK_PARTIAL_PAIR_EXCLUSION"
+}

@@ -2279,3 +2279,72 @@ guaranteed difference has dimension only twelve, so both second-shadow
 geometries remain open; the standard-hook \(\kappa_2=1,2\) alternatives also
 remain open.  Hence N6-108 is not an ordinary lower-29, exact-rank-32, or
 border-rank theorem.
+
+N6-109 treats the remaining standard-hook branches with
+\(\kappa_2=1,2\). For
+
+\[
+ M=R_4\otimes C_5+R_3\otimes C_6,\qquad
+ K=E_2\cap\operatorname{Sym}^2M,
+\]
+
+the exact enumeration of all \(\binom{23}{12}=1,352,078\) coordinate
+twelve-planes has no intersection dimensions \(13,14,16,17\). The
+threshold-thirteen fixed locus is still the familiar forty-three products:
+three \(K_{2,6}\), thirty \(K_{3,4}\), and ten \(K_{4,3}\).
+
+On the five hook-stabilizer graph charts, the exact linear kernel dimensions
+are
+
+\[
+ 2,\ 11,\ 8,\ 7,\ 6,
+\]
+
+and explicit product tangent vectors span every kernel. The minimum leakage
+rank outside them is respectively
+
+\[
+ 5,\ 6,\ 6,\ 6,\ 6,
+\]
+
+strictly above the allowed losses \(2,5,5,5,5\). Two charts have nonlinear
+product corners. Twelve compatible defects \(\gamma-a\otimes b\), and on the
+core chart twelve missing-corner products \(a_ib_j\), each have exact leakage
+rank six. Thus the relative normal cones contain no nonproduct fixed
+direction, and projective torus globalization proves that every
+threshold-thirteen twelve-plane is a \(2\times6\), \(3\times4\), or
+\(4\times3\) product.
+
+A pure partial version of N6-061 handles the first type. If
+\(Q\subset S_0(k^6)\) has dimension at least thirteen, then
+\(XQ\subset S_0\) forces \(X\) scalar: after projectivizing modulo scalars,
+every torus-fixed nonscalar multiplier has defect rank at least five. Every
+such \(Q\) contains an invertible member because each coordinate
+thirteen-edge subspace of \(K_6\) contains a perfect matching. Finally, the
+coordinate fixed maxima for
+\(\{B\in S_0:BZ\subset H\}\), for
+\(\dim H=\dim Z=1,\ldots,5\), are
+
+\[
+ (11,10,12,10,11).
+\]
+
+Projective torus globalization and Burnside therefore give
+\(\operatorname{Alg}(QB_0^{-1})=\operatorname{End}(k^6)\). An actual
+complementary \(2\times6\) pair with a cross-free section of dimension at
+least thirteen must consequently be
+
+\[
+ L=p\otimes k^6,\qquad M=q\otimes k^6.
+\]
+
+For either standard-hook state \((72,1,17)\) or \((72,2,16)\), N6-103 gives
+a connected complementary relation graph and factor-plane sum of dimension
+twenty-three. N6-108 excludes every \(3\times4\) or \(4\times3\) edge; every
+remaining edge is \(2\times6\), so connectivity makes all six factor planes
+complete row slices. Their sum has dimension divisible by six, not
+twenty-three. This closes the standard-hook \(\kappa_2=1,2\) branches.
+
+At \(a_2=72\), only the standard and biflag \(\kappa_2=0\) geometries now
+remain. The \(a_2=73,74,75\) scalar states are still open, so N6-109 does not
+prove ordinary lower 29, exact rank 32, or border rank.
