@@ -1825,3 +1825,33 @@ exclusion. Hence the strict consequence is now
 The next unresolved object is the \(76\to90\) equality locus. Global
 \(b=34\), ordinary lower 29, exact rank 32, and every border-rank claim remain
 open.
+
+N6-090 replaces the next four deletion-by-deletion computations by one
+uniform stability theorem. For every dimension (73\le s\le76), the exact
+first product-shadow minimum remains 90 and every coordinate equality
+support is a deletion of at most seven cells from a unique N6-082 product
+parent. At the parent, each of the eight free linear components has restricted
+tangent-source vertex cut eight. Every grounded eta variable has eight source
+witnesses, while each of the twelve forbidden quadratic monomials is supported
+by forty different cubic sources. Thus seven deletions preserve the exact
+linear decomposition and the parent initial ideal
+(I(K_4)+I(K_4)). The relative Grassmann branches and projective torus
+globalization extend every (s\to90) equality plane to its (80\to90)
+product parent.
+
+N6-091 then descends through (s=76,75,74,73). The defect-three relation
+envelope is unchanged, while the required prolongation dimensions increase to
+(464,465,466,467). All ten (t_2\le14) states remain strictly excluded;
+the unique direct/common-(W_{15}) endpoint is excluded by N6-083 after the
+N6-090 extension. Consequently every residual seven-set in a global
+(b=34) survivor now satisfies
+
+\[
+ \boxed{x_A\le72,\qquad f_A\le72}.
+\]
+
+This does not exclude global (b=34). The next shortening layer is not a
+further product deletion: the exact minimum changes to (m_{72}=89). Its
+equality locus and the resulting defect-four actual packet are the next open
+objects. Ordinary lower 29, exact rank 32, and all border-rank claims remain
+open.
