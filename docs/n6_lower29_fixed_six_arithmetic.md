@@ -77,10 +77,36 @@ excluded. At \(b=28,29\), the floors are 52 and 51 and both shadows equal
 common quotient \(W_{12}\); the N6-044 prolongation cap excludes both
 layers.
 
+The endpoint use of a literal residual six-subset is legitimate. If all
+six individual middle images \(U_i=\operatorname{im}A_i\) are direct, then
+the symmetric catalecticant maps satisfy
+
+\[
+ \ker\left(\sum_iA_i\right)=\bigcap_i\ker A_i.
+\]
+
+Indeed, a vector in the left kernel gives a relation among the direct
+\(U_i\), so every \(A_i\) kills it. Symmetry gives
+\((\ker A_i)^\perp=U_i\), hence
+\(\operatorname{im}(\sum_iA_i)=\bigoplus_iU_i\). Thus the coupled and
+literal six-term middle spaces agree whenever the equality chain below
+forces literal directness.
+
 At \(b=30\), every residual six-subset has \(x_A\geq50\). The cases
-\(x_A=51,52\) reduce to the preceding \(W_{12}\) contradiction. The case
-\(x_A=50\) is the all-alpha-three common-\(W_{15}\) endpoint; N6-064 supplies
-the fifty-plane flag hook and N6-072 excludes it. Thus \(b=30\) is excluded.
+\(x_A=51,52\) reduce to the preceding \(W_{12}\) contradiction. If every
+six-subset has \(x_A=50\), then
+
+\[
+ 50=x_A\geq\dim(S\cap L_A)\geq\dim S-\dim L_{A^c}
+ \geq370-320=50.
+\]
+
+All inequalities are equalities. Thus \(\dim S=370\), every 16-term
+complement is a direct sum of 20-dimensional middle images, and every
+six-term \(L_A\) is direct of dimension 120. The preceding symmetric-map
+lemma identifies it with the coupled space. This is the all-alpha-three
+common-\(W_{15}\) endpoint; N6-064 supplies the fifty-plane flag hook and
+N6-072 excludes it. Thus \(b=30\) is excluded.
 
 At \(b=31,32,33\), the literal-six floors are respectively \(49,48,47\).
 All lie on the product-shadow-75 plateau. The existing fifty-plane theorem
