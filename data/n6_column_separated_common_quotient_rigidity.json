@@ -1,0 +1,71 @@
+{
+  "arithmetic": "exact integers and rational elimination; no floating point",
+  "claim_boundary": "Common column or row separation is an assumption, not a conclusion for an arbitrary common-W15 pair. The all-singular nonseparated layer remains open. The finite replay does not replace the pure proof, prove ChowRank(perm_6)>=28, or make a border-rank claim.",
+  "pure_theorem": {
+    "b50_endpoint_excluded_by_N6_059": true,
+    "b50_pair_triggers_N6_061": true,
+    "common_column_separation_and_common_W_force_P2_tensor_C6": true,
+    "transpose_for_common_row_separation": true
+  },
+  "regression": {
+    "S0_basis_annihilated_by_rho": true,
+    "S0_basis_rank": 15,
+    "binary_pair_audit": {
+      "dependent_pairs": 63,
+      "independent_pairs": 3906,
+      "nonzero_binary_vectors": 63,
+      "ordered_pairs": 3969
+    },
+    "diagonal_only_false_positive": {
+      "diagonal_p": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "diagonal_proportional": true,
+      "diagonal_q": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "full_tau_proportional": false,
+      "wedge_01_p": -1,
+      "wedge_01_q": -2
+    },
+    "rank_branch_regression": {
+      "rank_one_combined_plane_rank": 2,
+      "rank_one_p_family_rank": 1,
+      "rank_one_q_family_rank": 1,
+      "rank_three_pair_plane_intersection_dimension": 1,
+      "rank_two_each_coordinate_pair_rank": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "rank_two_p_family_rank": 2,
+      "rank_two_q_family_rank": 2
+    },
+    "rho_kernel_dimension": 15,
+    "rho_rank": 21,
+    "rho_shape": [
+      21,
+      36
+    ]
+  },
+  "status": [
+    "PURE_COLUMN_SEPARATED_COMMON_QUOTIENT_RIGIDITY",
+    "EXACT_QQ_BLOCK_REGRESSION",
+    "B50_COMMON_SEPARATION_EXCLUDED",
+    "N6-070"
+  ],
+  "strict_conclusion": "Two complementary actual frames separated by the same coordinate columns and sharing one quotient have joint span P2 tensor C6. At the b=50 endpoint N6-061 and N6-059 exclude such a pair."
+}
