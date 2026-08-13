@@ -2105,3 +2105,42 @@ anchor. Only four rank combinations remain:
 The rank-five cases meet the G-050 Cremona barrier; the rank-three/four
 cross-anchor compatibility is new. This is a normal-form reduction, not an
 exclusion of the biflag branch or a proof of ordinary lower 29.
+
+N6-105 identifies the intrinsic quadratic space inside the biflag. The
+row-column diagonal torus specializes every biflag to a coordinate one while
+preserving (E_2); upper semicontinuity and the coordinate count
+(60+12=72) give
+
+\[
+ K=E_2\cap\operatorname{Sym}^2M.
+\]
+
+An exact enumeration of all (\binom{23}{12}=1,352,078) coordinate
+twelve-cell supports finds only 34 with quadratic intersection at least
+fifteen: 20 complete (3\times4) products and 14 complete (4\times3)
+products. Every survivor has intersection dimension eighteen. At the six
+biflag-stabilizer orbits, the exact first-leakage kernel dimensions are
+
+\[
+ 7,7,10,6,6,4,
+\]
+
+and every torus-weight direction outside a kernel has leakage rank at least
+six, whereas retaining a fifteen-plane permits rank only three.
+
+The largest, ten-dimensional kernel occurs over the core
+(A_4\otimes C_3). A pure block calculation makes every graph in that
+kernel
+
+\[
+ T=a\otimes I_{C_3}+I_{A_4}\otimes b.
+\]
+
+If both summands are nonzero, the absent wing-tail block and the bounds
+(\dim\{B\in S_0(C_3):bB=0\}\le1) and
+(\operatorname{rank}(S_0(A_4)\xrightarrow{\cdot a}A_4)\ge3) put the
+quadratic intersection in dimension at most twelve. Hence every high-
+intersection plane in the core-projection-isomorphism chart is a genuine
+(4\times3) product, and N6-068 excludes an actual complementary pair
+there. The noncore (3\times4), (4\times3), and tail-row charts remain
+open; N6-105 does not yet exclude the full biflag branch or prove lower 29.

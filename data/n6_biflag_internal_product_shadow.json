@@ -1,0 +1,302 @@
+{
+  "claim_boundary": "The intrinsic equality K=E2 intersect Sym^2(M) is a pure characteristic-zero statement. The 34-support classification is a complete coordinate enumeration only. It does not classify noncoordinate twelve-planes, exclude the biflag branch, prove ordinary lower 29, or make a border-rank claim.",
+  "coordinate_enumeration": {
+    "ambient_cell_count": 23,
+    "biflag_rectangle_count": 72,
+    "enumerated_twelve_cell_support_count": 1352078,
+    "every_survivor_has_intersection_dimension_18": true,
+    "every_survivor_is_a_complete_product_support": true,
+    "intersection_dimension_histogram": {
+      "0": 1728,
+      "1": 42192,
+      "10": 5502,
+      "11": 288,
+      "12": 5124,
+      "18": 34,
+      "2": 219132,
+      "3": 334368,
+      "4": 302160,
+      "5": 210204,
+      "6": 107446,
+      "7": 72780,
+      "8": 35820,
+      "9": 15300
+    },
+    "supports_with_intersection_dimension_at_least_15": 34,
+    "survivor_degree_profiles": [
+      {
+        "column_degrees": [
+          4,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        "count": 14,
+        "row_degrees": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0
+        ]
+      },
+      {
+        "column_degrees": [
+          3,
+          3,
+          3,
+          3,
+          0,
+          0
+        ],
+        "count": 20,
+        "row_degrees": [
+          4,
+          4,
+          4,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "survivor_intersection_dimension_histogram": {
+      "18": 34
+    },
+    "survivor_product_shape_counts": {
+      "3x4": 20,
+      "4x3": 14
+    }
+  },
+  "coordinate_first_leakage": {
+    "conclusion": "Every first-order direction of the rank-at-least-15 locus lies in the factor-deformation kernel at each coordinate fixed point.",
+    "kernel_dimensions": [
+      7,
+      7,
+      10,
+      6,
+      6,
+      4
+    ],
+    "minimum_rank_outside_every_kernel": 6,
+    "orbit_certificates": [
+      {
+        "first_leakage_kernel_dimension": 7,
+        "minimum_rank_outside_kernel": 6,
+        "name": "3x4_missing_core_column",
+        "supported_rectangle_dimension": 18,
+        "tangent_variable_count": 132,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 102,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 10,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 2
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "first_leakage_kernel_dimension": 7,
+        "minimum_rank_outside_kernel": 6,
+        "name": "3x4_missing_wing_column",
+        "supported_rectangle_dimension": 18,
+        "tangent_variable_count": 132,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 99,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "first_leakage_kernel_dimension": 10,
+        "minimum_rank_outside_kernel": 6,
+        "name": "4x3_core",
+        "supported_rectangle_dimension": 18,
+        "tangent_variable_count": 132,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 96,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "first_leakage_kernel_dimension": 6,
+        "minimum_rank_outside_kernel": 6,
+        "name": "4x3_two_core_columns",
+        "supported_rectangle_dimension": 18,
+        "tangent_variable_count": 132,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 100,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 2
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "first_leakage_kernel_dimension": 6,
+        "minimum_rank_outside_kernel": 6,
+        "name": "4x3_one_core_column",
+        "supported_rectangle_dimension": 18,
+        "tangent_variable_count": 132,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 108,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "first_leakage_kernel_dimension": 4,
+        "minimum_rank_outside_kernel": 6,
+        "name": "4x3_tail_row",
+        "supported_rectangle_dimension": 18,
+        "tangent_variable_count": 132,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 102,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          }
+        ]
+      }
+    ],
+    "rank_allowed_by_retaining_a_15_plane_inside_an_18_plane": 3,
+    "stabilizer_orbit_count": 6
+  },
+  "core_chart": {
+    "actual_pair_consequence": "N6-068 excludes an actual complementary pair throughout this open chart.",
+    "conclusion": "If the projection U to the twelve-dimensional core is an isomorphism, then U is a product A4' tensor C3 or A4 tensor B3.",
+    "core": "Z=A4 tensor C3",
+    "graph_kernel_normal_form": "T=a tensor I_C3 + I_A4 tensor b",
+    "mixed_graph_intersection_upper_bound": 12,
+    "required_intersection_dimension": 15,
+    "tail": "(R5/R4) tensor C3",
+    "wing": "A4 tensor (C5/C3)"
+  },
+  "intrinsic_biflag_space": {
+    "conclusion": "K=E2 intersect Sym^2(M)",
+    "coordinate_rectangle_count": 72,
+    "critical_containment_dimension": 72,
+    "shape": "M=R4 tensor C5 + R5 tensor C3",
+    "torus_specialization_upper_bound": 72
+  },
+  "next_geometric_interface": "Outside the now-excluded core-projection-isomorphism chart, determine whether every noncoordinate twelve-plane U in M with dim(E2 intersect Sym^2(U)) at least 15 is a tensor product A3 tensor B4 or A4 tensor B3. N6-068 excludes an actual complementary pair once this product conclusion is known.",
+  "status": [
+    "PURE_BIFLAG_INTRINSIC_72_SPACE",
+    "PURE_CORE_CHART_PRODUCT_RIGIDITY",
+    "EXACT_COMPLETE_COORDINATE_12_SUPPORT_ENUMERATION",
+    "EXACT_QQ_SIX_ORBIT_FIRST_LEAKAGE_GAP",
+    "N6-105"
+  ]
+}
