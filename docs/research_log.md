@@ -1879,3 +1879,24 @@ with one positive-epsilon defective term. Thus \(x_A=72\) and global
 \(b=34\) remain open. The first new target is the one-relation
 common-\(W_{15}\) packet. Ordinary lower 29, exact rank 32, and every
 border-rank claim remain open.
+
+N6-094 excludes that first packet. The six anchored section differences have
+a 90-dimensional domain and image \(K_{89}\), so their kernel is a line.
+Consequently at most one of the 21 pair-difference maps can lose dimension;
+the good-pair graph is \(K_7\) minus at most one edge. Every good
+15-dimensional difference has shadow twelve, forcing its factor planes to be
+transverse and contained in the product second shadow \(M_{24}\). The graph
+then puts all seven factor planes in \(M\) and makes their sum equal \(M\).
+
+If an active row block is invertible, N6-069, N6-061, and N6-070 propagate
+common column separation along the good graph. Any two-dimensional row-factor
+span would put all frames in at most three row dimensions, contrary to
+\(M=R_4\otimes C\). Thus every frame has one row line, making
+\(\dim\sum_iF_i\) a multiple of fifteen, contrary to 104. If all blocks are
+singular, N6-071 synchronization again forces either a rank-six block or
+factor rank at most four. Hence this packet is impossible.
+
+The \(x_A=72\) frontier now consists of two packets: the direct \(t_2=16\)
+packet and the one-positive-epsilon defective \(t_2=15\) packet. Global
+\(b=34\), ordinary lower 29, exact rank 32, and all border-rank claims remain
+open.
