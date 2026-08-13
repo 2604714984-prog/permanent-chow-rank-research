@@ -2348,3 +2348,40 @@ twenty-three. This closes the standard-hook \(\kappa_2=1,2\) branches.
 At \(a_2=72\), only the standard and biflag \(\kappa_2=0\) geometries now
 remain. The \(a_2=73,74,75\) scalar states are still open, so N6-109 does not
 prove ordinary lower 29, exact rank 32, or border rank.
+## 2026-08-13: the \(12\to11\) actual-pair collision is excluded
+
+N6-110 closes the dimension-twelve gap left by the partial product-pair
+theorems. The exact product-shadow minimum is \(m_{12}=11\), with only the
+two Ferrers profiles \((6,3,3)\) and \((3,3,3,1,1,1)\). Chasing equality in
+the original coordinate support gives exactly 7,200 small hooks
+
+\[
+ R_2\otimes C_4+R_3\otimes C_3
+\]
+
+and their transposes. At the standard fixed point, all 213,444 ordered
+coordinate five-plane pairs contain only one cross-free pair, the diagonal
+one, while the \((5,6),(6,5),(6,6)\) coordinate pair schemes are empty.
+
+The complete \((D_{12},U_{11},P_5,Q_5)\) local incidence has 2,891 graph
+variables. Exact rational elimination leaves 17 tangent variables, grouped
+as \(3,3,3,4,4\), and no \(P-Q\) tangent. The grounded quadratic cokernel has
+rank 21 and is exactly
+
+\[
+ I(K_3)+I(K_3)+I(K_3)+I(K_4)+I(K_4).
+\]
+
+All \(3^3 4^2=432\) Boolean branches satisfy the derivative and cross-free
+equations symbolically to all orders and keep \(P=Q\). The formal initial
+sandwich and projective torus globalization therefore show that an actual
+twelve-dimensional section difference between two six-planes has full
+twelve-dimensional shadow and transverse factor planes.
+
+At the \(a_2=72,\kappa_2=0\) critical layer, every pair quotient
+intersection has dimension at least twelve. Taking a twelve-plane inside
+each section difference shows that all fifteen pair shadows contain, and
+hence equal, \(L_i\oplus L_j\). The six factor planes are pairwise transverse
+and their sum is the N6-101 23-plane. The remaining problem is now the
+actual six-color exclusion inside the standard and biflag 23-planes, not a
+pair-shadow collision.

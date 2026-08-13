@@ -1,0 +1,172 @@
+{
+  "claim_boundary": "The theorem closes the shadow-eleven pair collision and strengthens the kappa2=0 geometry. It does not yet exclude the resulting standard or biflag six-color configurations, prove ordinary lower 29, determine ChowRank(perm_6)=32, or prove a border-rank statement.",
+  "coordinate_cross_free_scan": {
+    "coordinate_five_plane_count": 462,
+    "coordinate_six_plane_count": 462,
+    "cross_free_five_pair_count": 1,
+    "cross_free_five_pairs": [
+      {
+        "intersection_dimension": 5,
+        "left": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "right": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    ],
+    "cross_free_five_six_pair_count": 0,
+    "cross_free_six_five_pair_count": 0,
+    "cross_free_six_pair_count": 0,
+    "ordered_five_pair_count": 213444,
+    "ordered_six_pair_count": 213444
+  },
+  "equality_support_classification": {
+    "coordinate_shadow_histogram": {
+      "11": 7200
+    },
+    "minimizing_ferrers_profiles": [
+      [
+        6,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "minimum": 11,
+    "overlap_count": 0,
+    "row_oriented_count": 3600,
+    "small_one_factor_equalities": [
+      {
+        "family_count": 15,
+        "size": 1,
+        "vertex_shadow": 2
+      },
+      {
+        "family_count": 20,
+        "size": 3,
+        "vertex_shadow": 3
+      },
+      {
+        "family_count": 15,
+        "size": 6,
+        "vertex_shadow": 4
+      }
+    ],
+    "total_coordinate_support_count": 7200,
+    "transpose_oriented_count": 3600
+  },
+  "kappa_zero_consequence": "At the a2=72,kappa2=0 critical six-term layer, every pair quotient intersection has dimension at least twelve; any twelve-dimensional subspace of its section difference has full twelve-dimensional shadow. Hence all six factor planes are pairwise transverse and their sum equals the N6-101 23-plane.",
+  "linear_incidence": {
+    "derivative_incidence_nullity": 82,
+    "free_move_count": 17,
+    "free_move_groups": {
+      "column_target_4": 4,
+      "column_target_5": 4,
+      "row_target_3": 3,
+      "row_target_4": 3,
+      "row_target_5": 3
+    },
+    "full_pair_incidence_nullity": 17,
+    "pair_diagonal_image_dimension": 0,
+    "pair_separation_image_dimension": 0,
+    "torus_weight_group_count": 1440,
+    "variable_count": 2891
+  },
+  "pure_theorem": "If D is a twelve-plane in the permanent rectangle space E2 and D is an actual section-difference space for two six-planes, then dim(partial D)=12 and the two factor six-planes are transverse.",
+  "quadratic_initial_ideal": {
+    "expected_same_target_generator_count": 21,
+    "facet_dimension": 5,
+    "individually_obstructed_count": 21,
+    "missing_expected_generators": [],
+    "obstruction_rank": 21,
+    "quadratic_monomial_count": 153,
+    "radical_facets": 432,
+    "unexpected_obstructed_monomials": []
+  },
+  "standard_fixed_point": {
+    "ambient_dimension": 36,
+    "annihilator_dimension": 5,
+    "hook_dimension": 11,
+    "quadratic_dimension": 12
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_SHADOW11_ACTUAL_PAIR_EXCLUSION",
+    "PURE_PROJECTIVE_EQUALITY_LOCUS_GLOBALIZATION",
+    "EXACT_QQ_LINEAR_AND_QUADRATIC_ELIMINATION",
+    "EXACT_SYMBOLIC_432_BRANCH_REPLAY",
+    "N6-110"
+  ],
+  "symbolic_branches": {
+    "branch_count": 432,
+    "derivative_containment_failures": 0,
+    "diagonal_cross_free_failures": 0,
+    "selected_jacobian_failures": 0
+  }
+}
