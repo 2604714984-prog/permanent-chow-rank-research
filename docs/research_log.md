@@ -2144,3 +2144,34 @@ intersection plane in the core-projection-isomorphism chart is a genuine
 (4\times3) product, and N6-068 excludes an actual complementary pair
 there. The noncore (3\times4), (4\times3), and tail-row charts remain
 open; N6-105 does not yet exclude the full biflag branch or prove lower 29.
+
+N6-106 closes both noncore \(3\times4\) affine graph charts. Each graph has
+132 coordinates and the eighteen base rectangles may leak with rank at most
+three. On the missing-wing-column orbit, 81 quotient weights contain only
+linear graph terms; their exact rational matrix has rank 113 and a
+19-dimensional kernel consisting of three row-factor directions, four
+column-factor directions, and twelve corner directions. On the
+missing-core-column orbit, six weights touched by the available tail cell
+are discarded; the remaining 75 weights have rank 101 and a 31-dimensional
+kernel, adding exactly twelve tail directions. In every torus weight group
+outside these kernels the minimum leakage rank is six.
+
+The full graph equations then separate the nonlinear defects. On the
+missing-core-column orbit, twelve pure tail quotient weights have rank six
+for each of the twelve tail coordinates, so all tail parameters vanish. On
+both orbits, writing \(d_{ij}=\gamma_{ij}-a_i b_j\), twelve pure corner
+weights again have rank six and force every \(d_{ij}=0\). Thus the graph
+factors exactly as
+
+\[
+ u_{ij}=(e_i+a_i e_3)\otimes(f_j+b_j f_{\mathrm{miss}}).
+\]
+
+The final dimension gate is pure: the row quadratic space has dimension
+three exactly when the missing-row functional uses at most one selected
+coordinate, and otherwise dimension two; the column quadratic space has
+dimension five or six. Hence intersection dimension at least fifteen occurs
+only on three five-dimensional product branches per chart. N6-068 excludes
+an actual complementary pair throughout both \(3\times4\) charts. The four
+\(4\times3\) endpoint charts remain, so this is not yet an exclusion of the
+full biflag branch or a proof of ordinary lower 29.
