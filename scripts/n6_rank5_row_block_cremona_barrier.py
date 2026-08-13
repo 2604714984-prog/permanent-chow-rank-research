@@ -136,6 +136,71 @@ def edge_image(matrix, edge):
     ]
 
 
+def linear_combination(coefficients, matrices):
+    return [
+        [
+            sum(coefficient * matrix[i][j]
+                for coefficient, matrix in zip(coefficients, matrices, strict=True))
+            for j in range(N)
+        ]
+        for i in range(N)
+    ]
+
+
+def anchor_row_system(compression_a, compression_b, phi):
+    """Full diagonal-plus-wedge equations for one further row-block pair.
+
+    The 72 variables are the row-major entries of ``C`` followed by those of
+    ``D``.  For every edge tensor ``Z``, the matrix
+
+        A Z C^T - B phi(Z) D^T
+
+    must have zero diagonal and be symmetric.  Thus there are
+    15 * (6 + 15) = 315 scalar equations.
+    """
+
+    edge_tensors = [edge_tensor(edge) for edge in EDGES]
+    rows = []
+    for source_column, z_matrix in enumerate(edge_tensors):
+        phi_z = linear_combination(
+            [phi[target_column][source_column] for target_column in range(15)],
+            edge_tensors,
+        )
+        az = matmul(compression_a, z_matrix)
+        bphi_z = matmul(compression_b, phi_z)
+
+        for i in range(N):
+            equation = [Fraction(0) for _ in range(72)]
+            for column in range(N):
+                equation[N * i + column] = az[i][column]
+                equation[36 + N * i + column] = -bphi_z[i][column]
+            rows.append(equation)
+
+        for i, j in combinations(range(N), 2):
+            equation = [Fraction(0) for _ in range(72)]
+            for column in range(N):
+                equation[N * j + column] += az[i][column]
+                equation[N * i + column] -= az[j][column]
+                equation[36 + N * j + column] -= bphi_z[i][column]
+                equation[36 + N * i + column] += bphi_z[j][column]
+            rows.append(equation)
+    return rows
+
+
+def factorized_kernel_basis(compression_a, compression_b):
+    """Columns encoding (C,D)=(T A,T B), for T in Mat_{6 by 5}."""
+
+    columns = []
+    for target_row in range(N):
+        for source_row in range(5):
+            vector = [Fraction(0) for _ in range(72)]
+            for column in range(N):
+                vector[N * target_row + column] = compression_a[source_row][column]
+                vector[36 + N * target_row + column] = compression_b[source_row][column]
+            columns.append(vector)
+    return transpose(columns)
+
+
 def build_payload() -> dict[str, object]:
     kernel_a = [1, 1, 1, 1, 1, 1]
     kernel_b = [1, 2, 3, 4, 5, 6]
@@ -146,6 +211,11 @@ def build_payload() -> dict[str, object]:
     determinant_a = determinant(mu_a)
     determinant_b = determinant(mu_b)
     phi = matmul(inverse(mu_b), mu_a)
+    cross_row_system = anchor_row_system(compression_a, compression_b, phi)
+    factorized_kernel = factorized_kernel_basis(compression_a, compression_b)
+    system_rank = rank(cross_row_system)
+    kernel_basis_rank = rank(factorized_kernel)
+    kernel_residual_rank = rank(matmul(cross_row_system, factorized_kernel))
     expected_edge_image = [
         {"edge": [0, 1], "coefficient": 1},
         {"edge": [0, 2], "coefficient": 2},
@@ -163,10 +233,17 @@ def build_payload() -> dict[str, object]:
     if any(edge_image(phi, edge) != [{"edge": list(edge), "coefficient": 1}]
            for edge in fixed_edges):
         raise AssertionError("unexpected fixed edge")
+    if (len(cross_row_system), len(cross_row_system[0])) != (315, 72):
+        raise AssertionError("cross-row system shape")
+    if (system_rank, kernel_basis_rank, kernel_residual_rank) != (42, 30, 0):
+        raise AssertionError(
+            (system_rank, kernel_basis_rank, kernel_residual_rank)
+        )
     return {
         "status": [
             "PURE_RANK5_FULL_SUPPORT_COMMON_IMAGE_LEMMA",
             "EXACT_QQ_LOCAL_CREMONA_BARRIER",
+            "EXACT_QQ_EXPLICIT_CROSS_ROW_NONEXTENSION",
             "G-050",
         ],
         "pure_lemma": {
@@ -202,14 +279,34 @@ def build_payload() -> dict[str, object]:
                 "each edge line to one edge line, whereas phi(F05) has five "
                 "nonzero edge components."
             ),
+            "full_cross_row_extension": {
+                "system_definition": (
+                    "For one further row-block pair (C,D), impose zero diagonal "
+                    "and zero skew part on A Z C^T-B phi(Z) D^T for all 15 edge "
+                    "basis tensors Z."
+                ),
+                "system_shape": [315, 72],
+                "system_rank_over_Q": system_rank,
+                "system_nullity": 72 - system_rank,
+                "displayed_kernel_basis": "(C,D)=(T A,T B), T in Mat_{6 by 5}",
+                "displayed_kernel_rank_over_Q": kernel_basis_rank,
+                "system_times_displayed_kernel_rank_over_Q": kernel_residual_rank,
+                "strict_conclusion": (
+                    "For this explicit A, B, and phi, every further row block "
+                    "factors as (C,D)=(T A,T B). Stacking all six row blocks "
+                    "therefore gives rank(X)<=5 and rank(Y)<=5, so this local "
+                    "Cremona identity cannot extend to an actual injective pair."
+                ),
+            },
         },
         "claim_boundary": (
-            "This is a one-row same-row-block model. It proves the common "
-            "five-plane lemma and shows that this local identity alone does not "
-            "recover factor coordinates. It does not satisfy the off-row "
-            "blocks of the full permanent quotient, does not construct an "
-            "actual common-W15 pair or a b=50 endpoint, and does not contradict "
-            "N6-069. Full quotient tests must retain both diagonal and wedge axes."
+            "The nonextension certificate is specific to the displayed rational "
+            "A, B, and phi; it is not a theorem for every rank-five full-support "
+            "anchor. It excludes this local Cremona identity from an actual "
+            "common-W15 pair, but does not exclude the general all-singular "
+            "rank-five layer or the b=50 endpoint, prove ChowRank(perm_6)>=28, "
+            "or make a border-rank claim. The certificate retains both diagonal "
+            "and wedge axes and does not contradict N6-069."
         ),
     }
 

@@ -1,7 +1,8 @@
 # The rank-five row-block common-image lemma and its Cremona barrier
 
 **Status.** PURE_RANK5_FULL_SUPPORT_COMMON_IMAGE_LEMMA,
-EXACT_QQ_LOCAL_CREMONA_BARRIER (G-050). The base field has
+EXACT_QQ_LOCAL_CREMONA_BARRIER,
+EXACT_QQ_EXPLICIT_CROSS_ROW_NONEXTENSION (G-050). The base field has
 characteristic different from two; the endpoint application is in
 characteristic zero.
 
@@ -112,17 +113,62 @@ permutes the fifteen edge lines, whereas (2.2) has five nonzero edge
 components. This is the local Cremona obstruction to extending the
 invertible-block normalization used in N6-069 directly to rank five.
 
-## 3. Exact boundary
+## 3. The displayed Cremona map cannot extend to an actual pair
 
-The pure statement (1.3) applies to one same-row block identity of an actual
-pair. The example in Section 2 is only a one-row local model. It does not
-satisfy the distinct-row blocks of the permanent quotient, does not construct
-an actual common-\(W_{15}\) pair or the \(b=50\) endpoint, and does not
-contradict N6-069. In particular, a full common-quotient diagnostic must
-retain both the diagonal and wedge quotient coordinates; this local
-compression map is not a substitute for that test.
+Keep the rational \(A,B,\phi\) of Section 2, and let \(C,D\) be the row
+blocks of the two frames in any other tensor row. The anchor-row block of
+the section difference is
 
-Replay with
+\[
+ A Z C^{\mathsf T}-B\phi(Z)D^{\mathsf T}.
+\tag{3.1}
+\]
+
+For (3.1) to lie in \(S_0(C)\), its six diagonal entries and fifteen
+skew entries must vanish. Imposing these 21 equations on each of the
+fifteen edge basis tensors gives an exact rational \(315\) by \(72\)
+linear system in the entries of \((C,D)\). Its rank is \(42\), hence its
+kernel has dimension \(30\).
+
+There is a displayed thirty-dimensional subspace of the kernel:
+
+\[
+ (C,D)=(TA,TB),\qquad T\in\operatorname{Mat}_{6\times5}(k),
+\tag{3.2}
+\]
+
+where the common image of \(A,B\) is identified with \(k^5\). Exact
+rational elimination verifies both that the thirty displayed vectors are
+independent and that the \(315\) by \(72\) system kills them. Dimension
+equality therefore proves that (3.2) is the full kernel.
+
+Apply this independently to every one of the other five row blocks. The
+anchor blocks themselves also factor through \(A\) and \(B\). Consequently
+the complete factor matrices factor through \(A\) and \(B\), respectively,
+so
+
+\[
+ \operatorname{rank}X\le5,
+ \qquad
+ \operatorname{rank}Y\le5.
+\]
+
+They cannot be injective six-factor frames. Thus the explicit non-monomial
+Cremona identity in Section 2 cannot extend to an actual common-\(W_{15}\)
+pair. Notice that no equations between two non-anchor rows are needed.
+
+## 4. Exact boundary
+
+The pure common-image statement (1.3) applies to any rank-five full-support
+anchor, but the nonextension certificate in Section 3 is specific to the
+displayed rational \(A,B,\phi\). It is not a theorem for every rank-five
+full-support anchor and does not exclude the general all-singular rank-five
+layer or the \(b=50\) endpoint, prove
+\(\operatorname{ChowRank}(\operatorname{perm}_6)\ge28\), or make a border-rank
+claim. The exact system retains both diagonal and wedge quotient axes and
+does not contradict N6-069.
+
+## 5. Exact replay
 
 ~~~text
 python scripts/n6_rank5_row_block_cremona_barrier.py \

@@ -1,5 +1,5 @@
 {
-  "claim_boundary": "This is a one-row same-row-block model. It proves the common five-plane lemma and shows that this local identity alone does not recover factor coordinates. It does not satisfy the off-row blocks of the full permanent quotient, does not construct an actual common-W15 pair or a b=50 endpoint, and does not contradict N6-069. Full quotient tests must retain both diagonal and wedge axes.",
+  "claim_boundary": "The nonextension certificate is specific to the displayed rational A, B, and phi; it is not a theorem for every rank-five full-support anchor. It excludes this local Cremona identity from an actual common-W15 pair, but does not exclude the general all-singular rank-five layer or the b=50 endpoint, prove ChowRank(perm_6)>=28, or make a border-rank claim. The certificate retains both diagonal and wedge axes and does not contradict N6-069.",
   "exact_local_barrier": {
     "compression_a": [
       [1, 0, 0, 0, 0, -1],
@@ -20,6 +20,19 @@
     "determinant_mu_a": -32,
     "determinant_mu_b": "-40/81",
     "fixed_edge_count": 10,
+    "full_cross_row_extension": {
+      "displayed_kernel_basis": "(C,D)=(T A,T B), T in Mat_{6 by 5}",
+      "displayed_kernel_rank_over_Q": 30,
+      "strict_conclusion": "For this explicit A, B, and phi, every further row block factors as (C,D)=(T A,T B). Stacking all six row blocks therefore gives rank(X)<=5 and rank(Y)<=5, so this local Cremona identity cannot extend to an actual injective pair.",
+      "system_definition": "For one further row-block pair (C,D), impose zero diagonal and zero skew part on A Z C^T-B phi(Z) D^T for all 15 edge basis tensors Z.",
+      "system_nullity": 30,
+      "system_rank_over_Q": 42,
+      "system_shape": [
+        315,
+        72
+      ],
+      "system_times_displayed_kernel_rank_over_Q": 0
+    },
     "kernel_a": [1, 1, 1, 1, 1, 1],
     "kernel_b": [1, 2, 3, 4, 5, 6],
     "not_monomial_congruence_reason": "A congruence preserving S0 is monomial and therefore sends each edge line to one edge line, whereas phi(F05) has five nonzero edge components.",
@@ -42,6 +55,7 @@
   "status": [
     "PURE_RANK5_FULL_SUPPORT_COMMON_IMAGE_LEMMA",
     "EXACT_QQ_LOCAL_CREMONA_BARRIER",
+    "EXACT_QQ_EXPLICIT_CROSS_ROW_NONEXTENSION",
     "G-050"
   ]
 }

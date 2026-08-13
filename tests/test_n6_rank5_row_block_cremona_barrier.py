@@ -42,10 +42,26 @@ class RankFiveRowBlockCremonaBarrierTests(unittest.TestCase):
             [1, 2, 3, 4, 6],
         )
 
+    def test_full_cross_row_system_excludes_this_explicit_extension(self):
+        self.assertIn(
+            "EXACT_QQ_EXPLICIT_CROSS_ROW_NONEXTENSION", self.payload["status"]
+        )
+        extension = self.payload["exact_local_barrier"]["full_cross_row_extension"]
+        self.assertEqual(extension["system_shape"], [315, 72])
+        self.assertEqual(extension["system_rank_over_Q"], 42)
+        self.assertEqual(extension["system_nullity"], 30)
+        self.assertEqual(extension["displayed_kernel_rank_over_Q"], 30)
+        self.assertEqual(
+            extension["system_times_displayed_kernel_rank_over_Q"], 0
+        )
+        self.assertIn("rank(X)<=5", extension["strict_conclusion"])
+        self.assertIn("actual injective pair", extension["strict_conclusion"])
+
     def test_boundary_is_local(self):
         boundary = self.payload["claim_boundary"]
-        self.assertIn("one-row", boundary)
-        self.assertIn("does not construct an actual common-W15 pair", boundary)
+        self.assertIn("specific to the displayed rational", boundary)
+        self.assertIn("not a theorem for every rank-five", boundary)
+        self.assertIn("general all-singular", boundary)
         self.assertIn("does not contradict N6-069", boundary)
         self.assertIn("diagonal and wedge axes", boundary)
 
