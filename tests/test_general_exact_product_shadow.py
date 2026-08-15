@@ -1,16 +1,20 @@
 from __future__ import annotations
 
 import importlib.util
+import json
+import subprocess
 import sys
 import unittest
 from pathlib import Path
 
 
-MODULE_PATH = (
-    Path(__file__).resolve().parents[1]
-    / "scripts"
-    / "general_exact_product_shadow.py"
+ROOT = Path(__file__).resolve().parents[1]
+MODULE_PATH = ROOT / "scripts" / "general_exact_product_shadow.py"
+INDEPENDENT_PATH = (
+    ROOT / "scripts" / "general_exact_product_shadow_independent.py"
 )
+DATA_PATH = ROOT / "data" / "general_exact_product_shadow.json"
+
 SPEC = importlib.util.spec_from_file_location("general_exact_product_shadow", MODULE_PATH)
 if SPEC is None or SPEC.loader is None:
     raise RuntimeError(MODULE_PATH)
@@ -52,13 +56,27 @@ class GeneralExactProductShadowTests(unittest.TestCase):
         self.assertEqual(result["residual_term_count"], 29)
         self.assertEqual(result["exact_multishadow_lower_bound"], 42)
 
-    def test_frozen_payload(self) -> None:
+    def test_frozen_payload_matches_generator(self) -> None:
         payload = MODULE.build_payload()
-        self.assertIn("core_sha256", payload)
+        frozen = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(frozen, payload)
         self.assertEqual(
             payload["n7_application"]["exact_multishadow_lower_bound"],
             42,
         )
+
+    def test_independent_replay(self) -> None:
+        completed = subprocess.run(
+            [sys.executable, str(INDEPENDENT_PATH)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn(
+            "GENERAL_EXACT_PRODUCT_SHADOW_INDEPENDENT_PASS",
+            completed.stdout,
+        )
+        self.assertIn("independent_perm7_lower_bound=42", completed.stdout)
 
 
 if __name__ == "__main__":
