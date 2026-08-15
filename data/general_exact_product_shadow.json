@@ -1,6 +1,6 @@
 {
-  "claim_boundary": "This is an exact ordinary-rank refinement of the finite multishadow cap. It does not prove the conjectural value 2^(n-1), an unrestricted exact value for perm_6 or perm_7, or a new border-Chow-rank bound. Literature novelty is not claimed.",
-  "core_sha256": "3563dd0205177cd0471210287dc8b2377e1547e2410a419b611b2560b123f06a",
+  "claim_boundary": "This is an exact ordinary-rank refinement of the finite multishadow cap. It does not prove the conjectural value 2^(n-1), an unrestricted exact value for perm_6, perm_7 or perm_8, or a new border-Chow-rank bound. Literature novelty is not claimed.",
+  "core_sha256": "5626b4f0f62506e493ae27a7808dd12892b59320dcf6c77253f055934823d33b",
   "n6_regression": [
     {"family_size": 40, "minimum_shadow": 60},
     {"family_size": 41, "minimum_shadow": 66},
@@ -31,14 +31,15 @@
   ],
   "n7_application": {
     "base_first_koszul_bound": 35,
-    "cap_partition": [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+    "cap_partition": [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0],
     "cap_partition_count": 2,
     "complement_degree": 4,
     "derivative_shadow_threshold": 455,
-    "dynamic_state_count": 58410,
+    "dynamic_state_count": 119259,
     "exact_intersection_cap": 238,
     "exact_multishadow_lower_bound": 42,
-    "first_excluded_partition": [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 14, 14, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
+    "first_excluded_partition": [15,15,15,15,15,15,15,15,15,15,15,15,15,14,14,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+    "first_excluded_partition_count": 8,
     "first_excluded_size": 239,
     "first_koszul_target_rank": 58800,
     "fixed_term_count": 13,
@@ -50,14 +51,38 @@
     "shadow_at_cap": 452,
     "shadow_at_first_excluded_size": 456
   },
+  "n8_application": {
+    "base_first_koszul_bound": 71,
+    "cap_partition": [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "cap_partition_count": 2,
+    "complement_degree": 4,
+    "derivative_shadow_threshold": 784,
+    "dynamic_state_count": 1881873,
+    "exact_intersection_cap": 560,
+    "exact_multishadow_lower_bound": 77,
+    "first_excluded_partition": [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "first_excluded_partition_count": 2,
+    "first_excluded_size": 561,
+    "first_koszul_target_rank": 310464,
+    "fixed_term_count": 14,
+    "n": 8,
+    "one_term_koszul_cap": 4424,
+    "output_degree": 4,
+    "residual_rank_numerator": 274624,
+    "residual_term_count": 63,
+    "shadow_at_cap": 784,
+    "shadow_at_first_excluded_size": 793
+  },
   "status": [
     "GENERAL_EXACT_PRODUCT_SHADOW_PROOF_DRAFT",
     "EXACT_INTEGER_DP_REPLAYED",
-    "PERM7_LOWER_42"
+    "PERM7_LOWER_42",
+    "PERM8_LOWER_77"
   ],
   "theorem": {
     "coordinate_specialization": "Every b-plane in D_m(perm_n) specializes to a coordinate b-plane with no larger first-derivative shadow.",
     "ferrers_reduction": "Two coordinatewise colex compressions reduce the exact minimum simultaneous product shadow to Ferrers partitions.",
+    "monotonicity": "F_(n,m)(b) is nondecreasing because every (b+1)-plane contains a b-plane.",
     "objective": "F_n,m(b)=min_lambda sum_i w_i*k(lambda_i)",
     "weight_formula": "w_i=min([n]\\A_i) for the i-th colex m-subset A_i"
   }
