@@ -3,10 +3,10 @@
 
 The repository already proves the permanent-side derivative-shadow rigidity
 and the corresponding zero-intersection criterion in
-``docs/general_n_koszul_bounds.md``.  This audit reuses that theorem inside
+``docs/general_n_koszul_bounds.md``. This audit reuses that theorem inside
 the later multidimensional-shadow and exact product-shadow arguments.
 
-All arithmetic is exact integer arithmetic.  The companion mathematical proof
+All arithmetic is exact integer arithmetic. The companion mathematical proof
 is ``docs/general_nested_shadow_removal.md``.
 """
 
@@ -37,8 +37,9 @@ def zero_intersection_block(n: int, degree: int) -> dict[str, int]:
     """Largest block certified disjoint from D_degree(perm_n).
 
     This is exactly the finite optimization in Corollary 5.3 of
-    ``docs/general_n_koszul_bounds.md``.  ``order`` is the derivative order;
-    the resulting output degree is ``degree-order``.
+    ``docs/general_n_koszul_bounds.md``. ``derivative_order`` is the number of
+    differentiations and ``zero_intersection_output_degree`` is the remaining
+    output degree. Ties are reported at the smaller output degree.
     """
 
     require(n >= 2, n)
@@ -52,7 +53,7 @@ def zero_intersection_block(n: int, degree: int) -> dict[str, int]:
             {
                 "safe_terms": safe,
                 "derivative_order": order,
-                "output_degree": degree - order,
+                "zero_intersection_output_degree": degree - order,
                 "permanent_minimum": permanent_minimum,
                 "one_term_cap": one_term_cap,
             }
@@ -62,7 +63,7 @@ def zero_intersection_block(n: int, degree: int) -> dict[str, int]:
         key=lambda row: (
             row["safe_terms"],
             -row["one_term_cap"],
-            -row["derivative_order"],
+            row["derivative_order"],
         ),
     )
     require(
@@ -131,7 +132,7 @@ def general_rows() -> list[dict[str, object]]:
         rows.append(
             {
                 "n": n,
-                "output_degree": int(raw["output_degree"]),
+                "koszul_output_degree": int(raw["output_degree"]),
                 "complementary_degree": complementary_degree,
                 "shadow_degree": shadow_degree,
                 **block,
@@ -205,6 +206,7 @@ def exact_rows() -> list[dict[str, object]]:
         rows.append(
             {
                 "n": n,
+                "koszul_output_degree": int(raw["output_degree"]),
                 "shadow_degree": shadow_degree,
                 **block,
                 "former_fixed_terms": former_fixed,
