@@ -1,6 +1,6 @@
 {
   "claim_boundary": "This is an exact ordinary-rank refinement of the finite multishadow cap. It does not prove the conjectural value 2^(n-1), an unrestricted exact value for perm_6, perm_7 or perm_8, or a new border-Chow-rank bound. Literature novelty is not claimed.",
-  "core_sha256": "5626b4f0f62506e493ae27a7808dd12892b59320dcf6c77253f055934823d33b",
+  "core_sha256": "18eb66f1b9460d2d793c69131cc4ebc0f1087c86b18f14e5638e71e6d629f567",
   "n6_regression": [
     {"family_size": 40, "minimum_shadow": 60},
     {"family_size": 41, "minimum_shadow": 66},
@@ -30,7 +30,6 @@
     {"family_size": 65, "minimum_shadow": 87}
   ],
   "n7_application": {
-    "base_first_koszul_bound": 35,
     "cap_partition": [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0],
     "cap_partition_count": 2,
     "complement_degree": 4,
@@ -43,16 +42,17 @@
     "first_excluded_size": 239,
     "first_koszul_target_rank": 58800,
     "fixed_term_count": 13,
+    "global_first_koszul_bound": 36,
     "n": 7,
     "one_term_koszul_cap": 1680,
     "output_degree": 3,
     "residual_rank_numerator": 47138,
     "residual_term_count": 29,
+    "selected_output_first_koszul_bound": 35,
     "shadow_at_cap": 452,
     "shadow_at_first_excluded_size": 456
   },
   "n8_application": {
-    "base_first_koszul_bound": 71,
     "cap_partition": [15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     "cap_partition_count": 2,
     "complement_degree": 4,
@@ -65,11 +65,13 @@
     "first_excluded_size": 561,
     "first_koszul_target_rank": 310464,
     "fixed_term_count": 14,
+    "global_first_koszul_bound": 71,
     "n": 8,
     "one_term_koszul_cap": 4424,
     "output_degree": 4,
     "residual_rank_numerator": 274624,
     "residual_term_count": 63,
+    "selected_output_first_koszul_bound": 71,
     "shadow_at_cap": 784,
     "shadow_at_first_excluded_size": 793
   },
