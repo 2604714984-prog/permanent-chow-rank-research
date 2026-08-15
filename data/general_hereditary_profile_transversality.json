@@ -1,0 +1,45 @@
+{
+  "asymptotic_diagnostics": [
+    {"intersection_degree": 7, "n": 16, "one_term_cap": 16, "permanent_minimum": 49, "safe_terms": 3, "witness_output_degree": 1},
+    {"intersection_degree": 9, "n": 20, "one_term_cap": 190, "permanent_minimum": 1296, "safe_terms": 6, "witness_output_degree": 2},
+    {"intersection_degree": 11, "n": 24, "one_term_cap": 2024, "permanent_minimum": 27225, "safe_terms": 13, "witness_output_degree": 3},
+    {"intersection_degree": 15, "n": 32, "one_term_cap": 35960, "permanent_minimum": 1863225, "safe_terms": 51, "witness_output_degree": 4},
+    {"intersection_degree": 19, "n": 40, "one_term_cap": 658008, "permanent_minimum": 135210384, "safe_terms": 205, "witness_output_degree": 5},
+    {"intersection_degree": 24, "n": 50, "one_term_cap": 99884400, "permanent_minimum": 119787978816, "safe_terms": 1199, "witness_output_degree": 7},
+    {"intersection_degree": 31, "n": 64, "one_term_cap": 27540584512, "permanent_minimum": 406428624005625, "safe_terms": 14757, "witness_output_degree": 9}
+  ],
+  "asymptotic_statement": "At central derivative degree, choosing j near ((1-1/sqrt(2))/2)*n gives a safe block of order ((1+sqrt(2))/2)^n/sqrt(n).",
+  "claim_boundary": "This theorem refines ordinary multishadow bounds. It does not determine perm_7, perm_8, or general perm_n exactly, prove a border-rank improvement, or settle unrestricted perm_6. Literature novelty is not claimed.",
+  "core_sha256": "796d45fdabe16a9e27ededf53101ee144fbe8d213e274dcf8d838edb8a245b4c",
+  "exact_product_shadow_refinements": [
+    {"exact_intersection_cap": 238, "first_excluded_size": 239, "former_exact_shadow_bound": 42, "hereditary_profile_exact_shadow_bound": 43, "intersection_degree": 3, "n": 7, "new_fixed_terms": 14, "old_fixed_terms": 13, "profile_witness_degree": 1, "residual_terms": 29, "safe_omitted_terms": 1, "shadow_at_cap": 452, "shadow_at_first_excluded_size": 456, "shadow_threshold": 455},
+    {"exact_intersection_cap": 560, "first_excluded_size": 561, "former_exact_shadow_bound": 77, "hereditary_profile_exact_shadow_bound": 78, "intersection_degree": 3, "n": 8, "new_fixed_terms": 15, "old_fixed_terms": 14, "profile_witness_degree": 1, "residual_terms": 63, "safe_omitted_terms": 1, "shadow_at_cap": 784, "shadow_at_first_excluded_size": 793, "shadow_threshold": 784}
+  ],
+  "finite_basis_profiles": [
+    {"degree": 2, "derivative_profile": [1,4,1], "total_profile_sum": 6},
+    {"degree": 3, "derivative_profile": [1,9,9,1], "total_profile_sum": 20},
+    {"degree": 4, "derivative_profile": [1,16,36,16,1], "total_profile_sum": 70},
+    {"degree": 5, "derivative_profile": [1,25,100,100,25,1], "total_profile_sum": 252},
+    {"degree": 6, "derivative_profile": [1,36,225,400,225,36,1], "total_profile_sum": 924},
+    {"degree": 7, "derivative_profile": [1,49,441,1225,1225,441,49,1], "total_profile_sum": 3432},
+    {"degree": 8, "derivative_profile": [1,64,784,3136,4900,3136,784,64,1], "total_profile_sum": 12870}
+  ],
+  "general_certificate_refinements": [
+    {"complementary_degree": 4, "former_lower_bound": 41, "global_first_koszul_bound": 36, "hereditary_profile_lower_bound": 42, "intersection_degree": 3, "n": 7, "new_fixed_terms": 14, "old_fixed_terms": 13, "output_degree": 3, "profile_one_term_cap": 7, "profile_permanent_minimum": 9, "profile_witness_degree": 1, "residual_terms": 28, "safe_omitted_terms": 1, "unchanged_intersection_cap": 274, "unchanged_shadow_threshold": 455},
+    {"complementary_degree": 4, "former_lower_bound": 76, "global_first_koszul_bound": 71, "hereditary_profile_lower_bound": 77, "intersection_degree": 3, "n": 8, "new_fixed_terms": 13, "old_fixed_terms": 12, "output_degree": 4, "profile_one_term_cap": 8, "profile_permanent_minimum": 9, "profile_witness_degree": 1, "residual_terms": 64, "safe_omitted_terms": 1, "unchanged_intersection_cap": 496, "unchanged_shadow_threshold": 672},
+    {"complementary_degree": 5, "former_lower_bound": 141, "global_first_koszul_bound": 127, "hereditary_profile_lower_bound": 142, "intersection_degree": 4, "n": 9, "new_fixed_terms": 44, "old_fixed_terms": 43, "output_degree": 4, "profile_one_term_cap": 9, "profile_permanent_minimum": 16, "profile_witness_degree": 1, "residual_terms": 98, "safe_omitted_terms": 1, "unchanged_intersection_cap": 3607, "unchanged_shadow_threshold": 5418},
+    {"complementary_degree": 5, "former_lower_bound": 267, "global_first_koszul_bound": 253, "hereditary_profile_lower_bound": 268, "intersection_degree": 4, "n": 10, "new_fixed_terms": 43, "old_fixed_terms": 42, "output_degree": 5, "profile_one_term_cap": 10, "profile_permanent_minimum": 16, "profile_witness_degree": 1, "residual_terms": 225, "safe_omitted_terms": 1, "unchanged_intersection_cap": 7084, "unchanged_shadow_threshold": 8820},
+    {"complementary_degree": 6, "former_lower_bound": 506, "global_first_koszul_bound": 463, "hereditary_profile_lower_bound": 508, "intersection_degree": 5, "n": 11, "new_fixed_terms": 177, "old_fixed_terms": 175, "output_degree": 5, "profile_one_term_cap": 11, "profile_permanent_minimum": 25, "profile_witness_degree": 1, "residual_terms": 331, "safe_omitted_terms": 2, "unchanged_intersection_cap": 60479, "unchanged_shadow_threshold": 80850},
+    {"complementary_degree": 6, "former_lower_bound": 968, "global_first_koszul_bound": 925, "hereditary_profile_lower_bound": 970, "intersection_degree": 5, "n": 12, "new_fixed_terms": 181, "old_fixed_terms": 179, "output_degree": 6, "profile_one_term_cap": 12, "profile_permanent_minimum": 25, "profile_witness_degree": 1, "residual_terms": 789, "safe_omitted_terms": 2, "unchanged_intersection_cap": 125640, "unchanged_shadow_threshold": 141768},
+    {"complementary_degree": 7, "former_lower_bound": 1853, "global_first_koszul_bound": 1718, "hereditary_profile_lower_bound": 1855, "intersection_degree": 6, "n": 13, "new_fixed_terms": 670, "old_fixed_terms": 668, "output_degree": 6, "profile_one_term_cap": 13, "profile_permanent_minimum": 36, "profile_witness_degree": 1, "residual_terms": 1185, "safe_omitted_terms": 2, "unchanged_intersection_cap": 907508, "unchanged_shadow_threshold": 1146288},
+    {"complementary_degree": 7, "former_lower_bound": 3568, "global_first_koszul_bound": 3434, "hereditary_profile_lower_bound": 3570, "intersection_degree": 6, "n": 14, "new_fixed_terms": 625, "old_fixed_terms": 623, "output_degree": 7, "profile_one_term_cap": 14, "profile_permanent_minimum": 36, "profile_witness_degree": 1, "residual_terms": 2945, "safe_omitted_terms": 2, "unchanged_intersection_cap": 1673882, "unchanged_shadow_threshold": 1870869},
+    {"complementary_degree": 8, "former_lower_bound": 6879, "global_first_koszul_bound": 6440, "hereditary_profile_lower_bound": 6883, "intersection_degree": 7, "n": 15, "new_fixed_terms": 2392, "old_fixed_terms": 2388, "output_degree": 7, "profile_one_term_cap": 105, "profile_permanent_minimum": 441, "profile_witness_degree": 2, "residual_terms": 4491, "safe_omitted_terms": 4, "unchanged_intersection_cap": 12460405, "unchanged_shadow_threshold": 15366780},
+    {"complementary_degree": 8, "former_lower_bound": 13312, "global_first_koszul_bound": 12875, "hereditary_profile_lower_bound": 13315, "intersection_degree": 7, "n": 16, "new_fixed_terms": 2425, "old_fixed_terms": 2422, "output_degree": 8, "profile_one_term_cap": 16, "profile_permanent_minimum": 49, "profile_witness_degree": 1, "residual_terms": 10890, "safe_omitted_terms": 3, "unchanged_intersection_cap": 25470785, "unchanged_shadow_threshold": 27707680}
+  ],
+  "status": ["GENERAL_HEREDITARY_PERMANENT_PROFILE", "MULTITERM_PROFILE_TRANSVERSALITY", "PERM7_LOWER_43", "PERM8_LOWER_78", "PERM15_GENERAL_BOUND_6883"],
+  "theorem": {
+    "block_transversality": "If s*binom(n,j) < binom(d,j)^2 for some j, then D_d(perm_n) intersects the sum of the degree-d derivative spaces of those s Chow terms trivially.",
+    "hereditary_profile": "For every nonzero f in D_d(perm_n), dim D_j(f) >= binom(d,j)^2 for all 0<=j<=d.",
+    "safe_omission_count": "max_(1<=j<d) floor((binom(d,j)^2-1)/binom(n,j))"
+  }
+}
