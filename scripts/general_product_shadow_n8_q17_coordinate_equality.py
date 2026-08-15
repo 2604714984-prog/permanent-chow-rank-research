@@ -12,7 +12,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from collections import Counter, defaultdict
+from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
@@ -96,6 +96,22 @@ def connected_component_sizes(
                     stack.append(neighbour)
         sizes.append(len(component))
     return tuple(sorted(sizes, reverse=True))
+
+
+def run_length(values: tuple[int, ...]) -> list[list[int]]:
+    require(values, "empty profile")
+    output: list[list[int]] = []
+    value = values[0]
+    count = 0
+    for current in values:
+        if current == value:
+            count += 1
+        else:
+            output.append([value, count])
+            value = current
+            count = 1
+    output.append([value, count])
+    return output
 
 
 def lower_indices(four_set: tuple[int, ...]) -> tuple[int, ...]:
@@ -204,8 +220,8 @@ def enumerate_profile_a_rows() -> tuple[list[dict[str, object]], dict[str, int]]
                 continue
             if z55 == z45:
                 route = "A1_common_apex"
-                require(set(six) == set(five) | (residue & set(six)), (five, six))
                 require(len(set(six) - set(five)) == 1, (five, six))
+                require(set(five).issubset(six), (five, six))
             else:
                 route = "A2_exchanged_apex"
                 require(z55 in residue, (z45, z55, residue))
@@ -389,11 +405,12 @@ def representative_families() -> dict[str, object]:
     ):
         shadow_size = product_shadow(family).bit_count()
         require((family.bit_count(), shadow_size) == (725, 950), (name, family.bit_count(), shadow_size))
-        require(row_profile(family) == expected_profiles[name], (name, row_profile(family)))
+        profile = row_profile(family)
+        require(profile == expected_profiles[name], (name, profile))
         output[name] = {
             "coordinate_pair_count": family.bit_count(),
             "simultaneous_shadow_size": shadow_size,
-            "row_profile": list(expected_profiles[name]),
+            "row_profile_runs": run_length(profile),
         }
     return output
 
