@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Independent exact replay of the perm_7 product-shadow improvement.
+"""Independent exact replay of the perm_7 and perm_8 product-shadow improvements.
 
-This file intentionally does not import general_exact_product_shadow.  It
-rebuilds the colex layer, lower shadows, first-container weights and a forward
-Ferrers dynamic program from explicit finite sets.
+This file intentionally does not import general_exact_product_shadow. It
+rebuilds the colex layers, lower shadows, first-container weights and a
+forward Ferrers dynamic program from explicit finite sets.
 """
 
 from __future__ import annotations
@@ -86,28 +86,84 @@ def forward_minimum(
     return optimum, witness, count
 
 
+def verify_case(
+    *,
+    n: int,
+    m: int,
+    cap_size: int,
+    first_bad_size: int,
+    expected_cap_shadow: int,
+    expected_first_bad_shadow: int,
+    fixed_terms: int,
+    output_degree: int,
+    expected_residual: int,
+    expected_total: int,
+) -> tuple[int, int]:
+    profile, weights = finite_data(n, m)
+    cap_value, cap_witness, cap_count = forward_minimum(
+        profile, weights, cap_size
+    )
+    first_bad_value, first_bad_witness, first_bad_count = forward_minimum(
+        profile, weights, first_bad_size
+    )
+
+    require(cap_value == expected_cap_shadow, cap_value)
+    require(first_bad_value == expected_first_bad_shadow, first_bad_value)
+    require(sum(cap_witness) == cap_size, cap_witness)
+    require(sum(first_bad_witness) == first_bad_size, first_bad_witness)
+
+    threshold = fixed_terms * comb(n, m - 1)
+    require(cap_value <= threshold < first_bad_value, threshold)
+
+    target_rank = (
+        n**2 * comb(n, output_degree) ** 2
+        - comb(n, output_degree + 1) ** 2
+    )
+    one_term_cap = (
+        n**2 * comb(n, output_degree)
+        - comb(n, output_degree + 1)
+    )
+    residual = -(-(target_rank - n**2 * cap_size) // one_term_cap)
+    require(residual == expected_residual, residual)
+    require(fixed_terms + residual == expected_total, fixed_terms + residual)
+
+    print(f"independent_n{n}_min_{cap_size}={cap_value}")
+    print(f"independent_n{n}_min_{first_bad_size}={first_bad_value}")
+    print(f"independent_n{n}_count_{cap_size}={cap_count}")
+    print(f"independent_n{n}_count_{first_bad_size}={first_bad_count}")
+    print(f"independent_perm{n}_lower_bound={expected_total}")
+    return cap_count, first_bad_count
+
+
 def main() -> int:
-    profile, weights = finite_data(7, 4)
-    value_238, witness_238, count_238 = forward_minimum(profile, weights, 238)
-    value_239, witness_239, count_239 = forward_minimum(profile, weights, 239)
+    n7_counts = verify_case(
+        n=7,
+        m=4,
+        cap_size=238,
+        first_bad_size=239,
+        expected_cap_shadow=452,
+        expected_first_bad_shadow=456,
+        fixed_terms=13,
+        output_degree=3,
+        expected_residual=29,
+        expected_total=42,
+    )
+    require(n7_counts == (2, 8), n7_counts)
 
-    require(value_238 == 452, value_238)
-    require(value_239 == 456, value_239)
-    require(sum(witness_238) == 238, witness_238)
-    require(sum(witness_239) == 239, witness_239)
-    require(13 * comb(7, 3) == 455, "threshold")
+    n8_counts = verify_case(
+        n=8,
+        m=4,
+        cap_size=560,
+        first_bad_size=561,
+        expected_cap_shadow=784,
+        expected_first_bad_shadow=793,
+        fixed_terms=14,
+        output_degree=4,
+        expected_residual=63,
+        expected_total=77,
+    )
+    require(n8_counts == (2, 2), n8_counts)
 
-    target_rank = 7**2 * comb(7, 3) ** 2 - comb(7, 4) ** 2
-    one_term_cap = 7**2 * comb(7, 3) - comb(7, 4)
-    residual = -(-(target_rank - 7**2 * 238) // one_term_cap)
-    require((target_rank, one_term_cap, residual) == (58_800, 1_680, 29), residual)
-    require(13 + residual == 42, 13 + residual)
-
-    print(f"independent_min_238={value_238}")
-    print(f"independent_min_239={value_239}")
-    print(f"independent_count_238={count_238}")
-    print(f"independent_count_239={count_239}")
-    print("independent_perm7_lower_bound=42")
     print("GENERAL_EXACT_PRODUCT_SHADOW_INDEPENDENT_PASS")
     return 0
 
