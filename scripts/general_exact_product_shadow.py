@@ -223,7 +223,7 @@ class ExactProductShadow:
 
 
 def first_koszul_data(n: int, output_degree: int) -> tuple[int, int, int]:
-    require(2 <= output_degree <= n - 2, (n, output_degree))
+    require(2 <= output_degree <= n - 1, (n, output_degree))
     dimension = n * n
     target_rank = (
         dimension * comb(n, output_degree) ** 2
@@ -233,8 +233,16 @@ def first_koszul_data(n: int, output_degree: int) -> tuple[int, int, int]:
         dimension * comb(n, output_degree)
         - comb(n, output_degree + 1)
     )
-    base_bound = ceil_div(target_rank, one_term_cap)
-    return target_rank, one_term_cap, base_bound
+    selected_output_bound = ceil_div(target_rank, one_term_cap)
+    return target_rank, one_term_cap, selected_output_bound
+
+
+def global_first_koszul_bound(n: int) -> int:
+    require(n >= 3, n)
+    return max(
+        first_koszul_data(n, output_degree)[2]
+        for output_degree in range(2, n)
+    )
 
 
 def exact_intersection_cap(
@@ -281,8 +289,11 @@ def exact_multishadow_bound(
 ) -> dict[str, object]:
     complement_degree = n - output_degree
     shadow = ExactProductShadow(n, complement_degree)
-    target_rank, one_term_cap, base_bound = first_koszul_data(n, output_degree)
-    require(fixed_term_count <= base_bound, (fixed_term_count, base_bound))
+    target_rank, one_term_cap, selected_output_bound = first_koszul_data(
+        n, output_degree
+    )
+    global_bound = global_first_koszul_bound(n)
+    require(fixed_term_count <= global_bound, (fixed_term_count, global_bound))
     threshold, last_good, first_bad = exact_intersection_cap(
         shadow,
         fixed_term_count,
@@ -303,7 +314,8 @@ def exact_multishadow_bound(
         "first_excluded_size": first_bad.family_size,
         "first_koszul_target_rank": target_rank,
         "one_term_koszul_cap": one_term_cap,
-        "base_first_koszul_bound": base_bound,
+        "selected_output_first_koszul_bound": selected_output_bound,
+        "global_first_koszul_bound": global_bound,
         "residual_rank_numerator": residual_numerator,
         "residual_term_count": residual_terms,
         "exact_multishadow_lower_bound": total_bound,
@@ -376,6 +388,8 @@ def build_payload() -> dict[str, object]:
     require(n7["derivative_shadow_threshold"] == 455, n7)
     require(n7["first_koszul_target_rank"] == 58_800, n7)
     require(n7["one_term_koszul_cap"] == 1_680, n7)
+    require(n7["selected_output_first_koszul_bound"] == 35, n7)
+    require(n7["global_first_koszul_bound"] == 36, n7)
     require(n7["residual_term_count"] == 29, n7)
     require(n7["exact_multishadow_lower_bound"] == 42, n7)
 
@@ -387,6 +401,8 @@ def build_payload() -> dict[str, object]:
     require(n8["derivative_shadow_threshold"] == 784, n8)
     require(n8["first_koszul_target_rank"] == 310_464, n8)
     require(n8["one_term_koszul_cap"] == 4_424, n8)
+    require(n8["selected_output_first_koszul_bound"] == 71, n8)
+    require(n8["global_first_koszul_bound"] == 71, n8)
     require(n8["residual_term_count"] == 63, n8)
     require(n8["exact_multishadow_lower_bound"] == 77, n8)
 
