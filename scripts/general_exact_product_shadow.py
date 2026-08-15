@@ -240,21 +240,36 @@ def first_koszul_data(n: int, output_degree: int) -> tuple[int, int, int]:
 def exact_intersection_cap(
     shadow: ExactProductShadow,
     fixed_term_count: int,
-) -> tuple[int, ShadowMinimum, ShadowMinimum | None]:
-    """Largest b whose exact product shadow fits the q-term derivative cap."""
+) -> tuple[int, ShadowMinimum, ShadowMinimum]:
+    """Largest b whose exact product shadow fits the q-term derivative cap.
+
+    The exact minimum F_(n,m)(b) is nondecreasing: every (b+1)-plane contains
+    a b-plane and the smaller derivative image is contained in the larger one.
+    Hence a fail-closed binary search can locate the unique transition.
+    """
 
     require(fixed_term_count >= 1, fixed_term_count)
     threshold = fixed_term_count * comb(shadow.n, shadow.m - 1)
-    last_good = shadow.minimum(0)
-    first_bad: ShadowMinimum | None = None
-    for family_size in range(1, shadow.layer_size**2 + 1):
-        current = shadow.minimum(family_size)
+    full = shadow.minimum(shadow.layer_size**2)
+    require(
+        full.shadow_size > threshold,
+        ("threshold reaches full layer", threshold, full.shadow_size),
+    )
+
+    lower = 0
+    upper = shadow.layer_size**2
+    while lower + 1 < upper:
+        midpoint = (lower + upper) // 2
+        current = shadow.minimum(midpoint)
         if current.shadow_size <= threshold:
-            last_good = current
-            continue
-        first_bad = current
-        break
-    require(first_bad is not None, ("threshold reaches full layer", threshold))
+            lower = midpoint
+        else:
+            upper = midpoint
+
+    last_good = shadow.minimum(lower)
+    first_bad = shadow.minimum(upper)
+    require(last_good.shadow_size <= threshold, (threshold, last_good))
+    require(first_bad.shadow_size > threshold, (threshold, first_bad))
     require(last_good.family_size + 1 == first_bad.family_size, (last_good, first_bad))
     return threshold, last_good, first_bad
 
@@ -294,6 +309,7 @@ def exact_multishadow_bound(
         "exact_multishadow_lower_bound": total_bound,
         "cap_partition_count": last_good.partition_count,
         "cap_partition": list(last_good.minimizing_partition),
+        "first_excluded_partition_count": first_bad.partition_count,
         "first_excluded_partition": list(first_bad.minimizing_partition),
         "dynamic_state_count": first_bad.dynamic_state_count,
     }
@@ -363,11 +379,23 @@ def build_payload() -> dict[str, object]:
     require(n7["residual_term_count"] == 29, n7)
     require(n7["exact_multishadow_lower_bound"] == 42, n7)
 
+    n8 = exact_multishadow_bound(8, 4, 14)
+    require(n8["exact_intersection_cap"] == 560, n8)
+    require(n8["shadow_at_cap"] == 784, n8)
+    require(n8["first_excluded_size"] == 561, n8)
+    require(n8["shadow_at_first_excluded_size"] == 793, n8)
+    require(n8["derivative_shadow_threshold"] == 784, n8)
+    require(n8["first_koszul_target_rank"] == 310_464, n8)
+    require(n8["one_term_koszul_cap"] == 4_424, n8)
+    require(n8["residual_term_count"] == 63, n8)
+    require(n8["exact_multishadow_lower_bound"] == 77, n8)
+
     core = {
         "status": [
             "GENERAL_EXACT_PRODUCT_SHADOW_PROOF_DRAFT",
             "EXACT_INTEGER_DP_REPLAYED",
             "PERM7_LOWER_42",
+            "PERM8_LOWER_77",
         ],
         "theorem": {
             "coordinate_specialization": (
@@ -378,17 +406,22 @@ def build_payload() -> dict[str, object]:
                 "Two coordinatewise colex compressions reduce the exact "
                 "minimum simultaneous product shadow to Ferrers partitions."
             ),
+            "monotonicity": (
+                "F_(n,m)(b) is nondecreasing because every (b+1)-plane "
+                "contains a b-plane."
+            ),
             "objective": "F_n,m(b)=min_lambda sum_i w_i*k(lambda_i)",
             "weight_formula": "w_i=min([n]\\A_i) for the i-th colex m-subset A_i",
         },
         "n6_regression": n6_rows,
         "n7_application": n7,
+        "n8_application": n8,
         "claim_boundary": (
             "This is an exact ordinary-rank refinement of the finite "
             "multishadow cap. It does not prove the conjectural value "
-            "2^(n-1), an unrestricted exact value for perm_6 or perm_7, "
-            "or a new border-Chow-rank bound. Literature novelty is not "
-            "claimed."
+            "2^(n-1), an unrestricted exact value for perm_6, perm_7 or "
+            "perm_8, or a new border-Chow-rank bound. Literature novelty "
+            "is not claimed."
         ),
     }
     return {**core, "core_sha256": canonical_hash(core)}
