@@ -8,15 +8,17 @@
 This note proves an exact finite formula for the minimum first-derivative
 shadow of an arbitrary subspace of a permanent derivative space. It strictly
 refines the continuous multidimensional Kruskal--Katona cap used by the
-existing general multishadow theorem and gives the new ordinary-rank bound
+existing general multishadow theorem and gives the new ordinary-rank bounds
 
 \[
-\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge 42.}
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge 42},
+\qquad
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_8)\ge 77}.
 \]
 
 The result does **not** prove `ChowRank(perm_n)=2^(n-1)`, determine `perm_7`
-exactly, improve the current specialized `perm_6` lower bound, or make a
-border-rank claim. Literature novelty has not been established.
+or `perm_8` exactly, improve the current specialized `perm_6` lower bound, or
+make a border-rank claim. Literature novelty has not been established.
 
 ## 1. Permanent derivative spaces and simultaneous shadows
 
@@ -284,6 +286,26 @@ exactly. Conversely every partition in (4.4) defines a coordinate Ferrers
 plane realizing its displayed objective. Hence both inequalities are sharp.
 ∎
 
+### Lemma 4.2 -- monotonicity
+
+The function `F_(n,m)(b)` is nondecreasing in `b`.
+
+### Proof
+
+Every `(b+1)`-plane contains a `b`-plane. Differentiating the smaller plane
+gives a subspace of the derivative image of the larger plane. Thus every
+`(b+1)`-plane has derivative dimension at least `F_(n,m)(b)`. Taking the
+minimum over all `(b+1)`-planes gives
+
+\[
+F_{n,m}(b+1)\ge F_{n,m}(b).
+\]
+∎
+
+This elementary monotonicity permits a binary search for every exact
+intersection threshold. It is a runtime reduction only; it changes neither
+the theorem nor the finite objective.
+
 ## 5. Exact integer dynamic programming
 
 Let
@@ -325,6 +347,7 @@ D(q,u,s)=+\infty\quad(s>0).
 
 The recurrence uses only integers, enumerates every partition exactly once,
 and returns the minimum, the number of minimizing partitions and a witness.
+Lemma 4.2 then locates the last admissible family size by exact binary search.
 
 ## 6. Exact refinement of the general multishadow theorem
 
@@ -390,8 +413,8 @@ Therefore:
 
 ### Corollary 6.1 -- exact finite multishadow bound
 
-Whenever the base first-Koszul lower bound guarantees at least `q_0` terms
-and the numerator below is positive,
+Whenever the globally optimized first-Koszul lower bound guarantees at least
+`q_0` terms and the numerator below is positive,
 
 \[
 \boxed{
@@ -407,8 +430,10 @@ q_0+
 
 This replaces the real-binomial Bukh cap by the exact finite shadow function.
 It cannot weaken the earlier bound because `F_(n,r)` is the true minimum.
+The global first-Koszul selection bound and the ratio at the chosen output
+degree are recorded separately in the frozen certificate.
 
-## 7. New application: `ChowRank(perm_7)>=42`
+## 7. Application: `ChowRank(perm_7)>=42`
 
 Take
 
@@ -419,8 +444,10 @@ n=7,
 \qquad q_0=13.
 \]
 
-The ordinary first-Koszul lower bound is 36, so selecting thirteen terms is
-legitimate. Their degree-three derivative cap is
+The globally optimized first-Koszul lower bound is 36, while the selected
+output degree `m=3` by itself certifies 35. Either value is already above
+thirteen, so selecting thirteen terms is legitimate. Their degree-three
+derivative cap is
 
 \[
 13\binom73=455.
@@ -485,7 +512,111 @@ interval
 42\le\operatorname{ChowRank}(\operatorname{perm}_7)\le64.
 \]
 
-## 8. Regression and independent replay
+## 8. New application: `ChowRank(perm_8)>=77`
+
+Take
+
+\[
+n=8,
+\qquad m=r=4,
+\qquad q_0=14.
+\]
+
+The ordinary first-Koszul lower bound is 71, so selecting fourteen terms is
+legitimate. Their degree-three derivative cap is
+
+\[
+14\binom83
+=
+14\cdot56
+=
+784.
+\tag{8.1}
+\]
+
+The exact Ferrers dynamic program gives the sharp transition
+
+\[
+F_{8,4}(560)=784,
+\qquad
+F_{8,4}(561)=793.
+\tag{8.2}
+\]
+
+Thus
+
+\[
+\beta_{8,4}(14)=560.
+\tag{8.3}
+\]
+
+There are exactly two minimizing Ferrers partitions at each of the two
+displayed sizes. One witness at size 560 is
+
+\[
+(\underbrace{15,\ldots,15}_{35},
+ \underbrace{1,\ldots,1}_{35}),
+\tag{8.4}
+\]
+
+and one witness at size 561 replaces the first trailing `1` by `2`.
+
+The relevant Koszul numbers are
+
+\[
+A_{8,4}
+=
+64\binom84^2-\binom85^2
+=
+310,464,
+\]
+
+\[
+B_{8,4}
+=
+64\binom84-\binom85
+=
+4,424.
+\tag{8.5}
+\]
+
+Therefore the residual requires at least
+
+\[
+\left\lceil
+\frac{310,464-64\cdot560}{4,424}
+\right\rceil
+=
+\left\lceil
+\frac{274,624}{4,424}
+\right\rceil
+=
+63
+\tag{8.6}
+\]
+
+terms. Adding the fixed fourteen terms gives
+
+\[
+\boxed{
+\operatorname{ChowRank}(\operatorname{perm}_8)
+\ge14+63=77.
+}
+\tag{8.7}
+\]
+
+This improves the previous in-repository general multishadow bound 76 by one.
+Glynn gives the upper bound 128, so the new ordinary interval is
+
+\[
+77\le\operatorname{ChowRank}(\operatorname{perm}_8)\le128.
+\]
+
+The improvement is small in absolute terms but structurally useful: it
+confirms that the exact finite product shadow can strictly beat the continuous
+Bukh surrogate beyond the first odd-degree example.
+
+## 9. Regression and independent replay
 
 For `(n,m)=(6,3)`, the general recurrence exactly reproduces the specialized
 N6-056 table, including
@@ -516,11 +647,16 @@ The independent replay obtains
 ```text
 F_7,4(238)=452
 F_7,4(239)=456
-residual terms=29
-total lower bound=42
+perm_7 residual terms=29
+perm_7 lower bound=42
+
+F_8,4(560)=784
+F_8,4(561)=793
+perm_8 residual terms=63
+perm_8 lower bound=77
 ```
 
-## 9. Hidden assumptions and strongest objection
+## 10. Hidden assumptions and strongest objection
 
 ### Hidden assumptions
 
@@ -530,19 +666,21 @@ total lower bound=42
    a Ferrers family after the second operation.
 3. The general residual theorem must use the intersection at the complementary
    derivative degree `r`, not the output degree `m`.
+4. The threshold search must rely only on proved monotonicity, not on observed
+   numerical monotonicity of the generated table.
 
-All three points are explicit in the proof. The second point uses the fact
+All four points are explicit in the proof. The second point uses the fact
 that row compression makes column heights nonincreasing; replacing each
 column by an initial row segment with those same heights therefore produces a
-Ferrers diagram immediately.
+Ferrers diagram immediately. Lemma 4.2 supplies the fourth point.
 
 ### Assume all assumptions are false
 
-Then the numerical value 42 has no mathematical force. The appropriate
-response would be to retain only the finite DP as a coordinate diagnostic and
-remove the general-subspace and Chow-rank claims. The regression and
-independent implementation do not substitute for the specialization and
-compression proof.
+Then the numerical values 42 and 77 have no mathematical force. The
+appropriate response would be to retain only the finite dynamic programs as
+coordinate diagnostics and remove the general-subspace and Chow-rank claims.
+The regression and independent implementation do not substitute for the
+specialization, compression and complementary-intersection proofs.
 
 ### Strongest objection
 
@@ -554,7 +692,12 @@ still needs a second invariant controlling equality or near-equality
 families, coupled relations among fixed terms, or a recurrence retaining more
 than shadow cardinality.
 
-## 10. Reproduction
+The two new lower bounds reinforce this diagnosis. Exact finite optimization
+improves 41 to 42 and 76 to 77, not to 64 and 128. Further expansion of the
+same scalar shadow dynamic program is therefore not promoted as the main
+route.
+
+## 11. Reproduction
 
 Run
 
