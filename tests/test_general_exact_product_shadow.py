@@ -45,6 +45,8 @@ class GeneralExactProductShadowTests(unittest.TestCase):
         row_239 = shadow.minimum(239)
         self.assertEqual(row_238.shadow_size, 452)
         self.assertEqual(row_239.shadow_size, 456)
+        self.assertEqual(row_238.partition_count, 2)
+        self.assertEqual(row_239.partition_count, 8)
         self.assertEqual(sum(row_238.minimizing_partition), 238)
         self.assertEqual(sum(row_239.minimizing_partition), 239)
 
@@ -53,8 +55,31 @@ class GeneralExactProductShadowTests(unittest.TestCase):
         self.assertEqual(result["derivative_shadow_threshold"], 455)
         self.assertEqual(result["exact_intersection_cap"], 238)
         self.assertEqual(result["first_excluded_size"], 239)
+        self.assertEqual(result["selected_output_first_koszul_bound"], 35)
+        self.assertEqual(result["global_first_koszul_bound"], 36)
         self.assertEqual(result["residual_term_count"], 29)
         self.assertEqual(result["exact_multishadow_lower_bound"], 42)
+
+    def test_n8_exact_threshold(self) -> None:
+        shadow = MODULE.ExactProductShadow(8, 4)
+        row_560 = shadow.minimum(560)
+        row_561 = shadow.minimum(561)
+        self.assertEqual(row_560.shadow_size, 784)
+        self.assertEqual(row_561.shadow_size, 793)
+        self.assertEqual(row_560.partition_count, 2)
+        self.assertEqual(row_561.partition_count, 2)
+        self.assertEqual(sum(row_560.minimizing_partition), 560)
+        self.assertEqual(sum(row_561.minimizing_partition), 561)
+
+    def test_perm8_lower_bound(self) -> None:
+        result = MODULE.exact_multishadow_bound(8, 4, 14)
+        self.assertEqual(result["derivative_shadow_threshold"], 784)
+        self.assertEqual(result["exact_intersection_cap"], 560)
+        self.assertEqual(result["first_excluded_size"], 561)
+        self.assertEqual(result["selected_output_first_koszul_bound"], 71)
+        self.assertEqual(result["global_first_koszul_bound"], 71)
+        self.assertEqual(result["residual_term_count"], 63)
+        self.assertEqual(result["exact_multishadow_lower_bound"], 77)
 
     def test_frozen_payload_matches_generator(self) -> None:
         payload = MODULE.build_payload()
@@ -63,6 +88,10 @@ class GeneralExactProductShadowTests(unittest.TestCase):
         self.assertEqual(
             payload["n7_application"]["exact_multishadow_lower_bound"],
             42,
+        )
+        self.assertEqual(
+            payload["n8_application"]["exact_multishadow_lower_bound"],
+            77,
         )
 
     def test_independent_replay(self) -> None:
@@ -77,6 +106,7 @@ class GeneralExactProductShadowTests(unittest.TestCase):
             completed.stdout,
         )
         self.assertIn("independent_perm7_lower_bound=42", completed.stdout)
+        self.assertIn("independent_perm8_lower_bound=77", completed.stdout)
 
 
 if __name__ == "__main__":
