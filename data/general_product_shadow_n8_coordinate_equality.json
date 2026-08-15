@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "The script replays every family in the proved coordinate flag classification. The converse classification uses the written compression, equality and Johnson-connectivity proof plus the source-bound one-dimensional Kruskal--Katona equality theorem. No noncoordinate or Chow-realizability claim is made.",
+  "core_sha256": "cfa0acd7c865f47bbe13562fd7c5402b35cdf92bf09f150475117e7175c544be",
+  "external_equality_input": {
+    "instances": [
+      "35 four-sets with shadow 35 are C(U,4), |U|=7",
+      "15 four-sets with shadow 20 are C(V,4), |V|=6"
+    ],
+    "source": "Serra--Vena, arXiv:2304.05145, Theorem 4"
+  },
+  "family_invariants": {
+    "coordinate_pair_count": 560,
+    "row_profile": [
+      15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,
+      1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    ],
+    "shadow_histogram": {
+      "784": 3360
+    },
+    "simultaneous_shadow_size": 784,
+    "transposed_row_profile": [
+      70,
+      35,35,35,35,35,35,35,35,35,35,35,35,35,35,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    ]
+  },
+  "orbit_invariants": {
+    "S8xS8_orbits_per_orientation": 1,
+    "orbits_after_adjoining_transpose": 1,
+    "orientation_sets_disjoint": true,
+    "parameter_map_injective": true
+  },
+  "parameter_counts": {
+    "column_four_sets_inside_six": 15,
+    "column_six_sets": 28,
+    "families_per_orientation": 3360,
+    "families_with_transposes": 6720,
+    "row_labels_z": 8
+  },
+  "reference_parameters": {
+    "column_four": [0,1,2,3],
+    "column_six": [0,1,2,3,4,5],
+    "z": 7
+  },
+  "status": [
+    "PURE_COORDINATE_EQUALITY_THEOREM",
+    "EXACT_FLAG_FAMILY_REPLAY",
+    "N8_SIZE560_SHADOW784"
+  ]
+}
