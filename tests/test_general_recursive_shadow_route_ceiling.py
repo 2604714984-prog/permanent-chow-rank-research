@@ -115,7 +115,7 @@ class GeneralRecursiveShadowRouteCeilingTests(unittest.TestCase):
     def test_ledger_update_policy(self) -> None:
         text = LEDGER.read_text(encoding="utf-8")
         self.assertIn("Every future theorem", text)
-        self.assertIn("#41", text)
+        self.assertIn("#42", text)
         self.assertIn("five-term", text)
         self.assertIn("146", text)
 
