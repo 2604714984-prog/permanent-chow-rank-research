@@ -1,0 +1,77 @@
+{
+  "claim_boundary": "This is an upper ceiling on the lower bound certified by the complete scalar derivative-tower system, not an upper bound on the actual Chow rank. It introduces no new numerical finite-n lower bound, no border-rank result and no exact rank for n>=6. It does not rule out non-scalar, representation-valued, valuative or Chow-realizability arguments reaching Glynn. Literature novelty is not established.",
+  "finite_diagnostics": {
+    "adjacent_cdf_checks": 31579,
+    "finite_atom_constant_squared": 400,
+    "geometric_start_and_central_binomial_checks": 9899,
+    "hypergeometric_parameter_pairs": 1081,
+    "normalization_rows": {
+      "10": {
+        "central_binomial": 252,
+        "ratio_denominator": 252,
+        "ratio_numerator": 307,
+        "theta": 307
+      },
+      "3": {
+        "central_binomial": 3,
+        "ratio_denominator": 3,
+        "ratio_numerator": 4,
+        "theta": 4
+      },
+      "4": {
+        "central_binomial": 6,
+        "ratio_denominator": 6,
+        "ratio_numerator": 8,
+        "theta": 8
+      },
+      "5": {
+        "central_binomial": 10,
+        "ratio_denominator": 10,
+        "ratio_numerator": 15,
+        "theta": 15
+      },
+      "6": {
+        "central_binomial": 20,
+        "ratio_denominator": 20,
+        "ratio_numerator": 27,
+        "theta": 27
+      },
+      "7": {
+        "central_binomial": 35,
+        "ratio_denominator": 35,
+        "ratio_numerator": 49,
+        "theta": 49
+      },
+      "8": {
+        "central_binomial": 70,
+        "ratio_denominator": 70,
+        "ratio_numerator": 90,
+        "theta": 90
+      },
+      "9": {
+        "central_binomial": 126,
+        "ratio_denominator": 126,
+        "ratio_numerator": 164,
+        "theta": 164
+      }
+    }
+  },
+  "proof_parameter": {
+    "central_band": "d=n/2+O(w_n)",
+    "terminal_tail": "Hoeffding: 2^n*exp(-2*w_n^2/n)",
+    "window": "w_n=ceil(n^(3/4))"
+  },
+  "status": [
+    "GENERAL_CENTRAL_PRODUCT_SHADOW_SMOOTHING",
+    "GENERAL_SCALAR_TOWER_POLYNOMIAL_CEILING",
+    "SCALAR_TOWER_ROUTE_SEPARATED_FROM_GLYNN",
+    "EXACT_FINITE_INTERFACES_REPLAYED"
+  ],
+  "theorem": {
+    "central_smoothing": "For k in [n/3,2n/3], F_(n,k)(b)/binom(n,k-1)^2 <= b/binom(n,k)^2 + O(n^(-1/2)).",
+    "optimized_ceiling": "With w=ceil(n^(3/4)), Theta_n=O(n^(1/4)*binom(n,floor(n/2))).",
+    "parameterized_ceiling": "For sqrt(n)<<w<<n, Theta_n/binom(n,floor(n/2)) =O(n/w+w/sqrt(n)+1)+O(sqrt(n)*exp(-2*w^2/n)).",
+    "power_form": "Theta_n=O(2^n/n^(1/4)).",
+    "route_gap": "2^(n-1)/Theta_n=Omega(n^(1/4)); the complete scalar derivative tower cannot prove general Glynn optimality."
+  }
+}
