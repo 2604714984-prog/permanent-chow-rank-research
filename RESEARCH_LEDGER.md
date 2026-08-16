@@ -101,7 +101,7 @@ every step has been proof-assistant formalized.
 | `G-MACAULAY` | Vector-valued first prolongation satisfies `dim K^(1)<=dim(K)^{<2>}`. | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | general relation docs |
 | `G-EXACT-SHADOW` | Exact simultaneous product-shadow minimum is a Ferrers integer program. | `STACKED_DRAFT`, exact independent replay | PR #35 |
 | `G-NESTED-SHADOW` | A certified zero-intersection term block can be projected away inside the nonzero-intersection multishadow argument. | `STACKED_DRAFT` | PR #38 |
-| `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`, but a zero-common-factor block rotation has intersection `2^m binom(r,m)`. | `STACKED_DRAFT`, exact primary and independent replay | current PR |
+| `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`, but a zero-common-factor block rotation has intersection `2^m binom(r,m)`. | `STACKED_DRAFT`, exact primary and independent replay | PR #41, head `4dd0cbed1005718258002b5cbfc5e5cdb99b0d09` |
 
 ## 4. `perm_6` milestone chain
 
@@ -228,7 +228,7 @@ PR #31  broad n=6/general research head
   -> PR #35 exact product shadows
       -> PR #38 nested zero-intersection removal
           -> PR #39 perm_8 equality tangent cone
-              -> current PR consolidated ledger + pairwise overlap
+              -> PR #41 consolidated ledger + pairwise overlap
 ```
 
 These are stacked drafts.  A statement on a later branch is not canonical on
