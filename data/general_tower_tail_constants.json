@@ -1,0 +1,391 @@
+{
+  "c4_profiles": {
+    "3": [
+      0,
+      4,
+      6,
+      6,
+      8,
+      8,
+      9,
+      9,
+      9,
+      9
+    ],
+    "4": [
+      0,
+      4,
+      6,
+      6,
+      8,
+      8,
+      8,
+      9,
+      9,
+      9,
+      11,
+      11,
+      11,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      14,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16
+    ]
+  },
+  "claim_boundary": "The monotonicity, tail constants, asymptotic constant and C4 criterion are general statements about the exact scalar derivative tower. The finite replay reproduces the existing PR #51 thresholds and introduces no new ordinary Chow-rank number. The result does not determine the scalar tower's linear-codimension asymptotic, prove a Chow-realizability defect, improve border rank, determine an exact rank for n>=6, or prove general Glynn optimality. Literature novelty is not established.",
+  "core_sha256": "562ef480c5c3b9c95112ea5c3a3dab9ef36be019489251611e5f4855a6df0bf7",
+  "exhaustive_replay": {
+    "bipartite_graphs_enumerated": 66048,
+    "capacity_lipschitz_checks": 1151,
+    "n_max": 8,
+    "n_min": 3,
+    "rectangular_shadow_checks": 32373,
+    "tail_threshold_checks": 9,
+    "tail_transport_checks": 430,
+    "threshold_monotonicity_checks": 21
+  },
+  "status": [
+    "GENERAL_TOWER_THRESHOLD_MONOTONICITY",
+    "GENERAL_FIXED_CODIMENSION_TAIL_BOUND",
+    "TOP_ROW_GAP_AT_MOST_ONE",
+    "C4_TOP_ROW_CRITERION",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "tail_asymptotic": {
+    "beta_decimal": 5.703275955910069,
+    "beta_expression": "phi^(phi+2)",
+    "phi_expression": "(1+sqrt(5))/2"
+  },
+  "tail_constants": {
+    "2": {
+      "maximizing_a": [
+        2,
+        3
+      ],
+      "value": 1
+    },
+    "3": {
+      "maximizing_a": [
+        5
+      ],
+      "value": 5
+    },
+    "4": {
+      "maximizing_a": [
+        8
+      ],
+      "value": 20
+    },
+    "5": {
+      "maximizing_a": [
+        10
+      ],
+      "value": 83
+    },
+    "6": {
+      "maximizing_a": [
+        13
+      ],
+      "value": 362
+    },
+    "7": {
+      "maximizing_a": [
+        15,
+        16
+      ],
+      "value": 1572
+    },
+    "8": {
+      "maximizing_a": [
+        18
+      ],
+      "value": 7513
+    }
+  },
+  "theorem": {
+    "c4_interpretation": "F_(n,2)(z) is the minimum edge count of an n-by-n bipartite graph containing at least z copies of K_(2,2).",
+    "fixed_tail": "For n>=2K, 0<=Theta_n-Q_(n,n-K)<=sum_(k=2)^K c_k.",
+    "row_lipschitz": "0<=B_(n,d)(q+1)-B_(n,d)(q)<=binom(n,d).",
+    "tail_asymptotic": "lim_(k->infinity) c_k^(1/k)=phi^(phi+2), phi=(1+sqrt(5))/2.",
+    "tail_constant": "c_k=max_(a>=k)[binom(a,k-1)-binom(a-1,k)-1]_+.",
+    "tail_increment": "For n>=2k, 0<=Q_(n,n-k+1)-Q_(n,n-k)<=c_k.",
+    "threshold_monotonicity": "Q_(n,d)>=Q_(n,d-1), so Theta_n=Q_(n,n-1).",
+    "top_row": "Q_(n,n-2)<=Theta_n<=Q_(n,n-2)+1."
+  },
+  "threshold_replay": {
+    "10": {
+      "adjacent_gaps": [
+        36,
+        77,
+        96,
+        61,
+        19,
+        6,
+        2,
+        0
+      ],
+      "by_degree": [
+        10,
+        46,
+        123,
+        219,
+        280,
+        299,
+        305,
+        307,
+        307
+      ],
+      "theta": 307,
+      "top_gap": 0
+    },
+    "3": {
+      "adjacent_gaps": [
+        1
+      ],
+      "by_degree": [
+        3,
+        4
+      ],
+      "theta": 4,
+      "top_gap": 1
+    },
+    "4": {
+      "adjacent_gaps": [
+        3,
+        1
+      ],
+      "by_degree": [
+        4,
+        7,
+        8
+      ],
+      "theta": 8,
+      "top_gap": 1
+    },
+    "5": {
+      "adjacent_gaps": [
+        6,
+        3,
+        1
+      ],
+      "by_degree": [
+        5,
+        11,
+        14,
+        15
+      ],
+      "theta": 15,
+      "top_gap": 1
+    },
+    "6": {
+      "adjacent_gaps": [
+        10,
+        8,
+        2,
+        1
+      ],
+      "by_degree": [
+        6,
+        16,
+        24,
+        26,
+        27
+      ],
+      "theta": 27,
+      "top_gap": 1
+    },
+    "7": {
+      "adjacent_gaps": [
+        15,
+        17,
+        7,
+        2,
+        1
+      ],
+      "by_degree": [
+        7,
+        22,
+        39,
+        46,
+        48,
+        49
+      ],
+      "theta": 49,
+      "top_gap": 1
+    },
+    "8": {
+      "adjacent_gaps": [
+        21,
+        30,
+        21,
+        7,
+        2,
+        1
+      ],
+      "by_degree": [
+        8,
+        29,
+        59,
+        80,
+        87,
+        89,
+        90
+      ],
+      "theta": 90,
+      "top_gap": 1
+    },
+    "9": {
+      "adjacent_gaps": [
+        28,
+        50,
+        49,
+        19,
+        6,
+        2,
+        1
+      ],
+      "by_degree": [
+        9,
+        37,
+        87,
+        136,
+        155,
+        161,
+        163,
+        164
+      ],
+      "theta": 164,
+      "top_gap": 1
+    }
+  },
+  "top_row_criteria": {
+    "3": {
+      "criterion_value": 4,
+      "maximizing_witnesses": [
+        {
+          "c4_shadow": 9,
+          "previous_deficit": 6,
+          "t": 1
+        },
+        {
+          "c4_shadow": 6,
+          "previous_deficit": 3,
+          "t": 2
+        }
+      ],
+      "previous_threshold": 3,
+      "top_gap": 1,
+      "top_threshold": 4
+    },
+    "4": {
+      "criterion_value": 8,
+      "maximizing_witnesses": [
+        {
+          "c4_shadow": 11,
+          "previous_deficit": 12,
+          "t": 5
+        },
+        {
+          "c4_shadow": 8,
+          "previous_deficit": 6,
+          "t": 6
+        }
+      ],
+      "previous_threshold": 7,
+      "top_gap": 1,
+      "top_threshold": 8
+    },
+    "5": {
+      "criterion_value": 15,
+      "maximizing_witnesses": [
+        {
+          "c4_shadow": 12,
+          "previous_deficit": 18,
+          "t": 12
+        },
+        {
+          "c4_shadow": 9,
+          "previous_deficit": 8,
+          "t": 13
+        }
+      ],
+      "previous_threshold": 14,
+      "top_gap": 1,
+      "top_threshold": 15
+    },
+    "6": {
+      "criterion_value": 27,
+      "maximizing_witnesses": [
+        {
+          "c4_shadow": 15,
+          "previous_deficit": 30,
+          "t": 24
+        },
+        {
+          "c4_shadow": 12,
+          "previous_deficit": 15,
+          "t": 25
+        }
+      ],
+      "previous_threshold": 26,
+      "top_gap": 1,
+      "top_threshold": 27
+    },
+    "7": {
+      "criterion_value": 49,
+      "maximizing_witnesses": [
+        {
+          "c4_shadow": 16,
+          "previous_deficit": 36,
+          "t": 46
+        },
+        {
+          "c4_shadow": 12,
+          "previous_deficit": 15,
+          "t": 47
+        }
+      ],
+      "previous_threshold": 48,
+      "top_gap": 1,
+      "top_threshold": 49
+    },
+    "8": {
+      "criterion_value": 90,
+      "maximizing_witnesses": [
+        {
+          "c4_shadow": 18,
+          "previous_deficit": 45,
+          "t": 87
+        },
+        {
+          "c4_shadow": 12,
+          "previous_deficit": 17,
+          "t": 88
+        }
+      ],
+      "previous_threshold": 89,
+      "top_gap": 1,
+      "top_threshold": 90
+    }
+  }
+}

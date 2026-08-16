@@ -14,15 +14,14 @@ the same pull request. This is one Markdown index, not a registry, database,
 manager, dispatcher, or second workflow layer.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #51 theorem head
-`bab95bc412366ac18b5f10089c73ef033bdfa5b0`.
+Consolidation base: PR #52 theorem head
+`fab0e51bda4d04a5af924f191b202c0ac358cc3b`.
 
 ## Status vocabulary
 
 - `ACCEPTED_BASELINE`: canonical small-`n` result on merged mainline.
-- `PROOF_DRAFT_COMPLETE`: the mathematical argument is written; external
-  review may remain pending.
-- `COMPUTATION_REPLAYED`: the stated finite interface has deterministic replay.
+- `PROOF_DRAFT_COMPLETE`: the argument is written; external review may remain.
+- `COMPUTATION_REPLAYED`: the finite interface has deterministic replay.
 - `RESTRICTED_FAMILY_THEOREM`: exact only for a named proper subclass.
 - `ROUTE_DIAGNOSTIC`: a valid result used to select or reject a route.
 - `STACKED_DRAFT`: valid only on the named open PR stack until merged.
@@ -37,13 +36,13 @@ Consolidation base: PR #51 theorem head
 | `perm_3` | `ChowRank=4` | `ACCEPTED_BASELINE` | merged small-`n` proof |
 | `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact-rational proof |
 | `perm_5` | `ChowRank=16` | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | merged PR #30 |
-| `perm_6` | `28 <= ChowRank <= 32` | specialized lower-bound draft; exact value open in accessible repository | PR #31 |
+| `perm_6` | `28 <= ChowRank <= 32` | specialized lower-bound draft; exact value open | PR #31 |
 | `perm_7` | `49 <= ChowRank <= 64` | `STACKED_DRAFT` | PR #51 |
 | `perm_8` | `90 <= ChowRank <= 128` | `STACKED_DRAFT` | PR #51 |
 | `perm_9` | `164 <= ChowRank <= 256` | `STACKED_DRAFT` | PR #51 |
 | `perm_10` | `307 <= ChowRank <= 512` | `STACKED_DRAFT` | PR #51 |
-| `perm_11` | `ChowRank >= 508` | earlier stacked bound; full tower not yet replayed at this size | PR #38 |
-| `perm_12` | `ChowRank >= 970` | earlier stacked bound; full tower not yet replayed at this size | PR #38 |
+| `perm_11` | `ChowRank >= 508` | earlier stacked bound; full tower not replayed at this size | PR #38 |
+| `perm_12` | `ChowRank >= 970` | earlier stacked bound; full tower not replayed at this size | PR #38 |
 | `perm_13` | `ChowRank >= 1855` | earlier stacked bound | PR #38 |
 | `perm_14` | `ChowRank >= 3570` | earlier stacked bound | PR #38 |
 | `perm_15` | `ChowRank >= 6883` | earlier stacked bound | PR #38 |
@@ -87,7 +86,8 @@ non-finite bridges and deterministic certificates at merged PR #30.
 | `G-TOWER-BOOTSTRAP` | Compose tower capacities with complementary-intersection Koszul residual ranks. | stacked route theorem | PR #49 |
 | `G-TOWER-SATURATION` | A `q`-term decomposition forces every derivative-tower row to have saturated at `q`. | stacked general theorem | PR #50 |
 | `G-FULL-DEGREE-ENVELOPE` | The projection recurrence is a prefix min-plus envelope; scanning through degree `n-1` gives the thresholds in PR #51. | stacked general theorem, C++ and Python replay | PR #51 |
-| `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the equivalent max-plus deficit transport recurrence. | current general-`n` stacked draft, two independent exact DPs | PR #52 |
+| `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the equivalent max-plus deficit recurrence. | stacked general theorem, two independent exact DPs | PR #52 |
+| `G-TOWER-TAIL` | Thresholds are nondecreasing; the full scalar bound is the top row; fixed-codimension transitions have universal constants `c_k`; the final row adds at most one and is controlled by bipartite `C4` supersaturation. | current general-`n` stacked draft, two independent exact DPs | current PR #53 |
 
 ## 4. `perm_6` milestone chain
 
@@ -109,23 +109,21 @@ Current accessible frontier:
 The lower-29 program remains partial. Broad scalar state trees, complete sign
 families and uncorrected quotient-intersection shortcuts are closed routes.
 
-## 5. Full-degree tower envelope
+## 5. Full-degree tower and deficit form
 
-For
+Let
 
 \[
-M_{n,d}=\binom nd,\qquad A_{n,d}=M_{n,d}^2,
+M_{n,d}=\binom nd,\qquad A_{n,d}=M_{n,d}^2.
 \]
 
-let `Gamma_(n,d)` be the inverse exact first-shadow capacity and define
+The exact direct cap and projection closure are
 
 \[
 C_{n,d}(q)
 =\min\{A_{n,d},qM_{n,d},
-\Gamma_{n,d}(B_{n,d-1}(q))\}.
+\Gamma_{n,d}(B_{n,d-1}(q))\},
 \]
-
-The repeated block-projection closure is the exact prefix envelope
 
 \[
 B_{n,d}(q)
@@ -134,21 +132,21 @@ B_{n,d}(q)
 \bigl(C_{n,d}(t)-tM_{n,d}\bigr).
 \]
 
-A decomposition by `q` terms must cover every permanent derivative space, so
-all rows must have saturated at `q`. Writing
+A decomposition by `q` terms must cover every permanent derivative space.
+Writing
 
 \[
-Q_{n,d}=\min\{q:B_{n,d}(q)=A_{n,d}\},
+Q_{n,d}=\min\{q:B_{n,d}(q)=A_{n,d}\}
 \]
 
-gives
+gives the scalar lower bound
 
 \[
 \operatorname{ChowRank}(\operatorname{perm}_n)
 \ge\Theta_n:=\max_{1\le d\le n-1}Q_{n,d}.
 \]
 
-PR #51 replays the exact threshold rows
+PR #51 replays
 
 ```text
 n=3:  3,4                                  Theta=4
@@ -162,13 +160,9 @@ n=10: 10,46,123,219,280,299,305,307,307    Theta=307.
 ```
 
 The scalar tower remains weaker than the separate exact `n=5` result and the
-specialized `n=6` lower bound. It does not absorb those coupled geometric
-arguments.
+specialized `n=6` lower bound.
 
-### Shadow-complement deficit form
-
-PR #52 replaces the inverse-shadow transition by the exact complementary
-identity
+PR #52 introduces the exact complement identity
 
 \[
 \Gamma_{n,d}(A_{n,d-1}-z)
@@ -176,13 +170,13 @@ identity
 A_{n,d}-F_{n,n-d+1}(z).
 \]
 
-Writing
+For
 
 \[
 D_{n,d}(q)=A_{n,d}-B_{n,d}(q),
 \]
 
-the direct deficit and projection closure become
+the tower becomes
 
 \[
 H_{n,d}(q)
@@ -196,19 +190,92 @@ D_{n,d}(q)
 \bigl(H_{n,d}(t)-(q-t)M_{n,d}\bigr).
 \]
 
-This is an exact reformulation, not a new numerical lower bound. It exposes
-the scalar tower as complementary-shadow transport and is now the preferred
-interface for uniform asymptotic analysis.
+## 6. Fixed-codimension tail structure
 
-## 6. Finite instances and equality geometry
+The current theorem proves
+
+\[
+Q_{n,d}\ge Q_{n,d-1},
+\qquad
+\Theta_n=Q_{n,n-1},
+\]
+
+and the row-wise one-term Lipschitz bound
+
+\[
+0\le B_{n,d}(q+1)-B_{n,d}(q)\le\binom nd.
+\]
+
+For `k>=2`, define
+
+\[
+c_k
+=
+\max_{a\ge k}
+\left[
+\binom a{k-1}-\binom{a-1}k-1
+\right]_+.
+\]
+
+For `n>=2k`,
+
+\[
+0\le
+Q_{n,n-k+1}-Q_{n,n-k}
+\le c_k.
+\]
+
+The first constants are
+
+```text
+c_2,...,c_8 = 1,5,20,83,362,1572,7513.
+```
+
+For fixed `K` and `n>=2K`,
+
+\[
+0\le
+\Theta_n-Q_{n,n-K}
+\le
+\sum_{k=2}^{K}c_k.
+\]
+
+Moreover, for `phi=(1+sqrt(5))/2`,
+
+\[
+\lim_{k\to\infty}c_k^{1/k}
+=
+\phi^{\phi+2}
+=
+5.7032759559\ldots.
+\]
+
+Hence the top `o(n)` codimension tail contributes only `exp(o(n))`
+additively. It cannot create a new positive exponential rate absent at degree
+`n-o(n)`.
+
+The final transition has the sharper universal bound
+
+\[
+Q_{n,n-2}\le\Theta_n\le Q_{n,n-2}+1.
+\]
+
+The exact degree-two shadow `F_(n,2)(z)` is the minimum number of edges in an
+`n`-by-`n` bipartite graph containing at least `z` copies of `K_(2,2)`.
+Thus the last zero-or-one decision is an exact `C4` supersaturation criterion.
+
+This theorem introduces no new numerical Chow-rank bound. It localizes the
+unresolved scalar asymptotic to linear codimension.
+
+## 7. Finite instances and equality geometry
 
 Finite cases are falsification and regression instances for general theorems,
 not the research objective. A finite result is promoted only when it detects a
-false general implication, validates a uniform theorem against unrestricted
-rank, identifies an equality geometry, or certifies a route ceiling.
+false implication, validates a uniform theorem against unrestricted rank,
+identifies an equality geometry, or certifies a route ceiling.
 
-PR #39 classifies the reduced tangent cone at the `560/784` `perm_8` exact-
-shadow flag locus:
+PR #39 classifies the reduced tangent cone at the `560/784` `perm_8`
+exact-shadow flag locus:
 
 ```text
 linear tangent dimension=27
@@ -219,46 +286,48 @@ global equality-locus dimension=4
 
 Chow realizability of the full equality locus remains open.
 
-## 7. Pairwise and block-overlap frontier
+## 8. Pairwise and block-overlap frontier
 
 PR #41 proves the transverse common-factor formula and block-rotation
 counterexample. PR #44 gives the sharp same-span dual-frame bound. PR #45
 proves that low joint factor-span blocks are invisible to the permanent space.
-PR #46 proves every central two-term block for `perm_8` is zero. PRs #47--#51
-show how these permanent-relative defects feed the general tower.
+PR #46 proves every central two-term block for `perm_8` is zero. PRs #47--#52
+show how these defects feed and reorganize the general tower.
 
-The next improvement cannot come from re-evaluating the same scalar recurrence;
-it must lower a capacity through Chow-realizability geometry or add a
-non-scalar invariant.
+The next numerical improvement cannot come from re-evaluating the same scalar
+recurrence. It must lower a capacity through Chow-realizability geometry or
+add a non-scalar invariant.
 
-## 8. Restricted sign-family results
+## 9. Restricted sign-family results
 
 \[
 \operatorname{ColumnSignRank}(\operatorname{perm}_n)
 =
 \operatorname{RowSignRank}(\operatorname{perm}_n)
-=2^{n-1}.
+=
+2^{n-1}.
 \]
 
-Historical one- and two-defect calculations remain diagnostics. Further sign
-dictionary enumeration is not active.
+Historical defect calculations remain diagnostics. Further sign-dictionary
+enumeration is not active.
 
-## 9. Superseded and rejected work
+## 10. Superseded and rejected work
 
 - PR #26 is superseded by repaired `perm_5` v14.
 - PR #29 is superseded by clean merged PR #30.
 - PRs #36 and #37 duplicated a canonical theorem; PR #38 retains only the new
   projection step.
-- The implication from quotient-image overlap to an equally large matched-
-  difference space was rejected until literal overlap was included.
+- The implication from quotient-image overlap to an equally large
+  matched-difference space was rejected until literal overlap was included.
 - Common primal-factor count alone is rejected as a global overlap parameter.
-- PR #43's coordinate five-term cap 40 remains valid but is not used to infer
-  a general flat-sum bound.
-- PRs #49 and #50 remain valid weaker stages, but PR #51 supersedes their
-  claimed stopping points by including the full degree range through `n-1`.
+- PR #43's coordinate five-term cap 40 remains valid but is not used to infer a
+  general flat-sum bound.
+- PRs #49 and #50 remain valid weaker stages; PR #51 supersedes their claimed
+  stopping points by including the full degree range through `n-1`.
 - A scalar-route fixed point is not an upper bound on Chow rank.
+- The tail constants are safe universal upper bounds, not exact increments.
 
-## 10. Active pull-request stack
+## 11. Active pull-request stack
 
 ```text
 PR #31 broad n=6/general research head
@@ -274,43 +343,48 @@ PR #31 broad n=6/general research head
                                       -> PR #49 tower bootstrap
                                           -> PR #50 tower saturation
                                               -> PR #51 full-degree envelope
-                                                  -> current PR #52 shadow-complement deficit duality
+                                                  -> PR #52 shadow-complement deficit duality
+                                                      -> current PR #53 fixed-codimension tail constants
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
 rebased into a clean main-target PR.
 
-## 11. Current open mathematical interfaces
+## 12. Current open mathematical interfaces
 
 Priority order:
 
-1. **Uniform asymptotics of the deficit transport recurrence.**  
-   Analyze the exact complementary-shadow/max-plus system for
-   `d=alpha*n` and `q=exp(rho*n+o(n))`. Prove either a strict uniform gain or
-   a ceiling theorem for the complete scalar tower.
+1. **Linear-codimension entropy transform.**  
+   Analyze `F_(n,alpha n)` inside the exact deficit recurrence for
+   `0<alpha<1/2`. The fixed-codimension tail is now controlled and should not
+   receive further finite-state expansion.
 
-2. **Uniform Chow-realizability defect.**  
-   Lower a capacity `B_(n,d)(q)` by proving that an exact-shadow or near-shadow
-   Ferrers family cannot arise from a Chow block except in classified cases.
+2. **Scalar ceiling or strict exponential gain.**  
+   Prove either a ceiling theorem for the complete scalar tower or a uniform
+   gain in the linear-codimension regime. Finite threshold extrapolation is not
+   a proof.
 
-3. **A non-scalar general invariant.**  
-   If the deficit system has a central-binomial ceiling, add a frame-sensitive,
-   multigraded or representation-valued invariant rather than another scalar
-   finite table.
+3. **Uniform Chow-realizability defect.**  
+   Prove that exact-shadow or near-shadow Ferrers families cannot arise from
+   Chow blocks except in classified cases.
 
-4. **Cross-`n` recurrence.**  
-   Seek a compatible restriction or valuation theorem implying a relation such
-   as `R_n>=2R_(n-1)`. Ordinary row expansion alone is not additive enough.
+4. **A non-scalar general invariant.**  
+   If the scalar ceiling is central-binomial scale, add frame-sensitive,
+   multigraded, syzygetic, or representation-valued information.
 
-5. **Finite regression frontiers.**  
+5. **Cross-`n` recurrence.**  
+   Seek a compatible restriction or valuation theorem implying a relation
+   such as `R_n>=2R_(n-1)`. Ordinary row expansion is not additive enough.
+
+6. **Finite regression frontiers.**  
    The `perm_6` lower-29 geometry and selected `perm_8` equality questions
    remain testbeds, not the primary general-`n` program.
 
-## 12. Mandatory update rule
+## 13. Mandatory update rule
 
 Every meaningful future result must update this file in the same pull request.
-Each entry records date, stable ID, status, statement, evidence, boundary,
-PR/theorem head, replay status, superseded dependencies and next interface.
+Each entry records status, statement, evidence, boundary, PR/head, replay
+status, superseded dependencies and next interface.
 
 Promotion rules:
 
