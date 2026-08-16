@@ -56,7 +56,7 @@ sum of the individual derivative spaces unless a separate theorem proves
 | #38 | nests the pre-existing zero-intersection block inside exact/nonzero multishadow bounds; `perm_7>=43`, `perm_8>=78` | `PROOF_DRAFT_COMPLETE`, `EXACT_REPLAYED` | nonzero block-intersection control |
 | #39 | at a `perm_8` coordinate flag equality point: tangent dimension 27, 256 independent quadrics, reduced tangent-cone support `4xA^4 + 8xA^3 + 7xA^1`, global equality-locus dimension 4 | `PROOF_DRAFT_COMPLETE`, `ROUTE_DIAGNOSTIC` | restrict the coupled Chow incidence to the explicit branches |
 | #40 | exact iterated product shadows plus nonzero block projection; `perm_7>=45`, `perm_8>=79` | `PROOF_DRAFT_COMPLETE`, `EXACT_REPLAYED` | a Chow-specific improvement over arbitrary-subspace block caps |
-| #41 | recursively nested one-block route ceiling and consolidated ledger | `ROUTE_CEILING`, exact integer optimization | prove a five-term `perm_8` cubic-intersection cap at most 146 |
+| #42 | recursively nested one-block route ceiling and consolidated ledger | `ROUTE_CEILING`, exact integer optimization | prove a five-term `perm_8` cubic-intersection cap at most 146 |
 
 ## Active `perm_6` frontier
 
@@ -113,7 +113,7 @@ must not be restarted without a new invariant:
 5. mechanical recursive row expansion without a term-allocation theorem;
 6. repeated recursive nesting of the current one-block exact-shadow projection
    at `n=7`, and at central output degree for `n=8`, beyond the ceilings recorded
-   in PR #41.
+   in PR #42.
 
 ## Current primary mathematical target
 
