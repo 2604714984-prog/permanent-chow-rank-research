@@ -29,7 +29,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 CPP_SOURCE = ROOT / "scripts" / "general_full_degree_tower_envelope.cpp"
 EXPECTED_CORE_SHA256 = (
-    "7532b223acc1cb28e6693d69a5e86153174470c674002ffc2fcf06a4470546d7"
+    "679a8749388313fc558cc5bc7543d0585c728105c0c83985edcfba97d2cfb21f"
 )
 
 
