@@ -1,0 +1,177 @@
+{
+  "central_no_dual_shared_rows": [
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 5,
+      "higher_degree_overlap_cap": 4,
+      "m": 2,
+      "n": 4,
+      "quadratic_cap": 4,
+      "shadow_at_cap": 4,
+      "shadow_at_first_excluded": 5
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 8,
+      "higher_degree_overlap_cap": 7,
+      "m": 2,
+      "n": 5,
+      "quadratic_cap": 7,
+      "shadow_at_cap": 7,
+      "shadow_at_first_excluded": 8
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 12,
+      "higher_degree_overlap_cap": 11,
+      "m": 3,
+      "n": 6,
+      "quadratic_cap": 12,
+      "shadow_at_cap": 12,
+      "shadow_at_first_excluded": 13
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 22,
+      "higher_degree_overlap_cap": 21,
+      "m": 3,
+      "n": 7,
+      "quadratic_cap": 17,
+      "shadow_at_cap": 17,
+      "shadow_at_first_excluded": 18
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 37,
+      "higher_degree_overlap_cap": 36,
+      "m": 4,
+      "n": 8,
+      "quadratic_cap": 24,
+      "shadow_at_cap": 24,
+      "shadow_at_first_excluded": 25
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 72,
+      "higher_degree_overlap_cap": 71,
+      "m": 4,
+      "n": 9,
+      "quadratic_cap": 31,
+      "shadow_at_cap": 31,
+      "shadow_at_first_excluded": 32
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 128,
+      "higher_degree_overlap_cap": 127,
+      "m": 5,
+      "n": 10,
+      "quadratic_cap": 40,
+      "shadow_at_cap": 40,
+      "shadow_at_first_excluded": 41
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 254,
+      "higher_degree_overlap_cap": 253,
+      "m": 5,
+      "n": 11,
+      "quadratic_cap": 49,
+      "shadow_at_cap": 49,
+      "shadow_at_first_excluded": 50
+    },
+    {
+      "dual_shared": 0,
+      "first_excluded_dimension": 464,
+      "higher_degree_overlap_cap": 463,
+      "m": 6,
+      "n": 12,
+      "quadratic_cap": 60,
+      "shadow_at_cap": 60,
+      "shadow_at_first_excluded": 61
+    }
+  ],
+  "claim_boundary": "The theorem concerns two independent-factor Chow terms with the same n-dimensional factor span. It bounds literal derivative-space overlap, not a coupled catalectic image or the matched-difference map. Unequal or degenerate factor spans remain open. No unrestricted Chow-rank bound changes.",
+  "core_sha256": "c0abb6ccda4733ac15a64af6ee8655b45f77d8eb6e3dd81ac43bde2bd7c9d8be",
+  "dual_primal_distinction": {
+    "common_quadratic_dimension": 5,
+    "dual_shared_direction_count": 3,
+    "primal_shared_factor_count": 1
+  },
+  "sharp_construction_case_count": 88,
+  "sharp_construction_table_sha256": "b518dd2828afd2a1148eeb8673b5b8931e0f23feb0b69ecad2c3bb64423e2c6a",
+  "sharp_selected_rows": [
+    {
+      "common_diagonal_dimension": 2,
+      "common_quadratic_dimension": 4,
+      "dual_shared": 0,
+      "n": 4
+    },
+    {
+      "common_diagonal_dimension": 3,
+      "common_quadratic_dimension": 5,
+      "dual_shared": 3,
+      "n": 4
+    },
+    {
+      "common_diagonal_dimension": 3,
+      "common_quadratic_dimension": 12,
+      "dual_shared": 0,
+      "n": 6
+    },
+    {
+      "common_diagonal_dimension": 4,
+      "common_quadratic_dimension": 13,
+      "dual_shared": 3,
+      "n": 6
+    },
+    {
+      "common_diagonal_dimension": 5,
+      "common_quadratic_dimension": 14,
+      "dual_shared": 5,
+      "n": 6
+    },
+    {
+      "common_diagonal_dimension": 6,
+      "common_quadratic_dimension": 15,
+      "dual_shared": 6,
+      "n": 6
+    },
+    {
+      "common_diagonal_dimension": 4,
+      "common_quadratic_dimension": 24,
+      "dual_shared": 0,
+      "n": 8
+    },
+    {
+      "common_diagonal_dimension": 6,
+      "common_quadratic_dimension": 26,
+      "dual_shared": 4,
+      "n": 8
+    },
+    {
+      "common_diagonal_dimension": 8,
+      "common_quadratic_dimension": 28,
+      "dual_shared": 8,
+      "n": 8
+    },
+    {
+      "common_diagonal_dimension": 5,
+      "common_quadratic_dimension": 40,
+      "dual_shared": 0,
+      "n": 10
+    }
+  ],
+  "status": [
+    "GENERAL_SAME_SPAN_QUADRATIC_OVERLAP_THEOREM",
+    "SHARP_DUAL_FRAME_BOUND",
+    "KRUSKAL_KATONA_HIGHER_DEGREE_COROLLARY",
+    "EXACT_RATIONAL_REPLAYED"
+  ],
+  "theorem": {
+    "dual_shared_definition": "s_dual is the number of common projective directions between the two dual factor bases",
+    "higher_degree_corollary": "the degree-m overlap is at most the largest b whose Kruskal-Katona degree-two shadow does not exceed the sharp quadratic cap",
+    "quadratic_identity": "dim(S_2(x) intersect S_2(y))=binom(n,2)-n+kappa, where kappa is the intersection dimension of the two dual diagonal-square spaces",
+    "sharp_bound": "dim(S_2(x) intersect S_2(y)) <= binom(n,2)-ceil((n-s_dual)/2)"
+  }
+}
