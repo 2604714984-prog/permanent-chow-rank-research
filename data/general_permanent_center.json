@@ -1,0 +1,118 @@
+{
+  "claim_boundary": "The theorem closes the two-term n=8 central equality-span boundary. It does not control arbitrary five-term flat sums, higher-dimensional nonliteral limits, or prove an exact unrestricted rank. It gives the stacked ordinary lower bounds perm_7>=44 and perm_8>=79.",
+  "core_sha256": "01ec7b368a872e0ffb2d27113045b27a808c4f275a50c68fc8b6908c7ae4f808",
+  "n7_application": {
+    "derivative_capacity": 455,
+    "effective_shadow_term_count": 13,
+    "exact_intersection_cap": 238,
+    "fixed_term_count": 15,
+    "ordinary_lower_bound": 44,
+    "residual_terms": 29,
+    "zero_block_size": 2
+  },
+  "n8_application": {
+    "derivative_capacity": 784,
+    "effective_shadow_term_count": 14,
+    "exact_intersection_cap": 560,
+    "fixed_term_count": 16,
+    "ordinary_lower_bound": 79,
+    "residual_terms": 63,
+    "zero_block_size": 2
+  },
+  "n8_boundary": {
+    "center_boundary_excludes_nonzero_intersection": true,
+    "factor_span_intersection": 0,
+    "joint_factor_span_dimension": 16,
+    "n": 8,
+    "output_degree": 4,
+    "permanent_linear_shadow_floor": 16,
+    "quotient_images_disjoint": true,
+    "strict_low_span_theorem_applies": false,
+    "two_factor_span_dimensions": [8, 8]
+  },
+  "order_audits": [
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 3,
+      "off_diagonal_witness_type_histogram": {"same_column": 18, "same_row": 18, "transverse": 36},
+      "ordered_off_diagonal_center_coefficients": 72,
+      "variable_count": 9,
+      "witness_checksum": 26172
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 4,
+      "off_diagonal_witness_type_histogram": {"same_column": 48, "same_row": 48, "transverse": 144},
+      "ordered_off_diagonal_center_coefficients": 240,
+      "variable_count": 16,
+      "witness_checksum": 490320
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 5,
+      "off_diagonal_witness_type_histogram": {"same_column": 100, "same_row": 100, "transverse": 400},
+      "ordered_off_diagonal_center_coefficients": 600,
+      "variable_count": 25,
+      "witness_checksum": 4681650
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 6,
+      "off_diagonal_witness_type_histogram": {"same_column": 180, "same_row": 180, "transverse": 900},
+      "ordered_off_diagonal_center_coefficients": 1260,
+      "variable_count": 36,
+      "witness_checksum": 29373876
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 7,
+      "off_diagonal_witness_type_histogram": {"same_column": 294, "same_row": 294, "transverse": 1764},
+      "ordered_off_diagonal_center_coefficients": 2352,
+      "variable_count": 49,
+      "witness_checksum": 138303480
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 8,
+      "off_diagonal_witness_type_histogram": {"same_column": 448, "same_row": 448, "transverse": 3136},
+      "ordered_off_diagonal_center_coefficients": 4032,
+      "variable_count": 64,
+      "witness_checksum": 528363072
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 9,
+      "off_diagonal_witness_type_histogram": {"same_column": 648, "same_row": 648, "transverse": 5184},
+      "ordered_off_diagonal_center_coefficients": 6480,
+      "variable_count": 81,
+      "witness_checksum": 1721621790
+    },
+    {
+      "center_dimension": 1,
+      "compatibility_graph_components": 1,
+      "m": 10,
+      "off_diagonal_witness_type_histogram": {"same_column": 900, "same_row": 900, "transverse": 8100},
+      "ordered_off_diagonal_center_coefficients": 9900,
+      "variable_count": 100,
+      "witness_checksum": 4949528100
+    }
+  ],
+  "status": [
+    "GENERAL_PERMANENT_CENTER_SCALAR_PROOF_DRAFT",
+    "EXACT_COMBINATORIAL_REPLAYED",
+    "N8_TRANSVERSE_EQUALITY_SPAN_CLOSED"
+  ],
+  "theorem": {
+    "center": "For every m>=3, the concise Hessian center of perm_m is the scalar field.",
+    "direct_sum": "No perm_m with m>=3 has a nontrivial Sebastiani-Thom decomposition.",
+    "minimal_shadow": "Every f in D_m(perm_n) with dim partial^(m-1) f=m^2 is direct-sum indecomposable.",
+    "n8_pair": "At n=8,m=4, even disjoint eight-dimensional factor spans have zero permanent-relative literal-sum intersection."
+  }
+}

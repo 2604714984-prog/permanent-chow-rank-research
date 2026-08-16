@@ -14,8 +14,8 @@ the same pull request.  This is one Markdown index, not a registry, database,
 manager, dispatcher, or second workflow layer.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #44 theorem head
-`fa060f7bab09006aa74d8fde21e2ab9f860489f5`.
+Consolidation base: PR #45 theorem head
+`0b7cabcee339207921e0167d699cb0de7eaf38e0`.
 
 ## Status vocabulary
 
@@ -38,8 +38,8 @@ Consolidation base: PR #44 theorem head
 | `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact rational proof |
 | `perm_5` | `ChowRank=16` | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | merged PR #30 |
 | `perm_6` | `28 <= ChowRank <= 32` | lower bound draft; exact value open in accessible repository | PR #31 |
-| `perm_7` | `43 <= ChowRank <= 64` | `STACKED_DRAFT` | PRs #35 and #38 |
-| `perm_8` | `78 <= ChowRank <= 128` | `STACKED_DRAFT` | PRs #35 and #38 |
+| `perm_7` | `44 <= ChowRank <= 64` | `STACKED_DRAFT` | PRs #35, #38, #45 and current PR |
+| `perm_8` | `79 <= ChowRank <= 128` | `STACKED_DRAFT` | current PR |
 | `perm_9` | `ChowRank >= 142` | `STACKED_DRAFT` | PR #38 |
 | `perm_10` | `ChowRank >= 268` | `STACKED_DRAFT` | PR #38 |
 | `perm_11` | `ChowRank >= 508` | `STACKED_DRAFT` | PR #38 |
@@ -81,7 +81,8 @@ boundary.
 | `G-NESTED-SHADOW` | A zero-intersection block can be projected away inside a nonzero-intersection multishadow proof. | stacked draft | PR #38 |
 | `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`; a zero-common-factor block rotation has intersection `2^m binom(r,m)`. | stacked draft, replayed | PR #41 |
 | `G-DUAL-FRAME-OVERLAP` | For same-span independent frames, quadratic literal overlap is sharply bounded by `binom(n,2)-ceil((n-s_dual)/2)`; KK gives higher-degree caps. | stacked draft, replayed | PR #44 |
-| `G-FACTOR-SPAN-ZERO` | If the joint factor span of a block has dimension `<m^2`, its output-degree-`m` literal sum has zero intersection with `D_m(perm_n)`; low-span quotient intersections are exact and matched differences vanish. | current stacked draft, primary and independent replay | current PR |
+| `G-FACTOR-SPAN-ZERO` | A joint factor span of dimension `<m^2` has zero intersection with `D_m(perm_n)`; low-span quotient intersections are exact. Applied to two fixed terms, this gives `ChowRank(perm_7)>=44`. | PR #45 stacked draft | PR #45 |
+| `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar. Minimal-shadow permanent derivatives are direct-sum indecomposable; this closes the `n=8,m=4` transverse equality span and gives `ChowRank(perm_8)>=79`. | current stacked draft, combinatorial and independent matrix replay | current PR |
 
 ## 4. `perm_6` milestone chain
 
@@ -115,8 +116,9 @@ F_{7,4}(238)=452,\quad F_{7,4}(239)=456,
 F_{8,4}(560)=784,\quad F_{8,4}(561)=793.
 \]
 
-PR #38 embeds certified zero-intersection blocks and yields the current
-ordinary lower bounds 43 and 78.
+PR #38 embeds certified zero-intersection blocks and yields 43 and 78.  PR #45
+removes a universal two-term block at `n=7`, giving 44.  The current center
+theorem closes the `n=8` equality-span pair and gives 79.
 
 PR #39 studies
 
@@ -139,47 +141,27 @@ Chow realizability of this equality locus remains open.
 
 ## 6. Pairwise and block-overlap frontier
 
-### Literal overlap
+PR #41 proves the transverse common-factor formula and block-rotation
+counterexample.  PR #44 gives the sharp same-span dual-frame bound.  PR #45
+proves that a block with joint factor-span dimension `<m^2` is invisible to
+the permanent derivative space and that the matched-difference image vanishes
+there.
 
-PR #41 proves the transverse common-factor formula and the block-rotation
-counterexample.  PR #44 proves the sharp same-span dual-frame quadratic bound
-and its higher-degree KK consequences.  Common primal-factor count alone is
-not a valid global overlap parameter.
+The current theorem computes the concise Hessian center of every `perm_m`,
+`m>=3`, and proves it is scalar.  By torus specialization and upper
+semicontinuity of the center on the moving essential-space bundle, every
+minimal-shadow permanent derivative is direct-sum indecomposable.
 
-### Factor-span zero blocks
+For `n=8,m=4`, every pair of Chow factor spans has joint dimension at most 16.
+Below 16 PR #45 applies; at 16 the spans are complementary eight-planes and a
+nonzero intersection vector would be a nontrivial direct sum with minimal
+shadow.  Therefore every two-term block is zero in
+`D_4(perm_8)`, including the transverse equality case.
 
-Let `E_m=D_m(perm_n)` and let `L_I` be the sum of the factor spans of a block
-of Chow terms.  The current theorem proves
-
-\[
-\dim L_I<m^2
-\quad\Longrightarrow\quad
-E_m\cap\sum_{i\in I}\mathcal D_m(T_i)=0.
-\]
-
-Consequences:
-
-1. the whole block can be projected away with zero permanent-relative defect;
-2. for two terms with `dim(L_T+L_U)<m^2`,
-   \[
-   \rho(F)\cap\rho(G)=\rho(F\cap G),
-   \]
-   so the matched-difference image is zero;
-3. for independent frames with
-   \(k=\dim(L_T\cap L_U)\), the exact quotient overlap is at most
-   \(\binom km\);
-4. at the central degree, every same-span cluster is zero for `n=3` and every
-   `n>=5`;
-5. every pair is quotient-exact for `n=7` and every central `n>=9`;
-6. for `n=8,m=4`, every pair with positive factor-span intersection is exact;
-   the transverse equality case remains open.
-
-This closes the same-span matched-difference interface left by PR #44.  It
-does not control the equality or high-span strata.
+The complete pairwise central matched-difference problem at `n=8` is now
+closed.  Five-term flat-sum geometry is not.
 
 ## 7. Restricted sign-family results
-
-The complete restricted sign problem is closed:
 
 \[
 \operatorname{ColumnSignRank}(\operatorname{perm}_n)
@@ -194,38 +176,16 @@ dictionary enumeration is not active.
 
 ## 8. Superseded and rejected work
 
-### Superseded
+- PR #26 is superseded by repaired `perm_5` v14.
+- PR #29 is superseded by clean merged PR #30.
+- PRs #36 and #37 duplicated a canonical theorem; PR #38 retains only the new
+  projection step.
+- The implication from quotient-image overlap to an equally large
+  matched-difference space was rejected until literal overlap was included.
+- Common primal-factor count alone is rejected as a global overlap parameter.
 
-- PR #26: historical `perm_5` v13 candidate; superseded by repaired v14.
-- PR #29: stacked v14 repair; superseded by clean merged PR #30.
-- PR #36 and #37: valid numerical consequences but duplicate theorem claims;
-  PR #38 retains only the genuinely new omitted-block projection.
-
-### Rejected before theorem promotion
-
-The implication
-
-```text
-large quotient-image intersection
-=> equally large matched-difference subspace in D_m(perm_n)
-```
-
-is false without the literal intersection term.  The correct sequence is
-
-\[
-0\to\rho(F\cap G)
-\to\rho(F)\cap\rho(G)
-\to\operatorname{im}\Delta
-\to0.
-\]
-
-PRs #41 and #44 control literal overlap.  `G-FACTOR-SPAN-ZERO` now proves
-\(\operatorname{im}\Delta=0\) on low-total-span strata.  High-span and equality
-strata remain open.
-
-Common-factor count alone is also rejected as a global quadratic-overlap
-parameter; same-span quadratic overlap is controlled by dual diagonal-square
-geometry.
+PRs #41, #44 and #45 repair the pair sequence.  The current center theorem
+closes the remaining `n=8` equality-span pair.
 
 ## 9. Active pull-request stack
 
@@ -236,59 +196,37 @@ PR #31 broad n=6/general research head
           -> PR #39 perm_8 equality tangent cone
               -> PR #41 consolidated ledger + pairwise overlap
                   -> PR #44 dual-frame same-span overlap
-                      -> current PR factor-span zero blocks
+                      -> PR #45 factor-span zero blocks
+                          -> current PR permanent-center equality closure
 ```
 
-These are stacked drafts.  A later statement is not canonical on `main` until
-the stack is merged or rebased into a clean main-target PR.
+These are stacked drafts and are not canonical on `main` until merged or
+rebased into a clean main-target PR.
 
 ## 10. Current open mathematical interfaces
 
-Priority order:
+1. **Five-term valuation-leading flat sums.**  
+   The complete two-term `n=8,m=4` boundary is closed.  PR #43 gives a
+   coordinate five-term cap 40, while lower 80 requires the general cap 146.
+   Control the at least 107 possible nonliteral flat-sum directions.
 
-1. **Equality-span matched differences.**  
-   The low-span case is closed.  The first concrete boundary is
-   `n=8,m=4` with two disjoint eight-dimensional factor spans:
-   \[
-   \dim(L_T+L_U)=16=m^2.
-   \]
-   Classify or exclude permanent-relative matched differences there.
-
-2. **High-span multi-term flat sums.**  
-   PR #43 gives a coordinate five-term cap 40 but identifies at least 107
-   possible nonliteral flat-sum directions.  A valid lower-80 theorem must
-   control those valuation-leading relation packets.
-
-3. **Chow realizability of exact-shadow equality spaces.**  
+2. **Chow realizability of exact-shadow equality spaces.**  
    Determine whether a coupled fourteen-term sum can realize the four-
    dimensional `perm_8` equality locus.
 
-4. **Lower-29 `perm_6` frontier.**  
+3. **Lower-29 `perm_6` frontier.**  
    Continue only with a theorem acting on the surviving `b=31,...,49`
    geometry; do not recreate a broad scalar state tree.
 
-5. **General correction beyond shadow cardinality.**  
+4. **General correction beyond shadow cardinality.**  
    Seek a frame-sensitive, multigraded or representation-valued invariant
-   that supplies a Chow-realizability defect beyond the Ferrers minimum.
+   beyond the Ferrers minimum.
 
 ## 11. Mandatory update rule
 
 Every meaningful future result must update this file in the same pull request.
-
-Each entry must record:
-
-```text
-date
-stable result ID
-status
-precise statement
-proof or deterministic evidence path
-claim boundary
-PR / theorem commit or exact head
-CI or replay status
-superseded or rejected dependencies
-next open interface
-```
+Each entry records date, stable ID, status, statement, evidence, boundary,
+PR/theorem head, replay status, superseded dependencies and next interface.
 
 Promotion rules:
 
@@ -298,4 +236,4 @@ Promotion rules:
 - never replace a coupled catalectic image by a literal sum without a theorem;
 - include counterexamples and rejected shortcuts;
 - do not add a manager, registry, dispatcher or database for this ledger;
-- update this one Markdown file and the theorem-specific proof/evidence files.
+- update this one Markdown file and theorem-specific proof/evidence files.
