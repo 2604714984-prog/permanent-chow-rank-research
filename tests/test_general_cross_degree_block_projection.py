@@ -9,11 +9,16 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "scripts" / "general_cross_degree_block_projection.py"
-INDEPENDENT = (
-    ROOT / "scripts" / "general_cross_degree_block_projection_independent.py"
-)
+SCRIPTS = ROOT / "scripts"
+SCRIPT = SCRIPTS / "general_cross_degree_block_projection.py"
+INDEPENDENT = SCRIPTS / "general_cross_degree_block_projection_independent.py"
 FROZEN = ROOT / "data" / "general_cross_degree_block_projection.json"
+
+# The theorem audit reuses the canonical exact product-shadow module stored in
+# the scripts directory.  Add that directory explicitly before loading the
+# audit by path; do not depend on the test runner's working directory.
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
 
 
 def load_module(name: str, path: Path):
