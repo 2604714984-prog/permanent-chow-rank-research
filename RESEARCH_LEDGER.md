@@ -88,6 +88,7 @@ non-finite bridges and deterministic certificates at merged PR #30.
 | `G-FULL-DEGREE-ENVELOPE` | The projection recurrence is a prefix min-plus envelope; scanning through degree `n-1` gives the thresholds in PR #51. | stacked general theorem, C++ and Python replay | PR #51 |
 | `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the equivalent max-plus deficit recurrence. | stacked general theorem, two independent exact DPs | PR #52 |
 | `G-TOWER-TAIL` | Thresholds are nondecreasing; the full scalar bound is the top row; fixed-codimension transitions have universal constants `c_k`; the final row adds at most one and is controlled by bipartite `C4` supersaturation. | current general-`n` stacked draft, two independent exact DPs | current PR #53 |
+| `G-SHADOW-ENTROPY-BARRIER` | Product shadows satisfy an exact incidence sandwich and preserve exponential rate at linear degree. Consequently `log Theta_n/n -> log 2`; exponential entropy alone cannot resolve the polynomial gap to Glynn. | current general-`n` route theorem, exact replay | current PR #53 |
 
 ## 4. `perm_6` milestone chain
 
@@ -267,6 +268,60 @@ Thus the last zero-or-one decision is an exact `C4` supersaturation criterion.
 This theorem introduces no new numerical Chow-rank bound. It localizes the
 unresolved scalar asymptotic to linear codimension.
 
+### Incidence sandwich and entropy-scale barrier
+
+Every coordinate degree-`d` product cell has `d^2` lower neighbors, while
+every degree-`d-1` cell has `(n-d+1)^2` upper containers. Double counting gives
+
+\[
+\frac{d^2}{(n-d+1)^2}\,b
+\le
+F_{n,d}(b)
+\le
+\min\{A_{n,d-1},d^2b\}.
+\]
+
+The inverse capacity has the corresponding bounds
+
+\[
+\left\lfloor\frac C{d^2}\right\rfloor
+\le
+\Gamma_{n,d}(C)
+\le
+\left\lfloor
+\frac{C(n-d+1)^2}{d^2}
+\right\rfloor
+\]
+
+after ambient truncation.
+
+For `d=alpha n+O(1)` and any exponential-size family
+`b=exp(zeta n+o(n))`, the shadow has the same exponential rate:
+
+\[
+F_{n,d}(b)=\exp(zeta n+o(n)).
+\]
+
+Also,
+
+\[
+\binom n{\lfloor n/2\rfloor}
+\le
+\Theta_n
+\le
+2^{n-1},
+\]
+
+so
+
+\[
+\lim_{n\to\infty}\frac1n\log\Theta_n=\log2.
+\]
+
+The unresolved question is therefore polynomial-scale, not exponential-scale.
+A first-order entropy calculation cannot distinguish central-binomial scale
+from Glynn scale.
+
 ## 7. Finite instances and equality geometry
 
 Finite cases are falsification and regression instances for general theorems,
@@ -354,15 +409,15 @@ rebased into a clean main-target PR.
 
 Priority order:
 
-1. **Linear-codimension entropy transform.**  
-   Analyze `F_(n,alpha n)` inside the exact deficit recurrence for
-   `0<alpha<1/2`. The fixed-codimension tail is now controlled and should not
-   receive further finite-state expansion.
+1. **Second-order linear-codimension shadow asymptotics.**  
+   The exponential rate is already forced to be the input rate. Determine the
+   polynomial prefactor and logarithmic corrections of `F_(n,alpha n)` and
+   propagate them through the deficit recurrence.
 
-2. **Scalar ceiling or strict exponential gain.**  
-   Prove either a ceiling theorem for the complete scalar tower or a uniform
-   gain in the linear-codimension regime. Finite threshold extrapolation is not
-   a proof.
+2. **Scalar polynomial ceiling or strict prefactor gain.**  
+   Prove either `Theta_n=O(binom(n,floor(n/2)))` (or another explicit
+   polynomial-scale ceiling) or a uniform prefactor gain. First-order entropy
+   and finite threshold extrapolation are insufficient.
 
 3. **Uniform Chow-realizability defect.**  
    Prove that exact-shadow or near-shadow Ferrers families cannot arise from
