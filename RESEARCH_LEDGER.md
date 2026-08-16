@@ -16,8 +16,8 @@ counterexample, equality classification, or open frontier must update this
 ledger in the same pull request.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #39 head
-`41e6457b5ae3c1ba54ea8de4dcfa92cb9a838804`.
+Consolidation base: PR #41 head
+`56aa9313e7e9524767f8519c86d1d481b3b20fed`.
 
 ## Status vocabulary
 
@@ -102,6 +102,7 @@ every step has been proof-assistant formalized.
 | `G-EXACT-SHADOW` | Exact simultaneous product-shadow minimum is a Ferrers integer program. | `STACKED_DRAFT`, exact independent replay | PR #35 |
 | `G-NESTED-SHADOW` | A certified zero-intersection term block can be projected away inside the nonzero-intersection multishadow argument. | `STACKED_DRAFT` | PR #38 |
 | `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`, but a zero-common-factor block rotation has intersection `2^m binom(r,m)`. | `STACKED_DRAFT`, exact primary and independent replay | PR #41; exact head bound in the PR conversation |
+| `G-DUAL-FRAME-OVERLAP` | For same-span independent-factor terms, the quadratic literal overlap is at most `binom(n,2)-ceil((n-s_dual)/2)`, sharply, where `s_dual` counts common projective directions of the dual factor bases; Kruskal--Katona gives higher-degree caps. | `STACKED_DRAFT`, exact primary and independent replay | current PR |
 
 ## 4. `perm_6` milestone chain
 
@@ -172,7 +173,33 @@ global equality-locus dimension=4
 Chow realizability of this equality locus remains open.  PR #39 does not
 improve the numerical lower bound 78.
 
-## 6. Restricted sign-family results
+## 6. Pairwise literal-overlap frontier
+
+PR #41 established exact transverse common-factor intersections and a
+zero-common-factor block-rotation family with large overlap.  The present
+result treats two independent-factor terms with the same factor span.
+
+If `s_dual` is the number of common projective directions of the two dual
+factor bases, then
+
+\[
+\dim(\mathcal D_2(T)\cap\mathcal D_2(U))
+\le
+\binom n2-\left\lceil\frac{n-s_{\mathrm{dual}}}{2}\right\rceil,
+\]
+
+and the bound is sharp.  The higher-degree overlap is bounded by the inverse
+Kruskal--Katona degree-two shadow at that quadratic cap.
+
+The dual count cannot be replaced by the number of common primal factors: an
+explicit four-dimensional transition has three common dual directions, only
+one common primal factor, and common quadratic dimension five.
+
+This theorem controls only `F_i intersect F_j`.  A numerical rank promotion
+still requires simultaneous control of the matched-difference image in the
+actual permanent quotient.
+
+## 7. Restricted sign-family results
 
 The sign route is complete as a restricted-family problem:
 
@@ -189,7 +216,7 @@ but further defect enumeration is not an active route.  The affine-Segre
 ceiling shows why the same coefficient slice cannot prove an unrestricted
 complex Chow-rank bound.
 
-## 7. Superseded and rejected work
+## 8. Superseded and rejected work
 
 ### Superseded
 
@@ -219,9 +246,12 @@ removed.  The correct exact sequence is
 \to0.
 \]
 
-`G-PAIR-OVERLAP` is the first exact study of the missing literal term.
+`G-PAIR-OVERLAP` and `G-DUAL-FRAME-OVERLAP` study the missing literal term.
+Common primal-factor count alone is now also rejected as a quadratic-overlap
+parameter; the correct same-span parameter is the intersection geometry of
+the dual diagonal-square spaces.
 
-## 8. Active pull-request stack
+## 9. Active pull-request stack
 
 ```text
 PR #31  broad n=6/general research head
@@ -229,19 +259,21 @@ PR #31  broad n=6/general research head
       -> PR #38 nested zero-intersection removal
           -> PR #39 perm_8 equality tangent cone
               -> PR #41 consolidated ledger + pairwise overlap
+                  -> current PR dual-frame same-span overlap
 ```
 
 These are stacked drafts.  A statement on a later branch is not canonical on
 `main` until the stack is merged or rebased into a clean main-target PR.
 
-## 9. Current open mathematical interfaces
+## 10. Current open mathematical interfaces
 
 Priority order:
 
-1. **Pairwise literal overlap plus matched difference.**  
-   Control \(F_i\cap F_j\) and \(\operatorname{im}\Delta_{ij}\)
-   simultaneously using the actual permanent quotient and common-section
-   cocycle.  Common-factor count alone is now known to be insufficient.
+1. **Dual-frame literal overlap plus matched difference.**  
+   Couple the sharp same-span dual-frame bound with
+   \(\operatorname{im}\Delta_{ij}\) in the actual permanent quotient.
+   The next theorem must also cover unequal factor spans or prove that
+   extremal permanent-relative pairs reduce to the same-span case.
 
 2. **Chow realizability of exact-shadow equality spaces.**  
    Determine whether a coupled fourteen-term sum can realize the four-
@@ -255,7 +287,7 @@ Priority order:
    Seek a frame-sensitive, multigraded, or representation-valued invariant
    that supplies a Chow-realizability defect beyond the exact Ferrers minimum.
 
-## 10. Mandatory update rule
+## 11. Mandatory update rule
 
 Every meaningful future result must update this file in the same pull request.
 
