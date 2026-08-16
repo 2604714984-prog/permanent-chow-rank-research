@@ -1,0 +1,80 @@
+{
+  "claim_boundary": "The incidence sandwich is an exact general-n theorem and the entropy-rate conclusion is a route barrier, not a new lower bound. It does not determine the polynomial normalization of Theta_n, prove Theta_n=O(binom(n,floor(n/2))), establish a Chow-realizability correction, improve border rank, determine an exact rank for n>=6, or prove general Glynn optimality. Literature novelty is not established.",
+  "core_sha256": "3abb3cc354c8de4511bddb75d7e3477fb5de5a7871c02adcaa038230e2754741",
+  "exact_replay": {
+    "inverse_sandwich_checks": 17378,
+    "n_max": 8,
+    "n_min": 3,
+    "shadow_sandwich_checks": 17378
+  },
+  "normalization_diagnostics": {
+    "10": {
+      "central_binomial": 252,
+      "glynn_upper": 512,
+      "theta": 307,
+      "theta_over_central_denominator": 252,
+      "theta_over_central_numerator": 307
+    },
+    "3": {
+      "central_binomial": 3,
+      "glynn_upper": 4,
+      "theta": 4,
+      "theta_over_central_denominator": 3,
+      "theta_over_central_numerator": 4
+    },
+    "4": {
+      "central_binomial": 6,
+      "glynn_upper": 8,
+      "theta": 8,
+      "theta_over_central_denominator": 6,
+      "theta_over_central_numerator": 8
+    },
+    "5": {
+      "central_binomial": 10,
+      "glynn_upper": 16,
+      "theta": 15,
+      "theta_over_central_denominator": 10,
+      "theta_over_central_numerator": 15
+    },
+    "6": {
+      "central_binomial": 20,
+      "glynn_upper": 32,
+      "theta": 27,
+      "theta_over_central_denominator": 20,
+      "theta_over_central_numerator": 27
+    },
+    "7": {
+      "central_binomial": 35,
+      "glynn_upper": 64,
+      "theta": 49,
+      "theta_over_central_denominator": 35,
+      "theta_over_central_numerator": 49
+    },
+    "8": {
+      "central_binomial": 70,
+      "glynn_upper": 128,
+      "theta": 90,
+      "theta_over_central_denominator": 70,
+      "theta_over_central_numerator": 90
+    },
+    "9": {
+      "central_binomial": 126,
+      "glynn_upper": 256,
+      "theta": 164,
+      "theta_over_central_denominator": 126,
+      "theta_over_central_numerator": 164
+    }
+  },
+  "status": [
+    "GENERAL_PRODUCT_SHADOW_INCIDENCE_SANDWICH",
+    "GENERAL_ENTROPY_SCALE_BARRIER",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "theorem": {
+    "barrier": "Exponential-rate entropy alone cannot distinguish central-binomial scale from Glynn scale; second-order polynomial information is required.",
+    "inverse_sandwich": "floor(C/d^2) <= Gamma_(n,d)(C) <= floor(C*(n-d+1)^2/d^2), with ambient caps.",
+    "linear_degree_rate": "For d=alpha*n+O(1) and b=exp(zeta*n+o(n)), F_(n,d)(b)=exp(zeta*n+o(n)).",
+    "shadow_sandwich": "b*d^2/(n-d+1)^2 <= F_(n,d)(b) <= min(A_(n,d-1),b*d^2).",
+    "tower_rate": "log Theta_n/n -> log 2."
+  }
+}
