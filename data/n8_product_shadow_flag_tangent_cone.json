@@ -1,0 +1,120 @@
+{
+  "core_sha256": "b604a2ad1d9bc6450f0e222aafe074e97e8a5d0f7dae7e1a343f1c3994e47603",
+  "global_equality_locus": {
+    "all_fixed_points_in_coordinate_flag_orbit": true,
+    "dimension": 4,
+    "dimension_reason": "Every irreducible component contains a torus-fixed coordinate flag point; the local tangent-cone support there has maximum dimension four. The explicit four-dimensional elementary-replacement families attain the cap.",
+    "global_irreducible_component_classification": "open",
+    "projective_and_torus_stable": true,
+    "torus_fixed_point_count": 6720
+  },
+  "linear_tangent_audit": {
+    "allowed_graph_variables_after_zero_column_filter": 8960,
+    "component_size_histogram": {
+      "280": 7,
+      "35": 8,
+      "350": 4,
+      "385": 8
+    },
+    "direction_kind_histogram": {
+      "ambient_column": 12,
+      "line": 8,
+      "row": 7
+    },
+    "directions": [
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A0to6", "psi_nonzero_weight_count": 413, "source": 0, "target": 6},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A0to7", "psi_nonzero_weight_count": 413, "source": 0, "target": 7},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A1to6", "psi_nonzero_weight_count": 413, "source": 1, "target": 6},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A1to7", "psi_nonzero_weight_count": 413, "source": 1, "target": 7},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A2to6", "psi_nonzero_weight_count": 413, "source": 2, "target": 6},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A2to7", "psi_nonzero_weight_count": 413, "source": 2, "target": 7},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A3to6", "psi_nonzero_weight_count": 413, "source": 3, "target": 6},
+      {"B_part_nonzero_column_count": 1540, "graph_variable_count": 385, "kind": "ambient_column", "label": "A3to7", "psi_nonzero_weight_count": 413, "source": 3, "target": 7},
+      {"B_part_nonzero_column_count": 1400, "graph_variable_count": 350, "kind": "ambient_column", "label": "A4to6", "psi_nonzero_weight_count": 350, "source": 4, "target": 6},
+      {"B_part_nonzero_column_count": 1400, "graph_variable_count": 350, "kind": "ambient_column", "label": "A4to7", "psi_nonzero_weight_count": 350, "source": 4, "target": 7},
+      {"B_part_nonzero_column_count": 1400, "graph_variable_count": 350, "kind": "ambient_column", "label": "A5to6", "psi_nonzero_weight_count": 350, "source": 5, "target": 6},
+      {"B_part_nonzero_column_count": 1400, "graph_variable_count": 350, "kind": "ambient_column", "label": "A5to7", "psi_nonzero_weight_count": 350, "source": 5, "target": 7},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L0to4", "psi_nonzero_weight_count": 63, "source": 0, "target": 4},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L0to5", "psi_nonzero_weight_count": 63, "source": 0, "target": 5},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L1to4", "psi_nonzero_weight_count": 63, "source": 1, "target": 4},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L1to5", "psi_nonzero_weight_count": 63, "source": 1, "target": 5},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L2to4", "psi_nonzero_weight_count": 63, "source": 2, "target": 4},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L2to5", "psi_nonzero_weight_count": 63, "source": 2, "target": 5},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L3to4", "psi_nonzero_weight_count": 63, "source": 3, "target": 4},
+      {"B_part_nonzero_column_count": 245, "graph_variable_count": 35, "kind": "line", "label": "L3to5", "psi_nonzero_weight_count": 63, "source": 3, "target": 5},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R0to7", "psi_nonzero_weight_count": 240, "source": 0, "target": 7},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R1to7", "psi_nonzero_weight_count": 240, "source": 1, "target": 7},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R2to7", "psi_nonzero_weight_count": 240, "source": 2, "target": 7},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R3to7", "psi_nonzero_weight_count": 240, "source": 3, "target": 7},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R4to7", "psi_nonzero_weight_count": 240, "source": 4, "target": 7},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R5to7", "psi_nonzero_weight_count": 240, "source": 5, "target": 7},
+      {"B_part_nonzero_column_count": 1600, "graph_variable_count": 280, "kind": "row", "label": "R6to7", "psi_nonzero_weight_count": 240, "source": 6, "target": 7}
+    ],
+    "tangent_dimension": 27,
+    "variables_in_nonzero_components": 6720,
+    "variables_in_zero_component": 2240
+  },
+  "logical_boundary": {
+    "border_rank_claim": false,
+    "coordinate_equality_locus": "complete in PR #35",
+    "formal_or_analytic_arc_leading_direction": "one of 19 component types",
+    "fourteen_chow_term_realizability": "open",
+    "full_noncoordinate_equality_locus": "open",
+    "higher_order_branch_switching": "open",
+    "literature_novelty": "not established",
+    "new_perm8_lower_bound": false,
+    "quadratic_tangent_cone_support_at_each_flag_point": "complete"
+  },
+  "quadratic_obstruction": {
+    "binomial_equation_count": 53,
+    "characteristic_zero_equation_rank": 256,
+    "distinct_equation_count": 256,
+    "equation_shapes": {
+      "ambient_2x2_permanents": 15,
+      "ambient_line_internal_permanents": 24,
+      "ambient_line_outer_permanents": 8,
+      "ambient_same_external_monomials": 30,
+      "line_2x2_permanents": 6,
+      "line_same_target_monomials": 12,
+      "row_annihilation_monomials": 161
+    },
+    "monomial_equation_count": 203,
+    "nonzero_mixed_obstruction_pair_count": 309,
+    "rank_certificate_prime": 1000003,
+    "unordered_direction_pair_count": 351,
+    "zero_mixed_obstruction_pair_count": 42
+  },
+  "reduced_tangent_cone": {
+    "component_dimension_histogram": {"1": 7, "3": 8, "4": 4},
+    "components": [
+      ["R0to7"], ["R1to7"], ["R2to7"], ["R3to7"], ["R4to7"], ["R5to7"], ["R6to7"],
+      ["A4to6", "A4to7", "L0to5"], ["A4to6", "A4to7", "L1to5"],
+      ["A4to6", "A4to7", "L2to5"], ["A4to6", "A4to7", "L3to5"],
+      ["A5to6", "A5to7", "L0to4"], ["A5to6", "A5to7", "L1to4"],
+      ["A5to6", "A5to7", "L2to4"], ["A5to6", "A5to7", "L3to4"],
+      ["A0to6", "A0to7", "L0to4", "L0to5"],
+      ["A1to6", "A1to7", "L1to4", "L1to5"],
+      ["A2to6", "A2to7", "L2to4", "L2to5"],
+      ["A3to6", "A3to7", "L3to4", "L3to5"]
+    ],
+    "local_equality_locus_dimension": 4,
+    "maximal_linear_component_count": 19,
+    "set_theoretic_classification": "The quadratic zero set is the union of four 4-planes, eight 3-planes, and seven row-transvection lines. Each plane is integrated by an explicit elementary-replacement equality family, so this union is the support of the reduced quadratic tangent cone."
+  },
+  "reference_flag": {
+    "ambient_dimension": 4900,
+    "column_six_set_V": [0, 1, 2, 3, 4, 5],
+    "family_dimension": 560,
+    "low_column_C0": [0, 1, 2, 3],
+    "quotient_dimension": 4340,
+    "raw_grassmann_tangent_variable_count": 2430400,
+    "row_hyperplane_U": [0, 1, 2, 3, 4, 5, 6],
+    "shadow_dimension": 784
+  },
+  "status": [
+    "N8_FLAG_EQUALITY_REDUCED_QUADRATIC_TANGENT_CONE",
+    "EXACT_COMBINATORIAL_LINEARIZATION",
+    "EXACT_MIXED_SECOND_ORDER_OBSTRUCTION",
+    "NONCOORDINATE_EQUALITY_INTERFACE"
+  ]
+}
