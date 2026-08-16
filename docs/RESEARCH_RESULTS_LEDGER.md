@@ -23,6 +23,8 @@ Last organized boundary: `2026-08-16`.
   unrestricted Chow-rank bound.
 - `ROUTE_CEILING`: proves that a precisely defined method cannot improve beyond
   a stated value without an additional invariant.
+- `RESTRICTED_FIXED_POINT_THEOREM`: an exact theorem at a torus-fixed literal
+  endpoint, without a claim that flat sums specialize literally.
 - `SUPERSEDED`: retained only for provenance and must not be cited as active.
 - `OPEN`: unresolved.
 
@@ -57,6 +59,7 @@ sum of the individual derivative spaces unless a separate theorem proves
 | #39 | at a `perm_8` coordinate flag equality point: tangent dimension 27, 256 independent quadrics, reduced tangent-cone support `4xA^4 + 8xA^3 + 7xA^1`, global equality-locus dimension 4 | `PROOF_DRAFT_COMPLETE`, `ROUTE_DIAGNOSTIC` | restrict the coupled Chow incidence to the explicit branches |
 | #40 | exact iterated product shadows plus nonzero block projection; `perm_7>=45`, `perm_8>=79` | `PROOF_DRAFT_COMPLETE`, `EXACT_REPLAYED` | a Chow-specific improvement over arbitrary-subspace block caps |
 | #42 | recursively nested one-block route ceiling and consolidated ledger | `ROUTE_CEILING`, exact integer optimization | prove a five-term `perm_8` cubic-intersection cap at most 146 |
+| #43 | five coordinate degree-eight Chow monomials have permanent-relative cubic literal intersection at most 40 | `RESTRICTED_FIXED_POINT_THEOREM`, exact 34,162-case enumeration | control nonliteral flat-sum and valuation-leading relation directions |
 
 ## Active `perm_6` frontier
 
@@ -113,7 +116,10 @@ must not be restarted without a new invariant:
 5. mechanical recursive row expansion without a term-allocation theorem;
 6. repeated recursive nesting of the current one-block exact-shadow projection
    at `n=7`, and at central output degree for `n=8`, beyond the ceilings recorded
-   in PR #42.
+   in PR #42;
+7. coordinate-support enumeration alone for the five-term `perm_8` cubic cap:
+   PR #43 proves the fixed literal cap 40, so the remaining difficulty is
+   entirely nonliteral flat-sum data.
 
 ## Current primary mathematical target
 
@@ -123,17 +129,25 @@ For `n=8`, let
 E_3 = D_3(perm_8).
 ```
 
-The next finite interface is the Chow-realizable five-term block cap
+PR #42 identifies the sufficient general target
 
 ```text
 dim(E_3 intersect sum_{i=1}^5 D_3(T_i)) <= 146.
 ```
 
-The arbitrary-subspace iterated-shadow cap is 160.  A reduction by fourteen
-is sufficient, through the exact outer shadow at fixed count twenty, to prove
-`ChowRank(perm_8)>=80`.  This target is strictly stronger than classifying one
-compressed equality family and is the first place where a genuine
-`Delta_Chow>0` correction can change the current bound.
+PR #43 proves that after all five terms are coordinate monomials, their literal
+sum has intersection at most 40.  Therefore a compactified degeneration of a
+147-dimensional intersection must retain at least
+
+```text
+147-40=107
+```
+
+permanent directions through nonliteral flat-sum or section-difference data.
+The active target is now to bound those valuation-leading relation packets.
+A successful theorem may use a Rees module, complete-collineation data, or an
+explicit multigraded leading-relation filtration; it must not replace the flat
+sum by the raw sum of limiting derivative spaces.
 
 ## Update protocol
 
