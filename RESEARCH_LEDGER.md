@@ -14,8 +14,8 @@ the same pull request. This is one Markdown index, not a registry, database,
 manager, dispatcher, or second workflow layer.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #48 theorem head
-`9683f0373d955e69a968d50d14f59a55e23ff6a3`.
+Consolidation base: PR #49 theorem head
+`f593c1ef53aba45b331aab0f35d1db05df4785d1`.
 
 ## Status vocabulary
 
@@ -38,7 +38,7 @@ Consolidation base: PR #48 theorem head
 | `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact rational proof |
 | `perm_5` | `ChowRank=16` | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | merged PR #30 |
 | `perm_6` | `28 <= ChowRank <= 32` | lower-bound draft; exact value open in accessible repository | PR #31 |
-| `perm_7` | `47 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR #49 |
+| `perm_7` | `48 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR #50 |
 | `perm_8` | `80 <= ChowRank <= 128` | `STACKED_DRAFT` | PR #47 and PR #48 regression |
 | `perm_9` | `ChowRank >= 142` | `STACKED_DRAFT` | PR #38 |
 | `perm_10` | `ChowRank >= 268` | `STACKED_DRAFT` | PR #38 |
@@ -85,7 +85,8 @@ boundary.
 | `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar. Minimal-shadow permanent derivatives are direct-sum indecomposable; this closes the `n=8,m=4` transverse two-term boundary. | stacked draft, replayed | PR #46 |
 | `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain the exact one-term permanent defect, and invert the exact upper shadow. This gives cubic caps 41 and 112 and the ordinary bounds `perm_7>=45`, `perm_8>=80`. | stacked draft, independent replay | PR #47 |
 | `G-DERIVATIVE-TOWER` | Define a permanent-relative block capacity recursively at every adjacent derivative degree using exact shadows and subblock projection. The first finite rows give `perm_7>=46` and reproduce `perm_8>=80`. | stacked general-`n` draft | PR #48 |
-| `G-TOWER-BOOTSTRAP` | If `ChowRank(perm_n)>=L`, the general operator `Phi_n(L)` composes tower capacities with complementary-intersection Koszul residual ranks to promote `L`. Exact closure at `n=7` is `36 -> 46 -> 47 -> 47`. | current general-`n` stacked draft, primary and independent replay | PR #49 |
+| `G-TOWER-BOOTSTRAP` | Compose tower capacities with complementary-intersection Koszul residual ranks. The Koszul-only operator has the exact `n=7` sequence `36 -> 46 -> 47 -> 47`. | stacked route theorem, replayed | PR #49 |
+| `G-TOWER-SATURATION` | A decomposition by `q` terms forces every tower row to have saturated at `q`; hence `ChowRank(perm_n)>=max_d Q_(n,d)`. For `n=7`, `B_(7,5)(47)=426<441=B_(7,5)(48)`, giving lower 48 and complete scalar closure `36 -> 48 -> 48`. | current general-`n` stacked draft, primary and independent replay | current PR #50 |
 
 ## 4. `perm_6` milestone chain
 
@@ -107,85 +108,73 @@ Current accessible frontier:
 The lower-29 program remains partial. Broad scalar state trees, complete sign
 families and uncorrected quotient-intersection shortcuts are closed routes.
 
-## 5. Exact shadows, the derivative tower and bootstrap closure
+## 5. Exact shadows, derivative tower and direct saturation
 
-PR #35 proves the exact adjacent product-shadow function for every `n,d` and
-in particular
+PR #35 proves the exact adjacent product-shadow function. PRs #38, #45, #46
+and #47 insert permanent-relative defects before outer shadow inversion. PR
+#48 packages these operations into the general derivative-tower capacities
+`B_(n,d)(q)`.
 
-\[
-F_{7,4}(238)=452,\quad F_{7,4}(239)=456,
-\]
-
-\[
-F_{8,4}(560)=784,\quad F_{8,4}(561)=793.
-\]
-
-PRs #38, #45, #46 and #47 progressively insert permanent-relative defects
-before the outer exact-shadow inversion. PR #48 packages that operation into
-the derivative-tower recurrence
-
-\[
-B_{n,1}(q)=\min(n^2,qn),
-\]
-
-\[
-\begin{aligned}
-B_{n,d}(q)=\min\Bigl\{&\binom nd^2,\ q\binom nd,\\
-&\Gamma_{n,d}(B_{n,d-1}(q)),\\
-&\min_{1\le s<q}\bigl((q-s)\binom nd+B_{n,d}(s)\bigr)
-\Bigr\}.
-\end{aligned}
-\]
-
-The current theorem promotes any valid lower bound `L` through
-
-\[
-\Phi_n(L)
-=
-\max_{\substack{2\le m\le n-2\\1\le q\le L}}
-\left\{
-L,
-q+
-\left\lceil
-\frac{A_{n,m}-n^2B_{n,n-m}(q)}{K_{n,m}}
-\right\rceil_+
-\right\}.
-\]
-
-Every iterate is a valid lower bound. For `n=7`, exact reconstruction through
-degree five and 47 terms gives
-
-```text
-B_(7,4)(20)=341
-B_(7,5)(36)=233
-B_(7,5)(39)=267
-B_(7,5)(46)=405
-B_(7,5)(47)=426
-```
-
-and the exact closure
+PR #49 defines the valid partial-term Koszul promotion operator `Phi_n`; at
+`n=7` it has sequence
 
 ```text
 36 -> 46 -> 47 -> 47.
 ```
 
-The decisive second promotion is
+The current theorem adds the direct full-coverage consequence. If
+
+```text
+perm_n=sum_(i=1)^q T_i,
+```
+
+then for every degree
+
+```text
+D_d(perm_n) subset sum_i D_d(T_i),
+```
+
+so the permanent-relative intersection is the full space and
+
+```text
+B_(n,d)(q)=binom(n,d)^2.
+```
+
+Writing
+
+```text
+Q_(n,d)=min{q:B_(n,d)(q)=binom(n,d)^2},
+```
+
+gives the uniform theorem
 
 \[
-A_{7,2}-49B_{7,5}(46)
-=20,384-49\cdot405
-=539>0.
+\operatorname{ChowRank}(\operatorname{perm}_n)
+\ge\max_d Q_{n,d}.
 \]
 
-Thus a hypothetical 46-term decomposition cannot have zero residual after all
-46 terms are selected, and
+For `n=7`,
+
+```text
+B_(7,5)(46)=405
+B_(7,5)(47)=426
+B_(7,5)(48)=441=binom(7,5)^2.
+```
+
+Thus `Q_(7,5)=48`, every other row saturates no later, and
 
 \[
-\operatorname{ChowRank}(\operatorname{perm}_7)\ge47.
+\operatorname{ChowRank}(\operatorname{perm}_7)\ge48.
 \]
 
-The fixed point at 47 closes only the current scalar tower plus first-Koszul
-bootstrap. It is not an exact-rank statement.
+Combining direct saturation with `Phi_7` gives the complete named scalar
+closure
+
+```text
+36 -> 48 -> 48.
+```
+
+The value 48 is not an upper bound on the actual rank.
 
 PR #39 separately classifies the reduced tangent cone at the `560/784`
 `perm_8` exact-shadow flag locus:
@@ -208,9 +197,9 @@ only when it does at least one of the following:
 3. identifies an equality geometry needed by the next uniform theorem; or
 4. certifies the exact stopping point of a named general proof mechanism.
 
-The `n=7` fixed point now shows that further arithmetic iteration of the same
-scalar tower/Koszul operator cannot prove 48. The next result must strengthen
-a mathematical input rather than extend a finite table.
+The `n=7` saturation closure proves that further arithmetic iteration of the
+same scalar tower/Koszul system cannot prove 49. The next result must
+strengthen a mathematical input rather than extend a finite table.
 
 ## 7. Pairwise and block-overlap frontier
 
@@ -221,7 +210,8 @@ space. PR #46 proves every central two-term block for `perm_8` is zero.
 
 PR #47 gives the first five-term cubic cap strong enough to raise `perm_8` to
 80. PR #48 shows that cap is one row of a general adjacent-degree recursion.
-PR #49 closes the corresponding first-Koszul bootstrap at 47 for `n=7`.
+PRs #49 and #50 close the corresponding scalar first-Koszul inference at 48
+for `n=7`.
 
 ## 8. Restricted sign-family results
 
@@ -247,8 +237,10 @@ dictionary enumeration is not active.
 - Common primal-factor count alone is rejected as a global overlap parameter.
 - PR #43's coordinate five-term cap 40 remains valid but is not used to infer
   a general flat-sum bound.
-- A fixed point of `Phi_n` is not an upper bound on Chow rank; interpreting it
-  that way is explicitly rejected.
+- The `Phi_7` fixed point 47 remains correct for that narrower operator but is
+  superseded as the stopping point of the complete scalar tower inference;
+  direct tower saturation raises the closure to 48.
+- A scalar-route fixed point is not an upper bound on Chow rank.
 
 ## 10. Active pull-request stack
 
@@ -263,7 +255,8 @@ PR #31 broad n=6/general research head
                           -> PR #46 permanent-center equality closure
                               -> PR #47 cross-degree block projection
                                   -> PR #48 derivative-tower capacity
-                                      -> current PR #49 tower bootstrap closure
+                                      -> PR #49 tower bootstrap
+                                          -> current PR #50 tower saturation closure
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
@@ -273,25 +266,23 @@ rebased into a clean main-target PR.
 
 Priority order:
 
-1. **Uniform asymptotics of the tower and bootstrap.**  
-   Determine the polynomial-scale growth of the fixed point of `Phi_n` in the
-   central regime. Prove either a uniform gain toward `2^(n-1)` or a ceiling
-   theorem for this exact scalar mechanism.
+1. **Uniform asymptotics of tower saturation.**  
+   Estimate `Q_(n,d)` and the enhanced scalar closure in the central regime.
+   Prove either a uniform gain toward `2^(n-1)` or a ceiling theorem for this
+   exact scalar mechanism.
 
 2. **Uniform Chow-realizability defect.**  
-   The `n=7` fixed point proves arithmetic iteration is exhausted. Lower a
-   capacity `B_(n,d)(q)` using a theorem about which exact-shadow or
-   near-shadow spaces can actually arise from Chow blocks.
+   The `n=7` scalar system is exhausted at 48. Lower a capacity
+   `B_(n,d)(q)` using a theorem about which exact-shadow or near-shadow spaces
+   can actually arise from Chow blocks.
 
 3. **A non-scalar general invariant.**  
-   If the tower fixed point remains on the central-binomial scale, add a
-   frame-sensitive, multigraded or representation-valued invariant rather
-   than another finite state table.
+   Add a frame-sensitive, multigraded or representation-valued invariant
+   rather than another scalar finite state table.
 
 4. **Cross-`n` recurrence.**  
-   Seek a compatible restriction or valuation theorem implying a genuine
-   relation such as `R_n>=2R_(n-1)`. Ordinary row expansion alone is not
-   additive enough.
+   Seek a compatible restriction or valuation theorem implying a relation
+   such as `R_n>=2R_(n-1)`. Ordinary row expansion alone is not additive.
 
 5. **Finite regression frontiers.**  
    `perm_8` lower 81 would follow from a five-term cubic cap 90, and the

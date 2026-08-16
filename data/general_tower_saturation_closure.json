@@ -1,0 +1,35 @@
+{
+  "claim_boundary": "The theorem is uniform in n. The finite n=7 certificate proves the stacked ordinary bound perm_7>=48 and corrects the stopping point of the named scalar tower inference from 47 to 48 by including the direct full-coverage consequence of the tower. It does not prove the exact rank of perm_7, a border-rank result, an asymptotic ceiling for every invariant, or general Glynn optimality.",
+  "n7": {
+    "all_degree_thresholds_at_most_48": true,
+    "base_first_koszul_bound": 36,
+    "degree_five_ambient_dimension": 441,
+    "degree_five_capacities": {
+      "B_7_5_46": 405,
+      "B_7_5_47": 426,
+      "B_7_5_48": 441
+    },
+    "degree_five_saturation_threshold": 48,
+    "direct_tower_lower_bound": 48,
+    "enhanced_sequence": [
+      36,
+      48,
+      48
+    ],
+    "koszul_only_step_at_36": 46,
+    "koszul_only_step_at_48": 48,
+    "ordinary_lower_bound": 48
+  },
+  "status": [
+    "GENERAL_TOWER_SATURATION_THEOREM",
+    "EXACT_INTEGER_REPLAYED",
+    "PERM7_LOWER_48",
+    "N7_SCALAR_TOWER_CLOSURE_48"
+  ],
+  "theorem": {
+    "boundary": "A saturation fixed point closes only the current scalar derivative-tower plus first-Koszul inference system.",
+    "enhanced_closure": "Combine the direct tower threshold with the general Koszul promotion operator Phi_n.",
+    "full_coverage": "If perm_n=sum_(i=1)^q T_i, then D_d(perm_n) is contained in sum_i D_d(T_i), so B_(n,d)(q)=binom(n,d)^2 for every d.",
+    "tower_bound": "ChowRank(perm_n) is at least max_d min{q:B_(n,d)(q) equals binom(n,d)^2}."
+  }
+}
