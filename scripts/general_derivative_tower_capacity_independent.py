@@ -2,9 +2,9 @@
 """Independent finite replay of the derivative-tower capacity theorem.
 
 This implementation imports none of the primary audit or exact-shadow helper.
-It reconstructs colex order, lower shadows and first-container weights from
-explicit finite sets, uses its own memoized Ferrers recurrence, and then
-rebuilds the first three capacity rows for n=7 and n=8.
+It reconstructs colex order, first lower shadows and first-container weights
+from explicit finite sets, uses its own memoized Ferrers recurrence, and then
+rebuilds the first three adjacent capacity rows for n=7 and n=8.
 """
 
 from __future__ import annotations
@@ -24,9 +24,7 @@ def colex_rank(subset: tuple[int, ...]) -> int:
 
 
 def colex_layer(n: int, degree: int) -> tuple[tuple[int, ...], ...]:
-    layer = tuple(
-        sorted(combinations(range(n), degree), key=colex_rank)
-    )
+    layer = tuple(sorted(combinations(range(n), degree), key=colex_rank))
     require(
         tuple(colex_rank(value) for value in layer)
         == tuple(range(len(layer))),
@@ -36,8 +34,9 @@ def colex_layer(n: int, degree: int) -> tuple[tuple[int, ...], ...]:
 
 
 class IndependentFerrersShadow:
-    def __init__(self, n: int, degree: int, lower_degree: int) -> None:
-        require(0 <= lower_degree < degree, (n, degree, lower_degree))
+    def __init__(self, n: int, degree: int) -> None:
+        require(degree >= 2, (n, degree))
+        lower_degree = degree - 1
         self.layer = colex_layer(n, degree)
         self.width = len(self.layer)
 
@@ -119,31 +118,15 @@ def first_three_rows(n: int) -> dict[int, list[int]]:
         1: [min(n * n, terms * n) for terms in range(maximum_terms + 1)]
     }
 
-    shadows: dict[tuple[int, int], IndependentFerrersShadow] = {}
-
-    def shadow(degree: int, lower_degree: int) -> IndependentFerrersShadow:
-        key = (degree, lower_degree)
-        if key not in shadows:
-            shadows[key] = IndependentFerrersShadow(
-                n,
-                degree,
-                lower_degree,
-            )
-        return shadows[key]
-
     for degree in (2, 3):
         one_term = comb(n, degree)
+        shadow = IndependentFerrersShadow(n, degree)
         rows[degree] = [0]
         for terms in range(1, maximum_terms + 1):
             candidates = [
                 min(one_term**2, terms * one_term),
+                shadow.inverse(rows[degree - 1][terms]),
             ]
-            for lower_degree in range(1, degree):
-                candidates.append(
-                    shadow(degree, lower_degree).inverse(
-                        rows[lower_degree][terms]
-                    )
-                )
             candidates.extend(
                 (terms - retained) * one_term + rows[degree][retained]
                 for retained in range(1, terms)
@@ -153,7 +136,7 @@ def first_three_rows(n: int) -> dict[int, list[int]]:
 
 
 def outer_n7_check() -> tuple[int, int, int, int]:
-    outer = IndependentFerrersShadow(7, 4, 3)
+    outer = IndependentFerrersShadow(7, 4)
     cap = outer.inverse(589)
     require(cap == 341, cap)
     require(outer.minimum(341) == 586, outer.minimum(341))
@@ -162,11 +145,10 @@ def outer_n7_check() -> tuple[int, int, int, int]:
     target = 7**2 * comb(7, 3) ** 2 - comb(7, 4) ** 2
     one_term = 7**2 * comb(7, 3) - comb(7, 4)
     residual = -(-(target - 49 * cap) // one_term)
-    require((target, one_term, residual) == (58_800, 1_680, 26), (
-        target,
-        one_term,
-        residual,
-    ))
+    require(
+        (target, one_term, residual) == (58_800, 1_680, 26),
+        (target, one_term, residual),
+    )
     return cap, target, one_term, residual
 
 
