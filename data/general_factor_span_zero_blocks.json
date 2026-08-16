@@ -1,0 +1,235 @@
+{
+  "central_table": [
+    {
+      "central_output_degree": 2,
+      "every_pair_quotient_exact": false,
+      "m_squared": 4,
+      "n": 3,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 3,
+      "two_full_span_union_cap": 6
+    },
+    {
+      "central_output_degree": 2,
+      "every_pair_quotient_exact": false,
+      "m_squared": 4,
+      "n": 4,
+      "same_span_cluster_zero": false,
+      "same_span_dimension_cap": 4,
+      "two_full_span_union_cap": 8
+    },
+    {
+      "central_output_degree": 3,
+      "every_pair_quotient_exact": false,
+      "m_squared": 9,
+      "n": 5,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 5,
+      "two_full_span_union_cap": 10
+    },
+    {
+      "central_output_degree": 3,
+      "every_pair_quotient_exact": false,
+      "m_squared": 9,
+      "n": 6,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 6,
+      "two_full_span_union_cap": 12
+    },
+    {
+      "central_output_degree": 4,
+      "every_pair_quotient_exact": true,
+      "m_squared": 16,
+      "n": 7,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 7,
+      "two_full_span_union_cap": 14
+    },
+    {
+      "central_output_degree": 4,
+      "every_pair_quotient_exact": false,
+      "m_squared": 16,
+      "n": 8,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 8,
+      "two_full_span_union_cap": 16
+    },
+    {
+      "central_output_degree": 5,
+      "every_pair_quotient_exact": true,
+      "m_squared": 25,
+      "n": 9,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 9,
+      "two_full_span_union_cap": 18
+    },
+    {
+      "central_output_degree": 5,
+      "every_pair_quotient_exact": true,
+      "m_squared": 25,
+      "n": 10,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 10,
+      "two_full_span_union_cap": 20
+    },
+    {
+      "central_output_degree": 6,
+      "every_pair_quotient_exact": true,
+      "m_squared": 36,
+      "n": 11,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 11,
+      "two_full_span_union_cap": 22
+    },
+    {
+      "central_output_degree": 6,
+      "every_pair_quotient_exact": true,
+      "m_squared": 36,
+      "n": 12,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 12,
+      "two_full_span_union_cap": 24
+    },
+    {
+      "central_output_degree": 7,
+      "every_pair_quotient_exact": true,
+      "m_squared": 49,
+      "n": 13,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 13,
+      "two_full_span_union_cap": 26
+    },
+    {
+      "central_output_degree": 7,
+      "every_pair_quotient_exact": true,
+      "m_squared": 49,
+      "n": 14,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 14,
+      "two_full_span_union_cap": 28
+    },
+    {
+      "central_output_degree": 8,
+      "every_pair_quotient_exact": true,
+      "m_squared": 64,
+      "n": 15,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 15,
+      "two_full_span_union_cap": 30
+    },
+    {
+      "central_output_degree": 8,
+      "every_pair_quotient_exact": true,
+      "m_squared": 64,
+      "n": 16,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 16,
+      "two_full_span_union_cap": 32
+    },
+    {
+      "central_output_degree": 9,
+      "every_pair_quotient_exact": true,
+      "m_squared": 81,
+      "n": 17,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 17,
+      "two_full_span_union_cap": 34
+    },
+    {
+      "central_output_degree": 9,
+      "every_pair_quotient_exact": true,
+      "m_squared": 81,
+      "n": 18,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 18,
+      "two_full_span_union_cap": 36
+    },
+    {
+      "central_output_degree": 10,
+      "every_pair_quotient_exact": true,
+      "m_squared": 100,
+      "n": 19,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 19,
+      "two_full_span_union_cap": 38
+    },
+    {
+      "central_output_degree": 10,
+      "every_pair_quotient_exact": true,
+      "m_squared": 100,
+      "n": 20,
+      "same_span_cluster_zero": true,
+      "same_span_dimension_cap": 20,
+      "two_full_span_union_cap": 40
+    }
+  ],
+  "claim_boundary": "The strict inequality dim(sum L_i)<m^2 is essential. Equality and high-span blocks remain open. The result supplies no unconditional new Chow-rank lower bound.",
+  "core_sha256": "cced4ddfe03f661634a5c5553944fd8cce48e027451e647a9b331ea9cd79b945",
+  "pair_summaries": [
+    {
+      "case": "n5_m3",
+      "exact_from_intersection_through_n": true,
+      "first_exact_factor_span_intersection": 2,
+      "literal_cap_at_first_exact": 0
+    },
+    {
+      "case": "n6_m3",
+      "exact_from_intersection_through_n": true,
+      "first_exact_factor_span_intersection": 4,
+      "literal_cap_at_first_exact": 4
+    },
+    {
+      "case": "n7_m4",
+      "exact_from_intersection_through_n": true,
+      "first_exact_factor_span_intersection": 0,
+      "literal_cap_at_first_exact": 0
+    },
+    {
+      "case": "n8_m4",
+      "exact_from_intersection_through_n": true,
+      "first_exact_factor_span_intersection": 1,
+      "literal_cap_at_first_exact": 0
+    },
+    {
+      "case": "n9_m5",
+      "exact_from_intersection_through_n": true,
+      "first_exact_factor_span_intersection": 0,
+      "literal_cap_at_first_exact": 0
+    },
+    {
+      "case": "n10_m5",
+      "exact_from_intersection_through_n": true,
+      "first_exact_factor_span_intersection": 0,
+      "literal_cap_at_first_exact": 0
+    }
+  ],
+  "projection_examples": [
+    {
+      "n": 8,
+      "output_degree": 4,
+      "projected_literal_capacity": 1050,
+      "removed_block_size": 5,
+      "removed_block_span_dimension": 8,
+      "total_term_count": 20
+    },
+    {
+      "n": 9,
+      "output_degree": 5,
+      "projected_literal_capacity": 2268,
+      "removed_block_size": 12,
+      "removed_block_span_dimension": 20,
+      "total_term_count": 30
+    }
+  ],
+  "status": [
+    "GENERAL_FACTOR_SPAN_ZERO_BLOCK_PROOF_DRAFT",
+    "EXACT_INTEGER_REPLAYED",
+    "MATCHED_DIFFERENCE_CLOSED_ON_LOW_SPAN_BLOCKS"
+  ],
+  "theorem": {
+    "independent_frame_literal_cap": "For independent factor frames, dim(D_m(T) intersect D_m(U)) <= binom(dim(L_T intersect L_U),m).",
+    "projection_consequence": "A certified low-span block can be projected away with zero permanent-relative defect.",
+    "quotient_exactness": "If dim(L_T+L_U)<m^2, quotient intersection equals the image of the literal intersection and the matched-difference image is zero.",
+    "zero_block_condition": "If dim(sum_i L_i)<m^2, then D_m(perm_n) intersects sum_i D_m(T_i) trivially."
+  }
+}
