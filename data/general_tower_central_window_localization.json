@@ -1,0 +1,98 @@
+{
+  "claim_boundary": "The theorem is a general-n localization of the exact scalar derivative tower. It introduces no new numerical Chow-rank lower bound and does not determine the central-window recurrence, prove a central-binomial ceiling, establish a Chow-realizability defect, improve border rank, determine an exact rank for n>=6, or prove general Glynn optimality. The Hoeffding corollary localizes polynomial-scale analysis but does not solve it. Literature novelty is not established.",
+  "core_sha256": "334116f082662e53f35d7f634ab75cd3106f9e96b8303901c5e9c6d7823c4749",
+  "finite_replay": {
+    "binomial_constant_checks": 16,
+    "n_max": 10,
+    "n_min": 3,
+    "table": {
+      "10": {
+        "tail_bounds": {
+          "2": {"actual_top_tail": 0, "binomial_bound": 10},
+          "3": {"actual_top_tail": 2, "binomial_bound": 55},
+          "4": {"actual_top_tail": 8, "binomial_bound": 175},
+          "5": {"actual_top_tail": 27, "binomial_bound": 385}
+        },
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 0},
+          "3": {"c_nk": 5, "maximizing_a": [5], "observed_gap": 2},
+          "4": {"c_nk": 20, "maximizing_a": [8], "observed_gap": 6},
+          "5": {"c_nk": 83, "maximizing_a": [10], "observed_gap": 19}
+        }
+      },
+      "3": {"tail_bounds": {}, "transition_constants": {}},
+      "4": {
+        "tail_bounds": {"2": {"actual_top_tail": 1, "binomial_bound": 4}},
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 1}
+        }
+      },
+      "5": {
+        "tail_bounds": {"2": {"actual_top_tail": 1, "binomial_bound": 5}},
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 1}
+        }
+      },
+      "6": {
+        "tail_bounds": {
+          "2": {"actual_top_tail": 1, "binomial_bound": 6},
+          "3": {"actual_top_tail": 3, "binomial_bound": 21}
+        },
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 1},
+          "3": {"c_nk": 5, "maximizing_a": [5], "observed_gap": 2}
+        }
+      },
+      "7": {
+        "tail_bounds": {
+          "2": {"actual_top_tail": 1, "binomial_bound": 7},
+          "3": {"actual_top_tail": 3, "binomial_bound": 28}
+        },
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 1},
+          "3": {"c_nk": 5, "maximizing_a": [5], "observed_gap": 2}
+        }
+      },
+      "8": {
+        "tail_bounds": {
+          "2": {"actual_top_tail": 1, "binomial_bound": 8},
+          "3": {"actual_top_tail": 3, "binomial_bound": 36},
+          "4": {"actual_top_tail": 10, "binomial_bound": 92}
+        },
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 1},
+          "3": {"c_nk": 5, "maximizing_a": [5], "observed_gap": 2},
+          "4": {"c_nk": 20, "maximizing_a": [8], "observed_gap": 7}
+        }
+      },
+      "9": {
+        "tail_bounds": {
+          "2": {"actual_top_tail": 1, "binomial_bound": 9},
+          "3": {"actual_top_tail": 3, "binomial_bound": 45},
+          "4": {"actual_top_tail": 9, "binomial_bound": 129}
+        },
+        "transition_constants": {
+          "2": {"c_nk": 1, "maximizing_a": [2, 3], "observed_gap": 1},
+          "3": {"c_nk": 5, "maximizing_a": [5], "observed_gap": 2},
+          "4": {"c_nk": 20, "maximizing_a": [8], "observed_gap": 6}
+        }
+      }
+    },
+    "tail_bound_checks": 16,
+    "transition_checks": 16
+  },
+  "status": [
+    "GENERAL_N_DEPENDENT_TAIL_CONSTANT",
+    "GENERAL_BINOMIAL_TAIL_LOCALIZATION",
+    "GENERAL_MODERATE_DEVIATION_WINDOW",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "theorem": {
+    "binomial_tail": "For 2<=K<=n/2, 0<=Theta_n-Q_(n,n-K)<=sum_(j=1)^(K-1) binom(n,j).",
+    "increment": "For 2<=k<=n/2, 0<=Q_(n,n-k+1)-Q_(n,n-k)<=c_(n,k).",
+    "linear_localization": "For fixed 0<alpha<1/2 and K=floor(alpha*n), the top-tail difference is exp(n*H(alpha)+o(n)) and is exponentially smaller than the central binomial.",
+    "moderate_deviation": "If 2*w_n^2/n-log(n+1)->+infinity and K_n-1<=n/2-w_n, then Theta_n-Q_(n,n-K_n)=o(binom(n,floor(n/2))).",
+    "n_dependent_constant": "c_(n,k)=max_(k<=a<=n)[binom(a,k-1)-binom(a-1,k)-1]_+.",
+    "polynomial_window": "Hoeffding gives difference<=2^n*exp(-2*w^2/n); precision at any fixed inverse-polynomial multiple of the central binomial requires only an O(sqrt(n log n)) window above the center."
+  }
+}
