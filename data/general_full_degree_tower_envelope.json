@@ -1,0 +1,107 @@
+{
+  "boundary_capacities": {
+    "10": {
+      "ambient": 2025,
+      "before": 2020,
+      "before_q": 306,
+      "degree": 8,
+      "threshold_q": 307,
+      "top_degree_ambient": 100,
+      "top_degree_before": 90
+    },
+    "7": {
+      "ambient": 49,
+      "before": 44,
+      "before_q": 48,
+      "degree": 6,
+      "threshold_q": 49
+    },
+    "8": {
+      "ambient": 64,
+      "before": 60,
+      "before_q": 89,
+      "degree": 7,
+      "threshold_q": 90
+    },
+    "9": {
+      "ambient": 81,
+      "before": 74,
+      "before_q": 163,
+      "degree": 8,
+      "threshold_q": 164
+    }
+  },
+  "claim_boundary": "The prefix-envelope and saturation formulas are uniform in n. The exact finite replay proves the stacked ordinary bounds perm_7>=49, perm_8>=90, perm_9>=164 and perm_10>=307. It does not prove exact rank for n>=6, a border-rank result, an asymptotic formula for Theta_n, or general Glynn optimality. The n=9 and n=10 rows are replayed by the standard-library C++ exact engine; the independent pure-Python reconstruction covers n<=8.",
+  "core_sha256": "679a8749388313fc558cc5bc7543d0585c728105c0c83985edcfba97d2cfb21f",
+  "new_bounds": {
+    "10": {
+      "glynn_upper_bound": 512,
+      "previous_accessible_lower_bound": 268,
+      "tower_lower_bound": 307
+    },
+    "7": {
+      "glynn_upper_bound": 64,
+      "previous_accessible_lower_bound": 48,
+      "tower_lower_bound": 49
+    },
+    "8": {
+      "glynn_upper_bound": 128,
+      "previous_accessible_lower_bound": 80,
+      "tower_lower_bound": 90
+    },
+    "9": {
+      "glynn_upper_bound": 256,
+      "previous_accessible_lower_bound": 142,
+      "tower_lower_bound": 164
+    }
+  },
+  "status": [
+    "GENERAL_FULL_DEGREE_TOWER_ENVELOPE_THEOREM",
+    "EXACT_INTEGER_REPLAYED",
+    "PERM7_LOWER_49",
+    "PERM8_LOWER_90",
+    "PERM9_LOWER_164",
+    "PERM10_LOWER_307"
+  ],
+  "theorem": {
+    "direct_cap": "C_(n,d)(q)=min(M_(n,d)^2,q*M_(n,d),Gamma_(n,d)(B_(n,d-1)(q))).",
+    "full_degree": "The tower and saturation theorem apply through output degree n-1; output degree n has the same threshold as n-1.",
+    "prefix_envelope": "B_(n,d)(q)=q*M_(n,d)+min_(0<=t<=q)(C_(n,d)(t)-t*M_(n,d)).",
+    "rank_bound": "ChowRank(perm_n)>=Theta_n=max_(1<=d<=n-1) Q_(n,d).",
+    "saturation": "Q_(n,d)=max(R_(n,d),ceil((M_(n,d)^2-P_(n,d))/M_(n,d))) with R=max(M,Q_(n,d-1)) and P=min_(0<=t<R)(C(t)-t*M)."
+  },
+  "thresholds": {
+    "10": {
+      "by_degree": [10, 46, 123, 219, 280, 299, 305, 307, 307],
+      "theta": 307
+    },
+    "3": {
+      "by_degree": [3, 4],
+      "theta": 4
+    },
+    "4": {
+      "by_degree": [4, 7, 8],
+      "theta": 8
+    },
+    "5": {
+      "by_degree": [5, 11, 14, 15],
+      "theta": 15
+    },
+    "6": {
+      "by_degree": [6, 16, 24, 26, 27],
+      "theta": 27
+    },
+    "7": {
+      "by_degree": [7, 22, 39, 46, 48, 49],
+      "theta": 49
+    },
+    "8": {
+      "by_degree": [8, 29, 59, 80, 87, 89, 90],
+      "theta": 90
+    },
+    "9": {
+      "by_degree": [9, 37, 87, 136, 155, 161, 163, 164],
+      "theta": 164
+    }
+  }
+}
