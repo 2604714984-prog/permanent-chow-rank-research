@@ -1,0 +1,106 @@
+{
+  "block_rotation_theorem": {
+    "central_examples": {
+      "n10_m5": 32,
+      "n6_m3": 8,
+      "n8_m4": 16
+    },
+    "rows": [
+      {
+        "block_count": 2,
+        "common_projective_factor_count": 0,
+        "degrees": [
+          {"intersection_dimension": 4, "one_term_dimension": 4, "output_degree": 1},
+          {"intersection_dimension": 4, "one_term_dimension": 6, "output_degree": 2},
+          {"intersection_dimension": 0, "one_term_dimension": 4, "output_degree": 3},
+          {"intersection_dimension": 0, "one_term_dimension": 1, "output_degree": 4}
+        ],
+        "n": 4
+      },
+      {
+        "block_count": 3,
+        "common_projective_factor_count": 0,
+        "degrees": [
+          {"intersection_dimension": 6, "one_term_dimension": 6, "output_degree": 1},
+          {"intersection_dimension": 12, "one_term_dimension": 15, "output_degree": 2},
+          {"intersection_dimension": 8, "one_term_dimension": 20, "output_degree": 3},
+          {"intersection_dimension": 0, "one_term_dimension": 15, "output_degree": 4},
+          {"intersection_dimension": 0, "one_term_dimension": 6, "output_degree": 5},
+          {"intersection_dimension": 0, "one_term_dimension": 1, "output_degree": 6}
+        ],
+        "n": 6
+      },
+      {
+        "block_count": 4,
+        "common_projective_factor_count": 0,
+        "degrees": [
+          {"intersection_dimension": 8, "one_term_dimension": 8, "output_degree": 1},
+          {"intersection_dimension": 24, "one_term_dimension": 28, "output_degree": 2},
+          {"intersection_dimension": 32, "one_term_dimension": 56, "output_degree": 3},
+          {"intersection_dimension": 16, "one_term_dimension": 70, "output_degree": 4},
+          {"intersection_dimension": 0, "one_term_dimension": 56, "output_degree": 5},
+          {"intersection_dimension": 0, "one_term_dimension": 28, "output_degree": 6},
+          {"intersection_dimension": 0, "one_term_dimension": 8, "output_degree": 7},
+          {"intersection_dimension": 0, "one_term_dimension": 1, "output_degree": 8}
+        ],
+        "n": 8
+      },
+      {
+        "block_count": 5,
+        "common_projective_factor_count": 0,
+        "degrees": [
+          {"intersection_dimension": 10, "one_term_dimension": 10, "output_degree": 1},
+          {"intersection_dimension": 40, "one_term_dimension": 45, "output_degree": 2},
+          {"intersection_dimension": 80, "one_term_dimension": 120, "output_degree": 3},
+          {"intersection_dimension": 80, "one_term_dimension": 210, "output_degree": 4},
+          {"intersection_dimension": 32, "one_term_dimension": 252, "output_degree": 5},
+          {"intersection_dimension": 0, "one_term_dimension": 210, "output_degree": 6},
+          {"intersection_dimension": 0, "one_term_dimension": 120, "output_degree": 7},
+          {"intersection_dimension": 0, "one_term_dimension": 45, "output_degree": 8},
+          {"intersection_dimension": 0, "one_term_dimension": 10, "output_degree": 9},
+          {"intersection_dimension": 0, "one_term_dimension": 1, "output_degree": 10}
+        ],
+        "n": 10
+      }
+    ],
+    "statement": "For n=2r, T=prod_i x_i y_i and U=prod_i (x_i+y_i)(x_i-y_i), the terms share no projective factor and dim(D_m(T) intersect D_m(U))=2^m binom(r,m) for m<=r, and zero for m>r."
+  },
+  "claim_boundary": "All statements concern literal derivative spaces of two Chow terms.  No equality with the coupled catalectic image of T+U is used or claimed.  The theorem does not improve a permanent Chow-rank bound and does not classify arbitrary nontransverse pairs.",
+  "core_sha256": "ee041eb8476f13a643a4829c042a03d02e046d755960344edb06eb565e14a8a5",
+  "minimal_support_merge": {
+    "rows": [
+      {"n": 2, "shared_factor_count": 1, "two_terms_merge_to_one": true},
+      {"n": 3, "shared_factor_count": 2, "two_terms_merge_to_one": true},
+      {"n": 4, "shared_factor_count": 3, "two_terms_merge_to_one": true},
+      {"n": 5, "shared_factor_count": 4, "two_terms_merge_to_one": true},
+      {"n": 6, "shared_factor_count": 5, "two_terms_merge_to_one": true},
+      {"n": 7, "shared_factor_count": 6, "two_terms_merge_to_one": true},
+      {"n": 8, "shared_factor_count": 7, "two_terms_merge_to_one": true},
+      {"n": 9, "shared_factor_count": 8, "two_terms_merge_to_one": true},
+      {"n": 10, "shared_factor_count": 9, "two_terms_merge_to_one": true}
+    ],
+    "statement": "Two nonzero terms sharing n-1 projective factors combine into one Chow term, so they cannot both occur in a support-minimal decomposition."
+  },
+  "route_decision": {
+    "new_unrestricted_chow_rank_bound": false,
+    "pairwise_literal_overlap_still_requires_frame_geometry": true,
+    "shared_factor_count_alone_controls_literal_overlap": false,
+    "transverse_frame_formula_is_exact": true
+  },
+  "status": [
+    "GENERAL_PAIRWISE_CHOW_OVERLAP_PROOF_DRAFT",
+    "EXACT_RATIONAL_REPLAYED",
+    "COMMON_FACTOR_ONLY_BOUND_REJECTED"
+  ],
+  "transverse_common_factor_theorem": {
+    "representative_cases": [
+      {"intersection_dimension": 1, "n": 6, "output_degree": 2, "shared_factor_count": 2},
+      {"intersection_dimension": 4, "n": 8, "output_degree": 3, "shared_factor_count": 4},
+      {"intersection_dimension": 70, "n": 9, "output_degree": 4, "shared_factor_count": 8}
+    ],
+    "statement": "If T and U share s factors and all shared and unshared factors form one independent frame, then dim(D_m(T) intersect D_m(U))=binom(s,m).",
+    "table_sha256": "42c9b3925aea0d4130d363c2c8007b9f6d466e3b0deb8819c2023d3c6f530e4c",
+    "tested_case_count": 371,
+    "tested_n": [3, 9]
+  }
+}
