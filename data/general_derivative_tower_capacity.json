@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "The adjacent recursive theorem is valid for arbitrary n, derivative degree and block size. The finite rows prove the ordinary bound perm_7>=46 and reproduce perm_8>=80. They do not prove exact rank, border rank, asymptotic Glynn optimality or that scalar derivative-shadow capacities alone reach 2^(n-1).",
+  "core_sha256": "3b697597860980a3130f01d7c9de77917951dddb58a2170727cfd6dd451a3a3c",
+  "n7_application": {
+    "block_terms": 5,
+    "first_koszul_target_rank": 58800,
+    "five_term_cubic_cap": 64,
+    "fixed_terms": 20,
+    "one_term_koszul_cap": 1680,
+    "ordinary_lower_bound": 46,
+    "outer_first_excluded_size": 342,
+    "outer_intersection_cap": 341,
+    "outer_shadow_at_cap": 586,
+    "outer_shadow_at_first_excluded_size": 590,
+    "outside_term_count": 15,
+    "projected_first_shadow_capacity": 589,
+    "residual_rank_numerator": 42091,
+    "residual_terms": 26
+  },
+  "n7_capacity_rows": {
+    "1": [0, 7, 14, 21, 28, 35],
+    "2": [0, 3, 22, 43, 64, 85],
+    "3": [0, 0, 4, 17, 40, 64]
+  },
+  "n8_capacity_rows": {
+    "1": [0, 8, 16, 24, 32, 40],
+    "2": [0, 6, 34, 62, 90, 118],
+    "3": [0, 0, 10, 40, 80, 112]
+  },
+  "n8_regression": {
+    "block_terms": 5,
+    "five_term_cubic_cap": 112,
+    "fixed_terms": 17,
+    "ordinary_lower_bound": 80,
+    "outer_intersection_cap": 560,
+    "projected_first_shadow_capacity": 784,
+    "residual_terms": 63
+  },
+  "status": [
+    "GENERAL_DERIVATIVE_TOWER_CAPACITY_PROOF_DRAFT",
+    "EXACT_INTEGER_REPLAYED",
+    "PERM7_LOWER_46"
+  ],
+  "theorem": {
+    "adjacent_shadow": "B_(n,d)(q) <= Gamma_(n,d)(B_(n,d-1)(q))",
+    "base": "B_(n,1)(q)=min(n^2,q*n)",
+    "block_projection": "B_(n,d)(q) <= (q-s)*binom(n,d)+B_(n,d)(s)",
+    "literal_cap": "B_(n,d)(q) <= min(binom(n,d)^2,q*binom(n,d))"
+  }
+}

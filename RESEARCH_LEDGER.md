@@ -14,8 +14,8 @@ the same pull request. This is one Markdown index, not a registry, database,
 manager, dispatcher, or second workflow layer.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #46 theorem head
-`13a9a5911157df7e7fe69df3ee39da0547ff48c4`.
+Consolidation base: PR #47 theorem head
+`7db3d2bbb5a88bebd24d78fe204abbf28f033727`.
 
 ## Status vocabulary
 
@@ -38,8 +38,8 @@ Consolidation base: PR #46 theorem head
 | `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact rational proof |
 | `perm_5` | `ChowRank=16` | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | merged PR #30 |
 | `perm_6` | `28 <= ChowRank <= 32` | lower-bound draft; exact value open in accessible repository | PR #31 |
-| `perm_7` | `45 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR |
-| `perm_8` | `80 <= ChowRank <= 128` | `STACKED_DRAFT` | current PR |
+| `perm_7` | `46 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR |
+| `perm_8` | `80 <= ChowRank <= 128` | `STACKED_DRAFT` | PR #47 and current regression |
 | `perm_9` | `ChowRank >= 142` | `STACKED_DRAFT` | PR #38 |
 | `perm_10` | `ChowRank >= 268` | `STACKED_DRAFT` | PR #38 |
 | `perm_11` | `ChowRank >= 508` | `STACKED_DRAFT` | PR #38 |
@@ -83,7 +83,8 @@ boundary.
 | `G-DUAL-FRAME-OVERLAP` | For same-span independent frames, quadratic literal overlap is sharply bounded by `binom(n,2)-ceil((n-s_dual)/2)`; KK gives higher-degree caps. | stacked draft, replayed | PR #44 |
 | `G-FACTOR-SPAN-ZERO` | A joint factor span of dimension `<m^2` has zero intersection with `D_m(perm_n)`; low-span quotient intersections are exact. | stacked draft | PR #45 |
 | `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar. Minimal-shadow permanent derivatives are direct-sum indecomposable; this closes the `n=8,m=4` transverse two-term boundary. | stacked draft, replayed | PR #46 |
-| `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain the exact one-term permanent defect, and invert the exact upper shadow. This gives four-term and five-term cubic caps 41 and 112 and the ordinary bounds `perm_7>=45`, `perm_8>=80`. | current stacked draft, primary and independent replay | current PR |
+| `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain the exact one-term permanent defect, and invert the exact upper shadow. This gives cubic caps 41 and 112 and the ordinary bounds `perm_7>=45`, `perm_8>=80`. | stacked draft, independent replay | PR #47 |
+| `G-DERIVATIVE-TOWER` | Define a permanent-relative block capacity recursively at every adjacent derivative degree using exact shadows and subblock projection. The first finite rows give `perm_7>=46` and reproduce `perm_8>=80`. | current general-`n` stacked draft, primary and independent replay pending hosted CI | current PR |
 
 ## 4. `perm_6` milestone chain
 
@@ -105,9 +106,10 @@ Current accessible frontier:
 The lower-29 program remains partial. Broad scalar state trees, complete sign
 families and uncorrected quotient-intersection shortcuts are closed routes.
 
-## 5. Exact shadows, centers and cross-degree projection
+## 5. Exact shadows and the general derivative tower
 
-PR #35 proves
+PR #35 proves the exact adjacent product-shadow function for every `n,d` and
+in particular
 
 \[
 F_{7,4}(238)=452,\quad F_{7,4}(239)=456,
@@ -117,34 +119,42 @@ F_{7,4}(238)=452,\quad F_{7,4}(239)=456,
 F_{8,4}(560)=784,\quad F_{8,4}(561)=793.
 \]
 
-PR #38 embeds certified zero-intersection blocks. PR #45 closes low joint
-factor spans, and PR #46 closes the remaining two-term equality span at the
-central `n=8` degree using scalar Hessian centers.
-
-The present theorem descends one derivative degree before applying the block
-projection. For four degree-seven Chow terms it proves
+PRs #38, #45, #46 and #47 progressively insert permanent-relative defects
+before the outer exact-shadow inversion. The current theorem packages that
+operation into one recurrence valid for every `n,d,q`:
 
 \[
-\dim\left(
-D_3(\operatorname{perm}_7)
-\cap\sum_{i=1}^{4}D_3(T_i)
-\right)\le41.
+B_{n,1}(q)=\min(n^2,qn),
 \]
-
-For five degree-eight Chow terms it proves
 
 \[
-\boxed{
-\dim\left(
-D_3(\operatorname{perm}_8)
-\cap\sum_{i=1}^{5}D_3(T_i)
-\right)\le112.
-}
+\begin{aligned}
+B_{n,d}(q)=\min\Bigl\{&\binom nd^2,\ q\binom nd,\\
+&\Gamma_{n,d}(B_{n,d-1}(q)),\\
+&\min_{1\le s<q}\bigl((q-s)\binom nd+B_{n,d}(s)\bigr)
+\Bigr\}.
+\end{aligned}
 \]
 
-The latter is a uniform characteristic-zero theorem, not a coordinate-limit
-claim. It improves the previously sufficient lower-80 target 146 and yields
-`ChowRank(perm_8)>=80`.
+For `n=7`, the first rows are
+
+```text
+q                  1   2   3   4   5
+B_(7,1)(q)          7  14  21  28  35
+B_(7,2)(q)          3  22  43  64  85
+B_(7,3)(q)          0   4  17  40  64
+```
+
+The five-term cubic cap 64, twenty fixed terms and the exact outer threshold
+`F_(7,4)(341)=586 < 589 < 590=F_(7,4)(342)` yield
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_7)\ge46.
+\]
+
+For `n=8`, the degree-three row ends in 112 at five terms, reproducing the
+uniform cap and lower bound 80 from PR #47. This is a regression instance of
+the general recurrence, not the scope of the theorem.
 
 PR #39 separately classifies the reduced tangent cone at the `560/784`
 `perm_8` exact-shadow flag locus:
@@ -156,21 +166,31 @@ reduced tangent cone=4 four-planes + 8 three-planes + 7 lines
 global equality-locus dimension=4
 ```
 
-## 6. Pairwise and block-overlap frontier
+## 6. Why finite instances are retained
+
+`perm_7` and `perm_8` are used as falsification and regression instances for a
+general theorem. They are not the research objective. A finite instance is
+promoted only when it does at least one of the following:
+
+1. detects a false general implication;
+2. validates a uniform recurrence against an unrestricted rank bound; or
+3. identifies an equality geometry needed by the next uniform theorem.
+
+Further `perm_8`-only cap optimization is not the default direction. The next
+priority is a uniform asymptotic or structural analysis of `B_(n,d)(q)`.
+
+## 7. Pairwise and block-overlap frontier
 
 PR #41 proves the transverse common-factor formula and block-rotation
 counterexample. PR #44 gives the sharp same-span dual-frame bound. PR #45
 proves that low joint factor-span blocks are invisible to the permanent
 space. PR #46 proves every central two-term block for `perm_8` is zero.
 
-The current cross-degree theorem is the first result on the five-term cubic
-block strong enough to change the numerical lower bound. It uses only literal
-spaces and transfers to a coupled sum by containment.
+PR #47 gives the first five-term cubic cap strong enough to raise `perm_8` to
+80. The current tower theorem shows that the cap is one row of a general
+adjacent-degree recursion.
 
-The complete pairwise central matched-difference problem at `n=8` is closed.
-The five-term cap is now 112; lower 81 would follow from the sufficient cap 90.
-
-## 7. Restricted sign-family results
+## 8. Restricted sign-family results
 
 \[
 \operatorname{ColumnSignRank}(\operatorname{perm}_n)
@@ -183,7 +203,7 @@ The five-term cap is now 112; lower 81 would follow from the sufficient cap 90.
 Historical one- and two-defect calculations remain diagnostics. Further sign
 dictionary enumeration is not active.
 
-## 8. Superseded and rejected work
+## 9. Superseded and rejected work
 
 - PR #26 is superseded by repaired `perm_5` v14.
 - PR #29 is superseded by clean merged PR #30.
@@ -193,9 +213,9 @@ dictionary enumeration is not active.
   matched-difference space was rejected until literal overlap was included.
 - Common primal-factor count alone is rejected as a global overlap parameter.
 - PR #43's coordinate five-term cap 40 remains valid but is not used to infer
-  a general flat-sum bound. The current cap 112 avoids that transfer problem.
+  a general flat-sum bound.
 
-## 9. Active pull-request stack
+## 10. Active pull-request stack
 
 ```text
 PR #31 broad n=6/general research head
@@ -206,32 +226,37 @@ PR #31 broad n=6/general research head
                   -> PR #44 dual-frame same-span overlap
                       -> PR #45 factor-span zero blocks
                           -> PR #46 permanent-center equality closure
-                              -> current PR cross-degree block projection
+                              -> PR #47 cross-degree block projection
+                                  -> current PR derivative-tower capacity
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
 rebased into a clean main-target PR.
 
-## 10. Current open mathematical interfaces
+## 11. Current open mathematical interfaces
 
-1. **Five-term cubic cap for lower 81.**  
-   The uniform cap is now 112. A sufficient next target is 90: with twenty-one
-   fixed terms it gives projected capacity 986, while
-   `F_(8,4)(773)=987`, and therefore proves `ChowRank(perm_8)>=81`.
+Priority order:
 
-2. **Chow realizability of exact-shadow equality spaces.**  
-   Determine whether a coupled fourteen-term sum can realize the
-   four-dimensional `perm_8` equality locus.
+1. **Uniform asymptotics of the derivative-tower recurrence.**  
+   Determine the best growth rate obtainable from `B_(n,d)(q)` in the central
+   regime. Prove either a uniform gain beyond existing multishadow bounds or a
+   ceiling theorem showing that the scalar tower cannot reach `2^(n-1)`.
 
-3. **Lower-29 `perm_6` frontier.**  
-   Continue only with a theorem acting on the surviving `b=31,...,49`
-   geometry; do not recreate a broad scalar state tree.
+2. **Uniform equality and near-equality classification.**  
+   Classify Ferrers and noncoordinate families that attain adjacent tower
+   transitions, and determine which can arise from Chow blocks.
 
-4. **General correction beyond shadow cardinality.**  
-   Iterate cross-degree permanent-relative defects or find a frame-sensitive,
-   multigraded or representation-valued invariant beyond the Ferrers minimum.
+3. **A non-scalar general defect.**  
+   If the tower has a central-binomial ceiling, add a frame-sensitive,
+   multigraded or representation-valued invariant rather than another finite
+   state table.
 
-## 11. Mandatory update rule
+4. **Finite regression frontiers.**  
+   `perm_8` lower 81 would follow from a five-term cubic cap 90, and the
+   `perm_6` lower-29 geometry remains open. These are testbeds, not the main
+   general-`n` objective.
+
+## 12. Mandatory update rule
 
 Every meaningful future result must update this file in the same pull request.
 Each entry records date, stable ID, status, statement, evidence, boundary,
