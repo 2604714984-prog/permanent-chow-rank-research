@@ -14,8 +14,8 @@ the same pull request. This is one Markdown index, not a registry, database,
 manager, dispatcher, or second workflow layer.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #47 theorem head
-`7db3d2bbb5a88bebd24d78fe204abbf28f033727`.
+Consolidation base: PR #48 theorem head
+`9683f0373d955e69a968d50d14f59a55e23ff6a3`.
 
 ## Status vocabulary
 
@@ -38,8 +38,8 @@ Consolidation base: PR #47 theorem head
 | `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact rational proof |
 | `perm_5` | `ChowRank=16` | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | merged PR #30 |
 | `perm_6` | `28 <= ChowRank <= 32` | lower-bound draft; exact value open in accessible repository | PR #31 |
-| `perm_7` | `46 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR |
-| `perm_8` | `80 <= ChowRank <= 128` | `STACKED_DRAFT` | PR #47 and current regression |
+| `perm_7` | `47 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR #49 |
+| `perm_8` | `80 <= ChowRank <= 128` | `STACKED_DRAFT` | PR #47 and PR #48 regression |
 | `perm_9` | `ChowRank >= 142` | `STACKED_DRAFT` | PR #38 |
 | `perm_10` | `ChowRank >= 268` | `STACKED_DRAFT` | PR #38 |
 | `perm_11` | `ChowRank >= 508` | `STACKED_DRAFT` | PR #38 |
@@ -84,7 +84,8 @@ boundary.
 | `G-FACTOR-SPAN-ZERO` | A joint factor span of dimension `<m^2` has zero intersection with `D_m(perm_n)`; low-span quotient intersections are exact. | stacked draft | PR #45 |
 | `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar. Minimal-shadow permanent derivatives are direct-sum indecomposable; this closes the `n=8,m=4` transverse two-term boundary. | stacked draft, replayed | PR #46 |
 | `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain the exact one-term permanent defect, and invert the exact upper shadow. This gives cubic caps 41 and 112 and the ordinary bounds `perm_7>=45`, `perm_8>=80`. | stacked draft, independent replay | PR #47 |
-| `G-DERIVATIVE-TOWER` | Define a permanent-relative block capacity recursively at every adjacent derivative degree using exact shadows and subblock projection. The first finite rows give `perm_7>=46` and reproduce `perm_8>=80`. | current general-`n` stacked draft, primary and independent replay pending hosted CI | current PR |
+| `G-DERIVATIVE-TOWER` | Define a permanent-relative block capacity recursively at every adjacent derivative degree using exact shadows and subblock projection. The first finite rows give `perm_7>=46` and reproduce `perm_8>=80`. | stacked general-`n` draft | PR #48 |
+| `G-TOWER-BOOTSTRAP` | If `ChowRank(perm_n)>=L`, the general operator `Phi_n(L)` composes tower capacities with complementary-intersection Koszul residual ranks to promote `L`. Exact closure at `n=7` is `36 -> 46 -> 47 -> 47`. | current general-`n` stacked draft, primary and independent replay | PR #49 |
 
 ## 4. `perm_6` milestone chain
 
@@ -106,7 +107,7 @@ Current accessible frontier:
 The lower-29 program remains partial. Broad scalar state trees, complete sign
 families and uncorrected quotient-intersection shortcuts are closed routes.
 
-## 5. Exact shadows and the general derivative tower
+## 5. Exact shadows, the derivative tower and bootstrap closure
 
 PR #35 proves the exact adjacent product-shadow function for every `n,d` and
 in particular
@@ -120,8 +121,8 @@ F_{8,4}(560)=784,\quad F_{8,4}(561)=793.
 \]
 
 PRs #38, #45, #46 and #47 progressively insert permanent-relative defects
-before the outer exact-shadow inversion. The current theorem packages that
-operation into one recurrence valid for every `n,d,q`:
+before the outer exact-shadow inversion. PR #48 packages that operation into
+the derivative-tower recurrence
 
 \[
 B_{n,1}(q)=\min(n^2,qn),
@@ -136,25 +137,55 @@ B_{n,d}(q)=\min\Bigl\{&\binom nd^2,\ q\binom nd,\\
 \end{aligned}
 \]
 
-For `n=7`, the first rows are
-
-```text
-q                  1   2   3   4   5
-B_(7,1)(q)          7  14  21  28  35
-B_(7,2)(q)          3  22  43  64  85
-B_(7,3)(q)          0   4  17  40  64
-```
-
-The five-term cubic cap 64, twenty fixed terms and the exact outer threshold
-`F_(7,4)(341)=586 < 589 < 590=F_(7,4)(342)` yield
+The current theorem promotes any valid lower bound `L` through
 
 \[
-\operatorname{ChowRank}(\operatorname{perm}_7)\ge46.
+\Phi_n(L)
+=
+\max_{\substack{2\le m\le n-2\\1\le q\le L}}
+\left\{
+L,
+q+
+\left\lceil
+\frac{A_{n,m}-n^2B_{n,n-m}(q)}{K_{n,m}}
+\right\rceil_+
+\right\}.
 \]
 
-For `n=8`, the degree-three row ends in 112 at five terms, reproducing the
-uniform cap and lower bound 80 from PR #47. This is a regression instance of
-the general recurrence, not the scope of the theorem.
+Every iterate is a valid lower bound. For `n=7`, exact reconstruction through
+degree five and 47 terms gives
+
+```text
+B_(7,4)(20)=341
+B_(7,5)(36)=233
+B_(7,5)(39)=267
+B_(7,5)(46)=405
+B_(7,5)(47)=426
+```
+
+and the exact closure
+
+```text
+36 -> 46 -> 47 -> 47.
+```
+
+The decisive second promotion is
+
+\[
+A_{7,2}-49B_{7,5}(46)
+=20,384-49\cdot405
+=539>0.
+\]
+
+Thus a hypothetical 46-term decomposition cannot have zero residual after all
+46 terms are selected, and
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_7)\ge47.
+\]
+
+The fixed point at 47 closes only the current scalar tower plus first-Koszul
+bootstrap. It is not an exact-rank statement.
 
 PR #39 separately classifies the reduced tangent cone at the `560/784`
 `perm_8` exact-shadow flag locus:
@@ -168,16 +199,18 @@ global equality-locus dimension=4
 
 ## 6. Why finite instances are retained
 
-`perm_7` and `perm_8` are used as falsification and regression instances for a
-general theorem. They are not the research objective. A finite instance is
-promoted only when it does at least one of the following:
+`perm_7` and `perm_8` are falsification and regression instances for general
+theorems. They are not the research objective. A finite instance is promoted
+only when it does at least one of the following:
 
 1. detects a false general implication;
-2. validates a uniform recurrence against an unrestricted rank bound; or
-3. identifies an equality geometry needed by the next uniform theorem.
+2. validates a uniform recurrence against an unrestricted rank bound;
+3. identifies an equality geometry needed by the next uniform theorem; or
+4. certifies the exact stopping point of a named general proof mechanism.
 
-Further `perm_8`-only cap optimization is not the default direction. The next
-priority is a uniform asymptotic or structural analysis of `B_(n,d)(q)`.
+The `n=7` fixed point now shows that further arithmetic iteration of the same
+scalar tower/Koszul operator cannot prove 48. The next result must strengthen
+a mathematical input rather than extend a finite table.
 
 ## 7. Pairwise and block-overlap frontier
 
@@ -187,8 +220,8 @@ proves that low joint factor-span blocks are invisible to the permanent
 space. PR #46 proves every central two-term block for `perm_8` is zero.
 
 PR #47 gives the first five-term cubic cap strong enough to raise `perm_8` to
-80. The current tower theorem shows that the cap is one row of a general
-adjacent-degree recursion.
+80. PR #48 shows that cap is one row of a general adjacent-degree recursion.
+PR #49 closes the corresponding first-Koszul bootstrap at 47 for `n=7`.
 
 ## 8. Restricted sign-family results
 
@@ -214,6 +247,8 @@ dictionary enumeration is not active.
 - Common primal-factor count alone is rejected as a global overlap parameter.
 - PR #43's coordinate five-term cap 40 remains valid but is not used to infer
   a general flat-sum bound.
+- A fixed point of `Phi_n` is not an upper bound on Chow rank; interpreting it
+  that way is explicitly rejected.
 
 ## 10. Active pull-request stack
 
@@ -227,7 +262,8 @@ PR #31 broad n=6/general research head
                       -> PR #45 factor-span zero blocks
                           -> PR #46 permanent-center equality closure
                               -> PR #47 cross-degree block projection
-                                  -> current PR derivative-tower capacity
+                                  -> PR #48 derivative-tower capacity
+                                      -> current PR #49 tower bootstrap closure
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
@@ -237,21 +273,27 @@ rebased into a clean main-target PR.
 
 Priority order:
 
-1. **Uniform asymptotics of the derivative-tower recurrence.**  
-   Determine the best growth rate obtainable from `B_(n,d)(q)` in the central
-   regime. Prove either a uniform gain beyond existing multishadow bounds or a
-   ceiling theorem showing that the scalar tower cannot reach `2^(n-1)`.
+1. **Uniform asymptotics of the tower and bootstrap.**  
+   Determine the polynomial-scale growth of the fixed point of `Phi_n` in the
+   central regime. Prove either a uniform gain toward `2^(n-1)` or a ceiling
+   theorem for this exact scalar mechanism.
 
-2. **Uniform equality and near-equality classification.**  
-   Classify Ferrers and noncoordinate families that attain adjacent tower
-   transitions, and determine which can arise from Chow blocks.
+2. **Uniform Chow-realizability defect.**  
+   The `n=7` fixed point proves arithmetic iteration is exhausted. Lower a
+   capacity `B_(n,d)(q)` using a theorem about which exact-shadow or
+   near-shadow spaces can actually arise from Chow blocks.
 
-3. **A non-scalar general defect.**  
-   If the tower has a central-binomial ceiling, add a frame-sensitive,
-   multigraded or representation-valued invariant rather than another finite
-   state table.
+3. **A non-scalar general invariant.**  
+   If the tower fixed point remains on the central-binomial scale, add a
+   frame-sensitive, multigraded or representation-valued invariant rather
+   than another finite state table.
 
-4. **Finite regression frontiers.**  
+4. **Cross-`n` recurrence.**  
+   Seek a compatible restriction or valuation theorem implying a genuine
+   relation such as `R_n>=2R_(n-1)`. Ordinary row expansion alone is not
+   additive enough.
+
+5. **Finite regression frontiers.**  
    `perm_8` lower 81 would follow from a five-term cubic cap 90, and the
    `perm_6` lower-29 geometry remains open. These are testbeds, not the main
    general-`n` objective.
