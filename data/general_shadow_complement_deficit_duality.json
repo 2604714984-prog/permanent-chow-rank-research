@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "The shadow-complement identity and deficit transport are exact general-n reformulations of the scalar permanent derivative tower. They reproduce the full-degree saturation thresholds through n=8 but do not improve those numerical bounds by themselves, determine an exact rank for n>=6, prove a border-rank statement, provide the asymptotic rate of the tower, or prove general Glynn optimality.",
+  "exhaustive_replay": {
+    "duality_identity_checks": 17378,
+    "n_max": 8,
+    "n_min": 3,
+    "thresholds": {
+      "3": [3, 4],
+      "4": [4, 7, 8],
+      "5": [5, 11, 14, 15],
+      "6": [6, 16, 24, 26, 27],
+      "7": [7, 22, 39, 46, 48, 49],
+      "8": [8, 29, 59, 80, 87, 89, 90]
+    },
+    "tower_deficit_entry_checks": 1178
+  },
+  "status": [
+    "GENERAL_SHADOW_COMPLEMENT_DUALITY_THEOREM",
+    "GENERAL_DEFICIT_TRANSPORT_RECURRENCE",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "theorem": {
+    "direct_deficit": "H_(n,d)(q)=max(0,A_d-q*M_d,F_(n,n-d+1)(D_(n,d-1)(q))).",
+    "duality": "Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z).",
+    "saturation": "Q_(n,d)=min{q:D_(n,d)(q)=0}, and every Chow decomposition has at least max_d Q_(n,d) terms.",
+    "transport": "D_(n,d)(q)=max_(0<=t<=q)(H_(n,d)(t)-(q-t)*M_d)."
+  }
+}

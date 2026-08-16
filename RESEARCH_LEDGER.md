@@ -4,8 +4,8 @@
 
 This is the canonical high-level ledger for the active permanent Chow-rank
 research repository. `STATUS.md` remains the detailed theorem inventory. This
-file records milestones, numerical boundaries, active stacked branches,
-superseded or rejected routes, and the next authorized mathematical
+file records numerical boundaries, theorem milestones, active stacked
+branches, superseded or rejected routes, and the next authorized mathematical
 interfaces.
 
 Every result that changes a theorem, numerical bound, counterexample, route
@@ -14,7 +14,8 @@ the same pull request. This is one Markdown index, not a registry, database,
 manager, dispatcher, or second workflow layer.
 
 Last consolidated: **2026-08-16**  
-Consolidation base: PR #50 theorem tree plus the current full-degree envelope.
+Consolidation base: PR #51 theorem head
+`bab95bc412366ac18b5f10089c73ef033bdfa5b0`.
 
 ## Status vocabulary
 
@@ -34,23 +35,23 @@ Consolidation base: PR #50 theorem tree plus the current full-degree envelope.
 | Object | Current accessible repository boundary | Status | Primary location |
 |---|---:|---|---|
 | `perm_3` | `ChowRank=4` | `ACCEPTED_BASELINE` | merged small-`n` proof |
-| `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact rational proof |
+| `perm_4` | `ChowRank=8` | `ACCEPTED_BASELINE` | merged exact-rational proof |
 | `perm_5` | `ChowRank=16` | `PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED` | merged PR #30 |
-| `perm_6` | `28 <= ChowRank <= 32` | lower-bound draft; exact value open in accessible repository | PR #31 |
-| `perm_7` | `49 <= ChowRank <= 64` | `STACKED_DRAFT` | current PR #51 |
-| `perm_8` | `90 <= ChowRank <= 128` | `STACKED_DRAFT` | current PR #51 |
-| `perm_9` | `164 <= ChowRank <= 256` | `STACKED_DRAFT` | current PR #51 |
-| `perm_10` | `307 <= ChowRank <= 512` | `STACKED_DRAFT` | current PR #51 |
-| `perm_11` | `ChowRank >= 508` | `STACKED_DRAFT` | PR #38 |
-| `perm_12` | `ChowRank >= 970` | `STACKED_DRAFT` | PR #38 |
-| `perm_13` | `ChowRank >= 1855` | `STACKED_DRAFT` | PR #38 |
-| `perm_14` | `ChowRank >= 3570` | `STACKED_DRAFT` | PR #38 |
-| `perm_15` | `ChowRank >= 6883` | `STACKED_DRAFT` | PR #38 |
-| `perm_16` | `ChowRank >= 13315` | `STACKED_DRAFT` | PR #38 |
+| `perm_6` | `28 <= ChowRank <= 32` | specialized lower-bound draft; exact value open in accessible repository | PR #31 |
+| `perm_7` | `49 <= ChowRank <= 64` | `STACKED_DRAFT` | PR #51 |
+| `perm_8` | `90 <= ChowRank <= 128` | `STACKED_DRAFT` | PR #51 |
+| `perm_9` | `164 <= ChowRank <= 256` | `STACKED_DRAFT` | PR #51 |
+| `perm_10` | `307 <= ChowRank <= 512` | `STACKED_DRAFT` | PR #51 |
+| `perm_11` | `ChowRank >= 508` | earlier stacked bound; full tower not yet replayed at this size | PR #38 |
+| `perm_12` | `ChowRank >= 970` | earlier stacked bound; full tower not yet replayed at this size | PR #38 |
+| `perm_13` | `ChowRank >= 1855` | earlier stacked bound | PR #38 |
+| `perm_14` | `ChowRank >= 3570` | earlier stacked bound | PR #38 |
+| `perm_15` | `ChowRank >= 6883` | earlier stacked bound | PR #38 |
+| `perm_16` | `ChowRank >= 13315` | earlier stacked bound | PR #38 |
 
 The general upper bound remains Glynn's `2^(n-1)`-term decomposition. No
-unrestricted exact result for `perm_6` or any larger permanent is present in
-the currently accessible repository state.
+unrestricted exact result for `perm_6` or any larger `n` is present in the
+currently accessible repository state.
 
 ## 2. Canonical small-`n` chain
 
@@ -62,15 +63,9 @@ the currently accessible repository state.
 
 The `n=3` proof is linear algebra. The `n=4` proof combines the `560/92`
 Koszul baseline, low-rank quadratic classification, the exact `psi_v` chart
-and the double-quotient inequality. The repaired `n=5` proof preserves the
+and a double-quotient inequality. The repaired `n=5` proof preserves the
 coupled-catalectic firewall, routes all 58 fixed-six states and binds the
-non-finite bridges and deterministic certificates at the merged PR #30
-boundary.
-
-The full scalar tower gives only 15 at `n=5`; the separate coupled proof is
-still essential for 16. At `n=6` the full scalar tower gives 27, below the
-specialized accessible lower bound 28. These regressions are retained as a
-fail-closed boundary.
+non-finite bridges and deterministic certificates at merged PR #30.
 
 ## 3. General-`n` theorem stack
 
@@ -81,17 +76,18 @@ fail-closed boundary.
 | `G-AFFINE-SLICE` | The Boolean slice has affine-Segre rank `d+1`; sign rigidity does not extend to arbitrary complex diagonal ratios. | merged route diagnostic | PR #34 |
 | `G-KOSZUL` | General first-Koszul, quotient-gain, parity-asymptotic and fixed-offset multishadow formulas. | proof draft | general docs / `STATUS.md` |
 | `G-MACAULAY` | Vector-valued first prolongation satisfies `dim K^(1)<=dim(K)^{<2>}`. | proof draft, replayed | general relation docs |
-| `G-EXACT-SHADOW` | Exact simultaneous product-shadow minimum is a Ferrers integer program. | stacked draft, independent replay | PR #35 |
-| `G-NESTED-SHADOW` | A zero-intersection block can be projected away inside a nonzero-intersection multishadow proof. | stacked draft | PR #38 |
-| `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`; a zero-common-factor block rotation has intersection `2^m binom(r,m)`. | stacked draft, replayed | PR #41 |
-| `G-DUAL-FRAME-OVERLAP` | For same-span independent frames, quadratic literal overlap is sharply bounded by `binom(n,2)-ceil((n-s_dual)/2)`; KK gives higher-degree caps. | stacked draft, replayed | PR #44 |
+| `G-EXACT-SHADOW` | Exact simultaneous product-shadow minima are Ferrers integer programs. | stacked draft, independent replay | PR #35 |
+| `G-NESTED-SHADOW` | A certified zero-intersection block can be projected away inside a nonzero-intersection multishadow proof. | stacked draft | PR #38 |
+| `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`; a zero-common-factor block rotation can still have large overlap. | stacked draft, replayed | PR #41 |
+| `G-DUAL-FRAME-OVERLAP` | For same-span independent frames, quadratic literal overlap is sharply bounded by a dual-frame support invariant. | stacked draft, replayed | PR #44 |
 | `G-FACTOR-SPAN-ZERO` | A joint factor span of dimension `<m^2` has zero intersection with `D_m(perm_n)`; low-span quotient intersections are exact. | stacked draft | PR #45 |
-| `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar. Minimal-shadow permanent derivatives are direct-sum indecomposable. | stacked draft, replayed | PR #46 |
-| `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain a permanent-relative defect, and invert the exact upper shadow. | stacked draft, independent replay | PR #47 |
-| `G-DERIVATIVE-TOWER` | Define permanent-relative block capacities recursively at adjacent derivative degrees using exact shadows and subblock projection. | stacked general-`n` draft | PR #48 |
-| `G-TOWER-BOOTSTRAP` | Compose tower capacities with complementary-intersection Koszul residual ranks. The narrow `n=7` sequence is `36 -> 46 -> 47 -> 47`. | stacked route theorem | PR #49 |
-| `G-TOWER-SATURATION` | A decomposition by `q` terms forces every evaluated tower row to have saturated at `q`; degrees through `n-2` give `perm_7>=48`. | valid weaker stacked theorem | PR #50 |
-| `G-FULL-DEGREE-TOWER-ENVELOPE` | Solve block projection as a prefix min-plus envelope, include every degree through `n-1`, and define the exact saturation recurrence. The exact table gives lower bounds `49,90,164,307` for `n=7,8,9,10`. | current stacked draft; C++ exact replay and independent Python through `n=8` | PR #51 |
+| `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar; minimal-shadow permanent derivatives are direct-sum indecomposable. | stacked draft, replayed | PR #46 |
+| `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain the exact permanent-relative defect, and invert the upper shadow. | stacked draft, independent replay | PR #47 |
+| `G-DERIVATIVE-TOWER` | Define permanent-relative capacities `B_(n,d)(q)` recursively across derivative degrees with exact shadows and subblock projection. | stacked general-`n` draft | PR #48 |
+| `G-TOWER-BOOTSTRAP` | Compose tower capacities with complementary-intersection Koszul residual ranks. | stacked route theorem | PR #49 |
+| `G-TOWER-SATURATION` | A `q`-term decomposition forces every derivative-tower row to have saturated at `q`. | stacked general theorem | PR #50 |
+| `G-FULL-DEGREE-ENVELOPE` | The projection recurrence is a prefix min-plus envelope; scanning through degree `n-1` gives the thresholds in PR #51. | stacked general theorem, C++ and Python replay | PR #51 |
+| `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the equivalent max-plus deficit transport recurrence. | current general-`n` stacked draft, two independent exact DPs | PR #52 |
 
 ## 4. `perm_6` milestone chain
 
@@ -112,84 +108,107 @@ Current accessible frontier:
 
 The lower-29 program remains partial. Broad scalar state trees, complete sign
 families and uncorrected quotient-intersection shortcuts are closed routes.
-The full tower value 27 does not replace the specialized lower bound 28.
 
-## 5. Full derivative-tower envelope and saturation
+## 5. Full-degree tower envelope
 
-Let
+For
 
 \[
-M_{n,d}=\binom nd,
-\qquad
-A_{n,d}=M_{n,d}^2.
+M_{n,d}=\binom nd,\qquad A_{n,d}=M_{n,d}^2,
 \]
 
-If `C_(n,d)(q)` denotes the minimum of the ambient, literal and lower-degree
-exact-shadow caps, then the block recurrence has the exact closed form
+let `Gamma_(n,d)` be the inverse exact first-shadow capacity and define
+
+\[
+C_{n,d}(q)
+=\min\{A_{n,d},qM_{n,d},
+\Gamma_{n,d}(B_{n,d-1}(q))\}.
+\]
+
+The repeated block-projection closure is the exact prefix envelope
 
 \[
 B_{n,d}(q)
-=
-qM_{n,d}
-+
-\min_{0\le t\le q}
+=qM_{n,d}
++\min_{0\le t\le q}
 \bigl(C_{n,d}(t)-tM_{n,d}\bigr).
 \]
 
-Thus recursive subblock projection is one prefix min-plus envelope. Once
+A decomposition by `q` terms must cover every permanent derivative space, so
+all rows must have saturated at `q`. Writing
 
 \[
-R_{n,d}=\max\{M_{n,d},Q_{n,d-1}\}
+Q_{n,d}=\min\{q:B_{n,d}(q)=A_{n,d}\},
 \]
 
-has been reached, the row is affine until saturation, and `Q_(n,d)` is
-computed from the finite prefix `t<R_(n,d)`.
-
-A real decomposition must cover every permanent derivative space. Therefore
+gives
 
 \[
 \operatorname{ChowRank}(\operatorname{perm}_n)
-\ge
-\Theta_n,
-\qquad
-\Theta_n=
-\max_{1\le d\le n-1}Q_{n,d}.
+\ge\Theta_n:=\max_{1\le d\le n-1}Q_{n,d}.
 \]
 
-The range through `n-1` is essential. The first-Koszul residual machinery
-naturally stopped at complementary degree `n-2`, but the tower itself did not.
-Output degree `n` has the same saturation threshold as degree `n-1`.
-
-The exact table is
-
-| `n` | `Q_(n,1),...,Q_(n,n-1)` | `Theta_n` |
-|---:|---|---:|
-| 3 | `3,4` | 4 |
-| 4 | `4,7,8` | 8 |
-| 5 | `5,11,14,15` | 15 |
-| 6 | `6,16,24,26,27` | 27 |
-| 7 | `7,22,39,46,48,49` | **49** |
-| 8 | `8,29,59,80,87,89,90` | **90** |
-| 9 | `9,37,87,136,155,161,163,164` | **164** |
-| 10 | `10,46,123,219,280,299,305,307,307` | **307** |
-
-The decisive last-row boundaries include
+PR #51 replays the exact threshold rows
 
 ```text
-B_(7,6)(48)=44  <49=B_(7,6)(49)
-B_(8,7)(89)=60  <64=B_(8,7)(90)
-B_(9,8)(163)=74 <81=B_(9,8)(164).
+n=3:  3,4                                  Theta=4
+n=4:  4,7,8                                Theta=8
+n=5:  5,11,14,15                           Theta=15
+n=6:  6,16,24,26,27                        Theta=27
+n=7:  7,22,39,46,48,49                     Theta=49
+n=8:  8,29,59,80,87,89,90                  Theta=90
+n=9:  9,37,87,136,155,161,163,164          Theta=164
+n=10: 10,46,123,219,280,299,305,307,307    Theta=307.
 ```
 
-At `n=10`, both degrees eight and nine saturate at 307.
+The scalar tower remains weaker than the separate exact `n=5` result and the
+specialized `n=6` lower bound. It does not absorb those coupled geometric
+arguments.
 
-PR #50's lower bound 48 remains valid, but its claim that the complete scalar
-tower stopped at 48 is superseded: it evaluated only through `n-2`.
+### Shadow-complement deficit form
 
-## 6. Equality, overlap and non-scalar frontiers
+PR #52 replaces the inverse-shadow transition by the exact complementary
+identity
 
-PR #39 classifies the reduced tangent cone at the `560/784` `perm_8`
-exact-shadow flag locus:
+\[
+\Gamma_{n,d}(A_{n,d-1}-z)
+=
+A_{n,d}-F_{n,n-d+1}(z).
+\]
+
+Writing
+
+\[
+D_{n,d}(q)=A_{n,d}-B_{n,d}(q),
+\]
+
+the direct deficit and projection closure become
+
+\[
+H_{n,d}(q)
+=\max\{0,A_{n,d}-qM_{n,d},
+F_{n,n-d+1}(D_{n,d-1}(q))\},
+\]
+
+\[
+D_{n,d}(q)
+=\max_{0\le t\le q}
+\bigl(H_{n,d}(t)-(q-t)M_{n,d}\bigr).
+\]
+
+This is an exact reformulation, not a new numerical lower bound. It exposes
+the scalar tower as complementary-shadow transport and is now the preferred
+interface for uniform asymptotic analysis.
+
+## 6. Finite instances and equality geometry
+
+Finite cases are falsification and regression instances for general theorems,
+not the research objective. A finite result is promoted only when it detects a
+false general implication, validates a uniform theorem against unrestricted
+rank, identifies an equality geometry, or certifies a route ceiling.
+
+PR #39 classifies the reduced tangent cone at the `560/784` `perm_8` exact-
+shadow flag locus:
 
 ```text
 linear tangent dimension=27
@@ -198,45 +217,48 @@ reduced tangent cone=4 four-planes + 8 three-planes + 7 lines
 global equality-locus dimension=4
 ```
 
+Chow realizability of the full equality locus remains open.
+
+## 7. Pairwise and block-overlap frontier
+
 PR #41 proves the transverse common-factor formula and block-rotation
 counterexample. PR #44 gives the sharp same-span dual-frame bound. PR #45
-closes low joint factor spans, and PR #46 proves scalar Hessian centers and
-minimal-shadow direct-sum indecomposability.
+proves that low joint factor-span blocks are invisible to the permanent space.
+PR #46 proves every central two-term block for `perm_8` is zero. PRs #47--#51
+show how these permanent-relative defects feed the general tower.
 
-These results remain candidates for a Chow-realizability correction to the
-scalar tower. They are not automatically encoded by the saturation table.
+The next improvement cannot come from re-evaluating the same scalar recurrence;
+it must lower a capacity through Chow-realizability geometry or add a
+non-scalar invariant.
 
-## 7. Restricted sign-family results
+## 8. Restricted sign-family results
 
 \[
 \operatorname{ColumnSignRank}(\operatorname{perm}_n)
 =
 \operatorname{RowSignRank}(\operatorname{perm}_n)
-=
-2^{n-1}.
+=2^{n-1}.
 \]
 
 Historical one- and two-defect calculations remain diagnostics. Further sign
 dictionary enumeration is not active.
 
-## 8. Superseded and rejected work
+## 9. Superseded and rejected work
 
 - PR #26 is superseded by repaired `perm_5` v14.
 - PR #29 is superseded by clean merged PR #30.
 - PRs #36 and #37 duplicated a canonical theorem; PR #38 retains only the new
   projection step.
-- The implication from quotient-image overlap to an equally large
-  matched-difference space was rejected until literal overlap was included.
+- The implication from quotient-image overlap to an equally large matched-
+  difference space was rejected until literal overlap was included.
 - Common primal-factor count alone is rejected as a global overlap parameter.
 - PR #43's coordinate five-term cap 40 remains valid but is not used to infer
   a general flat-sum bound.
-- PR #49's fixed point 47 is correct for its narrower partial-term Koszul
-  operator, not for the full tower.
-- PR #50's lower bound 48 is valid but is superseded as the complete tower
-  threshold by the omitted degree-`n-1` row.
+- PRs #49 and #50 remain valid weaker stages, but PR #51 supersedes their
+  claimed stopping points by including the full degree range through `n-1`.
 - A scalar-route fixed point is not an upper bound on Chow rank.
 
-## 9. Active pull-request stack
+## 10. Active pull-request stack
 
 ```text
 PR #31 broad n=6/general research head
@@ -250,43 +272,41 @@ PR #31 broad n=6/general research head
                               -> PR #47 cross-degree block projection
                                   -> PR #48 derivative-tower capacity
                                       -> PR #49 tower bootstrap
-                                          -> PR #50 tower saturation through n-2
-                                              -> current PR #51 full-degree envelope
+                                          -> PR #50 tower saturation
+                                              -> PR #51 full-degree envelope
+                                                  -> current PR #52 shadow-complement deficit duality
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
 rebased into a clean main-target PR.
 
-## 10. Current open mathematical interfaces
+## 11. Current open mathematical interfaces
 
 Priority order:
 
-1. **Uniform asymptotics of `Theta_n`.**  
-   Determine the exponential and polynomial-scale growth of the full-degree
-   saturation threshold. The finite sequence
-   `4,8,15,27,49,90,164,307` is evidence, not an asymptotic theorem.
+1. **Uniform asymptotics of the deficit transport recurrence.**  
+   Analyze the exact complementary-shadow/max-plus system for
+   `d=alpha*n` and `q=exp(rho*n+o(n))`. Prove either a strict uniform gain or
+   a ceiling theorem for the complete scalar tower.
 
-2. **A central-binomial ceiling or a gain toward Glynn.**  
-   Prove either a matching upper estimate for the scalar envelope or a uniform
-   deficit lower bound that drives `Theta_n` toward `2^(n-1)`.
+2. **Uniform Chow-realizability defect.**  
+   Lower a capacity `B_(n,d)(q)` by proving that an exact-shadow or near-shadow
+   Ferrers family cannot arise from a Chow block except in classified cases.
 
-3. **Uniform Chow-realizability defect.**  
-   Lower a capacity `B_(n,d)(q)` by classifying which exact-shadow and
-   near-shadow spaces can actually arise from Chow blocks.
+3. **A non-scalar general invariant.**  
+   If the deficit system has a central-binomial ceiling, add a frame-sensitive,
+   multigraded or representation-valued invariant rather than another scalar
+   finite table.
 
-4. **A non-scalar general invariant.**  
-   Add frame-sensitive, multigraded, syzygetic, or representation-valued
-   information rather than another scalar finite table.
+4. **Cross-`n` recurrence.**  
+   Seek a compatible restriction or valuation theorem implying a relation such
+   as `R_n>=2R_(n-1)`. Ordinary row expansion alone is not additive enough.
 
-5. **Cross-`n` recurrence.**  
-   Seek a compatible restriction or valuation theorem implying a relation
-   such as `R_n>=2R_(n-1)`. Ordinary row expansion alone is not additive.
+5. **Finite regression frontiers.**  
+   The `perm_6` lower-29 geometry and selected `perm_8` equality questions
+   remain testbeds, not the primary general-`n` program.
 
-6. **Finite regression frontiers.**  
-   The `perm_6` lower-29 geometry remains open. Finite instances are testbeds,
-   not the main general-`n` objective.
-
-## 11. Mandatory update rule
+## 12. Mandatory update rule
 
 Every meaningful future result must update this file in the same pull request.
 Each entry records date, stable ID, status, statement, evidence, boundary,
