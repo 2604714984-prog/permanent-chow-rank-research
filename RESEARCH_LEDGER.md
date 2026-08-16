@@ -89,6 +89,7 @@ non-finite bridges and deterministic certificates at merged PR #30.
 | `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the equivalent max-plus deficit recurrence. | stacked general theorem, two independent exact DPs | PR #52 |
 | `G-TOWER-TAIL` | Thresholds are nondecreasing; the full scalar bound is the top row; fixed-codimension transitions have universal constants `c_k`; the final row adds at most one and is controlled by bipartite `C4` supersaturation. | current general-`n` stacked draft, two independent exact DPs | current PR #53 |
 | `G-SHADOW-ENTROPY-BARRIER` | Product shadows satisfy an exact incidence sandwich and preserve exponential rate at linear degree. Consequently `log Theta_n/n -> log 2`; exponential entropy alone cannot resolve the polynomial gap to Glynn. | current general-`n` route theorem, exact replay | current PR #53 |
+| `G-CENTRAL-WINDOW` | Ambient-dependent tail constants imply that all degrees a fixed linear distance above the center are exponentially negligible. At central-binomial precision, only an `O(sqrt(n log n))` window above degree `n/2` can matter. | current general-`n` stacked theorem, exact arithmetic replay | current PR #53 |
 
 ## 4. `perm_6` milestone chain
 
@@ -322,6 +323,70 @@ The unresolved question is therefore polynomial-scale, not exponential-scale.
 A first-order entropy calculation cannot distinguish central-binomial scale
 from Glynn scale.
 
+### Central-window localization
+
+For `2<=k<=n/2`, define the ambient-dependent constant
+
+\[
+c_{n,k}
+=
+\max_{k\le a\le n}
+\left[
+\binom a{k-1}-\binom{a-1}k-1
+\right]_+.
+\]
+
+The same deficit proof gives
+
+\[
+0\le
+Q_{n,n-k+1}-Q_{n,n-k}
+\le c_{n,k}
+\le\binom n{k-1}.
+\]
+
+Therefore, for every `2<=K<=n/2`,
+
+\[
+0\le
+\Theta_n-Q_{n,n-K}
+\le
+\sum_{j=1}^{K-1}\binom nj.
+\]
+
+For fixed `0<alpha<1/2` and `K=floor(alpha n)`, the right side is
+
+\[
+\exp(nH(\alpha)+O(\log n)),
+\]
+
+which is exponentially smaller than the central binomial coefficient.
+
+More sharply, if `K-1<=n/2-w`, Hoeffding gives
+
+\[
+\Theta_n-Q_{n,n-K}
+\le
+2^n\exp(-2w^2/n).
+\]
+
+Hence if
+
+\[
+2w_n^2/n-\log(n+1)\to+\infty,
+\]
+
+then the top-tail correction is little-o of
+`binom(n,floor(n/2))`. At every fixed inverse-polynomial precision, only a
+central window
+
+\[
+d=n/2+O(\left(\sqrt{n\log n}\right))
+\]
+
+can affect the scalar tower. This is a localization theorem, not a
+central-binomial ceiling.
+
 ## 7. Finite instances and equality geometry
 
 Finite cases are falsification and regression instances for general theorems,
@@ -399,7 +464,7 @@ PR #31 broad n=6/general research head
                                           -> PR #50 tower saturation
                                               -> PR #51 full-degree envelope
                                                   -> PR #52 shadow-complement deficit duality
-                                                      -> current PR #53 fixed-codimension tail constants
+                                                      -> current PR #53 scalar-tail and central-window localization
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
@@ -409,15 +474,14 @@ rebased into a clean main-target PR.
 
 Priority order:
 
-1. **Second-order linear-codimension shadow asymptotics.**  
-   The exponential rate is already forced to be the input rate. Determine the
-   polynomial prefactor and logarithmic corrections of `F_(n,alpha n)` and
-   propagate them through the deficit recurrence.
+1. **Central-window second-order recurrence.**  
+   Analyze exact product shadows and deficits for
+   `d=n/2+O(sqrt(n log n))` at central-binomial scale. Degrees farther above
+   the center are now provably negligible at polynomial precision.
 
-2. **Scalar polynomial ceiling or strict prefactor gain.**  
-   Prove either `Theta_n=O(binom(n,floor(n/2)))` (or another explicit
-   polynomial-scale ceiling) or a uniform prefactor gain. First-order entropy
-   and finite threshold extrapolation are insufficient.
+2. **Scalar central-binomial ceiling or prefactor amplification.**  
+   Prove either `Theta_n=O(binom(n,floor(n/2)))` or exhibit a uniform
+   polynomial prefactor gain generated inside the central window.
 
 3. **Uniform Chow-realizability defect.**  
    Prove that exact-shadow or near-shadow Ferrers families cannot arise from
