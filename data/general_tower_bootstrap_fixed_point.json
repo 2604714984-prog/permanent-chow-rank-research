@@ -1,0 +1,79 @@
+{
+  "claim_boundary": "The theorem is uniform in n and composes the already proved derivative-tower capacity with the complementary-intersection Koszul residual inequality. The finite certificate proves the stacked ordinary bound perm_7>=47 and shows that the same scalar tower/Koszul bootstrap stabilizes at 47 for n=7. It does not prove the exact rank of perm_7, a border-rank result, an asymptotic ceiling for every scalar invariant, or general Glynn optimality.",
+  "core_sha256": "2f11127a199b52e147090557d2a767c950ad97d4dc478e9f05833fa6580f6872",
+  "n7": {
+    "base_first_koszul_bound": 36,
+    "bootstrap_sequence": [
+      36,
+      46,
+      47,
+      47
+    ],
+    "capacity_row_sha256": {
+      "1": "dd5c90d63280597099bbb44281011baf7a91e9866c3c1dadca75e11015ea7c2c",
+      "2": "5ae812113ab22d0a274717e849d58476eb312acfca3e308b4de459178d5e215a",
+      "3": "35f9e59f67db39e8994bb7e898af46bc1ace17c3df22f6cc442bf3505c1be208",
+      "4": "d074d44521a93a74bfe346bdcb8bc3aced8a6925ca49f21471257f74f59a25c6",
+      "5": "c6780cc7fa8b07dc8bba5823429303decde202833bff56788566dbe8527146be"
+    },
+    "first_promotion": {
+      "canonical_witness": [
+        3,
+        4,
+        20,
+        341,
+        58800,
+        1680,
+        42091,
+        26,
+        46
+      ],
+      "input_bound": 36,
+      "maximizer_count": 4,
+      "output_bound": 46,
+      "scan_sha256": "202033c70b741647b7c768932b2a5ea30a8aae6ab492144661a9d025ad1b9b19"
+    },
+    "fixed_point": {
+      "input_bound": 47,
+      "maximizer_count": 12,
+      "output_bound": 47,
+      "scan_sha256": "b2ee29697a66edea251fbd7e1461e0c4109cf2311dbf546c1db24477387dfa8e"
+    },
+    "key_capacities": {
+      "B_7_4_20": 341,
+      "B_7_5_36": 233,
+      "B_7_5_39": 267,
+      "B_7_5_46": 405,
+      "B_7_5_47": 426
+    },
+    "second_promotion": {
+      "canonical_witness": [
+        2,
+        5,
+        46,
+        405,
+        20384,
+        994,
+        539,
+        1,
+        47
+      ],
+      "input_bound": 46,
+      "maximizer_count": 8,
+      "output_bound": 47,
+      "scan_sha256": "99e34ee704bf1db03d9e5071f6789827788152dc02a6209d82d30a30cbacbb96"
+    }
+  },
+  "status": [
+    "GENERAL_TOWER_BOOTSTRAP_PROOF_DRAFT",
+    "EXACT_INTEGER_REPLAYED",
+    "PERM7_LOWER_47",
+    "N7_SCALAR_TOWER_FIXED_POINT_47"
+  ],
+  "theorem": {
+    "fixed_point_boundary": "A fixed point closes this derivative-tower/Koszul bootstrap only; it is not an upper bound on Chow rank or on other methods.",
+    "iteration": "Every iterate from a valid lower bound is valid and the integer sequence stabilizes below the actual Chow rank.",
+    "operator": "Phi_n(L)=max(L, max_(2<=m<=n-2,1<=q<=L) q+ceil_pos((A_(n,m)-n^2*B_(n,n-m)(q))/K_(n,m))).",
+    "promotion": "If ChowRank(perm_n)>=L, then ChowRank(perm_n)>=Phi_n(L)."
+  }
+}
