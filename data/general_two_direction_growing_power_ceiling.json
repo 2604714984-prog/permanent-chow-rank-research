@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "This is a ceiling on power-image lower-bound mechanisms over a differential space of dimension at most two, including powers and finite block families depending on n. It is not an upper bound on actual Chow rank and does not cover arbitrary growing binary ideals, minimal syzygies, nonlinear determinantal data, valuative arguments, Chow-realizability defects or border rank. Literature novelty is not established.",
+  "exact_replay": {
+    "independent_block_checks": 88,
+    "independent_n_max": 45,
+    "independent_route_cells": 17292,
+    "primary_finite_block_family_checks": 79,
+    "primary_n_max": 80,
+    "primary_pointwise_binomial_decay_checks": 3318,
+    "primary_route_cells": 91877
+  },
+  "status": [
+    "GENERAL_GROWING_TWO_DIRECTION_POWER_CEILING",
+    "FINITE_BLOCK_FAMILY_CEILING",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "theorem": {
+    "glynn_separation": "R_n=O(2^n(log n)^(1/4)/n^(1/4))=o(2^(n-1)).",
+    "permanent_numerator": "dim((W^p A_perm)_d)<=min((p+1)binom(n,d-p)^2,binom(n,d)^2).",
+    "pointwise_route": "R_(n,p,d)<=H_* min(sqrt(p+1),n exp(-(p-1)^2/(4n)))+1.",
+    "principal_denominator": "max_T dim((W^p A_T)_d)>=min(binom(n,d-p),binom(n,d)).",
+    "uniform_ceiling": "R_n=O((n log(n+1))^(1/4) binom(n,floor(n/2)))."
+  }
+}
