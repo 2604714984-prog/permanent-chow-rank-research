@@ -1,0 +1,77 @@
+{
+  "claim_boundary": "The theorem closes symmetric two-sided compression through the canonical matching source section and arbitrary row-column equivariant pre/post endomorphisms of the effective matching module. It does not cover unrelated non-equivariant source and target spaces, source-kernel directions outside J_m(E_m), minimal syzygy functors, nonlinear determinantal data, valuative arguments, Chow-realizability defects, border rank, exact rank for n>=6, or general Glynn optimality.",
+  "core_sha256": "72fb06b3ca6201e2b31e0d0aafb22370cf2b7572eaf9e43a3eb0d0f6096c4533",
+  "exact_replay": {
+    "block_diagnostics": {
+      "10": [252, 184754, 1022, 1],
+      "11": [462, 705430, 2046, 1],
+      "12": [924, 2704154, 4094, 1],
+      "2": [2, 4, 2, 1],
+      "3": [3, 18, 6, 1],
+      "4": [6, 68, 14, 1],
+      "5": [10, 250, 30, 1],
+      "6": [20, 922, 62, 1],
+      "7": [35, 3430, 126, 1],
+      "8": [70, 12868, 254, 1],
+      "9": [126, 48618, 510, 1]
+    },
+    "coordinate_coverage_checks": 1262,
+    "dense_average_trace_checks": 18,
+    "dense_restriction_rank_computations": 1146,
+    "dense_rows": [
+      [3, 1, 3, 1, 1, 1, 3],
+      [3, 1, 3, 3, 3, 1, 1],
+      [3, 1, 3, 6, 3, 2, 1],
+      [4, 1, 4, 1, 1, 1, 4],
+      [4, 1, 4, 4, 4, 1, 1],
+      [4, 1, 4, 5, 4, 5, 4],
+      [4, 1, 4, 8, 4, 2, 1],
+      [4, 2, 6, 1, 1, 1, 6],
+      [4, 2, 6, 6, 6, 1, 1],
+      [4, 2, 6, 12, 6, 2, 1],
+      [5, 1, 5, 1, 1, 1, 5],
+      [5, 1, 5, 5, 5, 1, 1],
+      [5, 1, 5, 8, 5, 8, 5],
+      [5, 1, 5, 10, 5, 2, 1],
+      [5, 2, 10, 1, 1, 1, 10],
+      [5, 2, 10, 10, 10, 1, 1],
+      [5, 2, 10, 20, 10, 2, 1],
+      [5, 2, 10, 33, 10, 33, 10]
+    ],
+    "finite_block_sum_checks": 29,
+    "isotype_dimension_cells": 23195,
+    "isotype_support_checks": 91040,
+    "source_graph_checks": 48616,
+    "source_rows": [
+      [2, 1, 2, 2, 1],
+      [3, 1, 3, 6, 2],
+      [3, 2, 3, 6, 2],
+      [4, 1, 4, 24, 6],
+      [4, 2, 6, 24, 4],
+      [4, 3, 4, 24, 6],
+      [5, 1, 5, 120, 24],
+      [5, 2, 10, 120, 12],
+      [5, 3, 10, 120, 12],
+      [5, 4, 5, 120, 24],
+      [6, 1, 6, 720, 120],
+      [6, 2, 15, 720, 48],
+      [6, 3, 20, 720, 36],
+      [6, 4, 15, 720, 48],
+      [6, 5, 6, 720, 120]
+    ]
+  },
+  "status": [
+    "GENERAL_TWO_SIDED_MATCHING_SOURCE_SECTION",
+    "GENERAL_SYMMETRIC_COMPRESSION_CEILING",
+    "GENERAL_EQUIVARIANT_PREPOST_CEILING",
+    "EXACT_FINITE_INTERFACES_REPLAYED"
+  ],
+  "theorem": {
+    "equivariant_ceiling": "Arbitrary S_n x S_n-equivariant pre/post endomorphisms of E_m obey the same ceiling.",
+    "finite_blocks": "A finite block sum across degrees is capped by binom(n,floor(n/2)).",
+    "graph_average": "average_sigma P_sigma=I/binom(n,m).",
+    "matching_term": "Q_m C_(T_sigma) J_m=(m!(n-m)!)^(-1) P_sigma.",
+    "source_section": "Q_m C_perm J_m=I_(E_m).",
+    "symmetric_ceiling": "rank(P_U C_perm P_U)/max_T rank(P_U C_T P_U)<=binom(n,m)."
+  }
+}
