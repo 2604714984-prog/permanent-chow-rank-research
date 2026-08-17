@@ -1,0 +1,32 @@
+{
+  "claim_boundary": "This is a ceiling on the standard exterior Koszul--Young flattenings and their finite block-diagonal direct sums. It is not an upper bound on actual Chow rank and does not cover representation projections, arbitrary Young/Pieri flattenings, nonlinear minors, higher syzygy modules, valuative arguments, Chow-realizability defects, border rank, exact rank for n>=6, or general Glynn optimality. Literature novelty is not established.",
+  "core_sha256": "12c52a1ae78bd4f7526dfb78cd18a0fc56bae2bd97f5736526a5ec262cfa39d4",
+  "exact_replay": {
+    "active_half_rank_checks": 726,
+    "finite_maxima": {
+      "10": {"attaining_output_degree": 5, "attaining_wedge_degree": 40, "central_binomial": 252, "four_central_ceiling": 1008, "glynn_upper": 512, "maximum_dimension_route_ceiling": 413},
+      "11": {"attaining_output_degree": 6, "attaining_wedge_degree": 60, "central_binomial": 462, "four_central_ceiling": 1848, "glynn_upper": 1024, "maximum_dimension_route_ceiling": 840},
+      "12": {"attaining_output_degree": 6, "attaining_wedge_degree": 60, "central_binomial": 924, "four_central_ceiling": 3696, "glynn_upper": 2048, "maximum_dimension_route_ceiling": 1565},
+      "2": {"attaining_output_degree": 1, "attaining_wedge_degree": 0, "central_binomial": 2, "four_central_ceiling": 8, "glynn_upper": 2, "maximum_dimension_route_ceiling": 2},
+      "3": {"attaining_output_degree": 2, "attaining_wedge_degree": 4, "central_binomial": 3, "four_central_ceiling": 12, "glynn_upper": 4, "maximum_dimension_route_ceiling": 5},
+      "4": {"attaining_output_degree": 2, "attaining_wedge_degree": 3, "central_binomial": 6, "four_central_ceiling": 24, "glynn_upper": 8, "maximum_dimension_route_ceiling": 8},
+      "5": {"attaining_output_degree": 3, "attaining_wedge_degree": 12, "central_binomial": 10, "four_central_ceiling": 40, "glynn_upper": 16, "maximum_dimension_route_ceiling": 17},
+      "6": {"attaining_output_degree": 3, "attaining_wedge_degree": 12, "central_binomial": 20, "four_central_ceiling": 80, "glynn_upper": 32, "maximum_dimension_route_ceiling": 30},
+      "7": {"attaining_output_degree": 4, "attaining_wedge_degree": 24, "central_binomial": 35, "four_central_ceiling": 140, "glynn_upper": 64, "maximum_dimension_route_ceiling": 61},
+      "8": {"attaining_output_degree": 4, "attaining_wedge_degree": 24, "central_binomial": 70, "four_central_ceiling": 280, "glynn_upper": 128, "maximum_dimension_route_ceiling": 110},
+      "9": {"attaining_output_degree": 5, "attaining_wedge_degree": 40, "central_binomial": 126, "four_central_ceiling": 504, "glynn_upper": 256, "maximum_dimension_route_ceiling": 225}
+    },
+    "n_max": 12,
+    "n_min": 2,
+    "route_ceiling_checks": 6083,
+    "term_quarter_rank_checks": 6083,
+    "transpose_duality_checks": 6083
+  },
+  "status": ["GENERAL_STANDARD_KOSZUL_YOUNG_ROUTE_CEILING", "ALL_WEDGE_DEGREES", "FINITE_DIRECT_SUMS_CLOSED", "EXACT_INTEGER_REPLAYED"],
+  "theorem": {
+    "asymptotic_gap": "The named route remains Omega(sqrt(n)) below the Glynn scale 2^(n-1).",
+    "direct_sum_ceiling": "Every finite block-diagonal direct sum of standard Koszul--Young maps has the same 4*central-binomial ceiling.",
+    "single_map_ceiling": "Every standard Koszul--Young rank-ratio lower bound for perm_n is at most 4*binom(n,floor(n/2)).",
+    "term_quarter_rank": "For every independent degree-n Chow term in N=n^2 variables, rank K_(m,p)(T) >= (1/4)*min(term source dimension, term target dimension)."
+  }
+}
