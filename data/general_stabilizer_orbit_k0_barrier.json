@@ -1,0 +1,57 @@
+{
+  "claim_boundary": "The theorem closes exact-additive representation profiles built from the smallest distinct projective term orbits. It introduces no Chow-rank lower bound and is not an upper bound on actual Chow rank. It does not cover fixed natural maps linear in f, minimal or persistence syzygy functors, nonlinear determinantal data, valuative arguments, or Chow-realizability defects. Literature novelty is not established.",
+  "core_sha256": "bf3defd92cc779905b2c676bc507fc7b03c7b5c1ad515f64393793ad2227782f",
+  "finite_replay": {
+    "arithmetic_rows_sha256": "eeeed6f813971389244878d32f41151fbb80764b5c10648999659cce50fbd8f5",
+    "partition_dimension_checks": 270,
+    "pointwise_isotype_checks": 921,
+    "stabilizer_group_elements_checked": 15016,
+    "stabilizer_rows": [
+      {
+        "factor_matrix_sha256": "237ff164137880ccd61daf467bd5f42df0d9dbc09c69ee87ab066fc81c1b5de5",
+        "factor_rank": 2,
+        "group_elements_checked": 4,
+        "group_size": 4,
+        "n": 2,
+        "projective_stabilizer_size": 1
+      },
+      {
+        "factor_matrix_sha256": "c726fc08389d4e89e922e0ea001a83c6f642025376b37022c30b153a05cb5a56",
+        "factor_rank": 3,
+        "group_elements_checked": 36,
+        "group_size": 36,
+        "n": 3,
+        "projective_stabilizer_size": 1
+      },
+      {
+        "factor_matrix_sha256": "09db0377ba68e30000c54a7135cd3cca9ac3df3abbda6a3eda3bb713364af135",
+        "factor_rank": 4,
+        "group_elements_checked": 576,
+        "group_size": 576,
+        "n": 4,
+        "projective_stabilizer_size": 1
+      },
+      {
+        "factor_matrix_sha256": "32f284958e40f66f88296b38ed0fde8a2c4b510aeedb9ddcc8a0d9bbaa6d592c",
+        "factor_rank": 5,
+        "group_elements_checked": 14400,
+        "group_size": 14400,
+        "n": 5,
+        "projective_stabilizer_size": 1
+      }
+    ],
+    "weighted_support_checks": 341
+  },
+  "status": [
+    "GENERAL_STABILIZER_EFFICIENT_ORBIT_SUBQUOTIENT",
+    "GENERAL_GENERIC_TRIVIAL_STABILIZER",
+    "EFFICIENT_ORBIT_EXACT_ADDITIVE_CEILING_ONE",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "theorem": {
+    "efficient_orbit_subquotient": "For a G-invariant decomposition f=sum_i T_i, A_f is a graded G-equivariant subquotient of direct_sum_i Ind_(H_i)^G A_(T_i), where H_i stabilizes the projective apolar ideal of T_i.",
+    "generic_denominator": "A trivial-stabilizer independent-factor term contributes k[G] tensor B_n; degree-d multiplicity of U is dim(U)*binom(n,d).",
+    "generic_term": "For G=S_n x S_n and n>=2, the independent-factor Chow locus contains terms with trivial projective stabilizer.",
+    "route_ceiling": "Every nonnegative short-exact-additive graded isotype scalar applied through the stabilizer-efficient orbit envelope has permanent/one-term ratio at most one."
+  }
+}
