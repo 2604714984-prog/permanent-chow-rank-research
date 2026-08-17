@@ -1,4 +1,4 @@
-# Full-orbit equivariant K0 profiles cannot prove a nontrivial permanent Chow-rank bound
+# Full-orbit equivariant profiles cannot prove a nontrivial permanent Chow-rank bound
 
 ## Status and claim boundary
 
@@ -21,39 +21,34 @@ nonnegative exact-additive graded isotype scalar gives a Chow-rank ratio at
 most one. The regular-representation cost completely dominates the
 multiplicity-free permanent apolar profile.
 
+The argument is made in the semisimple category of finite-dimensional graded
+`G`-representations. It does not require a `G`-stable differential two-plane.
+
 This does not prove that all representation-valued methods are useless. It
-does not cover a more efficient termwise equivariant envelope, fixed linear
-maps which avoid orbit symmetrization, minimal syzygy functors which are not
+does not cover a more efficient termwise equivariant envelope, fixed natural
+maps which avoid full orbit completion, minimal syzygy functors which are not
 exact-additive, nonlinear determinantal data, valuative arguments, or
 Chow-realizability defects.
 
 No numerical Chow-rank boundary changes in this note.
 
-## 1. Equivariant graded Grothendieck data
+## 1. Exact-additive graded representation data
 
-Let
-
-\[
-R=k[s,t]
-\]
-
-and let `C_G` be the category of finite-length graded `R`-modules with a
-compatible `G`-action commuting with `R`. Over characteristic zero the group
-algebra `k[G]` is semisimple.
-
-The simple objects of `C_G` are
+Let `Rep_G^gr` be the category of finite-dimensional graded
+`G`-representations with degree-preserving morphisms. Over characteristic
+zero, `k[G]` is semisimple. The simple graded objects are
 
 \[
-U\otimes k(-d),
+U(-d),
 \]
 
 where `U` runs through the irreducible `G`-representations and `d` through the
 integers. Consequently
 
 \[
-K_0(\mathcal C_G)
+K_0(\operatorname{Rep}^{\mathrm{gr}}_G)
 \simeq
-\bigoplus_{d,U}\mathbf Z[U\otimes k(-d)].
+\bigoplus_{d,U}\mathbf Z[U(-d)].
 \tag{1.1}
 \]
 
@@ -67,7 +62,8 @@ Every scalar invariant additive on all short exact sequences has the form
 \]
 
 where `m_(U,d)(M)` is the multiplicity of `U` in `M_d`. If `Phi` is
-nonnegative, or monotone under submodules and quotients, then
+nonnegative, or monotone under subrepresentations and quotient
+representations, then
 
 \[
 c_{U,d}\ge0.
@@ -77,21 +73,25 @@ c_{U,d}\ge0.
 Thus exact-additive representation scalars are nonnegative weighted graded
 isotype multiplicities.
 
+The apolar algebras below are first considered as graded modules over the full
+differential ring and then forgotten to graded `G`-representations. The
+subquotient maps remain graded and `G`-equivariant.
+
 ## 2. Equivariant orbit completion of an arbitrary decomposition
 
-Assume
+Let `S` be the full differential polynomial ring and assume
 
 \[
 f=T_1+\cdots+T_r
 \]
 
-and that `f` is `G`-invariant. Put
+with `f` invariant under `G`. Put
 
 \[
 I=\bigcap_{i=1}^r T_i^\perp.
 \]
 
-Since every differential operator in `I` annihilates every summand,
+Since every operator in `I` annihilates every summand,
 
 \[
 I\subseteq f^\perp.
@@ -113,16 +113,16 @@ J=\bigcap_{g\in G}gI.
 Then `J subset f^perp`, so
 
 \[
-R/J\twoheadrightarrow A_f.
+S/J\twoheadrightarrow A_f.
 \tag{2.2}
 \]
 
 The diagonal map into the quotients by the ideals `gI` is injective:
 
 \[
-R/J
+S/J
 \hookrightarrow
-\bigoplus_{g\in G}R/gI.
+\bigoplus_{g\in G}S/gI.
 \tag{2.3}
 \]
 
@@ -137,24 +137,24 @@ gI
 hence
 
 \[
-R/gI
+S/gI
 \hookrightarrow
 \bigoplus_iA_{gT_i}.
 \tag{2.4}
 \]
 
-Combining (2.2)--(2.4) gives the exact equivariant subquotient:
+Combining (2.2)--(2.4) and then forgetting the `S`-module structure gives
 
 \[
 \boxed{
 A_f
-\text{ is a }G\text{-equivariant subquotient of }
+\text{ is a graded }G\text{-equivariant subquotient of }
 \bigoplus_{i=1}^r\bigoplus_{g\in G}A_{gT_i}.
 }
 \tag{2.5}
 \]
 
-No equivariant section is assumed. The intermediate quotient `R/J` supplies
+No equivariant section is assumed. The intermediate quotient `S/J` supplies
 the legal bridge.
 
 ## 3. A full term orbit is regular
@@ -170,7 +170,7 @@ Fix one Chow term `T`. The orbit-indexed direct sum
 
 has a `G`-action sending the `g` component to the `hg` component. Transport
 an element of `A_T` to the `g` component by applying `g`. This gives a graded
-`G`-module isomorphism
+`G`-representation isomorphism
 
 \[
 \boxed{
@@ -182,7 +182,7 @@ k[G]\otimes A_T,
 \]
 
 where `G` acts by the left regular representation on the first factor and
-trivially on the transported copy of `A_T`.
+trivially on the transported graded vector space `A_T`.
 
 For an irreducible representation `U`, the regular representation contains
 `U` with multiplicity `dim U`. Therefore
@@ -215,7 +215,7 @@ M_d\boxtimes M_d,
 \tag{4.1}
 \]
 
-where `M_d` is the permutation module on `d`-subsets. The classical
+where `M_d` is the permutation module on `d`-subsets. Its classical
 multiplicity-free decomposition is
 
 \[
@@ -314,9 +314,6 @@ cannot prove even `r>=2`.
 Every nonnegative exact-additive graded `S_n x S_n`-isotype scalar applied
 through the legal full-orbit completion has route ceiling one.
 
-This is stronger than a central-binomial ceiling because the regular orbit
-multiplicity is much larger than the multiplicity-free permanent numerator.
-
 ## 6. Ungraded profile
 
 The same irreducible pair indexed by `(i,j)` occurs in the total permanent
@@ -328,7 +325,7 @@ apolar algebra in the degrees
 n-\max(i,j).
 \]
 
-Its total multiplicity is therefore
+Its total multiplicity is
 
 \[
 n-2\max(i,j)+1.
@@ -352,15 +349,6 @@ route.
 
 The primary audit verifies:
 
-- the hook-length dimensions of every irreducible of `S_n` through `n=10`;
-- the regular-representation sum-of-squares identity;
-- the two-row dimensions in every permanent degree through `n=40`;
-- multiplicity-free row--column dimensions;
-- deterministic and exhaustive nonnegative isotype weights; and
-- the ungraded multiplicity formula (6.1).
-
-The exact interfaces are:
-
 ```text
 regular partition cells                    138
 regular dimension checks                    10
@@ -373,7 +361,8 @@ ungraded isotype checks                  6,179
 ```
 
 A second implementation uses a disjoint parameter range and obtains Specht
-dimensions from the determinantal formula rather than the hook product.
+dimensions from the Frobenius determinantal formula rather than the hook
+product.
 
 ## 8. Research decision
 
