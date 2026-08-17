@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """Exact finite audit for row/column-isotype projected catalecticants.
 
-The proof document establishes a general characteristic-zero theorem.  For the
+The proof document establishes a general characteristic-zero theorem. For the
 permanent derivative module
 
     E_m ~= k[C([n],m)] tensor k[C([n],m)],
 
-any rectangular row/column symmetry projection A tensor B has rank
-`dim(A)*dim(B)` on perm_n.  A diagonal matching Chow term yields the diagonal
-comultiplication, whose projection has rank at least max(dim(A),dim(B)).
-Consequently every such rank-ratio route, and every finite block-diagonal sum,
-is capped by binom(n,m).
+every fixed row/column symmetry projection onto an arbitrary union of Johnson
+isotype pairs is capped by binom(n,m). A diagonal matching Chow term yields
+diagonal comultiplication; Krein positivity converts its Gram support into a
+universal one-term denominator. Independent source/target filters and finite
+block-diagonal sums obey the same ceiling.
 
-This script reconstructs the primitive Johnson projectors modulo a large prime
-and checks every irreducible rectangle for 2<=n<=9.
+This script reconstructs the primitive Johnson projectors modulo a large prime,
+checks every irreducible rectangle, and exhausts every output isotype support
+mask for 2<=n<=9.
 """
 from __future__ import annotations
 
@@ -26,7 +27,7 @@ from pathlib import Path
 from typing import Any
 
 PRIME = 1_000_003
-EXPECTED_CORE_SHA256 = "604549395d620264b183513f6e18eaced85c79b62c0c34b980634b10708d4804"
+EXPECTED_CORE_SHA256 = "19cec02e6c1a9db1a24bfe4b8b13fc1a0e722a61970f36088a8e81d3add900d1"
 
 
 def require(c: bool, msg: object) -> None:
@@ -121,7 +122,10 @@ def johnson_data(n: int, m: int):
             projector,
             pow(denominator % PRIME, PRIME - 2, PRIME),
         )
-        require(matmul(projector, projector) == projector, (n, m, i, "not idempotent"))
+        require(
+            matmul(projector, projector) == projector,
+            (n, m, i, "not idempotent"),
+        )
         require(
             rank_mod(projector) == dimensions[i],
             (n, m, i, rank_mod(projector), dimensions[i]),
@@ -141,7 +145,7 @@ def johnson_data(n: int, m: int):
 def build_payload() -> dict[str, Any]:
     projector_checks = 0
     rectangle_checks = 0
-    block_sum_checks = 0
+    arbitrary_union_checks = 0
     finite = {}
     for n in range(2, 10):
         nrows = []
@@ -149,80 +153,164 @@ def build_payload() -> dict[str, Any]:
             if m > n - m:
                 continue
             size, dims, projectors = johnson_data(n, m)
-            rows = []
+            pairs = []
             for i, dim_i in enumerate(dims):
                 for j, dim_j in enumerate(dims):
                     gram = [
                         [
-                            projectors[i][r][c] * projectors[j][r][c] % PRIME
+                            projectors[i][r][c]
+                            * projectors[j][r][c]
+                            % PRIME
                             for c in range(size)
                         ]
                         for r in range(size)
                     ]
                     diagonal_rank = rank_mod(gram)
+                    support_mask = 0
+                    for k, projector in enumerate(projectors):
+                        trace = sum(
+                            projector[r][c] * gram[c][r]
+                            for r in range(size)
+                            for c in range(size)
+                        ) % PRIME
+                        if trace:
+                            support_mask |= 1 << k
+                    support_dimension = sum(
+                        dims[k]
+                        for k in range(len(dims))
+                        if support_mask & (1 << k)
+                    )
+                    require(
+                        diagonal_rank == support_dimension,
+                        (n, m, i, j, diagonal_rank, support_mask),
+                    )
                     require(
                         diagonal_rank >= max(dim_i, dim_j),
                         (n, m, i, j, diagonal_rank, dim_i, dim_j),
                     )
-                    route = (dim_i * dim_j + diagonal_rank - 1) // diagonal_rank
+                    route = (
+                        dim_i * dim_j + diagonal_rank - 1
+                    ) // diagonal_rank
                     require(route <= size, (n, m, i, j, route, size))
-                    rows.append([i, j, dim_i, dim_j, diagonal_rank, route])
+                    pairs.append(
+                        [
+                            i,
+                            j,
+                            dim_i,
+                            dim_j,
+                            diagonal_rank,
+                            route,
+                            support_mask,
+                        ]
+                    )
                     rectangle_checks += 1
-            require(
-                all(
-                    dim_i * dim_j <= size * max(dim_i, dim_j)
-                    for _, _, dim_i, dim_j, _, _ in rows
-                ),
-                (n, m),
-            )
-            block_sum_checks += len(rows)
+
+            maximum_union_ratio_numerator = 0
+            maximum_union_ratio_denominator = 1
+            maximum_union_mask = 0
+            for mask in range(1, 1 << len(dims)):
+                denominator = sum(
+                    dims[k]
+                    for k in range(len(dims))
+                    if mask & (1 << k)
+                )
+                numerator = sum(
+                    dim_i * dim_j
+                    for _, _, dim_i, dim_j, _, _, support in pairs
+                    if support & ~mask == 0
+                )
+                require(
+                    numerator <= size * denominator,
+                    (n, m, mask, numerator, denominator, size),
+                )
+                if (
+                    numerator * maximum_union_ratio_denominator
+                    > maximum_union_ratio_numerator * denominator
+                ):
+                    maximum_union_ratio_numerator = numerator
+                    maximum_union_ratio_denominator = denominator
+                    maximum_union_mask = mask
+                arbitrary_union_checks += 1
+
             projector_checks += len(projectors)
             nrows.append(
                 {
                     "m": m,
                     "subset_dimension": size,
                     "isotype_dimensions": dims,
-                    "maximum_route_ceiling": max(row[-1] for row in rows),
-                    "rectangle_table_sha256": canonical_sha256(rows),
+                    "maximum_rectangle_route_ceiling": max(
+                        row[5] for row in pairs
+                    ),
+                    "maximum_union_ratio_numerator": (
+                        maximum_union_ratio_numerator
+                    ),
+                    "maximum_union_ratio_denominator": (
+                        maximum_union_ratio_denominator
+                    ),
+                    "maximum_union_support_mask": maximum_union_mask,
+                    "pair_table_sha256": canonical_sha256(pairs),
                 }
             )
         finite[str(n)] = nrows
+
     core = {
         "status": [
-            "GENERAL_ROW_COLUMN_RECTANGULAR_PROJECTION_CEILING",
+            "GENERAL_ROW_COLUMN_ISOTYPE_PROJECTION_CEILING",
+            "ARBITRARY_ISOTYPE_UNIONS_CLOSED",
             "DIAGONAL_TERM_WITNESS",
             "EXACT_MODULAR_REPLAY",
         ],
         "theorem": {
-            "permanent_rank": "rank F_(A,B)(perm_n)=dim(A)*dim(B)",
-            "diagonal_term_rank": "rank F_(A,B)(prod_i x_ii)>=max(dim(A),dim(B))",
-            "single_rectangle_ceiling": "route ratio <= min(dim(A),dim(B)) <= binom(n,m)",
-            "finite_block_sum_ceiling": "every finite block-diagonal sum of rectangular projections has ratio <= binom(n,m)",
-            "global_ceiling": "max over m is binom(n,floor(n/2))",
+            "permanent_rank": (
+                "rank on an isotype union is its total dimension"
+            ),
+            "diagonal_term_gram": (
+                "the diagonal-term Gram is the sum of the corresponding "
+                "Johnson Schur products"
+            ),
+            "krein_budget": (
+                "for every diagonal isotype k, sum_(i,j) q_(i,j)^k="
+                "binom(n,m)"
+            ),
+            "arbitrary_union_ceiling": (
+                "every row-column isotype-union projection has route ratio "
+                "<= binom(n,m)"
+            ),
+            "source_target_ceiling": (
+                "independent fixed source and target isotype filters have "
+                "ratio <= binom(n,m)"
+            ),
+            "finite_block_sum_ceiling": (
+                "every finite block-diagonal sum of such projections has "
+                "the same ceiling"
+            ),
+            "global_ceiling": (
+                "max over m is binom(n,floor(n/2))"
+            ),
         },
         "exact_replay": {
             "prime": PRIME,
             "projector_checks": projector_checks,
             "rectangle_checks": rectangle_checks,
-            "block_sum_checks": block_sum_checks,
+            "arbitrary_union_checks": arbitrary_union_checks,
             "finite": finite,
         },
         "claim_boundary": (
-            "The theorem covers row/column symmetry projections whose target is "
-            "A tensor B, with A and B sums of Johnson isotypes, and finite "
-            "block-diagonal sums of such maps. It does not cover a single "
-            "projection onto an arbitrary nonrectangular union of isotype pairs, "
-            "row/column projections of higher Koszul maps, arbitrary Pieri maps, "
-            "nonlinear minors, higher syzygies, Chow-realizability defects, "
-            "border rank, exact rank for n>=6, or general Glynn optimality."
+            "The theorem covers every fixed S_n x S_n-equivariant projection "
+            "of the permanent catalecticant onto an arbitrary union of "
+            "row-column Johnson isotype pairs, independent fixed source and "
+            "target filters, and finite block-diagonal sums. It does not "
+            "cover row-column projections of higher Koszul maps, arbitrary "
+            "Pieri maps, nonlinear minors, higher syzygies, "
+            "Chow-realizability defects, border rank, exact rank for n>=6, "
+            "or general Glynn optimality."
         ),
     }
     payload = {**core, "core_sha256": canonical_sha256(core)}
-    if EXPECTED_CORE_SHA256 != "TO_BE_FILLED":
-        require(
-            payload["core_sha256"] == EXPECTED_CORE_SHA256,
-            payload["core_sha256"],
-        )
+    require(
+        payload["core_sha256"] == EXPECTED_CORE_SHA256,
+        payload["core_sha256"],
+    )
     return payload
 
 
@@ -235,7 +323,9 @@ def main() -> int:
     if args.json:
         args.json.write_text(text, encoding="utf-8")
     print(text, end="")
-    print("GENERAL_ROW_COLUMN_PROJECTED_CATALECTICANT_CEILING_AUDIT_PASS")
+    print(
+        "GENERAL_ROW_COLUMN_PROJECTED_CATALECTICANT_CEILING_AUDIT_PASS"
+    )
     return 0
 
 
