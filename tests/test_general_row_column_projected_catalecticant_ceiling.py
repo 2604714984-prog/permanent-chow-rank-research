@@ -7,7 +7,6 @@ import sys
 import unittest
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 if str(SCRIPTS) not in sys.path:
@@ -42,26 +41,41 @@ class GeneralRowColumnProjectedCatalecticantCeilingTests(unittest.TestCase):
             (
                 replay["projector_checks"],
                 replay["rectangle_checks"],
-                replay["block_sum_checks"],
+                replay["arbitrary_union_checks"],
             ),
-            (60, 200, 200),
+            (60, 200, 188),
         )
 
     def test_frozen(self) -> None:
         self.assertEqual(json.loads(FROZEN.read_text()), self.payload)
         self.assertEqual(
             self.payload["core_sha256"],
-            "604549395d620264b183513f6e18eaced85c79b62c0c34b980634b10708d4804",
+            "19cec02e6c1a9db1a24bfe4b8b13fc1a0e722a61970f36088a8e81d3add900d1",
         )
 
-    def test_n8_central(self) -> None:
+    def test_n8_central_arbitrary_union(self) -> None:
         row = next(
             value
             for value in self.payload["exact_replay"]["finite"]["8"]
             if value["m"] == 4
         )
         self.assertEqual(row["subset_dimension"], 70)
-        self.assertLessEqual(row["maximum_route_ceiling"], 70)
+        self.assertLessEqual(
+            row["maximum_union_ratio_numerator"],
+            70 * row["maximum_union_ratio_denominator"],
+        )
+
+    def test_n9_full_union_attains_ceiling(self) -> None:
+        row = next(
+            value
+            for value in self.payload["exact_replay"]["finite"]["9"]
+            if value["m"] == 4
+        )
+        self.assertEqual(row["subset_dimension"], 126)
+        self.assertEqual(
+            row["maximum_union_ratio_numerator"],
+            126 * row["maximum_union_ratio_denominator"],
+        )
 
     def test_independent(self) -> None:
         completed = subprocess.run(
@@ -82,6 +96,7 @@ class GeneralRowColumnProjectedCatalecticantCeilingTests(unittest.TestCase):
             completed.stdout,
         )
         self.assertIn("independent_rectangle_checks=146", completed.stdout)
+        self.assertIn("independent_arbitrary_union_checks=132", completed.stdout)
 
 
 if __name__ == "__main__":
