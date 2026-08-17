@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Independent incidence-projector replay for projected catalecticants.
+"""Independent incidence-projector replay for row/column isotype projections.
 
-This implementation imports none of the primary audit.  It constructs the
-nested Johnson incidence spaces, obtains their orthogonal projectors by exact
-Gram inversion modulo a second prime, and checks the projected diagonal ranks.
+This implementation imports none of the primary audit. It constructs the
+nested Johnson incidence spaces, obtains the primitive projectors by exact
+Gram inversion modulo a second prime, reconstructs all Krein support masks,
+and checks every arbitrary union of row/column isotype pairs through n=8.
 """
 from __future__ import annotations
 
@@ -21,7 +22,10 @@ def require(condition: bool, message: object) -> None:
 def matmul(a: list[list[int]], b: list[list[int]]) -> list[list[int]]:
     columns = list(zip(*b))
     return [
-        [sum(x * y for x, y in zip(row, column)) % PRIME for column in columns]
+        [
+            sum(x * y for x, y in zip(row, column)) % PRIME
+            for column in columns
+        ]
         for row in a
     ]
 
@@ -39,7 +43,11 @@ def rank_mod(a: list[list[int]]) -> int:
     rank = 0
     for column in range(column_count):
         pivot = next(
-            (index for index in range(rank, row_count) if a[index][column] % PRIME),
+            (
+                index
+                for index in range(rank, row_count)
+                if a[index][column] % PRIME
+            ),
             None,
         )
         if pivot is None:
@@ -71,13 +79,19 @@ def inverse_mod(a: list[list[int]]) -> list[list[int]]:
     rank = 0
     for column in range(size):
         pivot = next(
-            (index for index in range(rank, size) if augmented[index][column]),
+            (
+                index
+                for index in range(rank, size)
+                if augmented[index][column]
+            ),
             None,
         )
         require(pivot is not None, ("singular", column))
         augmented[rank], augmented[pivot] = augmented[pivot], augmented[rank]
         inverse = pow(augmented[rank][column], PRIME - 2, PRIME)
-        augmented[rank] = [value * inverse % PRIME for value in augmented[rank]]
+        augmented[rank] = [
+            value * inverse % PRIME for value in augmented[rank]
+        ]
         for index in range(size):
             if index == rank or not augmented[index][column]:
                 continue
@@ -99,7 +113,10 @@ def incidence_projectors(n: int, m: int):
     for index in range(maximum_index + 1):
         lower_subsets = list(itertools.combinations(range(n), index))
         incidence = [
-            [1 if set(lower) <= subset_sets[column] else 0 for column in range(size)]
+            [
+                1 if set(lower) <= subset_sets[column] else 0
+                for column in range(size)
+            ]
             for lower in lower_subsets
         ]
         gram = matmul(incidence, transpose(incidence))
@@ -118,7 +135,10 @@ def incidence_projectors(n: int, m: int):
             ]
             for row in range(size)
         ]
-        require(matmul(projector, projector) == projector, (n, m, index, "idempotence"))
+        require(
+            matmul(projector, projector) == projector,
+            (n, m, index, "idempotence"),
+        )
         dimension = comb(n, index) - (comb(n, index - 1) if index else 0)
         require(
             rank_mod(projector) == dimension,
@@ -132,6 +152,7 @@ def incidence_projectors(n: int, m: int):
 def main() -> int:
     projector_checks = 0
     rectangle_checks = 0
+    arbitrary_union_checks = 0
     maxima = []
     for n in range(2, 9):
         best = 0
@@ -144,33 +165,97 @@ def main() -> int:
                 for index in range(len(projectors))
             ]
             projector_checks += len(projectors)
+            pair_rows = []
             for i, left in enumerate(projectors):
                 for j, right in enumerate(projectors):
                     gram = [
-                        [left[row][column] * right[row][column] % PRIME for column in range(size)]
+                        [
+                            left[row][column]
+                            * right[row][column]
+                            % PRIME
+                            for column in range(size)
+                        ]
                         for row in range(size)
                     ]
                     diagonal_rank = rank_mod(gram)
+                    support_mask = 0
+                    for k, projector in enumerate(projectors):
+                        trace = sum(
+                            projector[row][column] * gram[column][row]
+                            for row in range(size)
+                            for column in range(size)
+                        ) % PRIME
+                        if trace:
+                            support_mask |= 1 << k
+                    support_dimension = sum(
+                        dimensions[k]
+                        for k in range(len(dimensions))
+                        if support_mask & (1 << k)
+                    )
                     require(
-                        diagonal_rank >= max(dimensions[i], dimensions[j]),
+                        diagonal_rank == support_dimension,
+                        (n, m, i, j, diagonal_rank, support_mask),
+                    )
+                    require(
+                        diagonal_rank
+                        >= max(dimensions[i], dimensions[j]),
                         (n, m, i, j, diagonal_rank),
                     )
                     ceiling = (
-                        dimensions[i] * dimensions[j] + diagonal_rank - 1
+                        dimensions[i] * dimensions[j]
+                        + diagonal_rank
+                        - 1
                     ) // diagonal_rank
-                    require(ceiling <= size, (n, m, i, j, ceiling, size))
+                    require(
+                        ceiling <= size,
+                        (n, m, i, j, ceiling, size),
+                    )
                     best = max(best, ceiling)
+                    pair_rows.append(
+                        (dimensions[i] * dimensions[j], support_mask)
+                    )
                     rectangle_checks += 1
+
+            for mask in range(1, 1 << len(dimensions)):
+                denominator = sum(
+                    dimensions[k]
+                    for k in range(len(dimensions))
+                    if mask & (1 << k)
+                )
+                numerator = sum(
+                    weight
+                    for weight, support in pair_rows
+                    if support & ~mask == 0
+                )
+                require(
+                    numerator <= size * denominator,
+                    (n, m, mask, numerator, denominator, size),
+                )
+                best = max(
+                    best,
+                    (numerator + denominator - 1) // denominator,
+                )
+                arbitrary_union_checks += 1
         maxima.append(best)
 
     require(
-        (projector_checks, rectangle_checks) == (46, 146),
-        (projector_checks, rectangle_checks),
+        (
+            projector_checks,
+            rectangle_checks,
+            arbitrary_union_checks,
+        )
+        == (46, 146, 132),
+        (projector_checks, rectangle_checks, arbitrary_union_checks),
     )
+    require(maxima == [2, 3, 6, 10, 20, 35, 70], maxima)
     print(f"independent_projector_checks={projector_checks}")
     print(f"independent_rectangle_checks={rectangle_checks}")
+    print(f"independent_arbitrary_union_checks={arbitrary_union_checks}")
     print("independent_maxima_n2_to_n8=" + ",".join(map(str, maxima)))
-    print("GENERAL_ROW_COLUMN_PROJECTED_CATALECTICANT_CEILING_INDEPENDENT_PASS")
+    print(
+        "GENERAL_ROW_COLUMN_PROJECTED_CATALECTICANT_CEILING_"
+        "INDEPENDENT_PASS"
+    )
     return 0
 
 
