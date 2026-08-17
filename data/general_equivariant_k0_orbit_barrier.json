@@ -1,0 +1,14 @@
+{
+  "claim_boundary": "The theorem closes exact-additive representation scalars only after the legal full-group orbit symmetrization of arbitrary Chow terms. It does not close a more efficient termwise equivariant envelope, fixed linear maps already treated by matching-orbit theorems, minimal syzygy functors which are not exact-additive, nonlinear determinantal data, valuative arguments, Chow-realizability defects, border rank, exact rank for n>=6, or general Glynn optimality.",
+  "core_sha256": "e6ac3ce63910c27ef4a89856487caefdf66c7a133c706cd3e6bd5c3d31d17357",
+  "exact_replay": {"degree_isotype_cells":67988,"exhaustive_isotype_supports":200359,"finite_block_checks":39,"regular_dimension_checks":10,"regular_partition_cells":138,"two_row_dimension_checks":6388,"ungraded_isotype_checks":6179,"weighted_degree_checks":70556},
+  "frozen_scope": "theorem core and replay counts; diagnostic rows are regenerated",
+  "status": ["GENERAL_EQUIVARIANT_GRADED_K0_CLASSIFICATION","GENERAL_APOLAR_ORBIT_SUBQUOTIENT","ORBIT_SYMMETRIZED_ISOTYPE_BARRIER","EXACT_FINITE_INTERFACES_REPLAYED"],
+  "theorem": {
+    "equivariant_K0": "Exact-additive scalars on finite-length graded G-equivariant k[s,t]-modules are nonnegative weighted graded isotype multiplicities.",
+    "orbit_subquotient": "For G-invariant f=sum_i T_i, A_f is a G-equivariant subquotient of direct_sum_(i,g) A_(gT_i).",
+    "permanent_multiplicity": "Each degree of A_(perm_n) is multiplicity-free under S_n x S_n.",
+    "regular_orbit": "For each term T, direct_sum_g A_(gT) is isomorphic to k[G] tensor A_T, with G regular on the first factor.",
+    "route_ceiling": "Every full-orbit exact-additive isotype scalar gives a rank-ratio lower bound at most one."
+  }
+}
