@@ -182,7 +182,7 @@ dimension `q dim H`,
 &=
 q\dim H-\dim(K\cap L_{g,h})\\
 &\ge
-q\dim H-rac{q^2\dim H-R}{q}
+q\dim H-\frac{q^2\dim H-R}{q}
 =
 \frac Rq.
 \end{aligned}
