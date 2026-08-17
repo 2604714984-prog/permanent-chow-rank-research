@@ -4,26 +4,28 @@
 
 This is the canonical high-level ledger for the active permanent Chow-rank
 research repository. `STATUS.md` remains the detailed theorem inventory. This
-file records numerical boundaries, theorem milestones, active stacked
-branches, superseded or rejected routes, and the next authorized mathematical
-interfaces.
+file records the current numerical boundaries, the general-`n` theorem stack,
+strict route ceilings, active pull-request ancestry and the next authorized
+mathematical interfaces.
 
 Every result that changes a theorem, numerical bound, counterexample, route
-barrier, equality classification, or open frontier must update this file in
-the same pull request. This is one Markdown index, not a registry, database,
-manager, dispatcher, or second workflow layer.
+barrier, equality classification or open frontier must update this file in the
+same pull request. This is one Markdown index, not a registry, database,
+manager, dispatcher or second workflow layer.
 
-Last consolidated: **2026-08-16**  
-Consolidation base: PR #52 theorem head
-`fab0e51bda4d04a5af924f191b202c0ac358cc3b`.
+Last consolidated: **2026-08-17**  
+Consolidation branch: `research/two-direction-power-profiles`.
 
 ## Status vocabulary
 
 - `ACCEPTED_BASELINE`: canonical small-`n` result on merged mainline.
-- `PROOF_DRAFT_COMPLETE`: the argument is written; external review may remain.
-- `COMPUTATION_REPLAYED`: the finite interface has deterministic replay.
+- `PROOF_DRAFT_COMPLETE`: the written proof is complete inside its stated
+  dependencies; external review or merge may remain pending.
+- `COMPUTATION_REPLAYED`: the stated finite interface has deterministic replay.
 - `RESTRICTED_FAMILY_THEOREM`: exact only for a named proper subclass.
 - `ROUTE_DIAGNOSTIC`: a valid result used to select or reject a route.
+- `ROUTE_CEILING`: a proved upper limit on a named lower-bound mechanism; never
+  an upper bound on actual Chow rank unless separately stated.
 - `STACKED_DRAFT`: valid only on the named open PR stack until merged.
 - `SUPERSEDED`: retained for provenance but not canonical.
 - `REJECTED`: an attempted implication was found invalid before promotion.
@@ -60,36 +62,41 @@ currently accessible repository state.
 \operatorname{ChowRank}(\operatorname{perm}_5)=16.
 \]
 
-The `n=3` proof is linear algebra. The `n=4` proof combines the `560/92`
-Koszul baseline, low-rank quadratic classification, the exact `psi_v` chart
-and a double-quotient inequality. The repaired `n=5` proof preserves the
-coupled-catalectic firewall, routes all 58 fixed-six states and binds the
+The `n=3` proof is linear algebra. The `n=4` proof combines the first-Koszul
+baseline, low-rank quadratic classification, the exact `psi_v` chart and a
+double-quotient inequality. The repaired `n=5` proof preserves the
+coupled-catalectic firewall, routes all fixed-six states and binds the
 non-finite bridges and deterministic certificates at merged PR #30.
 
 ## 3. General-`n` theorem stack
 
 | ID | Statement | Status | PR / document |
 |---|---|---|---|
-| `G-PROFILE` | Any lower-bound method factoring only through scalar derivative dimensions is capped at the central binomial coefficient. | merged proof draft | PR #32 |
+| `G-PROFILE` | Any method factoring only through scalar derivative dimensions is capped at the central binomial coefficient. | merged proof draft | PR #32 |
 | `G-SIGN` | `ColumnSignRank(perm_n)=RowSignRank(perm_n)=2^(n-1)`. | merged restricted-family theorem | PR #33 |
 | `G-AFFINE-SLICE` | The Boolean slice has affine-Segre rank `d+1`; sign rigidity does not extend to arbitrary complex diagonal ratios. | merged route diagnostic | PR #34 |
 | `G-KOSZUL` | General first-Koszul, quotient-gain, parity-asymptotic and fixed-offset multishadow formulas. | proof draft | general docs / `STATUS.md` |
 | `G-MACAULAY` | Vector-valued first prolongation satisfies `dim K^(1)<=dim(K)^{<2>}`. | proof draft, replayed | general relation docs |
 | `G-EXACT-SHADOW` | Exact simultaneous product-shadow minima are Ferrers integer programs. | stacked draft, independent replay | PR #35 |
 | `G-NESTED-SHADOW` | A certified zero-intersection block can be projected away inside a nonzero-intersection multishadow proof. | stacked draft | PR #38 |
-| `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`; a zero-common-factor block rotation can still have large overlap. | stacked draft, replayed | PR #41 |
-| `G-DUAL-FRAME-OVERLAP` | For same-span independent frames, quadratic literal overlap is sharply bounded by a dual-frame support invariant. | stacked draft, replayed | PR #44 |
+| `G-PAIR-OVERLAP` | Transverse shared-factor pairs have intersection `binom(s,m)`; factor count alone does not control arbitrary overlap. | stacked draft, replayed | PR #41 |
+| `G-DUAL-FRAME-OVERLAP` | Same-span quadratic literal overlap is sharply bounded by a dual-frame support invariant. | stacked draft, replayed | PR #44 |
 | `G-FACTOR-SPAN-ZERO` | A joint factor span of dimension `<m^2` has zero intersection with `D_m(perm_n)`; low-span quotient intersections are exact. | stacked draft | PR #45 |
 | `G-PERM-CENTER` | For every `m>=3`, the concise Hessian center of `perm_m` is scalar; minimal-shadow permanent derivatives are direct-sum indecomposable. | stacked draft, replayed | PR #46 |
-| `G-CROSS-DEGREE-PROJECTION` | Project a term block one derivative degree lower, retain the exact permanent-relative defect, and invert the upper shadow. | stacked draft, independent replay | PR #47 |
-| `G-DERIVATIVE-TOWER` | Define permanent-relative capacities `B_(n,d)(q)` recursively across derivative degrees with exact shadows and subblock projection. | stacked general-`n` draft | PR #48 |
-| `G-TOWER-BOOTSTRAP` | Compose tower capacities with complementary-intersection Koszul residual ranks. | stacked route theorem | PR #49 |
+| `G-CROSS-DEGREE-PROJECTION` | Project a Chow block one derivative degree lower, retain the exact permanent-relative defect and invert the upper shadow. | stacked draft, independent replay | PR #47 |
+| `G-DERIVATIVE-TOWER` | Permanent-relative capacities `B_(n,d)(q)` propagate recursively across derivative degrees with exact shadows and subblock projection. | stacked general theorem | PR #48 |
+| `G-TOWER-BOOTSTRAP` | Tower capacities compose with complementary-intersection first-Koszul residual ranks. | stacked route theorem | PR #49 |
 | `G-TOWER-SATURATION` | A `q`-term decomposition forces every derivative-tower row to have saturated at `q`. | stacked general theorem | PR #50 |
-| `G-FULL-DEGREE-ENVELOPE` | The projection recurrence is a prefix min-plus envelope; scanning through degree `n-1` gives the thresholds in PR #51. | stacked general theorem, C++ and Python replay | PR #51 |
-| `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the equivalent max-plus deficit recurrence. | stacked general theorem, two independent exact DPs | PR #52 |
-| `G-TOWER-TAIL` | Thresholds are nondecreasing; the full scalar bound is the top row; fixed-codimension transitions have universal constants `c_k`; the final row adds at most one and is controlled by bipartite `C4` supersaturation. | current general-`n` stacked draft, two independent exact DPs | current PR #53 |
-| `G-SHADOW-ENTROPY-BARRIER` | Product shadows satisfy an exact incidence sandwich and preserve exponential rate at linear degree. Consequently `log Theta_n/n -> log 2`; exponential entropy alone cannot resolve the polynomial gap to Glynn. | current general-`n` route theorem, exact replay | current PR #53 |
-| `G-CENTRAL-WINDOW` | Ambient-dependent tail constants imply that all degrees a fixed linear distance above the center are exponentially negligible. At central-binomial precision, only an `O(sqrt(n log n))` window above degree `n/2` can matter. | current general-`n` stacked theorem, exact arithmetic replay | current PR #53 |
+| `G-FULL-DEGREE-ENVELOPE` | The projection recurrence is a prefix min-plus envelope; full degree coverage gives the PR #51 thresholds. | stacked general theorem, C++ and Python replay | PR #51 |
+| `G-SHADOW-COMPLEMENT` | `Gamma_(n,d)(A_(d-1)-z)=A_d-F_(n,n-d+1)(z)` and the tower becomes an exact max-plus deficit transport. | stacked general theorem, two independent DPs | PR #52 |
+| `G-TOWER-TAIL` | Saturation thresholds are nondecreasing; fixed-codimension transitions have universal constants; the final row adds at most one and is a bipartite `C4` supersaturation decision. | stacked general theorem, replayed | PR #53 |
+| `G-SHADOW-ENTROPY-BARRIER` | Product shadows preserve first-order exponential rate at linear degree; entropy alone cannot distinguish central-binomial scale from Glynn scale. | stacked route theorem | PR #53 |
+| `G-CENTRAL-WINDOW` | At polynomial precision, only a window `d=n/2+O(sqrt(n log n))` above the center can affect the scalar tower. | stacked general theorem | PR #53 |
+| `G-SCALAR-POLYNOMIAL-CEILING` | The complete exact scalar tower satisfies `Theta_n=O(n^(1/4) binom(n,floor(n/2)))=O(2^n/n^(1/4))`. | `ROUTE_CEILING`, exact finite interfaces replayed | PR #55 |
+| `G-APOLAR-SUBQUOTIENT` | For any differential two-plane `W`, `A_f` is a `k[W]`-subquotient of the direct sum of termwise apolar algebras. | current stacked general theorem | PR #56 |
+| `G-BOOLEAN-TERM-ENVELOPE` | Every Chow-term apolar algebra, including dependent-factor terms, is a quotient of a submodule of the squarefree Boolean envelope. | current stacked general theorem | PR #56 |
+| `G-TWO-DIRECTION-POWERS` | Homogeneous profiles `dim((W^pA_f)_d)` are monotone; exact scans through `n=6` do not improve existing unrestricted bounds. | current finite route diagnostic | PR #56 |
+| `G-TWO-DIRECTION-PRINCIPAL` | Every principal homogeneous binary ideal profile is capped by `binom(n,floor(n/2))`. | current general-`n` route barrier | PR #56 |
 
 ## 4. `perm_6` milestone chain
 
@@ -105,50 +112,53 @@ final all-alpha=3 geometry       28
 Current accessible frontier:
 
 ```text
-28 <= ChowRank(perm_6) <= 32
+28 <= ChowRank(perm_6) <= 32.
 ```
 
 The lower-29 program remains partial. Broad scalar state trees, complete sign
 families and uncorrected quotient-intersection shortcuts are closed routes.
 
-## 5. Full-degree tower and deficit form
+## 5. Complete scalar derivative tower
 
-Let
+For
 
 \[
-M_{n,d}=\binom nd,\qquad A_{n,d}=M_{n,d}^2.
+M_{n,d}=\binom nd,\qquad A_{n,d}=M_{n,d}^2,
 \]
 
-The exact direct cap and projection closure are
+let `Gamma_(n,d)` be the inverse exact product-shadow capacity. The direct cap
+and prefix envelope are
 
 \[
 C_{n,d}(q)
-=\min\{A_{n,d},qM_{n,d},
-\Gamma_{n,d}(B_{n,d-1}(q))\},
+=
+\min\{A_{n,d},qM_{n,d},\Gamma_{n,d}(B_{n,d-1}(q))\},
 \]
 
 \[
 B_{n,d}(q)
-=qM_{n,d}
-+\min_{0\le t\le q}
+=
+qM_{n,d}
++
+\min_{0\le t\le q}
 \bigl(C_{n,d}(t)-tM_{n,d}\bigr).
 \]
 
-A decomposition by `q` terms must cover every permanent derivative space.
 Writing
 
 \[
 Q_{n,d}=\min\{q:B_{n,d}(q)=A_{n,d}\}
 \]
 
-gives the scalar lower bound
+gives
 
 \[
 \operatorname{ChowRank}(\operatorname{perm}_n)
-\ge\Theta_n:=\max_{1\le d\le n-1}Q_{n,d}.
+\ge
+\Theta_n:=\max_dQ_{n,d}.
 \]
 
-PR #51 replays
+The exact rows through `n=10` are
 
 ```text
 n=3:  3,4                                  Theta=4
@@ -161,238 +171,108 @@ n=9:  9,37,87,136,155,161,163,164          Theta=164
 n=10: 10,46,123,219,280,299,305,307,307    Theta=307.
 ```
 
-The scalar tower remains weaker than the separate exact `n=5` result and the
-specialized `n=6` lower bound.
-
-PR #52 introduces the exact complement identity
-
-\[
-\Gamma_{n,d}(A_{n,d-1}-z)
-=
-A_{n,d}-F_{n,n-d+1}(z).
-\]
-
-For
+PR #52 rewrites the tower in deficit variables:
 
 \[
 D_{n,d}(q)=A_{n,d}-B_{n,d}(q),
 \]
 
-the tower becomes
-
 \[
 H_{n,d}(q)
-=\max\{0,A_{n,d}-qM_{n,d},
+=
+\max\{0,A_{n,d}-qM_{n,d},
 F_{n,n-d+1}(D_{n,d-1}(q))\},
 \]
 
 \[
 D_{n,d}(q)
-=\max_{0\le t\le q}
+=
+\max_{0\le t\le q}
 \bigl(H_{n,d}(t)-(q-t)M_{n,d}\bigr).
 \]
 
-## 6. Fixed-codimension tail structure
-
-The current theorem proves
+PRs #53 and #55 then prove the structural stopping point:
 
 \[
-Q_{n,d}\ge Q_{n,d-1},
-\qquad
-\Theta_n=Q_{n,n-1},
-\]
-
-and the row-wise one-term Lipschitz bound
-
-\[
-0\le B_{n,d}(q+1)-B_{n,d}(q)\le\binom nd.
-\]
-
-For `k>=2`, define
-
-\[
-c_k
+\boxed{
+\Theta_n
 =
-\max_{a\ge k}
-\left[
-\binom a{k-1}-\binom{a-1}k-1
-\right]_+.
+O\!\left(
+ n^{1/4}\binom n{\lfloor n/2\rfloor}
+\right)
+=
+O\!\left(\frac{2^n}{n^{1/4}}\right).
+}
 \]
 
-For `n>=2k`,
+Therefore the complete named scalar tower remains an unbounded polynomial
+factor below Glynn for all sufficiently large `n`. This is not an upper bound
+on actual Chow rank and does not close a Chow-realizability-enhanced shadow
+method.
+
+## 6. Two-direction apolar module program
+
+Fix a differential subspace
 
 \[
-0\le
-Q_{n,n-k+1}-Q_{n,n-k}
-\le c_k.
+W\subseteq S_1,
+\qquad
+\dim W\le2.
 \]
 
-The first constants are
+For a decomposition `f=sum_i T_i`, the exact apolar containment gives an
+intermediate module which embeds in `direct_sum_i A_(T_i)` and surjects onto
+`A_f`. Hence every invariant used in this program must be:
+
+1. additive on direct sums;
+2. nonincreasing under submodules; and
+3. nonincreasing under quotients.
+
+The homogeneous power profiles
+
+\[
+\Lambda_{p,d}(M;W)
+=
+\dim((W^pM)_d)
+\]
+
+satisfy these conditions. Exact finite scans give
 
 ```text
-c_2,...,c_8 = 1,5,20,83,362,1572,7513.
+n=3: best power-profile lower bound  3, existing boundary  4
+n=4: best power-profile lower bound  6, existing boundary  8
+n=5: best power-profile lower bound 10, existing boundary 16
+n=6: best power-profile lower bound 20, existing boundary 28.
 ```
 
-For fixed `K` and `n>=2K`,
+For an arbitrary nonzero binary form `g` of degree `p`, the exact one-term
+principal envelope is
 
 \[
-0\le
-\Theta_n-Q_{n,n-K}
-\le
-\sum_{k=2}^{K}c_k.
-\]
-
-Moreover, for `phi=(1+sqrt(5))/2`,
-
-\[
-\lim_{k\to\infty}c_k^{1/k}
+\beta^{\mathrm{pr}}_{n,p,d}
 =
-\phi^{\phi+2}
-=
-5.7032759559\ldots.
+\min\left\{
+\binom n{d-p},
+\binom nd
+\right\}.
 \]
 
-Hence the top `o(n)` codimension tail contributes only `exp(o(n))`
-additively. It cannot create a new positive exponential rate absent at degree
-`n-o(n)`.
-
-The final transition has the sharper universal bound
+The permanent numerator is at most the square of this quantity, so every
+principal profile proves at most
 
 \[
-Q_{n,n-2}\le\Theta_n\le Q_{n,n-2}+1.
+\binom n{\lfloor n/2\rfloor}.
 \]
 
-The exact degree-two shadow `F_(n,2)(z)` is the minimum number of edges in an
-`n`-by-`n` bipartite graph containing at least `z` copies of `K_(2,2)`.
-Thus the last zero-or-one decision is an exact `C4` supersaturation criterion.
-
-This theorem introduces no new numerical Chow-rank bound. It localizes the
-unresolved scalar asymptotic to linear codimension.
-
-### Incidence sandwich and entropy-scale barrier
-
-Every coordinate degree-`d` product cell has `d^2` lower neighbors, while
-every degree-`d-1` cell has `(n-d+1)^2` upper containers. Double counting gives
-
-\[
-\frac{d^2}{(n-d+1)^2}\,b
-\le
-F_{n,d}(b)
-\le
-\min\{A_{n,d-1},d^2b\}.
-\]
-
-The inverse capacity has the corresponding bounds
-
-\[
-\left\lfloor\frac C{d^2}\right\rfloor
-\le
-\Gamma_{n,d}(C)
-\le
-\left\lfloor
-\frac{C(n-d+1)^2}{d^2}
-\right\rfloor
-\]
-
-after ambient truncation.
-
-For `d=alpha n+O(1)` and any exponential-size family
-`b=exp(zeta n+o(n))`, the shadow has the same exponential rate:
-
-\[
-F_{n,d}(b)=\exp(zeta n+o(n)).
-\]
-
-Also,
-
-\[
-\binom n{\lfloor n/2\rfloor}
-\le
-\Theta_n
-\le
-2^{n-1},
-\]
-
-so
-
-\[
-\lim_{n\to\infty}\frac1n\log\Theta_n=\log2.
-\]
-
-The unresolved question is therefore polynomial-scale, not exponential-scale.
-A first-order entropy calculation cannot distinguish central-binomial scale
-from Glynn scale.
-
-### Central-window localization
-
-For `2<=k<=n/2`, define the ambient-dependent constant
-
-\[
-c_{n,k}
-=
-\max_{k\le a\le n}
-\left[
-\binom a{k-1}-\binom{a-1}k-1
-\right]_+.
-\]
-
-The same deficit proof gives
-
-\[
-0\le
-Q_{n,n-k+1}-Q_{n,n-k}
-\le c_{n,k}
-\le\binom n{k-1}.
-\]
-
-Therefore, for every `2<=K<=n/2`,
-
-\[
-0\le
-\Theta_n-Q_{n,n-K}
-\le
-\sum_{j=1}^{K-1}\binom nj.
-\]
-
-For fixed `0<alpha<1/2` and `K=floor(alpha n)`, the right side is
-
-\[
-\exp(nH(\alpha)+O(\log n)),
-\]
-
-which is exponentially smaller than the central binomial coefficient.
-
-More sharply, if `K-1<=n/2-w`, Hoeffding gives
-
-\[
-\Theta_n-Q_{n,n-K}
-\le
-2^n\exp(-2w^2/n).
-\]
-
-Hence if
-
-\[
-2w_n^2/n-\log(n+1)\to+\infty,
-\]
-
-then the top-tail correction is little-o of
-`binom(n,floor(n/2))`. At every fixed inverse-polynomial precision, only a
-central window
-
-\[
-d=n/2+O(\left(\sqrt{n\log n}\right))
-\]
-
-can affect the scalar tower. This is a localization theorem, not a
-central-binomial ceiling.
+Thus the first open ideal-profile interface must have at least two genuinely
+active minimal generators.
 
 ## 7. Finite instances and equality geometry
 
 Finite cases are falsification and regression instances for general theorems,
 not the research objective. A finite result is promoted only when it detects a
 false implication, validates a uniform theorem against unrestricted rank,
-identifies an equality geometry, or certifies a route ceiling.
+identifies an equality geometry or certifies a route ceiling.
 
 PR #39 classifies the reduced tangent cone at the `560/784` `perm_8`
 exact-shadow flag locus:
@@ -401,24 +281,12 @@ exact-shadow flag locus:
 linear tangent dimension=27
 independent quadratic equations=256
 reduced tangent cone=4 four-planes + 8 three-planes + 7 lines
-global equality-locus dimension=4
+global equality-locus dimension=4.
 ```
 
 Chow realizability of the full equality locus remains open.
 
-## 8. Pairwise and block-overlap frontier
-
-PR #41 proves the transverse common-factor formula and block-rotation
-counterexample. PR #44 gives the sharp same-span dual-frame bound. PR #45
-proves that low joint factor-span blocks are invisible to the permanent space.
-PR #46 proves every central two-term block for `perm_8` is zero. PRs #47--#52
-show how these defects feed and reorganize the general tower.
-
-The next numerical improvement cannot come from re-evaluating the same scalar
-recurrence. It must lower a capacity through Chow-realizability geometry or
-add a non-scalar invariant.
-
-## 9. Restricted sign-family results
+## 8. Restricted sign-family theorem
 
 \[
 \operatorname{ColumnSignRank}(\operatorname{perm}_n)
@@ -431,23 +299,25 @@ add a non-scalar invariant.
 Historical defect calculations remain diagnostics. Further sign-dictionary
 enumeration is not active.
 
-## 10. Superseded and rejected work
+## 9. Superseded and rejected work
 
 - PR #26 is superseded by repaired `perm_5` v14.
 - PR #29 is superseded by clean merged PR #30.
 - PRs #36 and #37 duplicated a canonical theorem; PR #38 retains only the new
   projection step.
-- The implication from quotient-image overlap to an equally large
-  matched-difference space was rejected until literal overlap was included.
+- Quotient-image overlap cannot be converted into an equally large
+  matched-difference space without controlling literal overlap.
 - Common primal-factor count alone is rejected as a global overlap parameter.
-- PR #43's coordinate five-term cap 40 remains valid but is not used to infer a
-  general flat-sum bound.
-- PRs #49 and #50 remain valid weaker stages; PR #51 supersedes their claimed
-  stopping points by including the full degree range through `n-1`.
-- A scalar-route fixed point is not an upper bound on Chow rank.
-- The tail constants are safe universal upper bounds, not exact increments.
+- Coordinate literal-sum caps are not transferred to moving terms without a
+  flat-sum or valuative theorem.
+- PRs #49 and #50 remain valid weaker stages; PR #51 supersedes their stopping
+  points by including the full degree range.
+- A scalar-route fixed point or ceiling is not an upper bound on actual Chow
+  rank.
+- The scalar tower and the two-direction principal barrier do not close
+  Chow-realizability corrections or non-scalar relation modules.
 
-## 11. Active pull-request stack
+## 10. Active pull-request stack
 
 ```text
 PR #31 broad n=6/general research head
@@ -464,32 +334,37 @@ PR #31 broad n=6/general research head
                                           -> PR #50 tower saturation
                                               -> PR #51 full-degree envelope
                                                   -> PR #52 shadow-complement deficit duality
-                                                      -> current PR #53 scalar-tail and central-window localization
+                                                      -> PR #53 tail and central-window localization
+                                                          -> PR #55 scalar polynomial ceiling
+                                                              -> current PR #56 two-direction apolar profiles
 ```
 
 These are stacked drafts and are not canonical on `main` until merged or
 rebased into a clean main-target PR.
 
-## 12. Current open mathematical interfaces
+## 11. Current open mathematical interfaces
 
 Priority order:
 
-1. **Central-window second-order recurrence.**  
-   Analyze exact product shadows and deficits for
-   `d=n/2+O(sqrt(n log n))` at central-binomial scale. Degrees farther above
-   the center are now provably negligible at polynomial precision.
+1. **Two-generator homogeneous ideal profiles.**  
+   For a canonical ideal `I=(g_1,g_2) subset k[s,t]`, prove an exact one-term
+   Boolean envelope for `dim((IA_T)_d)` and compare it with the permanent. A
+   candidate is promoted only if the denominator controls all Chow terms,
+   including dependent-factor terms through the Boolean subquotient.
 
-2. **Scalar central-binomial ceiling or prefactor amplification.**  
-   Prove either `Theta_n=O(binom(n,floor(n/2)))` or exhibit a uniform
-   polynomial prefactor gain generated inside the central window.
+2. **Subquotient-monotone relation information.**  
+   Identify a relation, Fitting, Loewy or multigraded invariant that is
+   additive and monotone under both submodules and quotients. Raw kernel
+   dimensions and Betti numbers are not assumed monotone.
 
 3. **Uniform Chow-realizability defect.**  
-   Prove that exact-shadow or near-shadow Ferrers families cannot arise from
-   Chow blocks except in classified cases.
+   Prove that exact-shadow or near-shadow Ferrers spaces cannot arise from
+   sums of Chow derivative spaces except in classified cases. This route is
+   not covered by the scalar-tower ceiling.
 
-4. **A non-scalar general invariant.**  
-   If the scalar ceiling is central-binomial scale, add frame-sensitive,
-   multigraded, syzygetic, or representation-valued information.
+4. **Representation-valued general invariant.**  
+   Retain `S_n x S_n` isotypes, multigraded syzygies or frame-sensitive
+   information that cannot be reduced to scalar dimensions.
 
 5. **Cross-`n` recurrence.**  
    Seek a compatible restriction or valuation theorem implying a relation
@@ -499,7 +374,7 @@ Priority order:
    The `perm_6` lower-29 geometry and selected `perm_8` equality questions
    remain testbeds, not the primary general-`n` program.
 
-## 13. Mandatory update rule
+## 12. Mandatory update rule
 
 Every meaningful future result must update this file in the same pull request.
 Each entry records status, statement, evidence, boundary, PR/head, replay
@@ -510,7 +385,8 @@ Promotion rules:
 - never call an open stacked result canonical on `main`;
 - never promote finite-field equality without the characteristic-zero
   direction;
-- never replace a coupled catalectic image by a literal sum without a theorem;
+- never replace a coupled apolar or catalectic object by a literal direct sum
+  without a theorem;
 - include counterexamples and rejected shortcuts;
 - do not add a manager, registry, dispatcher or database for this ledger;
 - update this one Markdown file and theorem-specific proof/evidence files.
