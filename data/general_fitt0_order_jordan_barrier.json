@@ -1,0 +1,37 @@
+{
+  "certificate_version": 1,
+  "claim_boundary": "The maximal-ideal order of Fitt_0 is an admissible apolar-subquotient invariant, but it equals the generic first Jordan-tail count and is capped by the central binomial coefficient. Arbitrary Rees or nonlinear arc valuations and genuinely joint two-dimensional determinantal data remain open.",
+  "expected": {
+    "finite_direct_sums_checked": 274,
+    "line_specializations_checked": 337,
+    "monomial_modules_checked": 63,
+    "permanent_boolean_ratio_cells": 19,
+    "route_maxima": {
+      "10": 252,
+      "11": 462,
+      "12": 924,
+      "13": 1716,
+      "14": 3432,
+      "15": 6435,
+      "16": 12870,
+      "17": 24310,
+      "18": 48620,
+      "19": 92378,
+      "2": 2,
+      "20": 184756,
+      "3": 3,
+      "4": 6,
+      "5": 10,
+      "6": 20,
+      "7": 35,
+      "8": 70,
+      "9": 126
+    }
+  },
+  "status": [
+    "GENERAL_FITT0_MAXIMAL_IDEAL_ORDER_ADMISSIBLE",
+    "GENERIC_LINE_FITT0_EQUALS_JORDAN_B1",
+    "CENTRAL_BINOMIAL_ROUTE_CEILING",
+    "EXACT_RATIONAL_REPLAYED"
+  ]
+}
