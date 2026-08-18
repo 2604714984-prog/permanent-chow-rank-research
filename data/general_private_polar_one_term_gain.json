@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "This is an ordinary characteristic-zero zero-intersection theorem for literal Chow derivative-space sums. It is not an exact Chow-rank theorem for n>=6, does not change border rank, and does not cover the cubic rows (4,3,3) and (6,3,2), the support boundary n=(m-1)^2 in the strict shifted case, or the regime (q-1)n>m^2. Literature novelty is not established.",
+  "core_sha256": "d7d6715b6ca5a6fb5d3c996178cc7dfc596f1323f13e374951e56928b102bf3e",
+  "exact_replay": {
+    "m_max": 128,
+    "m_min": 4,
+    "pair_rows": 682625,
+    "rows_beyond_parent_excess_m_band": 649290,
+    "shifted_equality_rows": 569,
+    "shifted_equality_samples": [{"excess":12,"m":6,"n":12,"q":4},{"excess":9,"m":6,"n":9,"q":5},{"excess":16,"m":8,"n":16,"q":5},{"excess":27,"m":9,"n":27,"q":4},{"excess":25,"m":10,"n":25,"q":5},{"excess":20,"m":10,"n":20,"q":6},{"excess":48,"m":12,"n":48,"q":4},{"excess":36,"m":12,"n":36,"q":5},{"excess":24,"m":12,"n":24,"q":7},{"excess":18,"m":12,"n":18,"q":9},{"excess":16,"m":12,"n":16,"q":10},{"excess":49,"m":14,"n":49,"q":5},{"excess":28,"m":14,"n":28,"q":8},{"excess":75,"m":15,"n":75,"q":4},{"excess":45,"m":15,"n":45,"q":6},{"excess":25,"m":15,"n":25,"q":10},{"excess":64,"m":16,"n":64,"q":5},{"excess":32,"m":16,"n":32,"q":9},{"excess":108,"m":18,"n":108,"q":4},{"excess":81,"m":18,"n":81,"q":5},{"excess":54,"m":18,"n":54,"q":7},{"excess":36,"m":18,"n":36,"q":10},{"excess":27,"m":18,"n":27,"q":13},{"excess":100,"m":20,"n":100,"q":5}],
+    "strict_gain_samples": [{"gain":1,"m":4,"new_strict_nmax":7,"parent_nmax":6,"q":3},{"gain":2,"m":5,"new_strict_nmax":12,"parent_nmax":10,"q":3},{"gain":1,"m":5,"new_strict_nmax":8,"parent_nmax":7,"q":4},{"gain":3,"m":6,"new_strict_nmax":24,"parent_nmax":21,"q":2},{"gain":3,"m":6,"new_strict_nmax":17,"parent_nmax":14,"q":3},{"gain":1,"m":6,"new_strict_nmax":11,"parent_nmax":10,"q":4},{"gain":7,"m":7,"new_strict_nmax":35,"parent_nmax":28,"q":2},{"gain":6,"m":7,"new_strict_nmax":24,"parent_nmax":18,"q":3},{"gain":2,"m":7,"new_strict_nmax":16,"parent_nmax":14,"q":4},{"gain":1,"m":7,"new_strict_nmax":12,"parent_nmax":11,"q":5},{"gain":12,"m":8,"new_strict_nmax":48,"parent_nmax":36,"q":2},{"gain":7,"m":8,"new_strict_nmax":31,"parent_nmax":24,"q":3},{"gain":3,"m":8,"new_strict_nmax":21,"parent_nmax":18,"q":4},{"gain":1,"m":8,"new_strict_nmax":15,"parent_nmax":14,"q":5},{"gain":18,"m":9,"new_strict_nmax":63,"parent_nmax":45,"q":2},{"gain":10,"m":9,"new_strict_nmax":40,"parent_nmax":30,"q":3},{"gain":4,"m":9,"new_strict_nmax":26,"parent_nmax":22,"q":4},{"gain":2,"m":9,"new_strict_nmax":20,"parent_nmax":18,"q":5},{"gain":1,"m":9,"new_strict_nmax":16,"parent_nmax":15,"q":6},{"gain":1,"m":9,"new_strict_nmax":13,"parent_nmax":12,"q":7},{"gain":25,"m":10,"new_strict_nmax":80,"parent_nmax":55,"q":2},{"gain":13,"m":10,"new_strict_nmax":49,"parent_nmax":36,"q":3},{"gain":6,"m":10,"new_strict_nmax":33,"parent_nmax":27,"q":4},{"gain":2,"m":10,"new_strict_nmax":24,"parent_nmax":22,"q":5}],
+    "strict_positive_excess_rows": 681868,
+    "strict_rows": 2891602
+  },
+  "status": ["GENERAL_PRIVATE_POLAR_SHIFTED_TERM_GAIN","GENERAL_SHIFTED_SIMPLEX_ENDPOINT","EXACT_INTEGER_INTERFACE_REPLAYED"],
+  "theorem": {
+    "mechanism": "If every private polar vanished, the relation defect k would satisfy (q-1)k>=m^2. In the strict shifted range k<=qn-m^2 contradicts (q-1)n<m^2. At equality all inequalities force an exact vector-space simplex; a two-block polar difference descends to output degree m-1.",
+    "pair_corollary": "For m>=4 and n<(m-1)^2, every two-term Chow block is permanent-relative zero in output degree m.",
+    "shifted_equality": "If (q-1)n=m^2 and 2n<=(m-1)^2, the same zero conclusion holds.",
+    "strict_shifted_count": "For m>=4, q>=2, n>=m, if n<(m-1)^2 and (q-1)n<m^2, then D_m(perm_n) intersects sum_i D_m(T_i) trivially."
+  }
+}
