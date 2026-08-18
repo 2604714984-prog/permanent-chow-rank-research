@@ -221,6 +221,43 @@ class ExactProductShadow:
             dynamic_state_count=self._solve.cache_info().currsize,
         )
 
+    def transition(self, threshold: int) -> tuple[ShadowMinimum, ShadowMinimum]:
+        """Return the last family at or below a shadow threshold and the next.
+
+        Historical tower scripts used this interface directly.  Keeping the
+        binary search on the exact shared implementation prevents those
+        consumers from carrying divergent copies of the transition logic.
+        The method fails closed when the threshold already reaches the full
+        product layer because no first excluded family then exists.
+        """
+
+        require(threshold >= 0, ("negative shadow threshold", threshold))
+        full = self.minimum(self.layer_size**2)
+        require(
+            full.shadow_size > threshold,
+            ("threshold reaches full layer", threshold, full.shadow_size),
+        )
+
+        lower = 0
+        upper = self.layer_size**2
+        while lower + 1 < upper:
+            midpoint = (lower + upper) // 2
+            current = self.minimum(midpoint)
+            if current.shadow_size <= threshold:
+                lower = midpoint
+            else:
+                upper = midpoint
+
+        last_good = self.minimum(lower)
+        first_bad = self.minimum(upper)
+        require(last_good.shadow_size <= threshold, (threshold, last_good))
+        require(first_bad.shadow_size > threshold, (threshold, first_bad))
+        require(
+            last_good.family_size + 1 == first_bad.family_size,
+            (last_good, first_bad),
+        )
+        return last_good, first_bad
+
 
 def first_koszul_data(n: int, output_degree: int) -> tuple[int, int, int]:
     require(2 <= output_degree <= n - 1, (n, output_degree))
@@ -258,27 +295,7 @@ def exact_intersection_cap(
 
     require(fixed_term_count >= 1, fixed_term_count)
     threshold = fixed_term_count * comb(shadow.n, shadow.m - 1)
-    full = shadow.minimum(shadow.layer_size**2)
-    require(
-        full.shadow_size > threshold,
-        ("threshold reaches full layer", threshold, full.shadow_size),
-    )
-
-    lower = 0
-    upper = shadow.layer_size**2
-    while lower + 1 < upper:
-        midpoint = (lower + upper) // 2
-        current = shadow.minimum(midpoint)
-        if current.shadow_size <= threshold:
-            lower = midpoint
-        else:
-            upper = midpoint
-
-    last_good = shadow.minimum(lower)
-    first_bad = shadow.minimum(upper)
-    require(last_good.shadow_size <= threshold, (threshold, last_good))
-    require(first_bad.shadow_size > threshold, (threshold, first_bad))
-    require(last_good.family_size + 1 == first_bad.family_size, (last_good, first_bad))
+    last_good, first_bad = shadow.transition(threshold)
     return threshold, last_good, first_bad
 
 
