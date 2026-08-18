@@ -1,0 +1,110 @@
+{
+  "claim_boundary": "This is an ordinary characteristic-zero zero-intersection theorem for the first positive factor-span excess in output degree at least four. It does not resolve (5,3,2), prove a new exact Chow rank, improve border rank or establish literature novelty.",
+  "ledger_branches": {
+    "factor_rank_deficit": {
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "d": 0,
+      "status": "EXCLUDED_BY_CLOSED_ENDPOINT"
+    },
+    "factor_span_overlap": {
+      "a": 0,
+      "b": 1,
+      "c": 0,
+      "d": 0,
+      "status": "FULL_SUPPORT_CIRCUIT_THEN_DERIVATIVE_DESCENT"
+    },
+    "permanent_shadow_excess": {
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 1,
+      "status": "DIRECT_SUM_THEN_DERIVATIVE_DESCENT"
+    },
+    "unused_joint_span": {
+      "a": 0,
+      "b": 0,
+      "c": 1,
+      "d": 0,
+      "status": "EXCLUDED_BY_HYPERPLANE_ANNIHILATOR"
+    }
+  },
+  "selected_rows": {
+    "10": [],
+    "11": [
+      {
+        "n": 61,
+        "q": 2
+      }
+    ],
+    "12": [
+      {
+        "n": 29,
+        "q": 5
+      }
+    ],
+    "13": [
+      {
+        "n": 17,
+        "q": 10
+      },
+      {
+        "n": 34,
+        "q": 5
+      },
+      {
+        "n": 85,
+        "q": 2
+      }
+    ],
+    "3": [
+      {
+        "n": 5,
+        "q": 2
+      }
+    ],
+    "4": [],
+    "5": [
+      {
+        "n": 13,
+        "q": 2
+      }
+    ],
+    "6": [],
+    "7": [
+      {
+        "n": 10,
+        "q": 5
+      },
+      {
+        "n": 25,
+        "q": 2
+      }
+    ],
+    "8": [
+      {
+        "n": 13,
+        "q": 5
+      }
+    ],
+    "9": [
+      {
+        "n": 41,
+        "q": 2
+      }
+    ]
+  },
+  "status": [
+    "GENERAL_FIRST_POSITIVE_EXCESS_ZERO_THEOREM",
+    "FULL_SUPPORT_CIRCUIT_REDUCTION",
+    "DERIVATIVE_DESCENT",
+    "EXACT_INTEGER_INTERFACE_REPLAYED"
+  ],
+  "theorem": {
+    "closed_range": "For m>=4 and q>=2, q*n<=m^2+1 implies zero intersection.",
+    "cubic_exception": "The only unresolved first-excess triple is (n,m,q)=(5,3,2).",
+    "first_excess": "For m>=4, q>=2 and q*n=m^2+1, every q-term Chow block has zero intersection with D_m(perm_n).",
+    "zero_block": "zeta_plus(n,m)=floor((m^2+1)/n), when zeta_plus>=2."
+  }
+}
