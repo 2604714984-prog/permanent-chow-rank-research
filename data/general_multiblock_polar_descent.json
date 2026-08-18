@@ -1,0 +1,54 @@
+{
+  "claim_boundary": "This is an ordinary characteristic-zero Chow-realizability zero-block theorem. Its direct top-degree rank consequence is polynomial and, apart from the exact n=3 endpoint, no stronger than the existing central-binomial bound; no optimized finite-n lower bound, exact rank beyond the accepted small orders, border-rank result, asymptotic Glynn proof or literature-novelty claim is made. The main use is as a hard zero seed for future derivative-tower and block-projection arguments.",
+  "core_sha256": "bee52542fdaf272923cd937d97397a64670ee68e23c6b656f070b14abbcb2794",
+  "finite_replay": {
+    "ceiling_identity_checks": 32640,
+    "exhaustive_trace_checks": 59453,
+    "maximum_n": 256,
+    "one_step_checks": 32640,
+    "recurrence_checks": 32640,
+    "selected_degree_rows": [
+      {"degree": 5, "direct_strict_terms": 3, "guaranteed_zero_terms": 5, "last_increment": 3, "n": 8},
+      {"degree": 6, "direct_strict_terms": 3, "guaranteed_zero_terms": 6, "last_increment": 3, "n": 9},
+      {"degree": 8, "direct_strict_terms": 6, "guaranteed_zero_terms": 16, "last_increment": 6, "n": 10},
+      {"degree": 8, "direct_strict_terms": 5, "guaranteed_zero_terms": 14, "last_increment": 5, "n": 12},
+      {"degree": 12, "direct_strict_terms": 8, "guaranteed_zero_terms": 35, "last_increment": 8, "n": 16},
+      {"degree": 10, "direct_strict_terms": 4, "guaranteed_zero_terms": 15, "last_increment": 4, "n": 20},
+      {"degree": 16, "direct_strict_terms": 7, "guaranteed_zero_terms": 40, "last_increment": 7, "n": 32},
+      {"degree": 32, "direct_strict_terms": 15, "guaranteed_zero_terms": 164, "last_increment": 15, "n": 64},
+      {"degree": 50, "direct_strict_terms": 24, "guaranteed_zero_terms": 404, "last_increment": 24, "n": 100}
+    ],
+    "top_rows": {
+      "3": {"central_binomial_lower_bound": 3, "glynn_upper_bound": 4, "rank_lower_bound": 4, "zero_terms": 3},
+      "4": {"central_binomial_lower_bound": 6, "glynn_upper_bound": 8, "rank_lower_bound": 6, "zero_terms": 5},
+      "5": {"central_binomial_lower_bound": 10, "glynn_upper_bound": 16, "rank_lower_bound": 9, "zero_terms": 8},
+      "8": {"central_binomial_lower_bound": 70, "glynn_upper_bound": 128, "rank_lower_bound": 23, "zero_terms": 22},
+      "9": {"central_binomial_lower_bound": 126, "glynn_upper_bound": 256, "rank_lower_bound": 27, "zero_terms": 26},
+      "10": {"central_binomial_lower_bound": 252, "glynn_upper_bound": 512, "rank_lower_bound": 34, "zero_terms": 33},
+      "16": {"central_binomial_lower_bound": 12870, "glynn_upper_bound": 32768, "rank_lower_bound": 87, "zero_terms": 86},
+      "32": {"central_binomial_lower_bound": 601080390, "glynn_upper_bound": 2147483648, "rank_lower_bound": 345, "zero_terms": 344},
+      "64": {"central_binomial_lower_bound": 1832624140942590534, "glynn_upper_bound": 9223372036854775808, "rank_lower_bound": 1369, "zero_terms": 1368},
+      "100": {"central_binomial_lower_bound": 100891344545564193334812497256, "glynn_upper_bound": 633825300114114700748351602688, "rank_lower_bound": 3334, "zero_terms": 3333},
+      "128": {"central_binomial_lower_bound": 23951146041928082866135587776380551750, "glynn_upper_bound": 170141183460469231731687303715884105728, "rank_lower_bound": 5469, "zero_terms": 5468},
+      "256": {"central_binomial_lower_bound": 5768658823449206338089748357862286887740211701975162032608436567264518750790, "glynn_upper_bound": 57896044618658097711785492504343953926634992332820282019728792003956564819968, "rank_lower_bound": 21853, "zero_terms": 21852}
+    }
+  },
+  "proof_interface": {
+    "coupled_literal_firewall": "The polar is taken from one selected literal representation of an actual intersection element; no coupled image is identified with the literal sum.",
+    "discarded_labels": "a_(n,d)=floor((d^2-1)/n)",
+    "discarded_span": "a_(n,d)*n<d^2",
+    "remaining_polar_terms": "q-a_(n,d)"
+  },
+  "status": [
+    "GENERAL_MULTIBLOCK_POLAR_DESCENT",
+    "RECURSIVE_CHOW_ZERO_BLOCK_LIFTING",
+    "QUADRATIC_SIZE_ZERO_BLOCKS_AT_LINEAR_OUTPUT_DEGREE",
+    "EXACT_INTEGER_INTERFACE_REPLAYED"
+  ],
+  "theorem": {
+    "asymptotic": "For m=floor(alpha*n), Z_(n,m)=(alpha^3/3)n^2+O(n).",
+    "closed_form": "Z_(n,m)=sum_(d=2)^m floor((d^2-1)/n) is a guaranteed zero-block size for D_m(perm_n).",
+    "one_step": "If z_(n,d-1) terms have zero permanent-relative intersection in output degree d-1, then z_(n,d-1)+floor((d^2-1)/n) terms have zero intersection in output degree d.",
+    "rank_consequence": "ChowRank(perm_n)>=1+sum_(d=2)^n floor((d^2-1)/n)."
+  }
+}
