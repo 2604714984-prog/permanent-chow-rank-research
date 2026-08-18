@@ -1,188 +1,248 @@
 # Research handoff
 
-## Purpose
-
-This file is the canonical operational handoff for the active mathematical
-research stack. It records the exact research head, the latest proved or
-replayed result, its claim boundary, verification state, unresolved frontier,
-and the next executable task.
-
-`RESEARCH_LEDGER.md` remains the canonical high-level mathematical results
-ledger. This handoff is narrower: it is the current-state document needed for
-another researcher or model to resume work without reconstructing the entire
-pull-request history.
-
-## Mandatory update rule
-
-Every GitHub synchronization that adds, changes, retracts, supersedes, or
-reclassifies a mathematical result must update this file in the same commit as
-the proof, scripts, frozen data, tests, and `RESEARCH_LEDGER.md` delta.
-
-Each update must record:
-
-1. repository, branch, pull request, base, and exact head SHA;
-2. the new mathematical statement and its dependency chain;
-3. proof status and the precise claim boundary;
-4. deterministic replay, independent replay, tests, and hosted CI status;
-5. files added or changed;
-6. unresolved mathematical interfaces and rejected shortcuts;
-7. the single next executable research task;
-8. a dated changelog entry.
-
-Do not promote a conjecture, numerical diagnostic, modular experiment, or
-finite scan beyond its justified characteristic-zero boundary.
-
-## Current handoff snapshot
+This is the canonical operational handoff for the active permanent Chow-rank
+research stack. It is updated in every GitHub synchronization that changes a
+theorem, counterexample, route barrier, numerical boundary, equality
+classification, or next mathematical frontier.
 
 Last updated: **2026-08-19**
 
+## 1. Active GitHub context
+
 ```text
-repository = 2604714984-prog/permanent-chow-rank-research
-active PR = #83
-active branch = research/multirow-polarization-envelopes
-base branch = research/sharp-pair-threshold
-base SHA = 2f054482b7cca108e890a01595a10f2cb4e387dd
-research head before this handoff commit = 6ed4065e20fcc79ca90f1f5d606a58b3cf269d62
-PR state = OPEN / DRAFT / MERGEABLE
+repository: 2604714984-prog/permanent-chow-rank-research
+active branch: research/cubic-three-term-zero
+active PR: #84
+active theorem head: f74aa9764efedf0020ec05a649c7d36f90bb7acf
+parent branch: research/multirow-polarization-envelopes
+parent PR: #83
+parent exact head: ac8801ef067f3d0f6d5bff3b7f01fcbaa68af4e3
+stack base: research/sharp-pair-threshold
 ```
 
-The SHA above identifies the mathematical head reviewed when this handoff was
-created. The commit adding or updating this file becomes the new branch head
-and must be recorded in the next handoff update.
+The active branch must remain a narrow mathematical stack. Do not introduce a
+manager, registry, dispatcher, database, solver framework, or second control
+plane.
 
-## Latest research result
+## 2. Latest research result
 
-PR #83 generalizes the sharp two-term polarization construction from PR #82
-to an arbitrary number of selected permanent rows.
+### Cubic three-term zero theorem
 
-For every characteristic-zero field, every `1 <= t <= m`, and every
+For arbitrary degree-four Chow terms over a characteristic-zero field,
 
 ```text
-n >= m*(m-t+1),
+D_3(perm_4) intersect
+(D_3(T_1)+D_3(T_2)+D_3(T_3)) = 0.
 ```
 
-there are `2^(t-1)` degree-`n` Chow terms `T_epsilon` such that
+This closes the former cubic exception `(n,m,q)=(4,3,3)`.
+
+The excess-`m` cubic arithmetic rows are now fully classified:
 
 ```text
-0 != perm_m
-in D_m(perm_n) intersect sum_epsilon D_m(T_epsilon).
+(3,3,4) NONZERO -- accepted Glynn endpoint
+(4,3,3) ZERO    -- current theorem
+(6,3,2) NONZERO -- sharp pair theorem, PR #82
 ```
 
-The construction uses a Walsh selector on `t` rows, row-Laplace expansion, and
-one Chow envelope for each sign vector. It gives the explicit dyadic nonzero
-staircase
+No Chow-rank lower bound, exact rank, border-rank improvement, or literature
+novelty claim is introduced.
+
+## 3. Proof spine
+
+A hypothetical three-term witness forces the following exact state:
 
 ```text
-term count       first constructed nonzero degree
-1                m^2
-2                m*(m-1)
-4                m*(m-2)
-8                m*(m-3)
-...
-2^(m-1)          m.
+component essential dimensions = 4,4,4
+joint essential dimension       = 9
+relation defect                 = 3
+component overlap dimensions    = 3,3,3
+private quadratic dimensions    = 1,1,1.
 ```
 
-This interpolates between the one-envelope coordinate construction, the sharp
-pair threshold from PR #82, and the `2^(m-1)`-term Glynn construction.
+The proof chain is:
 
-## Claim boundary
+1. the permanent derivative-shadow floor forces at least nine essential
+   variables;
+2. `F_(4,2)(2)=6` caps every private quadratic space at dimension one;
+3. private-mass equality forces the unique state above;
+4. the three component four-planes are pairwise transverse;
+5. each private quadratic has Hessian rank four;
+6. every rank-four quadratic in `D_2(perm_4)` has essential space `U tensor V`
+   for two two-planes with disjoint-support bases after scalar extension;
+7. three pairwise-disjoint `2 x 2` tensor four-planes can span only dimension
+   `8`, `10`, or `12`, never the forced dimension nine.
+
+The exact tensor-plane statement is a parity restriction. The stronger-looking
+claim that three such pairwise-disjoint planes must span at least ten dimensions
+is false and must not be used.
+
+## 4. Direct small-block frontier after this result
+
+For three available terms at cubic output degree:
 
 ```text
-new explicit general-n nonzero family = true
-q=1 endpoint = inherited sharp
-q=2 endpoint = inherited sharp
-intermediate q>=3 term minimality = OPEN
-intermediate q>=3 degree sharpness = OPEN
-new Chow-rank lower bound = false
-new exact rank for n>=6 = false
-border-rank improvement = NO
-coupled/literal identification = NO
-general Glynn optimality = OPEN
-literature novelty = NOT ESTABLISHED
+n<=4 ZERO
+n=5 OPEN
+n>=6 NONZERO.
 ```
 
-The theorem is a literal derivative-space intersection statement. For `n>m`,
-it is not a Chow decomposition of `perm_n`.
-
-## Verification snapshot
-
-The PR records:
+For general `m>=3`, the current direct three-term boundaries are
 
 ```text
-primary exact replay = PASS
-primary python -O = PASS
-independent bit-mask Walsh replay = PASS
-independent python -O = PASS
-focused unit tests = 5/5 PASS
-compileall = PASS
-English-only proof files = PASS
-frozen JSON equals regenerated payload = PASS
+zero through floor((m^2-1)/2)
+explicitly nonzero from m(m-1).
 ```
 
-Hosted workflow at the reviewed head:
+For four available terms, the current direct nonzero construction begins at
+`m(m-2)`. The shifted equality theorem also closes `n=m^2/3` when `3|m`,
+`m>=6`.
+
+These are direct boundaries from the current PR ancestry. Do not silently fold
+in parallel recursive-zero branches.
+
+## 5. Evidence and files
 
 ```text
-workflow = exact-bound-tests
-run = 32159368742
-run number = 748
-status at handoff creation = IN PROGRESS
-```
-
-Hosted CI completion remains a promotion condition and must be refreshed in the
-next synchronization.
-
-## Current PR files
-
-```text
-data/general_multirow_polarization_envelopes.json
-docs/general_multirow_polarization_envelopes.md
-docs/general_multirow_polarization_envelopes_adversarial_review.md
-docs/general_multirow_polarization_envelopes_ledger_delta.md
-scripts/general_multirow_polarization_envelopes.py
-scripts/general_multirow_polarization_envelopes_independent.py
-tests/test_general_multirow_polarization_envelopes.py
+docs/general_cubic_three_term_zero.md
+docs/general_cubic_three_term_zero_adversarial_review.md
+docs/general_cubic_three_term_zero_ledger_delta.md
+docs/general_excess_m_cubic_boundary_clarification.md
+scripts/general_cubic_three_term_zero.py
+scripts/general_cubic_three_term_zero_independent.py
+data/general_cubic_three_term_zero.json
+tests/test_general_cubic_three_term_zero.py
 RESEARCH_HANDOFF.md
 ```
 
-## Active mathematical frontier
+Frozen theorem-facing core:
 
-The zero side and nonzero side are now separated as follows:
+```text
+e39a77e46607d1ad7c69e50c04ddedadc9d256dc98b80d86790d03aa9475b5d6
+```
 
-- universal two-term zero threshold is sharp by PR #82;
-- the dyadic family supplies explicit nonzero blocks for powers-of-two term
-  counts;
-- sharp thresholds for intermediate term counts are not known;
-- the first priority is the three- and four-envelope region, where a genuinely
-  non-dyadic construction or a stronger universal zero theorem may close part
-  of the gap;
-- the cubic `(n,m,q)=(4,3,3)` interface remains a small explicit unresolved
-  test case and is a useful falsification target.
+## 6. Validation receipt
 
-## Next executable task
+Completed before publication:
 
-Build an exact three- and four-envelope boundary table before attempting a
-large general theorem:
+```text
+focused unit tests                         6/6 PASS
+primary normal Python                         PASS
+primary python -O                             PASS
+independent normal Python                     PASS
+independent python -O                         PASS
+py_compile                                    PASS
+frozen JSON == regenerated payload            PASS
+non-ASCII scan of new proof files             PASS
+```
 
-1. combine every currently proved universal zero criterion into one exact
-   integer lower frontier for `q=3,4`;
-2. combine PR #83 and all simple envelope mergers, specializations, and padding
-   operations into one explicit nonzero upper frontier;
-3. enumerate the remaining gap cells for small `m` exactly;
-4. test whether the cubic `(4,3,3)` cell is zero or nonzero;
-5. promote only a proved theorem, explicit counterexample, or strict route
-   barrier, with independent replay and a ledger/handoff update.
+Primary finite interfaces:
 
-Do not begin with a broad solver framework or another scalar asymptotic route.
-The next work should be a narrow mathematical boundary analysis.
+```text
+private-polar surviving states                  1
+rank-two zero-diagonal support models          25
+tensor total dimensions                    8,10,12
+direct q=3,4 rows through m=32                 60
+```
 
-## Changelog
+Independent regression:
 
-### 2026-08-19 — handoff file introduced
+```text
+support two-planes                             25
+tensor-product four-planes                    625
+pairwise-disjoint pairs                   132,300
+pairwise-disjoint triples              12,510,100
+observed total dimensions                  8,10,12
+```
 
-- Created the canonical research handoff on PR #83's active branch.
-- Recorded the exact pre-handoff mathematical head and PR ancestry.
-- Recorded the multirow Walsh-envelope theorem, its verification, and its
-  strict claim boundary.
-- Made handoff updates mandatory for every future research synchronization.
-- Selected the three-/four-envelope boundary as the next executable research
-  task.
+The independent `F_2` enumeration is a regression only. The characteristic-zero
+claim is proved by the pure projection and rank-four block arguments.
+
+## 7. Hosted CI state inherited from the parent
+
+Parent PR #83 workflow run `#749` completed with failure after 885 tests. The
+new PR #83 tests passed; the two reported failures were inherited repository
+issues:
+
+```text
+1. exact-product-shadow payload compatibility hash mismatch
+   observed: 18eb66f1b9460d2d793c69131cc4ebc0f1087c86b18f14e5638e71e6d629f567
+   expected: 3563dd0205177cd0471210287dc8b2377e1547e2410a419b611b2560b123f06a
+
+2. n6_global_t15_prolongation_cap full replay exceeded the 180-second
+   subprocess timeout on the hosted runner.
+```
+
+Do not describe the inherited full suite as green. The current theorem has a
+clean focused local receipt; hosted full CI must be reported separately.
+
+## 8. Strict claim boundary
+
+```text
+cubic (4,3,3) = ZERO
+cubic excess-m arithmetic rows = CLASSIFIED
+cubic three-term (5,3,3) = OPEN
+new numerical Chow-rank bound = false
+new exact Chow rank = false
+border-rank improvement = NO
+coupled/literal identification = NO
+literature novelty = NOT ESTABLISHED
+hosted full CI = PENDING / INHERITED FAILURES PRESENT
+```
+
+## 9. Next authorized mathematical task
+
+Study the single remaining cubic three-term gap
+
+```text
+(n,m,q)=(5,3,3).
+```
+
+Start with an exact relation-defect ledger. The private quadratic cap remains
+small because `F_(5,2)(2)=6>5`, but unlike `(4,3,3)` the private-mass inequality
+no longer forces all three private spaces to be nonzero. The first target is
+therefore a classification of the no-private and one-private branches, using
+actual component essential spaces and the compressed-center interface only if
+needed.
+
+Do not begin with a broad SAT search, large orbit database, or another general
+workflow layer.
+
+## 10. Mandatory synchronization rule
+
+Every future research synchronization must update this file in the same pushed
+commit or in an immediately following publication-receipt commit. Each update
+must record:
+
+```text
+exact branch and PR
+exact head commit
+new theorem or diagnostic
+claim boundary
+proof and data files
+focused validation
+hosted CI state
+superseded statements
+next executable mathematical task.
+```
+
+A result is not considered handed off merely because it appears in chat.
+
+## 11. Handoff log
+
+### 2026-08-19 -- cubic three-term zero theorem
+
+- closed `(4,3,3)` as a universal zero row;
+- completed the excess-`m` cubic arithmetic classification;
+- replaced a false dimension-lower-bound shortcut with the exact `8/10/12`
+  tensor-plane parity lemma;
+- added primary and independent deterministic replays;
+- moved the next frontier to `(5,3,3)`;
+- recorded the inherited PR #83 CI failures without conflating them with the
+  focused theorem receipt.
+
+### 2026-08-18 -- multirow polarization envelopes
+
+- established the dyadic nonzero staircase from one envelope through Glynn;
+- inherited the sharp pair endpoint from PR #82;
+- created this canonical handoff protocol.
