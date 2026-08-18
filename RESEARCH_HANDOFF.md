@@ -12,7 +12,8 @@ Last updated: **2026-08-19**
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
 active branch: research/cubic-three-term-zero
-active PR: TO_BE_CREATED
+active PR: #84
+active theorem head: f74aa9764efedf0020ec05a649c7d36f90bb7acf
 parent branch: research/multirow-polarization-envelopes
 parent PR: #83
 parent exact head: ac8801ef067f3d0f6d5bff3b7f01fcbaa68af4e3
