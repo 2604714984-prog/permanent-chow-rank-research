@@ -29,7 +29,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 FROZEN = ROOT / "data" / "general_multiblock_polar_descent.json"
-EXPECTED_CORE_SHA256 = "5ea321a889bf0df08c3fa25425cfb3a324a44d04604db587469024524d711bde"
+EXPECTED_CORE_SHA256 = "bee52542fdaf272923cd937d97397a64670ee68e23c6b656f070b14abbcb2794"
 
 
 def require(condition: bool, message: object) -> None:
@@ -169,16 +169,14 @@ def build_payload(maximum_n: int = 256) -> dict[str, Any]:
         if n >= 4:
             require(rank_lower <= central, (n, rank_lower, central))
         require(rank_lower <= glynn, (n, rank_lower, glynn))
-        top_rows[str(n)] = {
-            "zero_terms": values[n],
-            "rank_lower_bound": rank_lower,
-            "central_binomial_lower_bound": central,
-            "glynn_upper_bound": glynn,
-        }
+        if n in {3, 4, 5, 8, 9, 10, 16, 32, 64, 100, 128, 256}:
+            top_rows[str(n)] = {
+                "zero_terms": values[n],
+                "rank_lower_bound": rank_lower,
+                "central_binomial_lower_bound": central,
+                "glynn_upper_bound": glynn,
+            }
 
-    # Exhaust every term count through the lifted boundary for a disjoint
-    # implementation range.  Monotonicity then covers all smaller counts in
-    # the written theorem.
     for n in range(2, min(maximum_n, 40) + 1):
         values = lifted_zero_counts(n)
         for degree in range(2, n + 1):
