@@ -1,0 +1,143 @@
+{
+  "claim_boundary": "This is a sharpness theorem for literal output-degree derivative-space intersections. The nonzero witness is not a two-term Chow decomposition of the permanent. No new exact Chow rank, optimized numerical lower bound, border-rank result, or literature-novelty claim is made. The universal-zero half is inherited from the parent private-polar theorem.",
+  "core_sha256": "764ec72551012125c7f948df161795a93f2c34e3eaf9917dd45055464cd1ddc6",
+  "exact_replay": {
+    "derivative_membership_checks": 46232,
+    "identity_monomial_checks": 46232,
+    "identity_rows": [
+      {
+        "a_monomials": 1,
+        "b_monomials": 1,
+        "factor_count_per_envelope": 2,
+        "m": 2,
+        "threshold_degree": 2,
+        "transformed_monomials": 2
+      },
+      {
+        "a_monomials": 3,
+        "b_monomials": 3,
+        "factor_count_per_envelope": 6,
+        "m": 3,
+        "threshold_degree": 6,
+        "transformed_monomials": 6
+      },
+      {
+        "a_monomials": 12,
+        "b_monomials": 12,
+        "factor_count_per_envelope": 12,
+        "m": 4,
+        "threshold_degree": 12,
+        "transformed_monomials": 24
+      },
+      {
+        "a_monomials": 60,
+        "b_monomials": 60,
+        "factor_count_per_envelope": 20,
+        "m": 5,
+        "threshold_degree": 20,
+        "transformed_monomials": 120
+      },
+      {
+        "a_monomials": 360,
+        "b_monomials": 360,
+        "factor_count_per_envelope": 30,
+        "m": 6,
+        "threshold_degree": 30,
+        "transformed_monomials": 720
+      },
+      {
+        "a_monomials": 2520,
+        "b_monomials": 2520,
+        "factor_count_per_envelope": 42,
+        "m": 7,
+        "threshold_degree": 42,
+        "transformed_monomials": 5040
+      },
+      {
+        "a_monomials": 20160,
+        "b_monomials": 20160,
+        "factor_count_per_envelope": 56,
+        "m": 8,
+        "threshold_degree": 56,
+        "transformed_monomials": 40320
+      }
+    ],
+    "m_max": 8,
+    "m_min": 2,
+    "threshold_arithmetic_checks": 504,
+    "threshold_rows": [
+      {
+        "cubic_pair_boundary": true,
+        "first_nonzero_n": 6,
+        "m": 3,
+        "universal_zero_maximum_n": 5
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 12,
+        "m": 4,
+        "universal_zero_maximum_n": 11
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 20,
+        "m": 5,
+        "universal_zero_maximum_n": 19
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 30,
+        "m": 6,
+        "universal_zero_maximum_n": 29
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 56,
+        "m": 8,
+        "universal_zero_maximum_n": 55
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 90,
+        "m": 10,
+        "universal_zero_maximum_n": 89
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 240,
+        "m": 16,
+        "universal_zero_maximum_n": 239
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 992,
+        "m": 32,
+        "universal_zero_maximum_n": 991
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 4032,
+        "m": 64,
+        "universal_zero_maximum_n": 4031
+      },
+      {
+        "cubic_pair_boundary": false,
+        "first_nonzero_n": 16256,
+        "m": 128,
+        "universal_zero_maximum_n": 16255
+      }
+    ]
+  },
+  "status": [
+    "GENERAL_SHARP_TWO_TERM_THRESHOLD",
+    "EXPLICIT_CHOW_DERIVATIVE_COUNTEREXAMPLE",
+    "CUBIC_6_3_2_RESOLVED_NONZERO",
+    "EXACT_RATIONAL_INTERFACE_REPLAYED"
+  ],
+  "theorem": {
+    "extension": "multiplying each envelope by extra independent factors preserves the degree-m witness",
+    "identity": "perm_m=(G_a-G_b)/2 after a_j=x_0j+x_1j and b_j=x_0j-x_1j",
+    "sharp_threshold": "all pairs zero for n<=m^2-m-1; an explicit nonzero pair exists for n>=m^2-m",
+    "threshold_envelopes": "G_a in D_m(T_a), G_b in D_m(T_b), deg(T_a)=deg(T_b)=m(m-1)"
+  }
+}
