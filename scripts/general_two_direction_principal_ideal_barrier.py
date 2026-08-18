@@ -133,7 +133,7 @@ def build_payload() -> dict[str, Any]:
             ),
             "route_ceiling": (
                 "Every principal homogeneous ideal profile proves at most "
-                "binom(n,floor(n/2)) terms."
+                "the central binomial coefficient binom(n,floor(n/2)) terms."
             ),
             "first_open_interface": (
                 "At least two genuinely active minimal generators are "
