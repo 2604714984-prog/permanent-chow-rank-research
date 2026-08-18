@@ -1,0 +1,382 @@
+{
+  "claim_boundary": "This theorem is a necessary Chow-realizability interface. It does not yet exclude the small-excess regime, improve a finite-n Chow-rank lower bound, control border rank, or prove a uniform lower bound for mixed permanent Hessian cuts. The finite replay checks the exact linear-algebra identities and arithmetic only; the general theorem is the written proof. Literature novelty is not established.",
+  "core_sha256": "20fdf39cf1976ce9f11b10ebccb19398dc34313ed6b09ebff9362b42a1f2f578",
+  "exact_replay": {
+    "eigenspace_checks": 645,
+    "first_excess_rows": 48,
+    "first_near_endpoint_rows": [
+      {
+        "excess": 0,
+        "m": 3,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 3,
+        "one_eigenspace_floor": 3,
+        "q": 3,
+        "zero_eigenspace_floor": 6
+      },
+      {
+        "excess": 3,
+        "m": 3,
+        "missing_dimension_cap": 3,
+        "mixed_hessian_rank_cap": 6,
+        "n": 4,
+        "one_eigenspace_floor": 0,
+        "q": 3,
+        "zero_eigenspace_floor": 5
+      },
+      {
+        "excess": 0,
+        "m": 4,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 4,
+        "one_eigenspace_floor": 4,
+        "q": 4,
+        "zero_eigenspace_floor": 12
+      },
+      {
+        "excess": 1,
+        "m": 3,
+        "missing_dimension_cap": 1,
+        "mixed_hessian_rank_cap": 2,
+        "n": 5,
+        "one_eigenspace_floor": 4,
+        "q": 2,
+        "zero_eigenspace_floor": 4
+      },
+      {
+        "excess": 4,
+        "m": 4,
+        "missing_dimension_cap": 4,
+        "mixed_hessian_rank_cap": 8,
+        "n": 5,
+        "one_eigenspace_floor": 0,
+        "q": 4,
+        "zero_eigenspace_floor": 11
+      },
+      {
+        "excess": 0,
+        "m": 5,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 5,
+        "one_eigenspace_floor": 5,
+        "q": 5,
+        "zero_eigenspace_floor": 20
+      },
+      {
+        "excess": 3,
+        "m": 3,
+        "missing_dimension_cap": 3,
+        "mixed_hessian_rank_cap": 6,
+        "n": 6,
+        "one_eigenspace_floor": 2,
+        "q": 2,
+        "zero_eigenspace_floor": 3
+      },
+      {
+        "excess": 2,
+        "m": 4,
+        "missing_dimension_cap": 2,
+        "mixed_hessian_rank_cap": 4,
+        "n": 6,
+        "one_eigenspace_floor": 4,
+        "q": 3,
+        "zero_eigenspace_floor": 10
+      },
+      {
+        "excess": 5,
+        "m": 5,
+        "missing_dimension_cap": 5,
+        "mixed_hessian_rank_cap": 10,
+        "n": 6,
+        "one_eigenspace_floor": 0,
+        "q": 5,
+        "zero_eigenspace_floor": 19
+      },
+      {
+        "excess": 0,
+        "m": 6,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 6,
+        "one_eigenspace_floor": 6,
+        "q": 6,
+        "zero_eigenspace_floor": 30
+      },
+      {
+        "excess": 5,
+        "m": 3,
+        "missing_dimension_cap": 5,
+        "mixed_hessian_rank_cap": 10,
+        "n": 7,
+        "one_eigenspace_floor": 0,
+        "q": 2,
+        "zero_eigenspace_floor": 2
+      },
+      {
+        "excess": 5,
+        "m": 4,
+        "missing_dimension_cap": 5,
+        "mixed_hessian_rank_cap": 10,
+        "n": 7,
+        "one_eigenspace_floor": 1,
+        "q": 3,
+        "zero_eigenspace_floor": 9
+      },
+      {
+        "excess": 3,
+        "m": 5,
+        "missing_dimension_cap": 3,
+        "mixed_hessian_rank_cap": 6,
+        "n": 7,
+        "one_eigenspace_floor": 4,
+        "q": 4,
+        "zero_eigenspace_floor": 18
+      },
+      {
+        "excess": 6,
+        "m": 6,
+        "missing_dimension_cap": 6,
+        "mixed_hessian_rank_cap": 12,
+        "n": 7,
+        "one_eigenspace_floor": 0,
+        "q": 6,
+        "zero_eigenspace_floor": 29
+      },
+      {
+        "excess": 0,
+        "m": 7,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 7,
+        "one_eigenspace_floor": 7,
+        "q": 7,
+        "zero_eigenspace_floor": 42
+      },
+      {
+        "excess": 7,
+        "m": 3,
+        "missing_dimension_cap": 7,
+        "mixed_hessian_rank_cap": 14,
+        "n": 8,
+        "one_eigenspace_floor": 0,
+        "q": 2,
+        "zero_eigenspace_floor": 1
+      },
+      {
+        "excess": 0,
+        "m": 4,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 8,
+        "one_eigenspace_floor": 8,
+        "q": 2,
+        "zero_eigenspace_floor": 8
+      },
+      {
+        "excess": 7,
+        "m": 5,
+        "missing_dimension_cap": 7,
+        "mixed_hessian_rank_cap": 14,
+        "n": 8,
+        "one_eigenspace_floor": 0,
+        "q": 4,
+        "zero_eigenspace_floor": 17
+      },
+      {
+        "excess": 4,
+        "m": 6,
+        "missing_dimension_cap": 4,
+        "mixed_hessian_rank_cap": 8,
+        "n": 8,
+        "one_eigenspace_floor": 4,
+        "q": 5,
+        "zero_eigenspace_floor": 28
+      },
+      {
+        "excess": 7,
+        "m": 7,
+        "missing_dimension_cap": 7,
+        "mixed_hessian_rank_cap": 14,
+        "n": 8,
+        "one_eigenspace_floor": 0,
+        "q": 7,
+        "zero_eigenspace_floor": 41
+      },
+      {
+        "excess": 0,
+        "m": 8,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 8,
+        "one_eigenspace_floor": 8,
+        "q": 8,
+        "zero_eigenspace_floor": 56
+      },
+      {
+        "excess": 2,
+        "m": 4,
+        "missing_dimension_cap": 2,
+        "mixed_hessian_rank_cap": 4,
+        "n": 9,
+        "one_eigenspace_floor": 6,
+        "q": 2,
+        "zero_eigenspace_floor": 7
+      },
+      {
+        "excess": 2,
+        "m": 5,
+        "missing_dimension_cap": 2,
+        "mixed_hessian_rank_cap": 4,
+        "n": 9,
+        "one_eigenspace_floor": 7,
+        "q": 3,
+        "zero_eigenspace_floor": 16
+      },
+      {
+        "excess": 0,
+        "m": 6,
+        "missing_dimension_cap": 0,
+        "mixed_hessian_rank_cap": 0,
+        "n": 9,
+        "one_eigenspace_floor": 9,
+        "q": 4,
+        "zero_eigenspace_floor": 27
+      }
+    ],
+    "matrix_cases": 240,
+    "maximum_observed_center_defect": 4,
+    "maximum_observed_cross_defect": 2,
+    "maximum_observed_idempotence_defect": 2,
+    "maximum_observed_rank_excess": 2,
+    "near_endpoint_rows": 908,
+    "operator_checks": 645,
+    "ordered_cross_checks": 1140,
+    "sharp_examples": {
+      "center_equals_2k": {
+        "block_sizes": [
+          1,
+          3
+        ],
+        "center_defects": [
+          2,
+          2
+        ],
+        "eigenspace_checks": 2,
+        "essential_dimension": 3,
+        "idempotence_defects": [
+          0,
+          0
+        ],
+        "kernel_dimension": 1,
+        "maximum_cross_defect": 0,
+        "operator_ranks": [
+          1,
+          2
+        ],
+        "rank_excess": 0,
+        "total_dimension": 4
+      },
+      "cross_equals_k": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "center_defects": [
+          2,
+          2,
+          2
+        ],
+        "eigenspace_checks": 3,
+        "essential_dimension": 3,
+        "idempotence_defects": [
+          1,
+          0,
+          1
+        ],
+        "kernel_dimension": 1,
+        "maximum_cross_defect": 1,
+        "operator_ranks": [
+          2,
+          1,
+          1
+        ],
+        "rank_excess": 1,
+        "total_dimension": 4
+      },
+      "idempotence_equals_k": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "center_defects": [
+          2,
+          2,
+          2
+        ],
+        "eigenspace_checks": 3,
+        "essential_dimension": 3,
+        "idempotence_defects": [
+          1,
+          0,
+          1
+        ],
+        "kernel_dimension": 1,
+        "maximum_cross_defect": 1,
+        "operator_ranks": [
+          2,
+          1,
+          1
+        ],
+        "rank_excess": 1,
+        "total_dimension": 4
+      },
+      "rank_excess_equals_k": {
+        "block_sizes": [
+          2,
+          1,
+          1
+        ],
+        "center_defects": [
+          2,
+          2,
+          2
+        ],
+        "eigenspace_checks": 3,
+        "essential_dimension": 3,
+        "idempotence_defects": [
+          1,
+          0,
+          1
+        ],
+        "kernel_dimension": 1,
+        "maximum_cross_defect": 1,
+        "operator_ranks": [
+          2,
+          1,
+          1
+        ],
+        "rank_excess": 1,
+        "total_dimension": 4
+      }
+    }
+  },
+  "status": [
+    "GENERAL_SMALL_EXCESS_COMPRESSED_CENTER_FRAME",
+    "LOW_RANK_CENTER_DEFECT",
+    "NEAR_SEBASTIANI_THOM_HESSIAN_BOTTLENECK",
+    "EXACT_RATIONAL_REPLAYED"
+  ],
+  "theorem": {
+    "compressed_frame": "There are A_i in End(U) with sum A_i=I, rank A_i<=dim L_i, rank(A_i^2-A_i)<=k, rank(A_i A_j)<=k, and rank(H_f A_i-A_i^T H_f)<=2k, where k<=s.",
+    "defect_ledger": "If q*n=m^2+s and f is a nonzero permanent-relative Chow block intersection, then factor deficit + span-overlap defect + unused-span defect + permanent-shadow excess = s.",
+    "endpoint_recovery": "At s=0 the A_i are exact orthogonal idempotents in the Hessian center, recovering the closed multi-term endpoint.",
+    "first_excess": "At s=1, any surviving intersection forces a codimension-one split with mixed Hessian rank at most two.",
+    "hessian_bottleneck": "Some A_i has exact zero/one eigenspaces Z,P with codim (Z direct_sum P)<=s and mixed Hessian rank at most 2s; dim P>=n-s-floor(s/q), dim Z>=(q-1)n-s.",
+    "rank_budget": "0<=sum_i rank(A_i)-dim(U)<=k."
+  }
+}
