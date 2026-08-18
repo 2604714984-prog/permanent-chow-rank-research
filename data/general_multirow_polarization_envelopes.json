@@ -1,0 +1,194 @@
+{
+  "claim_boundary": "The theorem gives explicit nonzero literal derivative-space intersections. Except for the inherited one- and two-term endpoints, it does not prove that the displayed term count or degree threshold is minimal. It is not a new exact Chow-rank result for m>=6, does not improve a lower bound, makes no border-rank claim, and does not identify a literal sum with a coupled catalectic image. Literature novelty is not established.",
+  "core_sha256": "88ff9229d4e176292d6211685aa3e7c901484904ea19d0578c01c073f195783e",
+  "endpoints": {
+    "t=1": "one coordinate envelope at n=m^2",
+    "t=2": "the sharp two-term construction at n=m*(m-1)",
+    "t=m": "the 2^(m-1)-term Glynn decomposition at n=m"
+  },
+  "exact_replay": {
+    "arbitrary_q_cells_checked": 57278,
+    "assignment_t_max": 6,
+    "assignment_walsh_summands_checked": 1545157,
+    "assignments_checked": 50069,
+    "count_vectors_checked": 33098,
+    "degree_inverse_checks": 2080,
+    "full_block_expanded_terms": 1936741,
+    "full_block_m_max": 6,
+    "full_block_pairs_checked": 21,
+    "full_block_surviving_monomials": 5039,
+    "m_max": 64,
+    "selected_rows": [
+      {
+        "dyadic_terms": 1,
+        "factor_count_per_envelope": 4,
+        "first_constructed_degree": 4,
+        "m": 2,
+        "monomials_per_envelope": 2,
+        "selected_rows": 1
+      },
+      {
+        "dyadic_terms": 2,
+        "factor_count_per_envelope": 2,
+        "first_constructed_degree": 2,
+        "m": 2,
+        "monomials_per_envelope": 1,
+        "selected_rows": 2
+      },
+      {
+        "dyadic_terms": 1,
+        "factor_count_per_envelope": 9,
+        "first_constructed_degree": 9,
+        "m": 3,
+        "monomials_per_envelope": 6,
+        "selected_rows": 1
+      },
+      {
+        "dyadic_terms": 2,
+        "factor_count_per_envelope": 6,
+        "first_constructed_degree": 6,
+        "m": 3,
+        "monomials_per_envelope": 3,
+        "selected_rows": 2
+      },
+      {
+        "dyadic_terms": 4,
+        "factor_count_per_envelope": 3,
+        "first_constructed_degree": 3,
+        "m": 3,
+        "monomials_per_envelope": 1,
+        "selected_rows": 3
+      },
+      {
+        "dyadic_terms": 1,
+        "factor_count_per_envelope": 16,
+        "first_constructed_degree": 16,
+        "m": 4,
+        "monomials_per_envelope": 24,
+        "selected_rows": 1
+      },
+      {
+        "dyadic_terms": 2,
+        "factor_count_per_envelope": 12,
+        "first_constructed_degree": 12,
+        "m": 4,
+        "monomials_per_envelope": 12,
+        "selected_rows": 2
+      },
+      {
+        "dyadic_terms": 4,
+        "factor_count_per_envelope": 8,
+        "first_constructed_degree": 8,
+        "m": 4,
+        "monomials_per_envelope": 4,
+        "selected_rows": 3
+      },
+      {
+        "dyadic_terms": 8,
+        "factor_count_per_envelope": 4,
+        "first_constructed_degree": 4,
+        "m": 4,
+        "monomials_per_envelope": 1,
+        "selected_rows": 4
+      },
+      {
+        "dyadic_terms": 2,
+        "factor_count_per_envelope": 20,
+        "first_constructed_degree": 20,
+        "m": 5,
+        "monomials_per_envelope": 60,
+        "selected_rows": 2
+      },
+      {
+        "dyadic_terms": 4,
+        "factor_count_per_envelope": 15,
+        "first_constructed_degree": 15,
+        "m": 5,
+        "monomials_per_envelope": 20,
+        "selected_rows": 3
+      },
+      {
+        "dyadic_terms": 16,
+        "factor_count_per_envelope": 5,
+        "first_constructed_degree": 5,
+        "m": 5,
+        "monomials_per_envelope": 1,
+        "selected_rows": 5
+      },
+      {
+        "dyadic_terms": 2,
+        "factor_count_per_envelope": 30,
+        "first_constructed_degree": 30,
+        "m": 6,
+        "monomials_per_envelope": 360,
+        "selected_rows": 2
+      },
+      {
+        "dyadic_terms": 4,
+        "factor_count_per_envelope": 24,
+        "first_constructed_degree": 24,
+        "m": 6,
+        "monomials_per_envelope": 120,
+        "selected_rows": 3
+      },
+      {
+        "dyadic_terms": 8,
+        "factor_count_per_envelope": 18,
+        "first_constructed_degree": 18,
+        "m": 6,
+        "monomials_per_envelope": 30,
+        "selected_rows": 4
+      },
+      {
+        "dyadic_terms": 32,
+        "factor_count_per_envelope": 6,
+        "first_constructed_degree": 6,
+        "m": 6,
+        "monomials_per_envelope": 1,
+        "selected_rows": 6
+      },
+      {
+        "dyadic_terms": 2,
+        "factor_count_per_envelope": 56,
+        "first_constructed_degree": 56,
+        "m": 8,
+        "monomials_per_envelope": 20160,
+        "selected_rows": 2
+      },
+      {
+        "dyadic_terms": 8,
+        "factor_count_per_envelope": 40,
+        "first_constructed_degree": 40,
+        "m": 8,
+        "monomials_per_envelope": 1680,
+        "selected_rows": 4
+      },
+      {
+        "dyadic_terms": 128,
+        "factor_count_per_envelope": 8,
+        "first_constructed_degree": 8,
+        "m": 8,
+        "monomials_per_envelope": 1,
+        "selected_rows": 8
+      }
+    ],
+    "staircase_cells_checked": 2080,
+    "t_max": 9,
+    "walsh_summands_checked": 7173991
+  },
+  "status": [
+    "GENERAL_MULTIROW_POLARIZATION_ENVELOPES",
+    "DYADIC_NONZERO_STAIRCASE",
+    "PAIR_CONSTRUCTION_EXTENDED_TO_GLYNN",
+    "EXACT_INTEGER_AND_RATIONAL_REPLAYED"
+  ],
+  "theorem": {
+    "arbitrary_q": "For s=min(m-1,floor(log2(q))), a q-term block is explicitly nonzero for every n>=m*(m-s)",
+    "chow_envelopes": "G_epsilon lies in D_m(T_epsilon), and T_epsilon has m*(m-t+1) independent linear factors",
+    "extension": "Multiplying every envelope by extra independent factors extends the same nonzero witness to all n>=m*(m-t+1)",
+    "first_constructed_degree": "n_t=m*(m-t+1)",
+    "fixed_degree": "For m<=n, the construction uses at most 2^max(0,m-floor(n/m)) Chow derivative envelopes",
+    "fourier_identity": "perm_m=2^(1-t)*sum_epsilon chi(epsilon)*G_epsilon, where epsilon ranges over {+-1}^{t-1}",
+    "parameters": "1<=t<=m<=n and q_t=2^(t-1)"
+  }
+}
