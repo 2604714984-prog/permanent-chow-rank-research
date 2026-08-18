@@ -1,0 +1,282 @@
+{
+  "core": {
+    "claim": {
+      "border_rank_improvement": false,
+      "field": "characteristic_zero",
+      "intersection": "ZERO",
+      "new_chow_rank_bound": false,
+      "statement": "D_3(perm_4) intersect (D_3(T_1)+D_3(T_2)+D_3(T_3)) = 0",
+      "triple": {
+        "m": 3,
+        "n": 4,
+        "q": 3
+      }
+    },
+    "cubic_excess_m_classification": [
+      {
+        "m": 3,
+        "n": 3,
+        "q": 4,
+        "source": "Glynn",
+        "status": "NONZERO"
+      },
+      {
+        "m": 3,
+        "n": 4,
+        "q": 3,
+        "source": "this theorem",
+        "status": "ZERO"
+      },
+      {
+        "m": 3,
+        "n": 6,
+        "q": 2,
+        "source": "sharp pair theorem",
+        "status": "NONZERO"
+      }
+    ],
+    "direct_frontier_audit": {
+      "m_range": [
+        3,
+        32
+      ],
+      "row_count": 60,
+      "selected_rows": [
+        {
+          "direct_zero_endpoint": 4,
+          "explicit_nonzero_start": 6,
+          "m": 3,
+          "open_count": 1,
+          "open_end": 5,
+          "open_start": 5,
+          "q": 3,
+          "zero_source": "cubic three-term theorem"
+        },
+        {
+          "direct_zero_endpoint": null,
+          "explicit_nonzero_start": 3,
+          "m": 3,
+          "open_count": 0,
+          "open_end": null,
+          "open_start": null,
+          "q": 4,
+          "zero_source": "Glynn nonzero at n=3"
+        },
+        {
+          "direct_zero_endpoint": 7,
+          "explicit_nonzero_start": 12,
+          "m": 4,
+          "open_count": 4,
+          "open_end": 11,
+          "open_start": 8,
+          "q": 3,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 5,
+          "explicit_nonzero_start": 8,
+          "m": 4,
+          "open_count": 2,
+          "open_end": 7,
+          "open_start": 6,
+          "q": 4,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 12,
+          "explicit_nonzero_start": 20,
+          "m": 5,
+          "open_count": 7,
+          "open_end": 19,
+          "open_start": 13,
+          "q": 3,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 8,
+          "explicit_nonzero_start": 15,
+          "m": 5,
+          "open_count": 6,
+          "open_end": 14,
+          "open_start": 9,
+          "q": 4,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 17,
+          "explicit_nonzero_start": 30,
+          "m": 6,
+          "open_count": 12,
+          "open_end": 29,
+          "open_start": 18,
+          "q": 3,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 12,
+          "explicit_nonzero_start": 24,
+          "m": 6,
+          "open_count": 11,
+          "open_end": 23,
+          "open_start": 13,
+          "q": 4,
+          "zero_source": "shifted equality theorem"
+        },
+        {
+          "direct_zero_endpoint": 24,
+          "explicit_nonzero_start": 42,
+          "m": 7,
+          "open_count": 17,
+          "open_end": 41,
+          "open_start": 25,
+          "q": 3,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 16,
+          "explicit_nonzero_start": 35,
+          "m": 7,
+          "open_count": 18,
+          "open_end": 34,
+          "open_start": 17,
+          "q": 4,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 31,
+          "explicit_nonzero_start": 56,
+          "m": 8,
+          "open_count": 24,
+          "open_end": 55,
+          "open_start": 32,
+          "q": 3,
+          "zero_source": "strict shifted theorem"
+        },
+        {
+          "direct_zero_endpoint": 21,
+          "explicit_nonzero_start": 48,
+          "m": 8,
+          "open_count": 26,
+          "open_end": 47,
+          "open_start": 22,
+          "q": 4,
+          "zero_source": "strict shifted theorem"
+        }
+      ]
+    },
+    "private_polar_integer_squeeze": {
+      "state": {
+        "ambient_dimension": 9,
+        "component_ranks": [
+          4,
+          4,
+          4
+        ],
+        "overlap_dimensions": [
+          3,
+          3,
+          3
+        ],
+        "private_dimensions": [
+          1,
+          1,
+          1
+        ],
+        "relation_defect": 3
+      },
+      "surviving_state_count": 1
+    },
+    "rank_four_rectangle_interface": {
+      "restriction_dimension": 1,
+      "support_models_checked": 25
+    },
+    "tensor_plane_parity": {
+      "case_table": [
+        {
+          "intersection_dimensions": [
+            0,
+            2,
+            4
+          ],
+          "projection_ranks": [
+            2,
+            2
+          ],
+          "total_dimensions": [
+            12,
+            10,
+            8
+          ]
+        },
+        {
+          "intersection_dimensions": [
+            0
+          ],
+          "projection_ranks": [
+            2,
+            1
+          ],
+          "total_dimensions": [
+            12
+          ]
+        },
+        {
+          "intersection_dimensions": [
+            0
+          ],
+          "projection_ranks": [
+            1,
+            2
+          ],
+          "total_dimensions": [
+            12
+          ]
+        },
+        {
+          "intersection_dimensions": [
+            0
+          ],
+          "projection_ranks": [
+            1,
+            1
+          ],
+          "total_dimensions": [
+            12
+          ]
+        },
+        {
+          "intersection_dimensions": [
+            0
+          ],
+          "projection_ranks": [
+            2,
+            0
+          ],
+          "total_dimensions": [
+            12
+          ]
+        },
+        {
+          "intersection_dimensions": [
+            0
+          ],
+          "projection_ranks": [
+            0,
+            2
+          ],
+          "total_dimensions": [
+            12
+          ]
+        }
+      ],
+      "forbidden_dimension": 9,
+      "possible_total_dimensions": [
+        8,
+        10,
+        12
+      ]
+    }
+  },
+  "core_sha256": "e39a77e46607d1ad7c69e50c04ddedadc9d256dc98b80d86790d03aa9475b5d6",
+  "schema_version": 1
+}
