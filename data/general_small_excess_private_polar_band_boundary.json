@@ -1,0 +1,58 @@
+{
+  "claim_boundary": "This is an ordinary characteristic-zero zero-intersection theorem for factor-span excess through m-1. It does not prove an exact Chow rank, optimize every finite-n numerical bound, improve border rank or establish literature novelty.",
+  "private_polar": {
+    "large_component_condition": "some r_i>s for 0<=s<=m-1",
+    "private_dimension": "dim S_i=r_i-t_i>=r_i-k",
+    "relation_defect_cap": "k<=s"
+  },
+  "quartic_boundary": {
+    "component_dimension_floor": 8,
+    "excess": 2,
+    "m": 4,
+    "maximum_distinct_rectangle_intersection": 6,
+    "minimum_two_rectangle_union": 12,
+    "n": 9,
+    "private_polar_dimension_floor": 6,
+    "q": 2,
+    "relation_defect_cap": 2,
+    "single_rectangle_size": 9
+  },
+  "selected_zero_block_examples": [
+    {
+      "m": 3,
+      "n": 5,
+      "zeta_pol": 2
+    },
+    {
+      "m": 4,
+      "n": 9,
+      "zeta_pol": 2
+    },
+    {
+      "m": 5,
+      "n": 7,
+      "zeta_pol": 4
+    },
+    {
+      "m": 5,
+      "n": 14,
+      "zeta_pol": 2
+    },
+    {
+      "m": 7,
+      "n": 10,
+      "zeta_pol": 5
+    }
+  ],
+  "status": [
+    "GENERAL_PRIVATE_POLAR_SMALL_EXCESS_ZERO_BAND",
+    "EXCESS_ZERO_THROUGH_M_MINUS_ONE",
+    "QUARTIC_ORDER_TWO_SHADOW_BOUNDARY_CLOSED",
+    "EXACT_INTEGER_INTERFACE_REPLAYED"
+  ],
+  "theorem": {
+    "closed_band": "For m>=3, q>=2 and q*n<=m^2+m-1, every q-term Chow block has zero intersection with D_m(perm_n).",
+    "next_open_band": "q*n=m^2+m.",
+    "zero_block": "zeta_pol(n,m)=floor((m^2+m-1)/n), whenever the displayed integer is at least two."
+  }
+}
