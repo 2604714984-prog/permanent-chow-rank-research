@@ -1,0 +1,66 @@
+{
+  "claim_boundary": "This theorem closes the equality endpoint of the factor-span zero-block criterion using the previously proved direct-sum indecomposability of minimal-shadow permanent derivatives. It is an ordinary characteristic-zero Chow-realizability statement. It introduces no new numerical Chow-rank bound in the currently frozen certificate table, does not improve border rank, does not classify near-endpoint intersections, and does not solve general Glynn optimality. Literature novelty is not established.",
+  "core_sha256": "7d78c0e595d25130a9bf2f9dd843ef88f3be737004f33b3f85f3be1170eb376a",
+  "finite_replay": {
+    "closed_endpoint_improvements": 258,
+    "first_proper_endpoint_triples": [
+      [8, 4, 2],
+      [9, 6, 4],
+      [12, 6, 3],
+      [16, 8, 4],
+      [16, 12, 9],
+      [18, 6, 2],
+      [18, 12, 8],
+      [20, 10, 5],
+      [24, 12, 6],
+      [25, 10, 4],
+      [25, 15, 9],
+      [25, 20, 16],
+      [27, 9, 3],
+      [27, 18, 12],
+      [28, 14, 7],
+      [32, 8, 2],
+      [32, 16, 8],
+      [32, 24, 18],
+      [36, 12, 4],
+      [36, 18, 9]
+    ],
+    "n_max": 128,
+    "n_min": 2,
+    "parameter_cells": 8128,
+    "projection_cap_checks": 73152,
+    "proper_derivative_endpoint_improvements": 132,
+    "quadratic_counterexample": {
+      "decomposition_terms": 2,
+      "m": 2,
+      "n": 2,
+      "q": 2
+    },
+    "single_term_counterexample_rows": [
+      {"ambient_variables": 4, "m": 2, "matching_monomials": 2, "n": 4},
+      {"ambient_variables": 9, "m": 3, "matching_monomials": 6, "n": 9},
+      {"ambient_variables": 16, "m": 4, "matching_monomials": 24, "n": 16},
+      {"ambient_variables": 25, "m": 5, "matching_monomials": 120, "n": 25},
+      {"ambient_variables": 36, "m": 6, "matching_monomials": 720, "n": 36},
+      {"ambient_variables": 49, "m": 7, "matching_monomials": 5040, "n": 49},
+      {"ambient_variables": 64, "m": 8, "matching_monomials": 40320, "n": 64},
+      {"ambient_variables": 81, "m": 9, "matching_monomials": 362880, "n": 81},
+      {"ambient_variables": 100, "m": 10, "matching_monomials": 3628800, "n": 100},
+      {"ambient_variables": 121, "m": 11, "matching_monomials": 39916800, "n": 121}
+    ],
+    "single_term_matching_monomial_checks": 43954712
+  },
+  "status": [
+    "GENERAL_DIRECT_SUM_FACTOR_SPAN_ENDPOINT",
+    "GENERAL_CLOSED_TERM_COUNT_ZERO_BLOCK",
+    "CHOW_REALIZABILITY_ENDPOINT_DEFECT",
+    "EXACT_INTEGER_REPLAYED"
+  ],
+  "theorem": {
+    "closed_term_count": "If q*n<m^2, or if q*n=m^2 with m>=3 and q>=2, then D_m(perm_n) intersects the q-term literal derivative sum trivially.",
+    "direct_sum_endpoint": "If m>=3, q>=2, the factor spans L_i form a direct sum, and sum_i dim(L_i)<=m^2, then D_m(perm_n) intersects sum_i D_m(T_i) trivially.",
+    "projection": "For Q>=zeta(n,m), the permanent-relative intersection with Q terms has dimension at most (Q-zeta(n,m))*binom(n,m).",
+    "sharp_exceptions": "The equality endpoint fails for one term when n=m^2, and fails at m=2,q=2,n=2.",
+    "zero_block_size": "zeta(n,m)=floor((m^2-1)/n)+1_{m>=3,n|m^2,m^2/n>=2}; every zeta(n,m)-term block is zero."
+  }
+}
