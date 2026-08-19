@@ -1,0 +1,20 @@
+{
+  "claim_boundary": {"border_rank":false,"literature_novelty":"NOT_ESTABLISHED","mu_8_4":4,"new_unrestricted_rank_bound":false,"quartic_8_4_3":"ZERO"},
+  "replay": {"dp_states":112,"rows":[
+    {"dimension":1,"minimizers":1,"shadow":4},{"dimension":2,"minimizers":2,"shadow":6},
+    {"dimension":3,"minimizers":2,"shadow":6},{"dimension":4,"minimizers":4,"shadow":8},
+    {"dimension":5,"minimizers":3,"shadow":8},{"dimension":6,"minimizers":2,"shadow":8},
+    {"dimension":7,"minimizers":2,"shadow":9},{"dimension":8,"minimizers":1,"shadow":9}]},
+  "schema_version":1,
+  "theorem_core": {
+    "component_cap":8,"conclusion":"UNIVERSAL_ZERO","disjoint_two_term_cubic_states":0,
+    "forced_component_dimensions":[8,8,8],"forced_pair_intersections":[0,0,0],"mu_8_4":4,
+    "pair_supported_cubic_dimension":8,"parameters":{"m":4,"n":8,"terms":3},
+    "quadratic_shadow_table":[
+      {"dimension":1,"minimizers":1,"shadow":4},{"dimension":2,"minimizers":2,"shadow":6},
+      {"dimension":3,"minimizers":2,"shadow":6},{"dimension":4,"minimizers":4,"shadow":8},
+      {"dimension":5,"minimizers":3,"shadow":8},{"dimension":6,"minimizers":2,"shadow":8},
+      {"dimension":7,"minimizers":2,"shadow":9},{"dimension":8,"minimizers":1,"shadow":9}],
+    "quartic_essential_floor":16,"single_private_polar":"ZERO"},
+  "theorem_core_sha256":"f42f161b773843d253dff703c455191891dcf38a0adc4ac396b6ffcec46a1655"
+}
