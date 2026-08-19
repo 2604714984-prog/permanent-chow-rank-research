@@ -1,91 +1,94 @@
-# Final classification of the cubic excess-`m` arithmetic boundary
+# Completed cubic boundary and exact literal block threshold
 
 ## Scope
 
-This note updates the cubic boundary attached to the excess-`m` theorem. It
-changes no theorem for `m>=4`, introduces no numerical Chow-rank or border-rank
-claim, and uses only literal derivative-space intersections.
+This note supersedes the former clarification that left the cubic rows
+`(4,3,3)` and `(6,3,2)` unresolved.  The active stacked results now determine
+both the excess-`m` arithmetic boundary and the least literal Chow-block size
+for every permanent order at output degree three.
 
-For `m=3`, the excess-`m` equation is
+All minimum statements below are over characteristic-zero fields.  The new
+partition-Laplace construction itself is integral and works over every field.
+No Chow-rank, border-rank, coupled/literal-identification, or literature-novelty
+claim is introduced.
+
+## 1. Excess-`m` cubic arithmetic rows
+
+The equation
 
 ```text
 q*n=3^2+3=12,
 n>=3,
-q>=2.
+q>=2
 ```
 
-The legal rows are
+has exactly three legal rows:
 
 ```text
-(n,m,q)=(6,3,2),(4,3,3),(3,3,4).
+(n,m,q)=(3,3,4),(4,3,3),(6,3,2).
 ```
 
-All three are now decided.
-
-## 1. Four terms at `(3,3,4)` are nonzero
-
-At top degree,
+Their status is now complete:
 
 ```text
-D_3(perm_3)=span{perm_3}.
+(3,3,4) NONZERO -- accepted four-term decomposition of perm_3
+(4,3,3) ZERO    -- PR #84 cubic three-term zero theorem
+(6,3,2) NONZERO -- PR #82 sharp pair construction.
 ```
 
-The accepted identity `ChowRank(perm_3)=4`, equivalently Glynn's four-term
-formula, gives
+Thus the restriction `m>=4` in the general excess-`m` zero theorem remains
+necessary, but the three cubic arithmetic exceptions are no longer open.
+
+## 2. The former three-term gap at n=5
+
+Expand one selected `3 x 3` permanent across its first row:
 
 ```text
-0 != perm_3
-in D_3(perm_3) intersect sum_(i=1)^4 D_3(T_i).
+perm_3=G_0+G_1+G_2,
+G_j=x_(0j)*(x_(1a)*x_(2b)+x_(1b)*x_(2a)),
+{a,b}=[3] minus {j}.
 ```
 
-Therefore this row is nonzero.
+Each `G_j` uses five coordinate variables and belongs to the cubic derivative
+space of their five-factor coordinate product.  Therefore three degree-five
+Chow terms have a nonzero intersection with `D_3(perm_5)`.  PR #82 proves that
+two terms are universally zero at this order, so the minimum is exactly three.
 
-## 2. Three terms at `(4,3,3)` are zero
+## 3. Exact cubic literal threshold
 
-The cubic three-term theorem proves that for arbitrary degree-four Chow terms,
+Let `mu(n,3)` be the least number of degree-`n` Chow terms whose literal cubic
+derivative-space sum has a nonzero intersection with `D_3(perm_n)`.  Then
 
 ```text
-D_3(perm_4) intersect
-(D_3(T_1)+D_3(T_2)+D_3(T_3))=0.
+mu(n,3)=4, n=3,4
+mu(5,3)=3
+mu(n,3)=2, n=6,7,8
+mu(n,3)=1, n>=9.
 ```
 
-Its proof combines:
-
-1. the nine-variable permanent shadow floor;
-2. the private-polar relation-defect identities;
-3. the exact quadratic threshold `F_(4,2)(2)=6`;
-4. a rank-four classification inside `D_2(perm_4)`; and
-5. the fact that three pairwise-disjoint `2 x 2` tensor four-planes have total
-   dimension only `8`, `10`, or `12`, never the forced dimension nine.
-
-See `docs/general_cubic_three_term_zero.md`.
-
-## 3. Two terms at `(6,3,2)` are nonzero
-
-The sharp pair-threshold theorem constructs two degree-six Chow envelopes whose
-cubic derivative spaces contain `perm_3`. Hence
+The lower inputs are, respectively:
 
 ```text
-0 != perm_3
-in D_3(perm_6) intersect (D_3(T_1)+D_3(T_2)).
+ChowRank(perm_3)=4;
+PR #84 three-term zero at n=4;
+PR #82 pair zero through n=5;
+strict one-term factor-span zero through n=8.
 ```
 
-This row is nonzero and is the first degree after the universal pair-zero
-endpoint `n=5`.
+The matching upper witnesses are the padded four-term construction, the new
+partition-Laplace `(2,1)` construction, the sharp pair construction, and the
+one-block coordinate envelope.
 
-## Final boundary
+## 4. Corrected boundary
 
 ```text
-m>=4, q*n<=m^2+m              ZERO THEOREM
-m=3, (n,q)=(3,4)              NONZERO
-m=3, (n,q)=(4,3)              ZERO
-m=3, (n,q)=(6,2)              NONZERO
+excess-m cubic arithmetic rows       CLASSIFIED
+three-term cubic boundary            n<=4 ZERO; n>=5 NONZERO
+complete cubic minimum term function EXACT
+new unrestricted Chow-rank bound     NO
+border-rank improvement              NO
+literature novelty                   NOT ESTABLISHED.
 ```
 
-Thus the excess-`m` arithmetic boundary is fully classified in output degree
-three. The next cubic three-term problem is not another `q*n=12` row; it is the
-adjacent unresolved cell
-
-```text
-(n,m,q)=(5,3,3).
-```
+The next small arithmetic interface is quartic, beginning with the total-24
+cell `(m,n,q)=(4,6,4)`.
