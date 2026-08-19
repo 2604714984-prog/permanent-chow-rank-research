@@ -1,0 +1,33 @@
+{
+  "claim_boundary": {
+    "border_rank": false,
+    "literature_novelty": "NOT_ESTABLISHED",
+    "new_chow_rank_bound": false,
+    "new_exact_unrestricted_rank": false,
+    "quartic_6_4_4": "ZERO"
+  },
+  "replay": {
+    "coordinate_pairs_checked": 79800,
+    "minimum_linear_shadow": 12,
+    "quadratic_dp_states": 26,
+    "quadratic_minimizer_count": 4,
+    "quadratic_shadow": 8,
+    "quadratic_witness": [1,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    "union_histogram": {"12":3600,"14":16200,"15":3600,"16":32400,"17":16200,"18":7800}
+  },
+  "schema_version": 1,
+  "theorem_core": {
+    "component_essential_cap": 6,
+    "conclusion": "UNIVERSAL_ZERO",
+    "cubic_two_plane_linear_shadow": 12,
+    "forced_pair_span": 9,
+    "initial_pair_supported_polar_floor": 4,
+    "pair_equality_states": [{"intersection":3,"joint":9,"private1":3,"private2":3,"r1":6,"r2":6}],
+    "pair_span_two_plane_capacity": 1,
+    "parameters": {"m":4,"n":6,"terms":4},
+    "permanent_linear_shadow_floor": 16,
+    "quadratic_four_plane_shadow": {"minimizer_count":4,"value":8,"witness":[1,1,1,1,0,0,0,0,0,0,0,0,0,0,0]},
+    "refined_pair_supported_polar_floor": 7
+  },
+  "theorem_core_sha256": "cb4ebea747a4ac2ac2b8141bab816395998cdb785d43b0fcd90579e54e949512"
+}
