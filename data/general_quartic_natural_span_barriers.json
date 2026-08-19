@@ -1,0 +1,105 @@
+{
+  "claim_boundary": {
+    "glynn_internal_minimum": 8,
+    "laplace_internal_recombination": "IMPOSSIBLE",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4_exact_value": "OPEN_IN_[5,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false
+  },
+  "field": "characteristic_zero",
+  "glynn_span": {
+    "all_glynn_coefficients_nonzero": true,
+    "basis_size": 8,
+    "degree_six_chow_component_essential_cap": 6,
+    "glynn_coefficients": [
+      "-1/8",
+      "1/8",
+      "1/8",
+      "-1/8",
+      "1/8",
+      "-1/8",
+      "-1/8",
+      "1/8"
+    ],
+    "internal_minimum_terms": 8,
+    "low_essential_line_count": 8,
+    "normalized_low_essential_lines": [
+      [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "ordered_tensor_coordinates": 256,
+    "parity_classes": 8,
+    "walsh_rank": 8
+  },
+  "laplace_22": {
+    "basis_size": 6,
+    "degree_six_chow_component_essential_cap": 6,
+    "essential_dimension_distribution": {
+      "12": 12,
+      "14": 8,
+      "16": 37,
+      "8": 6
+    },
+    "internal_intersection_zero": true,
+    "minimum_nonzero_essential_dimension": 8,
+    "monomials_per_basis_vector": 4,
+    "permanent_monomials": 24,
+    "support_profile_distribution": {
+      "top_2_bottom_2_ess_8": 6,
+      "top_3_bottom_3_ess_12": 12,
+      "top_3_bottom_4_ess_14": 4,
+      "top_4_bottom_3_ess_14": 4,
+      "top_4_bottom_4_ess_16": 37
+    },
+    "supports_checked": 63
+  },
+  "schema": "general_quartic_natural_span_compression_barriers/v1",
+  "theorem_core_sha256": "d40eef4be59483e19dced0f69232b79bdcead026531aac018f3490ee44104145"
+}
