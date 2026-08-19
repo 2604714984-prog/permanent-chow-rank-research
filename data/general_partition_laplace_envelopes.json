@@ -1,0 +1,227 @@
+{
+  "core": {
+    "claim_boundary": {
+      "border_rank_improvement": false,
+      "coupled_literal_identification": false,
+      "literature_novelty_established": false,
+      "new_chow_rank_lower_bound": false,
+      "new_exact_chow_rank_n_ge_6": false,
+      "new_exact_literal_block_threshold": true
+    },
+    "cubic_exact_threshold": {
+      "mu_3_to_4": 4,
+      "mu_5": 3,
+      "mu_6_to_8": 2,
+      "mu_9_and_above": 1
+    },
+    "partition_laplace_theorem": {
+      "extension_to_larger_n": true,
+      "first_constructed_degree": "sum_a(lambda_a^2)",
+      "term_count": "m!/prod_a(lambda_a!)"
+    },
+    "status": "PROOF_DRAFT_COMPLETE_AND_EXACT_COMBINATORIAL_REPLAYED"
+  },
+  "core_sha256": "20ec2b53ae598adbd78c36387fb8c00e1d8add9a1977d0f323eefdb4084b1c19",
+  "cubic_threshold_replay": {
+    "exact_segments": [
+      {
+        "mu": 4,
+        "n_max": 4,
+        "n_min": 3
+      },
+      {
+        "mu": 3,
+        "n_max": 5,
+        "n_min": 5
+      },
+      {
+        "mu": 2,
+        "n_max": 8,
+        "n_min": 6
+      },
+      {
+        "mu": 1,
+        "n_max": null,
+        "n_min": 9
+      }
+    ],
+    "n_max": 64,
+    "rows_checked": 62,
+    "selected_rows": [
+      {
+        "mu": 4,
+        "n": 3
+      },
+      {
+        "mu": 4,
+        "n": 4
+      },
+      {
+        "mu": 3,
+        "n": 5
+      },
+      {
+        "mu": 2,
+        "n": 6
+      },
+      {
+        "mu": 2,
+        "n": 7
+      },
+      {
+        "mu": 2,
+        "n": 8
+      },
+      {
+        "mu": 1,
+        "n": 9
+      },
+      {
+        "mu": 1,
+        "n": 10
+      },
+      {
+        "mu": 1,
+        "n": 11
+      },
+      {
+        "mu": 1,
+        "n": 12
+      }
+    ]
+  },
+  "cubic_witness": {
+    "explicit_terms": [
+      {
+        "first_row_column": 0,
+        "matchings": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "first_row_column": 1,
+        "matchings": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "support": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "first_row_column": 2,
+        "matchings": [
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "support": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "global_monomials": 6,
+    "groups": 3,
+    "monomials_per_group": [
+      2,
+      2,
+      2
+    ],
+    "support_sizes": [
+      5,
+      5,
+      5
+    ]
+  },
+  "primary_partition_replay": {
+    "generated_global_monomials": 971543,
+    "m_max": 8,
+    "ordered_column_partitions_checked": 108893,
+    "partition_shapes_checked": 66,
+    "support_checks": 108893
+  }
+}
