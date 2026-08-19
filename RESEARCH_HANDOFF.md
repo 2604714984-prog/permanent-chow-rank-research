@@ -12,7 +12,8 @@ Last updated: **2026-08-19**
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
 active branch: research/cubic-block-threshold
-active PR: TO_BE_CREATED
+active PR: #85
+active theorem head: 6d45984ca9d907f32af7dfa0521a3b0ca5797e92
 parent branch: research/cubic-three-term-zero
 parent PR: #84
 parent exact head: 29a8e37c3cf62c65a03d13ff4d692e1a42209a1f
