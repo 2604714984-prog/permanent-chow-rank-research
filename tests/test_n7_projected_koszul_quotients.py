@@ -34,6 +34,14 @@ class ProjectedKoszulQuotientTests(unittest.TestCase):
         self.assertEqual(self.cyclic["rank_49_threshold"], 40_768)
         self.assertFalse(self.cyclic["strictly_exceeds_49_terms"])
         self.assertEqual(self.cyclic["flattening_lower_bound"], 41)
+        self.assertEqual(self.cyclic["adjacent_k52_exact_rank"], 8_919)
+        self.assertEqual(
+            self.cyclic["universal_seven_dimensional_central_rank_ceiling"],
+            33_956,
+        )
+        self.assertEqual(
+            self.cyclic["universal_seven_dimensional_lower_bound_ceiling"], 41
+        )
         self.assertEqual(
             {row["total_rank"] for row in self.cyclic["prime_replays"]},
             {33_920},
@@ -75,6 +83,7 @@ class ProjectedKoszulQuotientTests(unittest.TestCase):
             [row["character_rows"] for row in live["prime_replays"]],
             [row["character_rows"] for row in self.cyclic["prime_replays"]],
         )
+        self.assertEqual(live["adjacent_k52_exact_rank"], 8_919)
 
     @unittest.skipUnless(
         os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",

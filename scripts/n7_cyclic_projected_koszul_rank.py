@@ -92,12 +92,12 @@ def primitive_seventh_root(prime: int) -> int:
 def character_matrix(
     source_representatives,
     target_lookup,
+    target_size: int,
     character: tuple[int, int],
     prime: int,
     root: int,
 ) -> np.ndarray:
-    size = len(source_representatives)
-    matrix = np.zeros((size, size), dtype=np.int64)
+    matrix = np.zeros((target_size, len(source_representatives)), dtype=np.int64)
     first_character, second_character = character
     for column_index, (rows, columns, wedge) in enumerate(source_representatives):
         wedge_set = set(wedge)
@@ -125,6 +125,38 @@ def character_matrix(
     return matrix
 
 
+def class_replay(
+    source_representatives,
+    target_representatives,
+    character_classes,
+    prime,
+):
+    root = primitive_seventh_root(prime)
+    target_lookup = target_transport(target_representatives)
+    rows = []
+    total = 0
+    for character, multiplicity, label in character_classes:
+        matrix = character_matrix(
+            source_representatives,
+            target_lookup,
+            len(target_representatives),
+            character,
+            prime,
+            root,
+        )
+        rank = rank_mod(matrix, prime)
+        rows.append(
+            {
+                "label": label,
+                "character": list(character),
+                "multiplicity": multiplicity,
+                "block_rank": rank,
+            }
+        )
+        total += multiplicity * rank
+    return total, rows, root
+
+
 def rank_mod(matrix: np.ndarray, prime: int) -> int:
     return int(nmod_mat(matrix.tolist(), prime).rank())
 
@@ -136,7 +168,10 @@ def build_payload() -> dict[str, object]:
     source_representatives = orbit_representatives(source)
     target_representatives = orbit_representatives(target)
     assert len(source_representatives) == len(target_representatives) == 875
-    target_lookup = target_transport(target_representatives)
+    adjacent_source_representatives = orbit_representatives(state_space(5, 2))
+    adjacent_target_representatives = orbit_representatives(state_space(4, 3))
+    assert len(adjacent_source_representatives) == 189
+    assert len(adjacent_target_representatives) == 875
     character_classes = (
         ((0, 0), 1, "trivial"),
         ((1, 0), 12, "one_nonzero_coordinate"),
@@ -148,41 +183,39 @@ def build_payload() -> dict[str, object]:
     started = time.perf_counter()
     prime_rows = []
     for prime in PRIMES:
-        root = primitive_seventh_root(prime)
-        rows = []
-        total = 0
-        for character, multiplicity, label in character_classes:
-            matrix = character_matrix(
-                source_representatives,
-                target_lookup,
-                character,
-                prime,
-                root,
-            )
-            rank = rank_mod(matrix, prime)
-            rows.append(
-                {
-                    "label": label,
-                    "character": list(character),
-                    "multiplicity": multiplicity,
-                    "block_rank": rank,
-                }
-            )
-            total += multiplicity * rank
+        total, rows, root = class_replay(
+            source_representatives,
+            target_representatives,
+            character_classes,
+            prime,
+        )
+        adjacent_total, adjacent_rows, _ = class_replay(
+            adjacent_source_representatives,
+            adjacent_target_representatives,
+            character_classes,
+            prime,
+        )
         prime_rows.append(
             {
                 "prime": prime,
                 "primitive_seventh_root": root,
                 "character_rows": rows,
                 "total_rank": total,
+                "adjacent_k52_character_rows": adjacent_rows,
+                "adjacent_k52_total_rank": adjacent_total,
             }
         )
     totals = {row["total_rank"] for row in prime_rows}
     if len(totals) != 1:
         raise AssertionError(prime_rows)
     total_rank = totals.pop()
+    adjacent_totals = {row["adjacent_k52_total_rank"] for row in prime_rows}
+    if adjacent_totals != {8_919}:
+        raise AssertionError(prime_rows)
+    adjacent_rank = adjacent_totals.pop()
     one_term_cap = 832
     threshold = 49 * one_term_cap
+    universal_central_ceiling = len(source) - adjacent_rank
     return {
         "schema_version": 1,
         "status": "EXACT_CYCLIC_PROJECTED_KOSZUL_RANK",
@@ -197,6 +230,13 @@ def build_payload() -> dict[str, object]:
         "character_multiplicity_sum": sum(row[1] for row in character_classes),
         "prime_replays": prime_rows,
         "total_rank": total_rank,
+        "adjacent_k52_source_orbit_count": len(adjacent_source_representatives),
+        "adjacent_k52_target_orbit_count": len(adjacent_target_representatives),
+        "adjacent_k52_exact_rank": adjacent_rank,
+        "universal_seven_dimensional_central_rank_ceiling": universal_central_ceiling,
+        "universal_seven_dimensional_lower_bound_ceiling": math.ceil(
+            universal_central_ceiling / one_term_cap
+        ),
         "independent_chow_term_rank_cap": one_term_cap,
         "rank_49_threshold": threshold,
         "strictly_exceeds_49_terms": total_rank > threshold,
@@ -205,6 +245,7 @@ def build_payload() -> dict[str, object]:
         "claim_boundary": [
             "The modular full-rank minors lift to characteristic zero.",
             "The one-term cap uses only the seven-dimensional projected factor span.",
+            "The adjacent-map rank and generic semicontinuity bound every seven-dimensional projected central rank by 33956.",
             "This is an ordinary Chow-rank flattening and makes no border-rank claim.",
         ],
     }
