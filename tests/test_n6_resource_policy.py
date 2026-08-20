@@ -1,5 +1,6 @@
 import os
 import unittest
+from unittest import mock
 
 from scripts import n6_resource_policy as policy
 
@@ -12,36 +13,46 @@ class ResourcePolicyTests(unittest.TestCase):
             policy.parse_worker_argument("0")
 
     def test_explicit_and_gpu_resolution(self):
-        self.assertEqual(
-            policy.resolve_worker_count(
+        # Explicit worker semantics must not depend on the core or memory
+        # count of whichever CI runner happens to execute this unit test.
+        with (
+            mock.patch.object(policy.os, "cpu_count", return_value=20),
+            mock.patch.object(
+                policy,
+                "available_memory_bytes",
+                return_value=16 * policy.GIB,
+            ),
+        ):
+            self.assertEqual(
+                policy.resolve_worker_count(
+                    3,
+                    max_workers=12,
+                    estimated_bytes_per_worker=policy.GIB,
+                ),
                 3,
-                max_workers=12,
-                estimated_bytes_per_worker=policy.GIB,
-            ),
-            3,
-        )
-        self.assertEqual(
-            policy.resolve_worker_count(
-                0,
-                max_workers=12,
-                estimated_bytes_per_worker=policy.GIB,
-                gpu=True,
-            ),
-            1,
-        )
-        with self.assertRaises(ValueError):
-            policy.resolve_worker_count(
-                2,
-                max_workers=12,
-                estimated_bytes_per_worker=policy.GIB,
-                gpu=True,
             )
-        with self.assertRaises(ValueError):
-            policy.resolve_worker_count(
-                9,
-                max_workers=12,
-                estimated_bytes_per_worker=policy.GIB,
+            self.assertEqual(
+                policy.resolve_worker_count(
+                    0,
+                    max_workers=12,
+                    estimated_bytes_per_worker=policy.GIB,
+                    gpu=True,
+                ),
+                1,
             )
+            with self.assertRaises(ValueError):
+                policy.resolve_worker_count(
+                    2,
+                    max_workers=12,
+                    estimated_bytes_per_worker=policy.GIB,
+                    gpu=True,
+                )
+            with self.assertRaises(ValueError):
+                policy.resolve_worker_count(
+                    9,
+                    max_workers=12,
+                    estimated_bytes_per_worker=policy.GIB,
+                )
 
     def test_auto_is_bounded(self):
         workers = policy.resolve_worker_count(
