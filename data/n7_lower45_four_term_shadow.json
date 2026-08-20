@@ -1,0 +1,5169 @@
+{
+  "schema_version": 1,
+  "status": "PURE_EXACT_ORDINARY_LOWER_45",
+  "n": 7,
+  "local_four_term_shadow": {
+    "uniformity": 3,
+    "budget": 84,
+    "capacity": 64,
+    "witness_partition": [
+      16,
+      16,
+      16,
+      16,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "witness_area": 64,
+    "witness_shadow": 84,
+    "peak_dp_states": 4980
+  },
+  "nineteen_term_cubic_intersection_cap": 589,
+  "degree_four_shadow": {
+    "uniformity": 4,
+    "budget": 589,
+    "capacity": 341,
+    "witness_partition": [
+      35,
+      35,
+      35,
+      35,
+      35,
+      19,
+      19,
+      19,
+      19,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "witness_area": 341,
+    "witness_shadow": 586,
+    "peak_dp_states": 14493
+  },
+  "chosen_route": {
+    "selected_terms": 19,
+    "local_terms": 4,
+    "cubic_shadow_budget": 589,
+    "degree_four_intersection_cap": 341,
+    "remaining_terms_lower_bound": 26,
+    "total_terms_lower_bound": 45
+  },
+  "koszul_residual_rank_lower_bound": 42091,
+  "twenty_five_term_koszul_capacity": 42000,
+  "full_local_selected_route_scan": [
+    {
+      "selected_terms": 1,
+      "local_terms": 1,
+      "cubic_shadow_budget": 0,
+      "degree_four_intersection_cap": 0,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 2,
+      "local_terms": 1,
+      "cubic_shadow_budget": 35,
+      "degree_four_intersection_cap": 2,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 2,
+      "local_terms": 2,
+      "cubic_shadow_budget": 17,
+      "degree_four_intersection_cap": 1,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 3,
+      "local_terms": 1,
+      "cubic_shadow_budget": 70,
+      "degree_four_intersection_cap": 10,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 3,
+      "local_terms": 2,
+      "cubic_shadow_budget": 52,
+      "degree_four_intersection_cap": 6,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 3,
+      "local_terms": 3,
+      "cubic_shadow_budget": 40,
+      "degree_four_intersection_cap": 5,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 4,
+      "local_terms": 1,
+      "cubic_shadow_budget": 105,
+      "degree_four_intersection_cap": 25,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 4,
+      "local_terms": 2,
+      "cubic_shadow_budget": 87,
+      "degree_four_intersection_cap": 15,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 4,
+      "local_terms": 3,
+      "cubic_shadow_budget": 75,
+      "degree_four_intersection_cap": 10,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 4,
+      "local_terms": 4,
+      "cubic_shadow_budget": 64,
+      "degree_four_intersection_cap": 9,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 5,
+      "local_terms": 1,
+      "cubic_shadow_budget": 140,
+      "degree_four_intersection_cap": 35,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 5,
+      "local_terms": 2,
+      "cubic_shadow_budget": 122,
+      "degree_four_intersection_cap": 27,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 5,
+      "local_terms": 3,
+      "cubic_shadow_budget": 110,
+      "degree_four_intersection_cap": 25,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 5,
+      "local_terms": 4,
+      "cubic_shadow_budget": 99,
+      "degree_four_intersection_cap": 21,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 5,
+      "local_terms": 5,
+      "cubic_shadow_budget": 100,
+      "degree_four_intersection_cap": 25,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 6,
+      "local_terms": 1,
+      "cubic_shadow_budget": 175,
+      "degree_four_intersection_cap": 48,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 6,
+      "local_terms": 2,
+      "cubic_shadow_budget": 157,
+      "degree_four_intersection_cap": 39,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 6,
+      "local_terms": 3,
+      "cubic_shadow_budget": 145,
+      "degree_four_intersection_cap": 35,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 6,
+      "local_terms": 4,
+      "cubic_shadow_budget": 134,
+      "degree_four_intersection_cap": 30,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 6,
+      "local_terms": 5,
+      "cubic_shadow_budget": 135,
+      "degree_four_intersection_cap": 30,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 6,
+      "local_terms": 6,
+      "cubic_shadow_budget": 140,
+      "degree_four_intersection_cap": 35,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 1,
+      "cubic_shadow_budget": 210,
+      "degree_four_intersection_cap": 75,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 2,
+      "cubic_shadow_budget": 192,
+      "degree_four_intersection_cap": 60,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 3,
+      "cubic_shadow_budget": 180,
+      "degree_four_intersection_cap": 51,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 4,
+      "cubic_shadow_budget": 169,
+      "degree_four_intersection_cap": 46,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 5,
+      "cubic_shadow_budget": 170,
+      "degree_four_intersection_cap": 46,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 6,
+      "cubic_shadow_budget": 175,
+      "degree_four_intersection_cap": 48,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 7,
+      "local_terms": 7,
+      "cubic_shadow_budget": 176,
+      "degree_four_intersection_cap": 51,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 1,
+      "cubic_shadow_budget": 245,
+      "degree_four_intersection_cap": 85,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 2,
+      "cubic_shadow_budget": 227,
+      "degree_four_intersection_cap": 79,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 3,
+      "cubic_shadow_budget": 215,
+      "degree_four_intersection_cap": 76,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 4,
+      "cubic_shadow_budget": 204,
+      "degree_four_intersection_cap": 75,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 5,
+      "cubic_shadow_budget": 205,
+      "degree_four_intersection_cap": 75,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 6,
+      "cubic_shadow_budget": 210,
+      "degree_four_intersection_cap": 75,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 7,
+      "cubic_shadow_budget": 211,
+      "degree_four_intersection_cap": 75,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "local_terms": 8,
+      "cubic_shadow_budget": 215,
+      "degree_four_intersection_cap": 76,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 1,
+      "cubic_shadow_budget": 280,
+      "degree_four_intersection_cap": 101,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 2,
+      "cubic_shadow_budget": 262,
+      "degree_four_intersection_cap": 95,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 3,
+      "cubic_shadow_budget": 250,
+      "degree_four_intersection_cap": 86,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 4,
+      "cubic_shadow_budget": 239,
+      "degree_four_intersection_cap": 82,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 5,
+      "cubic_shadow_budget": 240,
+      "degree_four_intersection_cap": 85,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 6,
+      "cubic_shadow_budget": 245,
+      "degree_four_intersection_cap": 85,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 7,
+      "cubic_shadow_budget": 246,
+      "degree_four_intersection_cap": 85,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 8,
+      "cubic_shadow_budget": 250,
+      "degree_four_intersection_cap": 86,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 9,
+      "local_terms": 9,
+      "cubic_shadow_budget": 260,
+      "degree_four_intersection_cap": 95,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 1,
+      "cubic_shadow_budget": 315,
+      "degree_four_intersection_cap": 128,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 2,
+      "cubic_shadow_budget": 297,
+      "degree_four_intersection_cap": 116,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 3,
+      "cubic_shadow_budget": 285,
+      "degree_four_intersection_cap": 104,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 4,
+      "cubic_shadow_budget": 274,
+      "degree_four_intersection_cap": 98,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 5,
+      "cubic_shadow_budget": 275,
+      "degree_four_intersection_cap": 98,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 6,
+      "cubic_shadow_budget": 280,
+      "degree_four_intersection_cap": 101,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 7,
+      "cubic_shadow_budget": 281,
+      "degree_four_intersection_cap": 101,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 8,
+      "cubic_shadow_budget": 285,
+      "degree_four_intersection_cap": 104,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 9,
+      "cubic_shadow_budget": 295,
+      "degree_four_intersection_cap": 113,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "local_terms": 10,
+      "cubic_shadow_budget": 350,
+      "degree_four_intersection_cap": 175,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 1,
+      "cubic_shadow_budget": 350,
+      "degree_four_intersection_cap": 175,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 2,
+      "cubic_shadow_budget": 332,
+      "degree_four_intersection_cap": 141,
+      "remaining_terms_lower_bound": 31,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 3,
+      "cubic_shadow_budget": 320,
+      "degree_four_intersection_cap": 135,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 4,
+      "cubic_shadow_budget": 309,
+      "degree_four_intersection_cap": 126,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 5,
+      "cubic_shadow_budget": 310,
+      "degree_four_intersection_cap": 126,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 6,
+      "cubic_shadow_budget": 315,
+      "degree_four_intersection_cap": 128,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 7,
+      "cubic_shadow_budget": 316,
+      "degree_four_intersection_cap": 131,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 8,
+      "cubic_shadow_budget": 320,
+      "degree_four_intersection_cap": 135,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 9,
+      "cubic_shadow_budget": 330,
+      "degree_four_intersection_cap": 140,
+      "remaining_terms_lower_bound": 31,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 10,
+      "cubic_shadow_budget": 385,
+      "degree_four_intersection_cap": 189,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 11,
+      "local_terms": 11,
+      "cubic_shadow_budget": 401,
+      "degree_four_intersection_cap": 225,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 1,
+      "cubic_shadow_budget": 385,
+      "degree_four_intersection_cap": 189,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 2,
+      "cubic_shadow_budget": 367,
+      "degree_four_intersection_cap": 176,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 3,
+      "cubic_shadow_budget": 355,
+      "degree_four_intersection_cap": 175,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 4,
+      "cubic_shadow_budget": 344,
+      "degree_four_intersection_cap": 159,
+      "remaining_terms_lower_bound": 31,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 5,
+      "cubic_shadow_budget": 345,
+      "degree_four_intersection_cap": 159,
+      "remaining_terms_lower_bound": 31,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 6,
+      "cubic_shadow_budget": 350,
+      "degree_four_intersection_cap": 175,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 7,
+      "cubic_shadow_budget": 351,
+      "degree_four_intersection_cap": 175,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 8,
+      "cubic_shadow_budget": 355,
+      "degree_four_intersection_cap": 175,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 9,
+      "cubic_shadow_budget": 365,
+      "degree_four_intersection_cap": 176,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 10,
+      "cubic_shadow_budget": 420,
+      "degree_four_intersection_cap": 227,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 11,
+      "cubic_shadow_budget": 436,
+      "degree_four_intersection_cap": 232,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 12,
+      "local_terms": 12,
+      "cubic_shadow_budget": 428,
+      "degree_four_intersection_cap": 229,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 1,
+      "cubic_shadow_budget": 420,
+      "degree_four_intersection_cap": 227,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 2,
+      "cubic_shadow_budget": 402,
+      "degree_four_intersection_cap": 225,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 3,
+      "cubic_shadow_budget": 390,
+      "degree_four_intersection_cap": 195,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 4,
+      "cubic_shadow_budget": 379,
+      "degree_four_intersection_cap": 179,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 5,
+      "cubic_shadow_budget": 380,
+      "degree_four_intersection_cap": 180,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 6,
+      "cubic_shadow_budget": 385,
+      "degree_four_intersection_cap": 189,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 7,
+      "cubic_shadow_budget": 386,
+      "degree_four_intersection_cap": 189,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 8,
+      "cubic_shadow_budget": 390,
+      "degree_four_intersection_cap": 195,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 9,
+      "cubic_shadow_budget": 400,
+      "degree_four_intersection_cap": 225,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 10,
+      "cubic_shadow_budget": 455,
+      "degree_four_intersection_cap": 238,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 11,
+      "cubic_shadow_budget": 471,
+      "degree_four_intersection_cap": 246,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 12,
+      "cubic_shadow_budget": 463,
+      "degree_four_intersection_cap": 245,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 13,
+      "local_terms": 13,
+      "cubic_shadow_budget": 480,
+      "degree_four_intersection_cap": 251,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 1,
+      "cubic_shadow_budget": 455,
+      "degree_four_intersection_cap": 238,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 2,
+      "cubic_shadow_budget": 437,
+      "degree_four_intersection_cap": 232,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 3,
+      "cubic_shadow_budget": 425,
+      "degree_four_intersection_cap": 229,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 4,
+      "cubic_shadow_budget": 414,
+      "degree_four_intersection_cap": 226,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 5,
+      "cubic_shadow_budget": 415,
+      "degree_four_intersection_cap": 226,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 6,
+      "cubic_shadow_budget": 420,
+      "degree_four_intersection_cap": 227,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 7,
+      "cubic_shadow_budget": 421,
+      "degree_four_intersection_cap": 227,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 8,
+      "cubic_shadow_budget": 425,
+      "degree_four_intersection_cap": 229,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 9,
+      "cubic_shadow_budget": 435,
+      "degree_four_intersection_cap": 230,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 10,
+      "cubic_shadow_budget": 490,
+      "degree_four_intersection_cap": 260,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 11,
+      "cubic_shadow_budget": 506,
+      "degree_four_intersection_cap": 275,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 12,
+      "cubic_shadow_budget": 498,
+      "degree_four_intersection_cap": 266,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 13,
+      "cubic_shadow_budget": 515,
+      "degree_four_intersection_cap": 278,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 14,
+      "local_terms": 14,
+      "cubic_shadow_budget": 560,
+      "degree_four_intersection_cap": 326,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 1,
+      "cubic_shadow_budget": 490,
+      "degree_four_intersection_cap": 260,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 2,
+      "cubic_shadow_budget": 472,
+      "degree_four_intersection_cap": 248,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 3,
+      "cubic_shadow_budget": 460,
+      "degree_four_intersection_cap": 245,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 4,
+      "cubic_shadow_budget": 449,
+      "degree_four_intersection_cap": 236,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 5,
+      "cubic_shadow_budget": 450,
+      "degree_four_intersection_cap": 236,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 6,
+      "cubic_shadow_budget": 455,
+      "degree_four_intersection_cap": 238,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 7,
+      "cubic_shadow_budget": 456,
+      "degree_four_intersection_cap": 241,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 8,
+      "cubic_shadow_budget": 460,
+      "degree_four_intersection_cap": 245,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 9,
+      "cubic_shadow_budget": 470,
+      "degree_four_intersection_cap": 246,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 10,
+      "cubic_shadow_budget": 525,
+      "degree_four_intersection_cap": 285,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 11,
+      "cubic_shadow_budget": 541,
+      "degree_four_intersection_cap": 305,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 12,
+      "cubic_shadow_budget": 533,
+      "degree_four_intersection_cap": 291,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 13,
+      "cubic_shadow_budget": 550,
+      "degree_four_intersection_cap": 325,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 14,
+      "cubic_shadow_budget": 595,
+      "degree_four_intersection_cap": 351,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 15,
+      "local_terms": 15,
+      "cubic_shadow_budget": 700,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 1,
+      "cubic_shadow_budget": 525,
+      "degree_four_intersection_cap": 285,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 2,
+      "cubic_shadow_budget": 507,
+      "degree_four_intersection_cap": 275,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 3,
+      "cubic_shadow_budget": 495,
+      "degree_four_intersection_cap": 263,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 4,
+      "cubic_shadow_budget": 484,
+      "degree_four_intersection_cap": 252,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 5,
+      "cubic_shadow_budget": 485,
+      "degree_four_intersection_cap": 254,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 6,
+      "cubic_shadow_budget": 490,
+      "degree_four_intersection_cap": 260,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 7,
+      "cubic_shadow_budget": 491,
+      "degree_four_intersection_cap": 260,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 8,
+      "cubic_shadow_budget": 495,
+      "degree_four_intersection_cap": 263,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 9,
+      "cubic_shadow_budget": 505,
+      "degree_four_intersection_cap": 275,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 10,
+      "cubic_shadow_budget": 560,
+      "degree_four_intersection_cap": 326,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 11,
+      "cubic_shadow_budget": 576,
+      "degree_four_intersection_cap": 330,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 12,
+      "cubic_shadow_budget": 568,
+      "degree_four_intersection_cap": 329,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 13,
+      "cubic_shadow_budget": 585,
+      "degree_four_intersection_cap": 339,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 14,
+      "cubic_shadow_budget": 630,
+      "degree_four_intersection_cap": 390,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 15,
+      "cubic_shadow_budget": 735,
+      "degree_four_intersection_cap": 530,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 16,
+      "local_terms": 16,
+      "cubic_shadow_budget": 715,
+      "degree_four_intersection_cap": 526,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 1,
+      "cubic_shadow_budget": 560,
+      "degree_four_intersection_cap": 326,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 2,
+      "cubic_shadow_budget": 542,
+      "degree_four_intersection_cap": 305,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 3,
+      "cubic_shadow_budget": 530,
+      "degree_four_intersection_cap": 290,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 4,
+      "cubic_shadow_budget": 519,
+      "degree_four_intersection_cap": 281,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 5,
+      "cubic_shadow_budget": 520,
+      "degree_four_intersection_cap": 285,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 6,
+      "cubic_shadow_budget": 525,
+      "degree_four_intersection_cap": 285,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 7,
+      "cubic_shadow_budget": 526,
+      "degree_four_intersection_cap": 286,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 8,
+      "cubic_shadow_budget": 530,
+      "degree_four_intersection_cap": 290,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 9,
+      "cubic_shadow_budget": 540,
+      "degree_four_intersection_cap": 305,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 10,
+      "cubic_shadow_budget": 595,
+      "degree_four_intersection_cap": 351,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 11,
+      "cubic_shadow_budget": 611,
+      "degree_four_intersection_cap": 376,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 12,
+      "cubic_shadow_budget": 603,
+      "degree_four_intersection_cap": 375,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 13,
+      "cubic_shadow_budget": 620,
+      "degree_four_intersection_cap": 385,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 14,
+      "cubic_shadow_budget": 665,
+      "degree_four_intersection_cap": 435,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 15,
+      "cubic_shadow_budget": 770,
+      "degree_four_intersection_cap": 546,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 16,
+      "cubic_shadow_budget": 750,
+      "degree_four_intersection_cap": 536,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 17,
+      "local_terms": 17,
+      "cubic_shadow_budget": 763,
+      "degree_four_intersection_cap": 545,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 1,
+      "cubic_shadow_budget": 595,
+      "degree_four_intersection_cap": 351,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 2,
+      "cubic_shadow_budget": 577,
+      "degree_four_intersection_cap": 332,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 3,
+      "cubic_shadow_budget": 565,
+      "degree_four_intersection_cap": 327,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 4,
+      "cubic_shadow_budget": 554,
+      "degree_four_intersection_cap": 325,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 5,
+      "cubic_shadow_budget": 555,
+      "degree_four_intersection_cap": 325,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 6,
+      "cubic_shadow_budget": 560,
+      "degree_four_intersection_cap": 326,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 7,
+      "cubic_shadow_budget": 561,
+      "degree_four_intersection_cap": 326,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 8,
+      "cubic_shadow_budget": 565,
+      "degree_four_intersection_cap": 327,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 9,
+      "cubic_shadow_budget": 575,
+      "degree_four_intersection_cap": 330,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 10,
+      "cubic_shadow_budget": 630,
+      "degree_four_intersection_cap": 390,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 11,
+      "cubic_shadow_budget": 646,
+      "degree_four_intersection_cap": 409,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 12,
+      "cubic_shadow_budget": 638,
+      "degree_four_intersection_cap": 397,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 13,
+      "cubic_shadow_budget": 655,
+      "degree_four_intersection_cap": 425,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 14,
+      "cubic_shadow_budget": 700,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 15,
+      "cubic_shadow_budget": 805,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 16,
+      "cubic_shadow_budget": 785,
+      "degree_four_intersection_cap": 554,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 17,
+      "cubic_shadow_budget": 798,
+      "degree_four_intersection_cap": 566,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 18,
+      "local_terms": 18,
+      "cubic_shadow_budget": 850,
+      "degree_four_intersection_cap": 625,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 1,
+      "cubic_shadow_budget": 630,
+      "degree_four_intersection_cap": 390,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 2,
+      "cubic_shadow_budget": 612,
+      "degree_four_intersection_cap": 378,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 3,
+      "cubic_shadow_budget": 600,
+      "degree_four_intersection_cap": 375,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 4,
+      "cubic_shadow_budget": 589,
+      "degree_four_intersection_cap": 341,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 45
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 5,
+      "cubic_shadow_budget": 590,
+      "degree_four_intersection_cap": 345,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 6,
+      "cubic_shadow_budget": 595,
+      "degree_four_intersection_cap": 351,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 7,
+      "cubic_shadow_budget": 596,
+      "degree_four_intersection_cap": 357,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 8,
+      "cubic_shadow_budget": 600,
+      "degree_four_intersection_cap": 375,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 9,
+      "cubic_shadow_budget": 610,
+      "degree_four_intersection_cap": 376,
+      "remaining_terms_lower_bound": 25,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 10,
+      "cubic_shadow_budget": 665,
+      "degree_four_intersection_cap": 435,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 11,
+      "cubic_shadow_budget": 681,
+      "degree_four_intersection_cap": 465,
+      "remaining_terms_lower_bound": 22,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 12,
+      "cubic_shadow_budget": 673,
+      "degree_four_intersection_cap": 443,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 13,
+      "cubic_shadow_budget": 690,
+      "degree_four_intersection_cap": 485,
+      "remaining_terms_lower_bound": 21,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 14,
+      "cubic_shadow_budget": 735,
+      "degree_four_intersection_cap": 530,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 15,
+      "cubic_shadow_budget": 840,
+      "degree_four_intersection_cap": 605,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 16,
+      "cubic_shadow_budget": 820,
+      "degree_four_intersection_cap": 585,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 17,
+      "cubic_shadow_budget": 833,
+      "degree_four_intersection_cap": 591,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 18,
+      "cubic_shadow_budget": 885,
+      "degree_four_intersection_cap": 639,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 19,
+      "local_terms": 19,
+      "cubic_shadow_budget": 940,
+      "degree_four_intersection_cap": 705,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 1,
+      "cubic_shadow_budget": 665,
+      "degree_four_intersection_cap": 435,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 2,
+      "cubic_shadow_budget": 647,
+      "degree_four_intersection_cap": 413,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 3,
+      "cubic_shadow_budget": 635,
+      "degree_four_intersection_cap": 395,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 4,
+      "cubic_shadow_budget": 624,
+      "degree_four_intersection_cap": 385,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 5,
+      "cubic_shadow_budget": 625,
+      "degree_four_intersection_cap": 385,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 6,
+      "cubic_shadow_budget": 630,
+      "degree_four_intersection_cap": 390,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 7,
+      "cubic_shadow_budget": 631,
+      "degree_four_intersection_cap": 390,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 8,
+      "cubic_shadow_budget": 635,
+      "degree_four_intersection_cap": 395,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 9,
+      "cubic_shadow_budget": 645,
+      "degree_four_intersection_cap": 409,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 10,
+      "cubic_shadow_budget": 700,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 11,
+      "cubic_shadow_budget": 716,
+      "degree_four_intersection_cap": 526,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 12,
+      "cubic_shadow_budget": 708,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 13,
+      "cubic_shadow_budget": 725,
+      "degree_four_intersection_cap": 529,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 14,
+      "cubic_shadow_budget": 770,
+      "degree_four_intersection_cap": 546,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 15,
+      "cubic_shadow_budget": 875,
+      "degree_four_intersection_cap": 630,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 16,
+      "cubic_shadow_budget": 855,
+      "degree_four_intersection_cap": 625,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 17,
+      "cubic_shadow_budget": 868,
+      "degree_four_intersection_cap": 629,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 18,
+      "cubic_shadow_budget": 920,
+      "degree_four_intersection_cap": 685,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 19,
+      "cubic_shadow_budget": 975,
+      "degree_four_intersection_cap": 749,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 20,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1050,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 1,
+      "cubic_shadow_budget": 700,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 2,
+      "cubic_shadow_budget": 682,
+      "degree_four_intersection_cap": 465,
+      "remaining_terms_lower_bound": 22,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 3,
+      "cubic_shadow_budget": 670,
+      "degree_four_intersection_cap": 437,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 4,
+      "cubic_shadow_budget": 659,
+      "degree_four_intersection_cap": 428,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 5,
+      "cubic_shadow_budget": 660,
+      "degree_four_intersection_cap": 428,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 6,
+      "cubic_shadow_budget": 665,
+      "degree_four_intersection_cap": 435,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 7,
+      "cubic_shadow_budget": 666,
+      "degree_four_intersection_cap": 435,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 8,
+      "cubic_shadow_budget": 670,
+      "degree_four_intersection_cap": 437,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 9,
+      "cubic_shadow_budget": 680,
+      "degree_four_intersection_cap": 465,
+      "remaining_terms_lower_bound": 22,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 10,
+      "cubic_shadow_budget": 735,
+      "degree_four_intersection_cap": 530,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 11,
+      "cubic_shadow_budget": 751,
+      "degree_four_intersection_cap": 536,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 12,
+      "cubic_shadow_budget": 743,
+      "degree_four_intersection_cap": 535,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 13,
+      "cubic_shadow_budget": 760,
+      "degree_four_intersection_cap": 545,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 14,
+      "cubic_shadow_budget": 805,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 15,
+      "cubic_shadow_budget": 910,
+      "degree_four_intersection_cap": 676,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 16,
+      "cubic_shadow_budget": 890,
+      "degree_four_intersection_cap": 645,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 17,
+      "cubic_shadow_budget": 903,
+      "degree_four_intersection_cap": 675,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 18,
+      "cubic_shadow_budget": 955,
+      "degree_four_intersection_cap": 725,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1010,
+      "degree_four_intersection_cap": 826,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1085,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 21,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 21
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 1,
+      "cubic_shadow_budget": 735,
+      "degree_four_intersection_cap": 530,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 2,
+      "cubic_shadow_budget": 717,
+      "degree_four_intersection_cap": 526,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 3,
+      "cubic_shadow_budget": 705,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 4,
+      "cubic_shadow_budget": 694,
+      "degree_four_intersection_cap": 489,
+      "remaining_terms_lower_bound": 21,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 5,
+      "cubic_shadow_budget": 695,
+      "degree_four_intersection_cap": 495,
+      "remaining_terms_lower_bound": 21,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 6,
+      "cubic_shadow_budget": 700,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 7,
+      "cubic_shadow_budget": 701,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 8,
+      "cubic_shadow_budget": 705,
+      "degree_four_intersection_cap": 525,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 9,
+      "cubic_shadow_budget": 715,
+      "degree_four_intersection_cap": 526,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 10,
+      "cubic_shadow_budget": 770,
+      "degree_four_intersection_cap": 546,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 11,
+      "cubic_shadow_budget": 786,
+      "degree_four_intersection_cap": 554,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 12,
+      "cubic_shadow_budget": 778,
+      "degree_four_intersection_cap": 551,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 13,
+      "cubic_shadow_budget": 795,
+      "degree_four_intersection_cap": 563,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 14,
+      "cubic_shadow_budget": 840,
+      "degree_four_intersection_cap": 605,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 15,
+      "cubic_shadow_budget": 945,
+      "degree_four_intersection_cap": 709,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 16,
+      "cubic_shadow_budget": 925,
+      "degree_four_intersection_cap": 685,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 17,
+      "cubic_shadow_budget": 938,
+      "degree_four_intersection_cap": 697,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 18,
+      "cubic_shadow_budget": 990,
+      "degree_four_intersection_cap": 785,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1045,
+      "degree_four_intersection_cap": 845,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1120,
+      "degree_four_intersection_cap": 937,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 22
+    },
+    {
+      "selected_terms": 22,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 22
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 1,
+      "cubic_shadow_budget": 770,
+      "degree_four_intersection_cap": 546,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 2,
+      "cubic_shadow_budget": 752,
+      "degree_four_intersection_cap": 538,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 3,
+      "cubic_shadow_budget": 740,
+      "degree_four_intersection_cap": 535,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 4,
+      "cubic_shadow_budget": 729,
+      "degree_four_intersection_cap": 529,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 5,
+      "cubic_shadow_budget": 730,
+      "degree_four_intersection_cap": 530,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 6,
+      "cubic_shadow_budget": 735,
+      "degree_four_intersection_cap": 530,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 7,
+      "cubic_shadow_budget": 736,
+      "degree_four_intersection_cap": 532,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 8,
+      "cubic_shadow_budget": 740,
+      "degree_four_intersection_cap": 535,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 9,
+      "cubic_shadow_budget": 750,
+      "degree_four_intersection_cap": 536,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 10,
+      "cubic_shadow_budget": 805,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 11,
+      "cubic_shadow_budget": 821,
+      "degree_four_intersection_cap": 585,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 12,
+      "cubic_shadow_budget": 813,
+      "degree_four_intersection_cap": 578,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 13,
+      "cubic_shadow_budget": 830,
+      "degree_four_intersection_cap": 590,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 14,
+      "cubic_shadow_budget": 875,
+      "degree_four_intersection_cap": 630,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 15,
+      "cubic_shadow_budget": 980,
+      "degree_four_intersection_cap": 765,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 16,
+      "cubic_shadow_budget": 960,
+      "degree_four_intersection_cap": 728,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 17,
+      "cubic_shadow_budget": 973,
+      "degree_four_intersection_cap": 743,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1025,
+      "degree_four_intersection_cap": 830,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1080,
+      "degree_four_intersection_cap": 890,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1155,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 23
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 23
+    },
+    {
+      "selected_terms": 23,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 23
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 1,
+      "cubic_shadow_budget": 805,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 2,
+      "cubic_shadow_budget": 787,
+      "degree_four_intersection_cap": 554,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 3,
+      "cubic_shadow_budget": 775,
+      "degree_four_intersection_cap": 548,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 4,
+      "cubic_shadow_budget": 764,
+      "degree_four_intersection_cap": 545,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 5,
+      "cubic_shadow_budget": 765,
+      "degree_four_intersection_cap": 545,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 6,
+      "cubic_shadow_budget": 770,
+      "degree_four_intersection_cap": 546,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 7,
+      "cubic_shadow_budget": 771,
+      "degree_four_intersection_cap": 546,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 8,
+      "cubic_shadow_budget": 775,
+      "degree_four_intersection_cap": 548,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 9,
+      "cubic_shadow_budget": 785,
+      "degree_four_intersection_cap": 554,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 10,
+      "cubic_shadow_budget": 840,
+      "degree_four_intersection_cap": 605,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 11,
+      "cubic_shadow_budget": 856,
+      "degree_four_intersection_cap": 625,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 12,
+      "cubic_shadow_budget": 848,
+      "degree_four_intersection_cap": 613,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 13,
+      "cubic_shadow_budget": 865,
+      "degree_four_intersection_cap": 627,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 14,
+      "cubic_shadow_budget": 910,
+      "degree_four_intersection_cap": 676,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1015,
+      "degree_four_intersection_cap": 827,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 16,
+      "cubic_shadow_budget": 995,
+      "degree_four_intersection_cap": 795,
+      "remaining_terms_lower_bound": 12,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1008,
+      "degree_four_intersection_cap": 825,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1060,
+      "degree_four_intersection_cap": 876,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1115,
+      "degree_four_intersection_cap": 935,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1190,
+      "degree_four_intersection_cap": 1085,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 24
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 24
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 24
+    },
+    {
+      "selected_terms": 24,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 24
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 1,
+      "cubic_shadow_budget": 840,
+      "degree_four_intersection_cap": 605,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 2,
+      "cubic_shadow_budget": 822,
+      "degree_four_intersection_cap": 585,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 3,
+      "cubic_shadow_budget": 810,
+      "degree_four_intersection_cap": 576,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 4,
+      "cubic_shadow_budget": 799,
+      "degree_four_intersection_cap": 569,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 5,
+      "cubic_shadow_budget": 800,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 6,
+      "cubic_shadow_budget": 805,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 7,
+      "cubic_shadow_budget": 806,
+      "degree_four_intersection_cap": 575,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 8,
+      "cubic_shadow_budget": 810,
+      "degree_four_intersection_cap": 576,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 9,
+      "cubic_shadow_budget": 820,
+      "degree_four_intersection_cap": 585,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 10,
+      "cubic_shadow_budget": 875,
+      "degree_four_intersection_cap": 630,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 11,
+      "cubic_shadow_budget": 891,
+      "degree_four_intersection_cap": 645,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 12,
+      "cubic_shadow_budget": 883,
+      "degree_four_intersection_cap": 635,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 13,
+      "cubic_shadow_budget": 900,
+      "degree_four_intersection_cap": 675,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 14,
+      "cubic_shadow_budget": 945,
+      "degree_four_intersection_cap": 709,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1050,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1030,
+      "degree_four_intersection_cap": 835,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1043,
+      "degree_four_intersection_cap": 842,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1095,
+      "degree_four_intersection_cap": 909,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1150,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 25
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 25
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 25
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 25
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 25
+    },
+    {
+      "selected_terms": 25,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 25
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 1,
+      "cubic_shadow_budget": 875,
+      "degree_four_intersection_cap": 630,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 2,
+      "cubic_shadow_budget": 857,
+      "degree_four_intersection_cap": 625,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 3,
+      "cubic_shadow_budget": 845,
+      "degree_four_intersection_cap": 609,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 4,
+      "cubic_shadow_budget": 834,
+      "degree_four_intersection_cap": 593,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 5,
+      "cubic_shadow_budget": 835,
+      "degree_four_intersection_cap": 595,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 6,
+      "cubic_shadow_budget": 840,
+      "degree_four_intersection_cap": 605,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 7,
+      "cubic_shadow_budget": 841,
+      "degree_four_intersection_cap": 605,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 8,
+      "cubic_shadow_budget": 845,
+      "degree_four_intersection_cap": 609,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 9,
+      "cubic_shadow_budget": 855,
+      "degree_four_intersection_cap": 625,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 10,
+      "cubic_shadow_budget": 910,
+      "degree_four_intersection_cap": 676,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 11,
+      "cubic_shadow_budget": 926,
+      "degree_four_intersection_cap": 686,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 12,
+      "cubic_shadow_budget": 918,
+      "degree_four_intersection_cap": 681,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 13,
+      "cubic_shadow_budget": 935,
+      "degree_four_intersection_cap": 695,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 14,
+      "cubic_shadow_budget": 980,
+      "degree_four_intersection_cap": 765,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1085,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1065,
+      "degree_four_intersection_cap": 878,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1078,
+      "degree_four_intersection_cap": 887,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1130,
+      "degree_four_intersection_cap": 965,
+      "remaining_terms_lower_bound": 7,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1185,
+      "degree_four_intersection_cap": 1066,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 26,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 26
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 1,
+      "cubic_shadow_budget": 910,
+      "degree_four_intersection_cap": 676,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 2,
+      "cubic_shadow_budget": 892,
+      "degree_four_intersection_cap": 645,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 3,
+      "cubic_shadow_budget": 880,
+      "degree_four_intersection_cap": 635,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 4,
+      "cubic_shadow_budget": 869,
+      "degree_four_intersection_cap": 629,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 5,
+      "cubic_shadow_budget": 870,
+      "degree_four_intersection_cap": 629,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 6,
+      "cubic_shadow_budget": 875,
+      "degree_four_intersection_cap": 630,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 7,
+      "cubic_shadow_budget": 876,
+      "degree_four_intersection_cap": 630,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 8,
+      "cubic_shadow_budget": 880,
+      "degree_four_intersection_cap": 635,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 9,
+      "cubic_shadow_budget": 890,
+      "degree_four_intersection_cap": 645,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 10,
+      "cubic_shadow_budget": 945,
+      "degree_four_intersection_cap": 709,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 11,
+      "cubic_shadow_budget": 961,
+      "degree_four_intersection_cap": 728,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 12,
+      "cubic_shadow_budget": 953,
+      "degree_four_intersection_cap": 725,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 13,
+      "cubic_shadow_budget": 970,
+      "degree_four_intersection_cap": 737,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1015,
+      "degree_four_intersection_cap": 827,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1120,
+      "degree_four_intersection_cap": 937,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1100,
+      "degree_four_intersection_cap": 925,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1113,
+      "degree_four_intersection_cap": 931,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1165,
+      "degree_four_intersection_cap": 1035,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1220,
+      "degree_four_intersection_cap": 1185,
+      "remaining_terms_lower_bound": 1,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 27,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 27
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 1,
+      "cubic_shadow_budget": 945,
+      "degree_four_intersection_cap": 709,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 2,
+      "cubic_shadow_budget": 927,
+      "degree_four_intersection_cap": 686,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 3,
+      "cubic_shadow_budget": 915,
+      "degree_four_intersection_cap": 678,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 4,
+      "cubic_shadow_budget": 904,
+      "degree_four_intersection_cap": 675,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 5,
+      "cubic_shadow_budget": 905,
+      "degree_four_intersection_cap": 675,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 6,
+      "cubic_shadow_budget": 910,
+      "degree_four_intersection_cap": 676,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 7,
+      "cubic_shadow_budget": 911,
+      "degree_four_intersection_cap": 676,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 8,
+      "cubic_shadow_budget": 915,
+      "degree_four_intersection_cap": 678,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 9,
+      "cubic_shadow_budget": 925,
+      "degree_four_intersection_cap": 685,
+      "remaining_terms_lower_bound": 16,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 10,
+      "cubic_shadow_budget": 980,
+      "degree_four_intersection_cap": 765,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 11,
+      "cubic_shadow_budget": 996,
+      "degree_four_intersection_cap": 801,
+      "remaining_terms_lower_bound": 12,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 12,
+      "cubic_shadow_budget": 988,
+      "degree_four_intersection_cap": 773,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1005,
+      "degree_four_intersection_cap": 825,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1050,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1155,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1135,
+      "degree_four_intersection_cap": 969,
+      "remaining_terms_lower_bound": 7,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1148,
+      "degree_four_intersection_cap": 1005,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1200,
+      "degree_four_intersection_cap": 1125,
+      "remaining_terms_lower_bound": 3,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1255,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 28,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 28
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 1,
+      "cubic_shadow_budget": 980,
+      "degree_four_intersection_cap": 765,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 2,
+      "cubic_shadow_budget": 962,
+      "degree_four_intersection_cap": 731,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 3,
+      "cubic_shadow_budget": 950,
+      "degree_four_intersection_cap": 725,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 4,
+      "cubic_shadow_budget": 939,
+      "degree_four_intersection_cap": 699,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 5,
+      "cubic_shadow_budget": 940,
+      "degree_four_intersection_cap": 705,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 6,
+      "cubic_shadow_budget": 945,
+      "degree_four_intersection_cap": 709,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 7,
+      "cubic_shadow_budget": 946,
+      "degree_four_intersection_cap": 709,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 8,
+      "cubic_shadow_budget": 950,
+      "degree_four_intersection_cap": 725,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 9,
+      "cubic_shadow_budget": 960,
+      "degree_four_intersection_cap": 728,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1015,
+      "degree_four_intersection_cap": 827,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1031,
+      "degree_four_intersection_cap": 835,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1023,
+      "degree_four_intersection_cap": 829,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1040,
+      "degree_four_intersection_cap": 841,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1085,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1190,
+      "degree_four_intersection_cap": 1085,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1170,
+      "degree_four_intersection_cap": 1037,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1183,
+      "degree_four_intersection_cap": 1065,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1235,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1290,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 29,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 29
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 1,
+      "cubic_shadow_budget": 1015,
+      "degree_four_intersection_cap": 827,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 2,
+      "cubic_shadow_budget": 997,
+      "degree_four_intersection_cap": 801,
+      "remaining_terms_lower_bound": 12,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 3,
+      "cubic_shadow_budget": 985,
+      "degree_four_intersection_cap": 769,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 4,
+      "cubic_shadow_budget": 974,
+      "degree_four_intersection_cap": 749,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 5,
+      "cubic_shadow_budget": 975,
+      "degree_four_intersection_cap": 749,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 6,
+      "cubic_shadow_budget": 980,
+      "degree_four_intersection_cap": 765,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 7,
+      "cubic_shadow_budget": 981,
+      "degree_four_intersection_cap": 765,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 8,
+      "cubic_shadow_budget": 985,
+      "degree_four_intersection_cap": 769,
+      "remaining_terms_lower_bound": 13,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 9,
+      "cubic_shadow_budget": 995,
+      "degree_four_intersection_cap": 795,
+      "remaining_terms_lower_bound": 12,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1050,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1066,
+      "degree_four_intersection_cap": 881,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1058,
+      "degree_four_intersection_cap": 876,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1075,
+      "degree_four_intersection_cap": 885,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1120,
+      "degree_four_intersection_cap": 937,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1205,
+      "degree_four_intersection_cap": 1126,
+      "remaining_terms_lower_bound": 3,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1218,
+      "degree_four_intersection_cap": 1165,
+      "remaining_terms_lower_bound": 2,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1270,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1325,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 30,
+      "local_terms": 30,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 30
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 1,
+      "cubic_shadow_budget": 1050,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 2,
+      "cubic_shadow_budget": 1032,
+      "degree_four_intersection_cap": 835,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 3,
+      "cubic_shadow_budget": 1020,
+      "degree_four_intersection_cap": 829,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 4,
+      "cubic_shadow_budget": 1009,
+      "degree_four_intersection_cap": 826,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 5,
+      "cubic_shadow_budget": 1010,
+      "degree_four_intersection_cap": 826,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 6,
+      "cubic_shadow_budget": 1015,
+      "degree_four_intersection_cap": 827,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 7,
+      "cubic_shadow_budget": 1016,
+      "degree_four_intersection_cap": 827,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 8,
+      "cubic_shadow_budget": 1020,
+      "degree_four_intersection_cap": 829,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 9,
+      "cubic_shadow_budget": 1030,
+      "degree_four_intersection_cap": 835,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1085,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1101,
+      "degree_four_intersection_cap": 925,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1093,
+      "degree_four_intersection_cap": 905,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1110,
+      "degree_four_intersection_cap": 928,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1155,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1240,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1253,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1305,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1360,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1575,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 30,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 31,
+      "local_terms": 31,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 31
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 1,
+      "cubic_shadow_budget": 1085,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 2,
+      "cubic_shadow_budget": 1067,
+      "degree_four_intersection_cap": 881,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 3,
+      "cubic_shadow_budget": 1055,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 4,
+      "cubic_shadow_budget": 1044,
+      "degree_four_intersection_cap": 842,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 5,
+      "cubic_shadow_budget": 1045,
+      "degree_four_intersection_cap": 845,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 6,
+      "cubic_shadow_budget": 1050,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 7,
+      "cubic_shadow_budget": 1051,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 8,
+      "cubic_shadow_budget": 1055,
+      "degree_four_intersection_cap": 875,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 9,
+      "cubic_shadow_budget": 1065,
+      "degree_four_intersection_cap": 878,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1120,
+      "degree_four_intersection_cap": 937,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1136,
+      "degree_four_intersection_cap": 969,
+      "remaining_terms_lower_bound": 7,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1128,
+      "degree_four_intersection_cap": 953,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1145,
+      "degree_four_intersection_cap": 995,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1190,
+      "degree_four_intersection_cap": 1085,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1275,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1288,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1340,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1395,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1610,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1575,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 30,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 31,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 32,
+      "local_terms": 32,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 32
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 1,
+      "cubic_shadow_budget": 1120,
+      "degree_four_intersection_cap": 937,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 2,
+      "cubic_shadow_budget": 1102,
+      "degree_four_intersection_cap": 925,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 3,
+      "cubic_shadow_budget": 1090,
+      "degree_four_intersection_cap": 905,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 4,
+      "cubic_shadow_budget": 1079,
+      "degree_four_intersection_cap": 888,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 5,
+      "cubic_shadow_budget": 1080,
+      "degree_four_intersection_cap": 890,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 6,
+      "cubic_shadow_budget": 1085,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 7,
+      "cubic_shadow_budget": 1086,
+      "degree_four_intersection_cap": 895,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 8,
+      "cubic_shadow_budget": 1090,
+      "degree_four_intersection_cap": 905,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 9,
+      "cubic_shadow_budget": 1100,
+      "degree_four_intersection_cap": 925,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1155,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1171,
+      "degree_four_intersection_cap": 1040,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1163,
+      "degree_four_intersection_cap": 1031,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1180,
+      "degree_four_intersection_cap": 1065,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1310,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1323,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1375,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1430,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1645,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1610,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1575,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 30,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 31,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 32,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 33,
+      "local_terms": 33,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 33
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 1,
+      "cubic_shadow_budget": 1155,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 2,
+      "cubic_shadow_budget": 1137,
+      "degree_four_intersection_cap": 973,
+      "remaining_terms_lower_bound": 7,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 3,
+      "cubic_shadow_budget": 1125,
+      "degree_four_intersection_cap": 949,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 4,
+      "cubic_shadow_budget": 1114,
+      "degree_four_intersection_cap": 931,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 5,
+      "cubic_shadow_budget": 1115,
+      "degree_four_intersection_cap": 935,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 6,
+      "cubic_shadow_budget": 1120,
+      "degree_four_intersection_cap": 937,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 7,
+      "cubic_shadow_budget": 1121,
+      "degree_four_intersection_cap": 940,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 8,
+      "cubic_shadow_budget": 1125,
+      "degree_four_intersection_cap": 949,
+      "remaining_terms_lower_bound": 8,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 9,
+      "cubic_shadow_budget": 1135,
+      "degree_four_intersection_cap": 969,
+      "remaining_terms_lower_bound": 7,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1190,
+      "degree_four_intersection_cap": 1085,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1206,
+      "degree_four_intersection_cap": 1128,
+      "remaining_terms_lower_bound": 3,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1198,
+      "degree_four_intersection_cap": 1105,
+      "remaining_terms_lower_bound": 3,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1215,
+      "degree_four_intersection_cap": 1155,
+      "remaining_terms_lower_bound": 2,
+      "total_terms_lower_bound": 36
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1345,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1358,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1410,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1465,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1680,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1645,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1610,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1575,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 30,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 31,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 32,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 33,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 34,
+      "local_terms": 34,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 34
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 1,
+      "cubic_shadow_budget": 1190,
+      "degree_four_intersection_cap": 1085,
+      "remaining_terms_lower_bound": 4,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 2,
+      "cubic_shadow_budget": 1172,
+      "degree_four_intersection_cap": 1040,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 3,
+      "cubic_shadow_budget": 1160,
+      "degree_four_intersection_cap": 1028,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 4,
+      "cubic_shadow_budget": 1149,
+      "degree_four_intersection_cap": 1013,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 5,
+      "cubic_shadow_budget": 1150,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 6,
+      "cubic_shadow_budget": 1155,
+      "degree_four_intersection_cap": 1025,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 7,
+      "cubic_shadow_budget": 1156,
+      "degree_four_intersection_cap": 1026,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 8,
+      "cubic_shadow_budget": 1160,
+      "degree_four_intersection_cap": 1028,
+      "remaining_terms_lower_bound": 6,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 9,
+      "cubic_shadow_budget": 1170,
+      "degree_four_intersection_cap": 1037,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 10,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 11,
+      "cubic_shadow_budget": 1241,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 12,
+      "cubic_shadow_budget": 1233,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 13,
+      "cubic_shadow_budget": 1250,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 14,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 15,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 16,
+      "cubic_shadow_budget": 1380,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 17,
+      "cubic_shadow_budget": 1393,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 18,
+      "cubic_shadow_budget": 1445,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 19,
+      "cubic_shadow_budget": 1500,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 20,
+      "cubic_shadow_budget": 1575,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 21,
+      "cubic_shadow_budget": 1715,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 22,
+      "cubic_shadow_budget": 1680,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 23,
+      "cubic_shadow_budget": 1645,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 24,
+      "cubic_shadow_budget": 1610,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 25,
+      "cubic_shadow_budget": 1575,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 26,
+      "cubic_shadow_budget": 1540,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 27,
+      "cubic_shadow_budget": 1505,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 28,
+      "cubic_shadow_budget": 1470,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 29,
+      "cubic_shadow_budget": 1435,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 30,
+      "cubic_shadow_budget": 1400,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 31,
+      "cubic_shadow_budget": 1365,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 32,
+      "cubic_shadow_budget": 1330,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 33,
+      "cubic_shadow_budget": 1295,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 34,
+      "cubic_shadow_budget": 1260,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    },
+    {
+      "selected_terms": 35,
+      "local_terms": 35,
+      "cubic_shadow_budget": 1225,
+      "degree_four_intersection_cap": 1225,
+      "remaining_terms_lower_bound": 0,
+      "total_terms_lower_bound": 35
+    }
+  ],
+  "best_total_lower_bound_in_this_route": 45,
+  "maximizers": [
+    {
+      "selected_terms": 19,
+      "local_terms": 4,
+      "cubic_shadow_budget": 589,
+      "degree_four_intersection_cap": 341,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 45
+    }
+  ],
+  "theorem": "ChowRank(perm_7) >= 45 over characteristic zero",
+  "current_ordinary_interval": [
+    45,
+    64
+  ],
+  "claim_boundary": [
+    "This proves ordinary Chow rank only, not border rank.",
+    "It does not prove ChowRank(perm_7)=64.",
+    "The route scan uses only universal local shadow caps and the complementary Koszul residual."
+  ]
+}

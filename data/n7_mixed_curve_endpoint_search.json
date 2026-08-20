@@ -1,0 +1,2756 @@
+{
+  "approximate_endpoint_profile_count": 130,
+  "claim_boundary": [
+    "The scan exhausts only strictly increasing monomial-curve weights in the displayed box.",
+    "The profile sum 72 is forced by seven rank-six terms of middle rank 25 and forty-two rank-seven graph terms.",
+    "A positive target increment excludes that fixed finite-field graph packet.",
+    "The evaluation projection is a diagnostic; a zero increment would require exact lifting.",
+    "This does not classify either N=49 equality packet or prove lower fifty."
+  ],
+  "elapsed_seconds": 3.6083863579988247,
+  "endpoint_middle_rank_sum": 2870,
+  "evaluation_columns": 400,
+  "exact_endpoint_profile_count": 130,
+  "field": "F_65521",
+  "graph_point_code_middle_profile_sum": 72,
+  "max_weight": 24,
+  "minimum_degree_six_target_increment": 49,
+  "results": [
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        4,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        4,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        4,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        5,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        5,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        6,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        4,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        4,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        5,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        5,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        6,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        3,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        4,
+        5,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        4,
+        5,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        4,
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        4,
+        6,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        1,
+        4,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        3,
+        5,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        5,
+        6,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        7,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        8,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        8,
+        12,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        10,
+        14,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        12,
+        14,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        12,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        6,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        8,
+        10,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        8,
+        12,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        8,
+        12,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        8,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        8,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        10,
+        12,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        10,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        10,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        12,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        12,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        4,
+        14,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        8,
+        12,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        8,
+        12,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        8,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        8,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        10,
+        12,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        10,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        12,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        12,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        6,
+        14,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        8,
+        10,
+        12,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        8,
+        10,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        8,
+        10,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        8,
+        12,
+        14,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        8,
+        12,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        31,
+        41,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        2,
+        8,
+        14,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        4,
+        6,
+        7,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        4,
+        6,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        5,
+        6,
+        8,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        5,
+        6,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        3,
+        6,
+        8,
+        9,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        5,
+        6,
+        8,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        5,
+        6,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        5,
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        7,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        8,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        8,
+        10,
+        14,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        8,
+        12,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        8,
+        14,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        6,
+        10,
+        12,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        7,
+        8,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        8,
+        10,
+        12,
+        14,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        8,
+        10,
+        12,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        8,
+        12,
+        14,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        8,
+        12,
+        14,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        4,
+        8,
+        12,
+        16,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        5,
+        6,
+        7,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        5,
+        6,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        5,
+        7,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        8,
+        12,
+        14,
+        16,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        8,
+        12,
+        14,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        8,
+        12,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        10,
+        12,
+        16,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        10,
+        12,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        12,
+        14,
+        18,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        6,
+        12,
+        16,
+        18,
+        22,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        10,
+        12,
+        16,
+        18,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        10,
+        12,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        10,
+        16,
+        18,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        12,
+        14,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        12,
+        16,
+        18,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        12,
+        16,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        8,
+        14,
+        16,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        10,
+        12,
+        14,
+        16,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        10,
+        12,
+        18,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        10,
+        14,
+        16,
+        18,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        10,
+        14,
+        18,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        12,
+        14,
+        16,
+        18,
+        20,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        12,
+        16,
+        18,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "point_code_hilbert_3_to_6": [
+        30,
+        42,
+        42,
+        42
+      ],
+      "rectangular_middle_rank_sum": 2870,
+      "weights": [
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "status": "DIRECTED_FINITE_FIELD_CURVE_SUBFAMILY_SEARCH_NOT_A_RANK_PROOF",
+  "weight_candidate_count": 134596,
+  "workers": 20,
+  "zero_degree_seven_increment_count": 0,
+  "zero_degree_six_increment_count": 0
+}

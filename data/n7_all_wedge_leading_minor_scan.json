@@ -1,0 +1,526 @@
+{
+  "schema_version": 1,
+  "status": "EXACT_ALL_WEDGE_UNITRIANGULAR_MINOR_SCAN",
+  "field": "integer minors; valid in characteristic zero",
+  "n": 7,
+  "output_degree": 4,
+  "bounded_enumeration": {
+    "output_subpermanent_count": 1225,
+    "parent_events_per_output": 16,
+    "inclusion_exclusion_states_per_output": 65535,
+    "total_inclusion_exclusion_states": 80280375,
+    "wedge_degrees_recovered_from_one_histogram": 49,
+    "full_matrices_materialized": false
+  },
+  "signed_union_size_histogram": [
+    0,
+    1225,
+    -1127,
+    3185,
+    -7311,
+    12371,
+    -16900,
+    23378,
+    -25489,
+    22168,
+    -28924,
+    48458,
+    -67280,
+    81668,
+    -77091,
+    43956,
+    -30631,
+    63273,
+    -101484,
+    126109,
+    -127463,
+    87553,
+    -77284,
+    148734,
+    -191529,
+    175469,
+    -156574,
+    106991,
+    -98053,
+    165021,
+    -192047,
+    195788,
+    -199433,
+    122468,
+    -15793,
+    -36866,
+    59860,
+    -55770,
+    45308,
+    -116416,
+    252530,
+    -344906,
+    369912,
+    -358798,
+    300897,
+    -194568,
+    89260,
+    -27120,
+    4900,
+    -400
+  ],
+  "rows": [
+    {
+      "wedge_degree": 0,
+      "leading_minor_rank": 1225,
+      "one_independent_chow_term_rank": 35,
+      "ratio_numerator": 1225,
+      "ratio_denominator": 35,
+      "integer_lower_bound": 35,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 1,
+      "leading_minor_rank": 57673,
+      "one_independent_chow_term_rank": 1694,
+      "ratio_numerator": 57673,
+      "ratio_denominator": 1694,
+      "integer_lower_bound": 35,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 2,
+      "leading_minor_rank": 1332016,
+      "one_independent_chow_term_rank": 40138,
+      "ratio_numerator": 1332016,
+      "ratio_denominator": 40138,
+      "integer_lower_bound": 34,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 3,
+      "leading_minor_rank": 20108512,
+      "one_independent_chow_term_rank": 620486,
+      "ratio_numerator": 20108512,
+      "ratio_denominator": 620486,
+      "integer_lower_bound": 33,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 4,
+      "leading_minor_rank": 223066046,
+      "one_independent_chow_term_rank": 7036904,
+      "ratio_numerator": 223066046,
+      "ratio_denominator": 7036904,
+      "integer_lower_bound": 32,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 5,
+      "leading_minor_rank": 1938192879,
+      "one_independent_chow_term_rank": 62417866,
+      "ratio_numerator": 1938192879,
+      "ratio_denominator": 62417866,
+      "integer_lower_bound": 32,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 6,
+      "leading_minor_rank": 13730853726,
+      "one_independent_chow_term_rank": 450823590,
+      "ratio_numerator": 13730853726,
+      "ratio_denominator": 450823590,
+      "integer_lower_bound": 31,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 7,
+      "leading_minor_rank": 81520454685,
+      "one_independent_chow_term_rank": 2725595698,
+      "ratio_numerator": 81520454685,
+      "ratio_denominator": 2725595698,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 8,
+      "leading_minor_rank": 413764755041,
+      "one_independent_chow_term_rank": 14072400398,
+      "ratio_numerator": 413764755041,
+      "ratio_denominator": 14072400398,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 9,
+      "leading_minor_rank": 1822587321499,
+      "one_independent_chow_term_rank": 62993195482,
+      "ratio_numerator": 1822587321499,
+      "ratio_denominator": 62993195482,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 10,
+      "leading_minor_rank": 7049392824494,
+      "one_independent_chow_term_rank": 247369908318,
+      "ratio_numerator": 7049392824494,
+      "ratio_denominator": 247369908318,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 11,
+      "leading_minor_rank": 24165035005710,
+      "one_independent_chow_term_rank": 860186549586,
+      "ratio_numerator": 24165035005710,
+      "ratio_denominator": 860186549586,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 12,
+      "leading_minor_rank": 73972567684710,
+      "one_independent_chow_term_rank": 2668825102216,
+      "ratio_numerator": 73972567684710,
+      "ratio_denominator": 2668825102216,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 13,
+      "leading_minor_rank": 203464912762442,
+      "one_independent_chow_term_rank": 7434036979838,
+      "ratio_numerator": 203464912762442,
+      "ratio_denominator": 7434036979838,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 14,
+      "leading_minor_rank": 505442418156711,
+      "one_independent_chow_term_rank": 18686829828562,
+      "ratio_numerator": 505442418156711,
+      "ratio_denominator": 18686829828562,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 15,
+      "leading_minor_rank": 1138874395810049,
+      "one_independent_chow_term_rank": 42570368100918,
+      "ratio_numerator": 1138874395810049,
+      "ratio_denominator": 42570368100918,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 16,
+      "leading_minor_rank": 2335922099690355,
+      "one_independent_chow_term_rank": 88203810570253,
+      "ratio_numerator": 2335922099690355,
+      "ratio_denominator": 88203810570253,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 17,
+      "leading_minor_rank": 4374447587963222,
+      "one_independent_chow_term_rank": 166711633058060,
+      "ratio_numerator": 4374447587963222,
+      "ratio_denominator": 166711633058060,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 18,
+      "leading_minor_rank": 7498241863908377,
+      "one_independent_chow_term_rank": 288147481249796,
+      "ratio_numerator": 7498241863908377,
+      "ratio_denominator": 288147481249796,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 19,
+      "leading_minor_rank": 11788799627030795,
+      "one_independent_chow_term_rank": 456369167364124,
+      "ratio_numerator": 11788799627030795,
+      "ratio_denominator": 456369167364124,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 20,
+      "leading_minor_rank": 17029083114402605,
+      "one_independent_chow_term_rank": 663414902454416,
+      "ratio_numerator": 17029083114402605,
+      "ratio_denominator": 663414902454416,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 21,
+      "leading_minor_rank": 22631503048654320,
+      "one_independent_chow_term_rank": 886311219570308,
+      "ratio_numerator": 22631503048654320,
+      "ratio_denominator": 886311219570308,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 22,
+      "leading_minor_rank": 27700534982486559,
+      "one_independent_chow_term_rank": 1089297434098524,
+      "ratio_numerator": 27700534982486559,
+      "ratio_denominator": 1089297434098524,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 23,
+      "leading_minor_rank": 31249239381516690,
+      "one_independent_chow_term_rank": 1232437141096980,
+      "ratio_numerator": 31249239381516690,
+      "ratio_denominator": 1232437141096980,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 24,
+      "leading_minor_rank": 32506369177539449,
+      "one_independent_chow_term_rank": 1284156702075780,
+      "ratio_numerator": 32506369177539449,
+      "ratio_denominator": 1284156702075780,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 25,
+      "leading_minor_rank": 31185777686770532,
+      "one_independent_chow_term_rank": 1232437141096980,
+      "ratio_numerator": 31185777686770532,
+      "ratio_denominator": 1232437141096980,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 26,
+      "leading_minor_rank": 27590901594821586,
+      "one_independent_chow_term_rank": 1089297434098524,
+      "ratio_numerator": 27590901594821586,
+      "ratio_denominator": 1089297434098524,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 27,
+      "leading_minor_rank": 22502840330464364,
+      "one_independent_chow_term_rank": 886311219570308,
+      "ratio_numerator": 22502840330464364,
+      "ratio_denominator": 886311219570308,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 28,
+      "leading_minor_rank": 16907770126844376,
+      "one_independent_chow_term_rank": 663414902454416,
+      "ratio_numerator": 16907770126844376,
+      "ratio_denominator": 663414902454416,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 29,
+      "leading_minor_rank": 11692185327500915,
+      "one_independent_chow_term_rank": 456369167364124,
+      "ratio_numerator": 11692185327500915,
+      "ratio_denominator": 456369167364124,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 30,
+      "leading_minor_rank": 7431994532189547,
+      "one_independent_chow_term_rank": 288147481249796,
+      "ratio_numerator": 7431994532189547,
+      "ratio_denominator": 288147481249796,
+      "integer_lower_bound": 26,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 31,
+      "leading_minor_rank": 4335094810065477,
+      "one_independent_chow_term_rank": 166711633058060,
+      "ratio_numerator": 4335094810065477,
+      "ratio_denominator": 166711633058060,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 32,
+      "leading_minor_rank": 2315705454831355,
+      "one_independent_chow_term_rank": 88203810570253,
+      "ratio_numerator": 2315705454831355,
+      "ratio_denominator": 88203810570253,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 33,
+      "leading_minor_rank": 1129973796210840,
+      "one_independent_chow_term_rank": 42570368100918,
+      "ratio_numerator": 1129973796210840,
+      "ratio_denominator": 42570368100918,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 34,
+      "leading_minor_rank": 502149239573416,
+      "one_independent_chow_term_rank": 18686829828562,
+      "ratio_numerator": 502149239573416,
+      "ratio_denominator": 18686829828562,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 35,
+      "leading_minor_rank": 202482202819882,
+      "one_independent_chow_term_rank": 7434036979838,
+      "ratio_numerator": 202482202819882,
+      "ratio_denominator": 7434036979838,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 36,
+      "leading_minor_rank": 73760210334324,
+      "one_independent_chow_term_rank": 2668825102216,
+      "ratio_numerator": 73760210334324,
+      "ratio_denominator": 2668825102216,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 37,
+      "leading_minor_rank": 24146124858166,
+      "one_independent_chow_term_rank": 860186549586,
+      "ratio_numerator": 24146124858166,
+      "ratio_denominator": 860186549586,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 38,
+      "leading_minor_rank": 7058353416186,
+      "one_independent_chow_term_rank": 247369908318,
+      "ratio_numerator": 7058353416186,
+      "ratio_denominator": 247369908318,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 39,
+      "leading_minor_rank": 1828288975184,
+      "one_independent_chow_term_rank": 62993195482,
+      "ratio_numerator": 1828288975184,
+      "ratio_denominator": 62993195482,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 40,
+      "leading_minor_rank": 415690486933,
+      "one_independent_chow_term_rank": 14072400398,
+      "ratio_numerator": 415690486933,
+      "ratio_denominator": 14072400398,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 41,
+      "leading_minor_rank": 81990125286,
+      "one_independent_chow_term_rank": 2725595698,
+      "ratio_numerator": 81990125286,
+      "ratio_denominator": 2725595698,
+      "integer_lower_bound": 31,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 42,
+      "leading_minor_rank": 13818938109,
+      "one_independent_chow_term_rank": 450823590,
+      "ratio_numerator": 13818938109,
+      "ratio_denominator": 450823590,
+      "integer_lower_bound": 31,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 43,
+      "leading_minor_rank": 1951012294,
+      "one_independent_chow_term_rank": 62417866,
+      "ratio_numerator": 1951012294,
+      "ratio_denominator": 62417866,
+      "integer_lower_bound": 32,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 44,
+      "leading_minor_rank": 224484218,
+      "one_independent_chow_term_rank": 7036904,
+      "ratio_numerator": 224484218,
+      "ratio_denominator": 7036904,
+      "integer_lower_bound": 32,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 45,
+      "leading_minor_rank": 20221600,
+      "one_independent_chow_term_rank": 620486,
+      "ratio_numerator": 20221600,
+      "ratio_denominator": 620486,
+      "integer_lower_bound": 33,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 46,
+      "leading_minor_rank": 1337847,
+      "one_independent_chow_term_rank": 40138,
+      "ratio_numerator": 1337847,
+      "ratio_denominator": 40138,
+      "integer_lower_bound": 34,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 47,
+      "leading_minor_rank": 57820,
+      "one_independent_chow_term_rank": 1694,
+      "ratio_numerator": 57820,
+      "ratio_denominator": 1694,
+      "integer_lower_bound": 35,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 48,
+      "leading_minor_rank": 1225,
+      "one_independent_chow_term_rank": 35,
+      "ratio_numerator": 1225,
+      "ratio_denominator": 35,
+      "integer_lower_bound": 35,
+      "passes_lower_50_test": false
+    }
+  ],
+  "best_row": {
+    "wedge_degree": 0,
+    "leading_minor_rank": 1225,
+    "one_independent_chow_term_rank": 35,
+    "ratio_numerator": 1225,
+    "ratio_denominator": 35,
+    "integer_lower_bound": 35,
+    "passes_lower_50_test": false
+  },
+  "any_lower_50_test_passes": false,
+  "claim_boundary": [
+    "Every row is an exact explicit integer unitriangular-minor lower bound.",
+    "The scan exhausts all wedge degrees for this one lexicographic leading rule.",
+    "It does not compute or upper-bound the full Koszul ranks.",
+    "It makes no border Chow-rank claim."
+  ]
+}

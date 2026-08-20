@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "status": "PURE_EXACT_ORDINARY_LOWER_47",
+  "n": 7,
+  "prerequisite": "N7-007 proves ChowRank(perm_7) >= 46",
+  "recursive_degree_five_trace": [
+    {
+      "degree": 5,
+      "terms": 46,
+      "local_terms": 42,
+      "shadow_budget": 1111,
+      "local_section_cap": 321,
+      "aggregate_section_cap": 405
+    },
+    {
+      "degree": 4,
+      "terms": 42,
+      "local_terms": 20,
+      "shadow_budget": 589,
+      "local_section_cap": 341,
+      "aggregate_section_cap": 1111
+    },
+    {
+      "degree": 3,
+      "terms": 20,
+      "local_terms": 5,
+      "shadow_budget": 85,
+      "local_section_cap": 64,
+      "aggregate_section_cap": 589
+    },
+    {
+      "degree": 2,
+      "terms": 5,
+      "local_terms": 2,
+      "shadow_budget": 14,
+      "local_section_cap": 22,
+      "aggregate_section_cap": 85
+    }
+  ],
+  "degree_five_section_cap_for_46_terms": 405,
+  "degree_five_critical_shadow": {
+    "budget": 1111,
+    "capacity": 321,
+    "witness_partition": [
+      21,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "witness_area": 321,
+    "witness_shadow": 1105,
+    "next_area": 322,
+    "next_area_minimum_shadow": 1113
+  },
+  "correct_dual_koszul_scan": [
+    {
+      "koszul_degree": 2,
+      "dual_catalectic_degree": 5,
+      "permanent_koszul_rank": 20384,
+      "one_term_koszul_cap": 994,
+      "best_total_lower_bound": 47,
+      "maximizers": [
+        {
+          "selected_terms": 39,
+          "dual_intersection_cap": 267,
+          "residual_rank_lower_bound": 7301,
+          "remaining_terms_lower_bound": 8,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 40,
+          "dual_intersection_cap": 288,
+          "residual_rank_lower_bound": 6272,
+          "remaining_terms_lower_bound": 7,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 41,
+          "dual_intersection_cap": 302,
+          "residual_rank_lower_bound": 5586,
+          "remaining_terms_lower_bound": 6,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 42,
+          "dual_intersection_cap": 321,
+          "residual_rank_lower_bound": 4655,
+          "remaining_terms_lower_bound": 5,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 43,
+          "dual_intersection_cap": 342,
+          "residual_rank_lower_bound": 3626,
+          "remaining_terms_lower_bound": 4,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 44,
+          "dual_intersection_cap": 363,
+          "residual_rank_lower_bound": 2597,
+          "remaining_terms_lower_bound": 3,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 45,
+          "dual_intersection_cap": 384,
+          "residual_rank_lower_bound": 1568,
+          "remaining_terms_lower_bound": 2,
+          "total_terms_lower_bound": 47
+        },
+        {
+          "selected_terms": 46,
+          "dual_intersection_cap": 405,
+          "residual_rank_lower_bound": 539,
+          "remaining_terms_lower_bound": 1,
+          "total_terms_lower_bound": 47
+        }
+      ]
+    },
+    {
+      "koszul_degree": 3,
+      "dual_catalectic_degree": 4,
+      "permanent_koszul_rank": 58800,
+      "one_term_koszul_cap": 1680,
+      "best_total_lower_bound": 46,
+      "maximizers": [
+        {
+          "selected_terms": 20,
+          "dual_intersection_cap": 341,
+          "residual_rank_lower_bound": 42091,
+          "remaining_terms_lower_bound": 26,
+          "total_terms_lower_bound": 46
+        },
+        {
+          "selected_terms": 21,
+          "dual_intersection_cap": 376,
+          "residual_rank_lower_bound": 40376,
+          "remaining_terms_lower_bound": 25,
+          "total_terms_lower_bound": 46
+        },
+        {
+          "selected_terms": 22,
+          "dual_intersection_cap": 411,
+          "residual_rank_lower_bound": 38661,
+          "remaining_terms_lower_bound": 24,
+          "total_terms_lower_bound": 46
+        },
+        {
+          "selected_terms": 46,
+          "dual_intersection_cap": 1225,
+          "residual_rank_lower_bound": -1225,
+          "remaining_terms_lower_bound": 0,
+          "total_terms_lower_bound": 46
+        }
+      ]
+    },
+    {
+      "koszul_degree": 4,
+      "dual_catalectic_degree": 3,
+      "permanent_koszul_rank": 59584,
+      "one_term_koszul_cap": 1694,
+      "best_total_lower_bound": 46,
+      "maximizers": [
+        {
+          "selected_terms": 46,
+          "dual_intersection_cap": 1225,
+          "residual_rank_lower_bound": -441,
+          "remaining_terms_lower_bound": 0,
+          "total_terms_lower_bound": 46
+        }
+      ]
+    },
+    {
+      "koszul_degree": 5,
+      "dual_catalectic_degree": 2,
+      "permanent_koszul_rank": 21560,
+      "one_term_koszul_cap": 1022,
+      "best_total_lower_bound": 46,
+      "maximizers": [
+        {
+          "selected_terms": 46,
+          "dual_intersection_cap": 441,
+          "residual_rank_lower_bound": -49,
+          "remaining_terms_lower_bound": 0,
+          "total_terms_lower_bound": 46
+        }
+      ]
+    },
+    {
+      "koszul_degree": 6,
+      "dual_catalectic_degree": 1,
+      "permanent_koszul_rank": 2400,
+      "one_term_koszul_cap": 342,
+      "best_total_lower_bound": 46,
+      "maximizers": [
+        {
+          "selected_terms": 46,
+          "dual_intersection_cap": 49,
+          "residual_rank_lower_bound": -1,
+          "remaining_terms_lower_bound": 0,
+          "total_terms_lower_bound": 46
+        }
+      ]
+    }
+  ],
+  "chosen_koszul_degree_two_route": {
+    "selected_terms": 46,
+    "dual_intersection_cap": 405,
+    "residual_rank_lower_bound": 539,
+    "remaining_terms_lower_bound": 1,
+    "total_terms_lower_bound": 47
+  },
+  "strict_nonzero_residual_gap": 539,
+  "dp_peak_states": {
+    "2": 296,
+    "3": 4980,
+    "4": 14493,
+    "5": 8366,
+    "6": 581
+  },
+  "theorem": "ChowRank(perm_7) >= 47 over characteristic zero",
+  "current_ordinary_interval": [
+    47,
+    64
+  ],
+  "claim_boundary": [
+    "This proves ordinary Chow rank only, not border rank.",
+    "It does not prove ChowRank(perm_7)=64.",
+    "For K_m the double-quotient loss is the degree-(7-m) catalectic intersection, not the degree-(m+1) prolongation intersection.",
+    "The scan starts at m=2: for m=1, E_1^(1)=Sym^2(V), not E_2, so the required prolongation identity is unavailable."
+  ]
+}

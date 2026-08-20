@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "status": "EXACT_COUNTEREXAMPLE_TO_QUADRATIC_INTERFACE_ONLY",
+  "field": "characteristic zero",
+  "n": 7,
+  "term_count": 49,
+  "family": "lexicographically first 49 normalized Glynn sign terms",
+  "normalization": "delta_1=1 and tails ordered by product((-1,1), repeat=6)",
+  "all_terms_are_chow": true,
+  "factor_rank_per_term": 7,
+  "pairwise_factor_span_intersection": 0,
+  "degree_rows": {
+    "1": {
+      "character_count": 7,
+      "selected_walsh_rank": 7,
+      "row_block_count": 7,
+      "H_dimension": 49,
+      "E_block_dimension": 7,
+      "E_intersection_block_dimension": 7,
+      "E_intersection_dimension": 49
+    },
+    "2": {
+      "character_count": 22,
+      "selected_walsh_rank": 22,
+      "row_block_count": 21,
+      "H_dimension": 462,
+      "E_block_dimension": 21,
+      "E_intersection_block_dimension": 21,
+      "E_intersection_dimension": 441
+    },
+    "3": {
+      "character_count": 42,
+      "selected_walsh_rank": 38,
+      "row_block_count": 35,
+      "H_dimension": 1330,
+      "E_block_dimension": 35,
+      "E_intersection_block_dimension": 31,
+      "E_intersection_dimension": 1085
+    },
+    "4": {
+      "character_count": 57,
+      "selected_walsh_rank": 47,
+      "row_block_count": 35,
+      "H_dimension": 1645,
+      "E_block_dimension": 35,
+      "E_intersection_block_dimension": 25,
+      "E_intersection_dimension": 875
+    },
+    "5": {
+      "character_count": 63,
+      "selected_walsh_rank": 49,
+      "row_block_count": 21,
+      "H_dimension": 1029,
+      "E_block_dimension": 21,
+      "E_intersection_block_dimension": 11,
+      "E_intersection_dimension": 231
+    },
+    "6": {
+      "character_count": 64,
+      "selected_walsh_rank": 49,
+      "row_block_count": 7,
+      "H_dimension": 343,
+      "E_block_dimension": 7,
+      "E_intersection_block_dimension": 2,
+      "E_intersection_dimension": 14
+    }
+  },
+  "H_profile_degrees_1_through_6": [
+    49,
+    462,
+    1330,
+    1645,
+    1029,
+    343
+  ],
+  "E_intersection_profile_degrees_1_through_6": [
+    49,
+    441,
+    1085,
+    875,
+    231,
+    14
+  ],
+  "quadratic_interface": {
+    "explicit_independent_row_indices_zero_based": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      16,
+      17,
+      18,
+      20,
+      24,
+      32,
+      33,
+      34,
+      36,
+      40,
+      48
+    ],
+    "explicit_minor_determinant": 68719476736,
+    "explicit_minor_determinant_power_of_two": 36,
+    "H2_dimension": 462,
+    "E2_dimension": 441,
+    "E2_contained_in_H2": true,
+    "rho_rank": 21,
+    "degree_two_defect": 0,
+    "rho_plus_defect": 21
+  },
+  "erasure_lower_bounds": {
+    "2": 448,
+    "3": 1293,
+    "4": 1494,
+    "5": 853,
+    "6": 294
+  },
+  "all_erasure_dimension_bounds_satisfied": true,
+  "complementary_sums": {
+    "1_6": {
+      "actual": 392,
+      "permanent_upper": 392
+    },
+    "2_5": {
+      "actual": 1491,
+      "permanent_upper": 1470
+    },
+    "3_4": {
+      "actual": 2975,
+      "permanent_upper": 2940
+    }
+  },
+  "E6_contained_in_H6": false,
+  "E6_intersection_dimension": 14,
+  "minimal_surviving_interface": [
+    "retain all 49 term labels and Chow multiplication",
+    "use the full identity sum_i T_i = perm_7 across complementary degrees",
+    "in particular retain E_6 subset H_6, which this counterexample violates"
+  ],
+  "claim_boundary": [
+    "This family is not a 49-term decomposition of perm_7.",
+    "It disproves a lower bound rho+Delta_2 >= 177 derived only from the factor packet, E_2 containment, and scalar erasure bounds.",
+    "It does not disprove a coupled degree-two/degree-six theorem using the full polynomial identity.",
+    "It proves no Chow-rank or border-rank bound."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "status": "PURE_SINGLE_MIDDLE_LAYER_ROUTE_BARRIER",
+  "claim_boundary": "The proposed two-sided local inequality is false already for a full-factor squarefree term at quotient rank seven. This excludes the route, not Chow rank 64.",
+  "middle_subset_rank_q": 35,
+  "permanent_rectangular_catalectic_rank": 1225,
+  "glynn_target_terms": 64,
+  "factor_span_total": 49,
+  "required_combined_excess": 1015,
+  "required_two_sided_slope": "145/7",
+  "combined_one_direction_capacity": 35,
+  "full_quotient_symbol_capacity": 70,
+  "full_quotient_required_by_linear_slope": "145",
+  "full_quotient_gap": "-75",
+  "slope_below_capacity": false,
+  "upper_template": "h_plus+h_minus <= 35*N - 1225 - Delta",
+  "target_lower_template": "h_plus+h_minus >= 1015 - Delta",
+  "middle_rank_floors_by_factor_span": {
+    "1": {
+      "minimum_middle_rank": 1,
+      "minimizing_partition": [
+        7
+      ],
+      "profile_count": 1
+    },
+    "2": {
+      "minimum_middle_rank": 2,
+      "minimizing_partition": [
+        6,
+        1
+      ],
+      "profile_count": 3
+    },
+    "3": {
+      "minimum_middle_rank": 4,
+      "minimizing_partition": [
+        5,
+        1,
+        1
+      ],
+      "profile_count": 4
+    },
+    "4": {
+      "minimum_middle_rank": 8,
+      "minimizing_partition": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "profile_count": 3
+    },
+    "5": {
+      "minimum_middle_rank": 15,
+      "minimizing_partition": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "profile_count": 2
+    },
+    "6": {
+      "minimum_middle_rank": 25,
+      "minimizing_partition": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "profile_count": 1
+    },
+    "7": {
+      "minimum_middle_rank": 35,
+      "minimizing_partition": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "profile_count": 1
+    }
+  },
+  "next_open_interface": "Construct a multi-degree coupled derivative-module invariant that continues to charge terms after the 49-dimensional factor span is full."
+}

@@ -1,0 +1,36 @@
+{
+  "claim_boundary": [
+    "The ranks and tangent dimensions are exact over the displayed finite field.",
+    "A small tangent space is only a local statement at the Glynn point.",
+    "It does not exclude disconnected 49-point components or prove a characteristic-zero rank bound."
+  ],
+  "coefficient_jacobian_rank": 64,
+  "coefficient_projection_dimension": 64,
+  "coefficient_variable_count": 64,
+  "consistent_point": "normalized_64_term_Glynn_decomposition",
+  "elapsed_seconds": 0.37371020000136923,
+  "estimated_peak_memory_gib": 0.15,
+  "field": "F_65521",
+  "full_jacobian_rank": 225,
+  "full_waring_system": {
+    "coefficient_jacobian_rank": 64,
+    "coefficient_projection_dimension": 1,
+    "full_jacobian_rank": 442,
+    "identity_residual_is_zero": true,
+    "jacobian_shape": [
+      1716,
+      448
+    ],
+    "point_jacobian_rank": 379,
+    "tangent_dimension": 6
+  },
+  "jacobian_shape": [
+    1225,
+    448
+  ],
+  "point_coordinate_variable_count": 384,
+  "point_jacobian_rank": 225,
+  "schema_version": 1,
+  "status": "EXACT_FINITE_FIELD_TANGENT_DIAGNOSTIC_NOT_A_GLOBAL_RANK_PROOF",
+  "tangent_dimension": 223
+}

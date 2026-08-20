@@ -1,0 +1,421 @@
+{
+  "claim_boundary": "The rank-seven monomial and rank-six s=1 monomial are covered by a joint diagonal-torus degeneration. Veronese disjointness proves all rank-six d=3,4 rows, d=5,6 are proved directly, and fixed-source raw composite degeneration proves the nonmonomial d=1,2 rows without preserving middle rank, defect, or R2 in the limit. The two N=49 equality cases remain open. No lower-50 or border-rank claim is made.",
+  "codimension_one_partial_shadow": {
+    "direction_dimension": 5,
+    "maximizing_coordinate_shadows": 10,
+    "maximum_cubic_dimension": 9,
+    "quadratic_shadow_budget": 3
+  },
+  "equality_conclusion": "A hypothetical N=49 identity must lie in one of two equality cases: an all-rank-seven simple rank-seven 7-multilinear matroid, or seven direct rank-six s=1/2 blocks plus forty-two rank-seven graph complements. Both also satisfy rectangular Sylvester equality.",
+  "equality_arithmetic": {
+    "rank5_full_then_rank7_remainder_possible": false,
+    "solutions_to_6a_plus_7b_equals_49": [
+      {
+        "rank6_full_blocks": 0,
+        "rank7_full_blocks": 7
+      },
+      {
+        "rank6_full_blocks": 7,
+        "rank7_full_blocks": 1
+      }
+    ]
+  },
+  "n": 7,
+  "rank6_normal_form_rows": [
+    {
+      "degree2_dimension": 16,
+      "middle_defect": 10,
+      "middle_rank": 25,
+      "normal_form_support_size": 1,
+      "rows": [
+        {
+          "proven_arbitrary_lower": 10,
+          "quotient_rank": 0
+        },
+        {
+          "coordinate_lower": 32,
+          "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+          "proven_arbitrary_lower": 32,
+          "quotient_rank": 1,
+          "raw_beta_minus": 11,
+          "raw_beta_plus": 14,
+          "raw_coordinate_minimum": 25
+        },
+        {
+          "coordinate_lower": 43,
+          "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+          "proven_arbitrary_lower": 43,
+          "quotient_rank": 2,
+          "raw_beta_minus": 18,
+          "raw_beta_plus": 21,
+          "raw_coordinate_minimum": 39
+        },
+        {
+          "coordinate_lower": 47,
+          "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+          "proven_arbitrary_lower": 47,
+          "quotient_rank": 3,
+          "raw_beta_minus": 22,
+          "raw_beta_plus": 24,
+          "raw_coordinate_minimum": 46
+        },
+        {
+          "coordinate_lower": 47,
+          "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+          "proven_arbitrary_lower": 47,
+          "quotient_rank": 4,
+          "raw_beta_minus": 24,
+          "raw_beta_plus": 25,
+          "raw_coordinate_minimum": 49
+        },
+        {
+          "proof_status": "PROVEN_PARTIAL_SHADOW",
+          "proven_arbitrary_lower": 51,
+          "quotient_rank": 5
+        },
+        {
+          "proof_status": "PROVEN_FULL_QUOTIENT",
+          "proven_arbitrary_lower": 60,
+          "quotient_rank": 6
+        }
+      ]
+    },
+    {
+      "degree2_dimension": 16,
+      "middle_defect": 10,
+      "middle_rank": 25,
+      "normal_form_support_size": 2,
+      "rows": [
+        {
+          "proven_arbitrary_lower": 10,
+          "quotient_rank": 0
+        },
+        {
+          "coordinate_lower": 32,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 22,
+          "quotient_rank": 1,
+          "raw_beta_minus": 11,
+          "raw_beta_plus": 14,
+          "raw_coordinate_minimum": 25
+        },
+        {
+          "coordinate_lower": 43,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 33,
+          "quotient_rank": 2,
+          "raw_beta_minus": 18,
+          "raw_beta_plus": 21,
+          "raw_coordinate_minimum": 39
+        },
+        {
+          "coordinate_lower": 47,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 32,
+          "quotient_rank": 3,
+          "raw_beta_minus": 22,
+          "raw_beta_plus": 24,
+          "raw_coordinate_minimum": 46
+        },
+        {
+          "coordinate_lower": 47,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 43,
+          "quotient_rank": 4,
+          "raw_beta_minus": 24,
+          "raw_beta_plus": 25,
+          "raw_coordinate_minimum": 49
+        },
+        {
+          "proof_status": "PROVEN_PARTIAL_SHADOW",
+          "proven_arbitrary_lower": 51,
+          "quotient_rank": 5
+        },
+        {
+          "proof_status": "PROVEN_FULL_QUOTIENT",
+          "proven_arbitrary_lower": 60,
+          "quotient_rank": 6
+        }
+      ]
+    },
+    {
+      "degree2_dimension": 18,
+      "middle_defect": 4,
+      "middle_rank": 31,
+      "normal_form_support_size": 3,
+      "rows": [
+        {
+          "proven_arbitrary_lower": 4,
+          "quotient_rank": 0
+        },
+        {
+          "coordinate_lower": 32,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 22,
+          "quotient_rank": 1,
+          "raw_beta_minus": 13,
+          "raw_beta_plus": 18,
+          "raw_coordinate_minimum": 31
+        },
+        {
+          "coordinate_lower": 47,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 33,
+          "quotient_rank": 2,
+          "raw_beta_minus": 22,
+          "raw_beta_plus": 27,
+          "raw_coordinate_minimum": 49
+        },
+        {
+          "coordinate_lower": 53,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 38,
+          "quotient_rank": 3,
+          "raw_beta_minus": 28,
+          "raw_beta_plus": 30,
+          "raw_coordinate_minimum": 58
+        },
+        {
+          "coordinate_lower": 53,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 49,
+          "quotient_rank": 4,
+          "raw_beta_minus": 30,
+          "raw_beta_plus": 31,
+          "raw_coordinate_minimum": 61
+        },
+        {
+          "proof_status": "PROVEN_PARTIAL_SHADOW",
+          "proven_arbitrary_lower": 57,
+          "quotient_rank": 5
+        },
+        {
+          "proof_status": "PROVEN_FULL_QUOTIENT",
+          "proven_arbitrary_lower": 66,
+          "quotient_rank": 6
+        }
+      ]
+    },
+    {
+      "degree2_dimension": 19,
+      "middle_defect": 1,
+      "middle_rank": 34,
+      "normal_form_support_size": 4,
+      "rows": [
+        {
+          "proven_arbitrary_lower": 1,
+          "quotient_rank": 0
+        },
+        {
+          "coordinate_lower": 32,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 22,
+          "quotient_rank": 1,
+          "raw_beta_minus": 14,
+          "raw_beta_plus": 20,
+          "raw_coordinate_minimum": 34
+        },
+        {
+          "coordinate_lower": 49,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 33,
+          "quotient_rank": 2,
+          "raw_beta_minus": 25,
+          "raw_beta_plus": 29,
+          "raw_coordinate_minimum": 54
+        },
+        {
+          "coordinate_lower": 55,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 41,
+          "quotient_rank": 3,
+          "raw_beta_minus": 30,
+          "raw_beta_plus": 33,
+          "raw_coordinate_minimum": 63
+        },
+        {
+          "coordinate_lower": 56,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 52,
+          "quotient_rank": 4,
+          "raw_beta_minus": 33,
+          "raw_beta_plus": 34,
+          "raw_coordinate_minimum": 67
+        },
+        {
+          "proof_status": "PROVEN_PARTIAL_SHADOW",
+          "proven_arbitrary_lower": 60,
+          "quotient_rank": 5
+        },
+        {
+          "proof_status": "PROVEN_FULL_QUOTIENT",
+          "proven_arbitrary_lower": 69,
+          "quotient_rank": 6
+        }
+      ]
+    },
+    {
+      "degree2_dimension": 20,
+      "middle_defect": 0,
+      "middle_rank": 35,
+      "normal_form_support_size": 5,
+      "rows": [
+        {
+          "proven_arbitrary_lower": 0,
+          "quotient_rank": 0
+        },
+        {
+          "coordinate_lower": 32,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 22,
+          "quotient_rank": 1,
+          "raw_beta_minus": 15,
+          "raw_beta_plus": 20,
+          "raw_coordinate_minimum": 35
+        },
+        {
+          "coordinate_lower": 49,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 33,
+          "quotient_rank": 2,
+          "raw_beta_minus": 25,
+          "raw_beta_plus": 30,
+          "raw_coordinate_minimum": 55
+        },
+        {
+          "coordinate_lower": 56,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 42,
+          "quotient_rank": 3,
+          "raw_beta_minus": 31,
+          "raw_beta_plus": 34,
+          "raw_coordinate_minimum": 65
+        },
+        {
+          "coordinate_lower": 57,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 53,
+          "quotient_rank": 4,
+          "raw_beta_minus": 34,
+          "raw_beta_plus": 35,
+          "raw_coordinate_minimum": 69
+        },
+        {
+          "proof_status": "PROVEN_PARTIAL_SHADOW",
+          "proven_arbitrary_lower": 61,
+          "quotient_rank": 5
+        },
+        {
+          "proof_status": "PROVEN_FULL_QUOTIENT",
+          "proven_arbitrary_lower": 70,
+          "quotient_rank": 6
+        }
+      ]
+    },
+    {
+      "degree2_dimension": 21,
+      "middle_defect": 0,
+      "middle_rank": 35,
+      "normal_form_support_size": 6,
+      "rows": [
+        {
+          "proven_arbitrary_lower": 0,
+          "quotient_rank": 0
+        },
+        {
+          "coordinate_lower": 32,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 22,
+          "quotient_rank": 1,
+          "raw_beta_minus": 15,
+          "raw_beta_plus": 20,
+          "raw_coordinate_minimum": 35
+        },
+        {
+          "coordinate_lower": 49,
+          "proof_status": "PROVEN_RAW_COMPOSITE_DEGENERATION",
+          "proven_arbitrary_lower": 33,
+          "quotient_rank": 2,
+          "raw_beta_minus": 25,
+          "raw_beta_plus": 30,
+          "raw_coordinate_minimum": 55
+        },
+        {
+          "coordinate_lower": 56,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 42,
+          "quotient_rank": 3,
+          "raw_beta_minus": 31,
+          "raw_beta_plus": 34,
+          "raw_coordinate_minimum": 65
+        },
+        {
+          "coordinate_lower": 57,
+          "proof_status": "PROVEN_VERONESE_DISJOINTNESS",
+          "proven_arbitrary_lower": 53,
+          "quotient_rank": 4,
+          "raw_beta_minus": 34,
+          "raw_beta_plus": 35,
+          "raw_coordinate_minimum": 69
+        },
+        {
+          "proof_status": "PROVEN_PARTIAL_SHADOW",
+          "proven_arbitrary_lower": 61,
+          "quotient_rank": 5
+        },
+        {
+          "proof_status": "PROVEN_FULL_QUOTIENT",
+          "proven_arbitrary_lower": 70,
+          "quotient_rank": 6
+        }
+      ]
+    }
+  ],
+  "rank7_coordinate_initial_rows": [
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 32,
+      "endpoint_row": 32,
+      "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+      "quotient_rank": 1
+    },
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 49,
+      "endpoint_row": 49,
+      "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+      "quotient_rank": 2
+    },
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 56,
+      "endpoint_row": 56,
+      "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+      "quotient_rank": 3
+    },
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 57,
+      "endpoint_row": 57,
+      "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+      "quotient_rank": 4
+    },
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 64,
+      "endpoint_row": 64,
+      "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+      "quotient_rank": 5
+    },
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 67,
+      "endpoint_row": 67,
+      "proof_status": "PROVEN_MONOMIAL_TORUS_DEGENERATION",
+      "quotient_rank": 6
+    },
+    {
+      "coordinate_minimum_allowing_bad_prolongation": 69,
+      "endpoint_row": 70,
+      "proof_status": "PROVEN_FULL_QUOTIENT",
+      "quotient_rank": 7
+    }
+  ],
+  "schema_version": 1,
+  "slope": 10,
+  "status": "PROVEN_LOCAL_SLOPE10_ENDPOINT"
+}

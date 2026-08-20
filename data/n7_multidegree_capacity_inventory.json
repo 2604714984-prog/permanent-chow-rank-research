@@ -1,0 +1,198 @@
+{
+  "status": "N7_ROUTE_CAPACITY_INVENTORY",
+  "field": "characteristic zero",
+  "n": 7,
+  "glynn_upper_bound": 64,
+  "derivative_tower": [
+    1,
+    49,
+    441,
+    1225,
+    1225,
+    441,
+    49,
+    1
+  ],
+  "independent_chow_term_tower": [
+    1,
+    7,
+    21,
+    35,
+    35,
+    21,
+    7,
+    1
+  ],
+  "raw_derivative_component_ratio_ceiling": "35",
+  "full_apolar_length": {
+    "permanent": 3432,
+    "one_term": 128,
+    "ratio": "429/16",
+    "integer_lower_bound": 27
+  },
+  "first_koszul": {
+    "rows": [
+      {
+        "output_degree": 2,
+        "permanent_rank": 20384,
+        "one_term_cap": 994,
+        "ratio": "1456/71",
+        "integer_lower_bound": 21
+      },
+      {
+        "output_degree": 3,
+        "permanent_rank": 58800,
+        "one_term_cap": 1680,
+        "ratio": "35",
+        "integer_lower_bound": 35
+      },
+      {
+        "output_degree": 4,
+        "permanent_rank": 59584,
+        "one_term_cap": 1694,
+        "ratio": "4256/121",
+        "integer_lower_bound": 36
+      },
+      {
+        "output_degree": 5,
+        "permanent_rank": 21560,
+        "one_term_cap": 1022,
+        "ratio": "1540/73",
+        "integer_lower_bound": 22
+      },
+      {
+        "output_degree": 6,
+        "permanent_rank": 2400,
+        "one_term_cap": 342,
+        "ratio": "400/57",
+        "integer_lower_bound": 8
+      }
+    ],
+    "best_integer_lower_bound": 36
+  },
+  "all_standard_higher_wedge_koszul_capacity": {
+    "checked_output_degrees": [
+      1,
+      7
+    ],
+    "checked_wedge_degrees": [
+      0,
+      48
+    ],
+    "checked_pair_count": 343,
+    "active_internal_modular_rank_table": [
+      [
+        7,
+        21,
+        35,
+        35,
+        21,
+        7,
+        1,
+        0
+      ],
+      [
+        21,
+        112,
+        210,
+        224,
+        140,
+        48,
+        7,
+        0
+      ],
+      [
+        35,
+        210,
+        511,
+        595,
+        393,
+        140,
+        21,
+        0
+      ],
+      [
+        35,
+        224,
+        595,
+        832,
+        595,
+        224,
+        35,
+        0
+      ],
+      [
+        21,
+        140,
+        393,
+        595,
+        511,
+        210,
+        35,
+        0
+      ],
+      [
+        7,
+        48,
+        140,
+        224,
+        210,
+        112,
+        21,
+        0
+      ],
+      [
+        1,
+        7,
+        21,
+        35,
+        35,
+        21,
+        7,
+        0
+      ]
+    ],
+    "inactive_variable_count": 42,
+    "one_term_convolution": "sum_q C(42,p-q)*internal_rank[m,q]",
+    "maximum": {
+      "output_degree": 4,
+      "wedge_degree": 24,
+      "permanent_rank_dimension_upper_bound": 77426496443123100,
+      "independent_term_modular_rank_lower_bound": 1284156702075780,
+      "ratio_upper_bound": "24262105/402399",
+      "integer_lower_bound_ceiling": 61
+    }
+  },
+  "imported_best_current_ordinary_lower_bound": {
+    "value": 41,
+    "source": "multishadow_bounds.json",
+    "method": "multidimensional-shadow"
+  },
+  "single_middle_layer_barrier": {
+    "required_full_quotient_rank": 145,
+    "available_full_quotient_capacity": 70,
+    "gap": 75
+  },
+  "direct_sum_ceiling": {
+    "statement": "A nonnegative direct sum of rank inequalities has ratio at most the maximum component ratio.",
+    "raw_derivative_components": 35,
+    "first_koszul_components": 36,
+    "all_standard_higher_wedge_components": 61,
+    "reaches_64": false
+  },
+  "route_decision": {
+    "discard": [
+      "raw derivative-layer direct sums",
+      "full apolar-length dimension count",
+      "nonnegative direct sums of first-Koszul inequalities",
+      "nonnegative direct sums of standard higher-wedge Koszul inequalities",
+      "the single-middle-layer rectangular half-defect route"
+    ],
+    "retain": "a genuinely coupled multi-degree derivative module whose one-term cap is smaller than the sum of its separate degreewise caps"
+  },
+  "claim_boundary": [
+    "This file proves route-capacity ceilings, not ChowRank(perm_7)=64.",
+    "The value 41 is imported from the existing exact multishadow certificate.",
+    "No statement about border Chow rank is added here."
+  ]
+}

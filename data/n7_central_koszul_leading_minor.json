@@ -1,0 +1,51 @@
+{
+  "status": "EXACT_UNITRIANGULAR_MINOR_ROUTE_DIAGNOSTIC",
+  "field": "integer minor; valid in characteristic zero",
+  "n": 7,
+  "map": {
+    "output_degree": 4,
+    "wedge_degree": 24,
+    "source": "E_4(perm_7) tensor exterior^24(k^49)",
+    "target": "E_3(perm_7) tensor exterior^25(k^49)"
+  },
+  "bounded_enumeration": {
+    "output_subpermanent_count": 1225,
+    "parent_events_per_output": 16,
+    "inclusion_exclusion_states_per_output": 65535,
+    "total_inclusion_exclusion_states": 80280375,
+    "full_matrix_materialized": false,
+    "output_order": "lexicographic",
+    "output_order_seed": null
+  },
+  "leading_minor_rank": 32506369177539449,
+  "one_independent_chow_term_rank": {
+    "active_internal_row": [
+      35,
+      224,
+      595,
+      832,
+      595,
+      224,
+      35,
+      0
+    ],
+    "inactive_variable_count": 42,
+    "rank": 1284156702075780
+  },
+  "lower_50_test": {
+    "threshold": 64207835103789000,
+    "strict_gap": -31701465926249551,
+    "passes": false
+  },
+  "ordinary_chow_consequence": {
+    "integer_lower_bound": 26,
+    "applies_to": "ordinary Chow rank"
+  },
+  "claim_boundary": [
+    "The certificate is an explicit integer unitriangular minor, not a numerical rank estimate.",
+    "It is only a lower bound for the full central Koszul rank, not an upper bound.",
+    "This explicit minor does not improve the established ordinary lower bound 49.",
+    "The one-term denominator is the maximum attained by seven independent factors.",
+    "No border Chow-rank claim is made."
+  ]
+}
