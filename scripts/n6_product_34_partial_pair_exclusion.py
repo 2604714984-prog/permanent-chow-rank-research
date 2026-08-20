@@ -71,8 +71,11 @@ def rank_mod(matrix: list[list[int]]) -> int:
         work[row], work[pivot] = work[pivot], work[row]
         inverse = pow(work[row][column], -1, PRIME)
         work[row] = [(entry * inverse) % PRIME for entry in work[row]]
-        for index in range(len(work)):
-            if index == row or not work[index][column]:
+        # Only eliminate below the pivot.  This function is a rank oracle;
+        # callers never consume an RREF, so eliminating rows above the pivot
+        # only adds work without changing the rank.
+        for index in range(row + 1, len(work)):
+            if not work[index][column]:
                 continue
             coefficient = work[index][column]
             work[index] = [

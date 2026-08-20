@@ -180,7 +180,7 @@ def sign_example() -> dict[str, object]:
 def build_payload() -> dict[str, object]:
     alpha3 = load_module(ALPHA3_SCRIPT, "n6053_alpha3")
     quotient = load_module(QUOTIENT_SCRIPT, "n6053_quotient")
-    rectangle_free_orbits = alpha3.coordinate_support_orbits()[0]
+    rectangle_free_orbits = alpha3.coordinate_support_classification()[0][0]
     ranks = []
     exceptional = []
     for orbit_index, row_masks in enumerate(rectangle_free_orbits):

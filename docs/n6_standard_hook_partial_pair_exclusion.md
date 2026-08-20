@@ -51,7 +51,16 @@ four corners lie in its support. The replay enumerates all
  \binom{23}{12}=1,352,078
 \]
 
-supports. The high end of the exact histogram is
+supports.  The first five columns of (2.1) are symmetric.  The implementation
+therefore enumerates their five 4-bit column types as a multiset, keeps the
+sixth 3-bit column type distinguished, and weights every representative by
+the exact number of labelled permutations of the first five columns.  Only
+18,513 representatives have total support size twelve, and their orbit
+weights sum to (1,352,078).  This is an exact (S_5)-orbit compression, not
+sampling.  On the current development machine this histogram stage takes
+about 0.09 seconds instead of 2.56 seconds for the direct scan.
+
+The high end of the exact histogram is
 
 \[
 \begin{array}{c|rrrrr}

@@ -40,6 +40,11 @@ class N6StandardHookPartialPairExclusionTest(unittest.TestCase):
             coordinate["no_coordinate_values_thirteen_fourteen_sixteen_seventeen"]
         )
 
+    def test_coordinate_threshold_orbit_compression_is_complete(self) -> None:
+        _, _, representatives, represented = AUDIT.coordinate_threshold_orbits()
+        self.assertEqual(representatives, 18_513)
+        self.assertEqual(represented, AUDIT.comb(23, 12))
+
     def test_all_five_relative_normal_leakage_gaps_are_strict(self) -> None:
         rows = self.payload["relative_normal_leakage_certificates"]
         self.assertEqual([row["kernel_dimension"] for row in rows], [2, 11, 8, 7, 6])

@@ -96,6 +96,15 @@ orbit counts are
 \tag{3.1}
 \]
 
+The labelled counts are recovered without materializing all
+\(\binom{36}{6}=1{,}947{,}792\) supports.  The replay enumerates row-mask
+multisets, weights each by the exact number of distinct row permutations,
+and checks that the weighted histogram sums to \(\binom{36}{6}\).  The same
+small enumeration produces the row-column orbit representatives.  All
+`64*720` images of a six-bit row mask under a column permutation are
+precomputed once; canonicalization then uses table lookups rather than
+repeating the same bit permutation for every row-mask multiset.
+
 For a rectangle-free support, `q(Sym^2L)` has 21 one-dimensional weights;
 for a one-rectangle support it has 20.  The replay exhausts respectively all
 
@@ -108,6 +117,24 @@ for a one-rectangle support it has 20.  The replay exhausts respectively all
 
 fixed local fifteen-planes per support orbit.  It records the following
 histograms of coefficient-component upper caps:
+
+The implementation enumerates the complementary six or five excluded axes,
+which is in bijection with choosing the fifteen retained axes.  This avoids a
+temporary Python `set` and set difference for each of the \(4{,}310{,}112\)
+fixed candidates; the constraints, component counts, and maximizer tie counts
+are unchanged.
+
+It also removes roots already forced to zero before the local-axis choice,
+leaving only `556` live roots in the measured rectangle-free
+case and `480` in the measured one-rectangle case.  One rollback union-find
+is then reused per support orbit.  A depth-first combination traversal shares
+the imposed constraints of each prefix, rolls back only the changed parent,
+size, and zero entries, and maintains the surviving-component count in
+constant time.  No candidate union-find states are retained: memory remains
+bounded by one small union-find and a depth-six rollback log.  Fresh-component
+enumeration and rollback enumeration agree exactly on reduced real constraints
+and on exhaustive synthetic cases, including the complete histogram, maximum,
+and maximizer multiplicity.
 
 ```text
 rectangles=0:
@@ -180,11 +207,11 @@ all-`alpha=3` `b=60` state by using simultaneously that its six `F_i` are
 literal direct and have one common quotient fifteen-plane.  It makes no
 ordinary- or border-Chow-rank conclusion.
 
-Run the CPU-parallel replay with
+Run the resource-safe serial replay with
 
 ```text
 python scripts/n6_alpha3_individual_prolongation_barrier.py \
-  --workers 20 \
+  --workers 1 \
   --json data/n6_alpha3_individual_prolongation_barrier.json
 python -m unittest tests/test_n6_alpha3_individual_prolongation_barrier.py -v
 ```

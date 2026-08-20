@@ -7,9 +7,21 @@ import argparse
 import importlib.util
 import json
 import multiprocessing as mp
-import os
 from itertools import combinations
 from pathlib import Path
+
+try:
+    from n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
+except ModuleNotFoundError:
+    from scripts.n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +31,7 @@ T16_DATA = ROOT / "data" / "n6_global_t16_prolongation_cap.json"
 PRIME = 1_000_003
 AXIS_COUNT = 441
 PERMANENT_CUBIC_DIMENSION = 400
+_SHAPE_CONTEXT = None
 
 
 def require(condition: bool, payload: object) -> None:
@@ -34,12 +47,14 @@ def load_module(path: Path, name: str):
     return module
 
 
-def fixed_input(suffix: str):
-    alpha2 = load_module(
+def fixed_base(suffix: str):
+    alpha2_t15 = load_module(
         ALPHA2_T15_SCRIPT, f"n6096_alpha2_t15_{suffix}"
     )
     t16 = load_module(T16_SCRIPT, f"n6096_t16_{suffix}")
-    quotient, blocks, occurrences, support_rows = alpha2.fixed_input(suffix)
+    alpha2, quotient, blocks, occurrences, supports, orbit_sizes = (
+        alpha2_t15.fixed_base(suffix)
+    )
     occurrence_maps = [dict(rows) for rows in occurrences]
     edges: list[tuple[int, int, tuple[int, ...]]] = []
     occurrence_blocks = [set(row) for row in occurrence_maps]
@@ -50,6 +65,7 @@ def fixed_input(suffix: str):
                 edges.append((first, second, shared))
     require(len(edges) == 19_980, len(edges))
     return (
+        alpha2_t15,
         alpha2,
         t16,
         quotient,
@@ -57,7 +73,55 @@ def fixed_input(suffix: str):
         occurrences,
         occurrence_maps,
         edges,
-        support_rows,
+        supports,
+        orbit_sizes,
+    )
+
+
+def fixed_input(suffix: str):
+    (
+        alpha2_t15,
+        alpha2,
+        t16,
+        quotient,
+        blocks,
+        occurrences,
+        occurrence_maps,
+        edges,
+        supports,
+        orbit_sizes,
+    ) = fixed_base(suffix)
+    rows = []
+    global_index = 0
+    for support_index, support in enumerate(supports):
+        local_axes, representatives, action_count, orbit_histogram = (
+            alpha2_t15.support_orbit_representatives(
+                alpha2, quotient, support
+            )
+        )
+        rows.append(
+            {
+                "support_index": support_index,
+                "support": tuple(support),
+                "marked_support_count": orbit_sizes[support],
+                "local_axes": local_axes,
+                "representatives": representatives,
+                "automorphism_action_count": action_count,
+                "quotient_orbit_size_histogram": orbit_histogram,
+                "global_index_start": global_index,
+            }
+        )
+        global_index += len(representatives)
+    require(global_index == 173_388, global_index)
+    return (
+        alpha2_t15,
+        t16,
+        quotient,
+        blocks,
+        occurrences,
+        occurrence_maps,
+        edges,
+        rows,
     )
 
 
@@ -149,78 +213,152 @@ def maximize_two_extras(
     }
 
 
-def worker(task: tuple[int, int]) -> dict[str, object]:
-    slot, worker_count = task
+def evaluate_support_shape(
+    support_index: int,
+    support,
+    marked_support_count: int,
+    alpha2_t15,
+    alpha2,
+    quotient,
+    t16,
+    blocks,
+    occurrences,
+    occurrence_maps,
+    edges,
+) -> dict[str, object]:
+    local_axes, representatives, action_count, orbit_histogram = (
+        alpha2_t15.support_orbit_representatives(alpha2, quotient, support)
+    )
+    maximum = -1
+    sample = None
+    checked = 0
+    evaluated_pairs = 0
+    for local_index, qf_axes in enumerate(representatives):
+        result = maximize_two_extras(
+            qf_axes,
+            t16,
+            blocks,
+            occurrences,
+            occurrence_maps,
+            edges,
+        )
+        result["support_index"] = support_index
+        result["local_representative_index"] = local_index
+        result["qF_axis_indices"] = list(qf_axes)
+        evaluated_pairs += int(result["evaluated_interacting_pairs"])
+        if sample is None or (
+            int(result["dimension"]), -local_index
+        ) > (
+            maximum,
+            -int(sample["local_representative_index"]),
+        ):
+            maximum = int(result["dimension"])
+            sample = result
+        checked += 1
+    require(sample is not None, support_index)
+    return {
+        "support_index": support_index,
+        "support": tuple(support),
+        "marked_support_count": marked_support_count,
+        "local_axes": local_axes,
+        "automorphism_action_count": action_count,
+        "quotient_orbit_size_histogram": orbit_histogram,
+        "checked_representatives": checked,
+        "evaluated_interacting_pairs": evaluated_pairs,
+        "maximum": maximum,
+        "sample": sample,
+    }
+
+
+def initialize_shape_worker() -> None:
+    global _SHAPE_CONTEXT
+    _SHAPE_CONTEXT = fixed_base(f"worker_{mp.current_process().pid}")
+
+
+def shape_worker(support_index: int) -> dict[str, object]:
+    require(_SHAPE_CONTEXT is not None, "shape worker context")
     (
-        _,
+        alpha2_t15,
+        alpha2,
         t16,
-        _,
+        quotient,
         blocks,
         occurrences,
         occurrence_maps,
         edges,
-        support_rows,
-    ) = fixed_input(str(slot))
-    maxima = [-1] * len(support_rows)
-    samples: list[dict[str, object] | None] = [None] * len(support_rows)
-    checked = 0
-    global_index = 0
-    evaluated_pairs = 0
+        supports,
+        orbit_sizes,
+    ) = _SHAPE_CONTEXT
+    support = supports[support_index]
+    return evaluate_support_shape(
+        support_index,
+        support,
+        orbit_sizes[support],
+        alpha2_t15,
+        alpha2,
+        quotient,
+        t16,
+        blocks,
+        occurrences,
+        occurrence_maps,
+        edges,
+    )
 
-    for support_row in support_rows:
-        support_index = int(support_row["support_index"])
-        for qf_axes in support_row["representatives"]:
-            if global_index % worker_count == slot:
-                result = maximize_two_extras(
-                    qf_axes,
-                    t16,
-                    blocks,
-                    occurrences,
-                    occurrence_maps,
-                    edges,
-                )
-                result["support_index"] = support_index
-                result["global_representative_index"] = global_index
-                result["qF_axis_indices"] = list(qf_axes)
-                evaluated_pairs += int(result["evaluated_interacting_pairs"])
-                if samples[support_index] is None or (
-                    int(result["dimension"]), -global_index
-                ) > (
-                    maxima[support_index],
-                    -int(samples[support_index]["global_representative_index"]),
-                ):
-                    maxima[support_index] = int(result["dimension"])
-                    samples[support_index] = result
-                checked += 1
-            global_index += 1
-    require(global_index == 173_388, global_index)
-    return {
-        "slot": slot,
-        "checked_representatives": checked,
-        "evaluated_interacting_pairs": evaluated_pairs,
-        "support_maxima": maxima,
-        "support_samples": samples,
-    }
+
+def compute_support_rows(worker_count: int) -> list[dict[str, object]]:
+    require(1 <= worker_count <= 12, worker_count)
+    if worker_count == 1:
+        context = fixed_base("serial_shapes")
+        (
+            alpha2_t15,
+            alpha2,
+            t16,
+            quotient,
+            blocks,
+            occurrences,
+            occurrence_maps,
+            edges,
+            supports,
+            orbit_sizes,
+        ) = context
+        rows = [
+            evaluate_support_shape(
+                index,
+                support,
+                orbit_sizes[support],
+                alpha2_t15,
+                alpha2,
+                quotient,
+                t16,
+                blocks,
+                occurrences,
+                occurrence_maps,
+                edges,
+            )
+            for index, support in enumerate(supports)
+        ]
+    else:
+        context = mp.get_context("spawn")
+        with context.Pool(
+            min(worker_count, 12),
+            initializer=initialize_shape_worker,
+        ) as pool:
+            rows = pool.map(shape_worker, range(12))
+    alpha2_t15 = load_module(ALPHA2_T15_SCRIPT, "n6096_alpha2_globalize")
+    rows = alpha2_t15.globalize_support_rows(rows)
+    require(
+        tuple(int(row["checked_representatives"]) for row in rows)
+        == alpha2_t15.EXPECTED_REPRESENTATIVE_COUNTS,
+        rows,
+    )
+    return rows
 
 
 def compute_cap(worker_count: int) -> dict[str, object]:
-    require(1 <= worker_count <= 64, worker_count)
-    if worker_count == 1:
-        worker_rows = [worker((0, 1))]
-    else:
-        context = mp.get_context("spawn")
-        with context.Pool(worker_count) as pool:
-            worker_rows = pool.map(
-                worker,
-                [(slot, worker_count) for slot in range(worker_count)],
-            )
-    require(
-        sum(int(row["checked_representatives"]) for row in worker_rows)
-        == 173_388,
-        worker_rows,
-    )
+    support_rows = compute_support_rows(worker_count)
 
     (
+        _,
         _,
         _,
         quotient,
@@ -228,21 +366,13 @@ def compute_cap(worker_count: int) -> dict[str, object]:
         _,
         _,
         _,
-        support_rows,
-    ) = fixed_input("parent")
+        _,
+        _,
+    ) = fixed_base("parent")
     bound = pair_correction_bound_certificate(blocks)
     result_rows = []
     for support_index, support_row in enumerate(support_rows):
-        candidates = []
-        for row in worker_rows:
-            sample = row["support_samples"][support_index]
-            if sample is not None:
-                candidates.append(sample)
-        maximum = max(int(sample["dimension"]) for sample in candidates)
-        sample = min(
-            (row for row in candidates if int(row["dimension"]) == maximum),
-            key=lambda row: int(row["global_representative_index"]),
-        )
+        sample = support_row["sample"]
         result_rows.append(
             {
                 "support_index": support_index,
@@ -250,10 +380,10 @@ def compute_cap(worker_count: int) -> dict[str, object]:
                 "marked_support_count": int(
                     support_row["marked_support_count"]
                 ),
-                "qF_orbit_representative_count": len(
-                    support_row["representatives"]
+                "qF_orbit_representative_count": int(
+                    support_row["checked_representatives"]
                 ),
-                "prolongation_upper_cap": maximum,
+                "prolongation_upper_cap": int(support_row["maximum"]),
                 "sample_maximizer": {
                     "global_representative_index": int(
                         sample["global_representative_index"]
@@ -277,7 +407,7 @@ def compute_cap(worker_count: int) -> dict[str, object]:
         "worker_count": worker_count,
         "checked_representatives": 173_388,
         "evaluated_interacting_pairs_after_pruning": sum(
-            int(row["evaluated_interacting_pairs"]) for row in worker_rows
+            int(row["evaluated_interacting_pairs"]) for row in support_rows
         ),
         "pair_correction_bound_certificate": bound,
         "support_rows": result_rows,
@@ -337,12 +467,20 @@ def build_payload(computation: dict[str, object]) -> dict[str, object]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--workers", type=int, default=min(10, os.cpu_count() or 1)
+        "--workers",
+        type=parse_worker_argument,
+        default=0,
+        metavar="N|auto",
     )
     parser.add_argument("--json", type=Path)
     parser.add_argument("--verify-json", type=Path)
     args = parser.parse_args()
-    computation = compute_cap(args.workers)
+    workers = resolve_worker_count(
+        args.workers,
+        max_workers=12,
+        estimated_bytes_per_worker=GIB,
+    )
+    computation = compute_cap(workers)
     payload = build_payload(computation)
     rendered = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
@@ -351,7 +489,8 @@ def main() -> int:
     if args.verify_json:
         expected = json.loads(args.verify_json.read_text(encoding="utf-8"))
         require(payload == expected, args.verify_json)
-    print(f"workers={args.workers}")
+    print(f"workers={workers}")
+    print(f"worker_mode={'auto' if args.workers == 0 else 'explicit'}")
     print(
         "alpha2_t16_cap="
         f"{payload['universal_alpha2_t16_prolongation_upper_cap']}"

@@ -142,8 +142,12 @@ reduction proves the universal theorem
 
 for every actual alpha-two term satisfying (1.1)--(1.2).
 
-Worker processes receive disjoint orbit-representative indices and perform
-no writes. Only the parent process writes the deterministic JSON certificate.
+The twelve support shapes are independent tasks. Each representative is
+constructed and evaluated exactly once; a worker no longer constructs all
+(173{,}388) representatives and then discards the indices assigned to other
+workers. The parent restores the historical global index from the fixed shape
+prefix and shape-local index, so the tie break and frozen JSON are unchanged.
+Workers perform no writes.
 
 ## 4. State pruning
 
@@ -177,11 +181,21 @@ border-rank claim.
 
 ## 5. Replay
 
-On the present machine the ten-worker replay takes about two minutes:
+The resource-safe replay is serial by default:
 
-    python scripts/n6_alpha2_t15_prolongation_cap.py --workers 10 \
+    python scripts/n6_alpha2_t15_prolongation_cap.py --workers 1 \
       --json data/n6_alpha2_t15_prolongation_cap.json
     python -m unittest tests.test_n6_alpha2_t15_prolongation_cap -v
 
 The computation is finite, exhaustive, and deterministic. No random or
-floating-point calculation is used.
+floating-point calculation is used. Higher worker counts are an explicit
+operator choice for a machine whose memory headroom has first been checked.
+On the current 20-core, 48-GB Windows host, four shape workers are the
+recommended complete-replay setting:
+
+    python scripts/n6_alpha2_t15_prolongation_cap.py --workers 4 \
+      --verify-json data/n6_alpha2_t15_prolongation_cap.json
+
+The verified four-worker replay completed in 122.245 seconds on 2026-08-14.
+The default remains one worker, and the script permits at most twelve because
+there are only twelve independent shapes.

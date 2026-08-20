@@ -7,11 +7,23 @@ import argparse
 import importlib.util
 import json
 import multiprocessing as mp
-import os
 from collections import Counter
 from itertools import combinations, combinations_with_replacement
 from math import comb
 from pathlib import Path
+
+try:
+    from n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
+except ModuleNotFoundError:
+    from scripts.n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +34,21 @@ PRIME = 1_000_003
 AXIS_COUNT = 441
 LOCAL_QF_DIMENSION = 14
 PERMANENT_CUBIC_DIMENSION = 400
+EXPECTED_REPRESENTATIVE_COUNTS = (
+    10_292,
+    9_892,
+    38_760,
+    19_608,
+    19_608,
+    19_608,
+    10_292,
+    9_892,
+    19_608,
+    5_276,
+    5_276,
+    5_276,
+)
+_SHAPE_CONTEXT = None
 
 
 def require(condition: bool, payload: object) -> None:
@@ -96,13 +123,20 @@ def support_orbit_representatives(alpha2, quotient, support):
     )
 
 
-def fixed_input(name_suffix: str):
+def fixed_base(name_suffix: str):
     alpha2 = load_module(ALPHA2_SCRIPT, f"n6052_alpha2_{name_suffix}")
     t15 = load_module(T15_SCRIPT, f"n6052_t15_{name_suffix}")
     base = t15.load_base_module()
     quotient = base.load_quotient_module()
     blocks, occurrences = base.cubic_weight_blocks(quotient)
     supports, orbit_sizes = alpha2.one_rectangle_support_orbits()
+    return alpha2, quotient, blocks, occurrences, supports, orbit_sizes
+
+
+def fixed_input(name_suffix: str):
+    alpha2, quotient, blocks, occurrences, supports, orbit_sizes = fixed_base(
+        name_suffix
+    )
     rows = []
     global_index = 0
     for support_index, support in enumerate(supports):
@@ -126,118 +160,166 @@ def fixed_input(name_suffix: str):
     return quotient, blocks, occurrences, rows
 
 
-def worker(task: tuple[int, int]) -> dict[str, object]:
-    slot, worker_count = task
-    quotient, blocks, occurrences, support_rows = fixed_input(str(slot))
-    maxima = [-1] * len(support_rows)
-    samples: list[dict[str, object] | None] = [None] * len(support_rows)
+def evaluate_support_shape(
+    support_index: int,
+    support,
+    marked_support_count: int,
+    alpha2,
+    quotient,
+    blocks,
+    occurrences,
+) -> dict[str, object]:
+    local_axes, representatives, action_count, orbit_histogram = (
+        support_orbit_representatives(alpha2, quotient, support)
+    )
+    maximum = -1
+    sample = None
     checked = 0
-    global_index = 0
+    for local_index, qf_axes in enumerate(representatives):
+        qf_set = set(qf_axes)
+        masks: dict[int, int] = {}
+        base_dimension = PERMANENT_CUBIC_DIMENSION
+        for axis in qf_axes:
+            for block_index, bit in occurrences[axis]:
+                masks[block_index] = masks.get(block_index, 0) | bit
+        for block_index, mask in masks.items():
+            block = blocks[block_index]
+            base_dimension += block.nullity(mask) - block.base_nullity
 
-    for support_row in support_rows:
-        support_index = int(support_row["support_index"])
-        for qf_axes in support_row["representatives"]:
-            if global_index % worker_count == slot:
-                qf_set = set(qf_axes)
-                masks: dict[int, int] = {}
-                base_dimension = PERMANENT_CUBIC_DIMENSION
-                for axis in qf_axes:
-                    for block_index, bit in occurrences[axis]:
-                        masks[block_index] = masks.get(block_index, 0) | bit
-                for block_index, mask in masks.items():
-                    block = blocks[block_index]
-                    base_dimension += (
-                        block.nullity(mask) - block.base_nullity
-                    )
-
-                best_gain = -1
-                best_axis = None
-                for axis in range(AXIS_COUNT):
-                    if axis in qf_set:
-                        continue
-                    gain = sum(
-                        blocks[block_index].nullity(
-                            masks.get(block_index, 0) | bit
-                        )
-                        - blocks[block_index].nullity(
-                            masks.get(block_index, 0)
-                        )
-                        for block_index, bit in occurrences[axis]
-                    )
-                    if gain > best_gain:
-                        best_gain = gain
-                        best_axis = axis
-                require(best_axis is not None, qf_axes)
-                value = base_dimension + best_gain
-                sample = {
-                    "support_index": support_index,
-                    "support": [list(edge) for edge in support_row["support"]],
-                    "qF_axes": [
-                        list(quotient.QUOTIENT_AXES[axis]) for axis in qf_axes
-                    ],
-                    "extra_axis": list(quotient.QUOTIENT_AXES[best_axis]),
-                    "base_prolongation_dimension": base_dimension,
-                    "extra_axis_increment": best_gain,
-                    "global_representative_index": global_index,
-                }
-                if samples[support_index] is None or (
-                    value,
-                    -global_index,
-                ) > (
-                    maxima[support_index],
-                    -int(samples[support_index]["global_representative_index"]),
-                ):
-                    maxima[support_index] = value
-                    samples[support_index] = sample
-                checked += 1
-            global_index += 1
-
-    require(global_index == 173_388, global_index)
+        best_gain = -1
+        best_axis = None
+        for axis in range(AXIS_COUNT):
+            if axis in qf_set:
+                continue
+            gain = sum(
+                blocks[block_index].nullity(masks.get(block_index, 0) | bit)
+                - blocks[block_index].nullity(masks.get(block_index, 0))
+                for block_index, bit in occurrences[axis]
+            )
+            if gain > best_gain:
+                best_gain = gain
+                best_axis = axis
+        require(best_axis is not None, qf_axes)
+        value = base_dimension + best_gain
+        candidate = {
+            "support_index": support_index,
+            "support": [list(edge) for edge in support],
+            "qF_axes": [
+                list(quotient.QUOTIENT_AXES[axis]) for axis in qf_axes
+            ],
+            "extra_axis": list(quotient.QUOTIENT_AXES[best_axis]),
+            "base_prolongation_dimension": base_dimension,
+            "extra_axis_increment": best_gain,
+            "local_representative_index": local_index,
+        }
+        if sample is None or (value, -local_index) > (
+            maximum,
+            -int(sample["local_representative_index"]),
+        ):
+            maximum = value
+            sample = candidate
+        checked += 1
+    require(sample is not None, support_index)
     return {
-        "slot": slot,
+        "support_index": support_index,
+        "support": tuple(support),
+        "marked_support_count": marked_support_count,
+        "local_axes": local_axes,
+        "automorphism_action_count": action_count,
+        "quotient_orbit_size_histogram": orbit_histogram,
         "checked_representatives": checked,
-        "support_maxima": maxima,
-        "support_samples": samples,
+        "maximum": maximum,
+        "sample": sample,
     }
 
 
-def compute_cap(worker_count: int) -> dict[str, object]:
-    require(1 <= worker_count <= 64, worker_count)
-    if worker_count == 1:
-        worker_rows = [worker((0, 1))]
-    else:
-        context = mp.get_context("spawn")
-        with context.Pool(worker_count) as pool:
-            worker_rows = pool.map(
-                worker,
-                [(slot, worker_count) for slot in range(worker_count)],
-            )
-    require(
-        sum(int(row["checked_representatives"]) for row in worker_rows)
-        == 173_388,
-        worker_rows,
+def initialize_shape_worker() -> None:
+    global _SHAPE_CONTEXT
+    _SHAPE_CONTEXT = fixed_base(f"worker_{mp.current_process().pid}")
+
+
+def shape_worker(support_index: int) -> dict[str, object]:
+    require(_SHAPE_CONTEXT is not None, "shape worker context")
+    alpha2, quotient, blocks, occurrences, supports, orbit_sizes = _SHAPE_CONTEXT
+    support = supports[support_index]
+    return evaluate_support_shape(
+        support_index,
+        support,
+        orbit_sizes[support],
+        alpha2,
+        quotient,
+        blocks,
+        occurrences,
     )
 
-    _, _, _, support_rows = fixed_input("parent")
+
+def globalize_support_rows(
+    rows: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    """Restore the historical global index after shape-local evaluation."""
+
+    ordered = sorted(rows, key=lambda row: int(row["support_index"]))
+    require(
+        [int(row["support_index"]) for row in ordered] == list(range(len(rows))),
+        ordered,
+    )
+    result = []
+    global_index = 0
+    for raw in ordered:
+        row = dict(raw)
+        sample = dict(raw["sample"])
+        local_index = int(sample.pop("local_representative_index"))
+        checked = int(raw["checked_representatives"])
+        require(0 <= local_index < checked, (local_index, checked))
+        sample["global_representative_index"] = global_index + local_index
+        row["sample"] = sample
+        row["global_index_start"] = global_index
+        result.append(row)
+        global_index += checked
+    return result
+
+
+def compute_support_rows(worker_count: int) -> list[dict[str, object]]:
+    require(1 <= worker_count <= 12, worker_count)
+    if worker_count == 1:
+        alpha2, quotient, blocks, occurrences, supports, orbit_sizes = fixed_base(
+            "serial_shapes"
+        )
+        rows = [
+            evaluate_support_shape(
+                index,
+                support,
+                orbit_sizes[support],
+                alpha2,
+                quotient,
+                blocks,
+                occurrences,
+            )
+            for index, support in enumerate(supports)
+        ]
+    else:
+        context = mp.get_context("spawn")
+        with context.Pool(
+            min(worker_count, 12),
+            initializer=initialize_shape_worker,
+        ) as pool:
+            rows = pool.map(shape_worker, range(12))
+    rows = globalize_support_rows(rows)
+    global_index = sum(int(row["checked_representatives"]) for row in rows)
+    require(global_index == 173_388, global_index)
+    require(
+        tuple(int(row["checked_representatives"]) for row in rows)
+        == EXPECTED_REPRESENTATIVE_COUNTS,
+        rows,
+    )
+    return rows
+
+
+def compute_cap(worker_count: int) -> dict[str, object]:
+    support_rows = compute_support_rows(worker_count)
+
     result_rows = []
     for support_index, support_row in enumerate(support_rows):
-        candidates = [
-            (
-                int(row["support_maxima"][support_index]),
-                row["support_samples"][support_index],
-            )
-            for row in worker_rows
-            if row["support_samples"][support_index] is not None
-        ]
-        maximum = max(value for value, _ in candidates)
-        sample = min(
-            (
-                sample
-                for value, sample in candidates
-                if value == maximum and sample is not None
-            ),
-            key=lambda row: int(row["global_representative_index"]),
-        )
         result_rows.append(
             {
                 "support_index": support_index,
@@ -248,8 +330,8 @@ def compute_cap(worker_count: int) -> dict[str, object]:
                 "automorphism_action_count": int(
                     support_row["automorphism_action_count"]
                 ),
-                "qF_orbit_representative_count": len(
-                    support_row["representatives"]
+                "qF_orbit_representative_count": int(
+                    support_row["checked_representatives"]
                 ),
                 "qF_orbit_size_histogram": {
                     str(key): value
@@ -257,27 +339,14 @@ def compute_cap(worker_count: int) -> dict[str, object]:
                         "quotient_orbit_size_histogram"
                     ].items()
                 },
-                "prolongation_upper_cap": maximum,
-                "sample_maximizer": sample,
+                "prolongation_upper_cap": int(support_row["maximum"]),
+                "sample_maximizer": support_row["sample"],
             }
         )
 
     require(
         [row["qF_orbit_representative_count"] for row in result_rows]
-        == [
-            10_292,
-            9_892,
-            38_760,
-            19_608,
-            19_608,
-            19_608,
-            10_292,
-            9_892,
-            19_608,
-            5_276,
-            5_276,
-            5_276,
-        ],
+        == list(EXPECTED_REPRESENTATIVE_COUNTS),
         result_rows,
     )
     maximum = max(int(row["prolongation_upper_cap"]) for row in result_rows)
@@ -366,13 +435,19 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--workers",
-        type=int,
-        default=min(10, os.cpu_count() or 1),
+        type=parse_worker_argument,
+        default=0,
+        metavar="N|auto",
     )
     parser.add_argument("--json", type=Path)
     parser.add_argument("--verify-json", type=Path)
     args = parser.parse_args()
-    computation = compute_cap(args.workers)
+    workers = resolve_worker_count(
+        args.workers,
+        max_workers=12,
+        estimated_bytes_per_worker=GIB,
+    )
+    computation = compute_cap(workers)
     payload = build_payload(computation)
     rendered = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
@@ -381,7 +456,8 @@ def main() -> int:
     if args.verify_json:
         expected = json.loads(args.verify_json.read_text(encoding="utf-8"))
         require(payload == expected, args.verify_json)
-    print(f"workers={args.workers}")
+    print(f"workers={workers}")
+    print(f"worker_mode={'auto' if args.workers == 0 else 'explicit'}")
     print(f"alpha2_t15_cap={payload['universal_alpha2_t15_prolongation_upper_cap']}")
     print(f"remaining_states={payload['state_pruning']['remaining_state_count']}")
     print("N6_ALPHA2_T15_PROLONGATION_CAP_PASS")

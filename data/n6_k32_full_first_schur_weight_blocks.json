@@ -1,0 +1,1404 @@
+{
+  "certificate": "N6-126",
+  "status": "EXACT_QQ_FULL_FIRST_SCHUR_WEIGHT_BLOCKS",
+  "field": "characteristic zero",
+  "hypothesis": "full 72-variable Grassmann graph chart at L=M=A3 tensor P2",
+  "base_cross_rank": 3,
+  "first_schur_shape": [
+    33,
+    15
+  ],
+  "coefficient_matrix_shape": [
+    495,
+    72
+  ],
+  "coefficient_matrix_rank": 72,
+  "weight_block_count": 28,
+  "row_changing_block_count": 24,
+  "same_row_block_count": 4,
+  "row_changing_profiles": [
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "-a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          2,
+          4
+        ],
+        [
+          "M",
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          2,
+          5
+        ],
+        [
+          "M",
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "-a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          3,
+          4
+        ],
+        [
+          "M",
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          3,
+          5
+        ],
+        [
+          "M",
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          2,
+          8
+        ],
+        [
+          "M",
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          2,
+          9
+        ],
+        [
+          "M",
+          2,
+          9
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          3,
+          8
+        ],
+        [
+          "M",
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          3,
+          9
+        ],
+        [
+          "M",
+          3,
+          9
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "-a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          6,
+          0
+        ],
+        [
+          "M",
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          6,
+          1
+        ],
+        [
+          "M",
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "-a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          7,
+          0
+        ],
+        [
+          "M",
+          7,
+          0
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          7,
+          1
+        ],
+        [
+          "M",
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          6,
+          8
+        ],
+        [
+          "M",
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          6,
+          9
+        ],
+        [
+          "M",
+          6,
+          9
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        2,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          7,
+          8
+        ],
+        [
+          "M",
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          7,
+          9
+        ],
+        [
+          "M",
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "-a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          10,
+          0
+        ],
+        [
+          "M",
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        0,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          10,
+          1
+        ],
+        [
+          "M",
+          10,
+          1
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "-a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          11,
+          0
+        ],
+        [
+          "M",
+          11,
+          0
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        0,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          11,
+          1
+        ],
+        [
+          "M",
+          11,
+          1
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          10,
+          4
+        ],
+        [
+          "M",
+          10,
+          4
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          10,
+          5
+        ],
+        [
+          "M",
+          10,
+          5
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        7,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 6,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**3*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          11,
+          4
+        ],
+        [
+          "M",
+          11,
+          4
+        ]
+      ]
+    },
+    {
+      "variable_count": 2,
+      "support_shape": [
+        8,
+        4
+      ],
+      "generic_rank": 4,
+      "rank_on_anti_diagonal": 3,
+      "nonzero_4x4_minor_count": 9,
+      "rank_at_most_three_locus": "a+b=0",
+      "all_minors_divisible_by": "a+b",
+      "quotient_gcd_at_b1": "1",
+      "b_zero_witness": "a**2*(a - b)*(a + b)",
+      "weight_key": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          11,
+          5
+        ],
+        [
+          "M",
+          11,
+          5
+        ]
+      ]
+    }
+  ],
+  "same_row_profiles": [
+    {
+      "variable_count": 6,
+      "support_shape": [
+        15,
+        6
+      ],
+      "row_support_is_column_disjoint": true,
+      "rank_at_most_three_line_count": 5,
+      "rank_at_most_three_lines": [
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "zero_column_triples": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "column_forms": [
+        [
+          "l0 + m1",
+          "l1 + m0"
+        ],
+        [
+          "-l0 + l1",
+          "-l0 + m0",
+          "-l0 + m1"
+        ],
+        [
+          "l0 + m2",
+          "l2 + m0"
+        ],
+        [
+          "-l0 + l2",
+          "-l0 + m0",
+          "-l0 + m2"
+        ],
+        [
+          "l1 + m2",
+          "l2 + m1"
+        ],
+        [
+          "-l1 + l2",
+          "-l1 + m1",
+          "-l1 + m2"
+        ]
+      ],
+      "locus_argument": "Each nonzero matrix row has support in one output column. Thus rank is the number of active columns; enumerating the 20 triples of zero columns leaves exactly these five lines.",
+      "weight_key": [
+        0,
+        0,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          2,
+          0
+        ],
+        [
+          "L",
+          6,
+          4
+        ],
+        [
+          "L",
+          10,
+          8
+        ],
+        [
+          "M",
+          2,
+          0
+        ],
+        [
+          "M",
+          6,
+          4
+        ],
+        [
+          "M",
+          10,
+          8
+        ]
+      ]
+    },
+    {
+      "variable_count": 6,
+      "support_shape": [
+        15,
+        6
+      ],
+      "row_support_is_column_disjoint": true,
+      "rank_at_most_three_line_count": 5,
+      "rank_at_most_three_lines": [
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "zero_column_triples": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "column_forms": [
+        [
+          "l0 - m1",
+          "l1 - m1",
+          "m0 - m1"
+        ],
+        [
+          "l0 + m1",
+          "l1 + m0"
+        ],
+        [
+          "l0 - m2",
+          "l2 - m2",
+          "m0 - m2"
+        ],
+        [
+          "l0 + m2",
+          "l2 + m0"
+        ],
+        [
+          "l1 - m2",
+          "l2 - m2",
+          "m1 - m2"
+        ],
+        [
+          "l1 + m2",
+          "l2 + m1"
+        ]
+      ],
+      "locus_argument": "Each nonzero matrix row has support in one output column. Thus rank is the number of active columns; enumerating the 20 triples of zero columns leaves exactly these five lines.",
+      "weight_key": [
+        0,
+        0,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          2,
+          1
+        ],
+        [
+          "L",
+          6,
+          5
+        ],
+        [
+          "L",
+          10,
+          9
+        ],
+        [
+          "M",
+          2,
+          1
+        ],
+        [
+          "M",
+          6,
+          5
+        ],
+        [
+          "M",
+          10,
+          9
+        ]
+      ]
+    },
+    {
+      "variable_count": 6,
+      "support_shape": [
+        15,
+        6
+      ],
+      "row_support_is_column_disjoint": true,
+      "rank_at_most_three_line_count": 5,
+      "rank_at_most_three_lines": [
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "zero_column_triples": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "column_forms": [
+        [
+          "l0 + m1",
+          "l1 + m0"
+        ],
+        [
+          "-l0 + l1",
+          "-l0 + m0",
+          "-l0 + m1"
+        ],
+        [
+          "l0 + m2",
+          "l2 + m0"
+        ],
+        [
+          "-l0 + l2",
+          "-l0 + m0",
+          "-l0 + m2"
+        ],
+        [
+          "l1 + m2",
+          "l2 + m1"
+        ],
+        [
+          "-l1 + l2",
+          "-l1 + m1",
+          "-l1 + m2"
+        ]
+      ],
+      "locus_argument": "Each nonzero matrix row has support in one output column. Thus rank is the number of active columns; enumerating the 20 triples of zero columns leaves exactly these five lines.",
+      "weight_key": [
+        0,
+        1,
+        0
+      ],
+      "labels": [
+        [
+          "L",
+          3,
+          0
+        ],
+        [
+          "L",
+          7,
+          4
+        ],
+        [
+          "L",
+          11,
+          8
+        ],
+        [
+          "M",
+          3,
+          0
+        ],
+        [
+          "M",
+          7,
+          4
+        ],
+        [
+          "M",
+          11,
+          8
+        ]
+      ]
+    },
+    {
+      "variable_count": 6,
+      "support_shape": [
+        15,
+        6
+      ],
+      "row_support_is_column_disjoint": true,
+      "rank_at_most_three_line_count": 5,
+      "rank_at_most_three_lines": [
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "zero_column_triples": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ]
+      ],
+      "column_forms": [
+        [
+          "l0 - m1",
+          "l1 - m1",
+          "m0 - m1"
+        ],
+        [
+          "l0 + m1",
+          "l1 + m0"
+        ],
+        [
+          "l0 - m2",
+          "l2 - m2",
+          "m0 - m2"
+        ],
+        [
+          "l0 + m2",
+          "l2 + m0"
+        ],
+        [
+          "l1 - m2",
+          "l2 - m2",
+          "m1 - m2"
+        ],
+        [
+          "l1 + m2",
+          "l2 + m1"
+        ]
+      ],
+      "locus_argument": "Each nonzero matrix row has support in one output column. Thus rank is the number of active columns; enumerating the 20 triples of zero columns leaves exactly these five lines.",
+      "weight_key": [
+        0,
+        1,
+        1
+      ],
+      "labels": [
+        [
+          "L",
+          3,
+          1
+        ],
+        [
+          "L",
+          7,
+          5
+        ],
+        [
+          "L",
+          11,
+          9
+        ],
+        [
+          "M",
+          3,
+          1
+        ],
+        [
+          "M",
+          7,
+          5
+        ],
+        [
+          "M",
+          11,
+          9
+        ]
+      ]
+    }
+  ],
+  "fixed_direction_count": 44,
+  "consequence": "In the full graph chart, each row-changing character has only the anti-diagonal rank-three line. Each same-row character has four explicit sign lines. This is a fixed-weight classification; sums of different characters and nonlinear lifts remain open.",
+  "boundary": [
+    "does not classify mixed torus-weight sums",
+    "does not classify the full first tangent cone",
+    "does not classify arbitrary invertible 6 by 6 graph operators",
+    "does not prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

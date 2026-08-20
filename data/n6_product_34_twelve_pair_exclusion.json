@@ -1,0 +1,1234 @@
+{
+  "claim_boundary": "This is an exact coordinate fixed-point obstruction. It does not by itself close the kappa2=0 incidence, ordinary lower 29, ChowRank(perm_6)=32, the a2=73,74,75 layers, or a border-rank bound.",
+  "field": "algebraically closed characteristic zero",
+  "fixed_point_lemma": {
+    "block_diagonal_rectangle_test": "Both opposite-corner edges of every selected permanent rectangle must stay in one side of the coordinate 6+6 partition.",
+    "conclusion": "No coordinate 3x4 or 4x3 product fixed point supports a block-diagonal twelve-plane D.",
+    "coordinate_D_has_distinct_rectangle_weights": true,
+    "three_by_four_and_four_by_three_maximum": 10,
+    "twelve_directions_are_required": true
+  },
+  "global_incidence_consequence": "Every torus-fixed 3x4 or 4x3 product endpoint has no coordinate complementary block-diagonal twelve-plane. A noncoordinate formal branch can still specialize to a non-block-diagonal or diagonal boundary point and is not excluded by this certificate.",
+  "interfaces": {
+    "N6-110": "Every twelve-plane D in E2 intersect (Sym^2 L + Sym^2 M) has derivative L direct-sum M.",
+    "N6-111": "The full 2x6 twelve-plane product case has no complementary Chow pair.",
+    "N6-112": "The e=12 nonproduct fixed components are diagonal and actual complementary components specialize to product supports."
+  },
+  "products": {
+    "biflag": {
+      "2x6": {
+        "endpoint_count": 0,
+        "endpoints": [],
+        "histogram_rectangle_count_over_maximum": {},
+        "maximum_over_endpoints": 0
+      },
+      "3x4": {
+        "endpoint_count": 20,
+        "endpoints": [
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "histogram_rectangle_count_over_maximum": {
+          "18/10": 20
+        },
+        "maximum_over_endpoints": 10
+      },
+      "4x3": {
+        "endpoint_count": 14,
+        "endpoints": [
+          {
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3,
+              4
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "histogram_rectangle_count_over_maximum": {
+          "18/10": 14
+        },
+        "maximum_over_endpoints": 10
+      }
+    },
+    "standard": {
+      "2x6": {
+        "endpoint_count": 3,
+        "endpoints": [
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 14,
+            "rows": [
+              0,
+              1
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 14,
+            "rows": [
+              0,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 14,
+            "rows": [
+              1,
+              2
+            ]
+          }
+        ],
+        "histogram_rectangle_count_over_maximum": {
+          "14/9": 3
+        },
+        "maximum_over_endpoints": 9
+      },
+      "3x4": {
+        "endpoint_count": 30,
+        "endpoints": [
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 15,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 15,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              3,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 15,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 15,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              1,
+              3,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 15,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "maximum_block_diagonal_rectangles": 9,
+            "rectangle_count": 15,
+            "rows": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "histogram_rectangle_count_over_maximum": {
+          "15/9": 6,
+          "18/10": 24
+        },
+        "maximum_over_endpoints": 10
+      },
+      "4x3": {
+        "endpoint_count": 10,
+        "endpoints": [
+          {
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              1,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              0,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              3
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              2,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              1,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "columns": [
+              2,
+              3,
+              4
+            ],
+            "maximum_block_diagonal_rectangles": 10,
+            "rectangle_count": 18,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "histogram_rectangle_count_over_maximum": {
+          "18/10": 10
+        },
+        "maximum_over_endpoints": 10
+      }
+    }
+  },
+  "status": "EXACT_COORDINATE_PRODUCT_12_BLOCK_DIAGONAL_OBSTRUCTION"
+}

@@ -22,12 +22,13 @@ TEXT_SUFFIXES = {
     ".csv",
     ".txt",
 }
+EXCLUDED_DIRS = {".git", ".venv"}
 
 
 def find_violations(root: Path) -> list[str]:
     violations: list[str] = []
     for path in sorted(root.rglob("*")):
-        if not path.is_file() or ".git" in path.parts:
+        if not path.is_file() or EXCLUDED_DIRS.intersection(path.parts):
             continue
         if path.suffix.lower() not in TEXT_SUFFIXES and path.name not in {
             ".gitignore",

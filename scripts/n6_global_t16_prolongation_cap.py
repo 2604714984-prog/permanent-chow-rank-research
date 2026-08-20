@@ -7,13 +7,26 @@ import argparse
 import importlib.util
 import json
 import multiprocessing as mp
-import os
 from collections import defaultdict
+from functools import lru_cache
 from itertools import combinations
 from math import comb
 from pathlib import Path
 
 import numpy as np
+
+try:
+    from n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
+except ModuleNotFoundError:
+    from scripts.n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +51,7 @@ def load_t15_module():
     return module
 
 
+@lru_cache(maxsize=1)
 def fixed_data():
     t15 = load_t15_module()
     base = t15.load_base_module()
@@ -86,38 +100,102 @@ def base_masks_and_gains(w_axes, blocks, occurrences):
     return masks, base_dimension, gains
 
 
-def mobius_corrections(
-    order: int,
-    w_axes,
+@lru_cache(maxsize=None)
+def truncated_subset_tables(axis_count: int):
+    """Return the masks needed for Boolean Mobius orders at most four."""
+
+    by_order = []
+    for order in range(EXTRA_AXIS_COUNT + 1):
+        rows = []
+        for positions in combinations(range(axis_count), order):
+            mask = sum(1 << position for position in positions)
+            rows.append((mask, positions))
+        by_order.append(tuple(rows))
+    transform_rows = tuple(
+        tuple(
+            mask
+            for order in range(1, EXTRA_AXIS_COUNT + 1)
+            for mask, _ in by_order[order]
+            if mask >> position & 1
+        )
+        for position in range(axis_count)
+    )
+    return tuple(by_order), transform_rows
+
+
+def mobius_corrections_2_to_4(
     masks,
     blocks,
-    occurrence_maps,
-) -> dict[tuple[int, ...], int]:
-    """Return every nonzero order-``order`` block-nullity correction."""
+) -> tuple[dict[tuple[int, ...], int], ...]:
+    """Return all nonzero pair, triple, and quadruple corrections.
 
-    w_set = set(w_axes)
-    common_blocks: dict[tuple[int, ...], list[int]] = {}
+    Each block-nullity value with at most four newly selected axes is read
+    once.  A truncated Boolean Mobius transform then supplies every required
+    correction order simultaneously.
+    """
+
+    accumulators: dict[int, defaultdict[tuple[int, ...], int]] = {
+        order: defaultdict(int) for order in range(2, EXTRA_AXIS_COUNT + 1)
+    }
     for block_index, block in enumerate(blocks):
-        available = [axis for axis in block.axes if axis not in w_set]
-        for axes in combinations(available, order):
-            common_blocks.setdefault(axes, []).append(block_index)
+        axis_count = len(block.axes)
+        old_mask = masks.get(block_index, 0)
+        if axis_count - old_mask.bit_count() < 2:
+            continue
+        by_order, transform_rows = truncated_subset_tables(axis_count)
+        values = [0] * (1 << axis_count)
+        cache = block.cache
+        nullity = block.nullity
+        for rows in by_order:
+            for selected_mask, _ in rows:
+                if selected_mask & old_mask:
+                    continue
+                mask = old_mask | selected_mask
+                value = cache.get(mask)
+                if value is None:
+                    value = nullity(mask)
+                values[selected_mask] = value
 
-    corrections: dict[tuple[int, ...], int] = {}
-    for axes, block_indices in common_blocks.items():
-        value = 0
-        for block_index in block_indices:
-            block = blocks[block_index]
-            old_mask = masks.get(block_index, 0)
-            for size in range(order + 1):
-                sign = -1 if (order - size) % 2 else 1
-                for subset in combinations(axes, size):
-                    mask = old_mask
-                    for axis in subset:
-                        mask |= occurrence_maps[axis][block_index]
-                    value += sign * block.nullity(mask)
-        if value:
-            corrections[axes] = value
-    return corrections
+        for position, selected_masks in enumerate(transform_rows):
+            bit = 1 << position
+            if old_mask & bit:
+                continue
+            for selected_mask in selected_masks:
+                if not selected_mask & old_mask:
+                    values[selected_mask] -= values[selected_mask ^ bit]
+
+        for order in range(2, EXTRA_AXIS_COUNT + 1):
+            accumulator = accumulators[order]
+            for selected_mask, positions in by_order[order]:
+                if selected_mask & old_mask:
+                    continue
+                axes = tuple(block.axes[position] for position in positions)
+                # Insert zero local terms too.  This preserves the historical
+                # first-common-block ordering used by the deterministic scorer.
+                accumulator[axes] += values[selected_mask]
+
+    return tuple(
+        {
+            axes: value
+            for axes, value in accumulators[order].items()
+            if value
+        }
+        for order in range(2, EXTRA_AXIS_COUNT + 1)
+    )
+
+
+def scatter_indexed_pair_bonuses(
+    bonuses: dict[tuple[int, int], int],
+    pair_index: dict[tuple[int, int], int],
+    output: np.ndarray,
+) -> None:
+    """Write the bonuses whose pair belongs to the fixed ``c2`` key set."""
+
+    output.fill(0)
+    for pair, value in bonuses.items():
+        index = pair_index.get(pair)
+        if index is not None:
+            output[index] = value
 
 
 def direct_dimension(
@@ -146,22 +224,13 @@ def maximize_four_axes(
     w_axes,
     blocks,
     occurrences,
-    occurrence_maps,
 ) -> dict[str, object]:
     """Maximize exactly over four distinct quotient axes outside ``w_axes``."""
 
     masks, base_dimension, gains = base_masks_and_gains(
         w_axes, blocks, occurrences
     )
-    c2 = mobius_corrections(
-        2, w_axes, masks, blocks, occurrence_maps
-    )
-    c3 = mobius_corrections(
-        3, w_axes, masks, blocks, occurrence_maps
-    )
-    c4 = mobius_corrections(
-        4, w_axes, masks, blocks, occurrence_maps
-    )
+    c2, c3, c4 = mobius_corrections_2_to_4(masks, blocks)
 
     pair_adjacency: list[dict[int, int]] = [
         {} for _ in range(AXIS_COUNT)
@@ -197,9 +266,13 @@ def maximize_four_axes(
             quads_by_triple[triple][fourth] = value
 
     pair_keys = list(c2)
+    pair_index = {pair: index for index, pair in enumerate(pair_keys)}
     pair_first = np.asarray([pair[0] for pair in pair_keys], dtype=np.int32)
     pair_second = np.asarray([pair[1] for pair in pair_keys], dtype=np.int32)
     pair_values = np.asarray([c2[pair] for pair in pair_keys], dtype=np.int16)
+    indexed_pair_bonuses = np.zeros(len(pair_keys), dtype=np.int32)
+    completion_values = np.empty(len(pair_keys), dtype=np.int32)
+    second_completion_values = np.empty(len(pair_keys), dtype=np.int32)
 
     available = [axis for axis in range(AXIS_COUNT) if axis not in set(w_axes)]
     baseline_axes = tuple(
@@ -244,14 +317,23 @@ def maximize_four_axes(
         completion_value = int(weights[top[0]] + weights[top[1]])
         completion_pair = (int(top[0]), int(top[1]))
 
-        values = (
-            weights[pair_first]
-            + weights[pair_second]
-            + pair_values
-            + np.asarray(
-                [extra_pair_bonus.get(pair, 0) for pair in pair_keys],
-                dtype=np.int16,
-            )
+        scatter_indexed_pair_bonuses(
+            extra_pair_bonus,
+            pair_index,
+            indexed_pair_bonuses,
+        )
+        np.take(weights, pair_first, out=completion_values)
+        np.take(weights, pair_second, out=second_completion_values)
+        np.add(
+            completion_values,
+            second_completion_values,
+            out=completion_values,
+        )
+        np.add(completion_values, pair_values, out=completion_values)
+        np.add(
+            completion_values,
+            indexed_pair_bonuses,
+            out=completion_values,
         )
         forbidden = (
             (pair_first == first)
@@ -259,10 +341,10 @@ def maximize_four_axes(
             | (pair_second == first)
             | (pair_second == second)
         )
-        values[forbidden] = -100_000
-        index = int(values.argmax())
-        if int(values[index]) > completion_value:
-            completion_value = int(values[index])
+        completion_values[forbidden] = -100_000
+        index = int(completion_values.argmax())
+        if int(completion_values[index]) > completion_value:
+            completion_value = int(completion_values[index])
             completion_pair = pair_keys[index]
 
         for pair, bonus in extra_pair_bonus.items():
@@ -331,7 +413,7 @@ def worker(task: tuple[int, int]) -> dict[str, object]:
         _,
         blocks,
         occurrences,
-        occurrence_maps,
+        _,
         representatives,
         _,
     ) = fixed_data()
@@ -339,7 +421,7 @@ def worker(task: tuple[int, int]) -> dict[str, object]:
     checked = 0
     for index in range(slot, len(representatives), worker_count):
         row = maximize_four_axes(
-            representatives[index], blocks, occurrences, occurrence_maps
+            representatives[index], blocks, occurrences
         )
         row["representative_index"] = index
         row["W_axis_indices"] = list(representatives[index])
@@ -452,12 +534,20 @@ def build_payload(computation: dict[str, object]) -> dict[str, object]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--workers", type=int, default=min(10, os.cpu_count() or 1)
+        "--workers",
+        type=parse_worker_argument,
+        default=0,
+        metavar="N|auto",
     )
     parser.add_argument("--json", type=Path)
     parser.add_argument("--verify-json", type=Path)
     args = parser.parse_args()
-    computation = compute_cap(args.workers)
+    workers = resolve_worker_count(
+        args.workers,
+        max_workers=64,
+        estimated_bytes_per_worker=GIB,
+    )
+    computation = compute_cap(workers)
     payload = build_payload(computation)
     rendered = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
@@ -466,7 +556,8 @@ def main() -> int:
     if args.verify_json:
         expected = json.loads(args.verify_json.read_text(encoding="utf-8"))
         require(payload == expected, args.verify_json)
-    print(f"workers={args.workers}")
+    print(f"workers={workers}")
+    print(f"worker_mode={'auto' if args.workers == 0 else 'explicit'}")
     print(
         "t16_cap="
         f"{payload['characteristic_zero_prolongation_upper_cap_t16']}"

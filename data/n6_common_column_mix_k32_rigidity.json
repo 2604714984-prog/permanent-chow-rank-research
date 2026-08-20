@@ -1,0 +1,116 @@
+{
+  "certificate": "N6-119",
+  "status": "PURE_QQ_COMMON_COLUMN_MIX_K32_RIGIDITY",
+  "field": "characteristic zero",
+  "hypothesis": "T=I_3 tensor H with H in GL_2; L=graph(T), M=graph(-T)",
+  "symbolic_certificate": {
+    "variables": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "cross_matrix_shape": [
+      36,
+      18
+    ],
+    "mixed_matrix_shape": [
+      36,
+      12
+    ],
+    "same_matrix_shape": [
+      36,
+      6
+    ],
+    "mixed_generic_rank": 3,
+    "same_generic_rank": 6,
+    "mixed_row_up_to_sign": "(-b,-d,a,c)",
+    "same_block_row_types": [
+      "(0,-2*a*c)",
+      "(1,-a*d-b*c)",
+      "(0,-2*b*d)"
+    ],
+    "same_rank_condition": "rank=1 iff a*c=0 and b*d=0; otherwise rank=2"
+  },
+  "exact_examples": {
+    "examples": [
+      {
+        "name": "diagonal",
+        "matrix": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "determinant": 6,
+        "mixed_rank": 3,
+        "same_rank": 3,
+        "cross_rank": 6
+      },
+      {
+        "name": "anti_diagonal",
+        "matrix": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "determinant": -6,
+        "mixed_rank": 3,
+        "same_rank": 3,
+        "cross_rank": 6
+      },
+      {
+        "name": "shear",
+        "matrix": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "determinant": 1,
+        "mixed_rank": 3,
+        "same_rank": 6,
+        "cross_rank": 9
+      },
+      {
+        "name": "dense",
+        "matrix": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "determinant": -1,
+        "mixed_rank": 3,
+        "same_rank": 6,
+        "cross_rank": 9
+      }
+    ]
+  },
+  "theorem": {
+    "cross_rank_formula": "6 if H is monomial, 9 otherwise",
+    "rank_at_most_six": "H is monomial, hence preserves a 2+2 column matching"
+  },
+  "boundary": [
+    "does not classify an arbitrary 6 by 6 invertible graph T",
+    "does not close the full K2,3/K3,2 formal germ",
+    "does not by itself prove kappa2=0 or ordinary lower 29"
+  ]
+}

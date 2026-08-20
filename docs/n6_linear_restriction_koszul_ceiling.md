@@ -227,6 +227,28 @@ candidate not killed by its wedge, so two distinct leading rows cannot arise
 from the same selected column.  Its order is therefore a pure
 characteristic-zero rank lower bound.
 
+The replay stores this exact set as a dense bitset, not as millions of Python
+tuples.  The row and column subsets have fixed finite indices, while the
+output wedge is encoded by its injective combinatorial-number-system rank
+
+\[
+ \operatorname{rank}_{\mathrm{colex}}(a_1<\cdots<a_s)
+ =\sum_{j=1}^s\binom{a_j}{j}.
+\]
+
+Thus no hashing or probabilistic deduplication is involved.  The largest
+universe used here is the \(k=28\), output-degree-four, wedge-degree-four
+certificate:
+
+\[
+ 20^2\binom{28}{5}=39{,}312{,}000
+\]
+
+bits, or about 4.69 MiB.  The previous tuple-set representation retained
+3,817,636 composite Python objects at this point.  The compact replay returns
+the same frozen ranks; on the 2026-08-14 Windows host the \(k=35\) replay took
+2.771 seconds and the largest \(k=28,r_{4,4}\) replay took 4.425 seconds.
+
 The witnesses are deterministic:
 
 - for `19<=k<=27` and `k=29`, keep the first `k` edges in the order
@@ -359,6 +381,19 @@ Reconstruct the six strict modular minors one at a time:
     --replay-heavy-k $_
 }
 ```
+
+The modular replay keeps the labeled row and column weights; it does not use
+an invalid symmetry quotient after restriction.  Each six-entry half-weight
+is assigned one of 246 dense integer labels.  The at most \(246^2=60{,}516\)
+weight blocks are represented by `uint32` head, tail, size, and next arrays,
+and descriptors are reconstructed lazily while their block is eliminated.
+For the largest \(k=35\) replay this stores
+\(225\binom{35}{3}=1{,}472{,}625\) descriptors in about 6.3 MiB of compact
+indices instead of retaining Python tuples and per-block lists (whose tuple
+and list-slot lower bound alone exceeds 112 MiB).  The compact forward links
+preserve the original column order.  On the current development machine the
+full \(k=35\) replay takes about 53 seconds and reproduces modular rank
+\(1{,}214{,}569\).
 
 The replay uses only Python's standard library and the repository's existing
 exact sparse-elimination helper.  The JSON records every worst state, exact

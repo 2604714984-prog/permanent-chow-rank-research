@@ -1,0 +1,52 @@
+{
+  "certificate": "N6-131",
+  "status": "CONDITIONAL_K32_ACTUAL_NORMAL_CONE_COMPOSITION",
+  "field": "characteristic zero",
+  "hypothesis": {
+    "base": "the coordinate K3,2 rank-three collision",
+    "incidence": "the actual Chow-pair rank-at-most-six incidence is torus-stable",
+    "finite_point_realization": "every irreducible complementary component through the base has an extremal torus degeneration to one of the finite representatives listed below, with the local branch map preserved"
+  },
+  "fixed_direction_partition": {
+    "row_changing": 24,
+    "same_row_relative": 4,
+    "same_row_average_sign": 16,
+    "total": 44
+  },
+  "local_inputs": {
+    "row_changing": {
+      "directions": 24,
+      "certificate": "N6-123",
+      "conclusion": "completed complement determinant vanishes"
+    },
+    "same_row_relative": {
+      "directions": 4,
+      "certificate": "N6-125",
+      "relaxed_product_branch": "excluded for actual Chow differences by N6-119"
+    },
+    "same_row_average_sign": {
+      "directions": 16,
+      "certificate": "N6-127",
+      "conclusion": "all local branches are noncomplementary"
+    }
+  },
+  "conditional_conclusion": "Under finite_point_realization, no actual complementary component of the K3,2 rank-at-most-six incidence passes through the coordinate collision: its torus-fixed extremal direction is in the 24+4+16 list, and the corresponding local certificate excludes complementarity.",
+  "logic": [
+    "N6-126 classifies the torus-fixed first-Schur directions.",
+    "N6-123, N6-125, and N6-127 exclude actual complementarity at every listed finite orbit.",
+    "A torus-stable component with the stated finite degeneration would therefore contradict its generic complementarity."
+  ],
+  "boundary": [
+    "finite_point_realization is an explicit unproved hypothesis",
+    "mixed torus-weight sums and arbitrary nonlinear lifts are not classified by this certificate",
+    "the K2,3 transpose endpoint is not included",
+    "this does not prove ordinary lower 29, exact ChowRank(perm_6), or border rank"
+  ],
+  "source_certificates": [
+    "N6-123",
+    "N6-125",
+    "N6-126",
+    "N6-127",
+    "N6-119"
+  ]
+}

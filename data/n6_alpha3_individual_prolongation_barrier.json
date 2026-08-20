@@ -164,6 +164,5 @@
   },
   "status": "EXACT_N6_ALPHA3_INDIVIDUAL_PROLONGATION_BARRIER",
   "strict_conclusion": "No universal individual alpha-three t=15 prolongation cap below 460 exists: the displayed actual Chow term has exact dimension 520.",
-  "three_rectangle_t15_cap_from_N6_051": 458,
-  "worker_count": 20
+  "three_rectangle_t15_cap_from_N6_051": 458
 }

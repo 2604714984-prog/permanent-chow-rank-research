@@ -181,12 +181,12 @@ border-rank claim.
 
 ## 5. Replay
 
-On the present twenty-thread machine the default ten-worker replay takes
-about half a minute:
+The resource-safe replay is serial by default:
 
-    python scripts/n6_global_t15_prolongation_cap.py --workers 10 \
+    python scripts/n6_global_t15_prolongation_cap.py --workers 1 \
       --json data/n6_global_t15_prolongation_cap.json
     python -m unittest tests.test_n6_global_t15_prolongation_cap -v
 
 The worker count affects runtime only; it is not stored in the certificate,
 and any positive worker count reproduces the same mathematical payload.
+Higher counts should be requested only after checking memory headroom.

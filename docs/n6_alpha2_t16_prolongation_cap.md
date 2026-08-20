@@ -61,6 +61,19 @@ This note does not by itself exclude the all-alpha-three direct packet, the
 one-defective packet, global \(b=34\), ordinary lower \(29\), or border rank.
 
 ```text
-python scripts/n6_alpha2_t16_prolongation_cap.py --workers 10 \
+python scripts/n6_alpha2_t16_prolongation_cap.py --workers 1 \
   --verify-json data/n6_alpha2_t16_prolongation_cap.json
 ```
+
+The default is the resource-safe serial path. Parallel replay assigns the
+twelve support shapes directly; it does not rebuild and rescan all
+(173{,}388) representatives in every Windows worker. Four workers are the
+recommended setting on the current 20-core, 48-GB host:
+
+```text
+python scripts/n6_alpha2_t16_prolongation_cap.py --workers 4 \
+  --verify-json data/n6_alpha2_t16_prolongation_cap.json
+```
+
+That exact four-worker replay completed in 399.085 seconds on 2026-08-14 and
+matched the frozen JSON.

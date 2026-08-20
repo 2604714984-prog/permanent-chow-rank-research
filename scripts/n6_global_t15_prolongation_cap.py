@@ -7,16 +7,29 @@ import argparse
 import importlib.util
 import json
 import multiprocessing as mp
-import os
 from itertools import combinations
 from math import comb
 from pathlib import Path
 
 import numpy as np
 
+try:
+    from n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
+except ModuleNotFoundError:
+    from scripts.n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_SCRIPT = ROOT / "scripts" / "n6_global_quotient_prolongation_caps.py"
+GPU_SCRIPT = ROOT / "scripts" / "n6_global_t15_gpu_score.py"
 STATE_DATA = ROOT / "data" / "n6_b60_scalar_frontier.json"
 PRIME = 1_000_003
 AXIS_COUNT = 441
@@ -33,6 +46,14 @@ def require(condition: bool, payload: object) -> None:
 def load_base_module():
     spec = importlib.util.spec_from_file_location("n6_t15_base", BASE_SCRIPT)
     require(spec is not None and spec.loader is not None, BASE_SCRIPT)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_gpu_module():
+    spec = importlib.util.spec_from_file_location("n6_t15_gpu", GPU_SCRIPT)
+    require(spec is not None and spec.loader is not None, GPU_SCRIPT)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -97,7 +118,7 @@ def fixed_combinatorics(base_module):
     )
 
 
-def evaluate_representative(
+def representative_score_data(
     w_axes: tuple[int, ...],
     blocks,
     occurrences,
@@ -105,9 +126,8 @@ def evaluate_representative(
     edges,
     triples,
     triple_blocks,
-    by_vertex,
-) -> tuple[int, tuple[int, int, int], int, int]:
-    """Maximize exactly over all three distinct axes outside ``w_axes``."""
+) -> tuple[int, np.ndarray, np.ndarray, np.ndarray]:
+    """Build the exact integer score arrays for one orbit representative."""
 
     w_set = set(w_axes)
     masks: dict[int, int] = {}
@@ -169,11 +189,25 @@ def evaluate_representative(
             )
         triple_corrections[index] = correction
 
+    return base_dimension, gains, pair_corrections, triple_corrections
+
+
+def maximize_three_axis_score(
+    gains: np.ndarray,
+    pair_corrections: np.ndarray,
+    triple_corrections: np.ndarray,
+    by_vertex,
+) -> tuple[int, tuple[int, int, int]]:
+    """Return the exact CPU maximum with the historical deterministic tie break."""
+
+    axis_count = int(gains.shape[0])
+    require(pair_corrections.shape == (axis_count, axis_count), pair_corrections.shape)
+    require(len(by_vertex) == axis_count, len(by_vertex))
     pair_score = gains[:, None] + gains[None, :] + pair_corrections
     np.fill_diagonal(pair_score, -1_000)
     best_increment = -1
     best_triple = None
-    for third in range(AXIS_COUNT):
+    for third in range(axis_count):
         candidate = (
             gains[third]
             + pair_corrections[:, third, None]
@@ -189,18 +223,59 @@ def evaluate_representative(
         flat_index = int(total.argmax())
         increment = int(total.ravel()[flat_index])
         if increment > best_increment:
-            first, second = divmod(flat_index, AXIS_COUNT)
+            first, second = divmod(flat_index, axis_count)
             best_increment = increment
             best_triple = (first, second, third)
 
-    require(best_triple is not None, w_axes)
-    require(not (set(best_triple) & w_set), (w_axes, best_triple))
+    require(best_triple is not None, gains.shape)
+    return best_increment, best_triple
+
+
+def evaluate_representative(
+    w_axes: tuple[int, ...],
+    blocks,
+    occurrences,
+    occurrence_maps,
+    edges,
+    triples,
+    triple_blocks,
+    by_vertex,
+    score_maximizer=None,
+) -> tuple[int, tuple[int, int, int], int, int]:
+    """Maximize exactly over all three distinct axes outside ``w_axes``."""
+
+    base_dimension, gains, pair_corrections, triple_corrections = (
+        representative_score_data(
+            w_axes,
+            blocks,
+            occurrences,
+            occurrence_maps,
+            edges,
+            triples,
+            triple_blocks,
+        )
+    )
+    if score_maximizer is None:
+        best_increment, best_triple = maximize_three_axis_score(
+            gains,
+            pair_corrections,
+            triple_corrections,
+            by_vertex,
+        )
+    else:
+        best_increment, best_triple = score_maximizer.maximize(
+            gains,
+            pair_corrections,
+            triple_corrections,
+            w_axes,
+        )
+    require(not (set(best_triple) & set(w_axes)), (w_axes, best_triple))
     require(len(set(best_triple)) == EXTRA_AXIS_COUNT, best_triple)
     return base_dimension + best_increment, best_triple, base_dimension, best_increment
 
 
-def worker(task: tuple[int, int]) -> dict[str, object]:
-    slot, worker_count = task
+def worker(task: tuple[int, int, bool]) -> dict[str, object]:
+    slot, worker_count, use_gpu = task
     base_module = load_base_module()
     (
         quotient,
@@ -214,6 +289,10 @@ def worker(task: tuple[int, int]) -> dict[str, object]:
         triple_blocks,
         by_vertex,
     ) = fixed_combinatorics(base_module)
+    score_maximizer = None
+    if use_gpu:
+        gpu_module = load_gpu_module()
+        score_maximizer = gpu_module.GpuTripleMaximizer(triples, AXIS_COUNT)
 
     best_value = -1
     best_row = None
@@ -229,6 +308,7 @@ def worker(task: tuple[int, int]) -> dict[str, object]:
             triples,
             triple_blocks,
             by_vertex,
+            score_maximizer,
         )
         row = {
             "representative_index": representative_index,
@@ -253,14 +333,18 @@ def worker(task: tuple[int, int]) -> dict[str, object]:
     }
 
 
-def compute_cap(worker_count: int) -> dict[str, object]:
+def compute_cap(worker_count: int, *, use_gpu: bool = False) -> dict[str, object]:
     require(1 <= worker_count <= 64, worker_count)
+    require(not use_gpu or worker_count == 1, "GPU replay requires --workers 1")
     if worker_count == 1:
-        rows = [worker((0, 1))]
+        rows = [worker((0, 1, use_gpu))]
     else:
         context = mp.get_context("spawn")
         with context.Pool(worker_count) as pool:
-            rows = pool.map(worker, [(slot, worker_count) for slot in range(worker_count)])
+            rows = pool.map(
+                worker,
+                [(slot, worker_count, False) for slot in range(worker_count)],
+            )
     require(sum(int(row["checked_representatives"]) for row in rows) == 1_683, rows)
     best = min(
         (row for row in rows if int(row["maximum"]) == max(int(x["maximum"]) for x in rows)),
@@ -386,13 +470,25 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--workers",
-        type=int,
-        default=min(10, os.cpu_count() or 1),
+        type=parse_worker_argument,
+        default=0,
+        metavar="N|auto",
+    )
+    parser.add_argument(
+        "--gpu",
+        action="store_true",
+        help="use the optional exact CuPy score kernel; requires --workers 1",
     )
     parser.add_argument("--json", type=Path)
     parser.add_argument("--verify-json", type=Path)
     args = parser.parse_args()
-    computation = compute_cap(args.workers)
+    workers = resolve_worker_count(
+        args.workers,
+        max_workers=64,
+        estimated_bytes_per_worker=GIB,
+        gpu=args.gpu,
+    )
+    computation = compute_cap(workers, use_gpu=args.gpu)
     payload = build_payload(computation)
     rendered = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
@@ -401,7 +497,9 @@ def main() -> int:
     if args.verify_json:
         expected = json.loads(args.verify_json.read_text(encoding="utf-8"))
         require(payload == expected, args.verify_json)
-    print(f"workers={args.workers}")
+    print(f"workers={workers}")
+    print(f"worker_mode={'auto' if args.workers == 0 else 'explicit'}")
+    print(f"score_backend={'gpu' if args.gpu else 'cpu'}")
     print(f"t15_cap={payload['characteristic_zero_prolongation_upper_cap_t15']}")
     print(f"remaining_states={payload['state_pruning']['remaining_count']}")
     print("N6_GLOBAL_T15_PROLONGATION_CAP_PASS")

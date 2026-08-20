@@ -46,6 +46,31 @@ class N6AllKoszulYoungCeilingTests(unittest.TestCase):
             AUDIT.HEAVY_EXPECTED[(5, 2)],
             36 * AUDIT.comb(36, 2) - 36,
         )
+
+    def test_weight_orbit_compression_matches_uncompressed_small_cases(self) -> None:
+        for output_degree, wedge_degree in ((1, 0), (1, 1), (2, 1)):
+            with self.subTest(output_degree=output_degree, wedge_degree=wedge_degree):
+                compressed = AUDIT.permanent_rank(output_degree, wedge_degree)
+                uncompressed = AUDIT.permanent_rank(
+                    output_degree,
+                    wedge_degree,
+                    orbit_compression=False,
+                )
+                self.assertEqual(compressed, uncompressed)
+
+    def test_heavy_orbit_representative_counts(self) -> None:
+        self.assertEqual(
+            len(AUDIT.descriptor_blocks(5, 2, orbit_compression=True)),
+            8,
+        )
+        self.assertEqual(
+            len(AUDIT.descriptor_blocks(4, 3, orbit_compression=True)),
+            31,
+        )
+        self.assertEqual(
+            len(AUDIT.descriptor_blocks(2, 3, orbit_compression=True)),
+            31,
+        )
         self.assertEqual(
             AUDIT.HEAVY_EXPECTED[(4, 3)],
             AUDIT.comb(6, 4) ** 2 * AUDIT.comb(36, 3)

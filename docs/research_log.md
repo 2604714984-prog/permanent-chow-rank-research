@@ -2616,3 +2616,605 @@ A streamed diagnostic over all (3^9=19{,}683) row twists in the symmetric
 nonzero scalars at cross rank at most six. This finite-field equality is not
 used in the characteristic-zero proof. The remaining structural gap is the
 existence of the matching for a completely general invertible graph.
+
+## 2026-08-14: b=34 frontier synchronized after the partial product theorem
+
+N6-108 is now replayed from its frozen characteristic-zero certificate.  It
+proves that complementary six-planes in a \(3\times4\) or \(4\times3\)
+product have cross image dimension at least six, so the 13- and 14-dimensional
+partial product-pair layers are impossible.  This removes the biflag
+\(a_2=72,\kappa_2=1,2\) branches.  N6-109 independently removes the matching
+standard-hook branches.  Together with N6-103 and N6-107, all three
+\(a_2=72,\kappa_2=1,2,3\) scalar rows are closed; only the \(\kappa_2=0\)
+standard/biflag geometries remain at \(a_2=72\).
+
+N6-132 gives a restricted exact scalar-block check in the \(K_{3,2}\) graph
+chart: for scalar row blocks, cross rank at most six forces the average-zero
+matching form.  It is a regression lemma, not a classification of arbitrary
+graph maps.  N6-133 synchronizes the b=34 scalar table with N6-103,
+N6-107, N6-108, and N6-109: seven scalar states remain open, namely
+\((72,0,18)\), \((73,0,17),(73,1,16),(73,2,15)\),
+\((74,0,16),(74,1,15)\), and \((75,0,15)\).  This is a frontier
+bookkeeping result, not a new lower-29 proof; the full \(\kappa_2=0\) six-color
+geometry and all \(a_2=73,74,75\) states remain unresolved.
+
+## 2026-08-14: fixed-matching average graph is forced to zero
+
+N6-134 gives a new pure characteristic-zero restriction for the remaining
+matching chart.  After diagonal/monomial normalization, write the two
+complementary graph planes as
+
+\[
+ L=\operatorname{graph}(I+S),\qquad
+ M=\operatorname{graph}(S-I)
+\]
+
+for a (6\times6) block matrix (S) over the three row coordinates and the
+two matched column classes.  If the (E_{34}) cross rank is at most six, the
+18-variable annihilator map forces a 36-by-36 skew subsystem of rank at most
+three.  Its exact \(\mathbf Q\)-nullspace has dimension six and puts (S) in
+the common-parameter block form recorded in the frozen certificate.  Each of
+the three row-edge blocks has a constant rank-two minor and five explicit
+3-by-3 minors; rank at most two forces all parameters to vanish.  Hence
+
+\[
+ S=0,
+\]
+
+so this restricted graph pair reduces to the average-zero matching product
+family of N6-115 (which is still only a relaxed product pair, not an actual
+Chow section difference).
+
+The boundary is essential: N6-129 separately proves the matching statement
+for the average-zero symmetric pair
+\(\operatorname{graph}(T),\operatorname{graph}(-T)\) inside this graph chart,
+but N6-129 and N6-134 do not automatically compose for a coupled pair
+\(\operatorname{graph}(S+T),\operatorname{graph}(S-T)\).  N6-134 also does
+not cover non-graph charts or the transposed (K_{2,3}) components, and it
+does not close the seven N6-133 scalar frontier states.  It therefore gives
+no lower-29 or exact ChowRank(perm_6) claim.
+
+## 2026-08-14: three-weight torus compression at the K3,2 graph collision
+
+N6-135 extends the fixed-weight N6-126/N6-128 picture by an exact
+character calculation.  The 44 first-Schur rank-three rays have 102
+identically rank-three pair pencils, 52 compatible triangles, and 13
+four-cliques.  Every compatible triangle has affine character rank two, all
+52 lie in the 13 four-cliques, no four-clique extends to a five-clique, and
+each listed four-ray span has symbolic rank exactly three.
+
+Therefore, if three distinct rays have nonzero coefficients and affinely
+independent row-column torus characters, a rank-at-most-three point in their
+span has dense torus orbit in the full projective plane.  Closedness of the
+determinantal rank locus forces the entire three-ray span to have rank at most
+three, so the point lies in one of the 13 explicit four-ray subspaces.  This
+is a conditional compression, not an exclusion: those four-ray subspaces
+remain possible normal-cone directions.
+
+Affine-degenerate triples, repeated rays in one same-row character block,
+four-or-more weights with a smaller character span, nonlinear lifts, and
+non-graph charts remain open.  N6-135 consequently makes no lower-29,
+exact-ChowRank, or border-rank claim.
+
+## 2026-08-14: row-changing four-clique straight arcs are noncomplementary
+
+N6-136 treats the 12 row-changing four-cliques left by N6-135.  For a fixed
+ordered source/target row pair, write the four coefficients as a \(2\times2\)
+column block \(C\), and take the straight graph pair
+\(L=\operatorname{graph}(D)\), \(M=\operatorname{graph}(-D)\).  Exact QQ minors
+give cross rank 8 when \(\det C\ne0\), and cross rank at most 6 when
+\(\det C=0\).  In the latter case \(\operatorname{rank}D\le1\), hence
+\(\dim(L+M)\le7\).  Thus every straight arc in these 12 four-cliques is
+noncomplementary.
+
+This is a restricted straight-arc theorem only.  Nonlinear corrections,
+non-graph charts, coupled six-term cocycles, the full \(K_{3,2}/K_{2,3}\)
+normal cone, lower 29, and exact ChowRank(perm_6) remain open.
+
+## 2026-08-14: two rank-one row-changing finite germs
+
+N6-137 computes the completed graph germs at two rank-one row-changing
+support types left by N6-136: the same-source-column support and the full
+(2\times2) support.  In both cases the exact Schur Jacobian has rank 67 in
+the 72 graph variables.  The reduced quadratic initial ideals are
+
+\[
+ (x_0-x_1)(x_2,x_3,x_4),
+ \qquad
+ (x_1-x_2)(x_0-x_2,x_3,x_4).
+\]
+
+Each ideal is the intersection of two linear branch ideals.  Direct symbolic
+substitution verifies that both branches have cross rank at most six and
+operator rank at most one, hence sum rank at most seven.  The initial-ideal
+sandwich therefore gives exact noncomplementary two-branch graph germs for
+these two support types.
+
+The single-cell support remains covered by N6-123; the same-target-row
+support, non-graph charts, coupled cocycles, and the full normal cone remain
+open.
+
+## 2026-08-14: full-rank graph identity and average-relative germs
+
+N6-120 and N6-121 close the full-rank identity direction in the (K_{3,2})
+graph chart by exact characteristic-zero implicit-function calculations.
+For (L=\operatorname{graph}(T)), (M=\operatorname{graph}(-T)) at
+(T=I_6), the relative graph Jacobian has rank (34) in (36) variables;
+its completed rank-at-most-six germ is exactly
+
+\[
+ T=\operatorname{diag}(s,t,s,t,s,t).
+\]
+
+Allowing the full average-relative chart
+(L=\operatorname{graph}(A_0+T)),
+(M=\operatorname{graph}(A_0-T)) gives Jacobian rank (70) in (72)
+variables.  The two-dimensional kernel is still only the relative matching
+scaling, and the exact completed germ forces (A_0=0) and the same diagonal
+matching family.  Thus no average deformation survives at this full-rank
+direction.
+
+These are pure formal local graph theorems.  They do not classify lower-rank
+directions, arbitrary invertible relative operators globally, non-graph charts,
+or the six-term Chow cocycle; ordinary lower 29 and exact
+\(\operatorname{ChowRank}(\operatorname{perm}_6)\) remain open.
+
+## 2026-08-14: exposed torus characters at the \(K_{3,2}\) collision
+
+N6-139 gives an exact integer character-polytope audit for the full 72-variable
+graph chart.  The 28 first-Schur characters split into 24 row-changing and 4
+same-row characters.  Each row-changing character has an explicit integral
+one-parameter-subgroup witness with strict score gap \(4-3=1\), so it is an
+exposed face.  No same-row character is exposed: unequal row potentials are
+beaten by a row-changing character with the same column difference, while equal
+row potentials produce a tie.
+
+This does not prove finite-point realization or an integration theorem.  It does
+show that torus exposed-face reduction can isolate only the 24 row-changing
+directions, already covered by the single-cross certificates; the four
+average/sign same-row directions are intrinsically non-exposed.  Their individual
+finite germs are already excluded by N6-125 and N6-127, so the remaining issue
+is mixed-character sums and finite-point realization.  The certificate does not
+prove ordinary lower 29, exact \(\operatorname{ChowRank}(\operatorname{perm}_6)\),
+or border rank.
+
+## 2026-08-14: Rethlas bounded review of the (K_{3,2}) interface
+
+Rethlas was run on the finite-point realization question with
+`gpt-5.6-sol/max`, using the exact local facts already recorded for N6-123,
+N6-125, N6-127, N6-131, N6-138, and N6-139.  The run produced an
+**unverified** blueprint, not a proof certificate; it correctly declined to
+write a `blueprint_verified.md` because the global actual-Chow interface is
+still open.
+
+The useful reduction is the three-clause AC-FRBC interface lemma:
+
+1. an extremal normal-cone point has a nonzero rank-three first-Schur image;
+2. its normalized finite representative lies on the same actual six-term
+   Chow component, not merely on the ambient rank incidence;
+3. a formal branch of that component matches one of the certified local
+   noncomplementary branches.
+
+Rethlas also supplied abstract torus-stable countermodels showing that
+projectivity, exposure, finite point, and tangent agreement do not imply these
+clauses.  They are not counterexamples in the actual Chow incidence.  Thus the
+run gives a sharper research target, but no new Chow-rank or lower-29 claim.
+
+## 2026-08-14: conditional composition of the K3,2 local certificates
+
+N6-131 records the exact logical composition of the existing local results.
+The 44 torus-fixed first-Schur directions split into 24 row-changing, 4
+same-row-relative, and 16 average/sign directions; N6-123, N6-125, N6-127,
+and the relaxed-product barrier exclude actual complementarity at the listed
+finite representatives.  Therefore an actual Chow-pair component through the
+K3,2 collision would be excluded if its extremal torus degeneration were known
+to land at one of those representatives with the local branch preserved.
+
+That finite-point realization property is still an explicit hypothesis.  The
+conditional composition is not a global normal-cone theorem and makes no
+lower-29, exact-ChowRank, or border-rank claim.
+
+## 2026-08-14: symmetric relative graph matching lemma
+
+N6-129 gives a broader pure characteristic-zero result for the symmetric
+relative graph slice \(L=\operatorname{graph}(T)\),
+\(M=\operatorname{graph}(-T)\) with \(T\) invertible. Its exact annihilator
+decomposition is
+
+\[
+ \operatorname{rank}\beta(L,M)=18-b(T)-c(T),
+\]
+
+where \(b(T)\) is the symmetric off-column annihilator dimension and \(c(T)\)
+is the same-column contribution. Cross rank at most six forces \(b(T)\ge9\).
+The rank-one obstruction on all off-diagonal \(2\times2\) blocks makes the
+block support acyclic; triangular elimination forces three equal diagonal
+blocks and no strict-upper blocks. Finally \(c(T)=3\) forces the common
+\(2\times2\) block to be diagonal or anti-diagonal.
+
+Thus every invertible symmetric relative graph pair of cross rank at most six
+preserves a \(2+2\) column matching. This closes a substantial relaxed graph
+slice, but it does not cover a nonzero average operator, non-graph charts, the
+actual six-term Chow cocycle, ordinary lower 29, or exact
+\(\operatorname{ChowRank}(\operatorname{perm}_6)\).
+
+## 2026-08-14: same-target rank-one quadratic support
+
+N6-138 computes the exact quadratic Schur support for the remaining graph
+rank-one type whose operator is supported on one target row and two source
+columns.  The Jacobian has rank 64 in 72 graph variables.  Its 16 quadratic
+generators have radical with exactly three linear components,
+
+\[
+ (x_4,x_3,x_1,x_5),\qquad
+ (x_4,x_3,x_6,x_7),\qquad
+ (x_4,x_0-x_2,x_1,x_5,x_6,x_7).
+\]
+
+All three components have cross rank 6, while their operator ranks are
+\(1,2,1\), so the corresponding sums have ranks \(7,8,7\).  None is
+complementary.  This is an exact QQ tangent-cone diagnostic, not a completed
+germ theorem: higher-order lifts outside the quadratic support, non-graph
+charts, coupled six-term cocycles, the full normal cone, lower 29, and exact
+\(\operatorname{ChowRank}(\operatorname{perm}_6)\) remain open.
+
+## 2026-08-15: exact ordinary Chow rank 32
+
+N6-140 proves, over an algebraically closed field of characteristic zero,
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_6)=32.
+\]
+
+For the symmetric middle catalectics \(A_i=C_{3,3}(T_i)\), the image-span
+lemma gives
+
+\[
+h\le10N-200-\Delta/2,
+\]
+
+where \(h\) is the excess dimension of the summed middle images above the
+400-dimensional permanent image and
+\(\Delta=\sum_i(20-\operatorname{rank}A_i)\).  The new arbitrary-quotient
+half-defect symbol lemma covers every factor-span dimension, including
+repeated factors, and gives
+
+\[
+h\ge120-\Delta/2.
+\]
+
+The defect cancels and forces \(N\ge32\); Glynn gives the matching upper
+bound.  Two independent scope audits checked singular middle maps, overlap
+among term images, the global quotient-symbol kernel, arbitrary factor-span
+filtrations, and use of one fixed global quadratic quotient.  The adjacent
+finite replay verifies every half-defect row and the final gap ten at
+\(N=31\).
+
+This is an unrestricted ordinary-rank theorem.  It does not prove border
+rank 32 or the general formula \(2^{n-1}\).  The earlier fixed-six and local
+normal-cone results remain valid independent structure theorems but are no
+longer dependencies of the exact \(n=6\) conclusion.
+
+## 2026-08-15: perm7 standard-map ceiling and Glynn tangent audit
+
+N7-002 performs a complete capacity scan of all 343 standard higher-wedge
+Koszul parameters \((m,p)\), with \(1\leq m\leq7\) and \(0\leq p\leq48\).
+The permanent rank is allowed its full source/target dimension upper bound,
+while the independent-Chow-term denominator is certified by the seven-active-
+variable modular Koszul rank and exact convolution with the 42 inactive
+variables.  The optimistic maximum occurs at \((m,p)=(4,24)\):
+
+\[
+\frac{P_{4,24}}{B_{4,24}}
+\leq\frac{24262105}{402399}\approx60.294.
+\]
+
+Thus every standard higher-wedge Koszul map, and every nonnegative direct sum
+of such rank inequalities, has integer lower-bound ceiling at most 61.  The
+raw derivative, full apolar-length, and first-Koszul ceilings are respectively
+35, 27, and 36.  None can prove the Glynn target 64.
+
+N7-003 independently computes the differential of the ordered 64-term Glynn
+summation map.  Walsh parity and column multidegree reduce it to small sparse
+blocks.  Its rank is exactly 21,562 inside an effective source of dimension
+21,568.  The six-dimensional kernel is exactly the row-diagonal torus
+stabilizing \(\operatorname{perm}_7\).  On the smooth ordered decomposition
+chart, the summation fiber therefore has equal local and tangent dimension
+six.  The Jacobian criterion makes it smooth and reduced there, and the torus
+orbit is locally the whole fiber.  Modulo the stabilizer the Glynn point is
+isolated and reduced.  This does not exclude an unrelated 63-term
+decomposition and is not a border-rank statement.
+
+## 2026-08-15: a pure exact ordinary lower bound 43 for perm7
+
+N7-004 proves
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_7)\ge43
+\]
+
+over characteristic zero.  Fixing any fourteen terms gives a degree-four
+intersection \(S\) whose first shadow has dimension at most
+\(13\binom73=455\).  This uses the permanent-specific transversality
+\(\mathcal D_3(T)\cap\mathcal D_3(\operatorname{perm}_7)=0\), valid even for
+repeated or dependent factors, followed by an elementary quotient-packing
+bound.
+
+A row-column torus degenerates an arbitrary subspace of the permanent
+degree-four derivative space to a coordinate subspace without increasing its
+shadow rank.  Bukh's two-dimensional Kruskal--Katona compression then reduces
+the finite problem to a \(35\times35\) Ferrers diagram.  A streaming exact
+integer DP proves
+
+\[
+|\partial\mathcal F|\le455\Longrightarrow|\mathcal F|\le238.
+\]
+
+The complementary double-quotient Koszul inequality consequently gives
+
+\[
+\operatorname{rank}K_3(P-R)\ge58800-49\cdot238=47138
+>28\cdot1680.
+\]
+
+At least 29 terms remain, so the total is at least \(14+29=43\).  Two
+independent implementations and a reverse min-cost DP agree on the finite
+boundary: area 238 is attainable with shadow 452, while area 239 has minimum
+shadow 456.  Three independent proof audits passed, including the torus
+semicontinuity direction and the exact scope of Bukh's compression lemmas.
+
+The frozen certificate also scans every selected size \(q=1,\ldots,35\).
+The best result obtainable from this universal quotient-packing/shadow route
+is 43, with \(q=14\) among the maximizers.
+
+## 2026-08-15: pair shadows improve the perm7 lower bound to 44
+
+N7-005 adds one permanent-specific two-term input to N7-004.  For arbitrary
+Chow terms \(T_i,T_j\), put
+
+\[
+K_{ij}=\mathcal D_3(\operatorname{perm}_7)\cap
+\bigl(\mathcal D_3(T_i)+\mathcal D_3(T_j)\bigr).
+\]
+
+Its first shadow lies in the sum of the two quadratic derivative spaces and
+therefore has dimension at most \(2\binom72=42\).  A second exact
+two-dimensional shadow computation, now on
+\(\binom{[7]}3\times\binom{[7]}3\), proves
+
+\[
+\dim\partial K_{ij}\le42\Longrightarrow\dim K_{ij}\le17.
+\]
+
+The bound is sharp at the finite combinatorial level: the Ferrers partition
+\((4,4,4,4,1,0^{30})\) has area \(17\) and shadow \(42\).
+
+For eighteen cubic term spaces \(U_i\), quotienting by the permanent cubic
+space and comparing any pair in two ways gives
+
+\[
+\dim\left(E_3\cap\sum_{i=1}^{18}U_i\right)
+\le16\binom73+17=577.
+\]
+
+This permits arbitrary overlaps among the \(U_i\); it assumes neither
+literal directness nor a common quotient.  Applying the degree-four
+bivariate-shadow DP at budget \(577\) gives the exact capacity \(332\), with
+witness partition \((35^5,22,15^9,0^{20})\).  The residual Koszul rank is
+
+\[
+58800-49\cdot332=42532>25\cdot1680.
+\]
+
+At least 26 terms remain after the selected eighteen, proving
+
+\[
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge44}.
+\]
+
+Three independent audits checked the pair quotient identity, the external
+relation kernel, both torus-degeneration interfaces, both finite caps, and
+the final integer rounding.  At this stage the ordinary interval was \(44\) through
+\(64\).  Exact rank and border rank remain open.
+
+## 2026-08-15: four-term shadows improve the perm7 lower bound to 45
+
+N7-006 replaces the two-term local packet by four arbitrary terms.  If
+
+\[
+K=E_3\cap\sum_{i=1}^4\mathcal D_3(T_i),
+\]
+
+then
+
+\[
+\partial K\subseteq\sum_{i=1}^4\mathcal D_2(T_i),\qquad
+\dim\partial K\le4\binom72=84.
+\]
+
+The \(r=3,d=2\) torus-compression DP gives the exact cap
+\(\dim K\le64\).  For nineteen selected terms, an elementary quotient map
+from \(E_3\cap(A+B)\) to \((A+B)/A\), where \(A\) is the four-term sum and
+\(B\) the other fifteen-term sum, yields
+
+\[
+\dim\left(E_3\cap\sum_{i=1}^{19}\mathcal D_3(T_i)\right)
+\le64+15\binom73=589.
+\]
+
+This quotient proof explicitly retains all local, complementary, and cross
+relations.  The \(r=4,d=2\) DP at budget \(589\) has exact capacity \(341\);
+area \(342\) already needs shadow \(590\).  Therefore
+
+\[
+\operatorname{rank}K_3(P-R)\ge58800-49\cdot341=42091
+>25\cdot1680.
+\]
+
+At least 26 residual terms remain, proving
+
+\[
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge45}.
+\]
+
+The certificate scans all \(595\) local/selected parameter pairs
+\(2\le k\le q\le35\).  The unique pair reaching 45 is \((q,k)=(19,4)\);
+every other pair gives at most 44.  Three independent audits and an
+independently organized min-cost DP confirmed the quotient quantifiers,
+finite caps, and strict residual gap.  The current ordinary interval is
+\(45\) through \(64\); exact and border rank remain open.
+
+The Walsh proof extends uniformly to every \(n\geq3\) in characteristic
+different from two.  The all-columns-once blocks have ranks
+\(n^2-n+1\) for every non-full parity and \((n-1)^2+1\) for the full parity;
+every missing/doubled block has rank \(n\) in every parity.  Hence the general
+tangent rank is
+
+\[
+2^{n-1}(n^3-n+1)-(n-1),
+\]
+
+exactly \(n-1\) below the effective source dimension.  Those \(n-1\)
+directions are the product-one row torus, proving general Glynn local rigidity
+modulo the stabilizer without asserting the global rank formula.
+
+## 2026-08-15: general middle-layer ceiling and the perm7 target
+
+NGEN-03 abstracts the image-span argument from N6-140.  For even
+\(n=2m\), with \(q=\binom nm\), a one-sided arbitrary-quotient symbol slope
+capable of proving the Glynn target would have to be
+
+\[
+c_n=\frac{q(2^{n-1}-q)}{2n^2}.
+\]
+
+Its full-quotient average capacity is \(q/n\).  For odd \(n=2m+1\), the rectangular
+input-output version requires
+
+\[
+c_n=\frac{q(2^{n-1}-q)}{n^2},
+\]
+
+The two-sided full-quotient average capacity is \(2q/n\).  Exact arithmetic
+shows that the linear route is capacity-feasible only through odd \(n=5\)
+and even \(n=6\).  Therefore a general-\(n\) proof must retain multiple
+derivative degrees.
+
+N7-001 records the corresponding rectangular route barrier.  For
+\(C_{3,4}(T_i)\), rectangular Sylvester gives
+
+\[
+h_++h_-\le35N-1225-\Delta.
+\]
+
+For rank 64, a linear two-sided symbol inequality would require slope
+\(145/7\).  At a full seven-dimensional quotient this demands rank 145,
+while the two symbol domains total only 70.  Thus the local inequality is
+false and the one-middle-layer route is excluded.  Torus degeneration over
+all positive partitions of seven still gives useful middle-rank floors
+\(1,2,4,8,15,25,35\).  The new open interface is a multi-degree coupled
+module that continues to charge terms after the factor span is full.
+
+## 2026-08-15: recursive shadows improve the perm7 lower bound to 46
+
+N7-007 applies the bivariate shadow theorem recursively, rather than stopping
+after a single cubic packet.  For two selected terms,
+
+\[
+K_2=E_2\cap(F_1+F_2),\qquad \dim\partial K_2\le14.
+\]
+
+The exact \(r=2\) Ferrers capacity at budget 14 is 22.  The quotient lemma
+\(\dim(E\cap(A+B))\le\dim(E\cap A)+\dim B\) then gives a five-term quadratic
+intersection cap
+
+\[
+22+3\cdot21=85.
+\]
+
+The exact \(r=3\) capacity at budget 85 is 64.  Adding fifteen further cubic
+spaces gives a twenty-term cubic-intersection cap
+
+\[
+64+15\cdot35=589.
+\]
+
+Finally the \(r=4\) capacity at budget 589 is 341, so the complementary
+Koszul residual is
+
+\[
+58800-49\cdot341=42091>25\cdot1680=42000.
+\]
+
+At least 26 residual terms are necessary, and therefore
+
+\[
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge46}.
+\]
+
+The finite certificate scans all 7,770 nested triples and finds the unique
+maximizer \((q,k,\ell)=(20,5,2)\).  Three independent audits checked the
+quotient relations, all derivative containments, the three exact capacities,
+and the strict final gap.  The ordinary interval is now \(46\) through 64;
+border rank and exact ordinary rank remain open.
+
+## 2026-08-15: dual degrees and the perm7 lower bound 47
+
+N7-008 continues the recursive tower through degree five.  The unique nested
+chain is
+
+\[
+46\longrightarrow42\longrightarrow20\longrightarrow5\longrightarrow2,
+\]
+
+and the exact capacities give
+
+\[
+C_5(46)=4\cdot21+\phi_5(1111)=84+321=405.
+\]
+
+For \(K_2\), the double-quotient loss is the *dual* degree-five intersection.
+Thus
+
+\[
+\operatorname{rank}K_2(P-R)
+\ge20384-49\cdot405=539>0.
+\]
+
+The 46 selected terms cannot already equal \(P\), proving lower 47.  This
+also records an important index boundary: the loss for \(K_m\) occurs at
+degree \(7-m\), not generally at prolongation degree \(m+1\).
+
+## 2026-08-15: the complementary catalectic improves perm7 to 49
+
+N7-009 adds the sixth-degree shadow.  The exact Ferrers transition is
+
+\[
+\phi_6(405)=33;
+\]
+
+area 33 has witness \((7,7,7,3,3,3,3)\) with shadow 405, while area 34 has
+minimum shadow 411.  Hence, for any 46 selected terms,
+
+\[
+b_6=\dim(E_6\cap D_6(R))\le33.
+\]
+
+The raw \(C_{6,1}\) double-quotient inequality gives
+
+\[
+\operatorname{rank}C_{6,1}(P-R)\ge49-b_6\ge16.
+\]
+
+Each residual Chow term has catalectic rank at most seven, so at least three
+residual terms are needed.  Therefore
+
+\[
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge49}.
+\]
+
+Three independent audits passed.  A tempting \(K_1\) replacement was
+explicitly rejected: \(E_1^{(1)}=\operatorname{Sym}^2V\), not \(E_2\).
+The raw catalectic selected-size scan has ceiling 49, so the present ordinary
+interval is \(49\) through 64 and a new compatibility input is required for
+lower 50.

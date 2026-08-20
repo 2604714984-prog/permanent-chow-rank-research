@@ -328,13 +328,27 @@ python scripts/n6_all_koszul_young_ceiling.py \
   --json data/n6_all_koszul_young_ceiling.json
 ```
 
-The full finite-field minor replay reconstructs all three matrices from
-(4.1), performs every block elimination, and takes about two minutes on the
-development machine:
+The full finite-field minor replay reconstructs all three maps from (4.1) and
+performs the required block eliminations:
 
 ```text
 python scripts/n6_all_koszul_young_ceiling.py --replay-heavy
 ```
+
+The implementation uses the exact \(S_6\times S_6\) symmetry of the row and
+column weight blocks.  It keeps only blocks whose two six-entry weight halves
+are sorted, eliminates that canonical representative once, and multiplies its
+rank and histogram contribution by the corresponding multiset-permutation
+orbit size.  Signed row and column permutations identify every omitted block
+with its representative, so this is an exact compression rather than a
+sampling step.  The three heavy cases contain respectively \(8,31,31\)
+canonical blocks (instead of \(8{,}316,128{,}016,54{,}216\) blocks).  The
+weighted representative-column count is checked against the full domain
+dimension at runtime.
+
+On the current development machine the complete replay takes about three
+seconds.  The previous uncompressed implementation took about two minutes and
+retained every weight block before elimination.
 
 Expected marker:
 

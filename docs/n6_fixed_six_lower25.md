@@ -698,6 +698,8 @@ VECTOR_VALUED_MACAULAY_AUDIT_PASS
 The primary script validates all rational shadow separators, reconstructs
 the degree-six term profiles, checks the module partition identity through
 relation dimension 16, exhausts every symmetric epsilon type, and verifies
-all strict margins. The independent implementation scans all `16^6`
-labelled epsilon tuples without importing the primary generator. Neither
-finite program replaces the algebraic arguments in Sections 2, 4--6.
+all strict margins. The independent implementation scans all
+`binom(21,6)=54,264` nondecreasing epsilon multisets without importing the
+primary generator and uses exact multinomial weights to account for all
+`16^6` labelled tuples. Neither finite program replaces the algebraic
+arguments in Sections 2, 4--6.

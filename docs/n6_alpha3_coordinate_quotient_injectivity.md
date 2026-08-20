@@ -106,9 +106,12 @@ C(36,6) = 1,947,792
 ```
 
 coordinate six-edge supports.  Integer enumeration finds exactly
-`1,837,392` rectangle-free supports and exactly `1,837,392` distinct
-405-axis bit signatures.  Hence the collision count is zero, in agreement
-with Theorem 2.1.
+`1,837,392` rectangle-free supports.  It now applies the reconstruction in
+Theorem 2.1 to each 405-axis bit signature and checks that the recovered
+support is the input support.  Thus the replay is streaming: it no longer
+retains a set of 1,837,392 Python integers merely to detect a duplicate.  The
+number of distinct signatures is therefore the same `1,837,392`, and the
+collision count is zero.
 
 Run:
 

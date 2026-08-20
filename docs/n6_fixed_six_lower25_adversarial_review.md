@@ -100,10 +100,13 @@ Six independent factors give `15/20`. Therefore quadratic dimension 12 is imposs
 The primary generator checks rational Bukh separators, term profiles, Macaulay values, symmetric defect types, and every strict margin. A second implementation scans all
 
 \[
-16^6=16,777,216
+\binom{21}{6}=54,264
 \]
 
-labelled quadratic-defect tuples without importing the primary generator. Both reproduce the minimum central-rank bounds. The smallest margins are two at `b=43` and `b=44`.
+nondecreasing quadratic-defect multisets without importing the primary
+generator, then uses exact multinomial weights to recover counts for all
+`16^6=16,777,216` labelled tuples. Both reproduce the minimum central-rank
+bounds. The smallest margins are two at `b=43` and `b=44`.
 
 ## 6. Remaining boundaries
 

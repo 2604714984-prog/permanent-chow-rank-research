@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """Independent labelled replay of the lower-25 epsilon arithmetic.
 
-This implementation does not import the primary audit. It scans all
-``16^6`` labelled epsilon tuples once and updates every defect budget
-``0..16``. It is intentionally redundant and checks only the finite
-arithmetic, not the algebraic lemmas.
+This implementation does not import the primary audit. It scans the
+``binom(21, 6)`` nondecreasing epsilon multisets once, uses their exact
+multinomial multiplicities to recover all ``16^6`` labelled tuples, and
+updates every defect budget ``0..16``. It checks only the finite arithmetic,
+not the algebraic lemmas.
 """
 
 from __future__ import annotations
 
-from itertools import product
-from math import comb
+from itertools import combinations_with_replacement
+from math import comb, factorial
 
 EXPECTED_MINIMUM = {
     0: 120,
@@ -52,6 +53,26 @@ EXPECTED_LABELLED_COUNT = {
     16: 79443,
 }
 
+EXPECTED_FEASIBLE_COUNT = {
+    0: 1,
+    1: 7,
+    2: 28,
+    3: 78,
+    4: 174,
+    5: 337,
+    6: 609,
+    7: 1050,
+    8: 1742,
+    9: 2789,
+    10: 4329,
+    11: 6516,
+    12: 9599,
+    13: 13862,
+    14: 19660,
+    15: 27393,
+    16: 37610,
+}
+
 
 def macaulay(value: int) -> int:
     if value == 0:
@@ -77,23 +98,37 @@ def central_lower(quadratic_dimension: int) -> int | None:
     raise ValueError(quadratic_dimension)
 
 
+def labelled_multiplicity(values: tuple[int, ...]) -> int:
+    """Return the number of labelled permutations of a sorted multiset."""
+    result = factorial(len(values))
+    run_length = 1
+    for left, right in zip(values, values[1:]):
+        if left == right:
+            run_length += 1
+        else:
+            result //= factorial(run_length)
+            run_length = 1
+    return result // factorial(run_length)
+
+
 def main() -> int:
     minima = {budget: 10**9 for budget in range(17)}
     labelled = {budget: 0 for budget in range(17)}
     feasible = {budget: 0 for budget in range(17)}
 
-    for epsilon in product(range(16), repeat=6):
-        required = sum(epsilon) - min(epsilon)
+    for epsilon in combinations_with_replacement(range(16), 6):
+        multiplicity = labelled_multiplicity(epsilon)
+        required = sum(epsilon) - epsilon[0]
         if required > 16:
             continue
         central = [central_lower(15 - value) for value in epsilon]
         for budget in range(required, 17):
-            labelled[budget] += 1
+            labelled[budget] += multiplicity
         if any(value is None for value in central):
             continue
         central_sum = sum(int(value) for value in central)
         for budget in range(required, 17):
-            feasible[budget] += 1
+            feasible[budget] += multiplicity
             relation_cap = budget - required
             lower = central_sum - 2 * macaulay(relation_cap)
             minima[budget] = min(minima[budget], lower)
@@ -102,6 +137,8 @@ def main() -> int:
         raise AssertionError((minima, EXPECTED_MINIMUM))
     if labelled != EXPECTED_LABELLED_COUNT:
         raise AssertionError((labelled, EXPECTED_LABELLED_COUNT))
+    if feasible != EXPECTED_FEASIBLE_COUNT:
+        raise AssertionError((feasible, EXPECTED_FEASIBLE_COUNT))
 
     for budget in range(17):
         print(

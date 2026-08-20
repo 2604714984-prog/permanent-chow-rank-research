@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Iterable, Sequence
+from functools import lru_cache
 from itertools import combinations, permutations, product
 from math import gcd
 from pathlib import Path
@@ -23,26 +25,34 @@ def require(condition: bool, payload: object) -> None:
         raise AssertionError(payload)
 
 
-def rank_mod(rows: list[list[int]], cap: int | None = None) -> int:
-    pivots: list[tuple[int, list[int]]] = []
+def rank_mod(rows: Iterable[Sequence[int]], cap: int | None = None) -> int:
+    prime = PRIME
+    pivots: list[list[int] | None] | None = None
+    rank = 0
     for source in rows:
-        row = [entry % PRIME for entry in source]
-        for pivot_column, pivot_row in pivots:
-            if row[pivot_column]:
-                coefficient = row[pivot_column]
-                row = [
-                    (left - coefficient * right) % PRIME
-                    for left, right in zip(row, pivot_row, strict=True)
-                ]
-        pivot_column = next((i for i, entry in enumerate(row) if entry), None)
-        if pivot_column is None:
-            continue
-        inverse = pow(row[pivot_column], -1, PRIME)
-        row = [(entry * inverse) % PRIME for entry in row]
-        pivots.append((pivot_column, row))
-        if cap is not None and len(pivots) > cap:
-            return len(pivots)
-    return len(pivots)
+        row = [entry % prime for entry in source]
+        if pivots is None:
+            pivots = [None] * len(row)
+        for pivot_column, coefficient in enumerate(row):
+            if coefficient == 0:
+                continue
+            pivot_row = pivots[pivot_column]
+            if pivot_row is None:
+                inverse = pow(coefficient, -1, prime)
+                row[pivot_column] = 1
+                for column in range(pivot_column + 1, len(row)):
+                    row[column] = row[column] * inverse % prime
+                pivots[pivot_column] = row
+                rank += 1
+                if cap is not None and rank > cap:
+                    return rank
+                break
+            row[pivot_column] = 0
+            for column in range(pivot_column + 1, len(row)):
+                row[column] = (
+                    row[column] - coefficient * pivot_row[column]
+                ) % prime
+    return rank
 
 
 def integer_nullspace(matrix: list[list[int]]) -> list[list[int]]:
@@ -79,6 +89,7 @@ BETA_BASIS = tuple(
 )
 
 
+@lru_cache(maxsize=8192)
 def graph_beta(
     source_left: int,
     target_left: int,
@@ -86,14 +97,14 @@ def graph_beta(
     source_right: int,
     target_right: int,
     sign_right: int,
-) -> list[int]:
-    return [
+) -> tuple[int, ...]:
+    return tuple(
         BETA_BASIS[source_left][source_right][k]
         + sign_right * BETA_BASIS[source_left][target_right][k]
         + sign_left * BETA_BASIS[target_left][source_right][k]
         + sign_left * sign_right * BETA_BASIS[target_left][target_right][k]
         for k in range(18)
-    ]
+    )
 
 
 def signed_permutation_scan(support: tuple[int, ...]) -> dict[str, object]:
@@ -310,33 +321,63 @@ def product_family_certificate() -> dict[str, object]:
     right_kernel = integer_nullspace(cross_rows)
     left_kernel = integer_nullspace([list(column) for column in zip(*cross_rows)])
 
-    derivatives: list[list[list[int]]] = []
-    for side in ("L", "M"):
-        for basis_index in range(6):
-            for target_index in range(6):
-                derivative: list[list[int]] = []
-                for i in range(6):
-                    for j in range(6):
-                        if side == "L" and i == basis_index:
-                            derivative.append(beta(right[target_index], right[j]))
-                        elif side == "M" and j == basis_index:
-                            derivative.append(beta(left[i], left[target_index]))
-                        else:
-                            derivative.append([0] * 18)
-                derivatives.append(derivative)
-
-    equations = [
-        [
-            sum(
-                left_vector[i] * derivative[i][j] * right_vector[j]
-                for i in range(36)
-                for j in range(18)
-            )
-            for derivative in derivatives
-        ]
-        for left_vector in left_kernel
-        for right_vector in right_kernel
+    # Each frame derivative has only six nonzero rows.  Contract those rows
+    # directly instead of materializing 72 mostly-zero 36-by-18 matrices.
+    left_motion_rows = [
+        [beta(right[target_index], right[j]) for j in range(6)]
+        for target_index in range(6)
     ]
+    right_motion_rows = [
+        [beta(left[i], left[target_index]) for i in range(6)]
+        for target_index in range(6)
+    ]
+    def contract_motion_rows(
+        motion_rows: list[list[list[int]]],
+    ) -> list[list[list[int]]]:
+        return [
+            [
+                [
+                    sum(
+                        entry * weight
+                        for entry, weight in zip(row, right_vector, strict=True)
+                    )
+                    for row in target_rows
+                ]
+                for target_rows in motion_rows
+            ]
+            for right_vector in right_kernel
+        ]
+
+    left_contractions_by_kernel = contract_motion_rows(left_motion_rows)
+    right_contractions_by_kernel = contract_motion_rows(right_motion_rows)
+
+    equations: list[list[int]] = []
+    for left_vector in left_kernel:
+        for left_contractions, right_contractions in zip(
+            left_contractions_by_kernel,
+            right_contractions_by_kernel,
+            strict=True,
+        ):
+            equations.append(
+                [
+                    sum(
+                        left_vector[6 * basis_index + j]
+                        * left_contractions[target_index][j]
+                        for j in range(6)
+                    )
+                    for basis_index in range(6)
+                    for target_index in range(6)
+                ]
+                + [
+                    sum(
+                        left_vector[6 * i + basis_index]
+                        * right_contractions[target_index][i]
+                        for i in range(6)
+                    )
+                    for basis_index in range(6)
+                    for target_index in range(6)
+                ]
+            )
     tangent_rank = rank_mod(equations)
     require(tangent_rank == 70, tangent_rank)
     require(candidate["left_block_projection_rank_over_QQ"] == 9, candidate)

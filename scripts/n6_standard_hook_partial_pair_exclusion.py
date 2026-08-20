@@ -7,7 +7,8 @@ import argparse
 import json
 from collections import Counter, defaultdict
 from fractions import Fraction
-from itertools import combinations
+from itertools import combinations, combinations_with_replacement
+from math import comb, factorial
 from pathlib import Path
 
 
@@ -152,24 +153,58 @@ def tangent_weight(
     )
 
 
-def coordinate_threshold_enumeration() -> dict[str, object]:
+def coordinate_threshold_orbits() -> tuple[
+    Counter[int],
+    Counter[tuple[int, tuple[int, ...]]],
+    int,
+    int,
+]:
+    """Enumerate twelve-cell supports modulo the symmetric first five columns."""
+
     histogram: Counter[int] = Counter()
     profiles: Counter[tuple[int, tuple[int, ...]]] = Counter()
-    for support in combinations(range(len(CELLS)), 12):
-        row_masks = [0] * 4
-        for position in support:
-            row, column = CELLS[position]
-            row_masks[row] |= 1 << column
-        rectangle_count = 0
-        for first, second in combinations(range(4), 2):
-            common = (row_masks[first] & row_masks[second]).bit_count()
-            rectangle_count += common * (common - 1) // 2
-        histogram[rectangle_count] += 1
-        if rectangle_count >= 13:
-            profile = tuple(
-                sorted((mask.bit_count() for mask in row_masks), reverse=True)
-            )
-            profiles[rectangle_count, profile] += 1
+    representative_count = 0
+    represented_support_count = 0
+    main_patterns = range(1 << 4)
+    special_patterns = range(1 << 3)
+    for columns in combinations_with_replacement(main_patterns, 5):
+        multiplicity = factorial(5)
+        for count in Counter(columns).values():
+            multiplicity //= factorial(count)
+        main_size = sum(pattern.bit_count() for pattern in columns)
+        for special in special_patterns:
+            if main_size + special.bit_count() != 12:
+                continue
+            representative_count += 1
+            represented_support_count += multiplicity
+            row_degrees = [
+                sum(pattern >> row & 1 for pattern in columns)
+                + (special >> row & 1 if row < 3 else 0)
+                for row in range(4)
+            ]
+            rectangle_count = 0
+            for first, second in combinations(range(4), 2):
+                common = sum(
+                    (pattern >> first & 1) and (pattern >> second & 1)
+                    for pattern in columns
+                )
+                if first < 3 and second < 3:
+                    common += int(
+                        bool(special >> first & 1)
+                        and bool(special >> second & 1)
+                    )
+                rectangle_count += common * (common - 1) // 2
+            histogram[rectangle_count] += multiplicity
+            if rectangle_count >= 13:
+                profile = tuple(sorted(row_degrees, reverse=True))
+                profiles[rectangle_count, profile] += multiplicity
+    require(representative_count == 18_513, representative_count)
+    require(represented_support_count == comb(23, 12), represented_support_count)
+    return histogram, profiles, representative_count, represented_support_count
+
+
+def coordinate_threshold_enumeration() -> dict[str, object]:
+    histogram, profiles, _, _ = coordinate_threshold_orbits()
     require(sum(profiles.values()) == 43, profiles)
     require(not any(histogram[value] for value in (13, 14, 16, 17)), histogram)
     return {

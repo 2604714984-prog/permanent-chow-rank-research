@@ -74,6 +74,49 @@ class N6LinearRestrictionKoszulCeilingTests(unittest.TestCase):
             AUDIT.LEADING_EXPECTED[19],
         )
 
+    def test_colex_ranks_are_dense_and_unique(self) -> None:
+        for ambient in range(1, 9):
+            for size in range(ambient + 1):
+                subsets = tuple(combinations(range(ambient), size))
+                ranks = [AUDIT.combination_colex_rank(row) for row in subsets]
+                self.assertEqual(sorted(ranks), list(range(len(subsets))))
+
+    def test_worst_leading_row_bitset_stays_small(self) -> None:
+        universe = AUDIT.leading_row_universe_size(28, 4, 4)
+        self.assertEqual(universe, 39_312_000)
+        self.assertLessEqual((universe + 7) // 8, 5 * 2**20)
+
+    def test_dense_half_weight_codes_preserve_labeled_weights(self) -> None:
+        powers, indices, count = AUDIT.dense_half_weight_coding(2, 3)
+        self.assertEqual(count, 246)
+        self.assertEqual(
+            sorted(value for value in indices if value >= 0),
+            list(range(246)),
+        )
+        for rows in combinations(range(6), 2):
+            base_code = sum(powers[row] for row in rows)
+            for wedge in combinations(range(12), 3):
+                wedge_code = sum(powers[variable // 6] for variable in wedge)
+                encoded = indices[base_code + wedge_code]
+                weight = AUDIT.row_column_weight(rows, (), wedge)[:6]
+                direct_code = sum(
+                    value * powers[index] for index, value in enumerate(weight)
+                )
+                self.assertEqual(encoded, indices[direct_code])
+
+    def test_small_compact_restricted_modular_rank(self) -> None:
+        active = {6 * index + index for index in range(6)}
+        active.update({1, 8})
+        self.assertEqual(
+            AUDIT.restricted_modular_rank(active),
+            {
+                "domain_dimension": 840,
+                "weight_block_count": 356,
+                "maximum_block_column_count": 10,
+                "modular_rank": 364,
+            },
+        )
+
     def test_strict_modular_certificate_values(self) -> None:
         self.assertEqual(
             AUDIT.MODULAR_R23_EXPECTED,

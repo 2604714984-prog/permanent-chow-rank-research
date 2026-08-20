@@ -228,9 +228,24 @@ The remaining theorem needed at this product endpoint is:
 > one of the common-(A_3) product components above, while the (K_{2,3})
 > formal germ has no complementary component.
 
-N6-115 does not yet prove this formal exhaustion, close the
-(\kappa_2=0) six-color geometry, prove ordinary lower 29, determine
-(\operatorname{ChowRank}(\operatorname{perm}_6)=32), or make a border-rank
+N6-129 now proves the symmetric graph-pair subcase of this interface:
+whenever the complementary pair is written as
+\(L=\operatorname{graph}(T),M=\operatorname{graph}(-T)\) over the fixed
+\(3\times2\) column split, cross rank at most six forces the (2+2) matching
+form.  N6-121 separately removes the average direction only locally near
+\(T=I_6\).  Thus the remaining formal-exhaustion problem includes the
+average-relative graph chart away from that local base, genuinely non-graph
+charts (where a projection is singular), and the passage between charts; it
+is not an unclassified general (T) inside the symmetric graph-pair slice.
+N6-131 composes the existing N6-123/N6-125/N6-127 local exclusions into a
+conditional normal-cone statement: if an actual complementary component has
+the missing finite-point realization under an extremal torus degeneration, all
+44 fixed first-Schur directions are excluded.  That realization interface is
+not proved there, so the present paragraph remains an open boundary rather
+than a global exclusion.
+N6-115 still does not prove that exhaustion, close the \(\kappa_2=0\)
+six-color geometry, prove ordinary lower 29, determine
+\(\operatorname{ChowRank}(\operatorname{perm}_6)=32\), or make a border-rank
 claim.
 
 The replay is bounded-memory and interruptible:

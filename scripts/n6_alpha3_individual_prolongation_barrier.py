@@ -19,12 +19,24 @@ import argparse
 import importlib.util
 import json
 import multiprocessing as mp
-import os
 from collections import Counter
 from fractions import Fraction
 from itertools import combinations, combinations_with_replacement, permutations, product
-from math import comb
+from math import comb, factorial
 from pathlib import Path
+
+try:
+    from n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
+except ModuleNotFoundError:
+    from scripts.n6_resource_policy import (
+        GIB,
+        parse_worker_argument,
+        resolve_worker_count,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,10 +81,16 @@ def permute_mask(mask: int, permutation: tuple[int, ...]) -> int:
     return sum(((mask >> index) & 1) << permutation[index] for index in range(N))
 
 
+PERMUTED_MASKS_BY_COLUMN_PERMUTATION = tuple(
+    tuple(permute_mask(mask, permutation) for mask in range(1 << N))
+    for permutation in COLUMN_PERMUTATIONS
+)
+
+
 def canonical_row_masks(row_masks: list[int]) -> tuple[int, ...]:
     return min(
-        tuple(sorted(permute_mask(mask, permutation) for mask in row_masks))
-        for permutation in COLUMN_PERMUTATIONS
+        tuple(sorted(permuted_masks[mask] for mask in row_masks))
+        for permuted_masks in PERMUTED_MASKS_BY_COLUMN_PERMUTATION
     )
 
 
@@ -86,9 +104,20 @@ def rectangle_count(row_masks: tuple[int, ...] | list[int]) -> int:
     )
 
 
-def coordinate_support_orbits() -> dict[int, list[tuple[int, ...]]]:
+def multiset_permutation_count(values) -> int:
+    count = factorial(len(values))
+    for multiplicity in Counter(values).values():
+        count //= factorial(multiplicity)
+    return count
+
+
+def coordinate_support_classification() -> tuple[
+    dict[int, list[tuple[int, ...]]],
+    Counter[int],
+]:
     orbits = {0: set(), 1: set(), 3: set()}
     raw_count: Counter[int] = Counter()
+    labelled_histogram: Counter[int] = Counter()
     for partition in integer_partitions(6):
         groups = [
             list(combinations_with_replacement(MASKS_BY_SIZE[size], multiplicity))
@@ -100,27 +129,18 @@ def coordinate_support_orbits() -> dict[int, list[tuple[int, ...]]]:
                 rows.extend(group)
             rectangles = rectangle_count(rows)
             raw_count[rectangles] += 1
+            labelled_histogram[rectangles] += multiset_permutation_count(rows)
             if rectangles in orbits:
                 orbits[rectangles].add(canonical_row_masks(rows))
     require(set(raw_count) == {0, 1, 3}, raw_count)
     answer = {key: sorted(value) for key, value in orbits.items()}
     require({key: len(value) for key, value in answer.items()} == {0: 76, 1: 12, 3: 2}, answer)
-    return answer
-
-
-def labelled_rectangle_histogram() -> Counter[int]:
-    histogram: Counter[int] = Counter()
-    for support in combinations(range(VARIABLES), 6):
-        rows = [0] * N
-        for variable in support:
-            row, column = divmod(variable, N)
-            rows[row] |= 1 << column
-        histogram[rectangle_count(rows)] += 1
     require(
-        histogram == {0: 1_837_392, 1: 109_800, 3: 600},
-        histogram,
+        labelled_histogram == {0: 1_837_392, 1: 109_800, 3: 600},
+        labelled_histogram,
     )
-    return histogram
+    require(sum(labelled_histogram.values()) == comb(VARIABLES, 6), labelled_histogram)
+    return answer, labelled_histogram
 
 
 def support_from_masks(row_masks: tuple[int, ...]) -> tuple[tuple[int, int], ...]:
@@ -191,30 +211,160 @@ def compressed_constraints(base, support: tuple[tuple[int, int], ...]):
     return len(roots), forced_zero, compressed
 
 
+class RollbackComponents:
+    """Union-find with exact rollback and an O(1) surviving-component count."""
+
+    __slots__ = ("parent", "size", "zero", "surviving", "history")
+
+    def __init__(self, size: int) -> None:
+        self.parent = list(range(size))
+        self.size = [1] * size
+        self.zero = bytearray(size)
+        self.surviving = size
+        self.history: list[tuple[int, ...]] = []
+
+    def find(self, value: int) -> int:
+        while self.parent[value] != value:
+            value = self.parent[value]
+        return value
+
+    def kill(self, value: int) -> None:
+        root = self.find(value)
+        if self.zero[root]:
+            return
+        self.history.append((0, root))
+        self.zero[root] = 1
+        self.surviving -= 1
+
+    def join(self, left: int, right: int) -> None:
+        left = self.find(left)
+        right = self.find(right)
+        if left == right:
+            return
+        if self.size[left] < self.size[right]:
+            left, right = right, left
+        self.history.append(
+            (1, right, left, self.size[left], self.zero[left], self.surviving)
+        )
+        self.parent[right] = left
+        self.size[left] += self.size[right]
+        loses_survivor = not (self.zero[left] and self.zero[right])
+        self.zero[left] = self.zero[left] or self.zero[right]
+        self.surviving -= int(loses_survivor)
+
+    def impose(self, constraint: tuple[int, int]) -> None:
+        left, right = constraint
+        if right < 0:
+            self.kill(left)
+        else:
+            self.join(left, right)
+
+    def rollback(self, checkpoint: int) -> None:
+        while len(self.history) > checkpoint:
+            change = self.history.pop()
+            if change[0] == 0:
+                root = change[1]
+                self.zero[root] = 0
+                self.surviving += 1
+                continue
+            _, child, parent, old_size, old_zero, old_surviving = change
+            self.parent[child] = child
+            self.size[parent] = old_size
+            self.zero[parent] = old_zero
+            self.surviving = old_surviving
+
+
+def live_axis_constraints(
+    root_count: int,
+    forced_zero: set[int],
+    constraints,
+) -> tuple[int, dict[tuple[object, ...], tuple[tuple[int, int], ...]]]:
+    """Remove static-zero roots and encode each remaining constraint compactly."""
+
+    live_index = [-1] * root_count
+    live_root_count = 0
+    for root in range(root_count):
+        if root not in forced_zero:
+            live_index[root] = live_root_count
+            live_root_count += 1
+    rewritten = {}
+    for axis, axis_constraints in constraints.items():
+        answer: set[tuple[int, int]] = set()
+        for kind, left, right in axis_constraints:
+            new_left = live_index[left]
+            if kind == "zero":
+                if new_left >= 0:
+                    answer.add((new_left, -1))
+                continue
+            require(right is not None, (axis, kind, left, right))
+            new_right = live_index[right]
+            if new_left < 0 and new_right < 0:
+                continue
+            if new_left < 0 or new_right < 0:
+                answer.add((max(new_left, new_right), -1))
+            elif new_left != new_right:
+                answer.add(tuple(sorted((new_left, new_right))))
+        rewritten[axis] = tuple(sorted(answer))
+    return live_root_count, rewritten
+
+
+def component_cap_histogram(
+    live_root_count: int,
+    constraints: dict[tuple[object, ...], tuple[tuple[int, int], ...]],
+    excluded_axis_count: int,
+) -> tuple[int, int, Counter[int]]:
+    """Enumerate axis complements while sharing union-find prefixes exactly."""
+
+    require(0 <= excluded_axis_count <= len(constraints), excluded_axis_count)
+    axes = tuple(
+        sorted(constraints, key=lambda axis: (-len(constraints[axis]), repr(axis)))
+    )
+    axis_constraints = tuple(constraints[axis] for axis in axes)
+    components = RollbackComponents(live_root_count)
+    histogram: Counter[int] = Counter()
+
+    def visit(start: int, remaining: int) -> None:
+        stop = len(axes) - remaining + 1
+        if remaining == 1:
+            for index in range(start, stop):
+                checkpoint = len(components.history)
+                for constraint in axis_constraints[index]:
+                    components.impose(constraint)
+                histogram[components.surviving] += 1
+                components.rollback(checkpoint)
+            return
+        for index in range(start, stop):
+            checkpoint = len(components.history)
+            for constraint in axis_constraints[index]:
+                components.impose(constraint)
+            visit(index + 1, remaining - 1)
+            components.rollback(checkpoint)
+
+    if excluded_axis_count:
+        visit(0, excluded_axis_count)
+    else:
+        histogram[components.surviving] = 1
+    require(
+        sum(histogram.values()) == comb(len(axes), excluded_axis_count),
+        histogram,
+    )
+    maximum = max(histogram)
+    return maximum, histogram[maximum], histogram
+
+
 def support_cap(base, row_masks: tuple[int, ...]) -> dict[str, object]:
     rectangles = rectangle_count(row_masks)
     support = support_from_masks(row_masks)
     root_count, forced_zero, constraints = compressed_constraints(base, support)
     axes = tuple(sorted(constraints, key=repr))
     require(len(axes) == 21 - rectangles, (row_masks, rectangles, len(axes)))
-    histogram: Counter[int] = Counter()
-    maximum = 0
-    maximizer_count = 0
-    all_axes = set(axes)
-    for selected in combinations(axes, 15):
-        components = base.Components(root_count)
-        for root in forced_zero:
-            components.kill(root)
-        for axis in all_axes - set(selected):
-            for constraint in constraints[axis]:
-                components.impose(constraint)
-        value = components.surviving_count()
-        histogram[value] += 1
-        if value > maximum:
-            maximum = value
-            maximizer_count = 1
-        elif value == maximum:
-            maximizer_count += 1
+    excluded_axis_count = len(axes) - 15
+    live_root_count, live_constraints = live_axis_constraints(
+        root_count, forced_zero, constraints
+    )
+    maximum, maximizer_count, histogram = component_cap_histogram(
+        live_root_count, live_constraints, excluded_axis_count
+    )
     return {
         "rectangle_count": rectangles,
         "row_masks": list(row_masks),
@@ -225,10 +375,20 @@ def support_cap(base, row_masks: tuple[int, ...]) -> dict[str, object]:
     }
 
 
+_WORKER_BASE = None
+
+
+def initialize_worker() -> None:
+    global _WORKER_BASE
+    if _WORKER_BASE is None:
+        alpha2 = load_module(ALPHA2_SCRIPT, "n6_alpha3_worker_alpha2")
+        _WORKER_BASE = alpha2.load_base()
+
+
 def worker(task: tuple[int, tuple[int, ...]]) -> dict[str, object]:
     index, row_masks = task
-    alpha2 = load_module(ALPHA2_SCRIPT, f"n6_alpha3_worker_{index}")
-    row = support_cap(alpha2.load_base(), row_masks)
+    initialize_worker()
+    row = support_cap(_WORKER_BASE, row_masks)
     row["orbit_index"] = index
     return row
 
@@ -325,13 +485,15 @@ def modular_same_row_nullity(selected_axes) -> int:
 
 def compute(worker_count: int) -> dict[str, object]:
     require(1 <= worker_count <= 64, worker_count)
-    orbits = coordinate_support_orbits()
-    labelled_histogram = labelled_rectangle_histogram()
+    orbits, labelled_histogram = coordinate_support_classification()
     tasks = list(enumerate(orbits[0] + orbits[1]))
     if worker_count == 1:
+        initialize_worker()
         rows = [worker(task) for task in tasks]
     else:
-        with mp.get_context("spawn").Pool(worker_count) as pool:
+        with mp.get_context("spawn").Pool(
+            worker_count, initializer=initialize_worker
+        ) as pool:
             rows = pool.map(worker, tasks)
     by_rectangle = {}
     for rectangles in (0, 1):
@@ -388,7 +550,6 @@ def compute(worker_count: int) -> dict[str, object]:
             "component upper bounds, Fraction coefficient constraints, and "
             "an independent modular block rank"
         ),
-        "worker_count": worker_count,
         "coordinate_six_edge_support_count": comb(36, 6),
         "coordinate_support_count_by_rectangle_count": {
             str(key): labelled_histogram[key] for key in sorted(labelled_histogram)
@@ -426,11 +587,21 @@ def compute(worker_count: int) -> dict[str, object]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--workers", type=int, default=min(20, os.cpu_count() or 1))
+    parser.add_argument(
+        "--workers",
+        type=parse_worker_argument,
+        default=0,
+        metavar="N|auto",
+    )
     parser.add_argument("--json", type=Path)
     parser.add_argument("--verify-json", type=Path)
     args = parser.parse_args()
-    payload = compute(args.workers)
+    workers = resolve_worker_count(
+        args.workers,
+        max_workers=64,
+        estimated_bytes_per_worker=2 * GIB,
+    )
+    payload = compute(workers)
     rendered = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)
@@ -442,6 +613,8 @@ def main() -> int:
         "coordinate_support_orbits="
         f"{payload['row_column_support_orbit_count_by_rectangle_count']}"
     )
+    print(f"workers={workers}")
+    print(f"worker_mode={'auto' if args.workers == 0 else 'explicit'}")
     print("same_row_exact_prolongation_dimension=520")
     print("N6_ALPHA3_INDIVIDUAL_PROLONGATION_BARRIER_PASS")
     return 0

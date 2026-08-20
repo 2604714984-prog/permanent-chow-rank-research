@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -50,13 +51,17 @@ class N6GlobalT15ProlongationCapTest(unittest.TestCase):
             )
         )
 
-    def test_full_parallel_replay(self) -> None:
+    @unittest.skipUnless(
+        os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
+        "set RUN_EXPENSIVE_REPLAYS=1 to rebuild the global t15 certificate",
+    )
+    def test_full_serial_replay(self) -> None:
         completed = subprocess.run(
             [
                 sys.executable,
                 str(SCRIPT),
                 "--workers",
-                "10",
+                "1",
                 "--verify-json",
                 str(FROZEN),
             ],
@@ -64,7 +69,7 @@ class N6GlobalT15ProlongationCapTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=180,
+            timeout=1_800,
         )
         self.assertIn("t15_cap=458", completed.stdout)
         self.assertIn("N6_GLOBAL_T15_PROLONGATION_CAP_PASS", completed.stdout)

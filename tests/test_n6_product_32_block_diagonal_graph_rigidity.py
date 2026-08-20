@@ -36,7 +36,7 @@ class Product32BlockDiagonalGraphRigidityTest(unittest.TestCase):
     def test_boundary(self) -> None:
         missing = self.payload["boundary"]["not_proved"]
         self.assertIn(
-            "a general invertible graph T with cross rank at most six preserves a two-plus-two column matching",
+            "the average-relative and non-graph charts of the full K23/K32 rank-six formal germ",
             missing,
         )
 

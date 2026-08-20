@@ -1,0 +1,153 @@
+{
+  "certificate": "N6-121",
+  "status": "PURE_FORMAL_LOCAL_K32_AVERAGE_RELATIVE_GERM",
+  "field": "characteristic zero",
+  "hypothesis": "L=graph(A+T), M=graph(A-T), with A,T in Mat_6 and T near I_6",
+  "exact_certificate": {
+    "base_cross_matrix_shape": [
+      36,
+      18
+    ],
+    "base_cross_rank": 6,
+    "pivot_rows": [
+      3,
+      5,
+      8,
+      10,
+      17,
+      22
+    ],
+    "pivot_columns": [
+      0,
+      2,
+      6,
+      8,
+      12,
+      14
+    ],
+    "pivot_determinant": -8,
+    "schur_shape": [
+      30,
+      12
+    ],
+    "jacobian_shape": [
+      360,
+      72
+    ],
+    "jacobian_rank": 70,
+    "tangent_dimension": 2,
+    "average_variable_count": 36,
+    "relative_variable_count": 36,
+    "free_coordinates": [
+      "T[0,0]",
+      "T[1,1]"
+    ],
+    "normal_minor_rows": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      7,
+      12,
+      13,
+      15,
+      16,
+      17,
+      19,
+      24,
+      25,
+      27,
+      28,
+      29,
+      36,
+      37,
+      40,
+      41,
+      48,
+      49,
+      52,
+      53,
+      73,
+      74,
+      75,
+      77,
+      78,
+      85,
+      86,
+      89,
+      90,
+      96,
+      97,
+      99,
+      100,
+      101,
+      108,
+      109,
+      111,
+      120,
+      121,
+      123,
+      132,
+      133,
+      135,
+      144,
+      145,
+      156,
+      157,
+      160,
+      161,
+      180,
+      181,
+      205,
+      206,
+      216,
+      217,
+      220,
+      221,
+      240,
+      241,
+      288,
+      289,
+      292,
+      293,
+      312,
+      313
+    ],
+    "normal_minor_determinant": -70368744177664,
+    "nullspace_generators": [
+      "relative_column_0_scaling",
+      "relative_column_1_scaling"
+    ],
+    "diagonal_family": "A=0; T=diag(x,y,x,y,x,y)",
+    "diagonal_pivot_determinant": "-8*y^3",
+    "diagonal_schur_identically_zero": true
+  },
+  "examples": {
+    "diagonal_relative_family": [
+      {
+        "x": 1,
+        "y": 1,
+        "cross_rank": 6
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "cross_rank": 6
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "cross_rank": 6
+      }
+    ]
+  },
+  "pure_consequence": "The complete 72-variable rank-at-most-six graph germ at (A,T)=(0,I) is exactly A=0 and T=diag(x,y,x,y,x,y).",
+  "blowup_interpretation": "This is the full average-relative chart over the full-rank exceptional direction T=I in the diagonal K3,2 collision.",
+  "boundary": [
+    "does not classify lower-rank exceptional directions",
+    "does not classify arbitrary invertible T globally",
+    "does not supply the six-term Chow cocycle by itself",
+    "does not prove ordinary lower 29 or exact rank 32"
+  ]
+}

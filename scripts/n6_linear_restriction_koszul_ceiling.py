@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from collections import defaultdict
+from array import array
 from fractions import Fraction
 from importlib.util import module_from_spec, spec_from_file_location
 from itertools import combinations, permutations, product
@@ -171,6 +171,24 @@ def target_active_edges(k: int) -> set[int]:
     return active_edges(k)
 
 
+def combination_colex_rank(values: tuple[int, ...]) -> int:
+    """Dense zero-based rank of a sorted subset in colexicographic order."""
+
+    return sum(comb(value, index + 1) for index, value in enumerate(values))
+
+
+def leading_row_universe_size(
+    active_dimension: int,
+    output_degree: int,
+    wedge_degree: int,
+) -> int:
+    output_basis_count = comb(N, output_degree - 1)
+    return (
+        output_basis_count**2
+        * comb(active_dimension, wedge_degree + 1)
+    )
+
+
 def leading_row_rank(active: set[int], output_degree: int, wedge_degree: int) -> int:
     """Size of an explicit unitriangular minor.
 
@@ -190,7 +208,19 @@ def leading_row_rank(active: set[int], output_degree: int, wedge_degree: int) ->
         for columns in subsets
         if derivative_supported(rows, columns, active)
     ]
-    leading_rows = set()
+    output_subsets = tuple(combinations(range(N), output_degree - 1))
+    output_index = {
+        subset: index for index, subset in enumerate(output_subsets)
+    }
+    active_position = {
+        variable: index for index, variable in enumerate(active_tuple)
+    }
+    wedge_count = comb(len(active_tuple), wedge_degree + 1)
+    universe_size = leading_row_universe_size(
+        len(active_tuple), output_degree, wedge_degree
+    )
+    leading_rows = bytearray((universe_size + 7) // 8)
+    leading_row_count = 0
     for rows, columns in bases:
         candidates = []
         for row in rows:
@@ -222,10 +252,23 @@ def leading_row_rank(active: set[int], output_degree: int, wedge_degree: int) ->
                 output_wedge = tuple(
                     sorted((variable, *preceding, *remainder))
                 )
-                leading_rows.add(
-                    (output_rows, output_columns, output_wedge)
+                wedge_rank = combination_colex_rank(
+                    tuple(active_position[entry] for entry in output_wedge)
                 )
-    return len(leading_rows)
+                row_id = (
+                    (
+                        output_index[output_rows] * len(output_subsets)
+                        + output_index[output_columns]
+                    )
+                    * wedge_count
+                    + wedge_rank
+                )
+                byte_index, bit_index = divmod(row_id, 8)
+                bit = 1 << bit_index
+                if not leading_rows[byte_index] & bit:
+                    leading_rows[byte_index] |= bit
+                    leading_row_count += 1
+    return leading_row_count
 
 
 def row_column_weight(rows, columns, wedge) -> tuple[int, ...]:
@@ -239,6 +282,26 @@ def row_column_weight(rows, columns, wedge) -> tuple[int, ...]:
         value[row] += 1
         value[N + column] += 1
     return tuple(value)
+
+
+def dense_half_weight_coding(
+    output_degree: int,
+    wedge_degree: int,
+) -> tuple[tuple[int, ...], array, int]:
+    """Encode every labeled six-entry half-weight by a dense integer id."""
+
+    total = output_degree + wedge_degree
+    radix = min(wedge_degree, N) + 2
+    powers = tuple(radix**index for index in range(N))
+    code_to_index = array("i", [-1]) * (radix**N)
+    count = 0
+    for values in product(range(radix), repeat=N):
+        if sum(values) != total:
+            continue
+        code = sum(value * powers[index] for index, value in enumerate(values))
+        code_to_index[code] = count
+        count += 1
+    return powers, code_to_index, count
 
 
 def restricted_modular_rank(
@@ -257,54 +320,113 @@ def restricted_modular_rank(
         if derivative_supported(rows, columns, active)
     ]
     wedges = tuple(combinations(active_tuple, wedge_degree))
-    blocks = defaultdict(list)
-    for rows, columns in bases:
-        for wedge in wedges:
-            blocks[row_column_weight(rows, columns, wedge)].append(
-                (rows, columns, wedge)
-            )
+    powers, half_index, half_count = dense_half_weight_coding(
+        output_degree,
+        wedge_degree,
+    )
+    base_codes = tuple(
+        (
+            sum(powers[row] for row in rows),
+            sum(powers[column] for column in columns),
+        )
+        for rows, columns in bases
+    )
+    wedge_codes = tuple(
+        (
+            sum(powers[variable // N] for variable in wedge),
+            sum(powers[variable % N] for variable in wedge),
+        )
+        for wedge in wedges
+    )
+
+    wedge_count = len(wedges)
+    descriptor_count = len(bases) * wedge_count
+    sentinel = (1 << 32) - 1
+    if descriptor_count >= sentinel:
+        raise ValueError(f"descriptor count exceeds uint32 capacity: {descriptor_count}")
+    block_label_count = half_count**2
+    heads = array("I", [sentinel]) * block_label_count
+    tails = array("I", [sentinel]) * block_label_count
+    sizes = array("I", [0]) * block_label_count
+    links = array("I", [sentinel]) * descriptor_count
+
+    for base_index, (base_row_code, base_column_code) in enumerate(base_codes):
+        descriptor_start = base_index * wedge_count
+        for wedge_index, (wedge_row_code, wedge_column_code) in enumerate(
+            wedge_codes
+        ):
+            row_index = half_index[base_row_code + wedge_row_code]
+            column_index = half_index[base_column_code + wedge_column_code]
+            if row_index < 0 or column_index < 0:
+                raise AssertionError((row_index, column_index))
+            block_index = row_index * half_count + column_index
+            descriptor_index = descriptor_start + wedge_index
+            previous = tails[block_index]
+            if previous == sentinel:
+                heads[block_index] = descriptor_index
+            else:
+                links[previous] = descriptor_index
+            tails[block_index] = descriptor_index
+            sizes[block_index] += 1
+
+    del tails
 
     total_rank = 0
     maximum_block_columns = 0
-    for descriptors in blocks.values():
-        maximum_block_columns = max(maximum_block_columns, len(descriptors))
-        matrix_columns = []
-        for rows, columns, wedge in descriptors:
-            wedge_set = set(wedge)
-            values = {}
-            for row in rows:
-                for column in columns:
-                    variable = N * row + column
-                    output_rows = tuple(
-                        entry for entry in rows if entry != row
-                    )
-                    output_columns = tuple(
-                        entry for entry in columns if entry != column
-                    )
-                    if (
-                        variable not in active
-                        or variable in wedge_set
-                        or not derivative_supported(
-                            output_rows,
-                            output_columns,
-                            active,
+    weight_block_count = 0
+    for block_index, first_descriptor in enumerate(heads):
+        if first_descriptor == sentinel:
+            continue
+        weight_block_count += 1
+        maximum_block_columns = max(
+            maximum_block_columns,
+            sizes[block_index],
+        )
+
+        def matrix_columns():
+            descriptor_index = first_descriptor
+            while descriptor_index != sentinel:
+                base_index, wedge_index = divmod(
+                    descriptor_index,
+                    wedge_count,
+                )
+                rows, columns = bases[base_index]
+                wedge = wedges[wedge_index]
+                descriptor_index = links[descriptor_index]
+                wedge_set = set(wedge)
+                values = {}
+                for row in rows:
+                    for column in columns:
+                        variable = N * row + column
+                        output_rows = tuple(
+                            entry for entry in rows if entry != row
                         )
-                    ):
-                        continue
-                    output_wedge = tuple(sorted((variable, *wedge)))
-                    key = (output_rows, output_columns, output_wedge)
-                    values[key] = (
-                        values.get(key, 0)
-                        + BASE.insertion_sign(variable, wedge)
-                    ) % PRIME
-            matrix_columns.append(
-                {key: value for key, value in values.items() if value}
-            )
-        total_rank += BASE.sparse_rank_mod(matrix_columns, PRIME)
+                        output_columns = tuple(
+                            entry for entry in columns if entry != column
+                        )
+                        if (
+                            variable not in active
+                            or variable in wedge_set
+                            or not derivative_supported(
+                                output_rows,
+                                output_columns,
+                                active,
+                            )
+                        ):
+                            continue
+                        output_wedge = tuple(sorted((variable, *wedge)))
+                        key = (output_rows, output_columns, output_wedge)
+                        values[key] = (
+                            values.get(key, 0)
+                            + BASE.insertion_sign(variable, wedge)
+                        ) % PRIME
+                yield {key: value for key, value in values.items() if value}
+
+        total_rank += BASE.sparse_rank_mod(matrix_columns(), PRIME)
 
     return {
         "domain_dimension": len(bases) * len(wedges),
-        "weight_block_count": len(blocks),
+        "weight_block_count": weight_block_count,
         "maximum_block_column_count": maximum_block_columns,
         "modular_rank": total_rank,
     }

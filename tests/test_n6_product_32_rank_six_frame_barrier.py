@@ -39,6 +39,20 @@ class Product32RankSixFrameBarrierTest(unittest.TestCase):
         self.assertEqual(len(row["K32_exact_QQ_rank_six_candidates"]), 4)
         self.assertEqual(row["K23"]["modular_rank_six_candidates"], [])
 
+    def test_bounded_modular_rank_engine(self) -> None:
+        rows = [
+            [1, 2, 3, 4],
+            [2, 4, 6, 8],
+            [0, 1, 1, 0],
+            [0, 0, 1, 1],
+        ]
+        self.assertEqual(cert.rank_mod(rows), 3)
+        self.assertEqual(cert.rank_mod(iter(rows)), 3)
+        self.assertEqual(cert.rank_mod(rows, cap=1), 2)
+
+    def test_optimized_exact_replay_matches_frozen_payload(self) -> None:
+        self.assertEqual(cert.build_payload(), self.frozen)
+
     def test_exact_survivor_projections(self) -> None:
         rows = self.frozen["bounded_signed_permutation_scan"][
             "K32_exact_QQ_rank_six_candidates"

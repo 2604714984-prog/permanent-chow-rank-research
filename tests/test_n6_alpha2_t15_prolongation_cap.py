@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import os
 import subprocess
 import sys
@@ -11,6 +12,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "n6_alpha2_t15_prolongation_cap.py"
 FROZEN = ROOT / "data" / "n6_alpha2_t15_prolongation_cap.json"
+
+
+def load_audit():
+    spec = importlib.util.spec_from_file_location("n6_alpha2_t15_test", SCRIPT)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+AUDIT = load_audit()
 
 
 class N6Alpha2T15ProlongationCapTest(unittest.TestCase):
@@ -46,6 +58,44 @@ class N6Alpha2T15ProlongationCapTest(unittest.TestCase):
             self.payload["universal_alpha2_t15_prolongation_upper_cap"], 458
         )
 
+    def test_shape_local_indices_restore_historical_global_indices(self) -> None:
+        raw = [
+            {
+                "support_index": 2,
+                "checked_representatives": 4,
+                "sample": {"local_representative_index": 0},
+            },
+            {
+                "support_index": 0,
+                "checked_representatives": 2,
+                "sample": {"local_representative_index": 1},
+            },
+            {
+                "support_index": 1,
+                "checked_representatives": 3,
+                "sample": {"local_representative_index": 2},
+            },
+        ]
+        rows = AUDIT.globalize_support_rows(raw)
+        self.assertEqual([row["support_index"] for row in rows], [0, 1, 2])
+        self.assertEqual(
+            [row["sample"]["global_representative_index"] for row in rows],
+            [1, 4, 5],
+        )
+        self.assertTrue(
+            all("local_representative_index" not in row["sample"] for row in rows)
+        )
+
+    def test_frozen_samples_stay_inside_shape_prefixes(self) -> None:
+        offset = 0
+        for row in self.payload["one_rectangle_support_rows"]:
+            count = row["qF_orbit_representative_count"]
+            sample = row["sample_maximizer"]["global_representative_index"]
+            self.assertLessEqual(offset, sample)
+            self.assertLess(sample, offset + count)
+            offset += count
+        self.assertEqual(offset, 173_388)
+
     def test_state_partition(self) -> None:
         pruning = self.payload["state_pruning"]
         self.assertEqual(
@@ -63,13 +113,13 @@ class N6Alpha2T15ProlongationCapTest(unittest.TestCase):
         os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
         "set RUN_EXPENSIVE_REPLAYS=1 to rebuild the 74,036,676-evaluation certificate",
     )
-    def test_full_parallel_replay(self) -> None:
+    def test_full_serial_replay(self) -> None:
         completed = subprocess.run(
             [
                 sys.executable,
                 str(SCRIPT),
                 "--workers",
-                "10",
+                "1",
                 "--verify-json",
                 str(FROZEN),
             ],
@@ -77,7 +127,7 @@ class N6Alpha2T15ProlongationCapTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=240,
+            timeout=7_200,
         )
         self.assertIn("alpha2_t15_cap=458", completed.stdout)
         self.assertIn("N6_ALPHA2_T15_PROLONGATION_CAP_PASS", completed.stdout)

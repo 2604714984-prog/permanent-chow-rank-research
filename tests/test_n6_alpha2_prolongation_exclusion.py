@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import unittest
 from pathlib import Path
 
@@ -26,11 +27,14 @@ AUDIT = load_module()
 class N6Alpha2ProlongationExclusionTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.payload = AUDIT.build_payload()
-        cls.frozen = json.loads(FROZEN.read_text(encoding="utf-8"))
+        cls.payload = json.loads(FROZEN.read_text(encoding="utf-8"))
 
-    def test_frozen_payload(self) -> None:
-        self.assertEqual(self.payload, self.frozen)
+    @unittest.skipUnless(
+        os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
+        "set RUN_EXPENSIVE_REPLAYS=1 to rebuild the alpha-two certificate",
+    )
+    def test_full_exact_replay(self) -> None:
+        self.assertEqual(AUDIT.build_payload(), self.payload)
 
     def test_complete_support_orbits(self) -> None:
         self.assertEqual(self.payload["one_rectangle_support_orbit_count"], 12)

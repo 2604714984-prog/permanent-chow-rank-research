@@ -50,17 +50,27 @@ class N6Alpha2T16ProlongationCapTest(unittest.TestCase):
         )
         self.assertEqual(self.payload["direct_packet_gap_when_alpha_at_most_two"], 4)
 
+    def test_frozen_samples_stay_inside_shape_prefixes(self) -> None:
+        offset = 0
+        for row in self.payload["one_rectangle_support_rows"]:
+            count = row["qF_orbit_representative_count"]
+            sample = row["sample_maximizer"]["global_representative_index"]
+            self.assertLessEqual(offset, sample)
+            self.assertLess(sample, offset + count)
+            offset += count
+        self.assertEqual(offset, 173_388)
+
     @unittest.skipUnless(
         os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
         "set RUN_EXPENSIVE_REPLAYS=1 to rebuild the 8,618,400-pair certificate",
     )
-    def test_full_parallel_replay(self) -> None:
+    def test_full_serial_replay(self) -> None:
         completed = subprocess.run(
             [
                 sys.executable,
                 str(SCRIPT),
                 "--workers",
-                "10",
+                "1",
                 "--verify-json",
                 str(FROZEN),
             ],
@@ -68,7 +78,7 @@ class N6Alpha2T16ProlongationCapTest(unittest.TestCase):
             check=True,
             capture_output=True,
             text=True,
-            timeout=360,
+            timeout=7_200,
         )
         self.assertIn("alpha2_t16_cap=464", completed.stdout)
         self.assertIn("N6_ALPHA2_T16_PROLONGATION_CAP_PASS", completed.stdout)

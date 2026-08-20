@@ -25,6 +25,9 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=3` | accepted baseline | `ChowRank(perm_3)=4` |
 | `n=4` | independently exact-replayed | `ChowRank(perm_4)=8` |
 | `n=5` | repaired proof draft complete; conditional model-assisted external audit | `ChowRank(perm_5)=16`; v14 supplies a characteristic-zero projective degeneration and a deterministic exact endpoint certificate over 886,464 flags; named independent human review remains pending |
+| `n=6` | pure exact ordinary-rank theorem; two independent scope audits pass | `ChowRank(perm_6)=32`; a symmetric image-span bound and an arbitrary-quotient half-defect symbol bound cancel every individual middle-rank defect; no border-rank claim |
+| `n=7` | pure lower-bound theorem; exact recursive bivariate-shadow DPs; standard-map ceiling replayed | `49<=ChowRank(perm_7)<=64`; the recursive shadow tower through degree six and a complementary raw catalectic prove the lower endpoint; all standard higher-wedge direct-sum routes still have ceiling at most 61; exact 64 remains open |
+| General Glynn local rigidity | pure theorem; exact `n=7` modular replay | for every `n>=3` in characteristic zero, the ordered Glynn decomposition fiber is locally exactly the product-one row-diagonal torus orbit; modulo that stabilizer the point is isolated and reduced; this does not prove the global rank formula |
 | General derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
 | General first-Koszul bound | proof draft complete | exact formula; its unique optimizing output degree is `m=ceil(n/2)` |
 | Border Chow-rank bound | proof draft complete | the determinantal first-Koszul obstruction gives `border-ChowRank(perm_n)>=L_K(n)` |
@@ -124,19 +127,23 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=6` six-permutation central-intersection cap | proof draft complete; restricted family; exact diagnostic replay | every six permutation monomials satisfy `dim(D_3(perm_6) intersect H)<=2`; hence this entire coordinate subfamily misses the hypothetical six-fixed lower-26 requirement `b>=20` |
 | `n=6` six-coordinate-monomial central-intersection cap | proof draft complete; restricted family; pure proof | every six degree-six coordinate monomials satisfy `dim(D_3(perm_6) intersect H)<=19`; equality in the initial counting cap 20 would force all six terms to be permutation monomials and contradict the cap two |
 | `n=6` six column-uniform sign-term residual exclusion | proof draft complete; restricted fixed part; pure proof | six distinct column-uniform sign terms have coupled central dimension `h=120` and intersection `b<=40`, contradicting the residual necessity `h<=2b-20` in every hypothetical 25-term decomposition, even if the other nineteen terms are arbitrary |
+| General middle image-span feasibility | pure linear-algebra route ceiling; exact rational replay | the linear one-middle-layer extension of the exact `n=6` proof is capacity-feasible only through odd `n=5` and even `n=6`; `n=7` already requires a multi-degree invariant |
+| `n=7` rectangular half-defect barrier | pure route counterexample; exact partition replay | the slope `145/7` needed for rank 64 demands 145 at a full seven-dimensional quotient, but both symbol domains total only 70; the single-middle-layer route is impossible, while degeneration floors `1,2,4,8,15,25,35` remain useful |
 | `n=6` diagonal quotient-gain audit | superseded diagnostic | the former one-term example `Gamma=705` is contained in the universal theorem |
 | `n=6` coordinate secant audit | computation replayed; diagnostic only | all 79,800 coordinate pairs classified; the rank-nine locus has projective tangent dimension 18 at every coordinate point |
 | Exact unrestricted general formula | conjectural | working conjecture `ChowRank(perm_n)=2^(n-1)` |
 
 “Proof draft complete” means the argument is written in the repository and its arithmetic implementation is tested. It does **not** mean external peer review or literature novelty review has been completed.
 
-The current in-repository unrestricted interval for `n=6` is
+The current in-repository unrestricted ordinary result for `n=6` is
 
 ```text
-28 <= ChowRank(perm_6) <= 32.
+ChowRank(perm_6) = 32.
 ```
 
-The full sign-family rank is exactly 32. The lower bound 28 is for ordinary Chow rank; no border-lower-28 or exact unrestricted-32 claim is made.
+The proof is unrestricted and characteristic zero. The older lower-28 and
+fixed-six programs remain independently useful structure theorems but are no
+longer dependencies of the exact result. No border-rank equality is claimed.
 
 ## Reviewed general lower-bound table
 
@@ -147,7 +154,7 @@ The current exact-rational multidimensional-shadow certificates give:
 | 4 | 7 | 8 | 8 |
 | 5 | 11 | 13 | 16 |
 | 6 | 21 | 23 | 32 |
-| 7 | 36 | 41 | 64 |
+| 7 | 36 | 49 | 64 |
 | 8 | 71 | 76 | 128 |
 | 9 | 127 | 141 | 256 |
 | 10 | 253 | 267 | 512 |
@@ -158,9 +165,20 @@ The current exact-rational multidimensional-shadow certificates give:
 | 15 | 6,440 | 6,879 | 16,384 |
 | 16 | 12,875 | 13,312 | 32,768 |
 
-These are the values of the general multidimensional-shadow theorem.  For `n=6`, the average-subset argument first improves the row from 23 to 26, the fixed-six product-shadow argument gives 27, and the common-quotient flag-hook exclusion gives the current best in-repository proof-draft lower bound 28. The frozen rational witnesses are certificates of the displayed general values; they are not claimed to be globally optimal.
+Except for the `n=7` row, these are the values of the general
+multidimensional-shadow theorem.  The `n=7` entry includes the stronger
+recursive-shadow complementary-catalectic argument certified in N7-009.  The frozen
+rational witnesses for the general theorem are not claimed to be globally
+optimal.
 
 ## Reproduce the deterministic results
+
+Ordinary pull-request CI runs the lightweight regression layer.  Exhaustive
+certificate replays marked with `RUN_EXPENSIVE_REPLAYS=1` are operator-triggered,
+and the extended GitHub Actions replay is available through `workflow_dispatch`.
+Multi-process scripts default to one worker; increasing `--workers` is an
+explicit choice after checking candidate count and memory headroom.  Frozen
+JSON remains the handoff between the two layers.
 
 ```bash
 python scripts/check_english_only.py
@@ -288,7 +306,7 @@ The universal single-term theorem first degenerates the at-most-six-dimensional 
 
 The fixed-four projection and Bukh argument first gives the raw range `20<=b<=27` and 36 states. Equality at `b=27` forces a common 12-dimensional quadratic quotient, a direct quadratic sum of dimension 60, and coupled middle-catalectic rank 80, contradicting the residual upper bound 34. Low-relation arguments exclude the next two layers, and componentwise scalar Macaulay growth closes the historical 23-term frontier, proving lower 24.
 
-The lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `16^6=16,777,216` labelled defect tuples.
+The lower-25 proof does not mechanically reuse that state table. Under a hypothetical 24-term decomposition it fixes six terms and leaves eighteen. Projection and Bukh compression give `40<=b<=64`; the layers `b=40,41` are already Koszul-strict. For every remaining layer, the full colored quadratic relation module has dimension at most 16. The vector-valued Macaulay theorem bounds its cubic relation module by `k^{<2>}`, and a block-Sylvester inequality converts that cap into a coupled middle-catalectic lower bound. Exact defect arithmetic gives a positive margin in every layer; the smallest margin is two at `b=43,44`. A second implementation independently scans all `binom(21,6)=54,264` nondecreasing defect multisets and uses exact multinomial weights to account for all `16^6=16,777,216` labelled tuples.
 
 The lower-26 fixed-count diagnostic tests `q=6,7,8` under a hypothetical 25-term decomposition and leaves hundreds of states when the fixed subset is arbitrary. N6-030 supplies the missing selection step. If `U_i` are the individual middle-catalectic images, condition on a term of maximum central rank and apply submodular averaging to the other five choices. The relation-pairing identity then selects six indices with coupled central rank at least 87. The nineteen-term residual forces central intersection `b>=54`. Exact rational Bukh-shadow endpoints and an integer enumeration of at most 33 symmetric defect profiles per terminal layer prove the universal fixed-six cap `b<=53`. This contradiction proves the ordinary lower bound 26. The argument does not prove border rank 26 or exact unrestricted rank 32.
 

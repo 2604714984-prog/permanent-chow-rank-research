@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import defaultdict
 from itertools import combinations
 from math import comb
 from pathlib import Path
@@ -18,6 +19,7 @@ from pathlib import Path
 
 N = 6
 CELL_COUNT = N * N
+PAIRS = tuple(combinations(range(N), 2))
 
 
 def pair_rank(first: int, second: int) -> int:
@@ -61,33 +63,108 @@ def signature(support: tuple[int, ...]) -> int:
     return answer
 
 
+def recover_signature(value: int) -> tuple[int, ...]:
+    """Recover the six-cell support without retaining earlier signatures."""
+
+    active_rows: set[int] = set()
+    active_columns: set[int] = set()
+    recovered: set[int] = set()
+    disjoint_by_rows: dict[tuple[int, int], set[tuple[int, int]]] = defaultdict(set)
+
+    remaining = value
+    while remaining:
+        lowest = remaining & -remaining
+        axis = lowest.bit_length() - 1
+        remaining ^= lowest
+        if axis < 90:
+            row, pair_index = divmod(axis, 15)
+            column0, column1 = PAIRS[pair_index]
+            active_rows.add(row)
+            active_columns.update((column0, column1))
+            recovered.update((row * N + column0, row * N + column1))
+        elif axis < 180:
+            column, pair_index = divmod(axis - 90, 15)
+            row0, row1 = PAIRS[pair_index]
+            active_rows.update((row0, row1))
+            active_columns.add(column)
+            recovered.update((row0 * N + column, row1 * N + column))
+        else:
+            row_pair_index, column_pair_index = divmod(axis - 180, 15)
+            row_pair = PAIRS[row_pair_index]
+            column_pair = PAIRS[column_pair_index]
+            active_rows.update(row_pair)
+            active_columns.update(column_pair)
+            disjoint_by_rows[row_pair].add(column_pair)
+
+    recovered_rows = {cell // N for cell in recovered}
+    recovered_columns = {cell % N for cell in recovered}
+    missing_rows = sorted(active_rows - recovered_rows)
+    missing_columns = sorted(active_columns - recovered_columns)
+    if len(missing_rows) != len(missing_columns):
+        raise AssertionError((missing_rows, missing_columns))
+
+    missing_count = len(missing_rows)
+    if missing_count == 1:
+        recovered.add(missing_rows[0] * N + missing_columns[0])
+    elif missing_count >= 3:
+        for index, row in enumerate(missing_rows):
+            other0 = missing_rows[(index + 1) % missing_count]
+            other1 = missing_rows[(index + 2) % missing_count]
+            pair0 = tuple(sorted((row, other0)))
+            pair1 = tuple(sorted((row, other1)))
+            columns0 = next(iter(disjoint_by_rows[pair0]))
+            columns1 = next(iter(disjoint_by_rows[pair1]))
+            common = set(columns0) & set(columns1)
+            if len(common) != 1:
+                raise AssertionError((row, columns0, columns1))
+            recovered.add(row * N + common.pop())
+    elif missing_count == 2:
+        recovered_neighbors: dict[int, set[int]] = defaultdict(set)
+        for cell in recovered:
+            recovered_neighbors[cell // N].add(cell % N)
+        anchor_row, anchor_columns = next(iter(recovered_neighbors.items()))
+        for row in missing_rows:
+            row_pair = tuple(sorted((anchor_row, row)))
+            observed = disjoint_by_rows[row_pair]
+            candidates = [
+                column
+                for column in missing_columns
+                if {
+                    tuple(sorted((column, anchor_column)))
+                    for anchor_column in anchor_columns
+                }
+                == observed
+            ]
+            if len(candidates) != 1:
+                raise AssertionError((row, observed, candidates))
+            recovered.add(row * N + candidates[0])
+
+    answer = tuple(sorted(recovered))
+    if len(answer) != 6 or signature(answer) != value:
+        raise AssertionError((answer, value))
+    return answer
+
+
 def audit() -> dict[str, object]:
-    signatures: set[int] = set()
     rectangle_free_count = 0
-    collision_witness = None
     for support in combinations(range(CELL_COUNT), 6):
         if not is_rectangle_free(support):
             continue
         rectangle_free_count += 1
         value = signature(support)
-        if value in signatures:
-            collision_witness = list(support)
-            break
-        signatures.add(value)
+        recovered = recover_signature(value)
+        if recovered != support:
+            raise AssertionError((support, recovered))
 
-    if collision_witness is not None:
-        raise AssertionError(collision_witness)
     if rectangle_free_count != 1_837_392:
         raise AssertionError(rectangle_free_count)
-    if len(signatures) != rectangle_free_count:
-        raise AssertionError((len(signatures), rectangle_free_count))
 
     return {
         "status": "EXACT_N6_ALPHA3_COORDINATE_QUOTIENT_INJECTIVITY",
         "arithmetic": "integer exhaustive regression plus a pure recovery theorem",
         "all_coordinate_six_cell_supports": comb(CELL_COUNT, 6),
         "rectangle_free_coordinate_supports": rectangle_free_count,
-        "distinct_quotient_signatures": len(signatures),
+        "distinct_quotient_signatures": rectangle_free_count,
         "signature_axis_universe_dimension": 405,
         "axes_per_signature": 15,
         "collision_count": 0,

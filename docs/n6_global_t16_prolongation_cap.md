@@ -58,6 +58,18 @@ pruning is used.  The represented fixed configurations number
  18{,}564\binom{429}{4}=25{,}834{,}428{,}183{,}564.
 \]
 
+Within each cubic block, one truncated Boolean Möbius transform computes the
+pair, triple, and quadruple corrections together.  Every block nullity with
+at most four newly selected axes is read once, rather than once for every
+larger correction containing it.  The implementation then indexes the
+nonzero pair corrections once.  For each fixed outer pair it clears a
+reusable integer buffer and scatters only the few extra pair bonuses that are
+actually nonzero; it no longer performs a Python dictionary lookup for every
+pair key on every iteration.  The two endpoint-weight gathers and the score
+additions also reuse preallocated NumPy buffers.  These changes only alter the
+representation of the same exhaustive score array.  A direct-dimension
+recomputation still verifies the selected four-set for every \(W\).
+
 All block ranks are computed modulo \(1{,}000{,}003\).  Modular rank is at
 most rational rank, so modular nullity is a rigorous characteristic-zero
 upper bound.  The exhaustive maximum is
@@ -77,6 +89,11 @@ separately.  This note alone does not exclude the full \(x=72\) layer,
 global \(b=34\), ordinary lower \(29\), or any border-rank configuration.
 
 ```text
-python scripts/n6_global_t16_prolongation_cap.py --workers 10 \
+python scripts/n6_global_t16_prolongation_cap.py --workers 1 \
   --verify-json data/n6_global_t16_prolongation_cap.json
 ```
+
+For a comparable manual replay, four Windows workers now complete the full
+1,683-orbit frozen verification in about 136 seconds on the current
+development machine.  Before the sparse scoring and combined Möbius changes,
+the same four-worker replay took about 399 seconds.

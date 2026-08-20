@@ -68,12 +68,20 @@ class GeneralAffineSegreSliceRankTests(unittest.TestCase):
             [Fraction(0), Fraction(4), Fraction(-3), Fraction(1, 2)],
         ):
             vector = AUDIT.anchored_slice_vector(parameters)
+            self.assertIs(iter(vector), vector)
             for mask, coefficient in enumerate(vector):
                 expected = Fraction(1)
                 for index, parameter in enumerate(parameters):
                     if (mask >> index) & 1:
                         expected *= parameter
                 self.assertEqual(coefficient, expected)
+
+    def test_candidate_limit_fails_before_enumeration(self) -> None:
+        with self.assertRaisesRegex(
+            ValueError,
+            r"max_d=20 requires 2\*\*20.*limit of 1,000,000",
+        ):
+            AUDIT.build_payload(20)
 
     def test_compact_frozen_payload(self) -> None:
         self.assertEqual(self.payload["status"], self.frozen["status"])

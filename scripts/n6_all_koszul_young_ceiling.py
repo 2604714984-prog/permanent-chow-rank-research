@@ -13,7 +13,7 @@ import json
 from collections import Counter, defaultdict
 from fractions import Fraction
 from itertools import combinations
-from math import ceil, comb
+from math import ceil, comb, factorial
 from pathlib import Path
 
 
@@ -133,20 +133,74 @@ def row_column_weight(
     return tuple(row_weight + column_weight)
 
 
-def permanent_rank(output_degree: int, wedge_degree: int) -> dict[str, int]:
+def canonical_weight(weight: tuple[int, ...]) -> tuple[int, ...]:
+    """Canonical representative under independent row/column permutations."""
+
+    return tuple(sorted(weight[:N])) + tuple(sorted(weight[N:]))
+
+
+def weight_orbit_size(weight: tuple[int, ...]) -> int:
+    """Exact size of the S_6 x S_6 orbit of one weight block."""
+
+    size = 1
+    for half in (weight[:N], weight[N:]):
+        half_size = factorial(N)
+        for multiplicity in Counter(half).values():
+            half_size //= factorial(multiplicity)
+        size *= half_size
+    return size
+
+
+def descriptor_blocks(
+    output_degree: int,
+    wedge_degree: int,
+    *,
+    orbit_compression: bool,
+):
     subsets = tuple(combinations(range(N), output_degree))
     wedges = tuple(combinations(range(VARIABLES), wedge_degree))
     blocks = defaultdict(list)
     for rows in subsets:
         for columns in subsets:
             for wedge in wedges:
-                blocks[row_column_weight(rows, columns, wedge)].append(
+                weight = row_column_weight(rows, columns, wedge)
+                if orbit_compression and weight != canonical_weight(weight):
+                    continue
+                blocks[weight].append(
                     (rows, columns, wedge)
                 )
+    return blocks
+
+
+def permanent_rank(
+    output_degree: int,
+    wedge_degree: int,
+    *,
+    orbit_compression: bool = True,
+) -> dict[str, int]:
+    subsets = tuple(combinations(range(N), output_degree))
+    wedges = tuple(combinations(range(VARIABLES), wedge_degree))
+    domain_dimension = len(subsets) ** 2 * len(wedges)
+    blocks = descriptor_blocks(
+        output_degree,
+        wedge_degree,
+        orbit_compression=orbit_compression,
+    )
+    represented_domain = sum(
+        (weight_orbit_size(weight) if orbit_compression else 1)
+        * len(descriptors)
+        for weight, descriptors in blocks.items()
+    )
+    if represented_domain != domain_dimension:
+        raise AssertionError((represented_domain, domain_dimension))
 
     total_rank = 0
     histogram = Counter()
-    for descriptors in blocks.values():
+    represented_block_count = 0
+    for weight, descriptors in blocks.items():
+        multiplicity = weight_orbit_size(weight) if orbit_compression else 1
+        represented_block_count += multiplicity
+
         def block_columns():
             for rows, columns, wedge in descriptors:
                 wedge_set = set(wedge)
@@ -167,12 +221,12 @@ def permanent_rank(output_degree: int, wedge_degree: int) -> dict[str, int]:
                 yield {key: value for key, value in values.items() if value}
 
         block_rank = sparse_rank_mod(block_columns())
-        total_rank += block_rank
-        histogram[(len(descriptors), block_rank)] += 1
+        total_rank += multiplicity * block_rank
+        histogram[(len(descriptors), block_rank)] += multiplicity
 
     return {
-        "domain_dimension": comb(N, output_degree) ** 2 * len(wedges),
-        "weight_block_count": len(blocks),
+        "domain_dimension": domain_dimension,
+        "weight_block_count": represented_block_count,
         "maximum_block_column_count": max(map(len, blocks.values())),
         "modular_rank": total_rank,
         "histogram_entries": len(histogram),

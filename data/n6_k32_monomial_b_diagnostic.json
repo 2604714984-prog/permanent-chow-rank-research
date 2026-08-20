@@ -1,0 +1,42 @@
+{
+  "certificate": "N6-130",
+  "status": "FINITE_EXACT_MONOMIAL_B_DIAGNOSTIC",
+  "field": "QQ",
+  "candidate_count": 720,
+  "threshold": "b(T) >= 9 is necessary for cross rank <= 6",
+  "formula_checked": "cross rank = 18 - b(T) - c(T)",
+  "histogram_by_b": {
+    "0": 112,
+    "1": 360,
+    "2": 72,
+    "3": 96,
+    "4": 36,
+    "5": 24,
+    "6": 12,
+    "7": 6,
+    "9": 2
+  },
+  "high_threshold_count": 2,
+  "high_threshold_cases": [
+    {
+      "permutation": [0, 1, 2, 3, 4, 5],
+      "cross_rank_over_QQ": 6,
+      "annihilator_dimension": 12,
+      "b_dimension": 9,
+      "c_dimension": 3
+    },
+    {
+      "permutation": [1, 0, 3, 2, 5, 4],
+      "cross_rank_over_QQ": 6,
+      "annihilator_dimension": 12,
+      "b_dimension": 9,
+      "c_dimension": 3
+    }
+  ],
+  "formula_mismatch_count": 0,
+  "boundary": [
+    "This exhausts permutation matrices only.",
+    "It does not cover diagonal-scaled or arbitrary invertible graph operators.",
+    "It does not prove the general 2+2 matching lemma or ChowRank(perm_6)."
+  ]
+}
