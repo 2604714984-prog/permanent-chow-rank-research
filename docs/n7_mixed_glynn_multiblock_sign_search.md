@@ -119,6 +119,30 @@ In particular the synchronized mixed-Glynn dictionary with arbitrary
 independent diagonal sign changes never contains all (49) permanent sextic
 targets.  This closes the entire diagonal-sign subfamily of endpoint B.
 
+## Two arbitrary signed-coordinate types
+
+The same local decomposition also makes the next group layer finite.  Replace
+diagonal signs by the full signed-coordinate group
+
+\[
+G=(\mathbb Z/2)^6\rtimes S_6,qquad |G|=2^6 6!=46080.
+\]
+
+For a local six-block packet using exactly two group elements, a common group
+action normalizes one type to the identity.  The other type is any of the
+(46079) nonidentity elements, and its positive multiplicity can be one
+through five.  Hence the complete candidate count is
+
+\[
+5(46080-1)=230395.
+\]
+
+Every candidate has local derivative rank (42), and every augmented target
+rank is (49).  Therefore every local target intersection is zero.  This
+strictly extends the diagonal-sign classification: no packet whose six visible
+blocks use two distinct signed-coordinate types can support a permanent sextic
+target.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -169,11 +193,21 @@ python scripts/n7_mixed_glynn_local_sign_multiset_search.py \
   --workers 20 --verify-json data/n7_mixed_glynn_local_sign_t6.json
 ```
 
+The full two-type signed-coordinate replay is:
+
+```bash
+python scripts/n7_mixed_glynn_local_monomial_two_type_search.py \
+  --max-candidates 240000 --evaluation-columns 64 --workers 20 \
+  --json data/n7_mixed_glynn_local_monomial_two_type_search.json
+```
+
 ## Boundary
 
 This is a complete theorem for all diagonal-sign packets in the synchronized
-mixed-Glynn dictionary.  It does not cover coordinate permutations, general
-\(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B packets.  It
-therefore does not yet prove ordinary lower (50) or a border-rank statement.
-Its useful new content is the exact multiblock compatibility classification,
-which is invisible to the earlier single-block rank test.
+mixed-Glynn dictionary and for local packets with at most two arbitrary
+signed-coordinate types.  It does not cover three or more signed-coordinate
+types, general \(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B
+packets.  It therefore does not yet prove ordinary lower (50) or a
+border-rank statement.  Its useful new content is the exact multiblock
+compatibility classification, which is invisible to the earlier single-block
+rank test.

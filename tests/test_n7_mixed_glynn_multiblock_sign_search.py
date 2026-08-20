@@ -46,6 +46,13 @@ class MixedGlynnMultiblockSignTests(unittest.TestCase):
             )
             for type_count in range(1, 7)
         }
+        cls.monomial_two_type = json.loads(
+            (
+                ROOT
+                / "data"
+                / "n7_mixed_glynn_local_monomial_two_type_search.json"
+            ).read_text()
+        )
 
     def test_two_block_exhaustion(self):
         self.assertEqual(self.b2["candidate_count"], 64**2)
@@ -114,6 +121,15 @@ class MixedGlynnMultiblockSignTests(unittest.TestCase):
         self.assertEqual(
             module.unrank_combination(63, 5, 7_028_846), (58, 59, 60, 61, 62)
         )
+
+    def test_complete_two_monomial_type_exhaustion(self):
+        row = self.monomial_two_type
+        self.assertEqual(row["candidate_count"], 230_395)
+        self.assertEqual(row["local_derivative_rank_histogram"], {"42": 230_395})
+        self.assertEqual(
+            row["local_target_intersection_histogram"], {"0": 230_395}
+        )
+        self.assertEqual(row["maximum_local_target_intersection"], 0)
 
 
 if __name__ == "__main__":
