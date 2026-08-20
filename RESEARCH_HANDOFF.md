@@ -16,7 +16,8 @@ parent branch: research/quartic-natural-span-barriers
 parent PR: #88
 parent exact head: 729669c4ab2fd27c1bbf13d6ea519363a1e643f5
 publication theorem head: 38e4af25897e29df605333152c7fb6c1e47af87b
-publication receipt head: THIS HANDOFF UPDATE; exact SHA recorded by the following pointer commit
+publication receipt head: 07733fcb3b481857bd64ae722b7b209c38b65518
+current handoff pointer head: THIS POINTER UPDATE; exact SHA is the branch head after this commit
 stack ancestry: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89
 ```
 
@@ -191,4 +192,5 @@ and any inherited compatibility failure.
 - recorded the universal full-support six-element quotient circuit;
 - retained `6<=mu(6,4)<=8` and selected repeated-column circuit compatibility
   as the next task;
-- created Draft PR #89 and triggered Actions run #760.
+- created Draft PR #89 and triggered Actions run #760;
+- recorded publication receipt commit `07733fcb3b481857bd64ae722b7b209c38b65518`.
