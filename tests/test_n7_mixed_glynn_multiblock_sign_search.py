@@ -53,6 +53,13 @@ class MixedGlynnMultiblockSignTests(unittest.TestCase):
                 / "n7_mixed_glynn_local_monomial_two_type_search.json"
             ).read_text()
         )
+        cls.permutation_three_type = json.loads(
+            (
+                ROOT
+                / "data"
+                / "n7_mixed_glynn_permutation_character_dp.json"
+            ).read_text()
+        )
 
     def test_two_block_exhaustion(self):
         self.assertEqual(self.b2["candidate_count"], 64**2)
@@ -130,6 +137,19 @@ class MixedGlynnMultiblockSignTests(unittest.TestCase):
             row["local_target_intersection_histogram"], {"0": 230_395}
         )
         self.assertEqual(row["maximum_local_target_intersection"], 0)
+
+    def test_three_permutation_type_character_exhaustion(self):
+        row = self.permutation_three_type
+        self.assertEqual(row["candidate_count"], 2_581_210)
+        self.assertEqual(row["protected_character_count_histogram"], {"0": 2_581_210})
+        self.assertEqual(row["maximum_protected_character_count"], 0)
+
+    def test_character_dp_positive_control(self):
+        module = load_script_from_name("n7_mixed_glynn_permutation_character_dp.py")
+        self.assertEqual(
+            module.protected_characters((module.IDENTITY,) * 6),
+            (31, 47, 55, 59, 61, 62, 63),
+        )
 
 
 if __name__ == "__main__":

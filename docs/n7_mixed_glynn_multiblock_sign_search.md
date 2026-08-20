@@ -143,6 +143,32 @@ strictly extends the diagonal-sign classification: no packet whose six visible
 blocks use two distinct signed-coordinate types can support a permanent sextic
 target.
 
+## Three permutation types: a character-collision certificate
+
+Signs can only rescale coefficients; they cannot change which Walsh character
+labels a graph-tensor monomial.  For six row blocks, the program tracks two
+finite sets of characters:
+
+- characters realized by a selection of six distinct columns;
+- characters realized by a selection with a repeated column.
+
+A repeated-column realization has zero coefficient in every permanent target,
+so it forces that Walsh coefficient to vanish.  Only a character in the first
+set but not the second can possibly carry a target coefficient.
+
+Normalize one of three permutation types to the identity.  Choosing the other
+two permutations and their positive multiplicities gives
+
+\[
+{719\choose2}{5\choose2}=2581210
+\]
+
+representatives.  A 64-state dynamic program exhausts every representative.
+Every protected-character set is empty.  Therefore every local packet using
+exactly three permutation types has zero target intersection, independently of
+all diagonal signs.  The replay took 55.26 seconds with twenty WSL workers and
+stores no tensor or candidate matrix.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -201,13 +227,22 @@ python scripts/n7_mixed_glynn_local_monomial_two_type_search.py \
   --json data/n7_mixed_glynn_local_monomial_two_type_search.json
 ```
 
+The three-permutation character replay is:
+
+```bash
+python scripts/n7_mixed_glynn_permutation_character_dp.py \
+  --max-candidates 2600000 --workers 20 \
+  --json data/n7_mixed_glynn_permutation_character_dp.json
+```
+
 ## Boundary
 
 This is a complete theorem for all diagonal-sign packets in the synchronized
 mixed-Glynn dictionary and for local packets with at most two arbitrary
-signed-coordinate types.  It does not cover three or more signed-coordinate
-types, general \(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B
-packets.  It therefore does not yet prove ordinary lower (50) or a
-border-rank statement.  Its useful new content is the exact multiblock
-compatibility classification, which is invisible to the earlier single-block
-rank test.
+signed-coordinate types.  The character certificate additionally removes all
+local packets with exactly three permutation types, for arbitrary signs.  It
+does not cover four or more permutation types, general \(\mathrm{GL}_6\) graph
+transformations, or arbitrary endpoint-B packets.  It therefore does not yet
+prove ordinary lower (50) or a border-rank statement.  Its useful new content
+is the exact multiblock compatibility classification, which is invisible to
+the earlier single-block rank test.
