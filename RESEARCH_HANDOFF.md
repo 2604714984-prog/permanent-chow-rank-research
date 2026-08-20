@@ -3,240 +3,194 @@
 This is the canonical operational handoff for the active permanent Chow-rank
 research stack. Every synchronized result must update this file.
 
-Last updated: **2026-08-19**
+Last updated: **2026-08-20**
 
 ## 1. Active GitHub context
 
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
-active branch: research/quartic-natural-span-barriers
-active PR: #88
-active theorem head: 8d2a6119d9c37d6f3198ed38bbd6e55982e7acba
-parent branch: research/quartic-three-block-zero
-parent PR: #87
-parent exact head: 93a6227b8fd3cc828d40e12f0b32d56c987366f0
-stack ancestry: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88
+active branch: research/quartic-six-term-frontier
+active PR: #89
+PR URL: https://github.com/2604714984-prog/permanent-chow-rank-research/pull/89
+parent branch: research/quartic-natural-span-barriers
+parent PR: #88
+parent exact head: 729669c4ab2fd27c1bbf13d6ea519363a1e643f5
+publication theorem head: 38e4af25897e29df605333152c7fb6c1e47af87b
+publication receipt head: 07733fcb3b481857bd64ae722b7b209c38b65518
+current handoff pointer head: THIS POINTER UPDATE; exact SHA is the branch head after this commit
+stack ancestry: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89
 ```
 
 Keep the stack narrow. Do not introduce a manager, registry, dispatcher,
 database, broad solver framework, or second control plane.
 
-## 2. Latest result
+## 2. Current proved boundary
 
-### Quartic natural-span compression barriers
+For arbitrary degree-six Chow terms over a characteristic-zero field,
 
-The unrestricted interval remains
+\[
+\boxed{
+\mathcal D_4(\operatorname{perm}_6)
+\cap
+\sum_{i=1}^{5}\mathcal D_4(T_i)=0.
+}
+\]
+
+Therefore
+
+\[
+\boxed{6\le\mu(6,4)\le8.}
+\]
+
+Six and seven arbitrary blocks remain open. Eight blocks are nonzero by the
+padded order-four decomposition.
+
+## 3. Results synchronized in PR #89
+
+### 3.1 Five-block zero theorem
+
+The pair-trigger branch propagates the sharp cubic equality state to all
+component pairs and contradicts the twelve-versus-nine second-shadow bound.
+The fully coupled branch forces a twelve-dimensional square-zero covector
+space, contradicting the order-four star cap four.
+
+Theorem core:
 
 ```text
-5 <= mu(6,4) <= 8.
+72a73cc0012e7113f1a483150b61c8e7444310c38542b1d5bca40c9182c15171
 ```
 
-Two natural internal compression routes are now closed exactly.
-
-#### `(2,2)` partition-Laplace span
-
-Let `L_22` be the six-dimensional span of the fixed-row-split summands
+### 3.2 Exact natural-family barriers
 
 ```text
-G_C = perm(X_{01,C}) perm(X_{23,C^c}), |C|=2.
+coordinate degree-six threshold:            12
+one-factor-per-column quartic threshold:      8
+one-factor-per-row quartic threshold:         8
+normalized sign threshold at (6,4):           8
 ```
 
-For a nonzero combination with coefficient support `S`,
+Theorem cores:
 
 ```text
-dim Ess = 2*|union_(C in S) C| + 2*|union_(C in S) C^c|.
+coordinate:
+4b85646c9b1c96c18b5010206ce7897edba0b330e762f554b7314709ae53b1f9
+
+column-separated:
+45a855429fe780db052731a7201713640a0adbe27f656294195399c49fb78623
+
+sign:
+af5fbd6fa060649a1a58220f258077d46797013491d89e5623ce2bd7492e0316
 ```
 
-Hence every nonzero vector has essential dimension at least eight. Every
-output-degree-four derivative of a degree-six Chow term has essential
-dimension at most six, so
+### 3.3 Partition-Laplace essential stratification
+
+For coefficient support `S`,
+
+\[
+\dim\operatorname{Ess}\left(\sum_{\mathbf C\in S}a_{\mathbf C}G_{\mathbf C}\right)
+=\sum_a\lambda_a\left|\bigcup_{\mathbf C\in S}C_a\right|.
+\]
+
+The natural `(2,2)` six-generator space has minimum essential dimension eight
+and zero intersection with every single degree-six Chow derivative block.
+
+Theorem core:
 
 ```text
-L_22 intersect D_4(T) = 0
+1bcbe6b3d3594f649171a21d8837b2a811596858f60dd2b41c52268484525e6c
 ```
 
-for every degree-six Chow term `T`.
+### 3.4 Common-source slices and six-element circuit
 
-#### Glynn sign span
+All fixed four-column slices of one component are images of the same source
+vector in the 15-dimensional squarefree factor-label space. An isolated slice
+is insufficient: one block can already have a fixed slice equal to `perm_4`,
+with 232 repeated-column defects elsewhere.
 
-Let `H` be the eight-dimensional order-four Glynn sign span. For every
-nonzero `h in H`, row symmetry gives
+Every hypothetical six-block witness yields six nonzero quotient vectors with
+one unique full-support relation; every proper subcollection is independent.
+
+Theorem core:
 
 ```text
-dim Ess(h) = 4 * mode_rank(h).
+d82e88706313fb20bd8cf0e51d7ab7a7fadac00d9805d72d2fd1b2ccd1d6d85c
 ```
 
-The vectors with essential dimension at most six are exactly the eight
-original sign lines. Therefore `H intersect D_4(T)` is zero or one sign line
-for every degree-six Chow term, and the internal degree-six block minimum for
-expressing `perm_4` with components individually constrained to `H` is exactly
-eight.
-
-These are strict internal-span barriers. Components outside the natural
-spaces may still cancel in the ambient quotient.
-
-## 3. Proof spine
-
-The Laplace theorem uses disjoint derivative supports. For a top-row
-derivative, a selected pair `C={c,d}` leaves the unique row-one variable
-`x_(1,d)`; different pairs cannot cancel. The bottom rows give the complement
-formula. Summing the four row contributions yields the exact essential
-Dimension formula.
-
-For the Glynn span, every generator is `delta^(tensor 4)` after identifying
-the four row spaces. If the essential dimension is at most six, the common
-mode rank is one and the tensor is `c v^(tensor 4)`. Parity-zero Walsh
-coordinates force
+## 4. Canonical proof files
 
 ```text
-v_i^4 = v_i^2 v_j^2 = v_j^4,
-```
-
-so all coordinates are nonzero and have equal squares. Up to scale, `v` is
-one of the eight sign vectors. The unique Glynn expression of `perm_4` has
-all eight coefficients nonzero.
-
-## 4. Exact interfaces and validation
-
-```text
-Laplace basis vectors                              6
-permanent monomials partitioned                   24
-nonempty Laplace supports checked                 63
-essential-dimension distribution      8:6, 12:12, 14:8, 16:37
-Walsh parity classes                               8
-ordered tensor coordinates checked               256
-normalized low-essential sign lines                8
-focused unit tests                              5/5 PASS
-primary normal Python                             PASS
-primary python -O                                 PASS
-independent normal Python                         PASS
-independent python -O                             PASS
-py_compile                                        PASS
-frozen JSON == regenerated payload               PASS
-```
-
-Frozen theorem-facing core:
-
-```text
-d40eef4be59483e19dced0f69232b79bdcead026531aac018f3490ee44104145
-```
-
-The independent implementation imports none of the primary code. It expands
-all Laplace polynomials directly, computes rational derivative ranks, and
-reconstructs the sign tensors on all ordered coordinates. Its odd-prime
-projective enumeration is diagnostic only; the characteristic-zero theorem is
-the explicit parity argument.
-
-## 5. Files
-
-```text
-docs/general_quartic_natural_span_compression_barriers.md
-docs/general_quartic_natural_span_compression_barriers_adversarial_review.md
-docs/general_quartic_natural_span_compression_barriers_ledger_delta.md
-scripts/general_quartic_natural_span_barriers.py
-scripts/general_quartic_natural_span_barriers_independent.py
-data/general_quartic_natural_span_barriers.json
-tests/test_general_quartic_natural_span_barriers.py
+docs/general_quartic_five_to_six_term_frontier.md
+docs/general_quartic_five_to_six_term_frontier_adversarial_review.md
+docs/general_quartic_five_to_six_term_frontier_ledger_delta.md
 RESEARCH_HANDOFF.md
 ```
 
-## 6. Parent results retained
+## 5. Validation and hosted CI
 
-PR #87 proved
+The retained local packets report exact primary and independent replays,
+normal and `python -O` equality, frozen JSON comparison, focused unit tests,
+`py_compile`, and SHA-256 manifests.
+
+The theorem head triggered:
 
 ```text
-D_4(perm_8) intersect sum_(i=1)^3 D_4(T_i) = 0
-mu(8,4) = 4.
+workflow: exact-bound-tests
+run number: 760
+run id: 32346595999
+status at publication receipt: in_progress
+conclusion: pending
+URL: https://github.com/2604714984-prog/permanent-chow-rank-research/actions/runs/32346595999
 ```
 
-PR #86 proved
+Do not describe the repository-wide suite as green before the run finishes.
+
+## 6. Exact next task
+
+Retain the same source vector for each component and impose the unique
+six-element quotient circuit simultaneously on the repeated-column layers
 
 ```text
-D_4(perm_6) intersect sum_(i=1)^4 D_4(T_i) = 0
-5 <= mu(6,4) <= 8.
+(2,1,1), (2,2), (3,1), and (4).
 ```
 
-The quartic `q*n=24` arithmetic boundary remains completely classified.
+The target is one of:
 
-## 7. Hosted CI state
+1. a forced proper subcircuit, contradicting five-block zero;
+2. a common kernel forcing a component into an excluded separated family; or
+3. an exact six-block witness.
 
-PR #88 hosted full CI is pending at this handoff update. The focused result has
-a clean local exact replay. Do not describe the full repository suite as green
-until the hosted run completes and the inherited exact-product-shadow
-compatibility regression is resolved or reclassified.
+Do not replace this with a broad numerical optimizer.
 
-## 8. Strict claim boundary
+## 7. Strict claim boundary
 
 ```text
-classification = STRICT_ROUTE_BARRIER
-(2,2) Laplace internal recombination = IMPOSSIBLE
-Glynn internal degree-six minimum = 8
-mu(6,4) exact unrestricted value = OPEN in [5,8]
-new unrestricted Chow-rank bound = false
-new exact Chow rank = false
-border-rank improvement = NO
-coupled/literal identification = NO
+five-block literal sum = ZERO
+six-block literal sum = OPEN
+seven-block literal sum = OPEN
+eight-block literal sum = NONZERO
+mu(6,4) exact value = OPEN in [6,8]
+unrestricted Chow-rank improvement = false
+border-rank improvement = false
 literature novelty = NOT ESTABLISHED
-hosted full CI = PENDING
 ```
 
-The following implications are forbidden:
+## 8. Mandatory synchronization rule
 
-```text
-Glynn internal minimum 8 => mu(6,4)=8
-L_22 intersect D_4(T)=0 => no six-term ambient-cancellation sum
-finite-field diagnostic => characteristic-zero proof
-```
+Every subsequent mathematical result must be committed to GitHub and this file
+must be updated in the theorem commit or in an immediately following receipt
+commit. Record the exact branch, PR, theorem head, receipt head, workflow run,
+and any inherited compatibility failure.
 
-## 9. Next executable task
+## 9. Handoff log
 
-Return to the unrestricted five-term problem. For a hypothetical
+### 2026-08-20 -- PR #89 consolidated five-to-six-term frontier
 
-```text
-0 != f = f_1 + ... + f_5 in D_4(perm_6),
-```
-
-annihilating a complementary pair of component essential spaces produces a
-triple-supported cubic polar space of dimension at least four. Classify those
-four-dimensional cubic three-block spaces using the exact cubic literal
-minimum `mu(6,3)=2`, the PR #86 pair-equality state
-`(6,6,intersection 3,joint 9)`, and exact quadratic shadow tables.
-
-On the constructive side, every valid five-, six-, or seven-term search must
-allow the components to leave both `H` and `L_22` and cancel outside the
-natural span. Promote only an explicit construction, a universal zero theorem,
-or another strict route barrier.
-
-## 10. Mandatory synchronization rule
-
-Every future synchronized result must record exact branch, PR and head;
-theorem or route barrier; dependencies; scripts, data and tests; focused and
-hosted validation; superseded statements; and one next executable task. A
-result is not handed off merely because it appears in chat.
-
-## 11. Handoff log
-
-### 2026-08-19 -- quartic natural-span barriers
-
-- proved the exact essential-dimension formula in the `(2,2)` Laplace span;
-- proved that this span meets every degree-six Chow derivative component only
-  at zero;
-- classified the low-essential locus of the Glynn sign span;
-- proved the Glynn-internal degree-six minimum is eight;
-- retained the unrestricted interval `5<=mu(6,4)<=8`;
-- returned the active frontier to the unrestricted five-term geometry.
-
-### 2026-08-19 -- quartic three-block zero
-
-- closed `(8,4,3)` as universal zero;
-- proved `mu(8,4)=4`;
-- completed the quartic `q*n=24` arithmetic classification.
-
-### 2026-08-19 -- quartic four-block zero
-
-- closed `(6,4,4)`;
-- obtained `5<=mu(6,4)<=8`.
-
-### 2026-08-19 -- exact cubic literal threshold
-
-- proved the exact function `mu(n,3)`.
+- synchronized the five-block zero theorem;
+- synchronized exact coordinate, separated-frame, and sign-family barriers;
+- synchronized the partition-Laplace essential stratification theorem;
+- synchronized the common-source mixed-slice interface;
+- recorded the universal full-support six-element quotient circuit;
+- retained `6<=mu(6,4)<=8` and selected repeated-column circuit compatibility
+  as the next task;
+- created Draft PR #89 and triggered Actions run #760;
+- recorded publication receipt commit `07733fcb3b481857bd64ae722b7b209c38b65518`.
