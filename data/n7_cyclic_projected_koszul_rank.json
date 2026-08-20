@@ -1,7 +1,34 @@
 {
+  "active_cyclic_adjacent_rank_by_wedge": [
+    441,
+    3038,
+    8919,
+    14413,
+    13741,
+    7266,
+    1225
+  ],
   "adjacent_k52_exact_rank": 8919,
   "adjacent_k52_source_orbit_count": 189,
   "adjacent_k52_target_orbit_count": 875,
+  "all_quotient_dimensions_at_least_seven": {
+    "cannot_improve_lower_49": true,
+    "checked_pair_count": 1204,
+    "maximum": {
+      "central_rank_ceiling": 54331402125,
+      "incoming_special_rank": 49389566971,
+      "integer_ceiling": 47,
+      "one_term_rank_cap": 1177066055,
+      "quotient_dimension": 31,
+      "ratio_denominator": 930487,
+      "ratio_numerator": 42949725,
+      "wedge_degree": 20
+    },
+    "quotient_dimension_range": [
+      7,
+      49
+    ]
+  },
   "ambient_matrix_shape": [
     42875,
     42875
@@ -11,9 +38,11 @@
     "The modular full-rank minors lift to characteristic zero.",
     "The one-term cap uses only the seven-dimensional projected factor span.",
     "The adjacent-map rank and generic semicontinuity bound every seven-dimensional projected central rank by 33956.",
+    "Inactive-wedge convolution extends the adjacent-map bound to every quotient dimension from seven through forty-nine.",
+    "The resulting family-wide integer ceiling is 47, so these projected Koszul routes cannot improve the established lower bound 49.",
     "This is an ordinary Chow-rank flattening and makes no border-rank claim."
   ],
-  "elapsed_seconds": 1.7074276999919675,
+  "elapsed_seconds": 3.252789499994833,
   "flattening_lower_bound": 41,
   "fourier_block_shape": [
     875,
@@ -24,63 +53,451 @@
   "output_degree": 4,
   "prime_replays": [
     {
-      "adjacent_k52_character_rows": [
+      "adjacent_k5_rank_by_wedge": [
+        441,
+        3038,
+        8919,
+        14413,
+        13741,
+        7266,
+        1225
+      ],
+      "adjacent_k5_rows_by_wedge": [
         {
-          "block_rank": 183,
-          "character": [
-            0,
-            0
+          "character_rows": [
+            {
+              "block_rank": 9,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "trivial",
-          "multiplicity": 1
+          "source_orbit_count": 9,
+          "target_orbit_count": 175,
+          "total_rank": 441,
+          "wedge_degree": 0
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            0
+          "character_rows": [
+            {
+              "block_rank": 62,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "one_nonzero_coordinate",
-          "multiplicity": 12
+          "source_orbit_count": 63,
+          "target_orbit_count": 525,
+          "total_rank": 3038,
+          "wedge_degree": 1
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            1
+          "character_rows": [
+            {
+              "block_rank": 183,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_1",
-          "multiplicity": 6
+          "source_orbit_count": 189,
+          "target_orbit_count": 875,
+          "total_rank": 8919,
+          "wedge_degree": 2
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            6
+          "character_rows": [
+            {
+              "block_rank": 295,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 295,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_minus_1",
-          "multiplicity": 6
+          "source_orbit_count": 315,
+          "target_orbit_count": 875,
+          "total_rank": 14413,
+          "wedge_degree": 3
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            2
+          "character_rows": [
+            {
+              "block_rank": 283,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 283,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_2_or_4",
-          "multiplicity": 12
+          "source_orbit_count": 315,
+          "target_orbit_count": 525,
+          "total_rank": 13741,
+          "wedge_degree": 4
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            3
+          "character_rows": [
+            {
+              "block_rank": 144,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 144,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_3_or_5",
-          "multiplicity": 12
+          "source_orbit_count": 189,
+          "target_orbit_count": 175,
+          "total_rank": 7266,
+          "wedge_degree": 5
+        },
+        {
+          "character_rows": [
+            {
+              "block_rank": 25,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
+          ],
+          "source_orbit_count": 63,
+          "target_orbit_count": 25,
+          "total_rank": 1225,
+          "wedge_degree": 6
         }
       ],
-      "adjacent_k52_total_rank": 8919,
       "character_rows": [
         {
           "block_rank": 686,
@@ -142,63 +559,451 @@
       "total_rank": 33920
     },
     {
-      "adjacent_k52_character_rows": [
+      "adjacent_k5_rank_by_wedge": [
+        441,
+        3038,
+        8919,
+        14413,
+        13741,
+        7266,
+        1225
+      ],
+      "adjacent_k5_rows_by_wedge": [
         {
-          "block_rank": 183,
-          "character": [
-            0,
-            0
+          "character_rows": [
+            {
+              "block_rank": 9,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 9,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "trivial",
-          "multiplicity": 1
+          "source_orbit_count": 9,
+          "target_orbit_count": 175,
+          "total_rank": 441,
+          "wedge_degree": 0
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            0
+          "character_rows": [
+            {
+              "block_rank": 62,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 62,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "one_nonzero_coordinate",
-          "multiplicity": 12
+          "source_orbit_count": 63,
+          "target_orbit_count": 525,
+          "total_rank": 3038,
+          "wedge_degree": 1
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            1
+          "character_rows": [
+            {
+              "block_rank": 183,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 182,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_1",
-          "multiplicity": 6
+          "source_orbit_count": 189,
+          "target_orbit_count": 875,
+          "total_rank": 8919,
+          "wedge_degree": 2
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            6
+          "character_rows": [
+            {
+              "block_rank": 295,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 295,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 294,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_minus_1",
-          "multiplicity": 6
+          "source_orbit_count": 315,
+          "target_orbit_count": 875,
+          "total_rank": 14413,
+          "wedge_degree": 3
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            2
+          "character_rows": [
+            {
+              "block_rank": 283,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 283,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 280,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_2_or_4",
-          "multiplicity": 12
+          "source_orbit_count": 315,
+          "target_orbit_count": 525,
+          "total_rank": 13741,
+          "wedge_degree": 4
         },
         {
-          "block_rank": 182,
-          "character": [
-            1,
-            3
+          "character_rows": [
+            {
+              "block_rank": 144,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 144,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 149,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
           ],
-          "label": "ratio_3_or_5",
-          "multiplicity": 12
+          "source_orbit_count": 189,
+          "target_orbit_count": 175,
+          "total_rank": 7266,
+          "wedge_degree": 5
+        },
+        {
+          "character_rows": [
+            {
+              "block_rank": 25,
+              "character": [
+                0,
+                0
+              ],
+              "label": "trivial",
+              "multiplicity": 1
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                0
+              ],
+              "label": "one_nonzero_coordinate",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                1
+              ],
+              "label": "ratio_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                6
+              ],
+              "label": "ratio_minus_1",
+              "multiplicity": 6
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                2
+              ],
+              "label": "ratio_2_or_4",
+              "multiplicity": 12
+            },
+            {
+              "block_rank": 25,
+              "character": [
+                1,
+                3
+              ],
+              "label": "ratio_3_or_5",
+              "multiplicity": 12
+            }
+          ],
+          "source_orbit_count": 63,
+          "target_orbit_count": 25,
+          "total_rank": 1225,
+          "wedge_degree": 6
         }
       ],
-      "adjacent_k52_total_rank": 8919,
       "character_rows": [
         {
           "block_rank": 686,
@@ -262,9 +1067,9 @@
   ],
   "projection": "x_ij -> e_(i+j mod 7)",
   "rank_49_threshold": 40768,
-  "schema_version": 1,
+  "schema_version": 2,
   "source_orbit_count": 875,
-  "status": "EXACT_CYCLIC_PROJECTED_KOSZUL_RANK",
+  "status": "EXACT_PROJECTED_KOSZUL_ROUTE_BARRIER",
   "strictly_exceeds_49_terms": false,
   "target_orbit_count": 875,
   "total_rank": 33920,

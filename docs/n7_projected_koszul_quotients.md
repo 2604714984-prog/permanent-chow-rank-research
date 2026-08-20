@@ -20,9 +20,16 @@ boundary:
 - none reaches the lower-50 threshold
   \(49\cdot832=40768\).
 
-In fact the adjacent (K_{5,2}) calculation turns this observation into a
-universal route barrier: **no seven-dimensional projected (K_{4,3})
-flattening can give more than lower (41)**.
+In fact the adjacent (K_{5,*}) calculations turn this observation into a
+larger universal route barrier:
+
+- no seven-dimensional projected (K_{4,3}) flattening gives more than
+  lower (41);
+- after adjoining inactive quotient directions and checking every wedge
+  degree, **no projected (K_{4,p}) flattening with quotient dimension
+  (7\leq k\leq49) can improve the established lower bound (49)**.
+
+The largest capacity anywhere in this family has integer ceiling (47).
 
 The ordinary bound remains
 
@@ -108,6 +115,61 @@ Therefore every seven-dimensional projected flattening in this family obeys
 
 This is a route-capacity theorem, not merely a negative sample search.
 
+## All quotient dimensions from 7 through 49
+
+The cyclic seven-dimensional calculation supplies the exact adjacent ranks
+
+\[
+(r_{5,0},\ldots,r_{5,6})
+=(441,3038,8919,14413,13741,7266,1225).
+\]
+
+Both split primes give the same seven values.  Now let (Z) have dimension
+(k\geq7), specialize seven directions to the cyclic quotient, and leave
+(k-7) directions inactive.  Splitting the exterior power by the number of
+inactive wedge directions gives the exact special adjacent rank
+
+\[
+R_{\rm in}(k,p)=
+\sum_s {k-7\choose s}r_{5,p-1-s}.
+\]
+
+Rank is maximal on a nonempty open subset of
+\(\operatorname{Hom}(V,Z)\).  The maximal-rank opens for consecutive Koszul
+arrows intersect, and their composition is zero.  Consequently every
+projected central arrow satisfies
+
+\[
+\operatorname{rank}K^\pi_{4,p}
+\leq
+\min\left\{
+1225{k\choose p}-R_{\rm in}(k,p),
+1225{k\choose p+1}
+\right\}.
+\]
+
+For one independent seven-factor Chow term, the seven active ranks are
+
+\[
+(35,224,595,832,595,224,35,0),
+\]
+
+and the exact cap after adjoining inactive directions is the corresponding
+binomial convolution.  Dependent-factor terms are specializations and cannot
+increase it.
+
+The certificate checks all (1204) pairs
+\(7\leq k\leq49\), (0\leq p<k\) with exact integer arithmetic.  The unique
+largest ratio occurs at ((k,p)=(31,20)):
+
+\[
+\frac{54{,}331{,}402{,}125}{1{,}177{,}066{,}055}
+=\frac{42{,}949{,}725}{930{,}487}\approx46.1584.
+\]
+
+Its integer ceiling is (47).  Thus this entire (k\geq7) projected-Koszul
+family is now closed as a route to lower (50).
+
 ## Seven-character search
 
 More generally, choose seven characters from the forty-nine characters of
@@ -144,7 +206,8 @@ one-second cyclic certificate.
 
 This is an ordinary matrix-rank computation.  It gives no border-rank claim.
 The finite character search does not classify arbitrary nonequivariant
-quotients; nevertheless, the adjacent-map argument supplies the stated
-universal ceiling for every seven-dimensional quotient.  It says nothing about
-dimensions nine and above.  Numerical CP-ALS, homotopy, and sparse-LU probes
-remain discovery diagnostics and are not used in the theorem statement.
+quotients; nevertheless, the adjacent-map and inactive-wedge argument supplies
+the stated universal ceiling for every quotient dimension from seven through
+forty-nine.  Quotient dimensions below seven are not included in the unified
+barrier.  Numerical CP-ALS, homotopy, and sparse-LU probes remain discovery
+diagnostics and are not used in the theorem statement.

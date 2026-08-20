@@ -46,6 +46,29 @@ class ProjectedKoszulQuotientTests(unittest.TestCase):
             {row["total_rank"] for row in self.cyclic["prime_replays"]},
             {33_920},
         )
+        self.assertEqual(
+            self.cyclic["active_cyclic_adjacent_rank_by_wedge"],
+            [441, 3_038, 8_919, 14_413, 13_741, 7_266, 1_225],
+        )
+
+    def test_all_quotient_dimensions_route_barrier(self):
+        scan = self.cyclic["all_quotient_dimensions_at_least_seven"]
+        self.assertEqual(scan["quotient_dimension_range"], [7, 49])
+        self.assertEqual(scan["checked_pair_count"], 1_204)
+        self.assertTrue(scan["cannot_improve_lower_49"])
+        self.assertEqual(
+            scan["maximum"],
+            {
+                "central_rank_ceiling": 54_331_402_125,
+                "incoming_special_rank": 49_389_566_971,
+                "integer_ceiling": 47,
+                "one_term_rank_cap": 1_177_066_055,
+                "quotient_dimension": 31,
+                "ratio_denominator": 930_487,
+                "ratio_numerator": 42_949_725,
+                "wedge_degree": 20,
+            },
+        )
 
     def test_fourier_multiplicities_cover_all_characters(self):
         self.assertEqual(self.cyclic["character_multiplicity_sum"], 49)
@@ -84,6 +107,14 @@ class ProjectedKoszulQuotientTests(unittest.TestCase):
             [row["character_rows"] for row in self.cyclic["prime_replays"]],
         )
         self.assertEqual(live["adjacent_k52_exact_rank"], 8_919)
+        self.assertEqual(
+            live["active_cyclic_adjacent_rank_by_wedge"],
+            self.cyclic["active_cyclic_adjacent_rank_by_wedge"],
+        )
+        self.assertEqual(
+            live["all_quotient_dimensions_at_least_seven"],
+            self.cyclic["all_quotient_dimensions_at_least_seven"],
+        )
 
     @unittest.skipUnless(
         os.environ.get("RUN_EXPENSIVE_REPLAYS") == "1",
