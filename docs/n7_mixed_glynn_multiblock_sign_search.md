@@ -30,6 +30,42 @@ Every one of the (64^3=262144) three-block candidates has
 by a loss of derivative-space dimension; they are a labelled compatibility
 failure.
 
+## Complete packets with at most three sign types
+
+The block-local experiments suggest that the relevant datum is the partition
+of the seven row blocks by their sign type, rather than which initial blocks
+were changed.  Two further exhaustive searches test that formulation on the
+entire seven-block packet.
+
+For at most two sign types, row-block symmetry leaves
+
+\[
+64+6{64\choose2}=12160
+\]
+
+representatives.  Their exact classification is:
+
+- all seven blocks have one common sign type: 64 packets, intersection 7;
+- the multiplicities are (6+1): 4032 packets, intersection 1;
+- every other two-type split: 8064 packets, intersection 0.
+
+A common sign change acts simultaneously on all seven blocks.  Normalize it
+away in the exactly-three-type case.  Choosing the other two nonidentity sign
+types and a positive composition of seven gives
+
+\[
+{63\choose2}{6\choose2}=29295
+\]
+
+representatives.  Every one has intersection zero.  Again all derivative
+spaces have rank 336.
+
+Consequently the diagonal-sign endpoint is completely classified for packets
+using at most three distinct sign types.  The data support the sharper local
+rule that a target block survives precisely when the other six graph blocks
+have one common sign type.  That rule is the next computation target; it is
+not promoted here beyond the exhausted families.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -74,8 +110,8 @@ frozen exhaustive summaries and the exact base-64 indexing helper.
 
 ## Boundary
 
-This is a complete theorem for the stated diagonal-sign family only.  It does
-not cover four or more independently changed blocks, coordinate permutations,
+This is a complete theorem for diagonal-sign packets with at most three sign
+types.  It does not cover four or more sign types, coordinate permutations,
 general \(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B
 packets.  It therefore does not yet prove ordinary lower (50) or a
 border-rank statement.  Its useful new content is the exact multiblock
