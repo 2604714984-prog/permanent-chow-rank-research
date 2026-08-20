@@ -66,6 +66,59 @@ rule that a target block survives precisely when the other six graph blocks
 have one common sign type.  That rule is the next computation target; it is
 not promoted here beyond the exhausted families.
 
+## Complete local classification and the full sign family
+
+The target (E_6) splits into seven different row multidegrees, indexed by
+the omitted row.  In one such block, only the forty-two graph derivatives in
+the same omitted-row block can contribute; the seven fixed rank-six terms lie
+in different multidegrees.  Thus the global intersection is the direct sum of
+seven local intersections.
+
+For a fixed omitted row, the remaining six block signs form a multiset in
+\((\{\mathord-1,1\}^6)^6\).  Common sign multiplication normalizes one marked
+type to the all-positive vector, and row-block permutation removes the order.
+For exactly (t) types the streamed candidate count is
+
+\[
+{63\choose t-1}{5\choose t-1},\qquad 1\leq t\leq6.
+\]
+
+The complete exact results are
+
+\[
+\begin{array}{c|r|c|c}
+t&\text{candidates}&\dim H_{6,\mathrm{local}}&
+\dim(E_{6,\mathrm{local}}\cap H_{6,\mathrm{local}})\\ \hline
+1&1&42&1\\
+2&315&42&0\\
+3&19530&42&0\\
+4&397110&42&0\\
+5&2978325&42&0\\
+6&7028847&42&0.
+\end{array}
+\]
+
+The type-four, type-five, and type-six replays use respectively 397,110,
+2,978,325, and 7,028,847 candidates.  The last two took 289.60 and 644.54
+seconds with twenty WSL workers.  Combination unranking generates each
+candidate on demand; no million-element container is formed.
+
+It follows for **every** assignment of diagonal sign types to the seven graph
+blocks that
+
+\[
+\dim(E_6\cap H_6)=
+\begin{cases}
+7,&\text{all seven signs are equal},\\
+1,&\text{one block is exceptional and the other six are equal},\\
+0,&\text{otherwise}.
+\end{cases}
+\]
+
+In particular the synchronized mixed-Glynn dictionary with arbitrary
+independent diagonal sign changes never contains all (49) permanent sextic
+targets.  This closes the entire diagonal-sign subfamily of endpoint B.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -108,12 +161,19 @@ python -m unittest tests.test_n7_mixed_glynn_multiblock_sign_search -v
 The three-block replay is intentionally manual; ordinary tests inspect the
 frozen exhaustive summaries and the exact base-64 indexing helper.
 
+The local type-six replay is likewise manual:
+
+```bash
+python scripts/n7_mixed_glynn_local_sign_multiset_search.py \
+  --type-count 6 --max-candidates 7100000 --evaluation-columns 64 \
+  --workers 20 --verify-json data/n7_mixed_glynn_local_sign_t6.json
+```
+
 ## Boundary
 
-This is a complete theorem for diagonal-sign packets with at most three sign
-types.  It does not cover four or more sign types, coordinate permutations,
-general \(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B
-packets.  It therefore does not yet prove ordinary lower (50) or a
-border-rank statement.  Its useful new content is the exact multiblock
-compatibility pattern, which is invisible to the earlier single-block rank
-test.
+This is a complete theorem for all diagonal-sign packets in the synchronized
+mixed-Glynn dictionary.  It does not cover coordinate permutations, general
+\(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B packets.  It
+therefore does not yet prove ordinary lower (50) or a border-rank statement.
+Its useful new content is the exact multiblock compatibility classification,
+which is invisible to the earlier single-block rank test.

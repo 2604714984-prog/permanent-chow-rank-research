@@ -36,6 +36,16 @@ class MixedGlynnMultiblockSignTests(unittest.TestCase):
         cls.three_type = json.loads(
             (ROOT / "data" / "n7_mixed_glynn_three_type_sign_search.json").read_text()
         )
+        cls.local = {
+            type_count: json.loads(
+                (
+                    ROOT
+                    / "data"
+                    / f"n7_mixed_glynn_local_sign_t{type_count}.json"
+                ).read_text()
+            )
+            for type_count in range(1, 7)
+        }
 
     def test_two_block_exhaustion(self):
         self.assertEqual(self.b2["candidate_count"], 64**2)
@@ -86,6 +96,24 @@ class MixedGlynnMultiblockSignTests(unittest.TestCase):
         three = load_script_from_name("n7_mixed_glynn_three_type_sign_search.py")
         self.assertEqual(len(two.candidate_rows()), 12_160)
         self.assertEqual(len(three.candidate_rows()), 29_295)
+
+    def test_complete_local_sign_multiset_exhaustion(self):
+        expected_counts = [1, 315, 19_530, 397_110, 2_978_325, 7_028_847]
+        for type_count, expected in enumerate(expected_counts, start=1):
+            row = self.local[type_count]
+            self.assertEqual(row["candidate_count"], expected)
+            self.assertEqual(row["local_derivative_rank_histogram"], {"42": expected})
+            expected_intersection = {"1": 1} if type_count == 1 else {"0": expected}
+            self.assertEqual(
+                row["local_target_intersection_histogram"], expected_intersection
+            )
+
+    def test_local_candidate_decoder_boundaries(self):
+        module = load_script_from_name("n7_mixed_glynn_local_sign_multiset_search.py")
+        self.assertEqual(module.unrank_combination(63, 5, 0), (0, 1, 2, 3, 4))
+        self.assertEqual(
+            module.unrank_combination(63, 5, 7_028_846), (58, 59, 60, 61, 62)
+        )
 
 
 if __name__ == "__main__":
