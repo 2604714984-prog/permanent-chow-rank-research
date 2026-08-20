@@ -10,13 +10,14 @@ Last updated: **2026-08-20**
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
 active branch: research/quartic-six-term-frontier
-active PR: PENDING CREATION
+active PR: #89
+PR URL: https://github.com/2604714984-prog/permanent-chow-rank-research/pull/89
 parent branch: research/quartic-natural-span-barriers
 parent PR: #88
 parent exact head: 729669c4ab2fd27c1bbf13d6ea519363a1e643f5
-publication theorem head: PENDING COMMIT
-publication receipt head: PENDING COMMIT
-stack ancestry: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> current
+publication theorem head: 38e4af25897e29df605333152c7fb6c1e47af87b
+publication receipt head: THIS HANDOFF UPDATE; exact SHA recorded by the following pointer commit
+stack ancestry: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89
 ```
 
 Keep the stack narrow. Do not introduce a manager, registry, dispatcher,
@@ -40,10 +41,10 @@ Therefore
 \boxed{6\le\mu(6,4)\le8.}
 \]
 
-Six and seven arbitrary blocks remain open.  Eight blocks are nonzero by the
+Six and seven arbitrary blocks remain open. Eight blocks are nonzero by the
 padded order-four decomposition.
 
-## 3. Results synchronized in this branch
+## 3. Results synchronized in PR #89
 
 ### 3.1 Five-block zero theorem
 
@@ -101,7 +102,7 @@ Theorem core:
 ### 3.4 Common-source slices and six-element circuit
 
 All fixed four-column slices of one component are images of the same source
-vector in the 15-dimensional squarefree factor-label space.  An isolated slice
+vector in the 15-dimensional squarefree factor-label space. An isolated slice
 is insufficient: one block can already have a fixed slice equal to `perm_4`,
 with 232 repeated-column defects elsewhere.
 
@@ -123,20 +124,24 @@ docs/general_quartic_five_to_six_term_frontier_ledger_delta.md
 RESEARCH_HANDOFF.md
 ```
 
-The detailed local replay packets remain the source of the named scripts,
-frozen JSON payloads, focused tests, and independent implementations.  This
-remote consolidation records the mathematical claims, strict boundaries,
-theorem hashes, and continuation interface without misrepresenting hosted CI.
+## 5. Validation and hosted CI
 
-## 5. Validation boundary
-
-The retained packets report exact primary and independent replays, normal and
-`python -O` equality, frozen JSON comparison, focused unit tests,
+The retained local packets report exact primary and independent replays,
+normal and `python -O` equality, frozen JSON comparison, focused unit tests,
 `py_compile`, and SHA-256 manifests.
 
-Hosted CI for this branch is pending until the final publication head is
-created.  Do not describe the repository-wide suite as green before the run
-finishes.
+The theorem head triggered:
+
+```text
+workflow: exact-bound-tests
+run number: 760
+run id: 32346595999
+status at publication receipt: in_progress
+conclusion: pending
+URL: https://github.com/2604714984-prog/permanent-chow-rank-research/actions/runs/32346595999
+```
+
+Do not describe the repository-wide suite as green before the run finishes.
 
 ## 6. Exact next task
 
@@ -172,12 +177,12 @@ literature novelty = NOT ESTABLISHED
 
 Every subsequent mathematical result must be committed to GitHub and this file
 must be updated in the theorem commit or in an immediately following receipt
-commit.  Record the exact branch, PR, theorem head, receipt head, workflow run,
+commit. Record the exact branch, PR, theorem head, receipt head, workflow run,
 and any inherited compatibility failure.
 
 ## 9. Handoff log
 
-### 2026-08-20 -- consolidated five-to-six-term frontier
+### 2026-08-20 -- PR #89 consolidated five-to-six-term frontier
 
 - synchronized the five-block zero theorem;
 - synchronized exact coordinate, separated-frame, and sign-family barriers;
@@ -185,4 +190,5 @@ and any inherited compatibility failure.
 - synchronized the common-source mixed-slice interface;
 - recorded the universal full-support six-element quotient circuit;
 - retained `6<=mu(6,4)<=8` and selected repeated-column circuit compatibility
-  as the next task.
+  as the next task;
+- created Draft PR #89 and triggered Actions run #760.
