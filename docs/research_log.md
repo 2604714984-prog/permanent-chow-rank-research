@@ -3309,3 +3309,23 @@ nonzero \(t\) in characteristic zero and zero local target intersection.  This
 is the first exact non-monomial \(\mathrm{GL}_6\) layer.  Several independent
 shears, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and
 ordinary lower 50 remain open.
+
+## 2026-08-21: two-direction rank-one coordinate shears are excluded
+
+The elementary-shear certificate extends to both rank-one two-direction
+coordinate shapes \(I+sE_{ab}+tE_{ac}\) and
+\(I+sE_{ab}+tE_{cb}\).  There are 60 supports of each shape and five positive
+identity/shear multiplicity splits, hence 600 cases.  Streamed modular
+elimination selects a 42-column invalid-tail minor in every case, and exact
+reconstruction over \(\mathbb Z[s,t]\) gives
+
+\[
+c s^e t^f,\qquad c\ne0,\quad e,f\ge0,\quad e+f>0.
+\]
+
+All 600 cases therefore have invalid-tail rank 42 on \(st\ne0\).  The already
+proved 150 elementary-shear cases cover the two coordinate axes, so every
+\((s,t)\ne(0,0)\) in either shape has zero local target intersection.  The
+claim remains local to identity-versus-one-shear packets; three or more
+directions, higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary
+endpoint B, border rank, and ordinary lower 50 remain open.

@@ -344,6 +344,48 @@ well as its images under a common monomial coordinate change.  It does not yet
 combine several independent shears or classify arbitrary \(\mathrm{GL}_6\)
 transforms.
 
+## Every two-direction rank-one coordinate shear
+
+The next exact layer replaces the elementary shear by either
+
+\[
+ I+sE_{ab}+tE_{ac}\quad(b<c,\ a\notin\{b,c\})
+\]
+
+or its transpose-shaped analogue
+
+\[
+ I+sE_{ab}+tE_{cb}\quad(a<c,\ b\notin\{a,c\}).
+\]
+
+There are \(6\binom52=60\) coordinate supports of each shape.  Keeping all
+five positive identity/shear multiplicity splits gives exactly
+
+\[
+ 2\cdot6\binom52\cdot5=600
+\]
+
+cases.  For each case, streamed elimination at \((s,t)=(1,1)\) selects 42
+repeated-column monomials.  The determinant on those columns is reconstructed
+exactly in \(\mathbb Z[s,t]\) and has the form
+
+\[
+ c s^e t^f,\qquad c\in\mathbb Z\setminus\{0\},\quad e,f\ge0,
+ \quad e+f>0.
+\]
+
+Thus every case has invalid-tail rank 42 when \(s\) and \(t\) are both
+nonzero.  Some selected minors have \(e=0\) or \(f=0\), which is harmless on
+that open torus but is not used to certify the opposite coordinate axis.
+Instead, the exact one-parameter result above covers \(s=0,t\ne0\) and
+\(t=0,s\ne0\).  Consequently every \((s,t)\ne(0,0)\) in characteristic zero
+has zero local permanent-target intersection for these two rank-one
+coordinate-shear shapes.
+
+This is still a two-transform packet theorem.  It does not cover three or more
+directions, a general higher-rank perturbation, arbitrary \(\mathrm{GL}_6\),
+or arbitrary endpoint-B packets.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -449,12 +491,21 @@ python scripts/n7_mixed_glynn_elementary_shear_tail_rank.py \
   --json data/n7_mixed_glynn_elementary_shear_tail_rank.json
 ```
 
+The exact two-direction shear replay is:
+
+```bash
+python scripts/n7_mixed_glynn_two_direction_shear_tail_rank.py \
+  --max-candidates 600 --workers 20 \
+  --json data/n7_mixed_glynn_two_direction_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
-\(\mathrm{GL}_6\) graph transformations, despite additionally closing every
-single elementary-shear two-type packet, or arbitrary endpoint-B packets.  It
-therefore does not yet prove ordinary lower (50) or a border-rank statement.
-Its useful new content is the exact multiblock compatibility classification,
-which is invisible to the earlier single-block rank test.
+\(\mathrm{GL}_6\) graph transformation, despite additionally closing every
+single- and two-direction rank-one coordinate-shear two-type packet, or
+arbitrary endpoint-B packets.  It therefore does not yet prove ordinary lower
+(50) or a border-rank statement.  Its useful new content is the exact
+multiblock compatibility classification, which is invisible to the earlier
+single-block rank test.
