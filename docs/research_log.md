@@ -3446,3 +3446,16 @@ Thus both endpoint families have invalid-tail rank 42.  The middle
 non-unipotent rank-one updates, higher-rank perturbations, general
 \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary lower 50
 remain open.
+
+## 2026-08-21: overlap-two support-size sum seven is complete
+
+Degree-weighted streamed pivot selection gives a single monomial minor in all
+900 \((3,4)\) cases and all 900 \((4,3)\) cases.  Four-worker checkpointed
+elapsed sums were 472.79 and 464.15 seconds.  Combined with the already closed
+\((2,5)/(5,2)\) endpoints, every overlap-two support-size-sum-seven family now
+has invalid-tail rank 42 for every nonzero nilpotent update.
+
+The next overlap-two layer is support-size sum eight:
+\((2,6),(3,5),(4,4),(5,3),(6,2)\).  Overlap three or more, non-unipotent
+rank-one updates, higher-rank perturbations, general \(\mathrm{GL}_6\),
+arbitrary endpoint B, border rank, and ordinary lower 50 remain open.

@@ -5,7 +5,15 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SIZE_PAIRS = ((2, 4), (3, 3), (4, 2), (2, 5), (5, 2))
+SIZE_PAIRS = (
+    (2, 4),
+    (3, 3),
+    (4, 2),
+    (2, 5),
+    (3, 4),
+    (4, 3),
+    (5, 2),
+)
 
 
 def load_script():
@@ -39,6 +47,8 @@ class OverlapTwoRankOneShearTailRankTests(unittest.TestCase):
             (3, 3): 900,
             (4, 2): 450,
             (2, 5): 300,
+            (3, 4): 900,
+            (4, 3): 900,
             (5, 2): 300,
         }
         for pair, payload in self.payloads.items():
@@ -55,6 +65,8 @@ class OverlapTwoRankOneShearTailRankTests(unittest.TestCase):
             (3, 3): {1: 567, 2: 333},
             (4, 2): {1: 294, 2: 156},
             (2, 5): {1: 229, 2: 71},
+            (3, 4): {1: 900},
+            (4, 3): {1: 900},
             (5, 2): {1: 300},
         }
         for pair, payload in self.payloads.items():

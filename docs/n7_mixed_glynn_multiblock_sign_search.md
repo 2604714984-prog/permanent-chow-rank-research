@@ -577,10 +577,22 @@ single monomial minor in all 300 cases.  All coefficient faces reduce to the
 certified support-size-sum-six or lower layers.  Hence both endpoint families
 have invalid-tail rank 42 for every nonzero nilpotent update.
 
-This does not yet cover the middle \((3,4)/(4,3)\) families at support-size sum
-seven, support-size sum eight, overlap three or more, non-unipotent rank-one
-updates, higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary
-endpoint-B packets.
+This endpoint calculation by itself does not cover the middle
+\((3,4)/(4,3)\) families treated next.
+
+## Completion of overlap-two support-size sum seven
+
+The two middle families \((3,4)\) and \((4,3)\) each have 900 cases.  With the
+same degree-weighted streamed selection, every one of the 1,800 exact matrices
+has a single monomial 42-column determinant.  Their checkpointed elapsed sums
+were 472.79 and 464.15 seconds with four workers.  Together with the endpoint
+families, this closes all four overlap-two support-size-sum-seven shapes.
+
+All proper coefficient faces reduce to the support-size-sum-six or lower
+certificates.  The remaining overlap-two frontier is support-size sum eight:
+\((2,6),(3,5),(4,4),(5,3),(6,2)\).  Overlap three or more,
+non-unipotent rank-one updates, higher-rank perturbations, arbitrary
+\(\mathrm{GL}_6\), and arbitrary endpoint-B packets also remain open.
 
 ## Overlap-two supports of sizes two and three
 
@@ -802,7 +814,7 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 overlap-two families with support-size sum six.  It also does not cover
-the middle support-size-sum-seven overlap-two families or arbitrary endpoint-B
-packets, and therefore does not yet prove ordinary lower (50) or a border-rank
+support-size-sum-eight overlap-two families or arbitrary endpoint-B packets,
+and therefore does not yet prove ordinary lower (50) or a border-rank
 statement.  Its useful new content is the exact multiblock compatibility
 classification, which is invisible to the earlier single-block rank test.
