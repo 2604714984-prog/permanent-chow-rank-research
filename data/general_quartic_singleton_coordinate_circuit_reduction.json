@@ -1,0 +1,332 @@
+{
+  "theorem_core": {
+    "classification": "POSITIVE_SINGLETON_COORDINATE_SUPPORT_REDUCTION_AND_FIRST_ORDER_BARRIER",
+    "combined_coordinate_boundary": {
+      "all_positive_coordinate_regular_two_jets_closed": true,
+      "positive_singleton_two_jet_core": "CURRENT",
+      "two_supported_two_jet_core": "0435988b71e2697ba07a8eed4290b4b58be3792612d2737d4126f72a914ff2a9",
+      "zero_leading_matching_projection": "OPEN"
+    },
+    "circuit_normal_forms": {
+      "all_five_column_minors_are_units": true,
+      "continuous_parameter_counts": {
+        "double_edge_tail": 1,
+        "endpoint_marked_p5": 0,
+        "square_lollipop": 1
+      },
+      "normal_forms": {
+        "double_edge_tail": [
+          {
+            "coefficients": [
+              1
+            ],
+            "support": [
+              4
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              1
+            ],
+            "support": [
+              3,
+              4
+            ]
+          },
+          {
+            "coefficients": [
+              1,
+              1
+            ],
+            "support": [
+              0,
+              3
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              1
+            ],
+            "support": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              "a"
+            ],
+            "support": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficients": [
+              1,
+              "-1-a"
+            ],
+            "support": [
+              1,
+              2
+            ]
+          }
+        ],
+        "endpoint_marked_p5": [
+          {
+            "coefficients": [
+              1
+            ],
+            "support": [
+              0
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              1
+            ],
+            "support": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              1
+            ],
+            "support": [
+              1,
+              2
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              1
+            ],
+            "support": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              1
+            ],
+            "support": [
+              3,
+              4
+            ]
+          },
+          {
+            "coefficients": [
+              -1
+            ],
+            "support": [
+              4
+            ]
+          }
+        ],
+        "square_lollipop": [
+          {
+            "coefficients": [
+              -1
+            ],
+            "support": [
+              3
+            ]
+          },
+          {
+            "coefficients": [
+              1,
+              1
+            ],
+            "support": [
+              2,
+              3
+            ]
+          },
+          {
+            "coefficients": [
+              1,
+              -1
+            ],
+            "support": [
+              0,
+              2
+            ]
+          },
+          {
+            "coefficients": [
+              1,
+              "a"
+            ],
+            "support": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficients": [
+              -1,
+              "-1-a"
+            ],
+            "support": [
+              0,
+              1
+            ]
+          },
+          {
+            "coefficients": [
+              1,
+              1
+            ],
+            "support": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      "parameter_nonvanishing_conditions": {
+        "double_edge_tail": [
+          "a",
+          "1+a"
+        ],
+        "endpoint_marked_p5": [],
+        "square_lollipop": [
+          "a",
+          "1+a"
+        ]
+      }
+    },
+    "field": "characteristic_zero",
+    "first_order_barrier": {
+      "global_maximum_matching_support": 5,
+      "one_factor_variation_creates_new_matching": false,
+      "perm4_matching_support": 24,
+      "regular_first_order_perm4_lift_impossible": true,
+      "source_variation_new_matching_outside_frame": false
+    },
+    "positive_singleton_support_classification": {
+      "abstract_pattern_survival": {
+        "one_singleton": {
+          "double_edge_tail": "EMBEDDABLE",
+          "marked_c5": "REJECTED_ODD_CYCLE",
+          "square_lollipop": "EMBEDDABLE",
+          "triangle_tail": "REJECTED_ODD_CYCLE"
+        },
+        "two_singletons": {
+          "endpoint_marked_p5": "EMBEDDABLE"
+        }
+      },
+      "embedding_counts_fixed_identity": {
+        "double_edge_tail": 888,
+        "endpoint_marked_p5": 696,
+        "square_lollipop": 216
+      },
+      "families": {
+        "one_singleton": [
+          "double_edge_tail",
+          "square_lollipop"
+        ],
+        "two_singletons": [
+          "endpoint_marked_p5"
+        ]
+      },
+      "incidence_argument": {
+        "matching_vertices": 5,
+        "maximum_singletons": 2,
+        "minimum_incidence_for_rank_five": 10,
+        "total_incidence_formula": "12-s"
+      },
+      "maximum_singleton_components": 2,
+      "row_column_orbit_counts": {
+        "double_edge_tail": 29,
+        "endpoint_marked_p5": 18,
+        "square_lollipop": 5
+      }
+    },
+    "second_order_envelope": {
+      "decorated_configuration_counts": {
+        "double_edge_tail": 3770,
+        "endpoint_marked_p5": 304200,
+        "square_lollipop": 650
+      },
+      "family_maximum_support": {
+        "double_edge_tail": 22,
+        "endpoint_marked_p5": 23,
+        "square_lollipop": 22
+      },
+      "global_maximum_support": 23,
+      "histograms": {
+        "double_edge_tail": {
+          "19": 744,
+          "20": 2020,
+          "21": 970,
+          "22": 36
+        },
+        "endpoint_marked_p5": {
+          "19": 61504,
+          "20": 128996,
+          "21": 105120,
+          "22": 8472,
+          "23": 108
+        },
+        "square_lollipop": {
+          "19": 124,
+          "20": 254,
+          "21": 260,
+          "22": 12
+        }
+      },
+      "perm4_matching_support": 24,
+      "regular_second_order_perm4_lift_impossible": true,
+      "rule": "M is allowed if some component frame contains at least three edges of M, or some leading matching shares at least two edges with M"
+    },
+    "singleton_coordinate_frames": {
+      "diagonal_stabilizer_frame_orbits": 10,
+      "diagonal_stabilizer_orbit_sizes": [
+        4,
+        6,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        24,
+        24
+      ],
+      "distinct_frame_size_distribution": {
+        "4": 10,
+        "5": 60,
+        "6": 60
+      },
+      "rooted_adjacent_configurations": 780,
+      "rooted_adjacent_frame_orbits": 41,
+      "singleton_frames_retained": 130,
+      "two_supported_frames_removed": 6,
+      "unused_factor_multisets_total": 136
+    },
+    "strict_boundary": {
+      "higher_order_or_noncoordinate_lifts": "OPEN",
+      "literature_novelty": "NOT_ESTABLISHED",
+      "mu_6_4": "OPEN_IN_[6,8]",
+      "new_border_rank_bound": false,
+      "new_unrestricted_chow_rank_bound": false,
+      "positive_singleton_coordinate_regular_second_order": "CLOSED",
+      "positive_singleton_coordinate_supports": "CLASSIFIED",
+      "positive_singleton_regular_first_order": "CLOSED",
+      "six_block_zero": false,
+      "zero_leading_matching_projection": "OPEN"
+    }
+  },
+  "theorem_core_sha256": "a17aa6de25348a88773f81a05d6d2eaa9212d1d8d213804a365b3015a1f7e99f"
+}
