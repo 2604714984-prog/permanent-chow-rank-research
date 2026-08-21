@@ -1,6 +1,6 @@
 # perm7 higher-overlap resume state
 
-This note records the exact closure state after completing every allowed
+This note records the exact dense-stratum state after completing every allowed
 overlap-four-through-six family on 2026-08-21.  These are restricted endpoint
 computations, not a proof of ordinary lower 50.
 
@@ -24,6 +24,18 @@ All 770 rows have status
 `DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS`.  Of the 770 selected
 determinants, 767 are monomials.  Each of the other three factors only over
 coordinate parameters and the leading right-core boundary form.
+
+These 770 single-minor dense-chart conclusions survive the subsequent ideal
+audit.  A separate recursive-boundary qualification is necessary: six older
+lower-overlap certificates used a multivariate gcd to cover 1,189 two-minor
+rows, which does not by itself exclude codimension-two common zeros.  Exact
+Laurent reductions have now repaired the 56 overlapping-\((2,2)\) rows and
+the 330 overlapping-\((2,3)/(3,2)\) rows.  The remaining 803 rows in the
+\((2,4),(2,5),(3,3),(4,2)\) families still require reconstructed minors and a
+Laurent-ideal or saturation certificate.  Until then, cite the 770 result as
+a dense exact-support theorem, not as a completed recursive boundary theorem.
+The machine-readable gate is
+`data/n7_mixed_glynn_lower_overlap_torus_audit_status.json`.
 
 The new complete certificate is
 `data/n7_mixed_glynn_overlap_four_55_nilpotent_shear_tail_rank.json`.  Its
@@ -58,12 +70,12 @@ Regression tests freeze both formats.
 
 ## Verification state
 
-Every family in the generic overlap-four-through-six inventory is now
-represented by a complete exact certificate.  The higher-overlap recursive
-factor and support-coverage tests load all ten certificates and freeze the
-770-row inventory.
+Every family in the generic overlap-four-through-six inventory is represented
+by a complete single-minor dense-chart certificate.  The higher-overlap tests
+load all ten certificates and freeze the 770-row inventory.  Full recursive
+face closure remains gated on the 803-row lower-overlap saturation audit.
 
 No matching Python process remains.  The unresolved boundary
 still includes arbitrary endpoint-B packets, general \(\mathrm{GL}_6\),
-non-unipotent rank-one updates, higher-rank perturbations, ordinary lower 50,
-and border rank.
+non-unipotent rank-one updates beyond the completed coincident \((2,2)\)
+family, higher-rank perturbations, ordinary lower 50, and border rank.

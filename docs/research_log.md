@@ -3640,3 +3640,38 @@ This closes the finite higher-overlap layer only for rank-one nilpotent shears
 in the synchronized mixed-Glynn endpoint model.  General \(\mathrm{GL}_6\),
 arbitrary endpoint-B packets, non-unipotent or higher-rank perturbations,
 ordinary lower 50, and border rank remain open.
+
+## 2026-08-21: the lower-overlap torus argument was audited and repaired in two layers
+
+A proof audit found that 1,189 older lower-overlap rows used a multivariate
+gcd of two maximal minors as if it excluded every common zero on a parameter
+torus.  That inference is not valid in general: a multivariate gcd controls
+common divisors but can miss a codimension-two common zero.  The 770 new
+higher-overlap rows are unaffected because each uses a single minor.
+
+For the 56 two-minor overlapping-\((2,2)\) rows, removing the Laurent monomial
+reduces every saved determinant to a polynomial in \(z=rt\), and the exact
+gcd in \(\mathbb Q[z]\) is one.  The same reduction repairs all 330 two-minor
+overlapping-\((2,3)/(3,2)\) rows; the extra parameter \(w\) occurs only in the
+removed monomial.  Exact replay certificates now freeze both Bezout audits.
+The remaining 803 rows in \((2,4),(2,5),(3,3),(4,2)\) require determinant
+reconstruction and Laurent-ideal saturation before the earlier recursive
+full-family language can be restored.
+`data/n7_mixed_glynn_lower_overlap_torus_audit_status.json` freezes this as a
+partial 386-of-1,189 audit rather than silently treating the pending rows as
+proved.
+
+## 2026-08-21: coincident (2,2) general rank-one updates completed
+
+For \(u=(1,r)\), \(v=t(s,1)\), the full family has
+\(\binom62\cdot5=75\) coordinate-support and multiplicity cases.  One generic
+exact minor covers 19 cases outright and leaves only the divisor \(1+st=0\)
+in the other 56.  A divisor-specific exact minor closes 36 of those.  In the
+remaining 20 it leaves \(1+rt=0\), where the update matrix becomes the
+invertible monomial matrix \(\left(\begin{smallmatrix}0&t\\t^{-1}&0\end{smallmatrix}\right)\).
+The imported monomial classification therefore closes the final subface.
+
+The proof-grade four-worker replay took 170.61 seconds and has no unresolved
+factor.  This is the first completed non-nilpotent rank-one layer, but it
+remains local to the synchronized two-transform endpoint packet and does not
+prove ordinary lower 50, exact rank 64, or border rank.

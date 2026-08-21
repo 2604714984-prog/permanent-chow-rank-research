@@ -1,0 +1,58 @@
+{
+  "audited_families": [
+    {
+      "audit_certificate": "data/n7_mixed_glynn_overlapping_22_torus_ideal_audit.json",
+      "family": "overlapping_22",
+      "multi_minor_row_count": 56,
+      "source_certificate": "data/n7_mixed_glynn_overlapping_22_nilpotent_shear_tail_rank.json",
+      "status": "EXACT_TORUS_IDEAL_AUDITED"
+    },
+    {
+      "audit_certificate": "data/n7_mixed_glynn_overlapping_23_torus_ideal_audit.json",
+      "family": "overlapping_23_32",
+      "multi_minor_row_count": 330,
+      "source_certificate": "data/n7_mixed_glynn_overlapping_23_nilpotent_shear_tail_rank.json",
+      "status": "EXACT_TORUS_IDEAL_AUDITED"
+    }
+  ],
+  "audited_multi_minor_row_count": 386,
+  "claim_boundary": [
+    "The audited rows have exact Laurent-torus Bezout certificates, not merely multivariate gcd evidence.",
+    "The 803 pending rows prevent a full recursive overlap-two or higher-overlap boundary theorem.",
+    "Single-minor dense-chart certificates are not downgraded by this audit gate."
+  ],
+  "multi_minor_row_count": 1189,
+  "pending_families": [
+    {
+      "family": "24",
+      "multi_minor_row_count": 243,
+      "next_required_evidence": "reconstruct exact minors and prove Laurent-torus ideal emptiness by dimension reduction or saturation",
+      "source_certificate": "data/n7_mixed_glynn_overlap_two_24_nilpotent_shear_tail_rank.json",
+      "status": "PENDING_TORUS_IDEAL_AUDIT"
+    },
+    {
+      "family": "25",
+      "multi_minor_row_count": 71,
+      "next_required_evidence": "reconstruct exact minors and prove Laurent-torus ideal emptiness by dimension reduction or saturation",
+      "source_certificate": "data/n7_mixed_glynn_overlap_two_25_nilpotent_shear_tail_rank.json",
+      "status": "PENDING_TORUS_IDEAL_AUDIT"
+    },
+    {
+      "family": "33",
+      "multi_minor_row_count": 333,
+      "next_required_evidence": "reconstruct exact minors and prove Laurent-torus ideal emptiness by dimension reduction or saturation",
+      "source_certificate": "data/n7_mixed_glynn_overlap_two_33_nilpotent_shear_tail_rank.json",
+      "status": "PENDING_TORUS_IDEAL_AUDIT"
+    },
+    {
+      "family": "42",
+      "multi_minor_row_count": 156,
+      "next_required_evidence": "reconstruct exact minors and prove Laurent-torus ideal emptiness by dimension reduction or saturation",
+      "source_certificate": "data/n7_mixed_glynn_overlap_two_42_nilpotent_shear_tail_rank.json",
+      "status": "PENDING_TORUS_IDEAL_AUDIT"
+    }
+  ],
+  "pending_multi_minor_row_count": 803,
+  "schema_version": 1,
+  "status": "PARTIAL_LOWER_OVERLAP_TORUS_IDEAL_AUDIT_386_OF_1189"
+}
