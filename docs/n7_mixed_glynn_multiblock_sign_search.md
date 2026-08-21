@@ -540,6 +540,33 @@ This does not cover larger overlapping supports, non-unipotent rank-one
 updates, higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary
 endpoint-B packets.
 
+## Overlap-two supports of sizes two and three
+
+Add one coordinate to exactly one side of the preceding orthogonal core.  This
+gives the support shapes \((2,3)\) and \((3,2)\), each with 60 oriented
+coordinate supports and five multiplicity splits.  A convenient three-parameter
+form uses
+
+\[
+u_{\rm core}=(1,r),\qquad
+v_{\rm core}=t(-r,1),
+\]
+
+and an extra coefficient \(w\) on the larger side.  The core pairing still
+vanishes, and the extra coordinate is absent from the opposite side, so
+\(v^\mathsf Tu=0\).
+
+For all 600 cases, deterministic exact minors have coordinate-monomial gcd.
+One minor suffices in 270 cases and two suffice in the other 330.  Hence there
+is no common minor zero on \(rtw\ne0\).  The faces \(w=0\), \(r=0\), and
+\(t=0\) reduce respectively to the overlapping-two, disjoint/star, or identity
+layers already classified.  Thus every nonzero nilpotent update in these two
+support shapes has invalid-tail rank 42.
+
+This does not cover larger overlapping supports, non-unipotent rank-one
+updates, higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary
+endpoint-B packets.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -698,13 +725,22 @@ python scripts/n7_mixed_glynn_overlapping_22_nilpotent_shear_tail_rank.py \
   --json data/n7_mixed_glynn_overlapping_22_nilpotent_shear_tail_rank.json
 ```
 
+The exact overlapping \((2,3)/(3,2)\) replay is:
+
+```bash
+python scripts/n7_mixed_glynn_overlapping_23_nilpotent_shear_tail_rank.py \
+  --max-candidates 600 --workers 20 \
+  --json data/n7_mixed_glynn_overlapping_23_nilpotent_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
 disjoint-support rank-one shear two-type packet and the overlapping
-two-coordinate nilpotent layer, or arbitrary endpoint-B packets.  It therefore
-does not yet prove ordinary lower (50) or a border-rank statement.  Its useful
-new content is the exact multiblock compatibility classification, which is
-invisible to the earlier single-block rank test.
+two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), or
+arbitrary endpoint-B packets.  It therefore does not yet prove ordinary lower
+(50) or a border-rank statement.  Its useful new content is the exact
+multiblock compatibility classification, which is invisible to the earlier
+single-block rank test.

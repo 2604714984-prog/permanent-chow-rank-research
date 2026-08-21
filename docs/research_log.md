@@ -3403,3 +3403,17 @@ rank-one nilpotent updates supported in a two-coordinate plane.  Larger
 overlapping supports, non-unipotent rank-one updates, higher-rank
 perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
 and ordinary lower 50 remain open.
+
+## 2026-08-21: overlap-two support sizes two and three are excluded
+
+Adding one coordinate to either side of the orthogonal two-coordinate core
+gives 600 \((2,3)/(3,2)\) support/multiplicity cases.  Exact deterministic
+minor gcds are coordinate monomials in every case: 270 need one minor and 330
+need two.  All proper parameter faces reduce to the certified overlapping-two,
+disjoint, star, or identity layers.
+
+Therefore every nonzero rank-one nilpotent update with these support shapes has
+invalid-tail rank 42 and zero local target intersection.  Larger overlapping
+supports, non-unipotent rank-one updates, higher-rank perturbations, general
+\(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary lower 50
+remain open.
