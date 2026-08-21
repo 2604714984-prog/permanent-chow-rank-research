@@ -640,6 +640,30 @@ more, non-unipotent rank-one updates, higher-rank perturbations, arbitrary
 \(\mathrm{GL}_6\), arbitrary endpoint-B packets, ordinary lower \(50\), or
 border rank.
 
+## Overlap-three support-size sum seven
+
+Adding one coordinate to exactly one side gives the shapes \((3,4)\) and
+\((4,3)\), each with 60 oriented supports and five multiplicity splits.  The
+same orthogonal core is used, while the extra coefficient occurs in the
+corresponding factor.  Each family therefore has 300 five-parameter cases.
+
+Four-worker checkpoint runs cover all 600 cases, with elapsed-time sums 156.29
+and 156.25 seconds.  Every case needs one exact minor.  All 300 \((3,4)\)
+determinants and 294 of the \((4,3)\) determinants are monomials.  The other
+six factor only over coordinate parameters and \(a+bq\); there is no factor
+whose zero lies inside the dense full-support chart.
+
+An extra-coefficient face returns to the coincident \((3,3)\) theorem, a core
+coefficient face returns to the complete overlap-two theorem, and the
+core-scale face is disjoint-support or the zero update.  Thus both
+support-size-sum-seven overlap-three families have invalid-tail rank 42 for
+every nonzero full-support update.
+
+The overlap-three support-size sums eight and nine, overlap four or more,
+non-unipotent rank-one updates, higher-rank perturbations, arbitrary
+\(\mathrm{GL}_6\), arbitrary endpoint-B packets, ordinary lower \(50\), and
+border rank remain open.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -864,6 +888,18 @@ python scripts/n7_mixed_glynn_overlap_three_33_nilpotent_shear_tail_rank.py \
   --json data/n7_mixed_glynn_overlap_three_33_nilpotent_shear_tail_rank.json
 ```
 
+Larger overlap-three supports use the generic script; for example:
+
+```bash
+python scripts/n7_mixed_glynn_overlap_three_rank_one_shear_tail_rank.py \
+  --left-size 3 --right-size 4 --max-candidates 300 --workers 4 \
+  --weighted-selection \
+  --json data/n7_mixed_glynn_overlap_three_34_nilpotent_shear_tail_rank.json
+```
+
+Checkpointed runs add `--start-index` and `--limit` and use the same strict
+merge utility with `--row-status DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS`.
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
@@ -872,9 +908,8 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 complete overlap-two nilpotent rank-one family.  It does not cover overlap
-three beyond the coincident \((3,3)\) support family, overlap four or more,
-non-unipotent rank-one updates, higher-rank perturbations, or arbitrary
-endpoint-B packets, and therefore does not yet prove ordinary lower (50) or a
-border-rank statement.  Its useful new content is the exact multiblock
-compatibility classification, which is invisible to the earlier single-block
-rank test.
+three beyond support-size sum seven, overlap four or more, non-unipotent
+rank-one updates, higher-rank perturbations, or arbitrary endpoint-B packets,
+and therefore does not yet prove ordinary lower (50) or a border-rank
+statement.  Its useful new content is the exact multiblock compatibility
+classification, which is invisible to the earlier single-block rank test.

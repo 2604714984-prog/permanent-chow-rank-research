@@ -3490,3 +3490,18 @@ overlap-three nilpotent rank-one family has zero local target intersection.
 Larger overlap-three supports, overlap four or more, non-unipotent rank-one
 updates, higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary
 endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: overlap-three support-size sum seven is excluded
+
+The \((3,4)\) and \((4,3)\) families each contain 300 five-parameter cases.
+Four-worker checkpointed elapsed sums were 156.29 and 156.25 seconds.  A
+single exact minor covers every case: all 300 \((3,4)\) determinants and 294
+\((4,3)\) determinants are monomials; the remaining six factor only over
+coordinate parameters and the chart-boundary divisor \(a+bq\).
+
+The imported coincident overlap-three, complete overlap-two, and disjoint
+certificates cover every proper boundary divisor.  Hence both sum-seven
+overlap-three families have zero local target intersection.  Support-size sums
+eight and nine, overlap four or more, non-unipotent rank-one updates,
+higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B,
+border rank, and ordinary lower 50 remain open.

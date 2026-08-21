@@ -14,6 +14,9 @@ def main() -> None:
     parser.add_argument("--pattern", required=True)
     parser.add_argument("--expected-count", type=int, required=True)
     parser.add_argument("--status", required=True)
+    parser.add_argument(
+        "--row-status", default="DENSE_TORUS_COVERED_BY_EXACT_MINORS"
+    )
     parser.add_argument("--json", type=Path, required=True)
     args = parser.parse_args()
 
@@ -62,9 +65,7 @@ def main() -> None:
         elapsed += float(payload["elapsed_seconds"])
         workers_used.add(int(payload["workers"]))
 
-    if status_counts != {
-        "DENSE_TORUS_COVERED_BY_EXACT_MINORS": args.expected_count
-    }:
+    if status_counts != {args.row_status: args.expected_count}:
         raise AssertionError(f"incomplete exact rows: {status_counts}")
     base.update(
         {
