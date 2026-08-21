@@ -1,0 +1,404 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,
+  urlcolor=blue!45!black]{hyperref}
+
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\perm}{\operatorname{perm}}
+\newcommand{\CR}{\mathrm{R}_{\mathrm{Chow},\K}}
+\newcommand{\cD}{\mathcal{D}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title[A Candidate Proof for the Six-by-Six Permanent]
+{A Candidate Proof for the Ordinary Chow Rank\\
+of the Six-by-Six Permanent}
+\author{}
+\date{August 21, 2026}
+\subjclass[2020]{Primary 15A69; Secondary 14N05, 68V05}
+\keywords{permanent, Chow rank, product rank, catalecticant,
+computer-assisted proof}
+
+\begin{document}
+
+\begin{abstract}
+Let \(\perm_6\) be the permanent of a generic \(6\) by \(6\) matrix.
+We record a conditional project proof candidate for the assertion that, over
+an algebraically closed field of characteristic zero, its ordinary Chow rank
+is \(32\).  The upper bound is
+Glynn's \(32\)-term identity.  The lower bound combines a symmetric
+image-span inequality with a half-defect estimate for quotient derivative
+symbols of a degree-six Chow term.  The finite rational rows used in the
+half-defect estimate and the final cancellation are recorded explicitly,
+together with the exact replay boundary.  No assertion about border Chow
+rank or the general \(n\) formula is made.
+\end{abstract}
+
+\maketitle
+
+\section{Statement and notation}
+
+Let \(\K\) be an algebraically closed field of characteristic zero and let
+\[
+ V=\Span_{\K}\{x_{ij}:1\leq i,j\leq6\},
+ \qquad \dim V=36.
+\]
+The six-by-six permanent is
+\[
+ \perm_6=\sum_{\sigma\in S_6}\prod_{i=1}^{6}x_{i,\sigma(i)}
+ \in\Sym^6(V).
+\]
+
+\begin{definition}
+A degree-six \emph{Chow term} is a product
+\[
+ T=\ell_1\ell_2\cdots\ell_6,
+ \qquad \ell_i\in V.
+\]
+The ordinary Chow rank \(\CR(f)\) of \(f\in\Sym^6(V)\) is the least
+integer \(N\) for which \(f\) is a sum of \(N\) Chow terms.
+\end{definition}
+
+For a homogeneous polynomial \(f\), write \(\cD_q(f)\subseteq\Sym^q(V)\)
+for the span of all derivatives of \(f\) having degree \(q\).  Equivalently,
+\(\cD_q(f)\) is the image of the appropriate catalecticant.  Put
+\[
+ E_q=\cD_q(\perm_6).
+\]
+The squarefree subpermanents give
+\[
+ \dim E_q=\binom{6}{q}^2;
+ \qquad \dim E_2=225,\quad \dim E_3=400.
+\]
+In particular, the middle catalecticant of \(\perm_6\) has rank \(400\).
+
+\begin{theorem}\label{thm:main}
+Assume Proposition~\ref{prop:half-defect}.  Then, over \(\K\),
+\[
+ \boxed{\CR(\perm_6)=32.}
+\]
+\end{theorem}
+
+The repository does not promote Theorem~\ref{thm:main} to an unconditional
+exact-rank result until Proposition~\ref{prop:half-defect} has a complete
+independent proof or independently generated exact certificates for every
+load-bearing local rank.  The lower bound rests on that proposition.  Its statement
+must be read literally: it covers arbitrary factor dependencies, repeated
+factors, and arbitrary quotients of the actual factor span.
+
+\section{A symmetric image-span inequality}
+
+\begin{lemma}[Symmetric image-span lemma]\label{lem:image-span}
+Let \(A_i:W^*\to W\), \(1\leq i\leq m\), be symmetric linear maps.  Set
+\[
+ r_i=\rank A_i,
+ \qquad
+ D=\dim\sum_{i=1}^{m}\im A_i.
+\]
+Then
+\[
+ \rank\!\left(\sum_{i=1}^{m}A_i\right)
+ \geq 2D-\sum_{i=1}^{m}r_i.
+\]
+\end{lemma}
+
+\begin{proof}
+Choose a surjection \(B_i:\K^{r_i}\to\im A_i\subseteq W\).  Symmetry
+implies \(\ker A_i=(\im A_i)^\perp\), so the form induced by \(A_i\) on
+its rank quotient is nondegenerate.  Consequently
+\[
+ A_i=B_iJ_iB_i^*
+\]
+for an invertible symmetric \(r_i\) by \(r_i\) matrix \(J_i\).  Let
+\[
+ B=[B_1\ \cdots\ B_m],
+ \qquad J=\operatorname{diag}(J_1,\ldots,J_m),
+ \qquad R=\sum_i r_i.
+\]
+Then \(\sum_iA_i=BJB^*\), while \(\rank B=\rank B^*=D\) and
+\(\rank(BJ)=D\).  Sylvester's rank inequality gives
+\[
+ \rank(BJB^*)\geq\rank(BJ)+\rank(B^*)-R=2D-R.
+\]
+\end{proof}
+
+\section{The required local half-defect estimate}
+
+Let \(T=\ell_1\cdots\ell_6\neq0\) be a Chow term and set
+\[
+ L=\Span\{\ell_1,\ldots,\ell_6\},\qquad
+ U=\cD_3(T),\qquad u=\dim U,
+\]
+\[
+ F=\cD_2(T),\qquad R=F\cap E_2.
+\]
+Given a quotient \(P:L\twoheadrightarrow D\) of rank \(d\), differentiating
+cubics in \(U\) and then reducing their quadratic derivatives modulo \(R\)
+defines the quotient derivative symbol
+\[
+ \beta_{P,R}:U\longrightarrow D\otimes(F/R).
+\]
+Only the rank of this natural map is used below.
+
+\begin{proposition}[Required half-defect quotient-symbol estimate]
+\label{prop:half-defect}
+For every nonzero degree-six Chow term \(T\) and every quotient
+\(P:L\twoheadrightarrow D\) of rank \(d\),
+\begin{equation}\label{eq:HD}
+ \rank\beta_{P,R}+\frac{20-u}{2}\geq\frac{10}{3}d.
+\end{equation}
+\end{proposition}
+
+\begin{remark}[Current reduction of the proof obligation]
+The candidate argument divides the proof by the factor-span dimension
+\(\ell=\dim L\).
+
+For \(\ell\leq4\), a diagonal one-parameter subgroup degenerates \(T\) to
+a monomial in \(\ell\) active variables with all exponents positive.  The
+corresponding middle-catalectic ranks have floors
+\[
+ 1,\ 2,\ 4,\ 8
+\]
+for \(\ell=1,2,3,4\), respectively.  The intersection of the resulting
+quadratic derivative space with \(E_2\) has dimension at most one.  Combining
+this with the kernel-preimage estimate for intermediate quotient ranks and
+the full-quotient injectivity criterion gives the following adjusted rows:
+\[
+\begin{array}{c|c}
+\toprule
+\ell & \rank\beta_{P,R}+(20-u)/2\text{ for }d=0,\ldots,\ell\\
+\midrule
+1&(19/2,\ 21/2)\\
+2&(8,\ 9,\ 11)\\
+3&(5,\ 15/2,\ 9,\ 12)\\
+4&(0,\ 9/2,\ 8,\ 10,\ 14)\\
+\bottomrule
+\end{array}
+\]
+The full-quotient assertion uses \(E_2^{(1)}=E_3\): a kernel vector would
+produce a nonzero permanent cubic supported on fewer than nine essential
+variables, which is impossible.
+
+For \(\ell=6\), the proposed quotient-symbol reduction gives
+\begin{equation}\label{eq:ell6-row}
+ (0,\ 7,\ 10,\ 10,\ 15,\ 17,\ 20),
+ \qquad d=0,\ldots,6.
+\end{equation}
+For \(\ell=5\), linear changes of basis reduce the repeated-factor patterns
+to
+\[
+ x_1x_2x_3x_4x_5(x_1+\cdots+x_s),\qquad1\leq s\leq5.
+\]
+Their proposed adjusted symbol rows are
+\[
+\begin{array}{c|c}
+\toprule
+s & \rank\beta_{P,R}+(20-u)/2\text{ for }d=0,\ldots,5\\
+\midrule
+5&(0,\ 7,\ 10,\ 10,\ 15,\ 17)\\
+4&(0,\ 8,\ 12,\ 13,\ 16,\ 19)\\
+3&(1,\ 8,\ 11,\ 11,\ 16,\ 18)\\
+1,2&(3,\ 9,\ 9,\ 10,\ 16,\ 17)\\
+\bottomrule
+\end{array}
+\]
+The last row is intended to use the seven-dimensional directional-shadow floor and the
+one-dimensional kernel gap at quotient rank four.  Direct comparison of
+every entry in all three tables with \(10d/3\) proves \eqref{eq:HD}
+provided the geometric reductions and the displayed exact symbol rows are
+established independently.  Those derivations are the unresolved proof
+obligation in this candidate package.
+\end{remark}
+
+\begin{remark}[Exact replay boundary]\label{rem:boundary}
+The project replay script checks every rational comparison in the displayed
+rows and the final cancellation in Section~\ref{sec:global}.  It does not
+derive the geometric degeneration, the normal-form reduction, the
+kernel-preimage estimate, or the exact quotient-symbol ranks
+\eqref{eq:ell6-row}.  Those are mathematical inputs to the replay, not
+consequences of the JSON certificate.
+\end{remark}
+
+\section{The global lower bound}\label{sec:global}
+
+Assume that
+\begin{equation}\label{eq:decomp}
+ \perm_6=\sum_{i=1}^{N}T_i
+\end{equation}
+with all \(T_i\neq0\).  Let
+\[
+ A_i=C_{3,3}(T_i):\Sym^3(V^*)\longrightarrow\Sym^3(V)
+\]
+be the symmetric middle catalecticant and put
+\[
+ U_i=\im A_i,\qquad u_i=\dim U_i,
+ \qquad \delta_i=20-u_i,\qquad \Delta=\sum_i\delta_i.
+\]
+Set \(U=\sum_iU_i\).  Since \(E_3\subseteq U\), write
+\[
+ h=\dim(U/E_3),\qquad \dim U=400+h.
+\]
+
+The sum \(\sum_iA_i\) is the middle catalecticant of \(\perm_6\), hence
+has rank \(400\).  Lemma~\ref{lem:image-span} yields
+\[
+ 400\geq2(400+h)-\sum_i u_i
+ =800+2h-(20N-\Delta).
+\]
+Therefore
+\begin{equation}\label{eq:h-upper}
+ \boxed{h\leq10N-200-\frac{\Delta}{2}.}
+\end{equation}
+
+We next derive the opposite estimate.  Let
+\[
+ F=\sum_i\cD_2(T_i),\qquad Q=F/E_2.
+\]
+Differentiating \eqref{eq:decomp} twice gives \(E_2\subseteq F\).  The
+blockwise quotient derivative symbol is
+\[
+ \widetilde\beta:\bigoplus_iU_i\longrightarrow V\otimes Q.
+\]
+The prolongation identity \(E_2^{(1)}=E_3\) implies
+\[
+ \ker\widetilde\beta
+ =\left\{(g_i):\sum_i g_i\in E_3\right\}.
+\]
+Thus \(\im\widetilde\beta\) is naturally isomorphic to \(U/E_3\), and
+\begin{equation}\label{eq:beta-rank}
+ \rank\widetilde\beta=h.
+\end{equation}
+This identity already accounts for all overlaps among the spaces \(U_i\).
+
+Let \(L_i\) be the factor span of \(T_i\).  Since \(E_2\subseteq F\) and
+the first derivatives of \(E_2\) span \(V\), the spaces \(L_i\) together
+span all \(36\) variables.  Choose an arbitrary ordering and define
+\[
+ W_i=\sum_{j\leq i}L_j,
+ \qquad d_i=\dim(W_i/W_{i-1}).
+\]
+Then
+\begin{equation}\label{eq:sum-di}
+ \sum_i d_i=36.
+\end{equation}
+
+Project the first tensor factor of \(V\otimes Q\) to
+\((W_i/W_{i-1})\otimes Q\).  This kills every earlier symbol block.  On
+the current block it is induced by the arbitrary quotient
+\[
+ P_i:L_i\longrightarrow L_i/(L_i\cap W_{i-1}),
+ \qquad \rank P_i=d_i.
+\]
+Moreover, the natural map
+\[
+ \cD_2(T_i)/(\cD_2(T_i)\cap E_2)\longrightarrow F/E_2=Q
+\]
+is injective.  Hence the projected local ranks add along this filtration.
+Proposition~\ref{prop:half-defect}, \eqref{eq:beta-rank}, and
+\eqref{eq:sum-di} give
+\begin{align}
+ h
+ &\geq\sum_i\left(\frac{10}{3}d_i-\frac{\delta_i}{2}\right)\\
+ &=\frac{10}{3}\cdot36-\frac{\Delta}{2}.
+\end{align}
+Therefore
+\begin{equation}\label{eq:h-lower}
+ \boxed{h\geq120-\frac{\Delta}{2}.}
+\end{equation}
+
+Comparing \eqref{eq:h-upper} and \eqref{eq:h-lower}, the complete
+individual middle-rank defect cancels:
+\[
+ 120-\frac{\Delta}{2}
+ \leq10N-200-\frac{\Delta}{2}.
+\]
+It follows that
+\begin{equation}\label{eq:lower32}
+ N\geq32.
+\end{equation}
+
+\section{Glynn's upper bound and conclusion}
+
+For a generic \(n\) by \(n\) matrix \(X=(x_{ij})\), Glynn's identity
+\cite{Glynn2010} is
+\begin{equation}\label{eq:glynn}
+ \perm_n
+ =2^{1-n}
+ \sum_{\substack{\varepsilon\in\{\pm1\}^n\\\varepsilon_1=1}}
+ \left(\prod_{i=1}^{n}\varepsilon_i\right)
+ \prod_{j=1}^{n}\left(\sum_{i=1}^{n}\varepsilon_i x_{ij}\right).
+\end{equation}
+There are \(2^{n-1}\) summands, and every summand is a product of \(n\)
+linear forms.  For \(n=6\), \eqref{eq:glynn} gives
+\[
+ \CR(\perm_6)\leq32.
+\]
+Together with \eqref{eq:lower32}, this proves the conditional
+Theorem~\ref{thm:main}. \qed
+
+\section{Computer-assisted component}
+
+The finite replay uses exact rational arithmetic only.  In the project root,
+the command is
+\begin{verbatim}
+python scripts/n6_exact_ordinary_chow_rank_32_candidate.py \
+  --verify-json data/n6_exact_ordinary_chow_rank_32_candidate.json
+\end{verbatim}
+The line breaks above are typographical; the script path and JSON path are
+each single arguments.  A successful run prints
+\begin{verbatim}
+PASS: conditional rank-32 arithmetic payload matches
+\end{verbatim}
+and verifies:
+\begin{enumerate}
+ \item every displayed half-defect row dominates \(10d/3\);
+ \item the lower symbol constant is \(120\);
+ \item the upper expression is \(10N-200-\Delta/2\);
+ \item \(N=31\) leaves a gap of \(10\), while \(N=32\) has gap zero.
+\end{enumerate}
+As stated in Remark~\ref{rem:boundary}, this replay certifies the finite
+arithmetic interface.  The unresolved geometric and local-rank arguments
+remain proof obligations.
+
+\begin{remark}[Scope]
+The candidate concerns ordinary Chow rank over characteristic zero.  It does
+not determine border Chow rank.  It also does not establish
+\(\CR(\perm_n)=2^{n-1}\) for arbitrary \(n\).  Product rank and Chow rank
+are used synonymously in the relevant literature; see, for example,
+\cite{IltenTeitler2016} for the standard product-rank terminology.
+\end{remark}
+
+\begin{thebibliography}{9}
+
+\bibitem{Glynn2010}
+D.~G. Glynn,
+\emph{The permanent of a square matrix},
+European J. Combin. \textbf{31} (2010), no.~7, 1887--1891,
+\href{https://doi.org/10.1016/j.ejc.2010.01.010}
+{doi:10.1016/j.ejc.2010.01.010}.
+
+\bibitem{IltenTeitler2016}
+N.~Ilten and Z.~Teitler,
+\emph{Product ranks of the \(3\times3\) determinant and permanent},
+Canad. Math. Bull. \textbf{59} (2016), no.~2, 311--319,
+\href{https://doi.org/10.4153/CMB-2015-076-1}
+{doi:10.4153/CMB-2015-076-1}.
+
+\end{thebibliography}
+
+\end{document}
