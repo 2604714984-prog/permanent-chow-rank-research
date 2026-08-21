@@ -224,12 +224,58 @@ single certificate also closes the previously unenumerated five- and six-type
 families; the direct three- and four-type computations remain independent
 audits of its smaller subfamilies.
 
+The ten globally negated tails do not require a second state bit.  If an
+assignment uses \(k\) nonzero columns and has XOR parity \(y\), then
+\(k\equiv\operatorname{wt}(y)\pmod2\).  Hence global tail negation is exactly
+multiplication by the all-ones Walsh character, and the actual 42-tail
+dictionary consists of 42 distinct characters on the same 64-point parity
+space.
+
 The character obstruction is sharp at two types.  Among the 3,595 normalized
 two-type multiplicity packets, 75 retain two protected characters; these are
 exactly the packets whose relative permutation is one of the fifteen
 transpositions.  Thus the remaining signed-coordinate layer is reduced to two
 underlying permutation types related by a transposition, with potentially
 several independent sign variants.
+
+## Complete signed-coordinate classification
+
+The apparent transposition exception disappears when all 42 actual tails are
+used, rather than only the support-level character collision test.  Normalize
+one of two underlying permutation types to the identity.  The exact finite
+family has
+
+\[
+(6!-1)\cdot5=3595
+\]
+
+members: every nonidentity relative permutation and every positive
+multiplicity split.  For each member, form the coefficient vectors of the 42
+tails on all repeated-column monomials.  Every one of the 3,595 invalid-feature
+matrices has row rank 42 over \(\mathbb F_{65521}\).  The all-identity positive
+control has rank 41.
+
+Arbitrary block signs multiply each monomial column by a nonzero scalar that
+is independent of the tail.  They therefore cannot change this rank.  A
+permanent target is zero on every repeated-column monomial, so full invalid
+rank forces its intersection with the graph span to be zero.  Consequently
+every packet with exactly two distinct underlying permutation types has zero
+local target intersection, even when all six blocks carry unrelated signs.
+
+Combining the cases gives a complete theorem for the signed-coordinate group:
+
+- one underlying permutation type reduces to the complete diagonal-sign
+  classification, whose local intersection is one exactly when all six signed
+  transforms agree;
+- two underlying permutation types have zero intersection by the 3,595-case
+  invalid-tail certificate;
+- three or more underlying permutation types have zero intersection by the
+  protected-character certificate.
+
+Thus for all assignments from
+\((\mathbb Z/2)^6\rtimes S_6)^7\), the global intersection is 7 when all seven
+transforms agree, 1 when exactly one block is exceptional and the other six
+agree, and 0 otherwise.
 
 ## Exact finite computation
 
@@ -314,15 +360,18 @@ python scripts/n7_mixed_glynn_protected_character_smt.py \
   --json data/n7_mixed_glynn_protected_character_explicit_smt.json
 ```
 
+The exact two-permutation invalid-tail replay is:
+
+```bash
+python scripts/n7_mixed_glynn_two_permutation_tail_rank.py \
+  --json data/n7_mixed_glynn_two_permutation_tail_rank.json
+```
+
 ## Boundary
 
-This is a complete theorem for all diagonal-sign packets in the synchronized
-mixed-Glynn dictionary and for local packets with at most two arbitrary
-signed-coordinate types.  The character certificate additionally removes all
-local packets with at least three underlying permutation types, for arbitrary
-signs.  It does not yet cover the transposition-related two-permutation layer
-with more than two signed group elements, general \(\mathrm{GL}_6\) graph
-transformations, or arbitrary endpoint-B packets.  It therefore does not yet
-prove ordinary lower (50) or a border-rank statement.  Its useful new content
-is the exact multiblock compatibility classification, which is invisible to
-the earlier single-block rank test.
+This is a complete theorem for every signed-coordinate packet in the
+synchronized mixed-Glynn dictionary.  It does not cover general
+\(\mathrm{GL}_6\) graph transformations or arbitrary endpoint-B packets.  It
+therefore does not yet prove ordinary lower (50) or a border-rank statement.
+Its useful new content is the exact multiblock compatibility classification,
+which is invisible to the earlier single-block rank test.

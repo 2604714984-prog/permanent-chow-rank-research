@@ -3259,3 +3259,20 @@ positive multiplicities.  The next finite target is therefore not another
 large type-count scan, but the transposition-related two-permutation family
 with multiple independent sign variants.  General \(\mathrm{GL}_6\), border
 rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: the full signed-coordinate packet is classified
+
+The 42-tail dictionary gives 42 distinct Walsh characters on the 64 parity
+states; global tail negation introduces the complementary character because
+nonzero-count parity equals XOR Hamming-weight parity.  For all
+\((6!-1)\cdot5=3595\) normalized packets using exactly two underlying
+permutation types, the repeated-column feature matrix has full row rank 42
+over \(\mathbb F_{65521}\).  The all-identity positive control has rank 41.
+
+Independent block signs only rescale monomial columns, so the full-rank result
+holds for arbitrary signs and closes the transposition exception left by the
+support-only test.  Together with the diagonal-sign classification and the
+three-plus-type certificate, this classifies the entire signed-coordinate
+mixed-Glynn family: global intersection 7 for seven equal transforms, 1 for a
+single exceptional block, and 0 otherwise.  General \(\mathrm{GL}_6\),
+arbitrary endpoint B, border rank, and ordinary lower 50 remain open.
