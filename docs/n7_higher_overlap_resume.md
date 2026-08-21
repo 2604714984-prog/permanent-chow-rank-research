@@ -26,15 +26,12 @@ determinants, 767 are monomials.  Each of the other three factors only over
 coordinate parameters and the leading right-core boundary form.
 
 These 770 single-minor dense-chart conclusions survive the subsequent ideal
-audit.  A separate recursive-boundary qualification is necessary: six older
-lower-overlap certificates used a multivariate gcd to cover 1,189 two-minor
-rows, which does not by itself exclude codimension-two common zeros.  Exact
-Laurent reductions have now repaired the 56 overlapping-\((2,2)\) rows and
-the 330 overlapping-\((2,3)/(3,2)\) rows.  The remaining 803 rows in the
-\((2,4),(2,5),(3,3),(4,2)\) families still require reconstructed minors and a
-Laurent-ideal or saturation certificate.  Until then, cite the 770 result as
-a dense exact-support theorem, not as a completed recursive boundary theorem.
-The machine-readable gate is
+audit.  Six older lower-overlap certificates had used a multivariate gcd to
+cover 1,189 two-minor rows, which did not by itself exclude codimension-two
+common zeros.  Exact Laurent reductions now repair all 1,189: after removing
+the invertible parameter monomial, every residual lies in \(\mathbb Q[z]\)
+with \(z=p_0p_1\), and every exact univariate gcd is one.  The recursive face
+gate is therefore restored.  The machine-readable 1,189/1,189 certificate is
 `data/n7_mixed_glynn_lower_overlap_torus_audit_status.json`.
 
 The new complete certificate is
@@ -72,8 +69,8 @@ Regression tests freeze both formats.
 
 Every family in the generic overlap-four-through-six inventory is represented
 by a complete single-minor dense-chart certificate.  The higher-overlap tests
-load all ten certificates and freeze the 770-row inventory.  Full recursive
-face closure remains gated on the 803-row lower-overlap saturation audit.
+load all ten certificates and freeze the 770-row inventory.  The completed
+1,189-row Laurent audit now supplies the recursive lower-overlap face closure.
 
 No matching Python process remains.  The unresolved boundary
 still includes arbitrary endpoint-B packets, general \(\mathrm{GL}_6\),

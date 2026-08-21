@@ -3675,3 +3675,19 @@ The proof-grade four-worker replay took 170.61 seconds and has no unresolved
 factor.  This is the first completed non-nilpotent rank-one layer, but it
 remains local to the synchronized two-transform endpoint packet and does not
 prove ordinary lower 50, exact rank 64, or border rank.
+
+## 2026-08-21: all 1,189 lower-overlap multiminor rows audited
+
+The four formerly pending families contain 243, 71, 333, and 156 two-minor
+rows for \((2,4),(2,5),(3,3),(4,2)\), totaling 803.  A four-worker exact WSL
+run reconstructed all 1,606 determinants in 1000.77 seconds.  After removing
+each invertible coordinate monomial, every residual exponent lattice has the
+single direction \((1,1,0,\ldots)\), so both minors reduce to polynomials in
+\(z=p_0p_1\).  Every one of the 803 exact gcds in \(\mathbb Q[z]\) is one.
+
+Together with the previously repaired 56 and 330 rows, the audit gate is now
+1,189/1,189 with zero pending rows.  This restores the recursive boundary
+closure for the existing nilpotent rank-one overlap certificates, including
+the 770 higher-overlap rows.  It still does not address general
+non-nilpotent rank-one updates, rank-two or higher perturbations, arbitrary
+\(\mathrm{GL}_6\), ordinary lower 50, exact rank 64, or border rank.

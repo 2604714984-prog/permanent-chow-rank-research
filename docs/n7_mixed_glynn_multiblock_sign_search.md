@@ -575,18 +575,17 @@ support/split counts are 450, 900, and 450.  After normalizing one core
 coefficient, each family has four parameters: the orthogonal two-coordinate
 core and the extra coefficients on the two disjoint sides.
 
-The payloads report coordinate-monomial multivariate gcds.  The one-/two-minor
-counts are respectively
+The one-/two-minor counts are respectively
 
 \[
 (207,243),\qquad(567,333),\qquad(294,156).
 \]
 
-The 1,068 single-minor rows directly cover their dense charts.  The 732
-two-minor rows are not yet certified merely by their multivariate gcd; their
-determinants must be reconstructed and the corresponding Laurent maximal-minor
-ideals saturated.  Consequently the former full-family statement is paused,
-although every coefficient face still reduces to a smaller support shape.
+The 1,068 single-minor rows directly cover their dense charts.  For the 732
+two-minor rows, exact reconstruction removes a Laurent monomial and reduces
+both residuals to \(\mathbb Q[z]\), \(z=p_0p_1\); every univariate gcd is one.
+Thus all 1,800 dense tori are covered.  Every coefficient face reduces to the
+audited \((2,3)/(3,2)\), overlapping-two, disjoint, or star layers.
 
 This does not yet cover overlap-two support-size sum seven or eight, overlap
 three or more, non-unipotent rank-one updates, higher-rank perturbations,
@@ -600,11 +599,11 @@ memory-bound on a small asymmetric subset.  A streamed weighted selection that
 orders repeated-column assignments by transformed-coordinate degree produces
 much sparser exact matrices without materializing the 117,649 assignments.
 
-For \((2,5)\), 229 cases need one exact minor and 71 need two; the latter
-multivariate-gcd argument awaits the same saturation audit.  For \((5,2)\),
-weighted selection gives a single monomial minor in all 300 cases.  Thus 529
-dense rows are direct and 71 remain audit-gated; recursive coefficient faces
-also inherit the unresolved support-size-sum-six gate.
+For \((2,5)\), 229 cases need one exact minor and 71 need two; exact Laurent
+reconstruction gives gcd one in \(\mathbb Q[p_0p_1]\) for all 71.  For
+\((5,2)\), weighted selection gives a single monomial minor in all 300 cases.
+All 600 dense rows and their recursively smaller coefficient faces are now
+covered.
 
 This endpoint calculation by itself does not cover the middle
 \((3,4)/(4,3)\) families treated next.
@@ -615,8 +614,7 @@ The two middle families \((3,4)\) and \((4,3)\) each have 900 cases.  With the
 same degree-weighted streamed selection, every one of the 1,800 exact matrices
 has a single monomial 42-column determinant.  Their checkpointed elapsed sums
 were 472.79 and 464.15 seconds with four workers.  Together with the endpoint
-families, this directly covers every dense row except the 71 audit-gated
-two-minor \((2,5)\) rows.
+families, this closes all four overlap-two support-size-sum-seven shapes.
 
 All proper coefficient faces reduce to the support-size-sum-six or lower
 certificates.  The remaining overlap-two frontier is support-size sum eight:
@@ -636,9 +634,9 @@ whose determinant is a coordinate monomial.  The five elapsed-time sums were
 
 Every proper coefficient face lowers one or both support sizes.  Since two
 supports in six coordinates with overlap exactly two have total size at most
-eight, this completes the direct single-minor dense charts, but the recursive
-all-face theorem remains gated on the 803-row lower-support saturation audit.
-The current 386/1,189 audited-row inventory is frozen in
+eight, the completed 1,189-row Laurent audit restores the recursive all-face
+theorem for every overlap-two support shape.  The exact audit inventory is
+frozen in
 `data/n7_mixed_glynn_lower_overlap_torus_audit_status.json`.
 
 This does not cover overlap three or more, non-unipotent rank-one updates,
@@ -664,8 +662,8 @@ with varying positive exponents.
 Consequently no minor vanishes on the dense chart.  The divisors
 \(a=0\), \(b=0\), \(q=0\), and \(a+bq=0\) lower one of the two supports to a
 previously computed overlap-two family; \(t=0\) is the identity face.  The
-dense coincident \((3,3)\) chart is closed directly, while the recursive face
-statement inherits the 803-row audit gate.
+dense coincident \((3,3)\) chart is closed directly, and the completed Laurent
+audit supplies the recursive overlap-two faces.
 
 This does not cover larger support shapes with overlap three, overlap four or
 more, non-unipotent rank-one updates, higher-rank perturbations, arbitrary
@@ -687,9 +685,8 @@ whose zero lies inside the dense full-support chart.
 
 An extra-coefficient face returns to the coincident \((3,3)\) chart, a core
 coefficient face returns to an overlap-two layer, and the core-scale face is
-disjoint-support or the zero update.  The direct minors prove invalid-tail
-rank 42 on both dense full-support sum-seven charts; the all-face statement is
-still audit-gated.
+disjoint-support or the zero update.  The direct minors and audited recursive
+faces prove invalid-tail rank 42 on both sum-seven charts.
 
 The overlap-three support-size sums eight and nine, overlap four or more,
 non-unipotent rank-one updates, higher-rank perturbations, arbitrary
@@ -707,8 +704,8 @@ chart-boundary divisor \(a+bq\).
 
 The extra-coefficient faces reduce to support-size sum seven, and the core
 faces reduce to overlap-two or disjoint-support layers.  The direct minors
-prove invalid-tail rank 42 on all three dense full-support sum-eight charts;
-the recursive boundary statement remains audit-gated.
+prove invalid-tail rank 42 on all three full-support sum-eight charts, and the
+completed Laurent audit closes the recursive boundary.
 
 ## Completion of every overlap-three support family
 
@@ -722,10 +719,10 @@ divisors.
 
 Including the coincident, sum-seven, and sum-eight layers gives 2,700 exact
 support/multiplicity cases, each with a direct dense-chart minor.  Proper
-divisors reduce to smaller overlap-three, overlap-two, disjoint, or zero-update
-strata, but the 803-row lower-overlap saturation audit is not yet complete.
-Thus the unconditional statement here is the dense full-support
-overlap-three theorem; recursive closure across every divisor remains gated.
+divisors reduce to smaller audited overlap-three, overlap-two, disjoint, or
+zero-update strata.  Thus every nonzero rank-one nilpotent shear whose two
+supports overlap in exactly three coordinates has invalid-tail rank 42 in the
+synchronized mixed-Glynn endpoint model.
 
 This does not cover overlap four or more, non-unipotent rank-one updates,
 higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), arbitrary endpoint-B
@@ -757,9 +754,9 @@ The exact elapsed-time sums are 58.59, 131.68, 167.19, 75.46, and
 199.61 seconds for the first five families; \((6,4)\) took 112.35 seconds.
 
 These 770 single-minor dense-chart conclusions do not use the old
-multivariate-gcd inference.  Their proper boundary divisors still recurse
-through lower-overlap layers, so full all-face closure waits for the remaining
-803 Laurent-ideal audits.
+multivariate-gcd inference.  Their proper boundary divisors recurse through
+the now-completed 1,189-row Laurent audit, so the all-face higher-overlap
+closure is restored.
 
 The \((5,5)\) certificate merges the historical exact 75-of-150 checkpoint
 with three new contiguous 25-case chunks.  The merge validates all ranges and
@@ -1016,9 +1013,9 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), the
 coincident \((2,2)\) invertible rank-one family, and every higher-overlap
-dense stratum through overlap six.  The 803 older two-minor rows in
-\((2,4),(2,5),(3,3),(4,2)\) still need Laurent-ideal saturation before the
-claimed recursive overlap-two closure can be restored.  General
+dense stratum through overlap six.  All 1,189 older two-minor rows now have
+exact Laurent-univariate Bezout certificates, restoring the recursive
+nilpotent rank-one overlap closure.  General
 non-unipotent rank-one updates, higher-rank perturbations, arbitrary
 \(\mathrm{GL}_6\), and arbitrary endpoint-B packets remain open.  Therefore
 none of these restricted results proves ordinary lower 50 or a border-rank

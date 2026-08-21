@@ -30,11 +30,11 @@ class LowerOverlapTorusAuditStatusTests(unittest.TestCase):
     def test_frozen_status_replays_exactly(self):
         self.assertEqual(self.module.build_payload(), self.payload)
 
-    def test_audit_gate_is_not_complete(self):
+    def test_audit_gate_is_complete(self):
         self.assertEqual(self.payload["multi_minor_row_count"], 1189)
-        self.assertEqual(self.payload["audited_multi_minor_row_count"], 386)
-        self.assertEqual(self.payload["pending_multi_minor_row_count"], 803)
-        self.assertTrue(self.payload["status"].startswith("PARTIAL_"))
+        self.assertEqual(self.payload["audited_multi_minor_row_count"], 1189)
+        self.assertEqual(self.payload["pending_multi_minor_row_count"], 0)
+        self.assertTrue(self.payload["status"].startswith("EXACT_ALL_"))
 
 
 if __name__ == "__main__":

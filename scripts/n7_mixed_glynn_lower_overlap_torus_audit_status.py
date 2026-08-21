@@ -19,10 +19,13 @@ AUDITED = {
         "data/n7_mixed_glynn_overlapping_23_torus_ideal_audit.json",
     ),
 }
-PENDING = {
+RECONSTRUCTED = {
     family: f"data/n7_mixed_glynn_overlap_two_{family}_nilpotent_shear_tail_rank.json"
     for family in ("24", "25", "33", "42")
 }
+RECONSTRUCTED_AUDIT = (
+    "data/n7_mixed_glynn_overlap_two_pending_torus_ideal_audit.json"
+)
 
 
 def multi_minor_count(relative_path):
@@ -46,37 +49,41 @@ def build_payload():
                 "status": "EXACT_TORUS_IDEAL_AUDITED",
             }
         )
-    pending_rows = []
-    for family, source_path in PENDING.items():
+    reconstructed_audit = json.loads(
+        (ROOT / RECONSTRUCTED_AUDIT).read_text(encoding="utf-8")
+    )
+    if (
+        reconstructed_audit["status"]
+        != "EXACT_ALL_803_PENDING_OVERLAP_TWO_TORUS_IDEALS_AUDITED"
+    ):
+        raise AssertionError("unexpected reconstructed-minor audit status")
+    reconstructed_inventory = {
+        tuple(row["family"]): row
+        for row in reconstructed_audit["source_inventory"]
+    }
+    for family, source_path in RECONSTRUCTED.items():
         count = multi_minor_count(source_path)
-        source = json.loads((ROOT / source_path).read_text(encoding="utf-8"))
-        missing_determinants = all(
-            "determinant_factorization" not in minor
-            for row in source["rows"]
-            if row["minor_count"] > 1
-            for minor in row["minors"]
-        )
-        if not missing_determinants:
-            raise AssertionError(f"unexpected saved determinant for {family}")
-        pending_rows.append(
+        family_tuple = (int(family[0]), int(family[1]))
+        inventory = reconstructed_inventory[family_tuple]
+        if inventory["multi_minor_row_count"] != count:
+            raise AssertionError(f"reconstructed audit count mismatch for {family}")
+        audited_rows.append(
             {
                 "family": family,
                 "source_certificate": source_path,
+                "audit_certificate": RECONSTRUCTED_AUDIT,
                 "multi_minor_row_count": count,
-                "next_required_evidence": (
-                    "reconstruct exact minors and prove Laurent-torus ideal "
-                    "emptiness by dimension reduction or saturation"
-                ),
-                "status": "PENDING_TORUS_IDEAL_AUDIT",
+                "status": "EXACT_TORUS_IDEAL_AUDITED",
             }
         )
     audited_count = sum(row["multi_minor_row_count"] for row in audited_rows)
-    pending_count = sum(row["multi_minor_row_count"] for row in pending_rows)
-    if (audited_count, pending_count) != (386, 803):
+    pending_rows = []
+    pending_count = 0
+    if (audited_count, pending_count) != (1189, 0):
         raise AssertionError("lower-overlap audit inventory drift")
     return {
         "schema_version": 1,
-        "status": "PARTIAL_LOWER_OVERLAP_TORUS_IDEAL_AUDIT_386_OF_1189",
+        "status": "EXACT_ALL_1189_LOWER_OVERLAP_TORUS_IDEALS_AUDITED",
         "multi_minor_row_count": audited_count + pending_count,
         "audited_multi_minor_row_count": audited_count,
         "pending_multi_minor_row_count": pending_count,
@@ -84,8 +91,8 @@ def build_payload():
         "pending_families": pending_rows,
         "claim_boundary": [
             "The audited rows have exact Laurent-torus Bezout certificates, not merely multivariate gcd evidence.",
-            "The 803 pending rows prevent a full recursive overlap-two or higher-overlap boundary theorem.",
-            "Single-minor dense-chart certificates are not downgraded by this audit gate.",
+            "All 1,189 formerly multiminor rows are now audited, so the recursive nilpotent rank-one overlap boundary gate is restored.",
+            "This does not prove arbitrary non-nilpotent rank-one updates, arbitrary GL(6), ordinary lower 50, exact rank 64, or border rank.",
         ],
     }
 
