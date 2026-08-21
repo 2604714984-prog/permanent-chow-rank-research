@@ -20,8 +20,9 @@ Active Draft PR: **#92**.
 | `perm_9` | `164 <= ChowRank <= 256` | stacked draft |
 | `perm_10` | `307 <= ChowRank <= 512` | stacked draft |
 
-The ordinary upper bound remains Glynn's `2^(n-1)` decomposition. The new
-result below changes a derivative-block threshold, not ordinary Chow rank.
+The ordinary upper bound remains Glynn's `2^(n-1)` decomposition. The results
+below change derivative-block thresholds and route boundaries, not ordinary
+Chow rank.
 
 ## Active quartic frontier
 
@@ -63,9 +64,30 @@ Applications:
 (m,n)=(4,6): 7 blocks, improving the active interval from [6,8] to [6,7]
 ```
 
-For `m=4`, seven is exact in the paired-column family
-`a_i b_i Q_i`: the grouped contraction image is the six-dimensional symmetric
-zero-diagonal matrix space, which contains no nonzero rank-one matrix.
+For `m=4`, seven is exact in the paired-column family `a_i b_i Q_i`: the
+grouped contraction image is the six-dimensional symmetric zero-diagonal
+matrix space, which contains no nonzero rank-one matrix.
+
+## `Q6-SEVEN-BLOCK-LOCAL-RIGIDITY`
+
+The standard compressed Glynn witness cannot be reduced to six by its two
+nearest local mechanisms.
+
+1. Every sum of two distinct standard summands has mode ranks `(2,2,3,3)` and
+essential dimension ten, so it cannot lie in one degree-six Chow derivative
+block, whose essential dimension is at most six.
+2. The projected tangent space of one standard block has dimension 18. After
+deleting any summand, the six remaining tangent spaces have exact rank 108;
+adjoining the missing summand raises the rank to 109. Thus the missing
+summand is outside the tangent image of the other six standard blocks.
+
+```text
+core: 7958a27a326b5155bb9e119061f98eabbc81945ca2a931ef9551d73798f2c710
+status: STRICT_LOCAL_ROUTE_BARRIER
+```
+
+This excludes direct pair merging and first-order local absorption only.
+Remote, singular/Puiseux, and higher-order six-block mechanisms remain open.
 
 ## Coordinate degeneration results
 
@@ -115,14 +137,17 @@ status: ROUTE_DIAGNOSTIC_AND_EQUALITY_STATE_LEMMA
 
 ## Current decisive interface
 
-The only unresolved literal-block count is six. The paired-column rank theorem
-shows that a second deletion from the new seven-block formula cannot stay in
-that family. The next valid routes are:
+The only unresolved literal-block count is six. The paired-column theorem and
+the local-rigidity theorem close simple second deletion, direct pair merge,
+and tangent absorption at the standard seven-block witness. The next valid
+routes are:
 
-- genuinely mixed four-column deformation of the seven-block construction;
+- the second fundamental form of the standard six-tuple modulo its
+  108-dimensional projected tangent sum;
+- genuinely mixed four-column deformation away from the standard chart;
 - the full-support six-element quotient circuit across all repeated-column
   multidegrees;
-- global coefficient-level second-order compatibility; or
+- global coefficient-level coordinate second-order compatibility; or
 - an exact six-block construction.
 
 Do not return to scalar derivative towers, isolated slices, simple sign-term
@@ -133,6 +158,7 @@ deletion, or support-only coordinate scans.
 ```text
 quartic tail: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89 -> #92
 PR #92 base head: 4804e9a948fa0602c062d167f0474d1346dbcab9
+local-rigidity packet head: 44021026bb7fb0e2a46c69f927d83cd022b86732
 ```
 
 ## Strict boundary
@@ -142,6 +168,8 @@ six-block literal sum = OPEN
 seven-block literal sum = NONZERO
 mu(6,4) = OPEN IN [6,7]
 paired-column quartic threshold = 7
+standard seven-block direct pair merge = ZERO
+standard deleted-summand first-order absorption = ZERO
 coordinate regular first-order q<=7 = ZERO
 global coordinate second-order q=6 = OPEN
 noncoordinate / singular / multigrade q=6 = OPEN
