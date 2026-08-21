@@ -3745,3 +3745,34 @@ overlapping \((2,3)/(3,2)\) patterns.
 This remains a restricted synchronized mixed-Glynn endpoint theorem.  It does
 not prove ordinary lower 50, exact rank 64, arbitrary \(\mathrm{GL}_6\),
 arbitrary endpoint-B packets, higher-rank perturbations, or border rank.
+
+## 2026-08-22: general overlapping (2,4)/(4,2) rank-one updates completed
+
+For the two orientations
+
+\[
+u=(1,r),\quad v=t(s,1,w,x),
+\qquad\text{and}\qquad
+u=(1,r,w,x),\quad v=t(s,1),
+\]
+
+the support and positive multiplicity inventory has 900 rows.  The first exact
+minor covers 325.  The other 575 have the sole internal factor (1+st).  An
+exact minor restricted to that face covers 527; the remaining 48 have only
+(1+rt), and a second restricted monomial minor covers the subface.  The
+final split is 325/527/48 with zero unresolved rows and no multivariate-gcd
+inference.  The 20-worker WSL replay took 1079.65 seconds.  The dense
+(r+s=0) face imports the exact nilpotent ((2,4)/(4,2)) certificates and
+their completed Laurent-torus audit.
+
+The two missing proper support types were then enumerated.  Singleton versus
+four has 600 rows, 300 per orientation, and completed in 80.30 seconds.
+Overlap-one ((2,3)/(3,2)) has 1,800 rows, 900 per orientation, and completed
+in 259.11 seconds.  All 2,400 boundary rows use their first exact minor.
+
+A homogeneous coordinate-face audit imports those two new closures together
+with the completed overlapping-((2,3)/(3,2)), nilpotent, and Laurent-torus
+certificates.  It proves the full projective support closure for overlapping
+((2,4)/(4,2)) updates in the synchronized mixed-Glynn endpoint model.  This
+does not prove ordinary lower 50, exact rank 64, arbitrary \(\mathrm{GL}_6\),
+arbitrary endpoint-B packets, higher-rank perturbations, or border rank.

@@ -1041,8 +1041,8 @@ disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), the
 coincident \((2,2)\) invertible rank-one family, the overlap-one \((2,2)\)
 invertible rank-one support closure, the general overlapping
-\((2,3)/(3,2)\) invertible rank-one support closure, and every higher-overlap
-dense stratum through overlap six.  All 1,189 older two-minor rows now have
+\((2,3)/(3,2)\) and \((2,4)/(4,2)\) invertible rank-one support closures,
+and every higher-overlap dense stratum through overlap six.  All 1,189 older two-minor rows now have
 exact Laurent-univariate Bezout certificates, restoring the recursive
 nilpotent rank-one overlap closure.  General
 larger-support non-unipotent rank-one updates, higher-rank perturbations,

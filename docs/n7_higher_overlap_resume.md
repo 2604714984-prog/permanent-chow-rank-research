@@ -80,6 +80,22 @@ closures, the homogeneous face audit covers every projective coordinate face.
 See `docs/n7_mixed_glynn_overlapping_23_rank_one_update.md` and
 `data/n7_mixed_glynn_overlapping_23_rank_one_update_support_closure.json`.
 
+## General overlapping (2,4)/(4,2) rank-one updates
+
+The next nonnilpotent rank-one extension is also complete in the synchronized
+two-transform packet.  Its dense inventory has 900 rows.  Exact internal-face
+minors split it into 325 primary-chart rows, 527 rows on (1+st=0), and 48
+rows on the further subface (1+rt=0), with zero unresolved rows.  The dense
+nilpotent face imports the exact ((2,4)/(4,2)) certificates and the completed
+Laurent-torus audit.
+
+The two new proper support families are singleton-versus-four and overlap-one
+((2,3)/(3,2)).  Their exact inventories have 600 and 1,800 rows; every row
+uses its first selected minor.  A homogeneous face audit then closes all six
+coordinate hyperplanes in each orientation.  See
+`docs/n7_mixed_glynn_overlapping_24_rank_one_update.md` and
+`data/n7_mixed_glynn_overlapping_24_rank_one_update_support_closure.json`.
+
 ## Verification state
 
 Every family in the generic overlap-four-through-six inventory is represented
@@ -91,4 +107,6 @@ No matching Python process remains.  The unresolved boundary
 still includes arbitrary endpoint-B packets, general \(\mathrm{GL}_6\),
 nonnilpotent rank-one updates beyond the completed coincident-\((2,2)\),
 overlap-one-\((2,2)\), and overlapping-\((2,3)/(3,2)\) projective support
-closures, higher-rank perturbations, ordinary lower 50, and border rank.
+closures, and the overlapping-\((2,4)/(4,2)\) projective support closure;
+larger nonnilpotent supports, higher-rank perturbations, ordinary lower 50,
+and border rank remain open.
