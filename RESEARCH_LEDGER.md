@@ -57,37 +57,45 @@ core: 045dcbd80846a35e6b9716771721c542ed86b0c1a246cf716cebb8e57df65a0e
 status: EXPLICIT_NONZERO_FAMILY, EXACT_COMBINATORIAL_REPLAYED
 ```
 
-Applications:
-
-```text
-(m,n)=(3,5): 3 blocks, recovering the known cubic value
-(m,n)=(4,6): 7 blocks, improving the active interval from [6,8] to [6,7]
-```
-
 For `m=4`, seven is exact in the paired-column family `a_i b_i Q_i`: the
 grouped contraction image is the six-dimensional symmetric zero-diagonal
 matrix space, which contains no nonzero rank-one matrix.
 
 ## `Q6-SEVEN-BLOCK-LOCAL-RIGIDITY`
 
-The standard compressed Glynn witness cannot be reduced to six by its two
-nearest local mechanisms.
+The standard compressed Glynn witness cannot be reduced to six by direct pair
+merging or first-order tangent absorption.
 
-1. Every sum of two distinct standard summands has mode ranks `(2,2,3,3)` and
-essential dimension ten, so it cannot lie in one degree-six Chow derivative
-block, whose essential dimension is at most six.
-2. The projected tangent space of one standard block has dimension 18. After
-deleting any summand, the six remaining tangent spaces have exact rank 108;
-adjoining the missing summand raises the rank to 109. Thus the missing
-summand is outside the tangent image of the other six standard blocks.
+- every pair sum has mode ranks `(2,2,3,3)` and essential dimension ten;
+- one standard projected tangent space has dimension 18;
+- after any deletion the six projected tangent spaces have rank 108;
+- adjoining the missing summand raises the rank to 109.
 
 ```text
 core: 7958a27a326b5155bb9e119061f98eabbc81945ca2a931ef9551d73798f2c710
 status: STRICT_LOCAL_ROUTE_BARRIER
 ```
 
-This excludes direct pair merging and first-order local absorption only.
-Remote, singular/Puiseux, and higher-order six-block mechanisms remain open.
+## `Q6-SEVEN-BLOCK-SECOND-ORDER-RIGIDITY`
+
+For each deleted standard summand, the other six complete degree-four tangent
+maps have exact rank 574 on 666 parameters. Their complete
+characteristic-zero kernel has dimension 92.
+
+All 4,278 polarized pairs of that exact kernel are evaluated. Exactly 306 have
+nonzero projected curvature; their span has dimension 24. Every curvature
+vector lies in the 108-dimensional projected tangent sum, so the quotient
+second fundamental form has rank zero. The missing summand remains outside the
+tangent sum and gives augmented rank 109.
+
+```text
+core: e80c3b30e9df09144eef28f3424d0b4e44b0f3e6a737e12ef0a8e4a6d5f84a4c
+status: STRICT_LOCAL_SECOND_ORDER_ROUTE_BARRIER
+```
+
+The known seven-block witness is therefore locally six-irreducible through
+order two. This does not exclude a remote representation, singular/Puiseux
+path, or third- or higher-order coalescence.
 
 ## Coordinate degeneration results
 
@@ -138,13 +146,15 @@ status: ROUTE_DIAGNOSTIC_AND_EQUALITY_STATE_LEMMA
 ## Current decisive interface
 
 The only unresolved literal-block count is six. The paired-column theorem and
-the local-rigidity theorem close simple second deletion, direct pair merge,
-and tangent absorption at the standard seven-block witness. The next valid
-routes are:
+the two local-rigidity theorems close simple deletion, direct pair merge,
+tangent absorption, and second-order curvature absorption at the standard
+seven-block witness.
 
-- the second fundamental form of the standard six-tuple modulo its
-  108-dimensional projected tangent sum;
-- genuinely mixed four-column deformation away from the standard chart;
+The next valid routes are:
+
+- the third fundamental form of the standard six-tuple in the
+  missing-summand quotient;
+- genuinely mixed four-column configurations away from the standard chart;
 - the full-support six-element quotient circuit across all repeated-column
   multidegrees;
 - global coefficient-level coordinate second-order compatibility; or
@@ -158,7 +168,8 @@ deletion, or support-only coordinate scans.
 ```text
 quartic tail: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89 -> #92
 PR #92 base head: 4804e9a948fa0602c062d167f0474d1346dbcab9
-local-rigidity packet head: 44021026bb7fb0e2a46c69f927d83cd022b86732
+first-order local-rigidity packet head: 44021026bb7fb0e2a46c69f927d83cd022b86732
+second-order local-rigidity packet head: b1273af7ca1926e2e3a42be6b17a50e0db4fb4a2
 ```
 
 ## Strict boundary
@@ -170,6 +181,8 @@ mu(6,4) = OPEN IN [6,7]
 paired-column quartic threshold = 7
 standard seven-block direct pair merge = ZERO
 standard deleted-summand first-order absorption = ZERO
+standard deleted-summand second-order absorption = ZERO
+standard local third/higher absorption = OPEN
 coordinate regular first-order q<=7 = ZERO
 global coordinate second-order q=6 = OPEN
 noncoordinate / singular / multigrade q=6 = OPEN
