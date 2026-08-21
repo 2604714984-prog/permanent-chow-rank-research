@@ -1,0 +1,7293 @@
+{
+  "candidate_count": 300,
+  "candidate_formula": "binom(6,2) * binom(4,3) * 5",
+  "claim_boundary": [
+    "The exact dense-support family is I+u v^T with disjoint support sizes (2,3), modulo rank-one scaling.",
+    "Every ordered coordinate support and all five positive identity/shear multiplicity splits are represented.",
+    "A monomial minor covers the full-support parameter torus; imported lower-support certificates cover every proper coordinate face.",
+    "The result does not cover overlapping supports, higher-rank perturbations, arbitrary GL(6), arbitrary endpoint-B packets, ordinary lower 50, or border rank."
+  ],
+  "coordinate_face_certificates": [
+    "EXACT_ALL_FIVE_DIRECTION_SHEAR_INVALID_TAIL_MINORS",
+    "EXACT_ALL_DISJOINT_22_RANK_ONE_SHEAR_INVALID_TAIL_MINORS"
+  ],
+  "elapsed_seconds": 23.967758662998676,
+  "field": "characteristic zero",
+  "left_support_size": 2,
+  "multiplicity_split_count": 5,
+  "normalization": "first left-support coefficient equals one",
+  "parameter_count": 4,
+  "parameter_exponent_histogram": {
+    "0+0+0+1": 30,
+    "0+0+0+10": 26,
+    "0+0+0+12": 1,
+    "0+0+0+16": 3,
+    "0+0+0+18": 6,
+    "0+0+0+20": 9,
+    "0+0+0+3": 2,
+    "0+0+0+5": 2,
+    "0+0+0+6": 3,
+    "0+0+0+8": 6,
+    "0+0+10+10": 6,
+    "0+0+10+12": 2,
+    "0+0+10+13": 1,
+    "0+0+2+12": 2,
+    "0+0+2+16": 1,
+    "0+0+5+12": 2,
+    "0+0+5+16": 1,
+    "0+0+6+13": 3,
+    "0+0+8+12": 6,
+    "0+1+10+14": 1,
+    "0+1+10+17": 1,
+    "0+1+5+16": 1,
+    "0+3+10+14": 3,
+    "0+4+10+13": 1,
+    "0+4+10+14": 5,
+    "0+4+10+17": 1,
+    "0+4+9+16": 2,
+    "0+5+8+12": 3,
+    "0+5+9+16": 4,
+    "0+6+10+12": 2,
+    "0+6+8+12": 3,
+    "0+9+10+15": 3,
+    "1+0+0+10": 6,
+    "1+0+0+20": 12,
+    "1+0+0+5": 2,
+    "1+0+10+18": 4,
+    "1+0+2+12": 2,
+    "1+0+2+16": 1,
+    "1+0+2+17": 1,
+    "1+0+3+18": 2,
+    "1+0+5+16": 1,
+    "1+0+5+17": 1,
+    "1+0+5+18": 2,
+    "1+1+10+18": 2,
+    "1+1+5+16": 2,
+    "1+1+5+17": 1,
+    "1+1+5+18": 1,
+    "1+2+6+13": 3,
+    "1+4+10+18": 2,
+    "2+0+0+14": 1,
+    "2+0+0+16": 2,
+    "2+0+2+17": 1,
+    "2+0+3+18": 2,
+    "2+0+4+16": 2,
+    "2+0+5+17": 1,
+    "2+0+5+18": 2,
+    "2+0+9+16": 2,
+    "2+1+10+16": 1,
+    "2+1+10+17": 4,
+    "2+1+5+18": 1,
+    "2+3+10+16": 1,
+    "2+3+10+17": 4,
+    "2+4+10+16": 1,
+    "2+4+10+17": 4,
+    "2+4+9+18": 2,
+    "2+5+9+18": 4,
+    "2+9+10+17": 3,
+    "3+0+10+16": 1,
+    "3+0+10+17": 4,
+    "3+0+6+16": 1,
+    "3+0+7+17": 2,
+    "3+4+10+17": 2,
+    "4+0+0+14": 3,
+    "4+0+0+16": 6,
+    "4+0+10+16": 2,
+    "4+0+10+17": 8,
+    "4+0+8+16": 2,
+    "4+0+9+16": 12,
+    "4+0+9+17": 4,
+    "4+2+6+16": 1,
+    "4+2+7+17": 2,
+    "4+5+8+16": 1,
+    "4+5+9+17": 2,
+    "4+6+10+17": 4,
+    "4+6+8+16": 1,
+    "4+6+9+17": 2,
+    "4+9+10+17": 1,
+    "5+0+0+16": 12,
+    "5+9+10+17": 2
+  },
+  "right_support_size": 3,
+  "rows": [
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-373845373814507589254195735703846912",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        3,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 23,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        1,
+        1,
+        5,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 11,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "6729216728661136606575523242669244416",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "6729216728661136606575523242669244416",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-747690747629015178508391471407693824",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 24,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        1,
+        1,
+        5,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "6729216728661136606575523242669244416",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "6729216728661136606575523242669244416",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-747690747629015178508391471407693824",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        1,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-161501201487867278557812557824061865984",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        9,
+        10,
+        15
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-161501201487867278557812557824061865984",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        9,
+        10,
+        15
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40375300371966819639453139456015466496",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        9,
+        10,
+        15
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        1
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 32,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        10,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        3,
+        10,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-498460498419343452338927647605129216",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        1,
+        10,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 24,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        5,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 11,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 32,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        3,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-498460498419343452338927647605129216",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        1,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        5,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 32,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        3,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-498460498419343452338927647605129216",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        1,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-646004805951469114231250231296247463936",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 38,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        9,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-646004805951469114231250231296247463936",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 38,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        9,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-161501201487867278557812557824061865984",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 38,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        2,
+        9,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        4,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        8,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        5,
+        8,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-124615124604835863084731911901282304",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        2,
+        6,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-324518553658426726783156020576256",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        2,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 11,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 36,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "8972288971548182142100697656892325888",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 35,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        5,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-249230249209671726169463823802564608",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        2,
+        7,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-649037107316853453566312041152512",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 23,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        3,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 32,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        3,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-498460498419343452338927647605129216",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        1,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        5,
+        9,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        5,
+        9,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2990762990516060714033565885630775296",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        9,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        1,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "841152091082642075821940405333655552",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 26,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        6,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "280384030360880691940646801777885184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-15576890575604482885591488987660288",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        2,
+        6,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 15,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        2,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 6,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        5
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 36,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "8972288971548182142100697656892325888",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 35,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        5,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-249230249209671726169463823802564608",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        2,
+        7,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 23,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        3,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 32,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        3,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-498460498419343452338927647605129216",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        1,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-5192296858534827628530496329220096",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        5,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        5,
+        9,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        5,
+        9,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2990762990516060714033565885630775296",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        4,
+        9,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-5192296858534827628530496329220096",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 26,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        1,
+        5,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "841152091082642075821940405333655552",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 26,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        6,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "280384030360880691940646801777885184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-15576890575604482885591488987660288",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        2,
+        6,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-324518553658426726783156020576256",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 15,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        2,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 6,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        5
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "841152091082642075821940405333655552",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 26,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        6,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "280384030360880691940646801777885184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        5,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-15576890575604482885591488987660288",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        2,
+        6,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-324518553658426726783156020576256",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 19,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        2,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 11,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1121536121443522767762587207111540736",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        3,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-124615124604835863084731911901282304",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        1,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        5,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 11,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 1,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 2,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-373845373814507589254195735703846912",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 3,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        3,
+        10,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 23,
+      "identity_count": 4,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        1,
+        5,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 11,
+      "identity_count": 5,
+      "left_support": [
+        0,
+        5
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "17944577943096364284201395313784651776",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-996920996838686904677855295210258432",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        10,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 23,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        5,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "17944577943096364284201395313784651776",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-996920996838686904677855295210258432",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 24,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        5,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "17944577943096364284201395313784651776",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-996920996838686904677855295210258432",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "82688615161788046621600029605919675383808",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 41,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        5,
+        9,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "20672153790447011655400007401479918845952",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 41,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        5,
+        9,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-646004805951469114231250231296247463936",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 40,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        4,
+        9,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 33,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        1,
+        4,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        2
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        3,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13458433457322273213151046485338488832",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        8,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "4486144485774091071050348828446162944",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        8,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "62307562302417931542365955950641152",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        6,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-324518553658426726783156020576256",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        2,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "8972288971548182142100697656892325888",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "124615124604835863084731911901282304",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        7,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-649037107316853453566312041152512",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        3,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "17944577943096364284201395313784651776",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-996920996838686904677855295210258432",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-13781435860298007770266671600986612563968",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 37,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-3445358965074501942566667900246653140992",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 37,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-11963051962064242856134263542523101184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        3,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        1,
+        1,
+        10,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "841152091082642075821940405333655552",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "280384030360880691940646801777885184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "7788445287802241442795744493830144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 19,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        6,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 14,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        2,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 5,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "26916866914644546426302092970676977664",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "8972288971548182142100697656892325888",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "124615124604835863084731911901282304",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        7,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-649037107316853453566312041152512",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        3,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "17944577943096364284201395313784651776",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 31,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "996920996838686904677855295210258432",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 30,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        3,
+        0,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 24,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        0,
+        5,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "13781435860298007770266671600986612563968",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 37,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3445358965074501942566667900246653140992",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 37,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        6,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-11963051962064242856134263542523101184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 34,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        3,
+        4,
+        10,
+        17
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 25,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        1,
+        1,
+        5,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "841152091082642075821940405333655552",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "280384030360880691940646801777885184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "7788445287802241442795744493830144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 19,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        6,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 14,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        2,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 5,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "841152091082642075821940405333655552",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "280384030360880691940646801777885184",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        8,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "7788445287802241442795744493830144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 19,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        6,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        2,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1121536121443522767762587207111540736",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "124615124604835863084731911901282304",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 23,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        5,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "861339741268625485641666975061663285248",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 1,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        6,
+        10,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "215334935317156371410416743765415821312",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 28,
+      "identity_count": 2,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        6,
+        10,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1495381495258030357016782942815387648",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 3,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        4,
+        10,
+        13
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 4,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        1,
+        5,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 5,
+      "left_support": [
+        1,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "166153499473114484112975882535043072",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "166153499473114484112975882535043072",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "649037107316853453566312041152512",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 16,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        0,
+        14
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 8,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-332306998946228968225951765070086144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-332306998946228968225951765070086144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "5981525981032121428067131771261550592",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "166153499473114484112975882535043072",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "5981525981032121428067131771261550592",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "166153499473114484112975882535043072",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 27,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        3
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        4,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "10384593717069655257060992658440192",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "10384593717069655257060992658440192",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 8,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 3,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        3
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-332306998946228968225951765070086144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-332306998946228968225951765070086144",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-83076749736557242056487941267521536",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "5981525981032121428067131771261550592",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "5192296858534827628530496329220096",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        4,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "53833733829289092852604185941353955328",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "5981525981032121428067131771261550592",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 29,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        4,
+        0,
+        9,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "5192296858534827628530496329220096",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 22,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        2,
+        0,
+        4,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 18,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        18
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "10384593717069655257060992658440192",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "10384593717069655257060992658440192",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 8,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 3,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        3
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "10384593717069655257060992658440192",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "10384593717069655257060992658440192",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "2596148429267413814265248164610048",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "162259276829213363391578010288128",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 12,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 8,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "373845373814507589254195735703846912",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 17,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        5,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 8,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 1,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "3364608364330568303287761621334622208",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 2,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "373845373814507589254195735703846912",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 20,
+      "identity_count": 3,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 17,
+      "identity_count": 4,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        5,
+        12
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 8,
+      "identity_count": 5,
+      "left_support": [
+        2,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        3,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 16,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 16,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1329227995784915872903807060280344576",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 21,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        5,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 16,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        4
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        16
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        5
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 6,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        6
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 6,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        6
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 1,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 2,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "41538374868278621028243970633760768",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 3,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "1298074214633706907132624082305024",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 10,
+      "identity_count": 4,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "-40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 6,
+      "identity_count": 5,
+      "left_support": [
+        3,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        6
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        4
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 1,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 2,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 3,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 4,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 5,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        2
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 1,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 2,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 3,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 4,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 5,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        1,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 1,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 2,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 3,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 4,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 5,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        0,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 1,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 2,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "81129638414606681695789005144064",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 3,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 4,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    },
+    {
+      "determinant_coefficient": "40564819207303340847894502572032",
+      "determinant_term_count": 1,
+      "determinant_total_degree": 1,
+      "identity_count": 5,
+      "left_support": [
+        4,
+        5
+      ],
+      "parameter_exponents": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "rank_at_all_one": 42,
+      "right_support": [
+        1,
+        2,
+        3
+      ],
+      "status": "NONZERO_MULTIVARIATE_MONOMIAL_MINOR"
+    }
+  ],
+  "schema_version": 1,
+  "status": "EXACT_ALL_DISJOINT_23_RANK_ONE_SHEAR_INVALID_TAIL_MINORS",
+  "status_counts": {
+    "NONZERO_MULTIVARIATE_MONOMIAL_MINOR": 300
+  },
+  "support_count": 60,
+  "witness_samples_first_5": [
+    {
+      "identity_count": 1,
+      "left_support": [
+        0,
+        1
+      ],
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "witness_assignments_first_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "identity_count": 2,
+      "left_support": [
+        0,
+        1
+      ],
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "witness_assignments_first_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "identity_count": 3,
+      "left_support": [
+        0,
+        1
+      ],
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "witness_assignments_first_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "identity_count": 4,
+      "left_support": [
+        0,
+        1
+      ],
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "witness_assignments_first_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "identity_count": 5,
+      "left_support": [
+        0,
+        1
+      ],
+      "right_support": [
+        2,
+        3,
+        4
+      ],
+      "witness_assignments_first_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      ]
+    }
+  ],
+  "workers": 20
+}

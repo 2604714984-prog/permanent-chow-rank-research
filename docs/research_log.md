@@ -3373,3 +3373,18 @@ Hence every nonzero disjoint-support \((2,2)\) rank-one update has zero local
 target intersection in characteristic zero.  Larger or overlapping support on
 both sides, higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary
 endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: all disjoint-support rank-one shears are excluded
+
+The remaining support-size pairs \((2,3),(3,2),(2,4),(4,2),(3,3)\) contribute
+850 ordered-support/multiplicity cases.  After quotienting rank-one scaling,
+every exact 42-column invalid-tail determinant is a nonzero monomial in the
+remaining parameters.  The previously certified lower-support strata cover
+every proper coordinate face.
+
+Together with the coordinate-star and \((2,2)\) results, this proves zero local
+target intersection for every \(I+uv^\mathsf T\) with nonzero disjoint-support
+vectors \(u,v\) in characteristic zero.  Overlapping supports with cancellation
+\(v^\mathsf Tu=0\), non-unipotent rank-one updates, higher-rank perturbations,
+general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary
+lower 50 remain open.
