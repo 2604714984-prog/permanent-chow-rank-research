@@ -5,7 +5,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SIZE_PAIRS = ((2, 4), (3, 3), (4, 2))
+SIZE_PAIRS = ((2, 4), (3, 3), (4, 2), (2, 5), (5, 2))
 
 
 def load_script():
@@ -34,7 +34,13 @@ class OverlapTwoRankOneShearTailRankTests(unittest.TestCase):
         }
 
     def test_complete_families(self):
-        expected_counts = {(2, 4): 450, (3, 3): 900, (4, 2): 450}
+        expected_counts = {
+            (2, 4): 450,
+            (3, 3): 900,
+            (4, 2): 450,
+            (2, 5): 300,
+            (5, 2): 300,
+        }
         for pair, payload in self.payloads.items():
             self.assertEqual(payload["candidate_count"], expected_counts[pair])
             self.assertEqual(len(payload["rows"]), expected_counts[pair])
@@ -48,6 +54,8 @@ class OverlapTwoRankOneShearTailRankTests(unittest.TestCase):
             (2, 4): {1: 207, 2: 243},
             (3, 3): {1: 567, 2: 333},
             (4, 2): {1: 294, 2: 156},
+            (2, 5): {1: 229, 2: 71},
+            (5, 2): {1: 300},
         }
         for pair, payload in self.payloads.items():
             histogram = {}

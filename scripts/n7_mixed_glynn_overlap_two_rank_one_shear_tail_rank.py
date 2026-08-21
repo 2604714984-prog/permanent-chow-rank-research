@@ -127,6 +127,38 @@ def witness_assignments(identity_count, support, point):
     return tuple(pivots[column][1] for column in sorted(pivots))
 
 
+def weighted_witness_assignments(identity_count, support, point):
+    core, left_extra, right_extra = support
+    left_support = set(core + left_extra)
+    pivots = {}
+    maximum_degree = 6 - identity_count
+    for target_degree in range(maximum_degree + 1):
+        for assignment in itertools.product(range(7), repeat=6):
+            if len(set(assignment)) == 6:
+                continue
+            degree = sum(
+                1
+                for block, column in enumerate(assignment)
+                if block >= identity_count
+                and column != 0
+                and column - 1 in left_support
+            )
+            if degree != target_degree:
+                continue
+            feature = assignment_feature(
+                assignment,
+                identity_count,
+                core,
+                left_extra,
+                right_extra,
+                point,
+            )
+            base23.core22.base.add_modular_pivot(pivots, feature, assignment)
+            if len(pivots) == len(TAILS):
+                return tuple(pivots[column][1] for column in sorted(pivots))
+    return tuple(pivots[column][1] for column in sorted(pivots))
+
+
 def selection_points(parameter_count: int):
     points = [[1] * parameter_count]
     for index in range(parameter_count):
@@ -138,7 +170,7 @@ def selection_points(parameter_count: int):
     return tuple(tuple(point) for point in points)
 
 
-def cover_trial(candidate):
+def cover_trial(candidate, weighted=False):
     support, identity_count, left_size, right_size = candidate
     core, left_extra, right_extra = support
     parameter_count = left_size + right_size - 2
@@ -147,7 +179,11 @@ def cover_trial(candidate):
     minors = []
     witness_sample_sets = []
     for point in selection_points(parameter_count):
-        witnesses = witness_assignments(identity_count, support, point)
+        witnesses = (
+            weighted_witness_assignments(identity_count, support, point)
+            if weighted
+            else witness_assignments(identity_count, support, point)
+        )
         if len(witnesses) != len(TAILS):
             continue
         matrix = sp.Matrix(
@@ -194,6 +230,7 @@ def cover_trial(candidate):
         "left_extra_support": list(left_extra),
         "right_extra_support": list(right_extra),
         "identity_count": identity_count,
+        "weighted_selection": weighted,
         "minor_count": len(minors),
         "minors": minors,
         "gcd": gcd_polynomial.as_expr().__str__() if gcd_polynomial is not None else None,
@@ -205,6 +242,62 @@ def cover_trial(candidate):
             if covered
             else "UNRESOLVED_COMMON_MINOR_ZERO_LOCUS"
         ),
+    }
+
+
+def weighted_cover_trial(candidate):
+    return cover_trial(candidate, weighted=True)
+
+
+def minor_probe(candidate, point, weighted=False):
+    support, identity_count, left_size, right_size = candidate
+    core, left_extra, right_extra = support
+    parameter_count = left_size + right_size - 2
+    if len(point) != parameter_count:
+        raise ValueError("probe point has the wrong parameter count")
+    witnesses = (
+        weighted_witness_assignments(identity_count, support, point)
+        if weighted
+        else witness_assignments(identity_count, support, point)
+    )
+    common = {
+        "core_support": list(core),
+        "left_extra_support": list(left_extra),
+        "right_extra_support": list(right_extra),
+        "identity_count": identity_count,
+        "selection_point": list(point),
+        "weighted_selection": weighted,
+        "rank_at_selection_point": len(witnesses),
+    }
+    if len(witnesses) != len(TAILS):
+        return {**common, "status": "RANK_DEFICIENT_AT_SELECTION_POINT"}
+    parameters = sp.symbols(f"p0:{parameter_count}")
+    matrix = sp.Matrix(
+        [
+            assignment_feature(
+                assignment,
+                identity_count,
+                core,
+                left_extra,
+                right_extra,
+                parameters,
+            )
+            for assignment in witnesses
+        ]
+    ).T
+    determinant = sp.Poly(
+        matrix.det(method="domain-ge"), *parameters, domain=sp.ZZ
+    )
+    terms = determinant.terms()
+    monomial = len(terms) == 1 and terms[0][1] != 0
+    return {
+        **common,
+        "determinant_total_degree": determinant.total_degree(),
+        "determinant_term_count": len(terms),
+        "monomial_exponents": list(terms[0][0]) if monomial else None,
+        "monomial_coefficient": str(terms[0][1]) if monomial else None,
+        "witness_assignments": [list(row) for row in witnesses],
+        "status": "MONOMIAL_MINOR_PROBE" if monomial else "NONMONOMIAL_MINOR_PROBE",
     }
 
 
@@ -224,10 +317,18 @@ def immediate_face_paths(left_size: int, right_size: int):
 
 
 def build_payload(args):
-    family = candidates(args.left_size, args.right_size)
-    candidate_count = len(family)
-    if candidate_count > args.max_candidates:
-        raise ValueError("candidate family exceeds --max-candidates")
+    complete_family = candidates(args.left_size, args.right_size)
+    candidate_count = len(complete_family)
+    stop_index = (
+        candidate_count
+        if args.limit is None
+        else min(candidate_count, args.start_index + args.limit)
+    )
+    if not 0 <= args.start_index < candidate_count:
+        raise ValueError("--start-index is outside the candidate family")
+    family = complete_family[args.start_index:stop_index]
+    if len(family) > args.max_candidates:
+        raise ValueError("selected candidate chunk exceeds --max-candidates")
     if args.workers < 1 or args.workers > (os.cpu_count() or 1):
         raise ValueError("workers exceed visible CPUs")
     face_certificates = []
@@ -241,7 +342,8 @@ def build_payload(args):
     with concurrent.futures.ProcessPoolExecutor(
         max_workers=args.workers, mp_context=context
     ) as pool:
-        rows = list(pool.map(cover_trial, family, chunksize=1))
+        trial_function = weighted_cover_trial if args.weighted_selection else cover_trial
+        rows = list(pool.map(trial_function, family, chunksize=1))
     rows.sort(
         key=lambda row: (
             row["core_support"],
@@ -267,15 +369,19 @@ def build_payload(args):
         status = row["status"]
         status_counts[status] = status_counts.get(status, 0) + 1
     complete = status_counts == {
-        "DENSE_TORUS_COVERED_BY_EXACT_MINORS": candidate_count
+        "DENSE_TORUS_COVERED_BY_EXACT_MINORS": len(family)
     }
     label = f"{args.left_size}{args.right_size}"
     return {
         "schema_version": 1,
         "status": (
-            f"EXACT_ALL_OVERLAP_TWO_{label}_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+            (
+                f"EXACT_ALL_OVERLAP_TWO_{label}_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+                if args.start_index == 0 and stop_index == candidate_count
+                else f"EXACT_CHUNK_OVERLAP_TWO_{label}_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+            )
             if complete
-            else f"INCOMPLETE_OVERLAP_TWO_{label}_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+            else f"INCOMPLETE_CHUNK_OVERLAP_TWO_{label}_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
         ),
         "field": "characteristic zero",
         "left_support_size": args.left_size,
@@ -283,9 +389,13 @@ def build_payload(args):
         "overlap_size": 2,
         "support_count": len(supports(args.left_size, args.right_size)),
         "multiplicity_split_count": 5,
-        "candidate_count": candidate_count,
+        "candidate_count": len(family),
+        "full_candidate_count": candidate_count,
+        "candidate_start_index": args.start_index,
+        "candidate_stop_index_exclusive": stop_index,
         "parameter_count": args.left_size + args.right_size - 2,
         "workers": args.workers,
+        "weighted_selection": args.weighted_selection,
         "status_counts": status_counts,
         "coordinate_face_certificates": face_certificates,
         "witness_samples_first_5": samples,
@@ -306,19 +416,37 @@ def main():
     parser.add_argument("--right-size", type=int, required=True)
     parser.add_argument("--max-candidates", type=int, default=900)
     parser.add_argument("--workers", type=int, default=1)
+    parser.add_argument("--start-index", type=int, default=0)
+    parser.add_argument("--limit", type=int)
     parser.add_argument("--probe-index", type=int)
+    parser.add_argument("--minor-probe-index", type=int)
+    parser.add_argument("--selection-point")
+    parser.add_argument("--weighted-selection", action="store_true")
     parser.add_argument("--json", type=Path)
     args = parser.parse_args()
     pair = (args.left_size, args.right_size)
     if pair not in ALLOWED_SIZES:
         raise ValueError("unsupported overlap-two support-size pair")
     family = candidates(*pair)
-    if args.probe_index is None:
+    if args.probe_index is not None and args.minor_probe_index is not None:
+        raise ValueError("choose at most one probe mode")
+    if args.minor_probe_index is not None:
+        if not 0 <= args.minor_probe_index < len(family):
+            raise ValueError("--minor-probe-index is outside the candidate family")
+        if args.selection_point is None:
+            raise ValueError("--selection-point is required for a minor probe")
+        point = tuple(int(value) for value in args.selection_point.split(","))
+        payload = minor_probe(
+            family[args.minor_probe_index], point, weighted=args.weighted_selection
+        )
+    elif args.probe_index is None:
         payload = build_payload(args)
     else:
         if not 0 <= args.probe_index < len(family):
             raise ValueError("--probe-index is outside the candidate family")
-        payload = cover_trial(family[args.probe_index])
+        payload = cover_trial(
+            family[args.probe_index], weighted=args.weighted_selection
+        )
     text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
         args.json.write_text(text, encoding="utf-8")

@@ -563,6 +563,25 @@ This does not yet cover overlap-two support-size sum seven or eight, overlap
 three or more, non-unipotent rank-one updates, higher-rank perturbations,
 arbitrary \(\mathrm{GL}_6\), or arbitrary endpoint-B packets.
 
+## The endpoint families at support-size sum seven
+
+The \((2,5)\) and \((5,2)\) families each contain 300 support/split cases and
+have five normalized parameters.  Direct lexicographic column selection becomes
+memory-bound on a small asymmetric subset.  A streamed weighted selection that
+orders repeated-column assignments by transformed-coordinate degree produces
+much sparser exact matrices without materializing the 117,649 assignments.
+
+For \((2,5)\), 229 cases need one exact minor and 71 need two; their gcd is a
+coordinate monomial in every case.  For \((5,2)\), weighted selection gives a
+single monomial minor in all 300 cases.  All coefficient faces reduce to the
+certified support-size-sum-six or lower layers.  Hence both endpoint families
+have invalid-tail rank 42 for every nonzero nilpotent update.
+
+This does not yet cover the middle \((3,4)/(4,3)\) families at support-size sum
+seven, support-size sum eight, overlap three or more, non-unipotent rank-one
+updates, higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary
+endpoint-B packets.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -765,6 +784,16 @@ python scripts/n7_mixed_glynn_overlap_two_rank_one_shear_tail_rank.py \
   --json data/n7_mixed_glynn_overlap_two_33_nilpotent_shear_tail_rank.json
 ```
 
+For five-parameter families, use degree-weighted selection and four workers to
+avoid memory-bandwidth collapse; for example:
+
+```bash
+python scripts/n7_mixed_glynn_overlap_two_rank_one_shear_tail_rank.py \
+  --left-size 5 --right-size 2 --max-candidates 300 --workers 4 \
+  --weighted-selection \
+  --json data/n7_mixed_glynn_overlap_two_52_nilpotent_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
@@ -773,7 +802,7 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 overlap-two families with support-size sum six.  It also does not cover
-arbitrary endpoint-B packets, and therefore does not yet prove ordinary lower
-(50) or a border-rank statement.  Its useful new content is the exact
-multiblock compatibility classification, which is invisible to the earlier
-single-block rank test.
+the middle support-size-sum-seven overlap-two families or arbitrary endpoint-B
+packets, and therefore does not yet prove ordinary lower (50) or a border-rank
+statement.  Its useful new content is the exact multiblock compatibility
+classification, which is invisible to the earlier single-block rank test.

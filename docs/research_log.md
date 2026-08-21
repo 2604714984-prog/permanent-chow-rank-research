@@ -3431,3 +3431,18 @@ has invalid-tail rank 42.  Overlap-two support-size sums seven and eight,
 overlap three or more, non-unipotent rank-one updates, higher-rank
 perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
 and ordinary lower 50 remain open.
+
+## 2026-08-21: overlap-two sum-seven endpoints are excluded
+
+The five-parameter \((2,5)\) and \((5,2)\) families each have 300 cases.
+Degree-weighted streamed pivot selection avoids the severe memory amplification
+of lexicographic five-variable determinants.  The \((2,5)\) family has 229
+one-minor and 71 two-minor certificates; all 300 \((5,2)\) cases have a single
+monomial minor.  Every exact gcd is a coordinate monomial, and lower coefficient
+faces are already certified.
+
+Thus both endpoint families have invalid-tail rank 42.  The middle
+\((3,4)/(4,3)\) families, support-size sum eight, overlap three or more,
+non-unipotent rank-one updates, higher-rank perturbations, general
+\(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary lower 50
+remain open.
