@@ -1,0 +1,39 @@
+{
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "coordinate_second_order_over_envelope": "DIAGNOSTIC_ONLY",
+    "global_six_component_second_order": "OPEN",
+    "mu_6_4": "OPEN_IN_[6,8]",
+    "single_component_internal_two_jet_on_equality_frames": "MATCHING_ZERO",
+    "unrestricted_chow_rank_improvement": false
+  },
+  "classification": "ROUTE_DIAGNOSTIC_AND_EQUALITY_STATE_LEMMA",
+  "core_sha256": "938fa79d2410032ec2d12ff917add00d1affaa7365be39241a1931197f0d4eb9",
+  "equality_structure": {
+    "E1_matching_support": 0,
+    "distinct_cells": 5,
+    "multiplicity_pattern": [2, 1, 1, 1, 1],
+    "representative_degree_sequences": [
+      {"column": [2, 1, 1, 1], "row": [3, 1, 1, 0]},
+      {"column": [3, 1, 1, 0], "row": [2, 1, 1, 1]}
+    ]
+  },
+  "field": "characteristic_zero",
+  "integrability_lemma": {
+    "first_order_condition": "delta*H lies in the coordinate source image",
+    "kernel_form": "(l0-l1) H with H in span of the four triple products of the other four distinct factors",
+    "matching_consequence": "Every second-order matching would retain at least three distinct frame cells; equality frames have E1=empty.",
+    "statement": "For every equality frame, if one component has g0=0 and g1=0 internally, then the perfect-matching projection of g2 is zero."
+  },
+  "local_over_envelope": {
+    "equality_frames": 288,
+    "equality_orbit_sizes": [144, 144],
+    "equality_profile": {"D": 0, "E2": 12, "K2_tilde": 8, "S2_tilde": 8},
+    "equality_row_column_orbits": 2,
+    "maximum_E2_plus_S2_tilde": 20,
+    "profile_count": 27,
+    "representatives": [[0, 0, 1, 2, 7, 11], [0, 0, 4, 8, 13, 14]],
+    "unordered_coordinate_frames_checked": 54264
+  },
+  "schema": "general_quartic_coordinate_second_order_equality_collapse/v1"
+}
