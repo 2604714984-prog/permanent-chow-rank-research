@@ -1,0 +1,23 @@
+{
+  "claim_boundary": {
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false,
+    "raw_second_order_support_route": "INSUFFICIENT",
+    "second_order_six_block_witness": false
+  },
+  "equality_graph": "C6_EQUALS_K33_MINUS_PERFECT_MATCHING",
+  "equality_partial_matching_counts": {
+    "r2": 9,
+    "r3": 2,
+    "r4": 0
+  },
+  "equality_row_column_orbits": 1,
+  "equality_supports": 96,
+  "explicit_cover_frame_count": 6,
+  "explicit_cover_union": 24,
+  "maximum_second_order_envelope": 14,
+  "schema": "general_quartic_coordinate_second_order_envelope/v1",
+  "supports_checked": 14893
+}
