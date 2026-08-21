@@ -187,6 +187,24 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
             (self.checkpoint["elapsed_seconds_sum"], {4}),
         )
 
+    def test_merge_selection_metadata_uses_checkpoint_rows(self):
+        self.assertEqual(
+            self.merge_module.selection_metadata(self.checkpoint),
+            {"weighted": 75},
+        )
+        self.assertEqual(
+            self.merge_module.selection_metadata(
+                {
+                    "weighted_selection": False,
+                    "rows": [
+                        {},
+                        {"weighted_selection": True},
+                    ],
+                }
+            ),
+            {"lexicographic": 1, "weighted": 1},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -17,6 +17,20 @@ def runtime_metadata(payload: dict) -> tuple[float, set[int]]:
     }
 
 
+def selection_metadata(payload: dict) -> dict[str, int]:
+    """Count the selection strategy from row-level evidence when available."""
+    default_weighted = bool(payload.get("weighted_selection", False))
+    counts: dict[str, int] = {}
+    for row in payload["rows"]:
+        strategy = (
+            "weighted"
+            if bool(row.get("weighted_selection", default_weighted))
+            else "lexicographic"
+        )
+        counts[strategy] = counts.get(strategy, 0) + 1
+    return counts
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -71,10 +85,8 @@ def main() -> None:
     workers_used = set()
     for _start, _stop, _path, payload in segments:
         weighted = bool(payload.get("weighted_selection", False))
-        selection_name = "weighted" if weighted else "lexicographic"
-        selection_counts[selection_name] = (
-            selection_counts.get(selection_name, 0) + len(payload["rows"])
-        )
+        for strategy, count in selection_metadata(payload).items():
+            selection_counts[strategy] = selection_counts.get(strategy, 0) + count
         for row in payload["rows"]:
             row = dict(row)
             row.setdefault("weighted_selection", weighted)
