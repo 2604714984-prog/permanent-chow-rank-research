@@ -169,6 +169,33 @@ exactly three permutation types has zero target intersection, independently of
 all diagonal signs.  The replay took 55.26 seconds with twenty WSL workers and
 stores no tensor or candidate matrix.
 
+## Four permutation types: a conjugacy-reduced cover
+
+The direct normalized family for exactly four permutation types contains
+
+\[
+{719\choose3}{5\choose3}=616909190
+\]
+
+multisets, too many for the direct three-type enumeration.  Mark one of the
+three nonidentity relative types.  Simultaneous input/output relabelling
+conjugates every relative permutation and preserves the existence of a
+protected character, so the marked type may be replaced by one of the ten
+nonidentity cycle-type representatives in \(S_6\).  Streaming the remaining
+two distinct nonidentity types and the ten positive compositions of six gives
+the exhaustive (non-injective) cover
+
+\[
+10{718\choose2}{5\choose3}=25740300.
+\]
+
+Every normalized four-type packet occurs in this cover; some occur more than
+once because any nonidentity type may be marked.  All 25,740,300 cover entries
+have empty protected-character set.  Hence every local packet using exactly
+four permutation types has zero target intersection, independently of all
+diagonal signs.  The constant-memory replay took 868.25 seconds with twenty
+WSL workers.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -235,14 +262,22 @@ python scripts/n7_mixed_glynn_permutation_character_dp.py \
   --json data/n7_mixed_glynn_permutation_character_dp.json
 ```
 
+The conjugacy-reduced four-permutation replay is:
+
+```bash
+python scripts/n7_mixed_glynn_four_permutation_character_dp.py \
+  --max-candidates 25740300 --workers 20 \
+  --json data/n7_mixed_glynn_four_permutation_character_dp.json
+```
+
 ## Boundary
 
 This is a complete theorem for all diagonal-sign packets in the synchronized
 mixed-Glynn dictionary and for local packets with at most two arbitrary
 signed-coordinate types.  The character certificate additionally removes all
-local packets with exactly three permutation types, for arbitrary signs.  It
-does not cover four or more permutation types, general \(\mathrm{GL}_6\) graph
-transformations, or arbitrary endpoint-B packets.  It therefore does not yet
-prove ordinary lower (50) or a border-rank statement.  Its useful new content
-is the exact multiblock compatibility classification, which is invisible to
-the earlier single-block rank test.
+local packets with exactly three or exactly four permutation types, for
+arbitrary signs.  It does not cover five or six permutation types, general
+\(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B packets.  It
+therefore does not yet prove ordinary lower (50) or a border-rank statement.
+Its useful new content is the exact multiblock compatibility classification,
+which is invisible to the earlier single-block rank test.

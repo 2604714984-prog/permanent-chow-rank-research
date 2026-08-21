@@ -3218,3 +3218,27 @@ explicitly rejected: \(E_1^{(1)}=\operatorname{Sym}^2V\), not \(E_2\).
 The raw catalectic selected-size scan has ceiling 49, so the present ordinary
 interval is \(49\) through 64 and a new compatibility input is required for
 lower 50.
+
+## 2026-08-21: four permutation types fail the perm7 endpoint test
+
+N7's mixed-Glynn endpoint computation now covers every local six-block packet
+using exactly four coordinate-permutation types.  The direct normalized family
+has
+
+\[
+{719\choose3}{5\choose3}=616909190
+\]
+
+members.  Common normalization and simultaneous conjugation reduce this to a
+streamed, non-injective cover of
+
+\[
+10{718\choose2}{5\choose3}=25740300
+\]
+
+entries.  The exact 64-state Walsh collision DP found no protected character
+in any cover entry.  Thus every exactly-four-type permutation packet has zero
+local target intersection, independently of diagonal signs.  Together with
+the earlier computation this removes exactly three and exactly four
+permutation types, but not five or six types, general \(\mathrm{GL}_6\)
+transforms, border rank, or the ordinary lower-50 problem.
