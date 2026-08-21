@@ -1,0 +1,157 @@
+{
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4": "OPEN_IN_[6,7]",
+    "seven_block_literal_sum": "NONZERO",
+    "six_block_literal_sum": "OPEN",
+    "unrestricted_chow_rank_improvement": false
+  },
+  "classification": "EXPLICIT_NONZERO_FAMILY_AND_RESTRICTED_SHARPNESS_THEOREM",
+  "core_sha256": "045dcbd80846a35e6b9716771721c542ed86b0c1a246cf716cebb8e57df65a0e",
+  "exact_replay": {
+    "coefficient_rows": {
+      "3": {
+        "permanent_coefficients": 6,
+        "row_assignments": 27,
+        "unscaled_permanent_coefficient": 4,
+        "zero_coefficients": 21
+      },
+      "4": {
+        "permanent_coefficients": 24,
+        "row_assignments": 256,
+        "unscaled_permanent_coefficient": 8,
+        "zero_coefficients": 232
+      },
+      "5": {
+        "permanent_coefficients": 120,
+        "row_assignments": 3125,
+        "unscaled_permanent_coefficient": 16,
+        "zero_coefficients": 3005
+      },
+      "6": {
+        "permanent_coefficients": 720,
+        "row_assignments": 46656,
+        "unscaled_permanent_coefficient": 32,
+        "zero_coefficients": 45936
+      }
+    },
+    "construction_rows": {
+      "10": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 511,
+        "degree_of_chow_envelope": 12,
+        "shared_factors_per_block": 8,
+        "sign_terms_before_compression": 512,
+        "source_subsets_used_per_block": 2
+      },
+      "3": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 3,
+        "degree_of_chow_envelope": 5,
+        "shared_factors_per_block": 1,
+        "sign_terms_before_compression": 4,
+        "source_subsets_used_per_block": 2
+      },
+      "4": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 7,
+        "degree_of_chow_envelope": 6,
+        "shared_factors_per_block": 2,
+        "sign_terms_before_compression": 8,
+        "source_subsets_used_per_block": 2
+      },
+      "5": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 15,
+        "degree_of_chow_envelope": 7,
+        "shared_factors_per_block": 3,
+        "sign_terms_before_compression": 16,
+        "source_subsets_used_per_block": 2
+      },
+      "6": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 31,
+        "degree_of_chow_envelope": 8,
+        "shared_factors_per_block": 4,
+        "sign_terms_before_compression": 32,
+        "source_subsets_used_per_block": 2
+      },
+      "7": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 63,
+        "degree_of_chow_envelope": 9,
+         "shared_factors_per_block": 5,
+        "sign_terms_before_compression": 64,
+        "source_subsets_used_per_block": 2
+      },
+      "8": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 127,
+        "degree_of_chow_envelope": 10,
+        "shared_factors_per_block": 6,
+        "sign_terms_before_compression": 128,
+        "source_subsets_used_per_block": 2
+      },
+      "9": {
+        "alternative_tail_products_per_block": 2,
+        "blocks_after_compression": 255,
+        "degree_of_chow_envelope": 11,
+        "shared_factors_per_block": 7,
+        "sign_terms_before_compression": 256,
+        "source_subsets_used_per_block": 2
+      }
+    },
+    "walsh_relation_rows": {
+      "10": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": true
+    }
+  },
+  "field": "characteristic_zero",
+  "general_theorem": {
+    "degree_threshold": "n>=m+2",
+    "identity": "perm_m=2^(1-m) sum_{delta!=delta0} chi(delta) A_delta (B_delta-B_delta0)",
+    "output_degree_minimum": 3,
+    "padding_to_larger_n": true,
+    "shared_column_count": "m-2",
+    "term_upper_bound": "2^(m-1)-1"
+  },
+  "paired_column_sharpness": {
+    "grouped_flattening_rank": 6,
+    "missing_sign": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "paired_column_construction_terms": 7,
+    "paired_column_minimum_terms": 7,
+    "rank_one_matrix_inside_zero_diagonal_symmetric_space": false,
+    "retained_sign_outer_product_span_rank": 7,
+    "retained_sign_outer_products": 7,
+    "zero_diagonal_symmetric_image_dimension": 6
+  },
+  "quartic_n6_application": {
+    "blocks": 7,
+    "degree": 6,
+    "new_interval": [
+      6,
+      7
+    ],
+    "nonmatching_coefficients": 232,
+    "output_degree": 4,
+    "permanent_matching_coefficients": 24,
+    "previous_interval": [
+      6,
+      8
+    ],
+    "seven_block_literal_sum_nonzero": true
+  },
+  "schema": "general_one_term_glynn_compression/v1"
+}
