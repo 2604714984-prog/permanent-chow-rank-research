@@ -701,27 +701,27 @@ packets, ordinary lower \(50\), or border rank.
 
 ## Higher-overlap progress
 
-The same recursive chart extends to overlap four through six.  Five
-overlap-four families are now completed exactly:
+The same recursive chart extends to overlap four through six.  All six
+allowed overlap-four families are now completed exactly:
 
 \[
 (4,4):75/75,\quad (4,5):150/150,\quad
 (5,4):150/150,\quad (4,6):75/75,\quad
-(5,5):150/150.
+(5,5):150/150,\quad (6,4):75/75.
 \]
 
-All 600 cases need one minor.  Of these, 598 determinants are monomials.  Each
-of the two remaining determinants factors as a coordinate monomial times the
-cube of the leading core-boundary form, so neither has a zero on the dense
-chart.  The exact elapsed-time sums are 58.59, 131.68, 167.19, 75.46, and
-199.61 seconds.
+All 675 cases need one minor.  Of these, 672 determinants are monomials.  Each
+of the three remaining determinants factors as a coordinate monomial times the
+cube of the leading core-boundary form, so none has a zero on the dense chart.
+The exact elapsed-time sums are 58.59, 131.68, 167.19, 75.46, and
+199.61 seconds for the first five families; \((6,4)\) took 112.35 seconds.
 
 The \((5,5)\) certificate merges the historical exact 75-of-150 checkpoint
 with three new contiguous 25-case chunks.  The merge validates all ranges and
 row statuses before producing
 `data/n7_mixed_glynn_overlap_four_55_nilpotent_shear_tail_rank.json`.
-The \((6,4)\), every overlap-five family, and the overlap-six family remain
-uncomputed.  The precise resume state is recorded in
+Every overlap-five family and the overlap-six family remain uncomputed.  The
+precise resume state is recorded in
 `docs/n7_higher_overlap_resume.md`.
 
 ## Overlap-two supports of sizes two and three
@@ -968,7 +968,7 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 complete overlap-two nilpotent rank-one family.  It does not cover overlap
-four beyond the five completed families listed above, overlap five or six,
+five or six,
 non-unipotent rank-one updates, higher-rank perturbations, or arbitrary
 endpoint-B packets, and therefore does not yet prove ordinary lower (50) or a
 border-rank statement.  Its useful new content is the exact multiblock

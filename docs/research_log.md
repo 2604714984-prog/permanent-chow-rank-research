@@ -3607,3 +3607,19 @@ strategies from the rows.  Regression tests cover both formats.  The next
 bounded family in the frozen order is overlap-four \((6,4)\).  Ordinary lower
 50, general \(\mathrm{GL}_6\), arbitrary endpoint-B packets, non-unipotent
 rank-one updates, higher-rank perturbations, and border rank remain open.
+
+## 2026-08-21: every overlap-four perm7 family completed
+
+The final overlap-four support family \((6,4)\) has 75 candidates, since
+\(\binom64\binom22\binom20\cdot5=75\).  A four-worker weighted exact run
+completed all 75 in 112.35 seconds.  Every row has status
+`DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS`; 74 selected determinants are
+monomials, and the remaining ten-term determinant factors only over coordinate
+parameters and the leading right-core boundary form.
+
+Together with the first five families, overlap four now has 675/675 exact
+support/multiplicity rows: 672 monomial minors and three allowed
+core-boundary factorizations.  This completes the overlap-four portion of the
+nilpotent rank-one shear chart.  It remains a restricted endpoint theorem and
+does not imply ordinary lower 50.  The next bounded families are overlap-five
+\((5,5),(5,6),(6,5)\), followed by overlap-six \((6,6)\).
