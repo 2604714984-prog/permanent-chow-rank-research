@@ -3505,3 +3505,33 @@ overlap-three families have zero local target intersection.  Support-size sums
 eight and nine, overlap four or more, non-unipotent rank-one updates,
 higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B,
 border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: overlap-three support-size sum eight is excluded
+
+The \((3,5),(4,4),(5,3)\) families contain 300, 600, and 300 cases, with
+four-worker checkpointed elapsed sums 168.47, 351.88, and 172.28 seconds.  A
+single exact minor covers every case.  Of the 1,200 determinants, 1,178 are
+monomials and the remaining 22 factor only over coordinate parameters and
+\(a+bq\).  Recursive lower-support certificates cover every such divisor.
+
+Thus every overlap-three support-size-sum-eight nilpotent rank-one update has
+zero local target intersection.  Support-size sum nine, overlap four or more,
+non-unipotent rank-one updates, higher-rank perturbations, general
+\(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary lower 50
+remain open.
+
+## 2026-08-21: every overlap-three support family is complete
+
+The final shapes \((3,6),(4,5),(5,4),(6,3)\) contribute 100, 300, 300, and
+100 cases.  Their checkpointed elapsed sums are 55.68, 196.92, 215.45, and
+80.46 seconds.  One exact minor covers each case: 779 determinants are
+monomials and 21 have only allowed recursive boundary factors.
+
+Because \(s_L+s_R-3\le6\), these are the last possible overlap-three support
+sizes.  Together with the preceding layers, all 2,700 exact
+support/multiplicity cases are covered, including every proper boundary by
+recursion.  Hence every nonzero rank-one nilpotent shear with support overlap
+exactly three has zero local target intersection in this endpoint model.
+Overlap four or more, non-unipotent rank-one updates, higher-rank
+perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
+and ordinary lower 50 remain open.

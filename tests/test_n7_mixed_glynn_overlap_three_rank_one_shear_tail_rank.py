@@ -7,7 +7,17 @@ import sympy as sp
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SIZE_PAIRS = ((3, 4), (4, 3))
+SIZE_PAIRS = (
+    (3, 4),
+    (4, 3),
+    (3, 5),
+    (4, 4),
+    (5, 3),
+    (3, 6),
+    (4, 5),
+    (5, 4),
+    (6, 3),
+)
 
 
 def load_script():
@@ -39,12 +49,37 @@ class OverlapThreeRankOneShearTailRankTests(unittest.TestCase):
             for pair in SIZE_PAIRS
         }
 
-    def test_complete_sum_seven_families(self):
+    def test_complete_remaining_families(self):
+        expected_counts = {
+            (3, 4): 300,
+            (4, 3): 300,
+            (3, 5): 300,
+            (4, 4): 600,
+            (5, 3): 300,
+            (3, 6): 100,
+            (4, 5): 300,
+            (5, 4): 300,
+            (6, 3): 100,
+        }
+        expected_chunks = {
+            (3, 4): 6,
+            (4, 3): 6,
+            (3, 5): 12,
+            (4, 4): 24,
+            (5, 3): 12,
+            (3, 6): 4,
+            (4, 5): 12,
+            (5, 4): 12,
+            (6, 3): 4,
+        }
+        self.assertEqual(set(self.module.ALLOWED_SIZES), set(SIZE_PAIRS))
         for pair, payload in self.payloads.items():
-            self.assertEqual(payload["candidate_count"], 300)
+            self.assertEqual(payload["candidate_count"], expected_counts[pair])
             self.assertEqual(payload["candidate_start_index"], 0)
-            self.assertEqual(payload["candidate_stop_index_exclusive"], 300)
-            self.assertEqual(payload["chunk_count"], 6)
+            self.assertEqual(
+                payload["candidate_stop_index_exclusive"], expected_counts[pair]
+            )
+            self.assertEqual(payload["chunk_count"], expected_chunks[pair])
             self.assertEqual(
                 payload["status"],
                 f"EXACT_ALL_OVERLAP_THREE_{pair[0]}{pair[1]}_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
@@ -76,6 +111,13 @@ class OverlapThreeRankOneShearTailRankTests(unittest.TestCase):
         expected_term_histograms = {
             (3, 4): {1: 300},
             (4, 3): {1: 294, 3: 1, 5: 5},
+            (3, 5): {1: 300},
+            (4, 4): {1: 588, 3: 2, 5: 10},
+            (5, 3): {1: 290, 3: 1, 5: 6, 7: 3},
+            (3, 6): {1: 100},
+            (4, 5): {1: 294, 3: 1, 5: 5},
+            (5, 4): {1: 290, 3: 1, 5: 6, 7: 3},
+            (6, 3): {1: 95, 3: 1, 5: 3, 9: 1},
         }
         for pair, payload in self.payloads.items():
             parameters = self.module.parameter_symbols(*pair)

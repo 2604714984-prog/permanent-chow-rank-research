@@ -664,6 +664,41 @@ non-unipotent rank-one updates, higher-rank perturbations, arbitrary
 \(\mathrm{GL}_6\), arbitrary endpoint-B packets, ordinary lower \(50\), and
 border rank remain open.
 
+## Overlap-three support-size sum eight
+
+The shapes \((3,5),(4,4),(5,3)\) contain 300, 600, and 300 cases.  Their
+four-worker checkpointed elapsed sums are 168.47, 351.88, and 172.28 seconds.
+Every one of the 1,200 cases is covered by one exact minor.  The exact
+determinants are monomials in 1,178 cases; the remaining 22 have three, five,
+or seven expanded terms, but factor only over coordinate parameters and the
+chart-boundary divisor \(a+bq\).
+
+The extra-coefficient faces reduce to support-size sum seven, and the core
+faces reduce to the complete overlap-two or disjoint-support theorems.  Hence
+all three support-size-sum-eight overlap-three families have invalid-tail rank
+42 for every nonzero full-support update.
+
+## Completion of every overlap-three support family
+
+The last possible support-size sum is nine, because two subsets of six
+coordinates with intersection three have union size
+\(s_L+s_R-3\le6\).  The four shapes \((3,6),(4,5),(5,4),(6,3)\) contain
+100, 300, 300, and 100 cases.  Their elapsed-time sums are 55.68, 196.92,
+215.45, and 80.46 seconds.  Again, one exact minor covers every case: 779 are
+monomials and the other 21 factor only over allowed recursive boundary
+divisors.
+
+Including the coincident, sum-seven, and sum-eight layers gives 2,700 exact
+support/multiplicity cases.  Every dense chart is covered, and every proper
+divisor reduces to a smaller overlap-three, complete overlap-two, disjoint, or
+zero-update stratum.  Thus every nonzero rank-one nilpotent shear whose two
+supports overlap in exactly three coordinates has invalid-tail rank 42 in the
+synchronized mixed-Glynn endpoint model.
+
+This does not cover overlap four or more, non-unipotent rank-one updates,
+higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), arbitrary endpoint-B
+packets, ordinary lower \(50\), or border rank.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -908,8 +943,8 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 complete overlap-two nilpotent rank-one family.  It does not cover overlap
-three beyond support-size sum seven, overlap four or more, non-unipotent
-rank-one updates, higher-rank perturbations, or arbitrary endpoint-B packets,
-and therefore does not yet prove ordinary lower (50) or a border-rank
-statement.  Its useful new content is the exact multiblock compatibility
-classification, which is invisible to the earlier single-block rank test.
+four or more, non-unipotent rank-one updates, higher-rank perturbations, or
+arbitrary endpoint-B packets, and therefore does not yet prove ordinary lower
+(50) or a border-rank statement.  Its useful new content is the exact
+multiblock compatibility classification, which is invisible to the earlier
+single-block rank test.
