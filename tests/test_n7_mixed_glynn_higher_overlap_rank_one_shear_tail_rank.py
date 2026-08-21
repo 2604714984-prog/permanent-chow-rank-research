@@ -7,7 +7,7 @@ import sympy as sp
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COMPLETE_FAMILIES = ((4, 4, 4), (4, 4, 5), (4, 5, 4), (4, 4, 6))
+COMPLETE_FAMILIES = ((4, 4, 4), (4, 4, 5), (4, 5, 4), (4, 4, 6), (4, 5, 5))
 
 
 def load_script():
@@ -98,6 +98,7 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
             (4, 4, 5): 150,
             (4, 5, 4): 150,
             (4, 4, 6): 75,
+            (4, 5, 5): 150,
         }
         for family, payload in self.payloads.items():
             overlap_size, left_size, right_size = family
@@ -130,6 +131,7 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
             (4, 4, 5): {1: 150},
             (4, 5, 4): {1: 149, 10: 1},
             (4, 4, 6): {1: 75},
+            (4, 5, 5): {1: 149, 10: 1},
         }
         for family, payload in self.payloads.items():
             overlap_size, left_size, right_size = family
@@ -161,7 +163,7 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
                 histogram[term_count] = histogram.get(term_count, 0) + 1
             self.assertEqual(histogram, expected_term_histograms[family])
 
-    def test_paused_55_checkpoint_is_not_a_complete_family_claim(self):
+    def test_historical_55_checkpoint_is_the_complete_family_prefix(self):
         self.assertEqual(
             self.checkpoint["status"],
             "EXACT_CHECKPOINT_OVERLAP_FOUR_55_FIRST_75_OF_150_INVALID_TAIL_MINORS",
@@ -173,6 +175,10 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
         self.assertEqual(
             self.checkpoint["status_counts"],
             {self.module.ROW_STATUS: 75},
+        )
+        self.assertEqual(
+            self.checkpoint["rows"],
+            self.payloads[(4, 5, 5)]["rows"][:75],
         )
 
     def test_merge_runtime_metadata_accepts_chunks_and_checkpoints(self):

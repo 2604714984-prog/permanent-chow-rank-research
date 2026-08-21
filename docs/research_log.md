@@ -3587,3 +3587,23 @@ formal/actual equalities as negative regressions.  N6-140 is restored as an
 internal computation-assisted exact ordinary-rank proof.  It has no border
 rank consequence and has not received named external peer review or
 proof-assistant formalization.
+
+## 2026-08-21: perm7 overlap-four (5,5) family completed
+
+The paused overlap-four \((5,5)\) exact enumeration resumed from candidate 75
+in three bounded 25-case chunks.  Their elapsed times were 26.90, 42.93, and
+59.27 seconds.  Strict range validation merged them with the historical
+0--74 checkpoint into a 150/150 certificate with elapsed-time sum 199.61
+seconds.  Every row has status
+`DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS`; 149 selected determinants are
+monomials, and the remaining ten-term determinant factors only over coordinate
+parameters and the leading right-core boundary form.
+
+The first merge exposed two metadata-format defects rather than a mathematical
+failure: merged checkpoints store `elapsed_seconds_sum` and `workers_used`,
+and their selection strategy is preserved at row level.  The merge utility now
+accepts both raw-chunk and checkpoint runtime fields and counts selection
+strategies from the rows.  Regression tests cover both formats.  The next
+bounded family in the frozen order is overlap-four \((6,4)\).  Ordinary lower
+50, general \(\mathrm{GL}_6\), arbitrary endpoint-B packets, non-unipotent
+rank-one updates, higher-rank perturbations, and border rank remain open.
