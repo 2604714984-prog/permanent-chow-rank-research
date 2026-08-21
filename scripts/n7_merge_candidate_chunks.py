@@ -13,18 +13,28 @@ def main() -> None:
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--pattern", required=True)
     parser.add_argument("--expected-count", type=int, required=True)
+    parser.add_argument("--full-candidate-count", type=int)
     parser.add_argument("--status", required=True)
     parser.add_argument(
         "--row-status", default="DENSE_TORUS_COVERED_BY_EXACT_MINORS"
     )
     parser.add_argument("--json", type=Path, required=True)
     args = parser.parse_args()
+    full_candidate_count = (
+        args.expected_count
+        if args.full_candidate_count is None
+        else args.full_candidate_count
+    )
+    if full_candidate_count < args.expected_count:
+        raise ValueError("--full-candidate-count cannot be smaller than --expected-count")
 
     paths = sorted(args.root.glob(args.pattern))
     segments = []
     for path in paths:
         payload = json.loads(path.read_text(encoding="utf-8"))
-        if not str(payload.get("status", "")).startswith("EXACT_CHUNK_"):
+        if not str(payload.get("status", "")).startswith(
+            ("EXACT_CHUNK_", "EXACT_CHECKPOINT_")
+        ):
             continue
         start = int(payload["candidate_start_index"])
         stop = int(payload["candidate_stop_index_exclusive"])
@@ -71,7 +81,7 @@ def main() -> None:
         {
             "status": args.status,
             "candidate_count": args.expected_count,
-            "full_candidate_count": args.expected_count,
+            "full_candidate_count": full_candidate_count,
             "candidate_start_index": 0,
             "candidate_stop_index_exclusive": args.expected_count,
             "chunk_count": len(segments),

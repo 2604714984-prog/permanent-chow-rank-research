@@ -699,6 +699,27 @@ This does not cover overlap four or more, non-unipotent rank-one updates,
 higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), arbitrary endpoint-B
 packets, ordinary lower \(50\), or border rank.
 
+## Paused higher-overlap checkpoint
+
+The same recursive chart extends to overlap four through six.  Before pausing,
+four overlap-four families were completed exactly:
+
+\[
+(4,4):75/75,\quad (4,5):150/150,\quad
+(5,4):150/150,\quad (4,6):75/75.
+\]
+
+All 450 cases need one minor.  Of these, 449 determinants are monomials.  The
+remaining \((5,4)\) determinant factors as a coordinate monomial times the
+cube of the leading core-boundary form, so it has no zero on the dense chart.
+The exact elapsed times are 58.59, 131.68, 167.19, and 75.46 seconds.
+
+The \((5,5)\) family is only half complete: candidates 0--74 are stored as an
+exact 75-of-150 checkpoint, all with monomial minors.  No complete-family
+claim is made for \((5,5)\); \((6,4)\), every overlap-five family, and the
+overlap-six family remain uncomputed.  The precise resume state is recorded in
+`docs/n7_higher_overlap_resume.md`.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -943,8 +964,9 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 complete overlap-two nilpotent rank-one family.  It does not cover overlap
-four or more, non-unipotent rank-one updates, higher-rank perturbations, or
-arbitrary endpoint-B packets, and therefore does not yet prove ordinary lower
-(50) or a border-rank statement.  Its useful new content is the exact
-multiblock compatibility classification, which is invisible to the earlier
-single-block rank test.
+four beyond the four completed families listed above, overlap five or six,
+non-unipotent rank-one updates, higher-rank perturbations, or arbitrary
+endpoint-B packets, and therefore does not yet prove ordinary lower (50) or a
+border-rank statement.  Its useful new content is the exact multiblock
+compatibility classification, which is invisible to the earlier single-block
+rank test.

@@ -3535,3 +3535,18 @@ exactly three has zero local target intersection in this endpoint model.
 Overlap four or more, non-unipotent rank-one updates, higher-rank
 perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
 and ordinary lower 50 remain open.
+
+## 2026-08-21: perm7 paused at a verified higher-overlap checkpoint
+
+The generic overlap-four-through-six chart passed symbolic nilpotence checks
+and contains only 770 total support/multiplicity candidates.  Exact runs have
+completed \((4,4),(4,5),(5,4),(4,6)\), covering 75, 150, 150, and 75 cases.
+Each case needs one minor; 449 are monomials and the single expanded
+determinant has only the allowed leading core-boundary factor.
+
+The interrupted \((5,5)\) run has a strict exact checkpoint for indices
+0--74: 75/150 rows, all covered, with no full-family claim.  The matching
+Python process was confirmed absent after interruption.  Resume at index 75;
+then compute \((6,4)\), overlap five, and overlap six.  Ordinary lower 50,
+general \(\mathrm{GL}_6\), arbitrary endpoint B, non-unipotent rank-one
+updates, higher-rank perturbations, and border rank remain open.
