@@ -1,0 +1,20 @@
+{
+  "boundary_cell_count": 7,
+  "boundary_tangent_row_multiplicity": 1,
+  "boundary_tangent_rows": 252,
+  "conclusion": {
+    "canonical_fixed_3x3_six_c6_second_order_cover": "ZERO_ON_18_CROSS_TARGETS",
+    "general_coordinate_second_order_covers": "OPEN",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false,
+    "permanent_target": "IMPOSSIBLE_IN_THIS_SUBCASE"
+  },
+  "cross_boundary_target_count": 18,
+  "frame_count": 6,
+  "pair_cancellation_checks": 36,
+  "schema": "general_quartic_c6_second_order_pair_cancellation/v1",
+  "source_mode_count": 9,
+  "source_modes_per_cross_target": 2
+}
