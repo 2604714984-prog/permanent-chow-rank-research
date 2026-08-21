@@ -65,6 +65,21 @@ The merge utility now reads runtime and worker metadata from both raw chunks
 and merged checkpoints and derives selection counts from row-level evidence.
 Regression tests freeze both formats.
 
+## General overlapping (2,3)/(3,2) rank-one updates
+
+The nonnilpotent rank-one extension for overlapping support sizes \((2,3)\)
+and \((3,2)\) is now complete in the same synchronized two-transform packet.
+The dense inventory has 600 rows.  Exact internal-face minors split it into
+193 primary-chart rows, 357 rows on \(1+st=0\), and 50 rows on the further
+subface \(1+rt=0\), with zero unresolved rows and no multivariate-gcd step.
+
+The missing singleton-versus-triple projective boundary contributes another
+600 exact rows, 300 in each orientation; all use their first selected minor.
+Together with the existing coincident-\((2,2)\) and overlap-one-\((2,2)\)
+closures, the homogeneous face audit covers every projective coordinate face.
+See `docs/n7_mixed_glynn_overlapping_23_rank_one_update.md` and
+`data/n7_mixed_glynn_overlapping_23_rank_one_update_support_closure.json`.
+
 ## Verification state
 
 Every family in the generic overlap-four-through-six inventory is represented
@@ -74,6 +89,6 @@ load all ten certificates and freeze the 770-row inventory.  The completed
 
 No matching Python process remains.  The unresolved boundary
 still includes arbitrary endpoint-B packets, general \(\mathrm{GL}_6\),
-non-unipotent rank-one updates beyond the completed coincident and overlap-one
-\((2,2)\) support closures, higher-rank perturbations, ordinary lower 50, and
-border rank.
+nonnilpotent rank-one updates beyond the completed coincident-\((2,2)\),
+overlap-one-\((2,2)\), and overlapping-\((2,3)/(3,2)\) projective support
+closures, higher-rank perturbations, ordinary lower 50, and border rank.

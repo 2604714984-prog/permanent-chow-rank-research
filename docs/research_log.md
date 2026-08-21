@@ -3716,3 +3716,32 @@ the overlap-one \((2,2)\) pattern has invalid-tail rank 42 in the synchronized
 mixed-Glynn two-transform packet.  Larger overlapping non-nilpotent supports,
 higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), ordinary lower 50,
 exact rank 64, and border rank remain open.
+
+## 2026-08-21: general overlapping (2,3)/(3,2) rank-one updates completed
+
+For the two orientations
+
+\[
+u=(1,r),\quad v=t(s,1,w),
+\qquad\text{and}\qquad
+u=(1,r,w),\quad v=t(s,1),
+\]
+
+the support and positive multiplicity inventory has 600 rows.  The first exact
+minor covers 193.  The other 407 have the sole additional factor \(1+st\).
+An exact minor restricted to that face covers 357; the remaining 50 have only
+\(1+rt\), and a second restricted monomial minor covers that subface.  Thus the
+final split is 193/357/50 with zero unresolved rows and no multivariate-gcd
+inference.  The 20-worker replay took 427.38 seconds.
+
+The missing singleton-versus-triple projective boundary was then enumerated in
+both orientations.  All 600 rows, 300 per orientation, use their first exact
+minor and factor only over the support, identity, and determinant-zero faces.
+That replay took 57.30 seconds.  A homogeneous coordinate-face audit imports
+the coincident-\((2,2)\), overlap-one-\((2,2)\), singleton-versus-triple, and
+nilpotent certificates and proves the full projective support closure for the
+overlapping \((2,3)/(3,2)\) patterns.
+
+This remains a restricted synchronized mixed-Glynn endpoint theorem.  It does
+not prove ordinary lower 50, exact rank 64, arbitrary \(\mathrm{GL}_6\),
+arbitrary endpoint-B packets, higher-rank perturbations, or border rank.

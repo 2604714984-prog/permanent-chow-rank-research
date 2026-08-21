@@ -1,0 +1,44 @@
+{
+  "boundary_face_map": {
+    "extra_left": {
+      "homogeneous_coordinates": "u=x*e_a+y*e_b+z*e_c; v=p*e_a^*+q*e_b^* for distinct a,b,c",
+      "p=0": "singleton_triple",
+      "q=0": "singleton_triple",
+      "x=0": "overlap_one_22",
+      "y=0": "overlap_one_22",
+      "z=0": "coincident_22"
+    },
+    "extra_right": {
+      "h=0": "coincident_22",
+      "homogeneous_coordinates": "u=x*e_a+y*e_b; v=p*e_a^*+q*e_b^*+h*e_c^* for distinct a,b,c",
+      "p=0": "overlap_one_22",
+      "q=0": "overlap_one_22",
+      "x=0": "singleton_triple",
+      "y=0": "singleton_triple"
+    }
+  },
+  "certificate_statuses": {
+    "coincident_22": "EXACT_ALL_COINCIDENT_22_INVERTIBLE_RANK_ONE_UPDATE_INVALID_TAIL_MINORS",
+    "dense_overlapping_23_32": "EXACT_ALL_OVERLAPPING_23_32_DENSE_INVERTIBLE_RANK_ONE_UPDATE_MINORS",
+    "nilpotent_overlapping_23_32": "EXACT_ALL_OVERLAPPING_23_32_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+    "overlap_one_22": "EXACT_ALL_OVERLAP_ONE_22_INVERTIBLE_RANK_ONE_UPDATE_MINORS",
+    "singleton_triple": "EXACT_ALL_SINGLETON_TRIPLE_INVERTIBLE_RANK_ONE_UPDATE_MINORS"
+  },
+  "claim_boundary": [
+    "This is a finite projective support-closure theorem for one identity transform and one rank-one update in the synchronized mixed-Glynn endpoint model.",
+    "It combines exact dense and proper-face certificates; it introduces no multivariate-gcd inference.",
+    "It does not cover larger nonnilpotent supports, higher-rank perturbations, arbitrary GL(6), arbitrary endpoint-B packets, ordinary lower 50, exact rank 64, or border rank."
+  ],
+  "conclusion": "Every nonidentity invertible rank-one update in the projective support closure of the overlapping (2,3)/(3,2) patterns has invalid-tail rank 42 in the synchronized mixed-Glynn two-transform packet.",
+  "dense_chart_summary": {
+    "candidate_count": 600,
+    "direct_primary_minor_rows": 193,
+    "first_internal_face_rows": 357,
+    "second_internal_face_rows": 50,
+    "unresolved_rows": 0
+  },
+  "face_intersections": "Every nonempty intersection drops to a proper support face of an imported projective-closure certificate; no new support type occurs.",
+  "field": "characteristic zero",
+  "schema_version": 1,
+  "status": "EXACT_ALL_OVERLAPPING_23_32_PROJECTIVE_SUPPORT_CLOSURE"
+}
