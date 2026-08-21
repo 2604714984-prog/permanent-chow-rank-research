@@ -3276,3 +3276,19 @@ three-plus-type certificate, this classifies the entire signed-coordinate
 mixed-Glynn family: global intersection 7 for seven equal transforms, 1 for a
 single exceptional block, and 0 otherwise.  General \(\mathrm{GL}_6\),
 arbitrary endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: signed coordinates extend to the full monomial group
+
+The invalid-feature arguments are unchanged when block signs are replaced by
+arbitrary nonzero diagonal scalars: each monomial column is merely rescaled.
+For one common underlying permutation, the all-identity invalid kernel has
+target profile \((32,32,0,0,0,0,0)\).  Swapping two selected columns between
+two rows while omitting either supported column proves 300 of the 315
+multiplicative \(2\times2\) relations.  The remaining 15 relations, for the
+pair of supported columns, follow through a third bridge column.
+
+Thus the six scaling rows are proportional; their common column-zero entry is
+one, so they are equal.  The complete 7/1/0 packet classification therefore
+holds for \((k^\times)^6\rtimes S_6\), not merely for signed permutations.
+General \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary
+lower 50 remain open.

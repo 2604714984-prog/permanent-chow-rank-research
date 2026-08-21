@@ -277,6 +277,43 @@ Thus for all assignments from
 transforms agree, 1 when exactly one block is exceptional and the other six
 agree, and 0 otherwise.
 
+## Extension to all invertible monomial transforms
+
+The same classification holds with arbitrary nonzero diagonal scalars, not
+only signs.  For two distinct underlying permutations, those scalars merely
+rescale each monomial column by a nonzero factor independent of the tail, so
+the invalid-feature rank 42 is unchanged.  The protected-character argument
+for three or more underlying permutations is invariant under the same column
+rescaling.
+
+It remains to treat one common underlying permutation.  Normalize that
+permutation and write the six block scalings as a \(6\times7\) matrix
+\(D=(d_{ic})\), with \(d_{i0}=1\).  The one-dimensional all-identity invalid
+kernel has target profile
+
+\[
+(32,32,0,0,0,0,0),
+\]
+
+so two missing-column fibres are available.  Comparing two injective
+assignments that exchange columns \(a,b\) between rows \(i,j\), while omitting
+one supported column outside \(\{a,b\}\), gives
+
+\[
+d_{ia}d_{jb}=d_{ib}d_{ja}.
+\]
+
+This directly covers 20 of the 21 column pairs for every row pair.  The sole
+remaining pair, consisting of the two supported columns, follows through any
+third bridge column.  Hence all 315 multiplicative \(2\times2\) minors vanish.
+The matrix \(D\) has multiplicative rank one; since its column-zero entries
+are all one, its six rows agree.  Thus all six monomial transforms agree.
+
+Consequently the preceding local and global classification holds for the full
+monomial group \((k^\times)^6\rtimes S_6\) in characteristic different from
+two.  This is a genuine extension beyond the finite signed-coordinate group,
+but still not a theorem for general \(\mathrm{GL}_6\).
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -367,10 +404,17 @@ python scripts/n7_mixed_glynn_two_permutation_tail_rank.py \
   --json data/n7_mixed_glynn_two_permutation_tail_rank.json
 ```
 
+The monomial-extension audit is:
+
+```bash
+python scripts/n7_mixed_glynn_monomial_classification.py \
+  --json data/n7_mixed_glynn_monomial_classification.json
+```
+
 ## Boundary
 
-This is a complete theorem for every signed-coordinate packet in the
-synchronized mixed-Glynn dictionary.  It does not cover general
+This is a complete theorem for every invertible monomial-transform packet in
+the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformations or arbitrary endpoint-B packets.  It
 therefore does not yet prove ordinary lower (50) or a border-rank statement.
 Its useful new content is the exact multiblock compatibility classification,

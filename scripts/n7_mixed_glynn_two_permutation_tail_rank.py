@@ -75,6 +75,44 @@ def modular_rank(rows: list[list[int]]) -> int:
     return len(pivots)
 
 
+def modular_nullspace_basis(rows: list[list[int]], column_count: int) -> list[list[int]]:
+    matrix = [[value % base.PRIME for value in row] for row in rows]
+    pivot_columns = []
+    pivot_row = 0
+    for column in range(column_count):
+        selected = next(
+            (row for row in range(pivot_row, len(matrix)) if matrix[row][column]),
+            None,
+        )
+        if selected is None:
+            continue
+        matrix[pivot_row], matrix[selected] = matrix[selected], matrix[pivot_row]
+        inverse = pow(matrix[pivot_row][column], base.PRIME - 2, base.PRIME)
+        matrix[pivot_row] = [
+            value * inverse % base.PRIME for value in matrix[pivot_row]
+        ]
+        for row in range(len(matrix)):
+            if row != pivot_row and matrix[row][column]:
+                multiple = matrix[row][column]
+                matrix[row] = [
+                    (value - multiple * pivot) % base.PRIME
+                    for value, pivot in zip(matrix[row], matrix[pivot_row])
+                ]
+        pivot_columns.append(column)
+        pivot_row += 1
+    free_columns = [
+        column for column in range(column_count) if column not in pivot_columns
+    ]
+    basis = []
+    for free in free_columns:
+        vector = [0] * column_count
+        vector[free] = 1
+        for row, pivot in enumerate(pivot_columns):
+            vector[pivot] = -matrix[row][free] % base.PRIME
+        basis.append(vector)
+    return basis
+
+
 def invalid_tail_rank(permutations: tuple[tuple[int, ...], ...]) -> int:
     return modular_rank(
         [tail_feature_row(parity) for parity in invalid_parities(permutations)]
@@ -88,7 +126,25 @@ def build_payload() -> dict[str, object]:
     full_character_rank = modular_rank(
         [tail_feature_row(parity) for parity in range(64)]
     )
-    identity_rank = invalid_tail_rank((IDENTITY,) * 6)
+    identity_invalid_rows = [
+        tail_feature_row(parity)
+        for parity in invalid_parities((IDENTITY,) * 6)
+    ]
+    identity_rank = modular_rank(identity_invalid_rows)
+    identity_kernel = modular_nullspace_basis(identity_invalid_rows, len(TAILS))
+    if len(identity_kernel) != 1:
+        raise AssertionError(len(identity_kernel))
+    target_parities = [63, *(63 ^ (1 << column) for column in range(6))]
+    identity_target_profile = [
+        sum(value * coefficient for value, coefficient in zip(tail_feature_row(parity), identity_kernel[0]))
+        % base.PRIME
+        for parity in target_parities
+    ]
+    identity_target_support = [
+        column for column, value in enumerate(identity_target_profile) if value
+    ]
+    if len(identity_target_support) < 2:
+        raise AssertionError(identity_target_profile)
 
     rank_histogram: Counter[int] = Counter()
     cycle_histogram: dict[tuple[int, ...], Counter[int]] = defaultdict(Counter)
@@ -114,6 +170,10 @@ def build_payload() -> dict[str, object]:
         "tail_character_masks": character_masks,
         "full_walsh_feature_rank": full_character_rank,
         "identity_packet_invalid_tail_rank": identity_rank,
+        "identity_kernel_dimension": len(identity_kernel),
+        "identity_kernel_target_parities": target_parities,
+        "identity_kernel_target_profile": identity_target_profile,
+        "identity_kernel_target_support": identity_target_support,
         "candidate_formula": "(6! - 1) * 5",
         "candidate_count": CANDIDATE_COUNT,
         "invalid_tail_rank_histogram": dict(sorted(rank_histogram.items())),

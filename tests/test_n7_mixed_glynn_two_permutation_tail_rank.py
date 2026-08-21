@@ -42,6 +42,12 @@ class TwoPermutationTailRankTests(unittest.TestCase):
         self.assertEqual(self.row["distinct_tail_character_count"], 42)
         self.assertEqual(self.row["full_walsh_feature_rank"], 42)
         self.assertEqual(self.row["identity_packet_invalid_tail_rank"], 41)
+        self.assertEqual(self.row["identity_kernel_dimension"], 1)
+        self.assertEqual(len(self.row["identity_kernel_target_profile"]), 7)
+        self.assertEqual(self.row["identity_kernel_target_support"], [0, 1])
+        self.assertTrue(
+            all(self.row["identity_kernel_target_profile"][column] for column in (0, 1))
+        )
 
     def test_every_cycle_type_has_full_rank(self):
         self.assertEqual(len(self.row["cycle_type_rank_histogram"]), 10)
