@@ -1,13 +1,12 @@
 {
-  "core_sha256": "14b0a7dbc96d3bdcab79079ec127e3700ccbb6e71a4596bcbb4bef2e54cce442",
+  "core_sha256": "ec39aab2c48fc038f66fcaaaee2a8bb1f2b662d640f065ed0ff4e6a3c2f1aedf",
   "equality_degree_sequences": [[2,2,1,1],[2,2,1,1]],
   "equality_row_column_orbits": 2,
   "equality_supports": 288,
   "explicit_four_frame_cover_sizes": [6,6,6,6],
   "explicit_four_frame_cover_union": 24,
-  "first_order_surviving_zero_counts": [4,6],
   "maximum_first_order_matching_envelope": 6,
   "orbit_sizes": [144,144],
   "supports_checked": 14893,
-  "z_support_bounds": {"0":6,"1":11,"2":16,"3":21,"4":26,"5":null,"6":36}
+  "zero_leading_count_reduction": "NOT_PROVED_BY_SUPPORT_ONLY"
 }
