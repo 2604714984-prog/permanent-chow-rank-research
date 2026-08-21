@@ -3292,3 +3292,20 @@ one, so they are equal.  The complete 7/1/0 packet classification therefore
 holds for \((k^\times)^6\rtimes S_6\), not merely for signed permutations.
 General \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary
 lower 50 remain open.
+
+## 2026-08-21: all elementary-shear two-type packets are excluded
+
+For every ordered elementary shear \(I+tE_{ab}\), \(a\ne b\), and every one
+of the five positive identity/shear multiplicity splits, streamed modular
+elimination selects 42 repeated-column monomials.  The corresponding exact
+integer-polynomial determinant is always
+
+\[
+c t^e,\qquad c\ne0,\quad 1\le e\le20.
+\]
+
+All 150 direction/split cases therefore have invalid-tail rank 42 for every
+nonzero \(t\) in characteristic zero and zero local target intersection.  This
+is the first exact non-monomial \(\mathrm{GL}_6\) layer.  Several independent
+shears, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and
+ordinary lower 50 remain open.

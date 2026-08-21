@@ -314,6 +314,36 @@ monomial group \((k^\times)^6\rtimes S_6\) in characteristic different from
 two.  This is a genuine extension beyond the finite signed-coordinate group,
 but still not a theorem for general \(\mathrm{GL}_6\).
 
+## Every one-parameter elementary shear
+
+The first genuinely non-monomial layer replaces one of two block-transform
+types by
+
+\[
+I+tE_{ab},\qquad a\ne b.
+\]
+
+The fixed 42-tail dictionary is not assumed to be coordinate symmetric, so the
+calculation keeps all 30 ordered directions \((a,b)\) and all five positive
+multiplicity splits.  At \(t=1\), streamed modular elimination selects 42
+repeated-column monomials giving full rank.  On those same columns, the program
+reconstructs the determinant exactly in \(\mathbb Z[t]\).
+
+For every one of the \(30\cdot5=150\) cases, the determinant is
+
+\[
+c_{a,b,m}t^{e_{a,b,m}},\qquad c_{a,b,m}\in\mathbb Z\setminus\{0\},
+\quad 1\le e_{a,b,m}\le20.
+\]
+
+Thus every nonzero shear parameter in characteristic zero gives invalid-tail
+rank 42 and zero local permanent-target intersection.  The all-identity
+control again has invalid-tail rank 41.  This closes every packet using exactly
+two transform types consisting of the identity and one elementary shear, as
+well as its images under a common monomial coordinate change.  It does not yet
+combine several independent shears or classify arbitrary \(\mathrm{GL}_6\)
+transforms.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -411,11 +441,20 @@ python scripts/n7_mixed_glynn_monomial_classification.py \
   --json data/n7_mixed_glynn_monomial_classification.json
 ```
 
+The exact elementary-shear replay is:
+
+```bash
+python scripts/n7_mixed_glynn_elementary_shear_tail_rank.py \
+  --max-candidates 150 --workers 20 \
+  --json data/n7_mixed_glynn_elementary_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
-\(\mathrm{GL}_6\) graph transformations or arbitrary endpoint-B packets.  It
+\(\mathrm{GL}_6\) graph transformations, despite additionally closing every
+single elementary-shear two-type packet, or arbitrary endpoint-B packets.  It
 therefore does not yet prove ordinary lower (50) or a border-rank statement.
 Its useful new content is the exact multiblock compatibility classification,
 which is invisible to the earlier single-block rank test.
