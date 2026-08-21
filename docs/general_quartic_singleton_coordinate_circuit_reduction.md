@@ -2,41 +2,30 @@
 
 ## Status and claim boundary
 
-`PROOF_DRAFT_COMPLETE`, `CHARACTERISTIC_ZERO`, `COMPUTATION_REPLAYED`,
-`STRICT_ROUTE_BARRIER`.
+`PROOF_DRAFT_COMPLETE`, `CHARACTERISTIC_ZERO`,
+`EXACT_FINITE_INTERFACES_REPLAYED`, `STRICT_ROUTE_BARRIER`.
 
-This note continues the coordinate degeneration program for the active
-six-block frontier
+This note classifies support-minimal rank-five coordinate six-circuits whose
+six leading perfect-matching projections are all nonzero and one or two of
+those projections are singleton-supported. It includes every repeated-factor
+degree-six coordinate frame and proves that every regular second-order
+common-source lift in these families misses at least one of the 24 matching
+coordinates of `perm_4`.
+
+Together with the separate two-supported theorem, this closes every regular
+coordinate six-circuit two-jet with six nonzero leading matching projections.
+
+It does not treat a zero leading matching projection, a noncoordinate initial
+frame, a singular or multigrade valuation tree, or a first nonzero term of
+order at least three. In particular, it does not change
 
 \[
-6\le \mu(6,4)\le 8.
+6\leq \mu(6,4)\leq 8
 \]
 
-The prior two-supported theorem treats support-minimal rank-five six-circuits
-whose six leading matching projections are all supported on exactly two
-perfect matchings. Here one or two components are allowed to have singleton
-matching support. The two unused degree-six coordinate factors in a singleton
-component are retained, including repeated factors and reuse of a matching
-cell.
+or the current unrestricted Chow-rank interval for `perm_6`.
 
-The result is:
-
-1. every positive-singleton support-minimal coordinate six-circuit belongs to
-   one of three exact support families;
-2. all 130 repeated-factor singleton frames are included;
-3. every regular second-order common-source lift has matching support at most
-   23; and therefore
-4. no such lift can equal a nonzero diagonal-torus transform of `perm_4`, whose
-   matching support is 24.
-
-Combined with the previous two-supported theorem, this closes every regular
-coordinate six-circuit two-jet for which all six leading matching projections
-are nonzero.
-
-It does **not** cover a component whose leading matching projection is zero,
-prove `mu(6,4)>=7`, or improve unrestricted Chow rank or border rank.
-
-## 1. Matching graph and support columns
+## 1. Matching graph and incidence reduction
 
 Let
 
@@ -44,88 +33,63 @@ Let
 M_4=\operatorname{span}\{m_\sigma:\sigma\in S_4\}
 \]
 
-be the 24-dimensional perfect-matching monomial space in one fixed `4 x 4`
-block. Two matching coordinates can occur in the same six-cell coordinate
-frame exactly when the corresponding permutations differ by a transposition.
-Thus two-supported component lines are edges of the transposition Cayley graph
-`Gamma_4` on `S_4`.
+be the 24-dimensional perfect-matching monomial space in a fixed `4 x 4`
+matrix block. Two matching coordinates occur in one six-cell coordinate frame
+exactly when their permutations differ by a transposition. Thus a
+two-supported leading component is an edge of the transposition Cayley graph
+on `S_4`.
 
-Consider six nonzero leading matching vectors
+Let
 
 \[
 c_1,\ldots,c_6\in M_4
 \]
 
-such that:
-
-- every `c_i` has support size one or two;
-- their span has dimension five; and
-- their unique relation has full support.
-
-Rescale the six columns so that
+have support size one or two, span a five-dimensional space, and have one
+relation with full support. Rescale the columns so that
 
 \[
 c_1+\cdots+c_6=0.
 \tag{1.1}
 \]
 
-A support coordinate appearing in only one column could not cancel in (1.1).
-Therefore every used matching coordinate occurs in at least two columns.
-
-## 2. Incidence reduction
-
-Let `s` be the number of singleton columns and let `v` be the number of used
-matching coordinates. The total support incidence is
+If `s` columns are singleton-supported and `v` matching coordinates occur,
+the total support incidence is `12-s`. Every used coordinate occurs at least
+twice in (1.1), while rank five requires `v>=5`. Hence
 
 \[
-12-s.
+10\leq 2v\leq 12-s.
+\tag{1.2}
 \]
 
-Every used coordinate occurs at least twice, while rank five forces at least
-five used coordinates. Hence
+Therefore
 
 \[
-10\le 2v\le 12-s.
-\tag{2.1}
+\boxed{s\leq2}.
+\tag{1.3}
 \]
 
-Consequently:
+For `s=1` or `s=2`, equality forces `v=5`. The problem is therefore a finite
+five-vertex multigraph classification.
 
-\[
-\boxed{s\le2}.
-\tag{2.2}
-\]
+## 2. Complete support classification
 
-If `s` is one or two, equation (2.1) also forces
+### 2.1 Two singleton columns
 
-\[
-\boxed{v=5}.
-\tag{2.3}
-\]
-
-Thus the positive-singleton problem is a finite five-vertex support problem.
-
-## 3. Complete support classification
-
-### 3.1 Two singleton columns
-
-The four two-supported columns form a simple graph on the five matching
-vertices. Every non-singleton vertex must still have total incidence at least
-two, and the two singleton vertices must each be incident to a pair edge.
-Connectedness and the exact degree sum force a four-edge path, with singleton
-columns at its endpoints.
-
-The unique abstract type is therefore:
+The four pair-supported columns form a connected four-edge graph on five
+vertices. The two singleton vertices must each be incident to a pair edge.
+The degree sum and connectedness force one path on five vertices with the
+singletons at its endpoints:
 
 ```text
 endpoint-marked P5
 ```
 
-### 3.2 One singleton column
+### 2.2 One singleton column
 
-The five pair supports form a connected multigraph on five vertices with one
-marked vertex carrying the singleton. The degree constraints leave four
-abstract types:
+The five pair supports form a connected five-edge multigraph on five vertices
+with one marked singleton vertex. The degree constraints leave four abstract
+types:
 
 ```text
 marked C5
@@ -134,129 +98,127 @@ square lollipop
 double-edge tail
 ```
 
-The transposition Cayley graph is bipartite by permutation parity. The marked
-five-cycle and triangle-tail types contain odd cycles and cannot embed.
-Exactly two types survive:
+The transposition Cayley graph is bipartite by permutation parity, so the first
+two odd-cycle types cannot embed. The two surviving patterns are:
 
 ```text
-square lollipop
-double-edge tail
+square lollipop:
+  pair edges (0,1),(1,2),(2,3),(3,0),(3,4)
+  singleton 4
+
+double-edge tail:
+  pair edges (0,1),(0,1),(0,2),(2,3),(3,4)
+  singleton 4
 ```
 
-### 3.3 Symmetry counts
+The square-lollipop pattern is a four-cycle with a one-edge tail; the marked
+singleton is the tail endpoint. The double-edge-tail pattern has one doubled
+edge and a three-edge tail ending at the singleton.
 
-Exact row-column orbit counts are:
+### 2.3 Exact symmetry counts
+
+Under independent row and column permutations, the exact orbit counts are
 
 ```text
-square lollipop       5
-double-edge tail     29
-endpoint-marked P5   18
+square lollipop        5
+double-edge tail      29
+endpoint-marked P5    18
 ```
 
-With the first abstract matching vertex fixed to the identity, the embedding
-counts are respectively `216`, `888`, and `696`.
+After fixing the first matching vertex to the identity, the labeled embedding
+counts are
 
-The classification can be summarized as
+```text
+square lollipop      216
+double-edge tail     696
+endpoint-marked P5   696
+```
+
+These counts are reconstructed directly by the independent replay.
+
+## 3. Exact circuit normal forms
+
+Let `e_0,...,e_4` be the five matching-coordinate basis vectors. Component
+rescaling and vertex relabeling give the following forms.
+
+### 3.1 Endpoint-marked P5
 
 \[
-\boxed{
-\begin{array}{c|c}
-\text{singleton count}&\text{support type}\\ \hline
-1&\text{square lollipop or double-edge tail}\\
-2&\text{endpoint-marked }P_5\\
-\ge3&\text{impossible}
-\end{array}}
+\begin{aligned}
+c_1&=e_0, &
+c_2&=-e_0+e_1, &
+c_3&=-e_1+e_2,\\
+c_4&=-e_2+e_3, &
+c_5&=-e_3+e_4, &
+c_6&=-e_4.
+\end{aligned}
 \tag{3.1}
 \]
 
-## 4. Exact circuit normal forms
-
-Let `e_0,...,e_4` be the five matching-coordinate basis vectors. Component-line
-rescaling reduces the three support families to the following forms.
-
-### 4.1 Endpoint-marked path
+### 3.2 Square lollipop
 
 \[
 \begin{aligned}
-c_1&=e_0,&
- c_2&=-e_0+e_1,&
- c_3&=-e_1+e_2,\\
-c_4&=-e_2+e_3,&
- c_5&=-e_3+e_4,&
- c_6&=-e_4.
+c_1&=-e_4, &
+c_2&=e_3+e_4, &
+c_3&=e_0+a e_3,\\
+c_4&=-e_0+e_1, &
+c_5&=-e_1+e_2, &
+c_6&=-e_2-(1+a)e_3.
 \end{aligned}
+\tag{3.2}
+\]
+
+### 3.3 Double-edge tail
+
+\[
+\begin{aligned}
+c_1&=-e_4, &
+c_2&=e_3+e_4, &
+c_3&=e_2-e_3,\\
+c_4&=e_0-e_2, &
+c_5&=a e_0+e_1, &
+c_6&=-(1+a)e_0-e_1.
+\end{aligned}
+\tag{3.3}
+\]
+
+For the one-parameter families, support-minimality requires
+
+\[
+a\neq0,-1.
+\tag{3.4}
+\]
+
+In every family the six columns sum to zero, the total rank is five, and every
+five-column submatrix has rank five. These identities are checked exactly over
+the rational function parameter by specialization away from (3.4), and the
+support argument gives the converse.
+
+## 4. Singleton coordinate frames with repetition
+
+Fix one leading matching `M_0`. A degree-six coordinate frame yielding a true
+singleton matching component contains the four cells of `M_0` and two unused
+coordinate factors. The unused factors form an unordered multiset of size two
+from 16 cells, so there are
+
+\[
+\binom{17}{2}=136
 \tag{4.1}
 \]
 
-There is no continuous gain parameter.
-
-### 4.2 Square lollipop
+possibilities. Exactly six add the two missing cells of a second perfect
+matching sharing two cells with `M_0`; those are two-supported rather than
+singleton. Hence
 
 \[
-\begin{aligned}
-c_1&=-e_3,&
- c_2&=e_2+e_3,&
- c_3&=e_0-e_2,\\
-c_4&=e_0+a e_1,&
- c_5&=-e_0-(1+a)e_1,&
- c_6&=e_1+e_2.
-\end{aligned}
+\boxed{130}
 \tag{4.2}
 \]
 
-### 4.3 Double-edge tail
+true singleton frames remain.
 
-\[
-\begin{aligned}
-c_1&=e_4,&
- c_2&=-e_3+e_4,&
- c_3&=e_0+e_3,\\
-c_4&=-e_0+e_1,&
- c_5&=-e_1+a e_2,&
- c_6&=e_1-(1+a)e_2.
-\end{aligned}
-\tag{4.3}
-\]
-
-For the one-parameter families, support-minimality is equivalent to
-
-\[
-a\ne0,-1.
-\tag{4.4}
-\]
-
-All five-column minors are units up to sign and the factors `a`, `1+a`.
-
-## 5. Singleton coordinate frames with repetition
-
-Fix one leading matching `M_0`. A coordinate degree-six frame producing a
-singleton matching component contains the four cells of `M_0` and two further
-coordinate factors.
-
-The two unused factors form an unordered multiset of size two from all sixteen
-matrix cells. Therefore there are
-
-\[
-\binom{16+2-1}{2}=136
-\tag{5.1}
-\]
-
-possibilities. This count includes:
-
-- two equal unused factors;
-- one or two unused factors equal to cells of `M_0`; and
-- two distinct off-matching cells.
-
-Exactly six multisets are the two missing cells of another perfect matching
-which shares two cells with `M_0`; those frames are two-supported rather than
-singleton. Hence the exact singleton-frame count is
-
-\[
-\boxed{136-6=130}.
-\tag{5.2}
-\]
-
-Their distinct-cell support sizes are distributed as
+Their distinct-support sizes are
 
 ```text
 four cells      10
@@ -264,188 +226,74 @@ five cells      60
 six cells       60
 ```
 
-Under the diagonal stabilizer of `M_0`, the 130 frames form ten orbits of sizes
+Under the diagonal stabilizer of `M_0` they form ten orbits of sizes
 
 ```text
 4, 6, 12, 12, 12, 12, 12, 12, 24, 24.
 ```
 
-After additionally rooting one adjacent transposition edge, the 780 rooted
-configurations form 41 orbits. The full theorem enumeration uses all 130
-frames directly; the orbit counts are an independent compression check.
+The full computation uses all 130 frames, not just orbit representatives.
 
-## 6. First-order barrier
+## 5. First-order support barrier
 
-Let a coordinate frame have leading matching support `S`, of size one or two.
-At first order:
-
-1. varying the common-source coefficients can produce only matching monomials
-   already contained in the frame; and
-2. varying one coordinate factor in a leading matching retains three of its
-   four cells.
-
-Two distinct permutations cannot agree on exactly three rows: agreement on
-three rows forces agreement on the fourth. Thus one factor variation cannot
-turn a perfect matching into a different perfect matching.
+At first order, source motion with a fixed coordinate frame creates only a
+matching already contained in that frame. Moving one coordinate factor from a
+leading perfect matching retains three of its four cells. Two distinct
+permutations cannot agree in exactly three rows, so such a motion cannot turn
+one perfect matching into another.
 
 Every positive-singleton circuit above uses exactly five matching coordinates.
-Therefore the first-order matching projection has support at most five and
+Its first-order matching projection therefore has support at most five and
 cannot equal `perm_4`.
 
-## 7. Universal second-order matching envelope
+## 6. Universal second-order envelope
 
-The full first-order kernel does not need to be eliminated explicitly. There
-is a stronger termwise support bound.
-
-Let `E` be the distinct coordinate-cell support of one degree-six frame, and
-let `S` be its leading matching support. Define
+For a coordinate frame with distinct-cell support `E` and nonzero leading
+matching support `S`, define
 
 \[
 \mathcal E(E,S)=
-\{M:|M\cap E|\ge3\}
+\{M:|M\cap E|\geq3\}
 \cup
-\{M:\exists M_0\in S,\ |M\cap M_0|\ge2\}.
-\tag{7.1}
+\{M:\exists M_0\in S,\ |M\cap M_0|\geq2\}.
+\tag{6.1}
 \]
 
-### Lemma 7.1
+Every matching appearing at second order belongs to this envelope:
 
-Every matching monomial appearing in a regular second-order common-source lift
-of the component lies in `E(E,S)`.
+1. free second-source directions leave four frame factors;
+2. first-source times first-factor directions leave three frame factors;
+3. one second-factor direction leaves three cells of a leading matching;
+4. two first-factor directions leave two cells of a leading matching.
 
-### Proof
+This is a termwise statement. Imposing lower-order cancellation can remove
+coefficients but cannot create matching support outside (6.1).
 
-The second-order terms have four sources:
+## 7. Exhaustive exact maxima
 
-1. **free second-source directions:** four frame factors remain, so the
-   matching lies in the frame;
-2. **first-source times first-factor directions:** three unchanged frame
-   factors remain, giving `|M cap E|>=3`;
-3. **one second-factor direction:** three cells of a leading matching remain;
-4. **two first-factor directions:** two cells of a leading matching remain.
-
-These are exactly the two sets in (7.1). The statement is termwise. Imposing
-first-order cancellation can delete coefficients but cannot create a matching
-outside the envelope. QED.
-
-## 8. Exhaustive exact maxima
-
-For every row-column support orbit and every valid repeated-factor singleton
-frame, compute the union of the six component envelopes.
-
-The complete distributions are:
+The exact scan combines every row-column support orbit with all valid repeated
+singleton frames. The complete distributions are
 
 ```text
 square lollipop
-  decorated configurations    5 * 130 = 650
-  support histogram            19:124, 20:254, 21:260, 22:12
-  maximum                      22
+  decorated configurations      5 * 130 = 650
+  histogram                     19:124, 20:254, 21:260, 22:12
+  maximum                       22
 
 double-edge tail
-  decorated configurations   29 * 130 = 3770
-  support histogram            19:744, 20:2020, 21:970, 22:36
-  maximum                      22
+  decorated configurations     29 * 130 = 3770
+  histogram                     19:744, 20:2020, 21:970, 22:36
+  maximum                       22
 
 endpoint-marked P5
-  decorated configurations   18 * 130^2 = 304200
-  support histogram            19:61504, 20:128996, 21:105120,
-                               22:8472, 23:108
-  maximum                      23
+  decorated configurations     18 * 130^2 = 304200
+  histogram                     19:61504, 20:128996, 21:105120,
+                                22:8472, 23:108
+  maximum                       23
 ```
 
 Therefore
 
 \[
 \boxed{
-\max\left|
-\bigcup_{i=1}^6\mathcal E(E_i,S_i)
-\right|=23<24.
-}
-\tag{8.1}
-\]
-
-Every coefficient of `perm_4`, and of every nonzero diagonal row-column torus
-transform of `perm_4`, is nonzero on all 24 matching coordinates. Hence no
-regular positive-singleton coordinate two-jet can produce the target.
-
-## 9. Combined coordinate consequence
-
-The prior theorem closes support size pattern
-
-```text
-2,2,2,2,2,2.
-```
-
-This theorem closes every positive-singleton pattern
-
-```text
-1,2,2,2,2,2
-1,1,2,2,2,2.
-```
-
-Three or more singleton components are impossible. Thus:
-
-\[
-\boxed{
-\text{every regular coordinate six-circuit two-jet with six nonzero}
-\atop
-\text{leading matching projections is incompatible with }\operatorname{perm}_4.
-}
-\tag{9.1}
-\]
-
-The exact next coordinate boundary is a component whose leading matching
-projection is zero.
-
-## 10. Deterministic replay
-
-The primary implementation verifies the incidence classification, exact normal
-forms, full row-column orbit enumeration, all 130 repeated-factor singleton
-frames, the stabilizer orbit counts, and every decorated second-order envelope.
-
-The independent implementation imports none of the primary helpers. It
-reconstructs the transposition graph, support embeddings, repeated frames, and
-all envelope histograms.
-
-Run:
-
-```bash
-python scripts/general_quartic_singleton_coordinate_circuit_reduction.py \
-  --json /tmp/general_quartic_singleton_coordinate_circuit_reduction.json
-python scripts/general_quartic_singleton_coordinate_circuit_reduction_independent.py
-python -m unittest \
-  tests.test_general_quartic_singleton_coordinate_circuit_reduction -v
-```
-
-Expected markers:
-
-```text
-GENERAL_QUARTIC_SINGLETON_COORDINATE_CIRCUIT_REDUCTION_PASS
-GENERAL_QUARTIC_SINGLETON_COORDINATE_CIRCUIT_REDUCTION_INDEPENDENT_PASS
-```
-
-Frozen theorem core:
-
-```text
-a17aa6de25348a88773f81a05d6d2eaa9212d1d8d213804a365b3015a1f7e99f
-```
-
-## Strict boundary
-
-```text
-positive-singleton support families             CLASSIFIED
-repeated-factor singleton frames                 INCLUDED
-positive-singleton regular first-order lifts     CLOSED
-positive-singleton regular second-order lifts    CLOSED
-all-positive coordinate regular two-jets         CLOSED
-zero leading matching projection                 OPEN
-noncoordinate initial circuits                   OPEN
-leading-dependent collision trees                OPEN
-higher-order lifts                               OPEN
-six-block literal sum                            OPEN
-seven-block literal sum                          OPEN
-mu(6,4)                                          OPEN IN [6,8]
-unrestricted Chow-rank improvement               false
-border-rank improvement                           false
-literature novelty                               NOT ESTABLISHED
-```
+\max\left|_q‰¥ÕÁ}í¤ôÅõyìÙõqµ…Ñ¡…°¡}¤±M}¤¥qÉ¥¡Ñð(ôÈÌðÈÐ¸)ô)qÑ…ìÜ¸Åô)qt()Ù•Éä½•™™¥¥•¹Ð½˜Á•Éµ|Ñ€°…¹½˜•Ù•Éä¹½¹é•É¼‘¥…½¹…°É½Üµ½±Õµ¸Ñ½ÉÕÌ)ÑÉ…¹Í™½É´½˜Á•Éµ|Ñ€°¥Ì¹½¹é•É¼½¸…±°€ÈÐµ…Ñ¡¥¹œ½½É‘¥¹…Ñ•Ì¸9¼É•Õ±…È)Á½Í¥Ñ¥Ù”µÍ¥¹±•Ñ½¸½½É‘¥¹…Ñ”ÑÝ¼µ©•Ð…¸Ñ¡•É•™½É”ÁÉ½‘Õ”Ñ¡”Ñ…É•Ð¸((ŒŒ€à¸%¹‘•Á•¹‘•¹ÐÉ•Á±…ä…¹É•Á…¥É•ÑÉ…¹ÍÉ¥ÁÑ¥½¸()Q¡”ÁÉ¥µ…ÉäÙ•É¥™¥•È¡•­ÌÑ¡”™É½é•¸Ñ¡•½É•´½É”°Ñ¡”Ñ¡É•”•á…Ð¹½Éµ…°)™½ÉµÌ°…±°™¥Ù”µ½±Õµ¸µ¥¹½ÉÌ°…¹Ñ¡”¥¹‘•Á•¹‘•¹Ð•á¡…ÕÍÑ¥Ù”•¹¥¹”¸()Q¡”¥¹‘•Á•¹‘•¹Ð•¹¥¹”¥µÁ½ÉÑÌ¹¼ÁÉ¥µ…Éä¡•±Á•È¸%ÐÉ•½¹ÍÑÉÕÑÌÑ¡”)ÑÉ…¹ÍÁ½Í¥Ñ¥½¸…å±•äÉ…Á °Ñ¡”Ñ¡É•”ÍÕÁÁ½ÉÐ™…µ¥±¥•Ì°…±°É½Üµ½±Õµ¸½É‰¥Ð)½Õ¹ÑÌ°…±°€ÄÌÀÍ¥¹±•Ñ½¸™É…µ•Ì°…¹…±°Í•½¹µ½É‘•È¡¥ÍÑ½É…µÌ¸()!½ÍÑ•ÉÕ¸€ŒàÐÔ•áÁ½Í•ÑÝ¼ÑÉ…¹ÍÉ¥ÁÑ¥½¸‘•™•ÑÌ¥¸Ñ¡”•…É±¥•ÈÁ…­•Ðè((Ä¸Ñ¡”ÍÅÕ…É”µ±½±±¥Á½ÀÁ…ÑÑ•É¸¡…‰••¸ÑåÁ•…Ì„ÑÉ¥…¹±”Ý¥Ñ …¸¥Í½±…Ñ•(€€™¥™Ñ Ù•ÉÑ•àì…¹(È¸Ñ¡”™¥á•µ¥‘•¹Ñ¥Ñä‘½Õ‰±”µ•‘”µÑ…¥°•µ‰•‘‘¥¹œ½Õ¹ÐÝ…ÌÑåÁ•…Ì€ààá€(€€¥¹ÍÑ•…½˜€ØäÙ€¸()Q¡”½ÉÉ•Ñ•Á…ÑÑ•É¸°½Õ¹ÑÌ°…¹¹½Éµ…°™½ÉµÌ…‰½Ù”É•ÁÉ½‘Õ”Ñ¡”½É¥¥¹…°)Í•½¹µ½É‘•È¡¥ÍÑ½É…µÌ…¹µ…á¥µ„•á…Ñ±ä¸Q¡ÕÌÑ¡”É½ÕÑ”Ñ¡•½É•´ÍÕÉÙ¥Ù•Ìì)½¹±äÑ¡”™É½é•¸Á…­•Ð…¹¥ÑÌÁÉ•Ù¥½ÕÌ¡…Í …É”ÍÕÁ•ÉÍ•‘•¸()IÕ¸è()‰…Í )ÁåÑ¡½¸ÍÉ¥ÁÑÌ½•¹•É…±}ÅÕ…ÉÑ¥}Í¥¹±•Ñ½¹}½½É‘¥¹…Ñ•}¥ÉÕ¥Ñ}É•‘ÕÑ¥½¸¹Áäp(€€´µ©Í½¸€½ÑµÀ½•¹•É…±}ÅÕ…ÉÑ¥}Í¥¹±•Ñ½¹}½½É‘¥¹…Ñ•}¥ÉÕ¥Ñ}É•‘ÕÑ¥½¸¹©Í½¸()ÁåÑ¡½¸€µ<ÍÉ¥ÁÑÌ½•¹•É…±}ÅÕ…ÉÑ¥}Í¥¹±•Ñ½¹}½½É‘¥¹…Ñ•}¥ÉÕ¥Ñ}É•‘ÕÑ¥½¸¹Áä()ÁåÑ¡½¸ÍÉ¥ÁÑÌ½•¹•É…±}ÅÕ…ÉÑ¥}Í¥¹±•Ñ½¹}½½É‘¥¹…Ñ•}¥ÉÕ¥Ñ}É•‘ÕÑ¥½¹}¥¹‘•Á•¹‘•¹Ð¹Áä()ÁåÑ¡½¸€µ´Õ¹¥ÑÑ•ÍÐp(€Ñ•ÍÑÌ¹Ñ•ÍÑ}•¹•É…±}ÅÕ…ÉÑ¥}Í¥¹±•Ñ½¹}½½É‘¥¹…Ñ•}¥ÉÕ¥Ñ}É•‘ÕÑ¥½¸€µØ)€()½ÉÉ•Ñ•™É½é•¸Ñ¡•½É•´½É”è()Ñ•áÐ)˜ÈÙŒÈÐÀÈäàÌÉ”ÔØÑ‰ˆÐØÉÐÝ„äÑ…‘äÍ˜å”ÜÀÙ„åŒàÈÕ”Å”ÔÝ™”É…ˆÝ„àÑˆÈÈÌ)€()MÕÁ•ÉÍ•‘•½É”è()Ñ•áÐ)„ÄÝ…„Ù‘”ÈÔÌÐá„ààÜÜÍ˜àÅ„ÀÕÙÉ•…„äÈÄÉÅáÈÄÌàÀÑ„ÌØÕˆÌÀÄÕ„Å˜Ý”äå˜)€((ŒŒ€ä¸MÑÉ¥Ð‰½Õ¹‘…Éä()Ñ•áÐ)Á½Í¥Ñ¥Ù”µÍ¥¹±•Ñ½¸ÍÕÁÁ½ÉÐ™…µ¥±¥•Ì€€€€€€€€€€€€1MM%%)É•Á•…Ñ•µ™…Ñ½ÈÍ¥¹±•Ñ½¸™É…µ•Ì€€€€€€€€€€€€€€€€%91U)Á½Í¥Ñ¥Ù”µÍ¥¹±•Ñ½¸É•Õ±…È™¥ÉÍÐµ½É‘•È±¥™ÑÌ€€€€1=M)Á½Í¥Ñ¥Ù”µÍ¥¹±•Ñ½¸É•Õ±…ÈÍ•½¹µ½É‘•È±¥™ÑÌ€€€1=M)…±°µÁ½Í¥Ñ¥Ù”½½É‘¥¹…Ñ”É•Õ±…ÈÑÝ¼µ©•ÑÌ€€€€€€€€1=M)é•É¼±•…‘¥¹œµ…Ñ¡¥¹œÁÉ½©•Ñ¥½¸€€€€€€€€€€€€€€€€=A8)¹½¹½½É‘¥¹…Ñ”¥¹¥Ñ¥…°¥ÉÕ¥ÑÌ€€€€€€€€€€€€€€€€€€=A8)Í¥¹Õ±…È½ÈµÕ±Ñ¥É…‘”½±±¥Í¥½¸ÑÉ••Ì€€€€€€€€€€=A8)¡¥¡•Èµ½É‘•È±¥™ÑÌ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€=A8)Í¥àµ‰±½¬±¥Ñ•É…°ÍÕ´€€€€€€€€€€€€€€€€€€€€€€€€€€€=A8)Í•Ù•¸µ‰±½¬±¥Ñ•É…°ÍÕ´€€€€€€€€€€€€€€€€€€€€€€€€€=A8)µÔ Ø°Ð¤€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€=A8%8lØ°át)Õ¹É•ÍÑÉ¥Ñ•¡½ÜµÉ…¹¬¥µÁÉ½Ù•µ•¹Ð€€€€€€€€€€€€€€™…±Í”)‰½É‘•ÈµÉ…¹¬¥µÁÉ½Ù•µ•¹Ð€€€€€€€€€€€€€€€€€€€€€€€€€™…±Í”)±¥Ñ•É…ÑÕÉ”¹½Ù•±Ñä€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€9=PMQ	1%M!)€

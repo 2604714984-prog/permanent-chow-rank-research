@@ -1,44 +1,40 @@
-# Ledger delta: positive-singleton coordinate two-jet barrier
+# Ledger delta: corrected positive-singleton coordinate two-jet barrier
 
-## Add
+The positive-singleton route theorem remains valid after correcting two frozen
+packet transcription defects.
+
+Corrected facts:
 
 ```text
-ID: G-QUARTIC-POSITIVE-COORDINATE-TWO-JET
-status: PROOF_DRAFT_COMPLETE, COMPUTATION_REPLAYED, STRICT_ROUTE_BARRIER
+square lollipop       row-column orbits 5,  fixed-identity embeddings 216
+double-edge tail      row-column orbits 29, fixed-identity embeddings 696
+endpoint-marked P5    row-column orbits 18, fixed-identity embeddings 696
 ```
 
-Statement:
+The complete repeated-factor second-order maxima remain:
 
-- a support-minimal rank-five coordinate six-circuit has at most two singleton
-  matching components;
-- one singleton gives square-lollipop or double-edge-tail support;
-- two singletons give endpoint-marked `P5` support;
-- all 130 repeated-factor singleton frames are included;
-- exact second-order matching-envelope maxima are `22`, `22`, and `23`;
-- combined with the prior two-supported theorem, every regular coordinate
-  two-jet with six nonzero leading matching projections is incompatible with
-  `perm_4`.
+```text
+square lollipop       22
+double-edge tail      22
+endpoint-marked P5    23
+perm_4                24
+```
 
-Frozen core:
+Corrected theorem core:
+
+```text
+cf26c24029832ce564bb462d47a94add93f9e706a9c825e1e57fe2ab7a84b223
+```
+
+Superseded theorem core:
 
 ```text
 a17aa6de25348a88773f81a05d6d2eaa9212d1d8d213804a365b3015a1f7e99f
 ```
 
-## Boundary retained
+The unrestricted boundaries remain
 
 ```text
 6 <= mu(6,4) <= 8
-28 <= ChowRank(perm_6) <= 32
-zero leading matching projection = OPEN
-noncoordinate and higher-order lifts = OPEN
-unrestricted Chow-rank improvement = false
-border-rank improvement = false
-literature novelty = NOT ESTABLISHED
+28 <= ChowRank(perm_6) <= 32.
 ```
-
-## Next interface
-
-Classify coordinate components with zero leading matching projection. Do not
-open a general third-order solver unless that boundary leaves a genuine
-survivor.

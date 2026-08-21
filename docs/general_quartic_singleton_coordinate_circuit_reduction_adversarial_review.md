@@ -1,70 +1,69 @@
-# Adversarial review: positive-singleton coordinate circuit reduction
+# Adversarial review: corrected positive-singleton coordinate reduction
 
-## Verdict
+## 1. What failed in hosted run #845?
 
-The classification and support-envelope argument are internally coherent and
-strictly narrower than a six-block zero theorem. The result closes all regular
-positive-leading coordinate two-jets when combined with the prior
-two-supported theorem.
+The failure was real but local to the frozen positive-singleton packet. The
+earlier independent script encoded the square-lollipop support as a triangle
+with an isolated fifth vertex, and the stored fixed-identity count for the
+double-edge-tail family was `888` instead of `696`. The corresponding square
+and double circuit normal forms in the frozen JSON were also inconsistent with
+their named support graphs.
 
-## Strongest objections checked
+These are transcription defects, not evidence for a surviving second-order
+configuration.
 
-### 1. Were repeated unused coordinate factors omitted?
+## 2. Why is the theorem not being withdrawn?
 
-No. The two unused degree-six factors are treated as an unordered multiset from
-all sixteen cells, with repetition and reuse of a leading matching cell
-allowed. Of 136 multisets, six complete a second perfect matching; all other
-130 singleton frames are enumerated.
+After replacing the square pattern by the actual four-cycle with a one-edge
+tail, correcting the double count to `696`, and deriving compatible circuit
+normal forms, the exhaustive computations give exactly the same orbit counts,
+decorated configuration counts, second-order support histograms, and maxima:
 
-### 2. Does the support classification assume a generic relation?
+```text
+square lollipop       orbit count 5,  fixed-identity embeddings 216, max 22
+double-edge tail      orbit count 29, fixed-identity embeddings 696, max 22
+endpoint-marked P5    orbit count 18, fixed-identity embeddings 696, max 23
+```
 
-No. A support-minimal rank-five six-circuit has one full-support relation.
-Rescaling its columns makes the relation the all-ones sum. Every used matching
-coordinate must then occur at least twice. The incidence inequality forces at
-most two singleton columns and exactly five matching vertices. The remaining
-graph classification is finite and combinatorial.
+The target `perm_4` has matching support 24. The strict route conclusion is
+therefore unchanged.
 
-### 3. Could the two rejected one-singleton types embed non-generically?
+## 3. Are the corrected normal forms actually circuits?
 
-No. Their ordinary support graph contains an odd cycle. The transposition
-Cayley graph on `S_4` is bipartite by permutation parity, independently of
-coefficients.
+Yes. In each family the six columns sum to zero, have total rank five, and
+every five-column submatrix has rank five. For the one-parameter families the
+only excluded values are `a=0,-1`, exactly where support-minimality fails.
 
-### 4. Could first-order source directions create new matchings?
+## 4. Does the scan omit repeated coordinate factors?
 
-Only matchings already contained in the frame. The singleton frames are
-defined by containing exactly one perfect matching; two-supported coordinate
-frames contain exactly their two leading matchings.
+No. A singleton component contains its leading matching and two unused factors
+chosen as an unordered multiset from all sixteen cells. All 136 multisets are
+examined; six produce a second perfect matching and the remaining 130 true
+singleton frames are retained. Support sizes four, five, and six all occur.
 
-### 5. Does the second-order envelope omit source-factor cross terms?
+## 5. Is the second-order envelope only heuristic?
 
-No. A first-source/first-factor term retains three frame cells, which is the
-first set in the envelope. Two first-factor terms retain two cells of a leading
-matching, which is the second set. Free second-order source and factor terms
-are also contained.
+No. It is a termwise necessary condition. Every second-order term either
+retains at least three coordinate-frame cells or at least two cells of a
+nonzero leading matching. Lower-order cancellation can delete terms but cannot
+create a matching outside the envelope.
 
-### 6. Could cancellation enlarge support?
+## 6. Does the theorem prove an unrestricted six-block lower bound?
 
-No. The envelope is termwise. Imposing first-order cancellation or combining
-components can remove coefficients but cannot create a matching coordinate
-outside the union of termwise envelopes.
+No. It assumes coordinate initial frames, regular expansions, and six nonzero
+leading matching projections. Zero-leading, noncoordinate, singular,
+multigrade, and higher-order cases remain open. The unrestricted interval
+remains
 
-### 7. Is a 23-coordinate polynomial necessarily different from `perm_4`?
+\[
+6\leq\mu(6,4)\leq8.
+\]
 
-Yes for the stated target. Every coefficient of `perm_4`, and every nonzero
-diagonal row-column torus transform of it, is nonzero on all 24 perfect
-matchings.
+## 7. Strongest remaining objection
 
-## Remaining gaps
-
-The result does not cover:
-
-- a component whose leading matching projection is zero;
-- noncoordinate initial factor frames;
-- leading-dependent or multigrade collision trees;
-- third- and higher-order arcs; or
-- an unrestricted six-block witness not captured by the regular coordinate
-  degeneration.
-
-Therefore `mu(6,4)` remains open in `[6,8]` and no unrestricted Chow-rank or
-border-rank improvement is claimed.
+The coordinate regular first-order theorem now handles arbitrary repeated
+coordinate frames even when the leading matching projection vanishes, but a
+first nonzero coefficient of order at least two can move two factors and may
+have much larger matching support. The next valid computation must retain the
+complete internal source kernel at second order; a raw `|M cap A|>=2` support
+count alone is too weak.
