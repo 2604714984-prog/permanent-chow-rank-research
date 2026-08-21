@@ -594,6 +594,26 @@ certificates.  The remaining overlap-two frontier is support-size sum eight:
 non-unipotent rank-one updates, higher-rank perturbations, arbitrary
 \(\mathrm{GL}_6\), and arbitrary endpoint-B packets also remain open.
 
+## Completion of every overlap-two support family
+
+The final support-size-sum-eight shapes are
+\((2,6),(3,5),(4,4),(5,3),(6,2)\).  They contain respectively
+75, 300, 450, 300, and 75 oriented-support/multiplicity cases.  A
+four-worker checkpointed run with degree-weighted streamed selection covers
+all 1,200 cases.  Every exact matrix has a single nonzero 42-column minor
+whose determinant is a coordinate monomial.  The five elapsed-time sums were
+46.09, 166.90, 236.83, 154.50, and 37.18 seconds.
+
+Every proper coefficient face lowers one or both support sizes and is covered
+by the preceding exact certificates.  Since two supports in six coordinates
+with overlap exactly two have total size at most eight, this completes every
+overlap-two support shape for nonzero rank-one nilpotent updates in the
+synchronized mixed-Glynn endpoint model.
+
+This does not cover overlap three or more, non-unipotent rank-one updates,
+higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), arbitrary endpoint-B
+packets, ordinary lower \(50\), or border rank.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -796,8 +816,8 @@ python scripts/n7_mixed_glynn_overlap_two_rank_one_shear_tail_rank.py \
   --json data/n7_mixed_glynn_overlap_two_33_nilpotent_shear_tail_rank.json
 ```
 
-For five-parameter families, use degree-weighted selection and four workers to
-avoid memory-bandwidth collapse; for example:
+For five- and six-parameter families, use degree-weighted selection and four
+workers to avoid memory-bandwidth collapse; for example:
 
 ```bash
 python scripts/n7_mixed_glynn_overlap_two_rank_one_shear_tail_rank.py \
@@ -806,6 +826,10 @@ python scripts/n7_mixed_glynn_overlap_two_rank_one_shear_tail_rank.py \
   --json data/n7_mixed_glynn_overlap_two_52_nilpotent_shear_tail_rank.json
 ```
 
+The six-parameter sum-eight runs were checkpointed with `--start-index` and
+`--limit`, then merged only after exact contiguous-range validation with
+`scripts/n7_merge_candidate_chunks.py`.
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
@@ -813,8 +837,9 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
-overlap-two families with support-size sum six.  It also does not cover
-support-size-sum-eight overlap-two families or arbitrary endpoint-B packets,
-and therefore does not yet prove ordinary lower (50) or a border-rank
-statement.  Its useful new content is the exact multiblock compatibility
-classification, which is invisible to the earlier single-block rank test.
+complete overlap-two nilpotent rank-one family.  It does not cover overlap
+three or more, non-unipotent rank-one updates, higher-rank perturbations, or
+arbitrary endpoint-B packets, and therefore does not yet prove ordinary lower
+(50) or a border-rank statement.  Its useful new content is the exact
+multiblock compatibility classification, which is invisible to the earlier
+single-block rank test.

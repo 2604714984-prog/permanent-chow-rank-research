@@ -13,6 +13,11 @@ SIZE_PAIRS = (
     (3, 4),
     (4, 3),
     (5, 2),
+    (2, 6),
+    (3, 5),
+    (4, 4),
+    (5, 3),
+    (6, 2),
 )
 
 
@@ -50,6 +55,11 @@ class OverlapTwoRankOneShearTailRankTests(unittest.TestCase):
             (3, 4): 900,
             (4, 3): 900,
             (5, 2): 300,
+            (2, 6): 75,
+            (3, 5): 300,
+            (4, 4): 450,
+            (5, 3): 300,
+            (6, 2): 75,
         }
         for pair, payload in self.payloads.items():
             self.assertEqual(payload["candidate_count"], expected_counts[pair])
@@ -68,6 +78,11 @@ class OverlapTwoRankOneShearTailRankTests(unittest.TestCase):
             (3, 4): {1: 900},
             (4, 3): {1: 900},
             (5, 2): {1: 300},
+            (2, 6): {1: 75},
+            (3, 5): {1: 300},
+            (4, 4): {1: 450},
+            (5, 3): {1: 300},
+            (6, 2): {1: 75},
         }
         for pair, payload in self.payloads.items():
             histogram = {}

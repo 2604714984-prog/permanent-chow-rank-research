@@ -3459,3 +3459,18 @@ The next overlap-two layer is support-size sum eight:
 \((2,6),(3,5),(4,4),(5,3),(6,2)\).  Overlap three or more, non-unipotent
 rank-one updates, higher-rank perturbations, general \(\mathrm{GL}_6\),
 arbitrary endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: every overlap-two support family is complete
+
+The final support-size-sum-eight shapes
+\((2,6),(3,5),(4,4),(5,3),(6,2)\) contribute 75, 300, 450, 300, and 75
+support/multiplicity cases.  Four-worker degree-weighted checkpoint runs give
+a single exact monomial minor in every one of the 1,200 cases.  Strict range
+merging confirms that no candidate was skipped or duplicated.
+
+Together with the lower support-size certificates, this closes every possible
+overlap-exactly-two rank-one nilpotent shear in six coordinates: proper
+coefficient faces reduce recursively, while total support size cannot exceed
+eight.  Overlap three or more, non-unipotent rank-one updates, higher-rank
+perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
+and ordinary lower 50 remain open.

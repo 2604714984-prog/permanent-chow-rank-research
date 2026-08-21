@@ -1,0 +1,3459 @@
+{
+  "candidate_count": 75,
+  "candidate_start_index": 0,
+  "candidate_stop_index_exclusive": 75,
+  "chunk_count": 3,
+  "claim_boundary": [
+    "The exact family has support sizes (2,6), overlap exactly two, and v^T u=0 on the overlapping core.",
+    "Every oriented coordinate support and all five positive identity/shear multiplicity splits are represented.",
+    "Exact minor gcds cover the dense parameter torus; proper coefficient faces reduce to previously certified support strata.",
+    "The result does not cover overlap three or more, non-unipotent rank-one updates, higher-rank perturbations, arbitrary GL(6), arbitrary endpoint-B packets, ordinary lower 50, or border rank."
+  ],
+  "coordinate_face_certificates": [
+    "EXACT_ALL_OVERLAP_TWO_25_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+  ],
+  "elapsed_seconds_sum": 46.089951315996586,
+  "field": "characteristic zero",
+  "full_candidate_count": 75,
+  "left_support_size": 2,
+  "multiplicity_split_count": 5,
+  "overlap_size": 2,
+  "parameter_count": 6,
+  "right_support_size": 6,
+  "rows": [
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p1**3",
+      "gcd_exponents": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1**5",
+      "gcd_exponents": [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 5,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1**5",
+      "gcd_exponents": [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 5,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1**6",
+      "gcd_exponents": [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 6,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        0,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p0*p5",
+      "gcd_exponents": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p1**8",
+      "gcd_exponents": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 8,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        2
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1**8",
+      "gcd_exponents": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 8,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1**8",
+      "gcd_exponents": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 8,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1**8",
+      "gcd_exponents": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 8,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        1,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1**8",
+      "gcd_exponents": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 8,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        3
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1**8",
+      "gcd_exponents": [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 8,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1**9",
+      "gcd_exponents": [
+        0,
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 9,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        2,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1**10",
+      "gcd_exponents": [
+        0,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 10,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        4
+      ],
+      "gcd": "40564819207303340847894502572032*p5",
+      "gcd_exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1**10",
+      "gcd_exponents": [
+        0,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 10,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        3,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        4,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1**10",
+      "gcd_exponents": [
+        0,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 10,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        4,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        4,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        4,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    },
+    {
+      "core_support": [
+        4,
+        5
+      ],
+      "gcd": "40564819207303340847894502572032*p1",
+      "gcd_exponents": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gcd_term_count": 1,
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 1,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "status": "DENSE_TORUS_COVERED_BY_EXACT_MINORS",
+      "weighted_selection": true
+    }
+  ],
+  "schema_version": 1,
+  "selection_strategy_counts": {
+    "weighted": 75
+  },
+  "source_chunk_files": [
+    "n7_overlap_two_26_chunk_000_025.json",
+    "n7_overlap_two_26_chunk_025_050.json",
+    "n7_overlap_two_26_chunk_050_075.json"
+  ],
+  "status": "EXACT_ALL_OVERLAP_TWO_26_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+  "status_counts": {
+    "DENSE_TORUS_COVERED_BY_EXACT_MINORS": 75
+  },
+  "support_count": 15,
+  "witness_samples_first_5": [
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "identity_count": 1,
+      "left_extra_support": [],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "identity_count": 2,
+      "left_extra_support": [],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "identity_count": 3,
+      "left_extra_support": [],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "identity_count": 4,
+      "left_extra_support": [],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1
+      ],
+      "identity_count": 5,
+      "left_extra_support": [],
+      "right_extra_support": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "workers_used": [
+    4
+  ]
+}
