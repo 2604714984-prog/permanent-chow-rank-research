@@ -2884,11 +2884,11 @@ h\ge120-\Delta/2.
 \]
 
 The defect cancels and forces \(N\ge32\); Glynn gives the matching upper
-bound.  Two independent scope audits checked singular middle maps, overlap
-among term images, the global quotient-symbol kernel, arbitrary factor-span
-filtrations, and use of one fixed global quadratic quotient.  The adjacent
-finite replay verifies every half-defect row and the final gap ten at
-\(N=31\).
+bound.  This original entry claimed too much for its scope audits: the compact
+proof did not derive the local quotient-symbol rows, and the longer source
+blueprint silently identified formal subproduct spaces with actual derivative
+spaces in two dependent-factor profiles.  The 2026-08-21 correction below
+records the repaired argument and the new exact replay.
 
 This is an unrestricted ordinary-rank theorem.  It does not prove border
 rank 32 or the general formula \(2^{n-1}\).  The earlier fixed-six and local
@@ -3550,3 +3550,40 @@ Python process was confirmed absent after interruption.  Resume at index 75;
 then compute \((6,4)\), overlap five, and overlap six.  Ordinary lower 50,
 general \(\mathrm{GL}_6\), arbitrary endpoint B, non-unipotent rank-one
 updates, higher-rank perturbations, and border rank remain open.
+
+## 2026-08-21: the perm6 rank-32 proof is repaired after local-space audit
+
+The incoming audit correctly rejected the compact N6-140 document as a closed
+proof because it asserted, rather than derived, the arbitrary-quotient local
+rows.  Independent exact reconstruction then found a concrete error in the
+longer source blueprint.  For the five-variable normal form with support two,
+the formal pair- and triple-product spans have dimensions 12 and 17, whereas
+the actual derivative spaces have dimensions 11 and 14.  At support three,
+the formal triple-product span has dimension 19 whereas the actual middle
+derivative space has dimension 18.  The former formal-space descent is
+therefore withdrawn.
+
+The repaired proof works directly with the actual normal-form derivatives.
+Exact rational differentiation gives middle ranks \(14,14,18,20,20\).  The
+support-three actual middle space contains nine squarefree cubics with minimum
+coordinate incidence five, and the support-four/five spaces contain all ten,
+with incidence six.  Torus specialization supplies the rank-one directional
+floor; the polarization kernel-preimage bound supplies ranks two through four;
+and the full quotient remains injective by
+\(E_2^{(1)}=E_3\) and the nine-essential-variable floor.  This yields the
+weaker but sufficient adjusted rows
+
+\[
+(0,5,8,13,15,20),\qquad
+(1,5,7,12,14,19),\qquad
+(3,9,9,10,16,17).
+\]
+
+All rows still dominate \(10d/3\), so the global half-defect cancellation
+continues to force \(N\ge32\).  The exact replay now derives the six-factor
+symbol table from 45,696 coordinate fixed-point cases, derives the actual
+normal-form spaces from the displayed polynomials, and freezes the rejected
+formal/actual equalities as negative regressions.  N6-140 is restored as an
+internal computation-assisted exact ordinary-rank proof.  It has no border
+rank consequence and has not received named external peer review or
+proof-assistant formalization.

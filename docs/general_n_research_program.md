@@ -16,7 +16,7 @@ The trusted small-`n` boundary is now:
 n=3: exact 4
 n=4: exact 8
 n=5: repaired internal computer-assisted proof draft for exact 16
-n=6: exact ordinary rank 32; two independent scope audits pass
+n=6: post-audit repaired internal exact ordinary-rank proof; exact finite replay
 ```
 
 The `n=5` v14 proof is canonical on `main`; its role in this program is a
@@ -38,8 +38,9 @@ The repository contains:
 - a vector-valued Macaulay prolongation theorem;
 - the specialized `n=6` lower bound 25;
 - exact full column-sign and row-sign rank `2^(n-1)`;
-- exact unrestricted ordinary rank 32 at `n=6`, using symmetric image-span
-  and half-defect quotient-symbol inequalities;
+- a post-audit repaired internal exact ordinary-rank-32 proof at `n=6`, using
+  symmetric image-span and actual-space half-defect quotient-symbol
+  inequalities;
 - a larger anchored diagonal-sign rigidity theorem; and
 - a general count-product atomic-rank theorem for a restricted aggregate.
 
