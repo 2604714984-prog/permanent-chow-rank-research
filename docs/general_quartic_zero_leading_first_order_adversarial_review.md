@@ -1,9 +1,11 @@
-# Adversarial review: zero-leading coordinate first-order reduction
+# Adversarial review: zero-leading coordinate first-order envelope
 
-The conclusion uses only matching-support necessity, not coefficient sufficiency. The explicit four-frame cover is not a six-block witness; it only shows that support counting cannot exclude `z=4`.
+The theorem is only a single-component matching-support envelope and equality classification. It does not by itself distinguish the number of zero-leading components in a six-component degeneration.
+
+The explicit four-frame cover is not a six-block witness. It only proves that matching-support counting can be sharp enough to cover all 24 perfect matchings.
 
 Repeated degree-six factors do not enlarge the envelope because a new matching obtained by changing one factor still requires three distinct unchanged matching cells. Frames may contain perfect matchings even when their leading matching coefficients cancel, so the exhaustive replay includes all cell supports of size at most six.
 
-The bound on positive order-zero matching coordinates follows because every used coordinate must occur at least twice while each coordinate six-frame contributes at most two matching incidences. No claim is made about noncoordinate leading forms or singular/multigrade valuation trees.
+A previous draft incorrectly bounded the first-order support of positive-leading components by their order-zero matching support. Positive-leading components can acquire additional first-order matching coordinates through nonmatching source coefficients, so the former `6+5z` reduction is retracted.
 
-The surviving `z=4` and `z=6` states require coefficient-level common-source analysis. A support cover alone must not be promoted to existence evidence.
+Any multi-component exclusion must use the full common-source coefficient equations, order-zero polynomial cancellation, and nonmatching first-order cancellation. No claim is made about noncoordinate leading forms or singular/multigrade valuation trees.
