@@ -415,6 +415,40 @@ The statement still concerns identity versus one rank-one coordinate shear.
 It does not cover four or more directions, higher-rank perturbations, arbitrary
 \(\mathrm{GL}_6\), or arbitrary endpoint-B packets.
 
+## Completion of the coordinate-star rank-one family
+
+The same exact construction continues through four and five directions.  For
+four edges there are
+
+\[
+2\cdot6\binom54\cdot5=300
+\]
+
+support/split cases; for five edges there are
+
+\[
+2\cdot6\binom55\cdot5=60.
+\]
+
+All 360 selected determinants are nonzero multivariate monomials.  The
+four-direction result imports the three-direction coordinate faces, and the
+five-direction result imports the four-direction faces.  Therefore every
+nonidentity shear of either form
+
+\[
+ I+e_a v^\mathsf{T},\qquad v_a=0,
+ \quad\hbox{or}\quad
+ I+u e_b^\mathsf{T},\qquad u_b=0,
+\]
+
+has invalid-tail rank 42 in each of the five positive multiplicity splits.
+Together with the common-monomial invariance, this closes the complete
+coordinate-star rank-one family in characteristic zero.
+
+This does not cover a rank-one update \(I+uv^\mathsf{T}\) when both \(u\) and
+\(v\) have multi-coordinate support, nor a higher-rank perturbation, arbitrary
+\(\mathrm{GL}_6\), or arbitrary endpoint-B packets.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -536,13 +570,24 @@ python scripts/n7_mixed_glynn_three_direction_shear_tail_rank.py \
   --json data/n7_mixed_glynn_three_direction_shear_tail_rank.json
 ```
 
+The exact four- and five-direction replays are:
+
+```bash
+python scripts/n7_mixed_glynn_four_five_direction_shear_tail_rank.py \
+  --arms 4 --max-candidates 300 --workers 20 \
+  --json data/n7_mixed_glynn_four_direction_shear_tail_rank.json
+
+python scripts/n7_mixed_glynn_four_five_direction_shear_tail_rank.py \
+  --arms 5 --max-candidates 60 --workers 20 \
+  --json data/n7_mixed_glynn_five_direction_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
-rank-one coordinate-shear two-type packet with at most three directions, or
-arbitrary endpoint-B packets.  It therefore does not yet prove ordinary lower
-(50) or a border-rank statement.  Its useful new content is the exact
-multiblock compatibility classification, which is invisible to the earlier
-single-block rank test.
+coordinate-star rank-one shear two-type packet, or arbitrary endpoint-B
+packets.  It therefore does not yet prove ordinary lower (50) or a border-rank
+statement.  Its useful new content is the exact multiblock compatibility
+classification, which is invisible to the earlier single-block rank test.

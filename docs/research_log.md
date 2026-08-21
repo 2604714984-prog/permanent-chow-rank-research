@@ -3346,3 +3346,17 @@ two-direction and elementary-shear certificates cover every nonzero coordinate
 face, so the conclusion holds for every nonzero parameter vector.  Four or
 more directions, higher-rank perturbations, general \(\mathrm{GL}_6\),
 arbitrary endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: the coordinate-star rank-one shear family is complete
+
+The four-direction layer has 300 support/split cases and the five-direction
+layer has 60.  Every exact invalid-tail determinant is again a nonzero
+multivariate monomial.  Importing the lower-direction coordinate-face
+certificates proves full invalid-tail rank for every nonzero parameter vector.
+
+Consequently every packet using the identity and a nontrivial shear
+\(I+e_av^\mathsf T\) with \(v_a=0\), or its transpose-shaped analogue
+\(I+ue_b^\mathsf T\) with \(u_b=0\), has zero local target intersection in all
+five positive multiplicity splits.  A rank-one update with multi-coordinate
+support on both sides, higher-rank perturbations, general \(\mathrm{GL}_6\),
+arbitrary endpoint B, border rank, and ordinary lower 50 remain open.
