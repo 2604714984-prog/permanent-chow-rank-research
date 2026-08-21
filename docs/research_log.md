@@ -3329,3 +3329,20 @@ proved 150 elementary-shear cases cover the two coordinate axes, so every
 claim remains local to identity-versus-one-shear packets; three or more
 directions, higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary
 endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: three-direction rank-one coordinate shears are excluded
+
+For the star shapes \(I+sE_{ab}+tE_{ac}+uE_{ad}\) and their transposes, all
+120 coordinate supports and five positive multiplicity splits give 600 cases.
+Every streamed 42-column invalid-tail minor reconstructs over
+\(\mathbb Z[s,t,u]\) as a nonzero monomial
+
+\[
+c s^e t^f u^g,\qquad e,f,g\ge0,\quad e+f+g>0.
+\]
+
+This proves full invalid-tail rank when all parameters are nonzero.  The exact
+two-direction and elementary-shear certificates cover every nonzero coordinate
+face, so the conclusion holds for every nonzero parameter vector.  Four or
+more directions, higher-rank perturbations, general \(\mathrm{GL}_6\),
+arbitrary endpoint B, border rank, and ordinary lower 50 remain open.

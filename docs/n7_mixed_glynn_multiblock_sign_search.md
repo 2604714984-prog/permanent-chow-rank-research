@@ -386,6 +386,35 @@ This is still a two-transform packet theorem.  It does not cover three or more
 directions, a general higher-rank perturbation, arbitrary \(\mathrm{GL}_6\),
 or arbitrary endpoint-B packets.
 
+## Every three-direction rank-one coordinate shear
+
+The same construction covers the two three-edge star shapes
+
+\[
+ I+sE_{ab}+tE_{ac}+uE_{ad}
+ \quad\hbox{and}\quad
+ I+sE_{ab}+tE_{cb}+uE_{db}.
+\]
+
+Each shape has \(6\binom53=60\) coordinate supports, so the five positive
+multiplicity splits again give 600 exact cases.  In every case, the selected
+42-column determinant over \(\mathbb Z[s,t,u]\) is
+
+\[
+ c s^e t^f u^g,\qquad c\ne0,\quad e,f,g\ge0,
+ \quad e+f+g>0.
+\]
+
+This proves full invalid-tail rank on \(stu\ne0\).  Every proper coordinate
+face is a two-direction, elementary, or identity packet; the exact certificates
+above therefore cover all faces except the origin.  Hence every nonzero
+parameter vector in either three-edge star has zero local target intersection
+in characteristic zero.
+
+The statement still concerns identity versus one rank-one coordinate shear.
+It does not cover four or more directions, higher-rank perturbations, arbitrary
+\(\mathrm{GL}_6\), or arbitrary endpoint-B packets.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -499,12 +528,20 @@ python scripts/n7_mixed_glynn_two_direction_shear_tail_rank.py \
   --json data/n7_mixed_glynn_two_direction_shear_tail_rank.json
 ```
 
+The exact three-direction shear replay is:
+
+```bash
+python scripts/n7_mixed_glynn_three_direction_shear_tail_rank.py \
+  --max-candidates 600 --workers 20 \
+  --json data/n7_mixed_glynn_three_direction_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
-single- and two-direction rank-one coordinate-shear two-type packet, or
+rank-one coordinate-shear two-type packet with at most three directions, or
 arbitrary endpoint-B packets.  It therefore does not yet prove ordinary lower
 (50) or a border-rank statement.  Its useful new content is the exact
 multiblock compatibility classification, which is invisible to the earlier
