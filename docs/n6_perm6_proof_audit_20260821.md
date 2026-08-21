@@ -110,7 +110,7 @@ T=\ell_1\cdots\ell_6\ne0,
 \quad F=\mathcal D_2(T),
 \]
 
-put `u=dim U` and `R=F cap E_2`, and let
+put `u=dim U` and `R=F\cap E_2`, and let
 
 \[
 P:L\twoheadrightarrow D
@@ -152,7 +152,7 @@ For a linear space `L` of dimension at most six, the closed torus-fixed-point re
 \dim(E_2\cap\operatorname{Sym}^2L)\le3,
 \]
 
-with the sharper upper bound one when `dim L <= 5`. At a fixed point this is the exact statement that a bipartite graph with at most five edges contains at most one four-cycle and a graph with six edges contains at most three four-cycles. The finite replay independently reconstructs the coordinate maxima
+with the sharper upper bound one when `dim L <= 5`. At a fixed point this is the exact statement that a bipartite graph with at most five edges contains at most one four-cycle and a graph with six edges contains at most three four-cycles. The finite replay reconstructs the coordinate maxima
 
 ```text
 0, 0, 0, 0, 1, 1, 3
@@ -278,7 +278,7 @@ For `s=1`, the actual cubic space is spanned by the ten squarefree cubics and th
 For `s=2`, the displayed fourteen-vector basis separates the directional analysis into two exhaustive cases:
 
 - a direction involving some `x_j`, `j >= 3`, gives five distinct pair monomials and two additional independent quadrics modulo `x_j L`; or
-- a direction contained in `span(partial_1, partial_2)` gives three pair monomials on `x_3,x_4,x_5`, three nonzero outputs in disjoint two-dimensional blocks, and one nonzero quadratic in the `x_1,x_2` block.
+- a direction contained in `\langle\partial_{x_1},\partial_{x_2}\rangle` gives three pair monomials on `x_3,x_4,x_5`, three nonzero outputs in disjoint two-dimensional blocks, and one nonzero quadratic in the `x_1,x_2` block.
 
 Thus every nonzero direction again has rank at least seven. After quotienting by `R`, every positive-rank symbol has rank at least six.
 
@@ -394,7 +394,7 @@ workflow: exact-bound-tests
 run:      32469992061 (#801)
 result:   success
 English-only scan: pass
-unit tests: 983 passed, 14 opt-in tests skipped
+unit tests: 983 run, 14 opt-in tests skipped, all remaining tests passed
 new exact-rank-32 focused tests: 9/9 passed
 ```
 
