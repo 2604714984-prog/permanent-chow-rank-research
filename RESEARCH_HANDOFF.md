@@ -12,8 +12,8 @@ active branch: research/quartic-six-circuit-compatibility
 active Draft PR: #92
 parent branch: research/quartic-six-term-frontier
 parent exact head: 4804e9a948fa0602c062d167f0474d1346dbcab9
-one-term Glynn compression theorem head: THIS COMMIT
-publication receipt: PENDING
+seven-block local-rigidity packet head: 44021026bb7fb0e2a46c69f927d83cd022b86732
+current handoff receipt: THIS COMMIT
 ```
 
 Keep the stack narrow. Do not add a manager, registry, database, generic
@@ -21,15 +21,7 @@ solver framework, or second control plane.
 
 ## Active unrestricted boundary
 
-The inherited five-block theorem gives
-
-\[
-\mathcal D_4(\operatorname{perm}_6)
-\cap
-\sum_{i=1}^{5}\mathcal D_4(T_i)=0.
-\]
-
-The current branch now supplies an explicit seven-block witness. Therefore
+The inherited five-block theorem and the explicit compressed Glynn witness give
 
 \[
 \boxed{6\le\mu(6,4)\le7},
@@ -44,41 +36,17 @@ seven blocks      NONZERO
 eight blocks      NONZERO
 ```
 
-The ordinary Chow-rank interval is unchanged: a seven-block derivative-space
-intersection is not a seven-term decomposition of `perm_6`.
+The ordinary Chow-rank interval is unchanged: a derivative-space intersection
+is not a Chow decomposition of `perm_6`.
 
-## New explicit nonzero family
+## Explicit seven-block witness
 
-For every `m>=3` and `n>=m+2`,
+For every `m>=3` and `n>=m+2`, the missing full Walsh character at tensor order
+`m-2` removes one term from Glynn's formula and gives
 
 \[
 \boxed{\mu(n,m)\le2^{m-1}-1.}
 \]
-
-With `delta_1=1`, `chi(delta)=prod_r delta_r`, and
-`L_(delta,j)=sum_r delta_r x_(rj)`, share `m-2` columns and call the remaining
-two-column product `B_delta`. The missing-character Walsh relation is
-
-\[
-\sum_\delta \chi(\delta)A_\delta=0,
-\qquad
-A_\delta=\prod_{j=1}^{m-2}L_{\delta,j}.
-\]
-
-For any fixed `delta^0`, subtract this relation times `B_(delta^0)` from
-Glynn's formula:
-
-\[
-\operatorname{perm}_m
-=
-2^{1-m}
-\sum_{\delta\ne\delta^0}
-\chi(\delta)A_\delta(B_\delta-B_{\delta^0}).
-\]
-
-Each summand lies in one degree-`m+2` Chow derivative block because its two
-products share `m-2` independent factors and use four alternative tail
-factors. Padding gives every larger `n`.
 
 At `(m,n)=(4,6)` this is an exact seven-block witness. Frozen core:
 
@@ -86,16 +54,55 @@ At `(m,n)=(4,6)` this is an exact seven-block witness. Frozen core:
 045dcbd80846a35e6b9716771721c542ed86b0c1a246cf716cebb8e57df65a0e
 ```
 
-Inside the broader paired-column family
+Inside the paired-column family `a_i(column 1)b_i(column 2)Q_i(columns 3,4)`,
+seven is exact. The six-dimensional symmetric zero-diagonal contraction image
+contains no nonzero rank-one matrix, so six paired-column terms are impossible.
+A six-block witness must therefore use genuinely mixed frames or ambient
+cancellation outside that family.
+
+## Local rigidity of the standard seven-block witness
+
+Write the seven signed standard summands as
+
+\[
+G_v=\chi(v)v\otimes v\otimes(v\otimes v-w\otimes w),
+\qquad v\ne w=(1,1,1,1).
+\]
+
+Two exact local compression mechanisms are now closed.
+
+### Direct pair merge
+
+For every one of the 21 pairs, the four mode-rank profile of `G_u+G_v` is
 
 ```text
-a_i(column 1) * b_i(column 2) * Q_i(columns 3,4),
+(2,2,3,3)
 ```
 
-seven is exact. The grouped contraction image of `perm_4` is the
-six-dimensional symmetric zero-diagonal matrix space, which contains no
-nonzero rank-one matrix; six separated terms are therefore impossible. Seven
-retained sign outer products attain the bound.
+and its essential dimension is ten. Every quartic in one degree-six Chow
+derivative block has essential dimension at most six. Hence no two standard
+summands can be replaced directly by one block.
+
+### Infinitesimal deletion and absorption
+
+The complete `(1,1,1,1)` column-multidegree tangent projection of one standard
+block has 28 raw generators and exact dimension 18. After deleting any one of
+the seven summands, the other six projected tangent spaces have exact rank 108;
+adjoining the missing summand raises the rank to 109. This holds at two primes,
+and the analytic upper bound `6*18=108` transfers the result to characteristic
+zero.
+
+Thus the missing summand is not tangent to the six-block addition image at the
+standard six-tuple. It cannot be absorbed by a first-order deformation of the
+other six standard blocks.
+
+```text
+core: 7958a27a326b5155bb9e119061f98eabbc81945ca2a931ef9551d73798f2c710
+status: STRICT_LOCAL_ROUTE_BARRIER
+```
+
+This is local only. Remote six-block representations, singular/Puiseux paths,
+and higher-order coalescence remain open.
 
 ## Coordinate degeneration results retained
 
@@ -134,14 +141,8 @@ A complete scan of all 54,264 coordinate six-frame multisets proves
 |E(\gamma)|+|S(\gamma)|\le6,
 \]
 
-and global cancellation gives
-
-\[
-\boxed{q\ge8}.
-\]
-
-Thus every regular coordinate first-order degeneration with `q<=7` misses a
-full-support `perm_4` target.
+and global cancellation gives `q>=8`. Thus every regular coordinate
+first-order degeneration with `q<=7` misses a full-support `perm_4` target.
 
 ```text
 core: 8f0d2f3e746582c581e23f519c776733654e9f907af1b88bd29daea8a65f892b
@@ -162,44 +163,39 @@ Global six-component cross-cancellation at second order remains open.
 
 ## Validation
 
-The one-term compression packet passes:
+The local-rigidity packet passes:
 
 ```text
-exact compressed identities for m=3,4,5,6        PASS
-Walsh parity-mask relation for m=3,...,10         PASS
-complete quartic 256-coefficient reconstruction   PASS
-paired-column ranks 6 and 7 over Q                 PASS
-independent bit-mask / modular replay              PASS
-focused unit tests                                 5/5 PASS
-primary and independent python -O                  PASS
-py_compile                                         PASS
+21 rational pair-flattening checks                    PASS
+one-block projected tangent rank 18                   PASS
+seven deletion ranks 108 -> 109 at two primes         PASS
+independent six-factor / 15-source-subset replay       PASS
+primary and independent python -O                      PASS
+frozen JSON equality                                   PASS
+focused unit tests                                  6/6 PASS
+py_compile and no-bare-assert checks                    PASS
+English / ASCII proof-tree scan                         PASS
 ```
 
-The parent corrected-singleton head triggered hosted run #860, which was still
-in progress when this theorem packet was published. The current theorem commit
-must receive its own hosted result before the full repository is called green.
+Hosted run #870 for the preceding branch head was still in progress when this
+packet was published. The current receipt must receive its own hosted result
+before the repository-wide suite is described as green.
 
 ## Exact next task
 
-Only the six-block value remains undecided. The new paired-column lower bound
-closes the most direct attempt to compress the seven-block witness again.
-A six-block witness, if it exists, must use genuinely mixed four-column
-frames or nontrivial ambient cancellation.
+Only the six-block value remains undecided. Continue in this order:
 
-Proceed in this order:
-
-1. test whether the seven-block formula has any six-term deformation outside
-   the paired-column family while preserving all repeated-column cancellations;
-2. impose the inherited full-support six-element quotient circuit on the
-   common-source layers `(2,1,1)`, `(2,2)`, `(3,1)`, and `(4)`;
-3. continue the global coordinate second-order compatibility system only when
-   it supplies coefficient-level information beyond the now-sharp support
-   envelopes; and
+1. compute the second fundamental form of the six standard retained blocks
+   modulo their 108-dimensional projected tangent sum and test whether the
+   missing summand can first appear at order two;
+2. search mixed-column six-block candidates only through exact linear or
+   polynomial interfaces, using the seven-block formula as a controlled base;
+3. impose the inherited full-support six-element quotient circuit on the
+   common-source layers `(2,1,1)`, `(2,2)`, `(3,1)`, and `(4)`; and
 4. seek either an exact six-block witness or a six-block zero theorem.
 
-Do not return to broad scalar towers, sign-term deletion, or support-only
-coordinate enumeration. The order-`m-2` sign relation has codimension one, so
-the current Glynn compression removes exactly one term and no more.
+Do not return to broad scalar towers, simple sign-term deletion, or support-only
+coordinate enumeration.
 
 ## Strict boundary
 
@@ -209,11 +205,12 @@ six-block literal sum at (6,4) = OPEN
 seven-block literal sum at (6,4) = NONZERO
 mu(6,4) = OPEN IN [6,7]
 paired-column quartic threshold = 7
+standard seven-block direct pair merge = ZERO
+standard deleted-summand first-order absorption = ZERO
 coordinate regular first-order q<=7 = ZERO
-all-positive coordinate regular two-jets = CLOSED
 global first-nonzero-order-two coordinate q=6 = OPEN
 noncoordinate / singular / multigrade q=6 = OPEN
-unrestricted Chow_rank_improvement = false
+unrestricted Chow-rank improvement = false
 border-rank improvement = false
 literature novelty = NOT ESTABLISHED
 ```
