@@ -122,8 +122,8 @@ def build_payload() -> dict[str, object]:
         "direct_swap_relation_count": len(witnesses),
         "derived_swap_relation_count": len(derived_relations),
         "swap_relation_count": len(witnesses) + len(derived_relations),
-        "swap_extension_witnesses": witnesses,
-        "derived_swap_relations": derived_relations,
+        "swap_extension_witnesses_first_5": witnesses[:5],
+        "derived_swap_relations_first_5": derived_relations[:5],
         "imported_certificates": {
             "two_underlying_permutations": {
                 "candidate_count": two_permutation["candidate_count"],

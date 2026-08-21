@@ -33,8 +33,8 @@ class MonomialClassificationTests(unittest.TestCase):
         self.assertEqual(self.row["swap_relation_count"], 315)
         self.assertEqual(self.row["direct_swap_relation_count"], 300)
         self.assertEqual(self.row["derived_swap_relation_count"], 15)
-        self.assertEqual(len(self.row["swap_extension_witnesses"]), 300)
-        self.assertEqual(len(self.row["derived_swap_relations"]), 15)
+        self.assertEqual(len(self.row["swap_extension_witnesses_first_5"]), 5)
+        self.assertEqual(len(self.row["derived_swap_relations_first_5"]), 5)
 
     def test_imported_exact_certificates(self):
         imported = self.row["imported_certificates"]
