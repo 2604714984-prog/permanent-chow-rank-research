@@ -1,329 +1,446 @@
-# Audit report: ordinary Chow rank of `perm_6`
+# Second-pass audit report: repaired exact ordinary Chow rank of `perm_6`
 
 **Audit date:** 2026-08-21  
 **Repository:** `2604714984-prog/permanent-chow-rank-research`  
-**Audit type:** adversarial internal proof review and artifact-consistency review  
-**Reviewer:** GPT-5.6 Pro, acting as an AI-assisted internal reviewer rather than a human external referee  
-**Claim type:** ordinary Chow rank over characteristic zero; no border-Chow-rank claim is reviewed here
+**Audit type:** adversarial internal mathematical review and artifact-consistency review  
+**Reviewer:** GPT-5.6 Pro, acting as an AI-assisted internal reviewer rather than a named human external referee  
+**Claim boundary:** ordinary Chow rank over an algebraically closed field of characteristic zero; no border-Chow-rank claim is reviewed
 
-## 1. Frozen review boundary
+## 1. Supersession notice
 
-This report distinguishes three separate proof levels and freezes each one to an immutable repository state.
-
-| Level | Frozen reference | Status reviewed |
-|---|---|---|
-| Unconditional `main` theorem | commit `111a022c8de36619c32a0c2cf660aa4dd5b5aeab` | lower bound 25 |
-| Stacked lower-28 branch | commit `51348d4277c50cf1a7dd45af3dc76aeee26ae7a0` in PR #31 | proposed lower bound 28 |
-| Exact-rank-32 candidate | commit `d1860fbef77575938d517be2c4bf8dfd9509d596` in PR #90 | conditional reduction only |
-
-PR #31 currently points at commit `29f8d40452e673961840ebcd22dc0a7af2418171`. That commit has `51348d4277c50cf1a7dd45af3dc76aeee26ae7a0` as its parent and adds `perm_7` work. The `perm_6` assessment in this report remains frozen to the parent commit and does not automatically cover later changes to the `perm_6` proof stack.
-
-Relevant pull requests:
-
-- PR #31: <https://github.com/2604714984-prog/permanent-chow-rank-research/pull/31>
-- PR #90: <https://github.com/2604714984-prog/permanent-chow-rank-research/pull/90>
-
-## 2. Executive verdict
-
-The audit verdict is:
-
-| Claim | Verdict | Permitted repository wording |
-|---|---|---|
-| `ChowRank(perm_6) >= 25` at frozen `main` | **No blocking gap found** | May be treated as the current unconditional internal theorem |
-| `ChowRank(perm_6) >= 28` from PR #31 | **Promising but not finally accepted by this audit** | Keep as an unmerged, frozen-candidate claim pending a narrow final audit packet |
-| `ChowRank(perm_6) = 32` from PR #90 | **Not proved** | Must remain explicitly conditional on the unrestricted local quotient-symbol proposition |
-
-Accordingly, the unconditional statement supported by the frozen `main` branch is
-
-\[
-25 \leq \operatorname{ChowRank}(\operatorname{perm}_6) \leq 32.
-\]
-
-This report does not promote the repository to an unconditional exact-rank-32 claim.
-
-## 3. Audit methodology and limitations
-
-The review traced the mathematical dependency chain, inspected the proof documents, checked the direction of the principal dimension and semicontinuity arguments, compared formulas against the exact-arithmetic audit scripts and frozen outputs, and inspected the focused tests and claim-boundary language.
-
-The audit particularly targeted the following failure modes:
-
-1. reversing upper semicontinuity or specialization inequalities;
-2. silently replacing an arbitrary decomposition by a general-position one;
-3. normalizing several local terms separately when only one common ambient quotient is available;
-4. treating a replay table as a derivation of its load-bearing entries;
-5. adding local rank contributions without correctly subtracting relation overlap;
-6. omitting an extremal defect profile or endpoint layer;
-7. confusing ordinary Chow rank with border Chow rank;
-8. allowing the prose theorem to exceed what the scripts and certificates actually establish.
-
-This is not a formal proof-assistant verification. It is also not a clean-room rerun of every repository computation from a fresh checkout, and it does not establish literature priority. Computational artifacts are accepted only for the exact finite statements they encode; they do not replace missing universal geometric arguments.
-
-## 4. Audit of the unconditional lower-25 proof
-
-### 4.1 Primary artifacts
-
-The principal lower-25 artifacts are:
-
-- [`n6_fixed_six_lower25.md`](n6_fixed_six_lower25.md)
-- [`n6_fixed_six_lower25_adversarial_review.md`](n6_fixed_six_lower25_adversarial_review.md)
-- [`vector_valued_macaulay_prolongation.md`](vector_valued_macaulay_prolongation.md)
-- [`general_multidimensional_shadow_bound.md`](general_multidimensional_shadow_bound.md)
-- [`../scripts/n6_fixed_six_lower25_audit.py`](../scripts/n6_fixed_six_lower25_audit.py)
-- [`../scripts/n6_fixed_six_lower25_independent_audit.py`](../scripts/n6_fixed_six_lower25_independent_audit.py)
-- [`../tests/test_n6_fixed_six_lower25_audit.py`](../tests/test_n6_fixed_six_lower25_audit.py)
-- [`../data/n6_fixed_six_lower25.json`](../data/n6_fixed_six_lower25.json)
-
-### 4.2 Proof architecture
-
-The proof assumes a decomposition with 24 Chow terms, fixes six terms, and denotes the remaining eighteen-term residual by `R`. It then couples:
-
-- the quadratic derivative space;
-- the cubic derivative space;
-- quadratic relations among the six fixed terms;
-- first prolongations of those relations;
-- a middle block-Sylvester map;
-- exact finite optimization over the remaining defect profiles.
-
-The proof reduces all possible configurations to a finite range of the fixed-six quadratic intersection parameter `b`, excludes the low endpoint by a first Koszul estimate, and excludes the remaining layers by comparing a fixed-six coupled-rank lower bound with the maximal capacity of the eighteen-term residual.
-
-### 4.3 Load-bearing checks
-
-#### A. Quadratic projection and the range of `b`
-
-The proof uses the fixed-six projection cap
-
-\[
-\dim\!\left(E_2\cap\sum_{i=1}^{6}D_2(T_i)\right)\leq 78
-\]
-
-and the product-shadow estimate to restrict the relevant range of `b`. The audit found no reversal between image, intersection, and quotient dimensions in this reduction. The specialization argument is used in the conservative direction required for a lower-bound proof.
-
-#### B. Vector-valued Macaulay prolongation
-
-The proof requires a bound of the form
-
-\[
-\rho\leq \kappa^{\langle 2\rangle}
-\]
-
-for the cubic prolongation dimension `rho` of a colored quadratic relation space of dimension `kappa`.
-
-The supporting argument degenerates the relation space to a colored monomial space, applies scalar Macaulay growth color by color, and combines the resulting successors. The audit found the semicontinuity direction and the color decomposition consistent with the claimed upper bound. No hidden assumption that the original relation space is already monomial was detected.
-
-#### C. One-term middle-rank defect classification
-
-For the relevant normal forms, the proof uses the cubic derivative dimensions
-
-\[
-14,14,18,20,20
-\]
-
-and the corresponding half-defects
-
-\[
-3,3,1,0,0.
-\]
-
-These values are consistent with the displayed normal forms and with the finite defect enumeration. No omitted worse normal form was identified within the classification used by the theorem.
-
-#### D. Coupled block-Sylvester estimate
-
-The proof subtracts relation overlap from the sum of local contributions using a loss term of the form `2 rho`. The two copies correspond to the two coupled block directions. The audit found no unsupported direct-sum assumption and no obvious double counting in the stated rank inequality.
-
-#### E. Finite endpoint enumeration
-
-The exact-arithmetic script enumerates the admissible defect profiles and evaluates every remaining `b` layer. The formulas in the proof document, script, tests, and frozen JSON are mutually consistent. The critical layers retain a strict positive margin rather than relying on a floating-point or equality-edge decision.
-
-### 4.4 Lower-25 verdict
-
-No fatal or major mathematical gap was found in the frozen lower-25 chain. In particular, the audit did not find:
-
-- a circular invocation of the desired lower bound;
-- a reversed semicontinuity argument;
-- a hidden general-position replacement;
-- an invalid direct addition of local ranks;
-- an omitted endpoint in the finite optimization;
-- a mismatch between the proof formulas and the exact-arithmetic replay.
-
-The frozen `main` claim
-
-\[
-\operatorname{ChowRank}(\operatorname{perm}_6)\geq 25
-\]
-
-is therefore acceptable as the repository's current unconditional internal theorem.
-
-One non-blocking editorial repair is recommended: state explicitly how a decomposition with fewer than 24 summands is padded or split to the exact 24-term contradiction format, including the convention on scalar coefficients and zero terms. The intended reduction is standard, but the proof should make it explicit.
-
-## 5. Audit of the proposed lower-28 proof in PR #31
-
-### 5.1 Status of the candidate
-
-The reviewed `perm_6` snapshot is commit
+This second-pass report replaces the first-pass verdict previously stored at this path. The earlier report is preserved in Git history at commit
 
 ```text
-51348d4277c50cf1a7dd45af3dc76aeee26ae7a0
+180efad2e8ee874190c3c76443d3359a4308d4ad
 ```
 
-within the stacked draft PR #31. The branch contains the claimed N6-071/N6-072 closure of the last lower-28 endpoint, together with a large dependency history and later unrelated `perm_7` work.
+and was correct for the artifacts then reviewed: the old exact-rank candidate gave a valid conditional global reduction but did not prove its unrestricted local quotient-symbol proposition.
 
-### 5.2 New load-bearing content beyond lower 25
+The repaired proof subsequently exposed and removed a genuine additional defect in the old local argument: formal squarefree factor-label product spaces had been conflated with the actual derivative spaces of two five-variable normal forms. The current audit reviews the repaired proof, not the superseded candidate.
 
-The lower-28 promotion depends materially on two structural assertions:
+## 2. Frozen review boundary
 
-1. **Common-quotient synchronization.** Same-row and same-column compression ranks and images for all six colors must be compared in one actual permanent quotient. Separate favorable coordinates for each color are not sufficient.
-2. **All-singular hook exclusion.** After synchronization, the remaining all-singular, nonseparated hook-type locus must be excluded without assuming an invertible row or column block.
+| Item | Frozen reference |
+|---|---|
+| Pull request | PR #31, `agent/general-column-sign-rank` |
+| Reviewed head | `d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5` |
+| Reviewed tree | `91abdeacf11fca57eac3b1aea66b6dc66bd8b157` |
+| Commit message | `Repair exact perm6 half-defect proof` |
+| Base branch head | `main` at `111a022c8de36619c32a0c2cf660aa4dd5b5aeab` |
+| Associated CI run | `exact-bound-tests` run `32469992061`, run number `801` |
+| CI merge commit | `3e793ea830f54b650d1f506029362cc913db4ab8` |
 
-Representative artifacts include:
+Primary reviewed artifacts, pinned to the repaired head:
 
-- [`n6_six_color_row_rank_synchronization.md`](n6_six_color_row_rank_synchronization.md)
-- [`n6_all_singular_hook_exclusion.md`](n6_all_singular_hook_exclusion.md)
-- [`../scripts/n6_six_color_row_rank_synchronization.py`](../scripts/n6_six_color_row_rank_synchronization.py)
-- [`../scripts/n6_all_singular_hook_exclusion.py`](../scripts/n6_all_singular_hook_exclusion.py)
-- [`../tests/test_n6_six_color_row_rank_synchronization.py`](../tests/test_n6_six_color_row_rank_synchronization.py)
-- [`../tests/test_n6_all_singular_hook_exclusion.py`](../tests/test_n6_all_singular_hook_exclusion.py)
+- [`docs/n6_exact_ordinary_chow_rank_32.md`](https://github.com/2604714984-prog/permanent-chow-rank-research/blob/d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5/docs/n6_exact_ordinary_chow_rank_32.md)
+- [`docs/n6_exact_ordinary_chow_rank_32.tex`](https://github.com/2604714984-prog/permanent-chow-rank-research/blob/d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5/docs/n6_exact_ordinary_chow_rank_32.tex)
+- [`docs/n6_exact_ordinary_chow_rank_32_audit_closure.md`](https://github.com/2604714984-prog/permanent-chow-rank-research/blob/d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5/docs/n6_exact_ordinary_chow_rank_32_audit_closure.md)
+- [`scripts/n6_exact_ordinary_chow_rank_32.py`](https://github.com/2604714984-prog/permanent-chow-rank-research/blob/d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5/scripts/n6_exact_ordinary_chow_rank_32.py)
+- [`tests/test_n6_exact_ordinary_chow_rank_32.py`](https://github.com/2604714984-prog/permanent-chow-rank-research/blob/d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5/tests/test_n6_exact_ordinary_chow_rank_32.py)
+- [`data/n6_exact_ordinary_chow_rank_32.json`](https://github.com/2604714984-prog/permanent-chow-rank-research/blob/d96bfe57ce3c2ab431f745869cf86d5ee33c1dd5/data/n6_exact_ordinary_chow_rank_32.json)
 
-### 5.3 Audit concerns that remain before final acceptance
+This report does not automatically cover later modifications to any load-bearing lemma or artifact.
 
-No direct counterexample or immediate arithmetic contradiction was identified. However, the final two structural steps are substantially more delicate than the lower-25 finite-layer optimization. A final acceptance audit must close the following questions in one frozen packet:
+## 3. Executive verdict
 
-- Does every normalization act simultaneously on the six colors and the actual common quotient?
-- Are all closure and collision strata included, including rank drops and nonseparated limits?
-- Is any statement proved only on a dense chart but then applied to the full projective locus?
-- Are the diagonal and wedge coordinates both retained throughout the synchronization argument?
-- Does the all-singular exclusion cover every characteristic-zero component, rather than only coordinate or block-invertible representatives?
-- Are the exact scripts deriving the relevant classifications, or merely replaying manually supplied representative tables?
-
-The stacked PR spans many historical stages and unrelated later work. This makes it difficult to certify the exact dependency closure of the final lower-28 theorem from the PR surface alone.
-
-### 5.4 Lower-28 verdict
-
-The proposed lower bound
+The repaired theorem is
 
 \[
-\operatorname{ChowRank}(\operatorname{perm}_6)\geq 28
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_6)=32.}
 \]
 
-is **not rejected**, but it is not promoted to final audited status by this report.
-
-The correct repository treatment is:
-
-- keep the claim on a draft or otherwise explicitly provisional branch;
-- freeze the exact `perm_6` dependency head;
-- extract N6-071/N6-072 and their indispensable prerequisites into a narrow review packet;
-- run one final adversarial audit focused only on common-quotient synchronization, closure strata, and all-singular hook exclusion.
-
-No new framework is needed. The issue is proof concentration and dependency freezing, not additional architecture.
-
-## 6. Audit of the exact-rank-32 candidate in PR #90
-
-### 6.1 Primary artifacts
-
-The exact-rank candidate is frozen at
-
-```text
-d1860fbef77575938d517be2c4bf8dfd9509d596
-```
-
-with the following principal files:
-
-- [`n6_exact_ordinary_chow_rank_32_candidate.tex`](n6_exact_ordinary_chow_rank_32_candidate.tex)
-- [`../scripts/n6_exact_ordinary_chow_rank_32_candidate.py`](../scripts/n6_exact_ordinary_chow_rank_32_candidate.py)
-- [`../tests/test_n6_exact_ordinary_chow_rank_32_candidate.py`](../tests/test_n6_exact_ordinary_chow_rank_32_candidate.py)
-
-The PR description correctly states that the repository's unconditional interval remains `25 <= ChowRank(perm_6) <= 32`.
-
-### 6.2 What the candidate successfully establishes
-
-The candidate gives a coherent global reduction: if every nonzero degree-six Chow term and every quotient of its actual factor span satisfy the proposed half-defect quotient-symbol inequality, then the filtered global rank comparison yields the lower bound 32. The audit did not find an immediate sign or constant error in the global cancellation mechanism.
-
-In particular, the global argument correctly separates:
-
-- the universal local proposition;
-- the aggregation over decomposition terms;
-- the defect cancellation;
-- the final comparison with the permanent-side rank.
-
-This is useful progress because it isolates one precise local theorem whose proof would close the exact-rank claim.
-
-### 6.3 The decisive missing proposition
-
-The candidate requires a universal local statement of the schematic form
-
-\[
-\operatorname{rank}\beta_{P,R}+\frac{20-u}{2}
-\geq \frac{10}{3}d
-\]
-
-for every allowed Chow term, actual factor span, and quotient map.
-
-That universal proposition is not proved in the candidate. The replay script checks the arithmetic consequences of a supplied table of local minimum ranks; it does not derive those minima from an exhaustive characteristic-zero classification of all quotient spaces and all relative embeddings.
-
-This distinction is decisive:
-
-```text
-supplied local minima + arithmetic replay
-```
-
-is not equivalent to
-
-```text
-proof that those minima hold for every allowed complex quotient configuration.
-```
-
-Focused tests can establish that the replay is faithful to the displayed table. They cannot certify the unrestricted local geometry unless the classification or elimination that produces the table is itself included and checked.
-
-### 6.4 Exact-rank-32 verdict
-
-PR #90 is a valid **conditional reduction**, not a proof that
-
-\[
-\operatorname{ChowRank}(\operatorname{perm}_6)=32.
-\]
-
-The PR must remain draft and must retain explicit `CONDITIONAL` language until the unrestricted half-defect quotient-symbol proposition is established. Restricted coordinate slices, sampled quotients, or favorable orbit representatives are supporting evidence only and cannot close the universal claim.
-
-## 7. Final repository status recommended by this audit
-
-The mathematically accurate status is:
-
-### Unconditional on frozen `main`
-
-\[
-\boxed{25\leq \operatorname{ChowRank}(\operatorname{perm}_6)\leq 32.}
-\]
-
-### Provisional stacked result
-
-PR #31 proposes
-
-\[
-\boxed{28\leq \operatorname{ChowRank}(\operatorname{perm}_6)\leq 32,}
-\]
-
-but the lower-28 endpoint should remain provisional until the narrow synchronization and all-singular packet receives final review.
-
-### Conditional exact-rank route
-
-PR #90 reduces exact rank 32 to one unrestricted local quotient-symbol theorem. It does not currently prove that theorem.
-
-## 8. Minimal next actions
-
-Only two focused actions are recommended.
-
-1. **Lower-28 closeout:** extract the exact N6-071/N6-072 dependency closure from PR #31 into a frozen, `perm_6`-only packet and audit the common quotient and all-singular closure strata line by line.
-2. **Exact-32 closeout:** stop adding peripheral replay tables and prove the unrestricted local quotient-symbol proposition by a complete orbit stratification, deterministic elimination, or another finite certificate that covers the full complex parameter space.
-
-The repository does not need a new control layer, a new certificate framework, or a broad re-audit of unrelated results. The remaining work is narrow and mathematical.
-
-## 9. Audit disposition
+### Audit disposition
 
 | Severity | Count | Disposition |
 |---|---:|---|
-| Fatal finding against lower 25 | 0 | none found |
-| Major blocking finding against lower 25 | 0 | none found |
-| Minor editorial finding against lower 25 | 1 | exact-number-of-summands convention should be stated |
-| Final-acceptance hold on lower 28 | 1 | freeze and audit the synchronization/all-singular packet |
-| Fatal gap in unconditional exact 32 | 1 | unrestricted local quotient-symbol proposition remains unproved |
+| Fatal mathematical findings | 0 | none found |
+| Major mathematical findings | 0 | none found |
+| Minor findings | 1 | TeX spacing-command typo; no mathematical effect |
+| Final internal verdict | **PASS** | exact ordinary-rank proof accepted within this audit scope |
 
-This report is scoped to the frozen references listed in Section 1. Any later change to a load-bearing `perm_6` lemma requires a new exact-head review.
+The previous `CONDITIONAL` hold on exact rank 32 is closed for the repaired head. The unrestricted local half-defect quotient-symbol estimate is now proved by a combination of written characteristic-zero arguments and exact finite derivations from the underlying objects.
+
+The proof may be described internally as:
+
+> Over an algebraically closed field of characteristic zero, the ordinary Chow rank of the six-by-six permanent is exactly 32.
+
+It must not be described as a border-Chow-rank theorem, a proof of the general formula for all `n`, a proof-assistant formalization, or named external peer review.
+
+## 4. What the repair changed
+
+For
+
+\[
+T_s=x_1x_2x_3x_4x_5(x_1+\cdots+x_s),
+\qquad 1\le s\le5,
+\]
+
+exact differentiation gives
+
+\[
+\begin{array}{c|cc|cc}
+s&\dim \mathcal D_2(T_s)&\dim \mathcal D_3(T_s)&
+\dim F_{\mathrm{formal}}&\dim U_{\mathrm{formal}}\\ \hline
+1&11&14&11&14\\
+2&11&14&12&17\\
+3&13&18&13&19\\
+4&14&20&14&20\\
+5&15&20&15&20.
+\end{array}
+\]
+
+Thus the old formal-to-actual identification fails for `s=2` in degrees two and three and for `s=3` in degree three. The repair is substantive:
+
+1. the false shortcut is explicitly rejected;
+2. negative regression tests require the failed equalities to remain false;
+3. the squarefree fixed-point table is used only for six independent factors, where it is valid;
+4. all five-dimensional factor-span cases are handled through the actual derivative spaces of the displayed normal forms; and
+5. weaker but sufficient local rank rows replace the invalid old rows.
+
+The final arithmetic did not need to change because the repaired rows still dominate the required slope.
+
+## 5. Audit of the local half-defect theorem
+
+Let
+
+\[
+T=\ell_1\cdots\ell_6\ne0,
+\quad L=\langle\ell_1,\ldots,\ell_6\rangle,
+\quad U=\mathcal D_3(T),
+\quad F=\mathcal D_2(T),
+\]
+
+put `u=dim U` and `R=F cap E_2`, and let
+
+\[
+P:L\twoheadrightarrow D
+\]
+
+be an arbitrary quotient of rank `d`. The repaired proposition states
+
+\[
+\boxed{
+\operatorname{rank}\beta_{P,R}+\frac{20-u}{2}
+\ge \frac{10}{3}d.}
+\]
+
+The audit checked every factor-span dimension `1 <= dim L <= 6`.
+
+### 5.1 Permanent derivative tower and small intersections
+
+The proof establishes
+
+\[
+\dim E_3=400,
+\qquad
+\dim E_2=225,
+\qquad
+E_2^{(1)}=E_3.
+\]
+
+It also uses the valid rank floors
+
+\[
+0\ne q\in E_2\Longrightarrow \operatorname{rank}(q)\ge4,
+\qquad
+0\ne g\in E_3\Longrightarrow \operatorname{essdim}(g)\ge9.
+\]
+
+For a linear space `L` of dimension at most six, the closed torus-fixed-point reduction gives
+
+\[
+\dim(E_2\cap\operatorname{Sym}^2L)\le3,
+\]
+
+with the sharper upper bound one when `dim L <= 5`. At a fixed point this is the exact statement that a bipartite graph with at most five edges contains at most one four-cycle and a graph with six edges contains at most three four-cycles. The finite replay independently reconstructs the coordinate maxima
+
+```text
+0, 0, 0, 0, 1, 1, 3
+```
+
+for edge counts zero through six.
+
+The specialization and semicontinuity directions are correct: a coordinate fixed point can only have smaller or equal matrix rank, so its lower bound transfers to the original configuration.
+
+### 5.2 Kernel-preimage estimate
+
+Polarization gives an injective map
+
+\[
+\delta:\operatorname{Sym}^3L\longrightarrow L\otimes\operatorname{Sym}^2L.
+\]
+
+For `S=ker P`, the proof correctly identifies
+
+\[
+\ker((P\otimes1)\delta)=\operatorname{Sym}^3S
+\]
+
+and obtains the conservative inverse-image bound
+
+\[
+\dim\delta^{-1}(D\otimes R)
+\le \binom{\ell-d+2}{3}+d\dim R,
+\qquad \ell=\dim L.
+\]
+
+No transversality or generic-position assumption is inserted.
+
+### 5.3 Factor-span dimension at most four
+
+A diagonal one-parameter degeneration sends the term to a positive-support monomial
+
+\[
+x_1^{m_1}\cdots x_\ell^{m_\ell},
+\qquad m_j\ge1,
+\qquad \sum_jm_j=6.
+\]
+
+Middle catalectic rank cannot increase in the limit. Exact positive-partition counting yields the conservative floors
+
+```text
+ell = 1, 2, 3, 4
+u  >= 1, 2, 4, 8.
+```
+
+Combining these floors with the kernel-preimage estimate and full-symbol injectivity produces the displayed rows
+
+\[
+\begin{array}{c|c}
+\ell&\operatorname{rank}\beta_{P,R}+(20-u)/2\\ \hline
+4&(0,9/2,8,10,14)\\
+3&(5,15/2,9,12)\\
+2&(8,9,11)\\
+1&(19/2,21/2).
+\end{array}
+\]
+
+Each entry dominates `10d/3`.
+
+At full quotient rank, injectivity follows because a kernel cubic would lie simultaneously in `E_2^(1)=E_3` and in a cubic space supported on at most six essential variables, contradicting the nine-variable floor for nonzero elements of `E_3`.
+
+### 5.4 Six independent factors
+
+Here the actual derivative spaces are exactly the squarefree quadratic and cubic spaces. The common diagonal-torus reduction acts simultaneously on the quotient kernel and the subspace `R`.
+
+The replay derives, rather than merely restates, all 45,696 coordinate fixed-point cases and obtains
+
+\[
+\begin{array}{c|rrrrrrr}
+r\backslash d&0&1&2&3&4&5&6\\ \hline
+0&0&10&16&19&20&20&20\\
+1&0&9&14&16&16&20&20\\
+2&0&8&12&13&16&19&20\\
+3&0&7&10&10&15&17&19.
+\end{array}
+\]
+
+Full-symbol injectivity improves the last entry of the final row from 19 to 20, giving
+
+\[
+(0,7,10,10,15,17,20).
+\]
+
+This row satisfies the required slope for every quotient rank.
+
+### 5.5 Five-dimensional factor span: actual normal forms
+
+The unique relation among six factors spanning a five-space reduces, after coordinate changes and rescaling, to exactly one support size `s=1,...,5` in the normal form `T_s` above.
+
+Exact differentiation gives
+
+\[
+\begin{array}{c|rrrrr}
+s&1&2&3&4&5\\ \hline
+\dim F&11&11&13&14&15\\
+u&14&14&18&20&20.
+\end{array}
+\]
+
+For `s=3`, the actual middle space contains the nine squarefree cubics other than `x_1x_2x_3`; for `s=4,5`, it contains all ten squarefree cubics. A nonzero rank-one quotient specializes to a coordinate functional. Coordinate incidence gives directional-rank floors five and six respectively; quotienting the quadratic target by `R` loses at most one rank.
+
+Together with the general kernel estimate and full-symbol injectivity, this yields
+
+\[
+\begin{array}{c|c}
+s&\operatorname{rank}\beta_{P,R}+(20-u)/2\\ \hline
+4,5&(0,5,8,13,15,20)\\
+3&(1,5,7,12,14,19).
+\end{array}
+\]
+
+These are weaker than the invalid old formal-space rows but remain sufficient.
+
+### 5.6 The `s=1,2` directional-rank cases
+
+For `s=1`, the actual cubic space is spanned by the ten squarefree cubics and the four cubics `x_1^2 x_j`, `2 <= j <= 5`. Every nonzero direction has derivative rank at least seven: a direction involving some `x_j`, `j >= 2`, exposes seven independent quadratic outputs modulo `x_j L`, while the pure `x_1` direction has rank ten.
+
+For `s=2`, the displayed fourteen-vector basis separates the directional analysis into two exhaustive cases:
+
+- a direction involving some `x_j`, `j >= 3`, gives five distinct pair monomials and two additional independent quadrics modulo `x_j L`; or
+- a direction contained in `span(partial_1, partial_2)` gives three pair monomials on `x_3,x_4,x_5`, three nonzero outputs in disjoint two-dimensional blocks, and one nonzero quadratic in the `x_1,x_2` block.
+
+Thus every nonzero direction again has rank at least seven. After quotienting by `R`, every positive-rank symbol has rank at least six.
+
+### 5.7 The rank-four quotient kernel
+
+For `s=1,2` and `d=4`, let `S=ker P` be one-dimensional and let `v` lie in the symbol kernel. The four complementary derivatives of `v` span a subspace of `R`, hence a space of dimension at most one.
+
+If that span were nonzero, a change of complement basis would leave only one nonzero complementary derivative. The cubic `v` would then depend on at most the one kernel direction and one complement direction. Its nonzero quadratic derivative would be a nonzero member of `E_2` supported on at most two variables, contradicting the rank-four floor for `E_2`.
+
+Therefore every complementary derivative vanishes and
+
+\[
+v\in\operatorname{Sym}^3S.
+\]
+
+The kernel has dimension at most one. Together with full-symbol injectivity at `d=5`, the final row is
+
+\[
+(3,9,9,10,16,17),
+\]
+
+which also dominates `10d/3`.
+
+### 5.8 Local theorem verdict
+
+The repaired proof covers all actual factor spans and arbitrary quotients. The audit found no remaining unsupported orbit restriction, formal/actual identification, genericity assumption, or unproved local table entry.
+
+## 6. Audit of the global argument
+
+Suppose
+
+\[
+\operatorname{perm}_6=\sum_{i=1}^N T_i.
+\]
+
+Let `u_i` be the middle catalectic rank of `T_i`, put `delta_i=20-u_i`, and let
+
+\[
+\Delta=\sum_i\delta_i.
+\]
+
+If the sum of the individual middle images has dimension `400+h`, the symmetric image-span inequality gives
+
+\[
+h\le10N-200-\frac{\Delta}{2}.
+\]
+
+The proof then forms the global quotient derivative symbol. Its rank is exactly `h`: its kernel consists precisely of tuples whose sum lies in `E_3`, using the proved identity `E_2^(1)=E_3`.
+
+The actual factor spans generate all 36 ambient variables. After ordering the terms, define
+
+\[
+W_i=\sum_{j\le i}L_j,
+\qquad
+d_i=\dim(W_i/W_{i-1}),
+\qquad
+\sum_i d_i=36.
+\]
+
+For the accumulated local symbol images `H_i`, projection to
+
+\[
+(W_i/W_{i-1})\otimes Q
+\]
+
+kills `H_{i-1}` and proves the increment inequality
+
+\[
+\dim H_i-\dim H_{i-1}\ge\dim\pi_i(Z_i).
+\]
+
+This is the required dimension argument; local ranks are not simply assumed to add directly.
+
+Applying the local half-defect theorem to each actual quotient gives
+
+\[
+h\ge\sum_i\left(\frac{10}{3}d_i-\frac{\delta_i}{2}\right)
+=120-\frac{\Delta}{2}.
+\]
+
+Comparison cancels the complete individual middle-rank defect:
+
+\[
+120-\frac{\Delta}{2}
+\le10N-200-\frac{\Delta}{2},
+\]
+
+hence
+
+\[
+N\ge32.
+\]
+
+Glynn's identity supplies a 32-term ordinary Chow decomposition, so equality follows. The constants, inequality directions, quotient injections, filtration increments, and defect cancellation are consistent.
+
+## 7. Exact replay and CI evidence
+
+The repaired replay derives the finite theorem-facing data from underlying combinatorial and polynomial objects:
+
+- coordinate four-cycle intersection maxima through six variables;
+- all 45,696 squarefree fixed-point symbol cases;
+- exact rational differentiation of all five dependent-factor normal forms;
+- the contained squarefree subspaces and directional-incidence floors;
+- the failed formal/actual equalities as negative regressions;
+- the low-factor-span monomial floors;
+- every repaired half-defect row; and
+- the final `N=31` gap and `N=32` equality boundary.
+
+The associated GitHub Actions run completed successfully:
+
+```text
+workflow: exact-bound-tests
+run:      32469992061 (#801)
+result:   success
+English-only scan: pass
+unit tests: 983 passed, 14 opt-in tests skipped
+new exact-rank-32 focused tests: 9/9 passed
+```
+
+The skipped tests are explicitly gated expensive or GPU replays. The standard hosted suite and the exact-rank repair tests passed; the separate `full-replay` job was not executed in this run.
+
+## 8. Remaining minor finding
+
+The TeX source contains one spacing-command typo in the `s=2` basis display:
+
+```tex
+x_2^2x_j+2x_1x_2x_j,qquad
+```
+
+It should be
+
+```tex
+x_2^2x_j+2x_1x_2x_j,\qquad
+```
+
+This is a source/PDF presentation defect only. It does not alter a polynomial, basis vector, rank computation, or logical step. It should be corrected and the PDF rebuilt before final publication.
+
+## 9. Scope limitations
+
+This audit is not:
+
+- a proof-assistant formalization;
+- named external human peer review;
+- a literature-priority determination;
+- a border-Chow-rank result; or
+- a proof of `ChowRank(perm_n)=2^(n-1)` for general `n`.
+
+The accepted statement is restricted to ordinary Chow rank of `perm_6` over an algebraically closed characteristic-zero field.
+
+## 10. Final repository disposition
+
+At the frozen repaired head, the internally supported theorem status is
+
+\[
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_6)=32.}
+\]
+
+Recommended minimal closeout:
+
+1. fix the single TeX `\qquad` typo and rebuild the synchronized PDF;
+2. retain the repaired exact script, frozen JSON, and negative regression tests;
+3. treat PR #90 as a superseded historical conditional candidate rather than the current proof; and
+4. keep the exact head and tree in any merge or release receipt.
+
+No additional proof architecture, solver layer, or broad repository re-audit is required for this claim. Any later modification to the local half-defect theorem, the permanent prolongation identity, the symmetric image-span inequality, or the global filtration requires a new exact-head review.
