@@ -1,0 +1,104 @@
+{
+  "candidate_cardinality_checked_before_materialization": {
+    "formal_subsets_per_term": 35,
+    "rank_seven_terms": 42,
+    "rank_six_terms": 7
+  },
+  "claim_boundary": [
+    "Exact integer Walsh ranks prove the true H3 and H4 dimensions of this fixed synchronized packet.",
+    "The modular composite reaches the structural rank-C upper bound over both primes, so the characteristic-zero coupling defect is exactly 35.",
+    "This packet is not a 49-term permanent identity; the result excludes only this synchronized packet from the Sylvester-equality locus.",
+    "No arbitrary-packet, lower-50, or border-rank conclusion is made."
+  ],
+  "conservative_peak_memory_mib": 320,
+  "middle_dimension": 1645,
+  "packet": "B_synchronized_mixed_Glynn_identity_control",
+  "rows": [
+    {
+      "elapsed_seconds": 8.297657029994298,
+      "evaluation_columns": 1645,
+      "exact_characteristic_zero_coupling_defect": 35,
+      "exact_walsh_dictionary_ranks": {
+        "degree_at_most_3": 35,
+        "degree_at_most_4": 41
+      },
+      "factor_tensor_shape": [
+        49,
+        7,
+        49
+      ],
+      "input_map_shape": [
+        1645,
+        1645
+      ],
+      "local_middle_dimension_histogram": {
+        "25": 7,
+        "35": 42
+      },
+      "output_map_shape": [
+        1645,
+        1645
+      ],
+      "prime": 65521,
+      "projected_inclusion": {
+        "condition_holds": false,
+        "coupling_defect": 35,
+        "kernel_b_dimension": 35,
+        "kernel_b_intersection_image_c_dimension": 0,
+        "middle_dimension": 1645,
+        "rank_b": 1610,
+        "rank_c": 1400
+      },
+      "structural_middle_sum_ranks": {
+        "rank_b": 1610,
+        "rank_bc": 1400,
+        "rank_c": 1400
+      }
+    },
+    {
+      "elapsed_seconds": 8.298403048000182,
+      "evaluation_columns": 1645,
+      "exact_characteristic_zero_coupling_defect": 35,
+      "exact_walsh_dictionary_ranks": {
+        "degree_at_most_3": 35,
+        "degree_at_most_4": 41
+      },
+      "factor_tensor_shape": [
+        49,
+        7,
+        49
+      ],
+      "input_map_shape": [
+        1645,
+        1645
+      ],
+      "local_middle_dimension_histogram": {
+        "25": 7,
+        "35": 42
+      },
+      "output_map_shape": [
+        1645,
+        1645
+      ],
+      "prime": 65519,
+      "projected_inclusion": {
+        "condition_holds": false,
+        "coupling_defect": 35,
+        "kernel_b_dimension": 35,
+        "kernel_b_intersection_image_c_dimension": 0,
+        "middle_dimension": 1645,
+        "rank_b": 1610,
+        "rank_c": 1400
+      },
+      "structural_middle_sum_ranks": {
+        "rank_b": 1610,
+        "rank_bc": 1400,
+        "rank_c": 1400
+      }
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260822,
+  "status": "EXACT_SYNCHRONIZED_PACKET_B_COUPLING_DEFECT_35",
+  "term_count": 49
+}

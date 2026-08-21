@@ -3776,3 +3776,23 @@ certificates.  It proves the full projective support closure for overlapping
 ((2,4)/(4,2)) updates in the synchronized mixed-Glynn endpoint model.  This
 does not prove ordinary lower 50, exact rank 64, arbitrary \(\mathrm{GL}_6\),
 arbitrary endpoint-B packets, higher-rank perturbations, or border rank.
+
+## 2026-08-22: the synchronized perm7 packet has coupling defect 35
+
+The new basis-level checker implements the actual rectangular endpoint
+condition `ker(B) subset im(C)` and validates it on nontrivial kernel controls
+and the five-plane non-tensor-split Sylvester-equality example.  It does not
+reuse the earlier degree-six containment matrices as `B` or `C`.
+
+For the synchronized seven-plus-forty-two mixed-Glynn packet, exact Walsh
+evaluation ranks 35 and 41 give
+
+`rank(C)=1400`, `rank(B)=1610`, and `dim K=1645`.
+
+Over both 65,521 and 65,519 the labelled projected composite has rank 1400,
+which reaches the characteristic-zero upper bound.  Thus the true coupling
+defect is 35.  This fixed packet is not on the Sylvester-equality locus.  The
+planned general-GL6 tangent calculation at that base point is therefore
+replaced by a direct study of the packet-B locus satisfying
+`rank(BC)=1225` and `rank(B)+rank(C)=2870` together with the permanent target
+equations.  Ordinary lower 50 and border rank remain open.
