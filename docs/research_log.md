@@ -3623,3 +3623,20 @@ core-boundary factorizations.  This completes the overlap-four portion of the
 nilpotent rank-one shear chart.  It remains a restricted endpoint theorem and
 does not imply ordinary lower 50.  The next bounded families are overlap-five
 \((5,5),(5,6),(6,5)\), followed by overlap-six \((6,6)\).
+
+## 2026-08-21: every higher-overlap perm7 family completed
+
+The three overlap-five families \((5,5),(5,6),(6,5)\) contain 30 candidates
+each, and the overlap-six family \((6,6)\) contains five.  Four-worker
+weighted exact runs completed them in 46.37, 56.28, 67.99, and 35.74 seconds.
+Every one of the 95 rows has status
+`DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS`, and every selected determinant
+is a monomial with no unresolved factor.
+
+Together with the 675 overlap-four rows, the full generic
+overlap-four-through-six inventory is now 770/770 complete: 767 monomial
+minors and three factorizations over allowed recursive chart-boundary forms.
+This closes the finite higher-overlap layer only for rank-one nilpotent shears
+in the synchronized mixed-Glynn endpoint model.  General \(\mathrm{GL}_6\),
+arbitrary endpoint-B packets, non-unipotent or higher-rank perturbations,
+ordinary lower 50, and border rank remain open.

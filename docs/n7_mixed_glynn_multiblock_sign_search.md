@@ -699,10 +699,10 @@ This does not cover overlap four or more, non-unipotent rank-one updates,
 higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), arbitrary endpoint-B
 packets, ordinary lower \(50\), or border rank.
 
-## Higher-overlap progress
+## Higher-overlap closure
 
-The same recursive chart extends to overlap four through six.  All six
-allowed overlap-four families are now completed exactly:
+The same recursive chart extends to overlap four through six.  All ten
+allowed higher-overlap families are now completed exactly:
 
 \[
 (4,4):75/75,\quad (4,5):150/150,\quad
@@ -710,7 +710,15 @@ allowed overlap-four families are now completed exactly:
 (5,5):150/150,\quad (6,4):75/75.
 \]
 
-All 675 cases need one minor.  Of these, 672 determinants are monomials.  Each
+for overlap four, together with
+
+\[
+(5,5):30/30,\quad (5,6):30/30,\quad (6,5):30/30
+\]
+
+for overlap five and \((6,6):5/5\) for overlap six.
+
+All 770 cases need one minor.  Of these, 767 determinants are monomials.  Each
 of the three remaining determinants factors as a coordinate monomial times the
 cube of the leading core-boundary form, so none has a zero on the dense chart.
 The exact elapsed-time sums are 58.59, 131.68, 167.19, 75.46, and
@@ -720,8 +728,9 @@ The \((5,5)\) certificate merges the historical exact 75-of-150 checkpoint
 with three new contiguous 25-case chunks.  The merge validates all ranges and
 row statuses before producing
 `data/n7_mixed_glynn_overlap_four_55_nilpotent_shear_tail_rank.json`.
-Every overlap-five family and the overlap-six family remain uncomputed.  The
-precise resume state is recorded in
+The three overlap-five runs took 46.37, 56.28, and 67.99 seconds; the
+five-case overlap-six run took 35.74 seconds.  All 95 of their determinants
+are monomials.  The precise certificate state is recorded in
 `docs/n7_higher_overlap_resume.md`.
 
 ## Overlap-two supports of sizes two and three

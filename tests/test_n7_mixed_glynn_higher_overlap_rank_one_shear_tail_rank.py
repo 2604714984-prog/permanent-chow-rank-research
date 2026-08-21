@@ -14,6 +14,10 @@ COMPLETE_FAMILIES = (
     (4, 4, 6),
     (4, 5, 5),
     (4, 6, 4),
+    (5, 5, 5),
+    (5, 5, 6),
+    (5, 6, 5),
+    (6, 6, 6),
 )
 
 
@@ -107,6 +111,10 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
             (4, 4, 6): 75,
             (4, 5, 5): 150,
             (4, 6, 4): 75,
+            (5, 5, 5): 30,
+            (5, 5, 6): 30,
+            (5, 6, 5): 30,
+            (6, 6, 6): 5,
         }
         for family, payload in self.payloads.items():
             overlap_size, left_size, right_size = family
@@ -141,6 +149,10 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
             (4, 4, 6): {1: 75},
             (4, 5, 5): {1: 149, 10: 1},
             (4, 6, 4): {1: 74, 10: 1},
+            (5, 5, 5): {1: 30},
+            (5, 5, 6): {1: 30},
+            (5, 6, 5): {1: 30},
+            (6, 6, 6): {1: 5},
         }
         for family, payload in self.payloads.items():
             overlap_size, left_size, right_size = family
