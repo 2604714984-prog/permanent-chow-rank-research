@@ -3360,3 +3360,16 @@ Consequently every packet using the identity and a nontrivial shear
 five positive multiplicity splits.  A rank-one update with multi-coordinate
 support on both sides, higher-rank perturbations, general \(\mathrm{GL}_6\),
 arbitrary endpoint B, border rank, and ordinary lower 50 remain open.
+
+## 2026-08-21: disjoint two-by-two rank-one shears are excluded
+
+For \(I+uv^\mathsf T\) with disjoint two-coordinate supports, the rank-one
+scaling redundancy leaves three parameters.  All
+\(\binom62\binom42\cdot5=450\) ordered-support/multiplicity cases have an exact
+42-column invalid-tail determinant equal to a nonzero parameter monomial.
+The completed coordinate-star theorem covers every proper support face.
+
+Hence every nonzero disjoint-support \((2,2)\) rank-one update has zero local
+target intersection in characteristic zero.  Larger or overlapping support on
+both sides, higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary
+endpoint B, border rank, and ordinary lower 50 remain open.

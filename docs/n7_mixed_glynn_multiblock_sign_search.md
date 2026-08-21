@@ -449,6 +449,33 @@ This does not cover a rank-one update \(I+uv^\mathsf{T}\) when both \(u\) and
 \(v\) have multi-coordinate support, nor a higher-rank perturbation, arbitrary
 \(\mathrm{GL}_6\), or arbitrary endpoint-B packets.
 
+## Disjoint two-by-two rank-one supports
+
+The first layer with multi-coordinate support on both sides takes
+
+\[
+ I+uv^\mathsf T,
+ \qquad |\operatorname{supp}(u)|=|\operatorname{supp}(v)|=2,
+ \qquad \operatorname{supp}(u)\cap\operatorname{supp}(v)=\varnothing.
+\]
+
+The disjointness makes \(v^\mathsf Tu=0\), so this is an invertible unipotent
+rank-one update.  There are
+\(\binom62\binom42=90\) ordered support pairs and five positive multiplicity
+splits.  Quotienting the scaling redundancy
+\((u,v)\sim(\lambda u,\lambda^{-1}v)\) leaves three parameters.  For all 450
+support/split cases, the exact 42-column determinant is a nonzero monomial in
+those parameters.
+
+The dense parameter torus therefore has invalid-tail rank 42.  Every proper
+support face has a coordinate axis on at least one side and is covered by the
+completed coordinate-star theorem.  Thus the same conclusion holds for every
+nonzero disjoint-support \((2,2)\) rank-one update in characteristic zero.
+
+This does not yet cover larger support on both sides, overlapping supports,
+higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary endpoint-B
+packets.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -582,12 +609,21 @@ python scripts/n7_mixed_glynn_four_five_direction_shear_tail_rank.py \
   --json data/n7_mixed_glynn_five_direction_shear_tail_rank.json
 ```
 
+The exact disjoint \((2,2)\) replay is:
+
+```bash
+python scripts/n7_mixed_glynn_disjoint_22_rank_one_shear_tail_rank.py \
+  --max-candidates 450 --workers 20 \
+  --json data/n7_mixed_glynn_disjoint_22_rank_one_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
-coordinate-star rank-one shear two-type packet, or arbitrary endpoint-B
-packets.  It therefore does not yet prove ordinary lower (50) or a border-rank
-statement.  Its useful new content is the exact multiblock compatibility
-classification, which is invisible to the earlier single-block rank test.
+coordinate-star rank-one shear two-type packet and the disjoint-support
+\((2,2)\) rank-one layer, or arbitrary endpoint-B packets.  It therefore does
+not yet prove ordinary lower (50) or a border-rank statement.  Its useful new
+content is the exact multiblock compatibility classification, which is
+invisible to the earlier single-block rank test.
