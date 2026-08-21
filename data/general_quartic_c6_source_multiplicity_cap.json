@@ -1,0 +1,37 @@
+{
+  "conclusion": {
+    "general_second_order_lift": "OPEN",
+    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false,
+    "triple_source_across_distinct_c6_frames": "IMPOSSIBLE",
+    "triple_source_requires_repeated_frame_copy": true
+  },
+  "distinct_sources": 1008,
+  "labeled_c6_frames": 96,
+  "maximum_distinct_frame_multiplicity": 2,
+  "schema": "general_quartic_c6_source_multiplicity_cap/v1",
+  "shape_table": {
+    "P3_DISJOINT_P3": {
+      "distinct_sources": 144,
+      "extension_count": 2,
+      "per_frame": 3
+    },
+    "P4_DISJOINT_P2": {
+      "distinct_sources": 576,
+      "extension_count": 1,
+      "per_frame": 6
+    },
+    "P5": {
+      "distinct_sources": 288,
+      "extension_count": 2,
+      "per_frame": 6
+    }
+  },
+  "source_incidences": 1440,
+  "source_multiplicity_distribution": {
+    "1": 576,
+    "2": 432
+  },
+  "sources_per_frame": 15
+}
