@@ -32,11 +32,13 @@ SUBSET_COUNT = 35
 EXPECTED_MIDDLE_DIMENSION = 7 * 25 + 42 * 35
 
 
-def identity_packet_b_factor_coefficients(
-    prime: int, extra_offset: int = 0
+def common_graph_packet_factor_coefficients(
+    tails: list[tuple[int, ...]] | list[list[int]], prime: int
 ) -> np.ndarray:
-    """Return the 49 labelled Chow terms as a (49,7,49) coefficient tensor."""
+    """Return a common-graph packet B as a (49,7,49) coefficient tensor."""
 
+    if len(tails) != 42 or any(len(tail) != 6 for tail in tails):
+        raise ValueError("a common-graph packet requires forty-two six-vectors")
     terms: list[np.ndarray] = []
     for block in range(N):
         factors = np.zeros((N, V_DIM), dtype=np.int64)
@@ -46,7 +48,7 @@ def identity_packet_b_factor_coefficients(
         factors[N - 1, coordinates[0]] = 1
         terms.append(factors)
 
-    for tail in mixed.tail_dictionary(extra_offset):
+    for tail in tails:
         factors = np.zeros((N, V_DIM), dtype=np.int64)
         for block in range(N):
             factors[block, block * N] = 1
@@ -56,6 +58,16 @@ def identity_packet_b_factor_coefficients(
     if len(terms) != 49:
         raise AssertionError("packet B must have 49 terms")
     return np.asarray(terms, dtype=np.int64) % prime
+
+
+def identity_packet_b_factor_coefficients(
+    prime: int, extra_offset: int = 0
+) -> np.ndarray:
+    """Return the synchronized mixed-Glynn common-graph packet."""
+
+    return common_graph_packet_factor_coefficients(
+        mixed.tail_dictionary(extra_offset), prime
+    )
 
 
 def subset_product_rows(
