@@ -540,6 +540,29 @@ This does not cover larger overlapping supports, non-unipotent rank-one
 updates, higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary
 endpoint-B packets.
 
+## Overlap two with total support-size six
+
+The next coordinate-face layer consists of \((2,4),(3,3),(4,2)\).  Their
+support/split counts are 450, 900, and 450.  After normalizing one core
+coefficient, each family has four parameters: the orthogonal two-coordinate
+core and the extra coefficients on the two disjoint sides.
+
+All 1,800 cases have exact coordinate-monomial minor gcd.  The one-/two-minor
+counts are respectively
+
+\[
+(207,243),\qquad(567,333),\qquad(294,156).
+\]
+
+Thus the dense coefficient torus has invalid-tail rank 42.  Every coefficient
+face reduces to the already certified \((2,3)/(3,2)\), overlapping-two,
+disjoint, or star layers.  Hence all three support-size families have zero
+local target intersection for every nonzero nilpotent update.
+
+This does not yet cover overlap-two support-size sum seven or eight, overlap
+three or more, non-unipotent rank-one updates, higher-rank perturbations,
+arbitrary \(\mathrm{GL}_6\), or arbitrary endpoint-B packets.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -733,14 +756,24 @@ python scripts/n7_mixed_glynn_overlapping_23_nilpotent_shear_tail_rank.py \
   --json data/n7_mixed_glynn_overlapping_23_nilpotent_shear_tail_rank.json
 ```
 
+The exact overlap-two replay for larger support sizes uses the generic script;
+for example:
+
+```bash
+python scripts/n7_mixed_glynn_overlap_two_rank_one_shear_tail_rank.py \
+  --left-size 3 --right-size 3 --max-candidates 900 --workers 20 \
+  --json data/n7_mixed_glynn_overlap_two_33_nilpotent_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
-disjoint-support rank-one shear two-type packet and the overlapping
-two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), or
-arbitrary endpoint-B packets.  It therefore does not yet prove ordinary lower
+disjoint-support rank-one shear two-type packet, the overlapping
+two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
+overlap-two families with support-size sum six.  It also does not cover
+arbitrary endpoint-B packets, and therefore does not yet prove ordinary lower
 (50) or a border-rank statement.  Its useful new content is the exact
 multiblock compatibility classification, which is invisible to the earlier
 single-block rank test.

@@ -3417,3 +3417,17 @@ invalid-tail rank 42 and zero local target intersection.  Larger overlapping
 supports, non-unipotent rank-one updates, higher-rank perturbations, general
 \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary lower 50
 remain open.
+
+## 2026-08-21: overlap-two support-size sum six is excluded
+
+The \((2,4),(3,3),(4,2)\) families contribute 1,800 exact
+support/multiplicity cases.  Every deterministic minor gcd is a coordinate
+monomial.  Their one-/two-minor counts are \((207,243)\), \((567,333)\), and
+\((294,156)\), respectively.  Proper coefficient faces reduce to the preceding
+overlapping-two, disjoint, or star certificates.
+
+Thus every nonzero rank-one nilpotent update in these three support families
+has invalid-tail rank 42.  Overlap-two support-size sums seven and eight,
+overlap three or more, non-unipotent rank-one updates, higher-rank
+perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
+and ordinary lower 50 remain open.
