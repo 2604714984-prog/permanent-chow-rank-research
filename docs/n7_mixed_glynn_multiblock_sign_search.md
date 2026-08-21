@@ -568,6 +568,33 @@ coincident \((2,2)\) invertible nonidentity rank-one family has invalid-tail
 rank 42.  This remains a two-transform synchronized endpoint theorem, not
 ordinary lower 50.
 
+## Overlap-one two-coordinate invertible rank-one updates
+
+For distinct coordinates \(a,b,c\), take
+
+\[
+u=e_a+r e_b,\qquad v=t(s e_a^*+e_c^*),\qquad
+\det(I+uv^{\mathsf T})=1+st.
+\]
+
+There are \(6\cdot5\cdot4\cdot5=600\) ordered-support and positive
+multiplicity-split cases.  Every case is covered by its first selected exact
+\(42\times42\) minor.  The determinant factors only over \(r,s,t,1+st\):
+375 rows use all four factors, 165 omit \(s\), and 60 use only \(t\) and the
+singular determinant factor.  No multivariate-gcd inference is used.
+
+The affine chart has projective support faces not visible by merely setting a
+finite parameter to zero.  A separate 300-case certificate covers both
+singleton-overlap orientations, 150 in each direction, again with one exact
+minor per row.  The remaining faces are disjoint coordinate-star updates,
+the identity control, or the singular divisor outside \(\mathrm{GL}_6\).
+Consequently every nonidentity invertible update in the projective support
+closure of the overlap-one \((2,2)\) pattern has invalid-tail rank 42.
+
+This remains a synchronized two-transform endpoint theorem.  It does not
+cover larger overlapping non-nilpotent supports, higher-rank perturbations,
+arbitrary \(\mathrm{GL}_6\), ordinary lower 50, exact rank 64, or border rank.
+
 ## Overlap two with total support-size six
 
 The next coordinate-face layer consists of \((2,4),(3,3),(4,2)\).  Their
@@ -1012,11 +1039,12 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), the
-coincident \((2,2)\) invertible rank-one family, and every higher-overlap
-dense stratum through overlap six.  All 1,189 older two-minor rows now have
+coincident \((2,2)\) invertible rank-one family, the overlap-one \((2,2)\)
+invertible rank-one support closure, and every higher-overlap dense stratum
+through overlap six.  All 1,189 older two-minor rows now have
 exact Laurent-univariate Bezout certificates, restoring the recursive
 nilpotent rank-one overlap closure.  General
-non-unipotent rank-one updates, higher-rank perturbations, arbitrary
-\(\mathrm{GL}_6\), and arbitrary endpoint-B packets remain open.  Therefore
+larger-support non-unipotent rank-one updates, higher-rank perturbations,
+arbitrary \(\mathrm{GL}_6\), and arbitrary endpoint-B packets remain open.  Therefore
 none of these restricted results proves ordinary lower 50 or a border-rank
 statement.

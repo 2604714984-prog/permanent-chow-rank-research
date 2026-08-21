@@ -74,5 +74,6 @@ load all ten certificates and freeze the 770-row inventory.  The completed
 
 No matching Python process remains.  The unresolved boundary
 still includes arbitrary endpoint-B packets, general \(\mathrm{GL}_6\),
-non-unipotent rank-one updates beyond the completed coincident \((2,2)\)
-family, higher-rank perturbations, ordinary lower 50, and border rank.
+non-unipotent rank-one updates beyond the completed coincident and overlap-one
+\((2,2)\) support closures, higher-rank perturbations, ordinary lower 50, and
+border rank.

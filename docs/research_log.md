@@ -3691,3 +3691,28 @@ closure for the existing nilpotent rank-one overlap certificates, including
 the 770 higher-overlap rows.  It still does not address general
 non-nilpotent rank-one updates, rank-two or higher perturbations, arbitrary
 \(\mathrm{GL}_6\), ordinary lower 50, exact rank 64, or border rank.
+
+## 2026-08-21: overlap-one (2,2) general rank-one updates completed
+
+For distinct \(a,b,c\), the exact-support family
+
+\[
+u=e_a+r e_b,\qquad v=t(s e_a^*+e_c^*)
+\]
+
+has \(6\cdot5\cdot4\cdot5=600\) ordered-support and multiplicity cases.
+Every first selected exact \(42\times42\) minor factors only over
+\(r,s,t,1+st\); there are no unresolved factors and no multivariate-gcd step.
+The 20-worker WSL replay took 59.61 seconds.
+
+The affine normalization misses two projective singleton faces.  A second
+exact run therefore covers both orientations \(1\)-by-\(2\) and
+\(2\)-by-\(1\), 150 cases each.  All 300 again use their first single minor;
+the replay took 29.00 seconds.  Importing the disjoint coordinate-star and
+invertible monomial certificates closes the remaining coefficient faces.
+
+Thus every nonidentity invertible update in the projective support closure of
+the overlap-one \((2,2)\) pattern has invalid-tail rank 42 in the synchronized
+mixed-Glynn two-transform packet.  Larger overlapping non-nilpotent supports,
+higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), ordinary lower 50,
+exact rank 64, and border rank remain open.
