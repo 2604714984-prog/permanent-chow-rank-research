@@ -1,0 +1,35 @@
+{
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "coordinate_initial_higher_order": "OPEN",
+    "coordinate_initial_regular_first_order_six_block": "ZERO",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4_exact": "OPEN_IN_[6,8]",
+    "noncoordinate_initial": "OPEN",
+    "singular_or_puiseux": "OPEN",
+    "unrestricted_chow_rank_improvement": false
+  },
+  "coordinate_multiset_frames_checked": 54264,
+  "envelope_six_frames": 288,
+  "envelope_six_private_histogram": {
+    "0": 288
+  },
+  "envelope_six_row_column_orbits": 2,
+  "field": "characteristic_zero",
+  "global_incidence": {
+    "coordinate_regular_first_order_six_block_witness": "IMPOSSIBLE",
+    "frames_with_envelope_6_and_private_2": 0,
+    "six_component_incidence_cap": 36,
+    "six_component_private_union_cap": 12,
+    "target_incidence_floor": 36
+  },
+  "maximum_first_order_matching_envelope": 6,
+  "maximum_private_matching_capacity": 2,
+  "perfect_matchings": 24,
+  "schema": "general_quartic_coordinate_regular_first_order_zero/v1",
+  "source_dimension_per_component": 15,
+  "theorem_id": "coordinate-regular-first-order-six-block-zero-v1",
+  "two_direct_envelope_sizes": [
+    2
+  ]
+}
