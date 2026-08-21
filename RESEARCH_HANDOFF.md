@@ -1,28 +1,25 @@
 # Research handoff
 
-Canonical operational handoff for the active permanent Chow-rank research stack.
+Canonical handoff for the active permanent Chow-rank research stack.
 
 Last updated: **2026-08-22**
 
-## 1. Active GitHub context
+## GitHub context
 
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
 active branch: research/quartic-six-circuit-compatibility
 active Draft PR: #92
 parent branch: research/quartic-six-term-frontier
-parent PR: #89
 parent exact head: 4804e9a948fa0602c062d167f0474d1346dbcab9
-first-order-eight-term theorem core: 8f0d2f3e746582c581e23f519c776733654e9f907af1b88bd29daea8a65f892b
-current engineering-fix head: 21ae89f5fdd7fb4524c7aa2fde4a9ccc18eaa68e
-current workflow: exact-bound-tests run #851, in progress at this update
-stack tail: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89 -> #92
+positive-singleton repair theorem head: a145811984bf0c7f937fde1b7ba9d3eb88e40aa5
+publication receipt: PENDING
 ```
 
-Keep the stack narrow. Do not introduce a manager, registry, database, broad
+Keep the stack narrow. Do not add a manager, registry, database, generic
 solver framework, or second control plane.
 
-## 2. Current unrestricted boundary
+## Unrestricted boundary
 
 For arbitrary degree-six Chow terms over a characteristic-zero field,
 
@@ -40,207 +37,126 @@ Hence
 \boxed{28\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32}.
 \]
 
-Six and seven arbitrary literal blocks remain open. Eight are nonzero by the
-padded order-four decomposition.
+Six and seven unrestricted literal blocks remain open.
 
-## 3. Inherited PR #89 interfaces
+## Current coordinate results
 
-PR #89 supplies the five-block zero theorem, exact natural-family barriers,
-partition-Laplace essential stratification, the 15-dimensional common-source
-mixed-slice interface, and the unique full-support six-element quotient
-circuit for a hypothetical six-block witness.
+### Two-supported regular two-jets
 
-Key frozen cores:
+Every support-minimal rank-five circuit with six nonzero two-supported leading
+matching projections is excluded at regular second order.
 
 ```text
-five-block zero:
-72a73cc0012e7113f1a483150b61c8e7444310c38542b1d5bca40c9182c15171
-
-partition-Laplace essential stratification:
-1bcbe6b3d3594f649171a21d8837b2a811596858f60dd2b41c52268484525e6c
-
-common-source / quotient circuit:
-d82e88706313fb20bd8cf0e51d7ab7a7fadac00d9805d72d2fd1b2ccd1d6d85c
+core:
+0435988b71e2697ba07a8eed4290b4b58be3792612d2737d4126f72a914ff2a9
 ```
 
-## 4. PR #92 coordinate results
+### Corrected positive-singleton regular two-jets
 
-### 4.1 All-positive regular coordinate two-jets
-
-Two-supported leading circuits are six-cycle, theta, tight handcuff, or loose
-handcuff. Their exact regular two-jet matching-support maxima are `6,5,8,6`.
-Positive-singleton circuits are square-lollipop, double-edge-tail, or
-endpoint-marked `P5`; their exact second-order maxima are `22,22,23`.
-All are below the 24 perfect matchings of `perm_4`.
-
-Frozen cores:
+The exact support families and counts are
 
 ```text
-two-supported:
-0435988b71e2697ba07a8eed4290b4b58be3792612d2737d4126f72a914ff2a9
+family                   row-column orbits   fixed-identity embeddings
+square lollipop                    5                    216
+double-edge tail                  29                    696
+endpoint-marked P5                18                    696
+```
 
-positive-singleton:
+All 130 repeated-factor singleton frames are included. Exact second-order
+matching-support maxima are `22,22,23`, below the 24 matching coordinates of
+`perm_4`.
+
+Hosted run #845 exposed two transcription defects in the superseded packet:
+the square-lollipop pattern was typed as a triangle with an isolated vertex,
+and the double-edge-tail fixed-identity count was typed as 888. Correct
+patterns, exact normal forms, and an independent exhaustive replay reproduce
+the same histograms and maxima. The route theorem is repaired, not withdrawn.
+
+```text
+corrected core:
+cf26c24029832ce564bb462d47a94add93f9e706a9c825e1e57fe2ab7a84b223
+
+superseded core:
 a17aa6de25348a88773f81a05d6d2eaa9212d1d8d213804a365b3015a1f7e99f
 ```
 
-### 4.2 Zero-leading first-order envelope
+### Complete regular coordinate first-order barrier
 
-For any coordinate six-frame support `A`, one regular factor motion can create
-only
-
-\[
-F_1(A)=\{M:|M\cap A|\ge3\},
-\qquad |F_1(A)|\le6.
-\]
-
-The corrected exhaustive scan checks 14,893 distinct supports, with 288
-equality supports in two row-column orbits of size 144. A previous draft
-`6+5z` inference was retracted: positive-leading components can acquire new
-first-order matching coordinates through nonmatching source coefficients.
-
-Corrected frozen core:
-
-```text
-ec39aab2c48fc038f66fcaaaee2a8bb1f2b662d640f065ed0ff4e6a3c2f1aedf
-```
-
-The extremal four-zero exact 24-cover subcase is separately closed; its frozen
-core is
-
-```text
-da8f9cf8d79ef2c6ba40babdb0d632449492d3c638a207ad4007b0b14fdca125
-```
-
-### 4.3 Complete regular coordinate first-order barrier
-
-For an unordered coordinate six-frame multiset `gamma`, let
-
-```text
-E(gamma) = all perfect matchings retaining at least three frame cells
-D(gamma) = perfect matchings already contained in the frame
-K(gamma) = matchings reachable at first order from the internal source kernel
-S(gamma) = D(gamma) union K(gamma).
-```
-
-The exact internal-kernel criterion is: `M in K(gamma)` iff there exist a
-three-edge submatching `P` of `M` contained in the frame and a frame cell `c`
-with multiplicity
-
-\[
-m_c\ge2+\mathbf1_{c\in P}.
-\]
-
-Exhaustion of all
-
-\[
-\binom{21}{6}=54,264
-\]
-
-unordered six-frame multisets, with an independent source-fiber replay, proves
+For every unordered coordinate six-frame multiset `gamma`, exact exhaustion
+of all 54,264 frames proves
 
 \[
 \boxed{|E(\gamma)|+|S(\gamma)|\le6}.
 \]
 
-There are 864 equality frames: 288 with profile `(6,0,0,0)` and 576 with
-profile `(4,0,2,2)`, forming four row-column orbits of sizes
-`144,144,288,288`.
-
-For `q` components whose order-zero sum vanishes, target matchings in
-`union_i S_i` need at least one envelope incidence; all other target matchings
-need at least two because their nonzero order-zero source monomial must cancel
-in another component. Therefore
-
-\[
-\sum_i|E_i|\ge48-\sum_i|S_i|,
-\]
-
-while the local theorem gives
-
-\[
-\sum_i|E_i|\le6q-\sum_i|S_i|.
-\]
-
-Hence
+Global order-zero cancellation then forces
 
 \[
 \boxed{q\ge8}.
 \]
 
-Thus every regular coordinate first-order degeneration with `q<=7` is
-incompatible with a nonzero diagonal-torus transform of `perm_4`.
-
-Frozen theorem core:
+Thus every regular coordinate first-order degeneration with `q<=7` misses a
+nonzero diagonal-torus transform of `perm_4`.
 
 ```text
+core:
 8f0d2f3e746582c581e23f519c776733654e9f907af1b88bd29daea8a65f892b
 ```
 
-This is a strict route theorem, not an unrestricted six- or seven-block zero
-theorem.
+This is a strict coordinate route theorem, not an unrestricted six- or
+seven-block zero theorem.
 
-## 5. Validation / CI
+### Second-order equality-state collapse
 
-The new eight-term first-order packet passes all seven focused tests, including
-complete 54,264-frame enumeration and an independent source-fiber replay.
-Hosted run #845 reached 929 tests and failed only because the older singleton
-primary CLI redundantly launched the expensive independent replay under
-`python -O`; all other singleton tests passed. Commit
-`21ae89f5fdd7fb4524c7aa2fde4a9ccc18eaa68e` separates the primary and
-independent replays without removing either mathematical check. Run #851 is
-the hosted verification of that repair.
-
-Do not describe full hosted CI as green until run #851 completes successfully.
-
-## 6. Exact next research task
-
-The coordinate first-order route is closed for six and seven components. Do
-not continue splitting cases by the number of zero-leading components.
-
-The next narrow interface is a **six-component coordinate degeneration whose
-order-zero and order-one sums vanish and whose first nonzero coefficient is
-order two**.
-
-Current exact diagnostic: allowing up to two factor motions and an enlarged
-internal source-kernel second-order envelope over all 54,264 coordinate
-multisets gives
+A safe enlarged second-order local envelope has maximum 20, attained by 288
+frames in two row-column orbits with profile `(12,0,8,8)`. On every equality
+frame, componentwise order-zero and order-one vanishing force the order-two
+matching projection to vanish.
 
 ```text
-maximum |E2| + |S2_tilde| = 20
-equality frames = 288
-row-column equality orbits = 2
-representatives = (0,0,1,2,7,11) and transpose type
+core:
+938fa79d2410032ec2d12ff917add00d1affaa7365be39241a1931197f0d4eb9
 ```
 
-This diagnostic is deliberately an over-envelope because it does not yet
-impose componentwise/global first-order vanishing. It is not promoted to a
-six-block theorem.
+Global six-component cross-cancellation at second order remains open.
 
-Next prove coefficient-level restrictions on these equality / near-equality
-states, preferably through the shared order-zero quartic fibers and their
-second fundamental-form terms. Support counting alone is insufficient: three
-size-eight two-replacement matching supports can partition all 24 matchings.
+## Validation
 
-Only if an exact second-order survivor remains should the project open a
-third-order expansion.
+The corrected positive-singleton packet passes primary and optimized Python,
+an independent exhaustive replay in normal and optimized Python, frozen JSON
+equality, five focused tests, and `py_compile`. A fresh hosted run must pass
+before the repository-wide suite is described as green.
 
-## 7. Strict claim boundary
+## Exact next task
+
+Study the global six-component second-order compatibility system:
+
+1. shared order-zero quartic source fibers;
+2. global first-order cancellation;
+3. second fundamental-form terms surviving those cancellations; and
+4. equality and near-equality local profiles from the exact 54,264-frame table.
+
+First test whether any useful local-plus-incidence inequality survives full
+first-order integrability. If it is already vacuous for six components, stop
+the coordinate support route and move to a coordinate-invariant
+noncoordinate first-order theorem. Open a third-order expansion only for an
+exact survivor.
+
+## Strict boundary
 
 ```text
 five-block literal sum = ZERO
 six-block literal sum = OPEN
 seven-block literal sum = OPEN
 eight-block literal sum = NONZERO
-mu(6,4) = OPEN in [6,8]
+mu(6,4) = OPEN IN [6,8]
 coordinate regular first-order q<=7 = ZERO
 coordinate regular first-order q=8 existence = OPEN
 all-positive coordinate regular two-jets = CLOSED
-zero-leading first-nonzero-order-two coordinate degenerations = OPEN
+single-component internally vanishing equality-frame two-jet = MATCHING ZERO
+global first-nonzero-order-two coordinate q=6 = OPEN
 noncoordinate / singular / multigrade degenerations = OPEN
 unrestricted Chow-rank improvement = false
 border-rank improvement = false
 literature novelty = NOT ESTABLISHED
 ```
-
-Every new mathematical result must be synchronized to GitHub and reflected in
-this handoff or an immediate receipt update.
