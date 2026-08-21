@@ -3,11 +3,11 @@
   "claim_boundary": [
     "Each displayed point-code profile has H_Z(3)+H_Z(4)=72 and therefore lies on the scalar packet-B middle equality profile.",
     "The rank-(30,42) representative satisfies coupling because B is injective.",
-    "The rank-(31,41) representative is an exact fixed-curve test, not a classification of all point sets with that Hilbert profile.",
+    "The unit-weight rank-(31,41) representative fails coupling, while an explicit nonzero diagonal weight makes coupling hold; scalar term weights cannot be omitted from a general classification.",
     "The complete displayed weight box is classified by the small 42-point coupling matrix; all candidates already fail the separate permanent degree-six and degree-seven target tests.",
     "No classification of arbitrary 42-point sets, lower-50 theorem, or border-rank conclusion follows."
   ],
-  "common_graph_coupling_reduction": "For every common 42-point graph packet, the global coupling defect is 35 times the defect of ker(ev_4^T) subset im(ev_3).",
+  "common_graph_coupling_reduction": "For common graph points with nonzero term-weight diagonal D, the global coupling defect is 35 times the defect of ker(ev_4^T) subset D im(ev_3).  The curve-box histogram uses D=I.",
   "conservative_peak_memory_mib": 320,
   "curve_box_classification": {
     "histogram": {
@@ -2251,9 +2251,11 @@
   ],
   "rows": [
     {
+      "characteristic_zero_interpretation": true,
       "condition_holds": true,
-      "elapsed_seconds": 7.7037428750045365,
-      "exact_characteristic_zero_coupling_defect": 0,
+      "coupling_defect": 0,
+      "elapsed_seconds": 7.673362045999966,
+      "graph_term_weight_mode": "unit",
       "kernel_b_dimension": 0,
       "kernel_b_intersection_image_c_dimension": 0,
       "local_42_point_code_coupling": {
@@ -2285,9 +2287,11 @@
       ]
     },
     {
+      "characteristic_zero_interpretation": true,
       "condition_holds": true,
-      "elapsed_seconds": 7.5467664299940225,
-      "exact_characteristic_zero_coupling_defect": 0,
+      "coupling_defect": 0,
+      "elapsed_seconds": 7.457673785000225,
+      "graph_term_weight_mode": "unit",
       "kernel_b_dimension": 0,
       "kernel_b_intersection_image_c_dimension": 0,
       "local_42_point_code_coupling": {
@@ -2319,9 +2323,11 @@
       ]
     },
     {
+      "characteristic_zero_interpretation": true,
       "condition_holds": false,
-      "elapsed_seconds": 8.523088157991879,
-      "exact_characteristic_zero_coupling_defect": 35,
+      "coupling_defect": 35,
+      "elapsed_seconds": 8.500643110994133,
+      "graph_term_weight_mode": "unit",
       "kernel_b_dimension": 35,
       "kernel_b_intersection_image_c_dimension": 0,
       "local_42_point_code_coupling": {
@@ -2353,9 +2359,11 @@
       ]
     },
     {
+      "characteristic_zero_interpretation": true,
       "condition_holds": false,
-      "elapsed_seconds": 8.708877843993832,
-      "exact_characteristic_zero_coupling_defect": 35,
+      "coupling_defect": 35,
+      "elapsed_seconds": 8.455946141999448,
+      "graph_term_weight_mode": "unit",
       "kernel_b_dimension": 35,
       "kernel_b_intersection_image_c_dimension": 0,
       "local_42_point_code_coupling": {
@@ -2389,5 +2397,79 @@
   ],
   "schema_version": 1,
   "seed": 20260822,
-  "status": "EXACT_TWO_CURVE_EQUALITY_PROFILE_COUPLING_CLASSIFICATION"
+  "status": "EXACT_TWO_CURVE_EQUALITY_PROFILE_COUPLING_CLASSIFICATION",
+  "weighted_rank_31_41_control": [
+    {
+      "characteristic_zero_interpretation": false,
+      "condition_holds": true,
+      "coupling_defect": 0,
+      "elapsed_seconds": 8.449004730005981,
+      "graph_term_weight_mode": "kernel_relation",
+      "kernel_b_dimension": 35,
+      "kernel_b_intersection_image_c_dimension": 35,
+      "local_42_point_code_coupling": {
+        "condition_holds": true,
+        "coupling_defect": 0,
+        "kernel_b_dimension": 1,
+        "kernel_b_intersection_image_c_dimension": 1,
+        "middle_dimension": 42,
+        "rank_b": 41,
+        "rank_bc": 30,
+        "rank_c": 31
+      },
+      "middle_dimension": 1645,
+      "point_code_profile": [
+        31,
+        41
+      ],
+      "prime": 65521,
+      "rank_b": 1610,
+      "rank_bc": 1225,
+      "rank_c": 1260,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "characteristic_zero_interpretation": false,
+      "condition_holds": true,
+      "coupling_defect": 0,
+      "elapsed_seconds": 8.739381630002754,
+      "graph_term_weight_mode": "kernel_relation",
+      "kernel_b_dimension": 35,
+      "kernel_b_intersection_image_c_dimension": 35,
+      "local_42_point_code_coupling": {
+        "condition_holds": true,
+        "coupling_defect": 0,
+        "kernel_b_dimension": 1,
+        "kernel_b_intersection_image_c_dimension": 1,
+        "middle_dimension": 42,
+        "rank_b": 41,
+        "rank_bc": 30,
+        "rank_c": 31
+      },
+      "middle_dimension": 1645,
+      "point_code_profile": [
+        31,
+        41
+      ],
+      "prime": 65519,
+      "rank_b": 1610,
+      "rank_bc": 1225,
+      "rank_c": 1260,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        10
+      ]
+    }
+  ]
 }

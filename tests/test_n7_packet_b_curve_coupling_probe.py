@@ -35,9 +35,17 @@ class PacketBCurveCouplingProbeTests(unittest.TestCase):
             expected["curve_box_classification"]["max_weight"],
         )
         for item in (actual, expected):
-            for row in item["rows"]:
-                row.pop("elapsed_seconds", None)
+            MODULE.strip_timings(item)
         self.assertEqual(actual, expected)
+
+    def test_weighted_rank_31_41_small_code_control(self) -> None:
+        prime = MODULE.coupled.PRIMES[0]
+        weights = MODULE.REPRESENTATIVES[1]
+        tails = MODULE.moment_curve_tails(weights, prime)
+        term_weights = MODULE.rank_31_41_coupling_weights(tails, prime)
+        result = MODULE.local_point_code_coupling(tails, prime, term_weights)
+        self.assertTrue(result["condition_holds"])
+        self.assertEqual(result["coupling_defect"], 0)
 
 
 if __name__ == "__main__":

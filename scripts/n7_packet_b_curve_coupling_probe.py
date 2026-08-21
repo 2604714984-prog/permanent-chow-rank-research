@@ -59,15 +59,39 @@ def point_code_rank(tails: list[tuple[int, ...]], degree: int, prime: int) -> in
 
 
 def local_point_code_coupling(
-    tails: list[tuple[int, ...]], prime: int
+    tails: list[tuple[int, ...]],
+    prime: int,
+    graph_term_weights: list[int] | tuple[int, ...] | None = None,
 ) -> dict[str, int | bool]:
     degree3 = point_code_matrix(tails, 3, prime)
     degree4 = point_code_matrix(tails, 4, prime)
+    if graph_term_weights is not None:
+        weights = np.asarray(graph_term_weights, dtype=np.int64) % prime
+        if weights.shape != (42,) or np.any(weights == 0):
+            raise ValueError("graph term weights must be forty-two nonzero scalars")
+        degree3 = weights[:, None] * degree3 % prime
     return coupled.kernel_image_defect(degree4.T, degree3, prime)
 
 
+def rank_31_41_coupling_weights(
+    tails: list[tuple[int, ...]], prime: int
+) -> list[int]:
+    degree4 = point_code_matrix(tails, 4, prime)
+    kernel = coupled.modular_nullspace_columns(degree4.T, prime)
+    if kernel.shape != (42, 1):
+        raise AssertionError("expected a one-dimensional degree-four relation")
+    weights = kernel[:, 0] % prime
+    if np.any(weights == 0):
+        raise AssertionError("the selected curve relation has zero coordinates")
+    return [int(value) for value in weights]
+
+
 def run_representative(
-    weights: tuple[int, ...], prime: int, seed: int, evaluation_columns: int
+    weights: tuple[int, ...],
+    prime: int,
+    seed: int,
+    evaluation_columns: int,
+    graph_term_weights: list[int] | None = None,
 ) -> dict[str, object]:
     tails = moment_curve_tails(weights, prime)
     h3 = point_code_rank(tails, 3, prime)
@@ -86,7 +110,9 @@ def run_representative(
     input_evaluations = rng.integers(
         0, prime, size=(packet.V_DIM, evaluation_columns), dtype=np.int64
     )
-    factors = packet.common_graph_packet_factor_coefficients(tails, prime)
+    factors = packet.common_graph_packet_factor_coefficients(
+        tails, prime, graph_term_weights
+    )
     started = time.perf_counter()
     output_map, input_map, dimensions = packet.labelled_middle_maps(
         factors, output_evaluations, input_evaluations, prime
@@ -112,13 +138,14 @@ def run_representative(
     )
     if exact_defect != inclusion["coupling_defect"]:
         raise AssertionError("projected and exact defects disagree")
-    local = local_point_code_coupling(tails, prime)
+    local = local_point_code_coupling(tails, prime, graph_term_weights)
     if exact_defect != 35 * int(local["coupling_defect"]):
         raise AssertionError("the 42-point coupling reduction failed")
     if rank_bc != 7 * 25 + 35 * int(local["rank_bc"]):
         raise AssertionError("the 42-point composite-rank reduction failed")
     return {
         "weights": list(weights),
+        "graph_term_weight_mode": "unit" if graph_term_weights is None else "kernel_relation",
         "prime": prime,
         "point_code_profile": [h3, h4],
         "middle_dimension": packet.EXPECTED_MIDDLE_DIMENSION,
@@ -129,7 +156,8 @@ def run_representative(
         "kernel_b_intersection_image_c_dimension": inclusion[
             "kernel_b_intersection_image_c_dimension"
         ],
-        "exact_characteristic_zero_coupling_defect": exact_defect,
+        "coupling_defect": exact_defect,
+        "characteristic_zero_interpretation": graph_term_weights is None,
         "local_42_point_code_coupling": local,
         "condition_holds": exact_defect == 0,
         "elapsed_seconds": time.perf_counter() - started,
@@ -206,10 +234,26 @@ def build_payload(
     for row in rows:
         key = tuple(row["weights"])
         grouped.setdefault(key, set()).add(
-            int(row["exact_characteristic_zero_coupling_defect"])
+            int(row["coupling_defect"])
         )
     if any(len(values) != 1 for values in grouped.values()):
         raise AssertionError("the two primes disagree")
+    weighted_rows = []
+    weighted_profile = REPRESENTATIVES[1]
+    for prime in coupled.PRIMES:
+        tails = moment_curve_tails(weighted_profile, prime)
+        term_weights = rank_31_41_coupling_weights(tails, prime)
+        weighted_rows.append(
+            run_representative(
+                weighted_profile,
+                prime,
+                seed + 101,
+                evaluation_columns,
+                term_weights,
+            )
+        )
+    if any(not row["condition_holds"] for row in weighted_rows):
+        raise AssertionError("weighted rank-(31,41) coupling control failed")
     return {
         "schema_version": 1,
         "status": "EXACT_TWO_CURVE_EQUALITY_PROFILE_COUPLING_CLASSIFICATION",
@@ -219,19 +263,27 @@ def build_payload(
         "candidate_cardinality_checked_before_materialization": 2,
         "conservative_peak_memory_mib": 320,
         "rows": rows,
+        "weighted_rank_31_41_control": weighted_rows,
         "common_graph_coupling_reduction": (
-            "For every common 42-point graph packet, the global coupling "
-            "defect is 35 times the defect of ker(ev_4^T) subset im(ev_3)."
+            "For common graph points with nonzero term-weight diagonal D, the "
+            "global coupling defect is 35 times the defect of "
+            "ker(ev_4^T) subset D im(ev_3).  The curve-box histogram uses D=I."
         ),
         "curve_box_classification": classify_curve_box(max_weight),
         "claim_boundary": [
             "Each displayed point-code profile has H_Z(3)+H_Z(4)=72 and therefore lies on the scalar packet-B middle equality profile.",
             "The rank-(30,42) representative satisfies coupling because B is injective.",
-            "The rank-(31,41) representative is an exact fixed-curve test, not a classification of all point sets with that Hilbert profile.",
+            "The unit-weight rank-(31,41) representative fails coupling, while an explicit nonzero diagonal weight makes coupling hold; scalar term weights cannot be omitted from a general classification.",
             "The complete displayed weight box is classified by the small 42-point coupling matrix; all candidates already fail the separate permanent degree-six and degree-seven target tests.",
             "No classification of arbitrary 42-point sets, lower-50 theorem, or border-rank conclusion follows.",
         ],
     }
+
+
+def strip_timings(payload: dict[str, object]) -> None:
+    for key in ("rows", "weighted_rank_31_41_control"):
+        for row in payload.get(key, []):
+            row.pop("elapsed_seconds", None)
 
 
 def main() -> None:
@@ -250,8 +302,7 @@ def main() -> None:
     if args.verify_json:
         frozen = json.loads(args.verify_json.read_text(encoding="utf-8"))
         for item in (payload, frozen):
-            for row in item["rows"]:
-                row.pop("elapsed_seconds", None)
+            strip_timings(item)
         if payload != frozen:
             raise SystemExit("n7 packet-B curve coupling JSON mismatch")
         print("PASS n7 packet-B curve coupling probe")

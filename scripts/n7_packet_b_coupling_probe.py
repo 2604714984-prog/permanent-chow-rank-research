@@ -33,12 +33,20 @@ EXPECTED_MIDDLE_DIMENSION = 7 * 25 + 42 * 35
 
 
 def common_graph_packet_factor_coefficients(
-    tails: list[tuple[int, ...]] | list[list[int]], prime: int
+    tails: list[tuple[int, ...]] | list[list[int]],
+    prime: int,
+    graph_term_weights: list[int] | tuple[int, ...] | None = None,
 ) -> np.ndarray:
-    """Return a common-graph packet B as a (49,7,49) coefficient tensor."""
+    """Return a weighted common-graph packet as a (49,7,49) tensor."""
 
     if len(tails) != 42 or any(len(tail) != 6 for tail in tails):
         raise ValueError("a common-graph packet requires forty-two six-vectors")
+    if graph_term_weights is None:
+        graph_term_weights = [1] * 42
+    if len(graph_term_weights) != 42:
+        raise ValueError("a common-graph packet requires forty-two term weights")
+    if any(int(weight) % prime == 0 for weight in graph_term_weights):
+        raise ValueError("graph term weights must be nonzero")
     terms: list[np.ndarray] = []
     for block in range(N):
         factors = np.zeros((N, V_DIM), dtype=np.int64)
@@ -48,12 +56,13 @@ def common_graph_packet_factor_coefficients(
         factors[N - 1, coordinates[0]] = 1
         terms.append(factors)
 
-    for tail in tails:
+    for tail, term_weight in zip(tails, graph_term_weights):
         factors = np.zeros((N, V_DIM), dtype=np.int64)
         for block in range(N):
             factors[block, block * N] = 1
             for coordinate, value in enumerate(tail, start=1):
                 factors[block, block * N + coordinate] = value
+        factors[0] = factors[0] * int(term_weight) % prime
         terms.append(factors % prime)
     if len(terms) != 49:
         raise AssertionError("packet B must have 49 terms")

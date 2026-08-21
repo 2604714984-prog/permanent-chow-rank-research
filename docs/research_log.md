@@ -3799,22 +3799,26 @@ equations.  Ordinary lower 50 and border rank remain open.
 
 ## 2026-08-22: packet-B common-graph coupling reduced to a 42-point code
 
-For every common 42-point graph packet, the full middle-map condition reduces
-blockwise to `ker(E_4^T) subset im(E_3)`, where `E_d` is evaluation of affine
-degree at most `d` on the graph tails. The full coupling defect is exactly 35
-times the small-code defect. Full 1,645-dimensional maps on representatives
-of both equality profiles agree with this reduction over primes 65,521 and
-65,519.
+For a common 42-point graph packet with graph-term coefficient diagonal `D`,
+the full middle-map condition reduces blockwise to
+`ker(E_4^T) subset D im(E_3)`, where `E_d` is evaluation of affine degree at
+most `d` on the graph tails. The full coupling defect is exactly 35 times the
+small-code defect. Full 1,645-dimensional maps on representatives of both
+equality profiles agree with this reduction over primes 65,521 and 65,519.
 
 The complete monomial-curve box with six increasing weights at most 24 has
 134,596 streamed tuples and 130 middle-equality candidates. Of these, all 76
 with profile `(30,42)` have defect zero, while all 54 with profile `(31,41)`
-have packet defect 35 and are excluded by coupling. The 76 zero-defect cases
+have packet defect 35 at unit coefficients. This is not a coefficient-free
+exclusion: an explicit nonzero diagonal `D` built from the unique degree-four
+relation makes the `(31,41)` representative attain `rank(BC)=1225` and defect
+zero over both test primes. The 76 unit-weight zero-defect cases
 are still rejected by the previously frozen permanent degree-six and
 degree-seven target tests. This closes only that finite common-graph curve
-box; arbitrary packet-B complements, ordinary lower 50, and border rank remain
-open. The next computation targets target-equation/Hilbert-profile
-incompatibility rather than extending the same weight scan.
+box because the target exclusion is coefficient-independent; arbitrary
+packet-B complements, ordinary lower 50, and border rank remain open. The next
+computation targets target-equation/Hilbert-profile incompatibility rather
+than extending the same weight scan.
 
 ## 2026-08-22: curve target failures upgraded to integer certificates
 
