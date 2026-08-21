@@ -196,6 +196,41 @@ four permutation types has zero target intersection, independently of all
 diagonal signs.  The constant-memory replay took 868.25 seconds with twenty
 WSL workers.
 
+## All packets with at least three permutation types
+
+The preceding three- and four-type exhaustions suggest a uniform character
+statement.  Suppose a protected Walsh character has a valid realization by
+six distinct columns.  Block reordering, common input relabelling, and common
+output normalization reduce that realization to one of two forms:
+
+- the six selected columns are the six nonzero columns, in order;
+- the selected columns are \((0,1,2,3,4,5)\), with the sixth nonzero column
+  omitted.
+
+For each form, an exact bit-vector formula fixes the first permutation to the
+identity, constrains the other five rows to be permutations, requires at least
+three pairwise distinct permutation rows, and explicitly forbids every
+non-injective column realization of the same character.  There are
+
+\[
+7^6-\frac{7!}{(7-6)!}=112609
+\]
+
+such forbidden assignments in each form.  Z3 returns `unsat` for both finite
+formulas (24.90 and 39.14 seconds in the frozen replay).  Therefore any local
+six-block packet with at least three underlying coordinate-permutation types
+has empty protected-character set, independently of all diagonal signs.  This
+single certificate also closes the previously unenumerated five- and six-type
+families; the direct three- and four-type computations remain independent
+audits of its smaller subfamilies.
+
+The character obstruction is sharp at two types.  Among the 3,595 normalized
+two-type multiplicity packets, 75 retain two protected characters; these are
+exactly the packets whose relative permutation is one of the fifteen
+transpositions.  Thus the remaining signed-coordinate layer is reduced to two
+underlying permutation types related by a transposition, with potentially
+several independent sign variants.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -270,14 +305,24 @@ python scripts/n7_mixed_glynn_four_permutation_character_dp.py \
   --json data/n7_mixed_glynn_four_permutation_character_dp.json
 ```
 
+The all-type protected-character certificate is:
+
+```bash
+python scripts/n7_mixed_glynn_protected_character_smt.py \
+  --case both --collision-scope all_explicit \
+  --timeout-seconds 120 --memory-mib 8192 \
+  --json data/n7_mixed_glynn_protected_character_explicit_smt.json
+```
+
 ## Boundary
 
 This is a complete theorem for all diagonal-sign packets in the synchronized
 mixed-Glynn dictionary and for local packets with at most two arbitrary
 signed-coordinate types.  The character certificate additionally removes all
-local packets with exactly three or exactly four permutation types, for
-arbitrary signs.  It does not cover five or six permutation types, general
-\(\mathrm{GL}_6\) graph transformations, or arbitrary endpoint-B packets.  It
-therefore does not yet prove ordinary lower (50) or a border-rank statement.
-Its useful new content is the exact multiblock compatibility classification,
-which is invisible to the earlier single-block rank test.
+local packets with at least three underlying permutation types, for arbitrary
+signs.  It does not yet cover the transposition-related two-permutation layer
+with more than two signed group elements, general \(\mathrm{GL}_6\) graph
+transformations, or arbitrary endpoint-B packets.  It therefore does not yet
+prove ordinary lower (50) or a border-rank statement.  Its useful new content
+is the exact multiblock compatibility classification, which is invisible to
+the earlier single-block rank test.

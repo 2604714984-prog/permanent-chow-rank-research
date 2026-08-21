@@ -3242,3 +3242,20 @@ local target intersection, independently of diagonal signs.  Together with
 the earlier computation this removes exactly three and exactly four
 permutation types, but not five or six types, general \(\mathrm{GL}_6\)
 transforms, border rank, or the ordinary lower-50 problem.
+
+## 2026-08-21: one finite character certificate closes all three-plus types
+
+A second exact computation replaces type-count enumeration by two normalized
+matching shapes.  In each shape, a bit-vector formula requires at least three
+distinct permutation rows and forbids all 112,609 non-injective column
+assignments from realizing the chosen valid Walsh character.  Both formulas
+are unsatisfiable.  Hence every packet with at least three underlying
+permutation types has zero local target intersection, independently of signs;
+this includes the previously open five- and six-type families.
+
+The obstruction is sharp: a complete 3,595-case two-type check leaves 75
+character-level exceptions, precisely the relative transpositions at all five
+positive multiplicities.  The next finite target is therefore not another
+large type-count scan, but the transposition-related two-permutation family
+with multiple independent sign variants.  General \(\mathrm{GL}_6\), border
+rank, and ordinary lower 50 remain open.
