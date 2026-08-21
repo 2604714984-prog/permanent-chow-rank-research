@@ -3388,3 +3388,18 @@ vectors \(u,v\) in characteristic zero.  Overlapping supports with cancellation
 \(v^\mathsf Tu=0\), non-unipotent rank-one updates, higher-rank perturbations,
 general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary
 lower 50 remain open.
+
+## 2026-08-21: overlapping two-coordinate nilpotent shears are excluded
+
+For the 75 coordinate-pair/multiplicity cases with
+\(u=(1,r)\), \(v=t(-r,1)\), 19 selected invalid-tail minors are parameter
+monomials.  The other 56 have genuine factors; one example is
+\(c t^8(2r^2t^2-1)^2\).  A second deterministic minor in every such case makes
+the exact polynomial gcd a pure scale monomial \(c t^e\).
+
+Hence the complete invalid-tail rank is 42 for every \(t\ne0\) and every
+\(r\), even where the first selected minor vanishes.  This closes all nonzero
+rank-one nilpotent updates supported in a two-coordinate plane.  Larger
+overlapping supports, non-unipotent rank-one updates, higher-rank
+perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
+and ordinary lower 50 remain open.

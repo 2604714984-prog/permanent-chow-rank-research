@@ -511,6 +511,35 @@ The result does not cover overlapping supports satisfying
 higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary endpoint-B
 packets.
 
+## The overlapping two-coordinate nilpotent layer
+
+The smallest cancellation layer has coincident two-coordinate supports.  On
+each coordinate pair it can be parametrized as
+
+\[
+u=(1,r),\qquad v=t(-r,1),\qquad v^\mathsf Tu=0.
+\]
+
+There are 15 coordinate pairs and five positive multiplicity splits.  A single
+minor works uniformly in 19 of the 75 cases.  In the remaining 56 cases its
+determinant has genuine non-coordinate factors; for example one factorization
+is
+
+\[
+c t^8(2r^2t^2-1)^2.
+\]
+
+This is a column-selection degeneracy, not a rank exception.  Selecting a
+second 42-column minor at a deterministic parameter point and taking the exact
+gcd in \(\mathbb Z[r,t]\) leaves \(c t^e\) in every one of those 56 cases.
+Thus the minors have no common zero for \(t\ne0\), for any value of \(r\).
+Every nonzero rank-one nilpotent update supported in a two-coordinate plane
+therefore has invalid-tail rank 42 and zero local target intersection.
+
+This does not cover larger overlapping supports, non-unipotent rank-one
+updates, higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), or arbitrary
+endpoint-B packets.
+
 ## Exact finite computation
 
 The six-dimensional graph transformations are diagonal sign matrices.  A
@@ -661,12 +690,21 @@ python scripts/n7_mixed_glynn_disjoint_rank_one_shear_tail_rank.py \
   --json data/n7_mixed_glynn_disjoint_33_rank_one_shear_tail_rank.json
 ```
 
+The exact overlapping \((2,2)\) replay is:
+
+```bash
+python scripts/n7_mixed_glynn_overlapping_22_nilpotent_shear_tail_rank.py \
+  --max-candidates 75 --workers 20 \
+  --json data/n7_mixed_glynn_overlapping_22_nilpotent_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
 the synchronized mixed-Glynn dictionary.  It does not cover general
 \(\mathrm{GL}_6\) graph transformation, despite additionally closing every
-disjoint-support rank-one shear two-type packet, or arbitrary endpoint-B
-packets.  It therefore does not yet prove ordinary lower (50) or a border-rank
-statement.  Its useful new content is the exact multiblock compatibility
-classification, which is invisible to the earlier single-block rank test.
+disjoint-support rank-one shear two-type packet and the overlapping
+two-coordinate nilpotent layer, or arbitrary endpoint-B packets.  It therefore
+does not yet prove ordinary lower (50) or a border-rank statement.  Its useful
+new content is the exact multiblock compatibility classification, which is
+invisible to the earlier single-block rank test.
