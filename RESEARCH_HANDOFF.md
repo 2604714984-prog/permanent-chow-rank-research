@@ -1,30 +1,28 @@
 # Research handoff
 
-This is the canonical operational handoff for the active permanent Chow-rank
-research stack. Every synchronized result must update this file.
+Canonical operational handoff for the active permanent Chow-rank research stack.
 
-Last updated: **2026-08-21**
+Last updated: **2026-08-22**
 
 ## 1. Active GitHub context
 
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
 active branch: research/quartic-six-circuit-compatibility
-active PR: #92
-PR URL: https://github.com/2604714984-prog/permanent-chow-rank-research/pull/92
+active Draft PR: #92
 parent branch: research/quartic-six-term-frontier
 parent PR: #89
 parent exact head: 4804e9a948fa0602c062d167f0474d1346dbcab9
-two-supported theorem head: b6facbc6ad5cfb5ce10589ac4097a30b1184feab
-positive-singleton theorem head: THIS HANDOFF UPDATE
-publication receipt head: PENDING
+first-order-eight-term theorem core: 8f0d2f3e746582c581e23f519c776733654e9f907af1b88bd29daea8a65f892b
+current engineering-fix head: 21ae89f5fdd7fb4524c7aa2fde4a9ccc18eaa68e
+current workflow: exact-bound-tests run #851, in progress at this update
 stack tail: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89 -> #92
 ```
 
-Keep the stack narrow. Do not introduce a manager, registry, dispatcher,
-database, broad solver framework, or second control plane.
+Keep the stack narrow. Do not introduce a manager, registry, database, broad
+solver framework, or second control plane.
 
-## 2. Current proved numerical boundary
+## 2. Current unrestricted boundary
 
 For arbitrary degree-six Chow terms over a characteristic-zero field,
 
@@ -34,30 +32,25 @@ For arbitrary degree-six Chow terms over a characteristic-zero field,
 \sum_{i=1}^{5}\mathcal D_4(T_i)=0.
 \]
 
-Therefore
+Hence
 
 \[
-\boxed{6\le\mu(6,4)\le8}.
+\boxed{6\le\mu(6,4)\le8},
+\qquad
+\boxed{28\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32}.
 \]
 
-Six and seven arbitrary blocks remain open. Eight blocks are nonzero by the
-padded order-four decomposition. The unrestricted ordinary boundary remains
+Six and seven arbitrary literal blocks remain open. Eight are nonzero by the
+padded order-four decomposition.
 
-\[
-28\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
-\]
+## 3. Inherited PR #89 interfaces
 
-## 3. Inherited PR #89 frontier
+PR #89 supplies the five-block zero theorem, exact natural-family barriers,
+partition-Laplace essential stratification, the 15-dimensional common-source
+mixed-slice interface, and the unique full-support six-element quotient
+circuit for a hypothetical six-block witness.
 
-PR #89 synchronizes:
-
-- the five-block zero theorem;
-- exact coordinate, row-separated, column-separated, and sign-family barriers;
-- partition-Laplace essential stratification;
-- the 15-dimensional common-source mixed-slice interface; and
-- the universal full-support six-element quotient circuit.
-
-The main frozen cores are:
+Key frozen cores:
 
 ```text
 five-block zero:
@@ -66,171 +59,188 @@ five-block zero:
 partition-Laplace essential stratification:
 1bcbe6b3d3594f649171a21d8837b2a811596858f60dd2b41c52268484525e6c
 
-common-source and quotient circuit:
+common-source / quotient circuit:
 d82e88706313fb20bd8cf0e51d7ab7a7fadac00d9805d72d2fd1b2ccd1d6d85c
 ```
 
-## 4. Results synchronized in PR #92
+## 4. PR #92 coordinate results
 
-### 4.1 Two-supported coordinate regular two-jets
+### 4.1 All-positive regular coordinate two-jets
 
-Assume all six nonzero coordinate leading matching projections are supported
-on exactly two perfect matchings and form a support-minimal rank-five circuit.
-The support multigraph is a six-cycle, theta, tight handcuff, or loose
-handcuff. Retaining every continuous gain stratum, the exact matching-support
-maxima of the regular first- and second-order common-source lift are
+Two-supported leading circuits are six-cycle, theta, tight handcuff, or loose
+handcuff. Their exact regular two-jet matching-support maxima are `6,5,8,6`.
+Positive-singleton circuits are square-lollipop, double-edge-tail, or
+endpoint-marked `P5`; their exact second-order maxima are `22,22,23`.
+All are below the 24 perfect matchings of `perm_4`.
 
-```text
-six-cycle          6
-theta               5
-loose handcuff      6
-tight handcuff      8
-perm_4             24
-```
-
-Frozen theorem core:
+Frozen cores:
 
 ```text
+two-supported:
 0435988b71e2697ba07a8eed4290b4b58be3792612d2737d4126f72a914ff2a9
-```
 
-### 4.2 Positive-singleton support classification
-
-A support-minimal rank-five coordinate six-circuit with nonzero leading
-matching projection on every component has at most two singleton components.
-The positive-singleton support families are exactly
-
-```text
-one singleton:  square lollipop or double-edge tail
-two singletons: endpoint-marked P5
-three or more:  impossible
-```
-
-Their row-column orbit counts are `5`, `29`, and `18`.
-
-For each singleton, the two unused degree-six factors are an unordered
-multiset from all sixteen coordinate cells. Repetition and reuse of a leading
-matching cell are included. Of the 136 multisets, six create a second perfect
-matching and the remaining 130 are true singleton frames.
-
-### 4.3 Universal positive-singleton second-order envelope
-
-For a coordinate frame `E` and leading matching support `S`, every matching
-monomial in a regular second-order common-source lift lies in
-
-\[
-\mathcal E(E,S)=
-\{M:|M\cap E|\ge3\}
-\cup
-\{M:\exists M_0\in S,\ |M\cap M_0|\ge2\}.
-\]
-
-This is a termwise envelope, so first-order cancellation can only reduce its
-support. Exhaustion of all embeddings and all repeated-factor singleton
-frames gives
-
-```text
-square lollipop       650 decorated configurations, maximum 22
-double-edge tail     3770 decorated configurations, maximum 22
-endpoint-marked P5 304200 decorated configurations, maximum 23
-perm_4 matching support                                    24
-```
-
-Thus every regular positive-singleton coordinate two-jet is incompatible with
-a nonzero diagonal-torus transform of `perm_4`.
-
-Frozen theorem core:
-
-```text
+positive-singleton:
 a17aa6de25348a88773f81a05d6d2eaa9212d1d8d213804a365b3015a1f7e99f
 ```
 
-### 4.4 Combined coordinate boundary
+### 4.2 Zero-leading first-order envelope
 
-Combining Sections 4.1 and 4.3 closes every regular coordinate six-circuit
-two-jet for which all six leading matching projections are nonzero. The next
-coordinate boundary is the zero-leading matching-projection case. This does
-not change `6<=mu(6,4)<=8`.
+For any coordinate six-frame support `A`, one regular factor motion can create
+only
 
-## 5. Canonical proof files
+\[
+F_1(A)=\{M:|M\cap A|\ge3\},
+\qquad |F_1(A)|\le6.
+\]
 
-```text
-docs/general_quartic_five_to_six_term_frontier.md
-docs/general_quartic_two_supported_coordinate_two_jet_barrier.md
-docs/general_quartic_two_supported_coordinate_two_jet_barrier_adversarial_review.md
-docs/general_quartic_singleton_coordinate_circuit_reduction.md
-docs/general_quartic_singleton_coordinate_circuit_reduction_adversarial_review.md
-docs/general_quartic_singleton_coordinate_circuit_reduction_ledger_delta.md
-scripts/general_quartic_singleton_coordinate_circuit_reduction.py
-scripts/general_quartic_singleton_coordinate_circuit_reduction_independent.py
-data/general_quartic_singleton_coordinate_circuit_reduction.json
-tests/test_general_quartic_singleton_coordinate_circuit_reduction.py
-RESEARCH_HANDOFF.md
-RESEARCH_LEDGER.md
-```
+The corrected exhaustive scan checks 14,893 distinct supports, with 288
+equality supports in two row-column orbits of size 144. A previous draft
+`6+5z` inference was retracted: positive-leading components can acquire new
+first-order matching coordinates through nonmatching source coefficients.
 
-## 6. Validation and hosted CI
-
-The current packet reports:
+Corrected frozen core:
 
 ```text
-primary normal Python                         PASS
-primary python -O                             PASS
-independent replay                            PASS
-independent replay under python -O            PASS
-frozen JSON == regenerated payload            PASS
-focused singleton tests                       5/5 PASS
-py_compile                                    PASS
-diff check                                    PASS
-English-only proof-tree scan                  PASS
+ec39aab2c48fc038f66fcaaaee2a8bb1f2b662d640f065ed0ff4e6a3c2f1aedf
 ```
 
-Parent run #762 completed 912 tests with one inherited stale
-exact-product-shadow expectation. The first PR #92 commit repairs that
-expectation from `3563...` to the checked-in payload hash `18eb...` without
-changing the underlying theorem payload.
+The extremal four-zero exact 24-cover subcase is separately closed; its frozen
+core is
 
-Hosted CI for the current positive-singleton theorem head is pending. Do not
-describe the repository-wide suite as green before the current run finishes.
+```text
+da8f9cf8d79ef2c6ba40babdb0d632449492d3c638a207ad4007b0b14fdca125
+```
 
-## 7. Exact next task
+### 4.3 Complete regular coordinate first-order barrier
 
-Classify coordinate components whose leading matching projection is zero.
-Retain the same six-factor common-source data and determine whether such a
-component can enter the unique six-element quotient circuit at the first
-nonzero valuation grade.
+For an unordered coordinate six-frame multiset `gamma`, let
 
-The target is one of:
+```text
+E(gamma) = all perfect matchings retaining at least three frame cells
+D(gamma) = perfect matchings already contained in the frame
+K(gamma) = matchings reachable at first order from the internal source kernel
+S(gamma) = D(gamma) union K(gamma).
+```
 
-1. a forced proper subcircuit, contradicting five-block zero;
-2. a reduction to a separated or already excluded coordinate family;
-3. a finite exact survivor that justifies a third-order calculation; or
-4. an exact six-block witness.
+The exact internal-kernel criterion is: `M in K(gamma)` iff there exist a
+three-edge submatching `P` of `M` contained in the frame and a frame cell `c`
+with multiplicity
 
-Do not open a broad nonlinear solver or general third-order framework before
-this zero-leading boundary is resolved.
+\[
+m_c\ge2+\mathbf1_{c\in P}.
+\]
 
-## 8. Strict claim boundary
+Exhaustion of all
+
+\[
+\binom{21}{6}=54,264
+\]
+
+unordered six-frame multisets, with an independent source-fiber replay, proves
+
+\[
+\boxed{|E(\gamma)|+|S(\gamma)|\le6}.
+\]
+
+There are 864 equality frames: 288 with profile `(6,0,0,0)` and 576 with
+profile `(4,0,2,2)`, forming four row-column orbits of sizes
+`144,144,288,288`.
+
+For `q` components whose order-zero sum vanishes, target matchings in
+`union_i S_i` need at least one envelope incidence; all other target matchings
+need at least two because their nonzero order-zero source monomial must cancel
+in another component. Therefore
+
+\[
+\sum_i|E_i|\ge48-\sum_i|S_i|,
+\]
+
+while the local theorem gives
+
+\[
+\sum_i|E_i|\le6q-\sum_i|S_i|.
+\]
+
+Hence
+
+\[
+\boxed{q\ge8}.
+\]
+
+Thus every regular coordinate first-order degeneration with `q<=7` is
+incompatible with a nonzero diagonal-torus transform of `perm_4`.
+
+Frozen theorem core:
+
+```text
+8f0d2f3e746582c581e23f519c776733654e9f907af1b88bd29daea8a65f892b
+```
+
+This is a strict route theorem, not an unrestricted six- or seven-block zero
+theorem.
+
+## 5. Validation / CI
+
+The new eight-term first-order packet passes all seven focused tests, including
+complete 54,264-frame enumeration and an independent source-fiber replay.
+Hosted run #845 reached 929 tests and failed only because the older singleton
+primary CLI redundantly launched the expensive independent replay under
+`python -O`; all other singleton tests passed. Commit
+`21ae89f5fdd7fb4524c7aa2fde4a9ccc18eaa68e` separates the primary and
+independent replays without removing either mathematical check. Run #851 is
+the hosted verification of that repair.
+
+Do not describe full hosted CI as green until run #851 completes successfully.
+
+## 6. Exact next research task
+
+The coordinate first-order route is closed for six and seven components. Do
+not continue splitting cases by the number of zero-leading components.
+
+The next narrow interface is a **six-component coordinate degeneration whose
+order-zero and order-one sums vanish and whose first nonzero coefficient is
+order two**.
+
+Current exact diagnostic: allowing up to two factor motions and an enlarged
+internal source-kernel second-order envelope over all 54,264 coordinate
+multisets gives
+
+```text
+maximum |E2| + |S2_tilde| = 20
+equality frames = 288
+row-column equality orbits = 2
+representatives = (0,0,1,2,7,11) and transpose type
+```
+
+This diagnostic is deliberately an over-envelope because it does not yet
+impose componentwise/global first-order vanishing. It is not promoted to a
+six-block theorem.
+
+Next prove coefficient-level restrictions on these equality / near-equality
+states, preferably through the shared order-zero quartic fibers and their
+second fundamental-form terms. Support counting alone is insufficient: three
+size-eight two-replacement matching supports can partition all 24 matchings.
+
+Only if an exact second-order survivor remains should the project open a
+third-order expansion.
+
+## 7. Strict claim boundary
 
 ```text
 five-block literal sum = ZERO
 six-block literal sum = OPEN
 seven-block literal sum = OPEN
 eight-block literal sum = NONZERO
-mu(6,4) exact value = OPEN in [6,8]
-two-supported coordinate regular two-jets = CLOSED
-positive-singleton coordinate regular two-jets = CLOSED
+mu(6,4) = OPEN in [6,8]
+coordinate regular first-order q<=7 = ZERO
+coordinate regular first-order q=8 existence = OPEN
 all-positive coordinate regular two-jets = CLOSED
-zero-leading matching-projection components = OPEN
-noncoordinate and higher-order lifts = OPEN
+zero-leading first-nonzero-order-two coordinate degenerations = OPEN
+noncoordinate / singular / multigrade degenerations = OPEN
 unrestricted Chow-rank improvement = false
 border-rank improvement = false
 literature novelty = NOT ESTABLISHED
 ```
 
-## 9. Mandatory synchronization rule
-
-Every subsequent mathematical result must be committed to GitHub and this file
-must be updated in the theorem commit or in an immediately following receipt
-commit. Record the exact branch, PR, theorem head, receipt head, workflow run,
-and any inherited compatibility failure.
+Every new mathematical result must be synchronized to GitHub and reflected in
+this handoff or an immediate receipt update.
