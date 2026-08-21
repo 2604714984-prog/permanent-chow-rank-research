@@ -3474,3 +3474,19 @@ coefficient faces reduce recursively, while total support size cannot exceed
 eight.  Overlap three or more, non-unipotent rank-one updates, higher-rank
 perturbations, general \(\mathrm{GL}_6\), arbitrary endpoint B, border rank,
 and ordinary lower 50 remain open.
+
+## 2026-08-21: the coincident overlap-three (3,3) family is excluded
+
+For each three-coordinate support, the chart
+\(u=(1,a,b)\), \(v=t(-a-bq,1,q)\) satisfies \(v^\mathsf Tu=0\) identically.
+Its dense full-support locus is \(abtq(a+bq)\ne0\).  Across all 20 supports
+and five positive multiplicity splits, degree-weighted selection gives one
+exact monomial 42-column minor in each of the 100 cases.  Fifty gcds use only
+\(a,q,t\), and fifty use only \(q,t\); there are no unresolved factors.
+
+The five chart-boundary divisors either reduce a support to the completed
+overlap-two family or give the identity.  Hence the coincident \((3,3)\),
+overlap-three nilpotent rank-one family has zero local target intersection.
+Larger overlap-three supports, overlap four or more, non-unipotent rank-one
+updates, higher-rank perturbations, general \(\mathrm{GL}_6\), arbitrary
+endpoint B, border rank, and ordinary lower 50 remain open.

@@ -614,6 +614,32 @@ This does not cover overlap three or more, non-unipotent rank-one updates,
 higher-rank perturbations, arbitrary \(\mathrm{GL}_6\), arbitrary endpoint-B
 packets, ordinary lower \(50\), or border rank.
 
+## Coincident three-coordinate nilpotent supports
+
+The first overlap-three chart has coincident supports of size three.  On an
+ordered support write
+
+\[
+u=(1,a,b),\qquad v=t(-a-bq,1,q).
+\]
+
+Then \(v^\mathsf Tu=0\) identically, and the dense full-support locus is
+\(abtq(a+bq)\ne0\).  The 20 coordinate supports and five positive
+identity/shear multiplicity splits give 100 cases.  Degree-weighted streamed
+selection produces a single exact monomial 42-column minor in every case.  In
+50 cases its parameter support is \(aqt\), and in the other 50 it is \(qt\),
+with varying positive exponents.
+
+Consequently no minor vanishes on the dense chart.  The divisors
+\(a=0\), \(b=0\), \(q=0\), and \(a+bq=0\) lower one of the two supports to a
+previously certified overlap-two family; \(t=0\) is the identity face.  This
+closes the coincident \((3,3)\), overlap-three rank-one nilpotent family.
+
+This does not cover larger support shapes with overlap three, overlap four or
+more, non-unipotent rank-one updates, higher-rank perturbations, arbitrary
+\(\mathrm{GL}_6\), arbitrary endpoint-B packets, ordinary lower \(50\), or
+border rank.
+
 ## Overlap-two supports of sizes two and three
 
 Add one coordinate to exactly one side of the preceding orthogonal core.  This
@@ -830,6 +856,14 @@ The six-parameter sum-eight runs were checkpointed with `--start-index` and
 `--limit`, then merged only after exact contiguous-range validation with
 `scripts/n7_merge_candidate_chunks.py`.
 
+The first overlap-three replay is:
+
+```bash
+python scripts/n7_mixed_glynn_overlap_three_33_nilpotent_shear_tail_rank.py \
+  --max-candidates 100 --workers 4 --weighted-selection \
+  --json data/n7_mixed_glynn_overlap_three_33_nilpotent_shear_tail_rank.json
+```
+
 ## Boundary
 
 This is a complete theorem for every invertible monomial-transform packet in
@@ -838,8 +872,9 @@ the synchronized mixed-Glynn dictionary.  It does not cover general
 disjoint-support rank-one shear two-type packet, the overlapping
 two-coordinate nilpotent layers through support sizes \((2,3)/(3,2)\), and the
 complete overlap-two nilpotent rank-one family.  It does not cover overlap
-three or more, non-unipotent rank-one updates, higher-rank perturbations, or
-arbitrary endpoint-B packets, and therefore does not yet prove ordinary lower
-(50) or a border-rank statement.  Its useful new content is the exact
-multiblock compatibility classification, which is invisible to the earlier
-single-block rank test.
+three beyond the coincident \((3,3)\) support family, overlap four or more,
+non-unipotent rank-one updates, higher-rank perturbations, or arbitrary
+endpoint-B packets, and therefore does not yet prove ordinary lower (50) or a
+border-rank statement.  Its useful new content is the exact multiblock
+compatibility classification, which is invisible to the earlier single-block
+rank test.
