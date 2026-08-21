@@ -13,5 +13,5 @@ def test_payload():
     assert p['equality_supports']==288
     assert p['equality_row_column_orbits']==2
     assert p['orbit_sizes']==[144,144]
-    assert p['first_order_surviving_zero_counts']==[4,6]
     assert p['explicit_four_frame_cover_union']==24
+    assert p['zero_leading_count_reduction']=='NOT_PROVED_BY_SUPPORT_ONLY'
