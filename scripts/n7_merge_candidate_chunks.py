@@ -8,6 +8,15 @@ import json
 from pathlib import Path
 
 
+def runtime_metadata(payload: dict) -> tuple[float, set[int]]:
+    """Read runtime fields from either a raw chunk or a merged checkpoint."""
+    if "elapsed_seconds" in payload:
+        return float(payload["elapsed_seconds"]), {int(payload["workers"])}
+    return float(payload["elapsed_seconds_sum"]), {
+        int(worker) for worker in payload["workers_used"]
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -72,8 +81,9 @@ def main() -> None:
             rows.append(row)
             status = str(row["status"])
             status_counts[status] = status_counts.get(status, 0) + 1
-        elapsed += float(payload["elapsed_seconds"])
-        workers_used.add(int(payload["workers"]))
+        segment_elapsed, segment_workers = runtime_metadata(payload)
+        elapsed += segment_elapsed
+        workers_used.update(segment_workers)
 
     if status_counts != {args.row_status: args.expected_count}:
         raise AssertionError(f"incomplete exact rows: {status_counts}")

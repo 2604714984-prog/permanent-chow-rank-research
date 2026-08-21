@@ -24,6 +24,16 @@ def load_script():
     return module
 
 
+def load_merge_script():
+    path = ROOT / "scripts" / "n7_merge_candidate_chunks.py"
+    spec = importlib.util.spec_from_file_location("n7_merge_candidates", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def data_path(overlap_size, left_size, right_size):
     word = {4: "four", 5: "five", 6: "six"}[overlap_size]
     return (
@@ -37,6 +47,7 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.module = load_script()
+        cls.merge_module = load_merge_script()
         cls.payloads = {
             family: json.loads(data_path(*family).read_text(encoding="utf-8"))
             for family in COMPLETE_FAMILIES
@@ -162,6 +173,18 @@ class HigherOverlapRankOneShearTailRankTests(unittest.TestCase):
         self.assertEqual(
             self.checkpoint["status_counts"],
             {self.module.ROW_STATUS: 75},
+        )
+
+    def test_merge_runtime_metadata_accepts_chunks_and_checkpoints(self):
+        self.assertEqual(
+            self.merge_module.runtime_metadata(
+                {"elapsed_seconds": 2.5, "workers": 4}
+            ),
+            (2.5, {4}),
+        )
+        self.assertEqual(
+            self.merge_module.runtime_metadata(self.checkpoint),
+            (self.checkpoint["elapsed_seconds_sum"], {4}),
         )
 
 
