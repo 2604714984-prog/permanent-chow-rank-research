@@ -42,6 +42,11 @@ does not classify arbitrary graph complements and is not a Chow-rank proof.
 The uniform maximal increments also mean that increasing the same weight box
 is not a useful next experiment; a different mixed-block geometry is needed.
 
+The later integer exponent-collision certificate in
+`n7_packet_b_curve_target_certificate.md` upgrades all 130 degree-six failures
+from finite-field projection diagnostics to exact characteristic-zero
+exclusions. The finite-box and packet-family boundaries are unchanged.
+
 Replay in the WSL checkout with all 20 guest CPUs:
 
 ```bash

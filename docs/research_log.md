@@ -3815,3 +3815,21 @@ degree-seven target tests. This closes only that finite common-graph curve
 box; arbitrary packet-B complements, ordinary lower 50, and border rank remain
 open. The next computation targets target-equation/Hilbert-profile
 incompatibility rather than extending the same weight scan.
+
+## 2026-08-22: curve target failures upgraded to integer certificates
+
+The 42-point graph degree-six span is considered in the labelled tensor
+product of the six retained row spaces. Choose an ordered-word coordinate for
+each of the 924 degree-six compositions in seven variables. On a monomial
+curve its coefficient depends only on the integer weighted exponent. For every one of
+the 130 middle-equality weight tuples, each of the seven squarefree permanent
+target coordinates has a non-squarefree coordinate with the same weighted
+exponent. Subtracting the paired coordinates annihilates the graph span and
+gives the identity matrix on the seven targets.
+
+Thus all seven targets per omitted row are independent modulo the graph span.
+The seven rank-six terms occupy different row multidegrees, and the seven
+omitted-row blocks are independent, so the exact packet degree-six increment
+is 49 in every case. This is an integer, characteristic-zero certificate and
+supersedes reliance on the earlier random finite-field evaluation for these
+130 exclusions. It remains restricted to the displayed monomial-curve box.
