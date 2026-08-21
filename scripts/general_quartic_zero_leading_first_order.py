@@ -25,8 +25,7 @@ def canonical(A):
     return min(outs)
 
 def payload():
-    hist=Counter(); eq=[]
-    total=0
+    hist=Counter(); eq=[]; total=0
     for s in range(7):
       for t in combinations(CELLS,s):
         A=frozenset(t); total+=1
@@ -41,19 +40,20 @@ def payload():
     orders={0:(1,2,3),1:(0,3,2),2:(3,0,1),3:(2,1,0)}
     frames=[]
     for c,(p,s,q) in orders.items():
-      A=frozenset((p,s,4+s,4+q,8+c,12+c));frames.append(A)
+      frames.append(frozenset((p,s,4+s,4+q,8+c,12+c)))
     Es=[env(A) for A in frames]
     assert [len(e) for e in Es]==[6]*4
-    assert len(set().union(*Es))==24 and sum(len(e) for e in Es)==24
+    assert len(set().union(*Es))==24 and sum(map(len,Es))==24
     return {
-      'supports_checked':total,'maximum_first_order_matching_envelope':6,
-      'equality_supports':len(eq),'equality_row_column_orbits':len(orbits),
+      'supports_checked':total,
+      'maximum_first_order_matching_envelope':6,
+      'equality_supports':len(eq),
+      'equality_row_column_orbits':len(orbits),
       'orbit_sizes':sorted(orbits.values()),
       'equality_degree_sequences':[[2,2,1,1],[2,2,1,1]],
-      'z_support_bounds':{str(z):(None if z==5 else 6+5*z) for z in range(7)},
-      'first_order_surviving_zero_counts':[4,6],
       'explicit_four_frame_cover_sizes':[len(e) for e in Es],
       'explicit_four_frame_cover_union':len(set().union(*Es)),
+      'zero_leading_count_reduction':'NOT_PROVED_BY_SUPPORT_ONLY',
     }
 
 def main():
