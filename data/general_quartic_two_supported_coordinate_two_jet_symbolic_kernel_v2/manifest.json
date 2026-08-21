@@ -1,0 +1,37 @@
+{
+  "combined_bytes": 26848,
+  "combined_sha256": "723d556d1e5bd2a905f00cd69a294f1dafdff0ae2566df44666515ba25d6f9aa",
+  "parts": [
+    {
+      "bytes": 4475,
+      "path": "part-000.bin",
+      "sha256": "d10718a70b7ec0f361cc4e7fa54da90fabe2fc2df13a2d58f22d21ecba3f8ea5"
+    },
+    {
+      "bytes": 4475,
+      "path": "part-001.bin",
+      "sha256": "92937b409013b08c0a9ef458db91268ad95105f300739ddd01777701e3eff1cd"
+    },
+    {
+      "bytes": 4475,
+      "path": "part-002.bin",
+      "sha256": "3428f88a6c67c9b8bec70e1f1f632d0d811f377f65d44caee7ac416654047667"
+    },
+    {
+      "bytes": 4475,
+      "path": "part-003.bin",
+      "sha256": "832e94411c5402152b3d17bd773e79ad823002a4b54149e34b32d9e4010dbd5e"
+    },
+    {
+      "bytes": 4475,
+      "path": "part-004.bin",
+      "sha256": "485ecde18b4881a5267b899c598c6ce250ae0319471fcf7533f3e37c7fd3b9f0"
+    },
+    {
+      "bytes": 4473,
+      "path": "part-005.bin",
+      "sha256": "1325f8c551a9c550902861148882b615cfe81f6df25fc408996ece1e27027305"
+    }
+  ],
+  "schema": "general_quartic_two_supported_coordinate_two_jet_symbolic_kernel_shards/v1"
+}

@@ -1,196 +1,137 @@
 # Research handoff
 
-This is the canonical operational handoff for the active permanent Chow-rank
-research stack. Every synchronized result must update this file.
+Canonical operational handoff for the active permanent Chow-rank research
+stack. Update this file with every synchronized mathematical result.
 
-Last updated: **2026-08-20**
+Last updated: **2026-08-21**
 
-## 1. Active GitHub context
+## GitHub context
 
 ```text
 repository: 2604714984-prog/permanent-chow-rank-research
-active branch: research/quartic-six-term-frontier
-active PR: #89
-PR URL: https://github.com/2604714984-prog/permanent-chow-rank-research/pull/89
-parent branch: research/quartic-natural-span-barriers
-parent PR: #88
-parent exact head: 729669c4ab2fd27c1bbf13d6ea519363a1e643f5
-publication theorem head: 38e4af25897e29df605333152c7fb6c1e47af87b
-publication receipt head: 07733fcb3b481857bd64ae722b7b209c38b65518
-current handoff pointer head: THIS POINTER UPDATE; exact SHA is the branch head after this commit
-stack ancestry: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89
+active branch: research/quartic-six-circuit-compatibility
+parent branch: research/quartic-six-term-frontier
+parent PR: #89
+parent exact head: 4804e9a948fa0602c062d167f0474d1346dbcab9
+active PR: pending creation after theorem commit
 ```
 
-Keep the stack narrow. Do not introduce a manager, registry, dispatcher,
-database, broad solver framework, or second control plane.
+Keep this branch narrow. Do not add a manager, registry, database, general
+solver framework, or second control plane.
 
-## 2. Current proved boundary
+## Current numerical boundary
 
 For arbitrary degree-six Chow terms over a characteristic-zero field,
 
 \[
-\boxed{
 \mathcal D_4(\operatorname{perm}_6)
-\cap
-\sum_{i=1}^{5}\mathcal D_4(T_i)=0.
-}
+\cap\sum_{i=1}^{5}\mathcal D_4(T_i)=0.
 \]
 
-Therefore
+Consequently
 
 \[
-\boxed{6\le\mu(6,4)\le8.}
+\boxed{6\leq\mu(6,4)\leq8},
+\qquad
+\boxed{28\leq\operatorname{ChowRank}(\operatorname{perm}_6)\leq32}.
 \]
 
-Six and seven arbitrary blocks remain open. Eight blocks are nonzero by the
+Six and seven arbitrary quartic blocks remain open. Eight are nonzero by the
 padded order-four decomposition.
 
-## 3. Results synchronized in PR #89
+## Current branch result
 
-### 3.1 Five-block zero theorem
+Assume the six leading matching projections in one `4 x 4` coordinate block
+are nonzero, each is supported on exactly two perfect matchings, and the six
+projective lines form a support-minimal rank-five circuit.
 
-The pair-trigger branch propagates the sharp cubic equality state to all
-component pairs and contradicts the twelve-versus-nine second-shadow bound.
-The fully coupled branch forces a twelve-dimensional square-zero covector
-space, contradicting the order-four star cap four.
-
-Theorem core:
+The support multigraph is one of
 
 ```text
-72a73cc0012e7113f1a483150b61c8e7444310c38542b1d5bca40c9182c15171
+simple six-cycle     row-column orbits 13
+theta K_(2,3)        row-column orbits  1
+tight handcuff       row-column orbits  5
+loose handcuff       row-column orbits 18
 ```
 
-### 3.2 Exact natural-family barriers
+All continuous circuit-gain strata are retained. Let `L` be the regular
+common-source first-order map, `K=ker L`, and `B(K,K)` its polarized quadratic
+matching contribution. Exact support maxima are
 
 ```text
-coordinate degree-six threshold:            12
-one-factor-per-column quartic threshold:      8
-one-factor-per-row quartic threshold:         8
-normalized sign threshold at (6,4):           8
+six-cycle             6
+theta                  5
+loose handcuff         6
+tight handcuff         8
+perm_4                24
 ```
 
-Theorem cores:
+Hence no regular first- or second-order lift in this stratum has matching
+projection equal to a nonzero diagonal-torus transform of `perm_4`.
+
+Frozen theorem core:
 
 ```text
-coordinate:
-4b85646c9b1c96c18b5010206ce7897edba0b330e762f554b7314709ae53b1f9
-
-column-separated:
-45a855429fe780db052731a7201713640a0adbe27f656294195399c49fb78623
-
-sign:
-af5fbd6fa060649a1a58220f258077d46797013491d89e5623ce2bd7492e0316
+0435988b71e2697ba07a8eed4290b4b58be3792612d2737d4126f72a914ff2a9
 ```
 
-### 3.3 Partition-Laplace essential stratification
+This is a strict route barrier, not a six-block zero theorem.
 
-For coefficient support `S`,
-
-\[
-\dim\operatorname{Ess}\left(\sum_{\mathbf C\in S}a_{\mathbf C}G_{\mathbf C}\right)
-=\sum_a\lambda_a\left|\bigcup_{\mathbf C\in S}C_a\right|.
-\]
-
-The natural `(2,2)` six-generator space has minimum essential dimension eight
-and zero intersection with every single degree-six Chow derivative block.
-
-Theorem core:
+## Evidence
 
 ```text
-1bcbe6b3d3594f649171a21d8837b2a811596858f60dd2b41c52268484525e6c
+docs/general_quartic_two_supported_coordinate_two_jet_barrier.md
+docs/general_quartic_two_supported_coordinate_two_jet_barrier_adversarial_review.md
+docs/general_quartic_two_supported_coordinate_two_jet_barrier_ledger_delta.md
+scripts/general_quartic_two_supported_coordinate_two_jet_barrier.py
+scripts/general_quartic_two_supported_coordinate_two_jet_barrier_independent.py
+data/general_quartic_two_supported_coordinate_two_jet_barrier.json.xz
+data/general_quartic_two_supported_coordinate_two_jet_symbolic_kernel_v2/manifest.json
+data/general_quartic_two_supported_coordinate_two_jet_symbolic_kernel_v2/part-000.bin ... part-005.bin
+tests/test_general_quartic_two_supported_coordinate_two_jet_barrier.py
 ```
 
-### 3.4 Common-source slices and six-element circuit
-
-All fixed four-column slices of one component are images of the same source
-vector in the 15-dimensional squarefree factor-label space. An isolated slice
-is insufficient: one block can already have a fixed slice equal to `perm_4`,
-with 232 repeated-column defects elsewhere.
-
-Every hypothetical six-block witness yields six nonzero quotient vectors with
-one unique full-support relation; every proper subcollection is independent.
-
-Theorem core:
+Validation completed locally:
 
 ```text
-d82e88706313fb20bd8cf0e51d7ab7a7fadac00d9805d72d2fd1b2ccd1d6d85c
+certificate shard and digest checks           PASS
+independent modular reconstruction            PASS
+normal and python -O entry points             PASS
+canonical frozen theorem core                 PASS
+focused tests                                 PASS
+py_compile                                    PASS
 ```
 
-## 4. Canonical proof files
+The branch also carries the one-line inherited CI correction replacing the
+stale exact-product-shadow expectation `3563...` with the checked-in payload
+hash `18eb...`. It does not change that theorem's payload.
 
-```text
-docs/general_quartic_five_to_six_term_frontier.md
-docs/general_quartic_five_to_six_term_frontier_adversarial_review.md
-docs/general_quartic_five_to_six_term_frontier_ledger_delta.md
-RESEARCH_HANDOFF.md
-```
+## Next task
 
-## 5. Validation and hosted CI
+Close the remaining coordinate leading strata before any third-order or broad
+nonlinear search:
 
-The retained local packets report exact primary and independent replays,
-normal and `python -O` equality, frozen JSON comparison, focused unit tests,
-`py_compile`, and SHA-256 manifests.
+1. support-minimal rank-five circuits with one singleton matching component;
+2. those with two singleton components;
+3. components with zero leading matching projection.
 
-The theorem head triggered:
+For each singleton retain the two unused coordinate factors in its degree-six
+frame. Seek a complete coordinate two-jet exclusion, an exact survivor, or a
+reduction to an already excluded separated family.
 
-```text
-workflow: exact-bound-tests
-run number: 760
-run id: 32346595999
-status at publication receipt: in_progress
-conclusion: pending
-URL: https://github.com/2604714984-prog/permanent-chow-rank-research/actions/runs/32346595999
-```
-
-Do not describe the repository-wide suite as green before the run finishes.
-
-## 6. Exact next task
-
-Retain the same source vector for each component and impose the unique
-six-element quotient circuit simultaneously on the repeated-column layers
-
-```text
-(2,1,1), (2,2), (3,1), and (4).
-```
-
-The target is one of:
-
-1. a forced proper subcircuit, contradicting five-block zero;
-2. a common kernel forcing a component into an excluded separated family; or
-3. an exact six-block witness.
-
-Do not replace this with a broad numerical optimizer.
-
-## 7. Strict claim boundary
+## Claim boundary
 
 ```text
 five-block literal sum = ZERO
 six-block literal sum = OPEN
 seven-block literal sum = OPEN
 eight-block literal sum = NONZERO
-mu(6,4) exact value = OPEN in [6,8]
+mu(6,4) = OPEN in [6,8]
+two-supported coordinate regular two-jets = CLOSED
+singleton coordinate components = OPEN
+zero matching-projection components = OPEN
+higher-order and noncoordinate lifts = OPEN
 unrestricted Chow-rank improvement = false
 border-rank improvement = false
 literature novelty = NOT ESTABLISHED
 ```
-
-## 8. Mandatory synchronization rule
-
-Every subsequent mathematical result must be committed to GitHub and this file
-must be updated in the theorem commit or in an immediately following receipt
-commit. Record the exact branch, PR, theorem head, receipt head, workflow run,
-and any inherited compatibility failure.
-
-## 9. Handoff log
-
-### 2026-08-20 -- PR #89 consolidated five-to-six-term frontier
-
-- synchronized the five-block zero theorem;
-- synchronized exact coordinate, separated-frame, and sign-family barriers;
-- synchronized the partition-Laplace essential stratification theorem;
-- synchronized the common-source mixed-slice interface;
-- recorded the universal full-support six-element quotient circuit;
-- retained `6<=mu(6,4)<=8` and selected repeated-column circuit compatibility
-  as the next task;
-- created Draft PR #89 and triggered Actions run #760;
-- recorded publication receipt commit `07733fcb3b481857bd64ae722b7b209c38b65518`.

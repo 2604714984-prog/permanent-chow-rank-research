@@ -58,7 +58,7 @@ class ExactProductShadowTransitionTests(unittest.TestCase):
         payload = self.module.build_payload()
         self.assertEqual(
             payload["core_sha256"],
-            "3563dd0205177cd0471210287dc8b2377e1547e2410a419b611b2560b123f06a",
+            "18eb66f1b9460d2d793c69131cc4ebc0f1087c86b18f14e5638e71e6d629f567",
         )
 
 
