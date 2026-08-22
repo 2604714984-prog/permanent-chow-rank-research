@@ -320,3 +320,23 @@ R7-FULL-BLOCK-BRANCH-CLOSED
 The exact remaining direct-basis branch has at least one restriction block of
 rank `1,...,6`.  No statement in the full-block theorem is applied to that
 partial-block locus.
+
+The exchange theorem in
+`docs/n7_lower51_rank7_partial_block_reduction.md` sharpens this frontier.
+Every block rank is in `{0,1,6,7}`; ranks `2,...,5` each force exchange cost
+43.  Pair exchange forces all rank-one maps to factor through one common
+source quotient, forces every rank-one/rank-six pair to have combined rank
+seven, and permits two rank-six maps only with combined rank six or seven.
+Thus a partial plane without a rank-seven pivot contains either a transverse
+`1+6` pair or two rank-six blocks with distinct kernels.
+
+Decisive markers:
+
+```text
+R7-BLOCK-RANKS
+PAIR-EXCHANGE-BUDGET
+R7-PARTIAL-BLOCK-KERNEL-TYPES
+```
+
+The residual multiplication theorem for these two-block injective geometries
+is still open; the direct-basis lane is therefore not yet closed.

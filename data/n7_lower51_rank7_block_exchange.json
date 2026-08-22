@@ -1,0 +1,189 @@
+{
+  "budget": 35,
+  "claim": "Every rank-seven nonbasis restriction block has rank 0,1,6,or 7. The table gives every pair-rank/combined-rank state surviving both basis-completion orders under budget 35.",
+  "claim_boundary": "This is a necessary projection-rank classification. It does not construct compatible factor planes or close the partial-block branch.",
+  "pair_exchange_rows": [
+    {
+      "block_ranks": [
+        0,
+        0
+      ],
+      "combined_rank": 0,
+      "completion_costs": [
+        0,
+        0
+      ]
+    },
+    {
+      "block_ranks": [
+        0,
+        1
+      ],
+      "combined_rank": 1,
+      "completion_costs": [
+        29,
+        29
+      ]
+    },
+    {
+      "block_ranks": [
+        0,
+        6
+      ],
+      "combined_rank": 6,
+      "completion_costs": [
+        29,
+        29
+      ]
+    },
+    {
+      "block_ranks": [
+        0,
+        7
+      ],
+      "combined_rank": 7,
+      "completion_costs": [
+        0,
+        0
+      ]
+    },
+    {
+      "block_ranks": [
+        1,
+        1
+      ],
+      "combined_rank": 1,
+      "completion_costs": [
+        29,
+        29
+      ]
+    },
+    {
+      "block_ranks": [
+        1,
+        6
+      ],
+      "combined_rank": 7,
+      "completion_costs": [
+        29,
+        29
+      ]
+    },
+    {
+      "block_ranks": [
+        1,
+        7
+      ],
+      "combined_rank": 7,
+      "completion_costs": [
+        29,
+        0
+      ]
+    },
+    {
+      "block_ranks": [
+        6,
+        6
+      ],
+      "combined_rank": 6,
+      "completion_costs": [
+        29,
+        29
+      ]
+    },
+    {
+      "block_ranks": [
+        6,
+        6
+      ],
+      "combined_rank": 7,
+      "completion_costs": [
+        29,
+        29
+      ]
+    },
+    {
+      "block_ranks": [
+        6,
+        7
+      ],
+      "combined_rank": 7,
+      "completion_costs": [
+        29,
+        0
+      ]
+    },
+    {
+      "block_ranks": [
+        7,
+        7
+      ],
+      "combined_rank": 7,
+      "completion_costs": [
+        0,
+        0
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "single_exchange_rows": [
+    {
+      "allowed": true,
+      "block_rank": 0,
+      "complement_rank": 7,
+      "exchange_cost": 0
+    },
+    {
+      "allowed": true,
+      "block_rank": 1,
+      "complement_rank": 6,
+      "exchange_cost": 29
+    },
+    {
+      "allowed": false,
+      "block_rank": 2,
+      "complement_rank": 5,
+      "exchange_cost": 43
+    },
+    {
+      "allowed": false,
+      "block_rank": 3,
+      "complement_rank": 4,
+      "exchange_cost": 43
+    },
+    {
+      "allowed": false,
+      "block_rank": 4,
+      "complement_rank": 3,
+      "exchange_cost": 43
+    },
+    {
+      "allowed": false,
+      "block_rank": 5,
+      "complement_rank": 2,
+      "exchange_cost": 43
+    },
+    {
+      "allowed": true,
+      "block_rank": 6,
+      "complement_rank": 1,
+      "exchange_cost": 29
+    },
+    {
+      "allowed": true,
+      "block_rank": 7,
+      "complement_rank": 0,
+      "exchange_cost": 0
+    }
+  ],
+  "surplus_by_increment_0_through_7": [
+    0,
+    22,
+    29,
+    26,
+    17,
+    14,
+    7,
+    0
+  ]
+}
