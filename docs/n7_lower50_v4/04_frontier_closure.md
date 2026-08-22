@@ -17,6 +17,9 @@ below 64.
 
 ## F2 — `(34,38,39)`, `q5=3`, `q6=2`
 
+`F2-CLOSED.` The complete relation-net theorem gives an ordinary Waring
+replacement of cost at most 61 for every coefficient representative.
+
 - **F2-01:** freeze the 12 signatures and unique strict-growth tail.
 - **F2-02:** apply the net theorem with the two-dimensional `R_6` gauge.
 - **F2-03:** apply the `(8,4)` Schur-product test jointly with target.
@@ -47,6 +50,9 @@ is now also closed by the gauge theorem.
 
 ## F5 — `(35,37,39)`, `q5=3`, `q6=1 or 2`
 
+`F5-CLOSED.` The same representative-wise net theorem covers both displayed
+`R6` gauge dimensions and excludes every target-compatible signature.
+
 - **F5-01:** split the 24 signatures by tail and `H6`.
 - **F5-02:** compare the one- and two-dimensional `R_6` gauges in the net theorem.
 - **F5-03:** apply the `(7,5)` Schur-product test jointly with target.
@@ -62,3 +68,8 @@ covering 36 formal O-sequences.
 After any two cases are decided, extract a statement in terms of
 `(q3,q4,q5,q6)`. It counts as substantive only if it removes at least two
 complete triples or at least twenty formal sequences.
+
+Second extracted theorem: the same common-graph model with `q5=3` is
+impossible for every displayed `q6`. This closes F2 and F5 in addition to F1
+and F3. Only the `q5=4` frontier F4 remains in the target-integrability
+sequence.

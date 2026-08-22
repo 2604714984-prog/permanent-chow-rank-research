@@ -162,10 +162,9 @@ proved finite list.
 Executed in `docs/n7_f3_h642_sparse_ratio_closure.md` for the gauge-free
 F3 layer. Every at-most-two-ratio configuration is impossible by a
 blockwise binary-septic replacement contradiction. This closes the
-two-dimensional non-Grassmannian pencil branch there. Within the
-two-dimensional bivector-span branch, only a Grassmannian flag line with at
-least three nonzero ratios remains; lower-dimensional bivector spans are a
-separate unresolved branch.
+two-dimensional non-Grassmannian pencil branch there. The subsequent
+complete pencil theorem closes the Grassmannian flag line and the
+lower-dimensional bivector spans as well.
 
 When the `q5=2` relation-coordinate map takes at most two nonzero projective
 values, derive the induced partition of fifth-power relations and evaluation
@@ -191,6 +190,12 @@ the support cardinality. The desired contradiction is with
 
 ## TI-11 — the `q5=3` net theorem
 
+Decision: complete. `docs/n7_q5_three_net_replacement.md` classifies the
+plane section of the Grassmannian into contained alpha/beta planes, conics,
+line-plus-point sections, and zero-dimensional sections of length at most
+four. Every type has a zero-column-safe Waring replacement of cost at most
+61.
+
 For `F2` and `F5`, analyze the plane `P(B)`:
 
 - planes contained in `Gr(2,7)`;
@@ -204,6 +209,10 @@ Use the 42 indexed relation columns. Return a finite type list or a stronger
 invariant that avoids full plane classification.
 
 ## TI-12 — `q5=3` replacement/target theorem
+
+Decision: complete for F2 and F5. The proof applies to every actual
+coefficient representative, so an `R6` gauge cannot create a survivor. Thus
+the entire common-graph `q5=3` target-integrability class is empty.
 
 For every surviving net type, derive a replacement bound or direct permanent
 target contradiction. Reuse the same proof for `F2` and `F5` where only the

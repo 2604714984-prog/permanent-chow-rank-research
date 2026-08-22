@@ -109,7 +109,9 @@ torus blocks, Schur criterion, and Packet-A `2/5/6` operator are frozen.
 `F1` and `F3` are decided.
 
 ### M3 — `q5=3`
-`F2` and `F5` are decided.
+`F2-CLOSED` and `F5-CLOSED`. The complete net-section theorem and its
+zero-column-safe replacement bounds are frozen in
+`docs/n7_q5_three_net_replacement.md`.
 
 ### M4 — common graph
 `F4` and all remaining signatures are decided; B1 status is frozen.

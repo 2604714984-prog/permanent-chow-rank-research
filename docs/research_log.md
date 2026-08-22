@@ -4043,3 +4043,17 @@ F3 layer are impossible. Together with the gauge-free result, both F1 and F3
 are closed and the entire common-graph `q5=2` class is decided. The `q5=3`
 and `q5=4` frontiers, arbitrary Packet B, Packet A, lower 50, and border rank
 remain open.
+
+## 2026-08-22: complete common-graph `q5=3` class closed
+
+For any coefficient representative, the relation bivectors span a space of
+dimension at most three. The plane-section classification for the
+three-dimensional case is exhaustive: contained alpha/beta planes, conics,
+a Grassmannian line with at most one isolated point, or at most four isolated
+points. Relative Waring replacements charge every zero-bivector column and
+give total costs at most 61 in all branches. The argument applies separately
+to every representative, while an `R6` gauge adds the zero vector field.
+Therefore F2 and F5 are closed for all displayed `q6` values. Together with
+F1 and F3, four of the five common-graph frontiers are now closed; the
+`q5=4` frontier F4, arbitrary Packet B, Packet A, lower 50, and border rank
+remain open.
