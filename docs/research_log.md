@@ -3869,3 +3869,11 @@ raises rank by seven per missing-row block. Their characteristic-zero target
 failure remains certified by the separate integer exponent-collision
 certificate. The arbitrary-point six-triple system remains open, and lower 50
 is not yet proved.
+
+The corrected predecessor checkpoint P0-02 through P0-06 is frozen at commit
+`286206eca1b56bf4a235089e8884a09d3afc6795`. GitHub Actions run
+`32557657792` (`exact-bound-tests`, pull request 31) passed on that exact
+commit in 29 minutes 3 seconds, including the English-only scan, the full
+configured unit-test suite, and the optimized independent fixed-six arithmetic
+replay. This freezes the three rank pairs and six triples as the starting point
+for the remaining B1 work; it does not close B1 or prove ordinary lower 50.
