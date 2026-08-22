@@ -1,0 +1,265 @@
+{
+  "candidate_cardinality_checked_before_materialization": {
+    "compressed_rows": 328,
+    "exact_tangent_controls": 12,
+    "factor_incidence_representatives": 3,
+    "full_sym7_11_dimension_skipped": 19448,
+    "full_sym7_49_dimension_skipped": 202927725,
+    "tangent_columns": 154,
+    "w_direction_representatives": 4
+  },
+  "claim_boundary": [
+    "For factors 0 and 1, the entire rank-one fifth-term polynomial lies in the exact Chow tangent span of the first transposition slice; all U-degrees are imposed simultaneously at first order.",
+    "For untouched factor 3, the augmented tangent rank rises from 138 to 139, giving an exact first-order polynomial obstruction.",
+    "One factor-0 all-four representative has a four-monomial second-order residual which still lies in the tangent span, so polynomial obstruction alone does not close that branch at second order.",
+    "No tangent-solvable row also satisfies the previously frozen operator repair score; the coupled minimal chart is empty.",
+    "Rank jumps under a broader finite noncanonical deformation and higher-order integration beyond the displayed representative remain open.",
+    "No full Packet-B, lower-50, or border-rank conclusion is made."
+  ],
+  "conservative_peak_memory_mib": 32,
+  "decision": "NO_SURVIVOR_IN_MINIMAL_NONCANONICAL_TANGENT_PLUS_OPERATOR_CHART",
+  "next_exact_gate": "Integrate the factor-0 all-four branch through the next nonzero order while imposing a determinantal rank-drop equation, rather than treating polynomial tangent membership and operator repair independently.",
+  "rank_certificate_source": "data/n7_b2_gap_aligned_rank_one_chart.json",
+  "schema_version": 1,
+  "second_order_representative": {
+    "first_order_sparse_solution": [
+      {
+        "coefficient": "-3/4",
+        "factor": 0,
+        "term": 0,
+        "variable": 0
+      },
+      {
+        "coefficient": "1/2",
+        "factor": 0,
+        "term": 0,
+        "variable": 1
+      },
+      {
+        "coefficient": "-1/2",
+        "factor": 0,
+        "term": 0,
+        "variable": 9
+      },
+      {
+        "coefficient": "-1/2",
+        "factor": 0,
+        "term": 0,
+        "variable": 10
+      },
+      {
+        "coefficient": "2",
+        "factor": 1,
+        "term": 0,
+        "variable": 1
+      },
+      {
+        "coefficient": "-3/4",
+        "factor": 0,
+        "term": 1,
+        "variable": 0
+      },
+      {
+        "coefficient": "-1/2",
+        "factor": 0,
+        "term": 1,
+        "variable": 9
+      },
+      {
+        "coefficient": "-1/2",
+        "factor": 0,
+        "term": 1,
+        "variable": 10
+      }
+    ],
+    "representative": "factor_0_all_four_w",
+    "second_order_augmented_rank": 138,
+    "second_order_obstruction_vanishes": true,
+    "second_order_residual_support": 4,
+    "second_order_tangent_rank": 138
+  },
+  "status": "NONCANONICAL_U1_TANGENT_COUPLED_OBSTRUCTION",
+  "tangent_and_operator_survivors": [],
+  "tangent_memberships": [
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 0,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 0,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "w_direction_name": "reciprocal_pair_01"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 0,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "w_direction_name": "reciprocal_pair_23"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 0,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 1,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 1,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "w_direction_name": "reciprocal_pair_01"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 1,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "w_direction_name": "reciprocal_pair_23"
+    },
+    {
+      "augmented_rank": 138,
+      "compressed_monomial_rows": 328,
+      "factor_index": 1,
+      "full_degree_seven_tangent_membership": true,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four"
+    },
+    {
+      "augmented_rank": 139,
+      "compressed_monomial_rows": 328,
+      "factor_index": 3,
+      "full_degree_seven_tangent_membership": false,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "augmented_rank": 139,
+      "compressed_monomial_rows": 328,
+      "factor_index": 3,
+      "full_degree_seven_tangent_membership": false,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "w_direction_name": "reciprocal_pair_01"
+    },
+    {
+      "augmented_rank": 139,
+      "compressed_monomial_rows": 328,
+      "factor_index": 3,
+      "full_degree_seven_tangent_membership": false,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "w_direction_name": "reciprocal_pair_23"
+    },
+    {
+      "augmented_rank": 139,
+      "compressed_monomial_rows": 328,
+      "factor_index": 3,
+      "full_degree_seven_tangent_membership": false,
+      "tangent_columns": 154,
+      "tangent_rank": 138,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four"
+    }
+  ]
+}

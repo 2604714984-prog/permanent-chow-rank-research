@@ -1,0 +1,53 @@
+{
+  "claim_boundary": [
+    "The W=0 support classification is exact and includes the two-column sign-flip exception.",
+    "The same-column completion forces nonzero aggregate K5 unless every term is row-separated.",
+    "The row-separated branch is not excluded: no 49-term decomposition is constructed, and no tensor-rank lower bound 50 is proved.",
+    "Simple-matroid openness and ordinary flattenings do not close either remaining branch.",
+    "A-CLOSED, ordinary lower 50, and border rank remain unresolved."
+  ],
+  "exact_remaining_component": {
+    "definition": "Z_A_grad_hess_W0 intersect {all same-column Hessian witnesses vanish}",
+    "equality_problem_on_this_component": "any true identity here is a 49-term simple-tensor decomposition of the 7 by 7 permanent tensor",
+    "name": "Z_A_row_separated_49",
+    "off_row_hessian_role": "the nonzero off-row targets become the mixed flattening equations of that simple-tensor decomposition",
+    "pigeonhole_reason": "each row supports at most one factor, while seven nonzero factors must occupy the seven available rows",
+    "structure_theorem": "each of the 49 terms has, after permuting its seven factors, exactly one nonzero linear factor in each matrix row"
+  },
+  "flattening_boundary": {
+    "consequence": "ordinary row-bipartition flattenings give only the lower bound 35 and therefore do not exclude 49 terms",
+    "maximum_rank": 35,
+    "row_bipartition_ranks_for_group_sizes_0_to_7": [
+      1,
+      7,
+      21,
+      35,
+      35,
+      21,
+      7,
+      1
+    ]
+  },
+  "resource_bound": {
+    "classification_state_per_row": 49,
+    "conservative_peak_memory_mib": 16,
+    "full_A5_materialized": false,
+    "subset_enumeration": false
+  },
+  "same_column_completion": {
+    "additional_witness_columns": 49,
+    "all_same_row_witness_columns": 196,
+    "consequence_on_W0": "if two factor slices are nonzero at one row, then some same-column witness is nonzero, hence the aggregate global K5 is nonzero",
+    "formula": "W_(b,b)[(i,omit {r,s}),u] = 2 c_i a_(i,r,u,b) a_(i,s,u,b)"
+  },
+  "schema_version": 1,
+  "smallest_remaining_invariant": "either force a nontrivially paired K2 vector on the nonzero-Hessian-witness branch, or prove tensor rank(permanent_7) at least 50 on Z_A_row_separated_49 using a stronger-than-flattening invariant",
+  "status": "PACKET_A_WZERO_CLASSIFIED_TO_ROW_SEPARATED_TENSOR_LOCUS",
+  "wzero_row_slice_classification": {
+    "characteristic": "zero (the exceptional-family exclusion uses 2 nonzero)",
+    "statement": "at a fixed term and row, a W=0 family is exactly one of: at most one nonzero slice; arbitrarily many slices on one common column; or two slices on the same two columns with sign-flipped proportional coefficients",
+    "support_at_least_three_consequence": "every other factor slice at that row is zero",
+    "support_one_consequence": "all nonzero slices use that same single column",
+    "support_two_consequence": "at most one other slice is nonzero; it has the same two-column support and is sign-flipped proportional"
+  }
+}
