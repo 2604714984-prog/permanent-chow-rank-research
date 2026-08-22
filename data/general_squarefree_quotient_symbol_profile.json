@@ -1,0 +1,117 @@
+{
+  "claim_boundary": {
+    "arbitrary_degenerate_term_profile": "NOT_CLASSIFIED",
+    "border_rank_improvement": false,
+    "cross_degree_homology_quotient": "NOT_COVERED",
+    "general_glynn_optimality": "OPEN",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "new_chow_rank_lower_bound": false
+  },
+  "field": "characteristic_zero",
+  "object": "squarefree derivative module of an independent n-factor Chow term",
+  "schema": "general_squarefree_quotient_symbol_profile/v1",
+  "selected_profiles": [
+    {
+      "adjacent_middle": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 6},
+        {"d": 2, "rank": 9},
+        {"d": 3, "rank": 10},
+        {"d": 4, "rank": 10}
+      ],
+      "all_positive_degrees": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 8},
+        {"d": 2, "rank": 12},
+        {"d": 3, "rank": 14},
+        {"d": 4, "rank": 15}
+      ],
+      "middle_degree": 2,
+      "n": 4,
+      "single_degree": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 3},
+        {"d": 2, "rank": 5},
+        {"d": 3, "rank": 6},
+        {"d": 4, "rank": 6}
+      ]
+    },
+    {
+      "adjacent_middle": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 20},
+        {"d": 2, "rank": 30},
+        {"d": 3, "rank": 34},
+        {"d": 4, "rank": 35},
+        {"d": 5, "rank": 35},
+        {"d": 6, "rank": 35}
+      ],
+      "all_positive_degrees": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 32},
+        {"d": 2, "rank": 48},
+        {"d": 3, "rank": 56},
+        {"d": 4, "rank": 60},
+        {"d": 5, "rank": 62},
+        {"d": 6, "rank": 63}
+      ],
+      "middle_degree": 3,
+      "n": 6,
+      "single_degree": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 10},
+        {"d": 2, "rank": 16},
+        {"d": 3, "rank": 19},
+        {"d": 4, "rank": 20},
+        {"d": 5, "rank": 20},
+        {"d": 6, "rank": 20}
+      ]
+    },
+    {
+      "adjacent_middle": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 70},
+        {"d": 2, "rank": 105},
+        {"d": 3, "rank": 120},
+        {"d": 4, "rank": 125},
+        {"d": 5, "rank": 126},
+        {"d": 6, "rank": 126},
+        {"d": 7, "rank": 126},
+        {"d": 8, "rank": 126}
+      ],
+      "all_positive_degrees": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 128},
+        {"d": 2, "rank": 192},
+        {"d": 3, "rank": 224},
+        {"d": 4, "rank": 240},
+        {"d": 5, "rank": 248},
+        {"d": 6, "rank": 252},
+        {"d": 7, "rank": 254},
+        {"d": 8, "rank": 255}
+      ],
+      "middle_degree": 4,
+      "n": 8,
+      "single_degree": [
+        {"d": 0, "rank": 0},
+        {"d": 1, "rank": 35},
+        {"d": 2, "rank": 55},
+        {"d": 3, "rank": 65},
+        {"d": 4, "rank": 69},
+        {"d": 5, "rank": 70},
+        {"d": 6, "rank": 70},
+        {"d": 7, "rank": 70},
+        {"d": 8, "rank": 70}
+      ]
+    }
+  ],
+  "theorem": {
+    "adjacent_shared_quotient_minimum": "C(n,k)+C(n,k+1)-C(n-d,k)-C(n-d,k+1)",
+    "all_positive_degrees_shared_quotient_minimum": "2^n-2^(n-d)",
+    "conclusion": "sharing the factor quotient without a cross-degree relation quotient gives exact additivity",
+    "kernel_maximum": "C(n-d,k)",
+    "single_degree_minimum": "C(n,k)-C(n-d,k)"
+  },
+  "theorem_core_sha256": "de3f17005702e35de8bf1fe0b14d562f9575dcd9d052e1123abce31365d06b98",
+  "theorem_id": "G-SQUAREFREE-QUOTIENT-SYMBOL-PROFILE-v1"
+}

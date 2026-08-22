@@ -1,0 +1,15 @@
+{
+  "claim_boundary": {
+    "arbitrary_chow_term_quadrics_regular": "OPEN",
+    "new_chow_rank_bound": false
+  },
+  "corrected_torsion_cap": "(r-d)*min(q,d)",
+  "field": "infinite_characteristic_zero",
+  "hypothesis": "I_2 is a q-quadric regular sequence in r variables",
+  "independent_scale": "d*(r-d)",
+  "integer_rows_checked": 45525,
+  "largest_r": 50,
+  "linear_section_height_floor": "max(q-d,0)",
+  "schema": "general_partial_quotient_regular_sequence_cap/v1",
+  "sharpness": "independent square quadrics and coordinate quotient"
+}
