@@ -1,0 +1,87 @@
+# Program B2 — arbitrary mixed Packet B
+
+## Goal
+
+Remove the common-graph specialization. `B1-CLOSED` alone does not prove
+Packet B impossible.
+
+## B2-01 — intrinsic labelled model
+
+Write the seven direct rank-six terms and all 42 rank-seven complements with
+their independent graph maps, factor bases, coefficients, and quotient
+directions.
+
+## B2-02 — mixed Sylvester complex
+
+Construct the arbitrary-packet labelled maps `B` and `C` and state
+
+\[
+\ker B\subseteq\operatorname{im}C
+\]
+
+without a common evaluation code.
+
+## B2-03 — mixed target-integrability operator
+
+Derive the analogue of Program TI before identifying graph maps. Determine
+which relation spaces are local and which equality forces to synchronize.
+
+## B2-04 — common-code morphism
+
+Define the canonical map from an arbitrary mixed packet to a shared
+degree-three/four quotient code and prove basis-change invariance.
+
+## B2-05 — prove or falsify common-code reduction
+
+Either prove every equality packet is covered by one common code, or construct
+an exact counterexample and record the minimal residual moduli.
+
+## B2-06 — synchronization theorem
+
+Derive all forced common flags, images, kernels, relation transports, overlap
+constraints, and weight equations from equality. Separate theorem from
+normalization.
+
+## B2-07 — exhaustive exceptional branches
+
+If common-code reduction fails, produce a complete finite list:
+
+```text
+rank drop
+support partition
+overlap
+common subcode with distinct extensions
+flat boundary
+genuine higher-rank perturbation
+```
+
+## B2-08 — existing certificate map
+
+Map branches to the 770 higher-overlap certificates, 1,189 Laurent-boundary
+certificates, completed `(2,3)/(3,2)` and `(2,4)/(4,2)` updates, and existing
+sign/monomial/shear exclusions. Do not rerun covered families.
+
+## B2-09 — first uncovered rank
+
+For the first genuinely uncovered perturbation rank forced by B2-07, derive a
+small exact invariant before scanning parameters.
+
+## B2-10 — flat-boundary audit
+
+Treat graph-map collisions, repeated complements, zero coefficients, and
+nonreduced limits with flat sums or associated-graded modules.
+
+## B2-11 — permanent target
+
+Impose at least degree six on every exceptional branch. Add degree seven only
+for an exact degree-six survivor when the endpoint reduction requires it.
+
+## B2-12 — survivor protocol
+
+Any exact mixed survivor takes priority. Verify all equality hypotheses
+independently and identify the first missing condition separating it from an
+actual decomposition.
+
+## B2-13 — decision
+
+Return exactly `B2-CLOSED` or an exact `B2-SURVIVOR`.
