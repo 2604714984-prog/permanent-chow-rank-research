@@ -4113,3 +4113,15 @@ matrix coordinate and every term is a permutation monomial.  Forty-nine such
 terms cannot support all `7!=5040` monomials of the permanent.  Therefore any
 Packet-A survivor must have `W^all != 0`, `K2 != 0`, and `K5 != 0`; their
 forced orthogonality is the remaining Packet-A obstruction.
+
+## 2026-08-22: Packet-A Hessian pairing route stopped
+
+For every quadratic relation `x in K2`, pairing it with any of the 196
+same-row Hessian witnesses is exactly the corresponding second derivative of
+the zero polynomial `A2 x`.  Equivalently,
+`D^(-1) P W^all subset im A2^T=(K2)^perp`.  Hence nonzero Hessian witnesses
+are automatically in the right radical and can never contradict the endpoint
+pairing.  The corrected Packet-A obstruction is the image of the full `K5`
+under `D^(-1)P` in `M2/im A2^T`, after removing all derivative-generated
+relations.  Further same-row derivatives or linear combinations of the
+existing witnesses are stopped by this identity.

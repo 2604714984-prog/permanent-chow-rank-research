@@ -107,7 +107,7 @@ def build_payload() -> dict[str, object]:
     full_sym5_rows = math.comb(N * N + 5 - 1, 5)
     projected_rows = len(hessian.EXPONENTS5)
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "PACKET_A_HESSIAN_RELATION_DICHOTOMY_EXACT",
         "universal_global_matrix_identity": {
             "witness_block_formula": (
@@ -158,14 +158,25 @@ def build_payload() -> dict[str, object]:
             "stream_one_term_equations": N * math.comb(N, 2) * math.comb(N, 2),
             "conservative_peak_memory_mib": 32,
         },
+        "pairing_tautology": {
+            "identity": "D^(-1) P W^all subset im(A2^T) = (K2)^perp",
+            "reason": (
+                "pairing a K2 relation with a Hessian witness is the corresponding "
+                "second derivative of the zero quadratic polynomial A2 x"
+            ),
+            "consequence": (
+                "no linear combination of the 196 same-row Hessian witnesses can obstruct "
+                "the inverse-coefficient 2/5 endpoint"
+            ),
+        },
         "smallest_remaining_invariant": (
-            "exclude Z_A_grad_hess_W0 using the nonzero off-row Hessian targets and cross-column compatibility, "
-            "or force a K2 vector pairing nontrivially with one of the W columns"
+            "prove that the transported full K5 has nonzero image in M2/im(A2^T), "
+            "after factoring out every Hessian-generated relation"
         ),
         "claim_boundary": [
             "This proves a universal nonzero aggregate-K5 witness only on the open branch W nonzero.",
             "The simple-matroid condition alone does not exclude W=0: independent row-separated factors make every displayed factorwise equation zero.",
-            "Nonzero K5 alone does not yet prove failure of the inverse-coefficient 2/5 pairing; a compatible nonzero K2 partner is still required.",
+            "The Hessian-generated K5 subspace is tautologically orthogonal to all of K2 and cannot prove failure of the inverse-coefficient 2/5 pairing.",
             "No equality candidate and no repeated Glynn or numerical control is used.",
             "A-CLOSED, ordinary lower 50, and border rank remain unresolved on Z_A_grad_hess_W0.",
         ],

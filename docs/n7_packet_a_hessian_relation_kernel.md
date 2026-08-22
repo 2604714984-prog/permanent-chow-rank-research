@@ -45,11 +45,13 @@ alone.  Seven independent factors supported in seven different matrix rows
 make all displayed pairwise equations zero.  This is only a factor-plane
 observation, not an equality candidate.
 
-Nonzero `K5` is not by itself the desired 2/5 contradiction: a nonzero `K2`
-partner with nontrivial inverse-coefficient pairing is still required.  The
-next minimal task is either to exclude `Z_A_grad_hess_W0` using the nonzero
-off-row Hessian targets, or to construct that `K2` partner from cross-column
-compatibility.
+Nonzero `K5` is not by itself the desired 2/5 contradiction.  More strongly,
+the Hessian-generated subspace can never provide one: after inverse-
+coefficient complement transport it lies identically in
+`im A2^T=(K2)^perp`, since pairing with a quadratic relation is the second
+derivative of the zero polynomial `A2 x`.  See
+`docs/n7_packet_a_hessian_pairing_tautology.md`.  The next invariant must use
+the transverse image of the full `K5` in `M2/im A2^T`.
 
 The equations are streamed one term at a time: 3087 scalars per term.  The
 full `A5` matrix is never materialized, and peak memory is bounded by 32 MiB.

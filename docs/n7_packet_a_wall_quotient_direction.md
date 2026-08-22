@@ -190,16 +190,14 @@ It does not force `K2` to be nonzero unless one proves the additional bound
 ## 4. Remaining theorem
 
 The quotient route therefore precisely reduces, rather than closes, the
-`W^all != 0` branch.  One must prove at least one genuinely new statement:
+`W^all != 0` branch.  The extreme locus (7) is excluded in
+`docs/n7_packet_a_k2zero_exclusion.md`.  On the remaining `K2 != 0` locus,
+the Hessian witnesses still cannot force a nonzero pairing: their transported
+vectors lie identically in `im A2^T=(K2)^perp`, as proved in
+`docs/n7_packet_a_hessian_pairing_tautology.md`.
 
-1. the full 49-term permanent equations force `dim K5<588`, hence `K2 != 0`,
-   and then force a nonzero pairing contrary to (4); or
-2. a permanent-specific construction produces a middle vector whose class
-   in `Q` is nonzero but which endpoint equality requires to come from `K2`;
-   or
-3. the `K2=0`, `dim K5=588` locus in (7) is incompatible with the labelled
-   gradient/Hessian equations for a reason stronger than dimensions.
-
-Until one of these is established, nonzero `W^all`, endpoint equality, and a
-nonzero quotient dual can coexist formally.  Packet A, the ordinary lower
+The genuinely new statement required is that the full `K5` has a transported
+vector outside `im A2^T`, equivalently that its transverse image in
+`M2/im A2^T` is nonzero.  Nonzero `W^all`, endpoint equality, and a nonzero
+quotient dual otherwise coexist formally.  Packet A, the ordinary lower
 bound 50, and all border-rank statements remain open on this branch.

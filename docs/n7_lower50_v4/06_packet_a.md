@@ -20,8 +20,12 @@ cannot equal the 5040-term permanent.  See
 
 This is not `A-CLOSED`.  The exact active component now has
 `W^all != 0`, `K2 != 0`, and `K5 != 0`, with the nonzero spaces still required
-to be orthogonal under the inverse-coefficient complementary pairing.  A-07
-through A-14 must be read with that reduced boundary.
+to be orthogonal under the inverse-coefficient complementary pairing.  The
+Hessian subspace is automatically orthogonal to `K2`, because its pairing is
+the second derivative of the defining zero quadratic relation.  It therefore
+cannot close this component.  The active invariant is the transverse image
+of `K5` in `M2/im A2^T`; A-07 through A-14 must be read with that corrected
+boundary.
 
 ## Schema/control smoke
 

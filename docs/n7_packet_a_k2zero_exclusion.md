@@ -217,8 +217,10 @@ The endpoint inclusion still requires
  K_2^{\mathsf T}D^{-1}P K_5=0.
 \]
 
-The missing theorem is now narrower: prove that the permanent-specific
-Hessian subspace of `K5` cannot be entirely orthogonal to the forced nonzero
-`K2` under this inverse-coefficient pairing.  That incompatibility is not
-proved here.  Packet A, the ordinary lower bound 50, and all border-rank
-claims therefore remain open on the `K2 != 0` branch.
+The Hessian subspace itself cannot supply the missing theorem: after inverse
+coefficient transport it lies identically in `im A2^T=(K2)^perp`, as proved
+in `docs/n7_packet_a_hessian_pairing_tautology.md`.  The remaining task is to
+produce a non-Hessian relation in `K5` whose transported class is nonzero in
+`M2/im A2^T`, or to prove directly that this transverse quotient image is
+nonzero.  Packet A, the ordinary lower bound 50, and all border-rank claims
+therefore remain open on the `K2 != 0` branch.

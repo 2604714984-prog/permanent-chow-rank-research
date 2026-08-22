@@ -49,6 +49,7 @@ class PacketAHessianRelationKernelTests(unittest.TestCase):
         self.assertTrue(MODULE.witness_is_zero_factorwise((factors,)))
 
     def test_payload_dimensions_and_boundary(self) -> None:
+        self.assertEqual(self.payload["schema_version"], 2)
         identity = self.payload["universal_global_matrix_identity"]
         self.assertEqual(identity["cross_column_witness_matrix_shape"], [1029, 147])
         hard = self.payload["exact_hard_residual_component"]
@@ -56,6 +57,8 @@ class PacketAHessianRelationKernelTests(unittest.TestCase):
         boundary = self.payload["torus_projection_boundary"]
         self.assertEqual(boundary["full_A5_row_count"], 2869685)
         self.assertEqual(boundary["one_torus_projection_row_count"], 462)
+        tautology = self.payload["pairing_tautology"]
+        self.assertIn("im(A2^T)", tautology["identity"])
 
     def test_frozen_payload(self) -> None:
         self.assertEqual(self.payload, json.loads(DATA.read_text(encoding="utf-8")))
