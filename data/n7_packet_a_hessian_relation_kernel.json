@@ -1,0 +1,44 @@
+{
+  "claim_boundary": [
+    "This proves a universal nonzero aggregate-K5 witness only on the open branch W nonzero.",
+    "The simple-matroid condition alone does not exclude W=0: independent row-separated factors make every displayed factorwise equation zero.",
+    "Nonzero K5 alone does not yet prove failure of the inverse-coefficient 2/5 pairing; a compatible nonzero K2 partner is still required.",
+    "No equality candidate and no repeated Glynn or numerical control is used.",
+    "A-CLOSED, ordinary lower 50, and border rank remain unresolved on Z_A_grad_hess_W0."
+  ],
+  "exact_hard_residual_component": {
+    "definition": "Z_A_grad_hess intersect {W_(b,d)=0 for every b<d}",
+    "dichotomy": "a true 49-term identity either has aggregate K5 nonzero, witnessed by W, or lies in Z_A_grad_hess_W0",
+    "direct_sum_reason": "external coefficients are nonzero and each (i,{r,s}) has its own labelled coordinate, so W=0 has no cancellation between terms or omitted-factor pairs",
+    "factorwise_equation_count_before_dependencies": 151263,
+    "factorwise_equations": "a_(i,r,u,b)a_(i,s,u,d)+a_(i,r,u,d)a_(i,s,u,b)=0 for every i,u,r<s,b<d",
+    "name": "Z_A_grad_hess_W0"
+  },
+  "resource_bound": {
+    "candidate_scalar_witness_entries": 151263,
+    "conservative_peak_memory_mib": 32,
+    "materialize_full_A5": false,
+    "stream_one_term_equations": 3087
+  },
+  "schema_version": 1,
+  "smallest_remaining_invariant": "exclude Z_A_grad_hess_W0 using the nonzero off-row Hessian targets and cross-column compatibility, or force a K2 vector pairing nontrivially with one of the W columns",
+  "status": "PACKET_A_HESSIAN_RELATION_DICHOTOMY_EXACT",
+  "torus_projection_boundary": {
+    "forgotten_row_count": 2869223,
+    "full_A5_row_count": 2869685,
+    "one_torus_projection_row_count": 462,
+    "statement": "A5_(b,d) W_(b,d)=0 from the 462-row block alone is only a projected relation; it cannot by itself certify W_(b,d) in the global aggregate K5"
+  },
+  "universal_global_matrix_identity": {
+    "column_pairs": 21,
+    "consequence": "on every true identity, W nonzero forces a nonzero vector in the aggregate global K5",
+    "cross_column_witness_matrix_shape": [
+      1029,
+      147
+    ],
+    "identity": "A5_full(F) W_(b,d)(F,c) = 0",
+    "reason": "the left side is the full mixed second derivative d^2 perm_7/(d x_(u,b) d x_(u,d)), which vanishes by row multilinearity",
+    "same_row_columns_per_pair": 7,
+    "witness_block_formula": "W_(b,d)[(i,omit {r,s}),u] = c_i (a_(i,r,u,b)a_(i,s,u,d)+a_(i,s,u,b)a_(i,r,u,d))"
+  }
+}

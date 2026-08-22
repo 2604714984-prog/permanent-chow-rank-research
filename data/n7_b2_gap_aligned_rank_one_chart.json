@@ -1,0 +1,423 @@
+{
+  "candidate_cardinality_checked_before_materialization": {
+    "exact_operator_controls": 18,
+    "factor_incidence_representatives_per_join": 3,
+    "full_degree_seven_monomials_skipped": 202927725,
+    "gap_aligned_w_directions_per_join": 3,
+    "join_types": 2,
+    "maximum_middle_dimension": 175
+  },
+  "chart_definition": "The fifth graph term has factors q_j for j!=i and q_i+w for one selected i. The selected i and w directions are the join-incidence representatives listed in CHARTS.",
+  "claim_boundary": [
+    "The rank rows are exact rational computations in the common unprojected 11-variable joins.",
+    "The disjoint all-four direction reaches delta_C-delta_BC=12 but still fails because delta_B drops to 19 and the total repair score is only 31 instead of 47.",
+    "The polynomial obstruction proves emptiness only when the first four terms remain in the canonical two-slice deformation family.",
+    "Multi-factor v support, rank-one directions outside the displayed incidence chart, and noncanonical joint deformations of the first four terms remain open.",
+    "No full Packet-B, lower-50, or border-rank conclusion is made."
+  ],
+  "conservative_peak_memory_mib": 128,
+  "decision": "MINIMAL_GAP_ALIGNED_RANK_ONE_CHART_EMPTY",
+  "extrema": {
+    "disjoint_01_23": {
+      "maximum_delta_C_minus_delta_BC": 12,
+      "maximum_repair_score": 31,
+      "minimum_new_defect": 16,
+      "required_repair_score": 47
+    },
+    "shared_row_01_02": {
+      "maximum_delta_C_minus_delta_BC": 9,
+      "maximum_repair_score": 25,
+      "minimum_new_defect": 20,
+      "required_repair_score": 45
+    }
+  },
+  "next_exact_gate": "Allow two-factor v support and the smallest noncanonical U1 deformation of one original slice pair, then solve cancellation of the seven U1 monomials before recomputing the repair score.",
+  "polynomial_joint_deformation_obstruction": {
+    "canonical_four_term_U1_layer": "identically zero for every identity-weight and graph-rescaling parameter in the canonical two-slice family",
+    "conclusion": "No nonzero rank-one fifth graph term can be joined while the first four terms remain in the canonical two-slice deformation family.",
+    "independence": "The seven squarefree degree-six quotient monomials product_(j!=i) q_j are linearly independent, so this layer vanishes only when v=0 or the fifth coefficient is zero.",
+    "rank_one_fifth_term_U1_layer": "w * sum_i v_i * product_(j!=i) q_j"
+  },
+  "rows": [
+    {
+      "delta_C_minus_delta_BC": 5,
+      "factor_index": 0,
+      "join_type": "shared_row_01_02",
+      "new_defect": 30,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        10,
+        5,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 15,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "delta_C_minus_delta_BC": 5,
+      "factor_index": 0,
+      "join_type": "shared_row_01_02",
+      "new_defect": 30,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        10,
+        5,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 15,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "w_direction_name": "reciprocal_pair_01"
+    },
+    {
+      "delta_C_minus_delta_BC": 9,
+      "factor_index": 0,
+      "join_type": "shared_row_01_02",
+      "new_defect": 20,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        16,
+        9,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 25,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four_join_directions"
+    },
+    {
+      "delta_C_minus_delta_BC": 5,
+      "factor_index": 1,
+      "join_type": "shared_row_01_02",
+      "new_defect": 30,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        10,
+        5,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 15,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "delta_C_minus_delta_BC": 5,
+      "factor_index": 1,
+      "join_type": "shared_row_01_02",
+      "new_defect": 30,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        10,
+        5,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 15,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "w_direction_name": "reciprocal_pair_01"
+    },
+    {
+      "delta_C_minus_delta_BC": 9,
+      "factor_index": 1,
+      "join_type": "shared_row_01_02",
+      "new_defect": 20,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        16,
+        9,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 25,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four_join_directions"
+    },
+    {
+      "delta_C_minus_delta_BC": 4,
+      "factor_index": 3,
+      "join_type": "shared_row_01_02",
+      "new_defect": 22,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        19,
+        10,
+        6
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 23,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "delta_C_minus_delta_BC": 4,
+      "factor_index": 3,
+      "join_type": "shared_row_01_02",
+      "new_defect": 22,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        19,
+        10,
+        6
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 23,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "w_direction_name": "reciprocal_pair_01"
+    },
+    {
+      "delta_C_minus_delta_BC": 1,
+      "factor_index": 3,
+      "join_type": "shared_row_01_02",
+      "new_defect": 22,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        22,
+        13,
+        12
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 23,
+      "required_repair_score": 45,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four_join_directions"
+    },
+    {
+      "delta_C_minus_delta_BC": 5,
+      "factor_index": 0,
+      "join_type": "disjoint_01_23",
+      "new_defect": 32,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        10,
+        5,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 15,
+      "required_repair_score": 47,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "delta_C_minus_delta_BC": 9,
+      "factor_index": 0,
+      "join_type": "disjoint_01_23",
+      "new_defect": 22,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        16,
+        9,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 25,
+      "required_repair_score": 47,
+      "w_direction": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "w_direction_name": "reciprocal_pair_23"
+    },
+    {
+      "delta_C_minus_delta_BC": 12,
+      "factor_index": 0,
+      "join_type": "disjoint_01_23",
+      "new_defect": 16,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        19,
+        12,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 31,
+      "required_repair_score": 47,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four_join_directions"
+    },
+    {
+      "delta_C_minus_delta_BC": 9,
+      "factor_index": 2,
+      "join_type": "disjoint_01_23",
+      "new_defect": 22,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        16,
+        9,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 25,
+      "required_repair_score": 47,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "delta_C_minus_delta_BC": 5,
+      "factor_index": 2,
+      "join_type": "disjoint_01_23",
+      "new_defect": 32,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        10,
+        5,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 15,
+      "required_repair_score": 47,
+      "w_direction": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "w_direction_name": "reciprocal_pair_23"
+    },
+    {
+      "delta_C_minus_delta_BC": 12,
+      "factor_index": 2,
+      "join_type": "disjoint_01_23",
+      "new_defect": 16,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        19,
+        12,
+        0
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 31,
+      "required_repair_score": 47,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four_join_directions"
+    },
+    {
+      "delta_C_minus_delta_BC": 3,
+      "factor_index": 4,
+      "join_type": "disjoint_01_23",
+      "new_defect": 27,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        17,
+        9,
+        6
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 20,
+      "required_repair_score": 47,
+      "w_direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "w_direction_name": "single_u01"
+    },
+    {
+      "delta_C_minus_delta_BC": 3,
+      "factor_index": 4,
+      "join_type": "disjoint_01_23",
+      "new_defect": 27,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        17,
+        9,
+        6
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 20,
+      "required_repair_score": 47,
+      "w_direction": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "w_direction_name": "reciprocal_pair_23"
+    },
+    {
+      "delta_C_minus_delta_BC": 2,
+      "factor_index": 4,
+      "join_type": "disjoint_01_23",
+      "new_defect": 24,
+      "operator_gap_repaired": false,
+      "rank_increments_B_C_BC": [
+        21,
+        14,
+        12
+      ],
+      "repair_score_delta_B_plus_delta_C_minus_delta_BC": 23,
+      "required_repair_score": 47,
+      "w_direction": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "w_direction_name": "all_four_join_directions"
+    }
+  ],
+  "schema_version": 1,
+  "status": "GAP_ALIGNED_ONE_FACTOR_RANK_ONE_CHART_EMPTY"
+}
