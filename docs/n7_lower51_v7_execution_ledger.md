@@ -441,3 +441,31 @@ R6-COUNT-TABLE-SCALAR
 R6-TYPE-SPLIT-ENDPOINTS
 R6-MIXED-BASE-DIMENSIONS
 ```
+
+## Wave 3/4 shared residual middle budget
+
+The corrected direct-basis localization gives the branch-independent cap
+
+\[
+ \dim K_3+\dim K_4\le\sum_i u_i-1225-2M_B.
+\]
+
+It is 35 for an all-rank-seven 50-term basis.  For the mixed basis of seven
+rank-six terms and one rank-seven term it is exactly
+`35-basis_full_cost-outside_zero_cost`.  All 666 possible cost pairs were
+checked directly, with the 49-term endpoint recovering cap zero.
+
+The proof and controls are in `docs/n7_lower51_residual_middle_budget.md` and
+`data/n7_lower51_residual_budget.json`.
+
+Decisive markers:
+
+```text
+RESIDUAL-COMPLEX
+RESIDUAL-DIM-IDENTITY
+R6-RESIDUAL-BUDGETS
+```
+
+The cap alone does not give `RESIDUAL-MULTIPLICATION`,
+`RESIDUAL-CONNECTING-MAP`, or `RESIDUAL-THEOREM`; those remain the active
+load-bearing tasks.
