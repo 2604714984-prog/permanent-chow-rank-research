@@ -1,5 +1,17 @@
 # Program B2 — arbitrary mixed Packet B
 
+## Executed Wave-1 interface
+
+`B2-01` through `B2-04` are implemented at basis level in
+`docs/n7_b2_intrinsic_mixed_complex.md`. The local middle space is the minimal
+rank space of the rectangular catalectic, including the rank-six `s=2`
+overlap; the global middle dimension is 1645 and the exact condition remains
+`ker B subset im C`. A common code additionally requires synchronized
+quotient frames, graph blocks, and projective diagonal tails. Single-plane
+controls show that complement geometry alone does not force these data.
+`B2-05` remains unresolved after imposing both the permanent identity and
+Sylvester equality.
+
 ## Goal
 
 Remove the common-graph specialization. `B1-CLOSED` alone does not prove

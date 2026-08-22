@@ -1,5 +1,13 @@
 # Program A — all-rank-seven Packet A
 
+## Schema/control smoke
+
+`docs/n7_packet_a_labelled_256_operator.md` freezes the `(term,I)` labels,
+the complementary `2/5` inverse-coefficient convention, and the three
+mandatory controls. It is deliberately not an A-01--A-05 completion: general
+factor-plane matrices, transport maps, aggregate kernels, and the general
+permanent target operator remain to be constructed.
+
 ## Goal
 
 Decide the 49 rank-seven terms whose factor planes form the forced simple

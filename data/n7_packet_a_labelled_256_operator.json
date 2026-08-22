@@ -1,0 +1,725 @@
+{
+  "candidate_cardinality_preflight": 64,
+  "claim_boundary": [
+    "This is a labelled schema plus mandatory-controls smoke, not completion or freezing of A-01 through A-05.",
+    "General factor-plane matrices, multiplication/differentiation transport, general K2/K5/K6, and the general permanent target operator remain unimplemented.",
+    "The 49-term Glynn truncation has degree-six target quotient rank 35 and is not a permanent decomposition.",
+    "The non-tensor Sylvester control forbids inferring tensor split from kernel-image equality alone.",
+    "Walsh compression is used only for the displayed Glynn controls; it is not imposed on arbitrary Packet A terms.",
+    "The known 64-term Glynn identity is used only as a span control; this artifact does not verify the degree-seven polynomial identity.",
+    "This certificate proves no A-CLOSED result and no ordinary or border Chow-rank bound."
+  ],
+  "estimated_peak_memory_mib": 8,
+  "largest_materialized_matrix_shape": [
+    64,
+    64
+  ],
+  "mandatory_controls": {
+    "glynn_49_truncation_negative_control": {
+      "complementary_2_5_relation_pairing": {
+        "complementary_factor_subset_pair_count": 21,
+        "degree_2_kernel_per_block": 27,
+        "degree_5_kernel_per_block": 0,
+        "external_coefficient_convention": "sum_i c_i T_i; relation pairing K2^T diag(c)^(-1) K5",
+        "kernel_image_form": "K2 is contained in the annihilator of K5 exactly when the restricted pairing rank is zero",
+        "labels_preserved_by_pairing": true,
+        "left_radical_dimension_per_block": 27,
+        "relation_orthogonality_condition_holds": true,
+        "restricted_relation_pairing_rank_per_block": 0,
+        "right_radical_dimension_per_block": 0
+      },
+      "degree_6_permanent_target_quotient": {
+        "aggregate_rank_per_block": 49,
+        "omitted_row_block_count": 7,
+        "scope": "Glynn/Walsh span control only",
+        "target_character_indices": [
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "target_contained": false,
+        "target_dimension_per_block": 7,
+        "target_intersection_dimension_per_block": 2,
+        "target_quotient_rank_per_block": 5,
+        "target_torus_weight_labels": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "total_target_dimension": 49,
+        "total_target_quotient_rank": 35
+      },
+      "degree_profiles": {
+        "2": {
+          "aggregate_image_dimension": 462,
+          "aggregate_kernel_dimension": 567,
+          "aggregate_rank_per_block": 22,
+          "factor_subset_count_per_term": 21,
+          "labelled_source_dimension": 1029,
+          "term_count": 49,
+          "walsh_coordinate_count_per_aggregate_block": 22
+        },
+        "5": {
+          "aggregate_image_dimension": 1029,
+          "aggregate_kernel_dimension": 0,
+          "aggregate_rank_per_block": 49,
+          "factor_subset_count_per_term": 21,
+          "labelled_source_dimension": 1029,
+          "term_count": 49,
+          "walsh_coordinate_count_per_aggregate_block": 63
+        },
+        "6": {
+          "aggregate_image_dimension": 343,
+          "aggregate_kernel_dimension": 0,
+          "aggregate_rank_per_block": 49,
+          "factor_subset_count_per_term": 7,
+          "labelled_source_dimension": 343,
+          "term_count": 49,
+          "walsh_coordinate_count_per_aggregate_block": 64
+        }
+      },
+      "term_count": 49
+    },
+    "known_glynn_64_identity_span_positive_control": {
+      "complementary_2_5_relation_pairing": {
+        "complementary_factor_subset_pair_count": 21,
+        "degree_2_kernel_per_block": 42,
+        "degree_5_kernel_per_block": 1,
+        "external_coefficient_convention": "sum_i c_i T_i; relation pairing K2^T diag(c)^(-1) K5",
+        "kernel_image_form": "K2 is contained in the annihilator of K5 exactly when the restricted pairing rank is zero",
+        "labels_preserved_by_pairing": true,
+        "left_radical_dimension_per_block": 42,
+        "relation_orthogonality_condition_holds": true,
+        "restricted_relation_pairing_rank_per_block": 0,
+        "right_radical_dimension_per_block": 1
+      },
+      "degree_6_permanent_target_quotient": {
+        "aggregate_rank_per_block": 64,
+        "omitted_row_block_count": 7,
+        "scope": "Glynn/Walsh span control only",
+        "target_character_indices": [
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "target_contained": true,
+        "target_dimension_per_block": 7,
+        "target_intersection_dimension_per_block": 7,
+        "target_quotient_rank_per_block": 0,
+        "target_torus_weight_labels": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "total_target_dimension": 49,
+        "total_target_quotient_rank": 0
+      },
+      "degree_profiles": {
+        "2": {
+          "aggregate_image_dimension": 462,
+          "aggregate_kernel_dimension": 882,
+          "aggregate_rank_per_block": 22,
+          "factor_subset_count_per_term": 21,
+          "labelled_source_dimension": 1344,
+          "term_count": 64,
+          "walsh_coordinate_count_per_aggregate_block": 22
+        },
+        "5": {
+          "aggregate_image_dimension": 1323,
+          "aggregate_kernel_dimension": 21,
+          "aggregate_rank_per_block": 63,
+          "factor_subset_count_per_term": 21,
+          "labelled_source_dimension": 1344,
+          "term_count": 64,
+          "walsh_coordinate_count_per_aggregate_block": 63
+        },
+        "6": {
+          "aggregate_image_dimension": 448,
+          "aggregate_kernel_dimension": 0,
+          "aggregate_rank_per_block": 64,
+          "factor_subset_count_per_term": 7,
+          "labelled_source_dimension": 448,
+          "term_count": 64,
+          "walsh_coordinate_count_per_aggregate_block": 64
+        }
+      },
+      "term_count": 64
+    },
+    "non_self_inverse_external_coefficient_direction_controls": [
+      {
+        "coefficients": [
+          2,
+          3
+        ],
+        "degree_2_aggregate_map": [
+          [
+            1,
+            -1
+          ]
+        ],
+        "degree_2_kernel_column": [
+          1,
+          1
+        ],
+        "degree_5_aggregate_map": [
+          [
+            3,
+            2
+          ]
+        ],
+        "degree_5_kernel_column": [
+          43680,
+          1
+        ],
+        "inverse_coefficient_pairing_entry": 0,
+        "inverse_coefficient_pairing_rank": 0,
+        "kernel_image_condition": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 2,
+          "rank_b": 1,
+          "rank_bc": 0,
+          "rank_c": 1
+        },
+        "transported_input_map_diag_c_A5_transpose": [
+          [
+            6
+          ],
+          [
+            6
+          ]
+        ],
+        "wrong_coefficient_pairing_entry": 21842,
+        "wrong_coefficient_pairing_rank": 1,
+        "wrong_direction_changes_condition": true
+      },
+      {
+        "coefficients": [
+          3,
+          5
+        ],
+        "degree_2_aggregate_map": [
+          [
+            1,
+            -1
+          ]
+        ],
+        "degree_2_kernel_column": [
+          1,
+          1
+        ],
+        "degree_5_aggregate_map": [
+          [
+            5,
+            3
+          ]
+        ],
+        "degree_5_kernel_column": [
+          39312,
+          1
+        ],
+        "inverse_coefficient_pairing_entry": 0,
+        "inverse_coefficient_pairing_rank": 0,
+        "kernel_image_condition": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 2,
+          "rank_b": 1,
+          "rank_bc": 0,
+          "rank_c": 1
+        },
+        "transported_input_map_diag_c_A5_transpose": [
+          [
+            15
+          ],
+          [
+            15
+          ]
+        ],
+        "wrong_coefficient_pairing_entry": 52420,
+        "wrong_coefficient_pairing_rank": 1,
+        "wrong_direction_changes_condition": true
+      },
+      {
+        "coefficients": [
+          5,
+          7
+        ],
+        "degree_2_aggregate_map": [
+          [
+            1,
+            -1
+          ]
+        ],
+        "degree_2_kernel_column": [
+          1,
+          1
+        ],
+        "degree_5_aggregate_map": [
+          [
+            7,
+            5
+          ]
+        ],
+        "degree_5_kernel_column": [
+          46800,
+          1
+        ],
+        "inverse_coefficient_pairing_entry": 0,
+        "inverse_coefficient_pairing_rank": 0,
+        "kernel_image_condition": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 2,
+          "rank_b": 1,
+          "rank_bc": 0,
+          "rank_c": 1
+        },
+        "transported_input_map_diag_c_A5_transpose": [
+          [
+            35
+          ],
+          [
+            35
+          ]
+        ],
+        "wrong_coefficient_pairing_entry": 37444,
+        "wrong_coefficient_pairing_rank": 1,
+        "wrong_direction_changes_condition": true
+      }
+    ],
+    "non_tensor_sylvester_equality_control": {
+      "condition_holds": true,
+      "coupling_defect": 0,
+      "kernel_b_dimension": 0,
+      "kernel_b_intersection_image_c_dimension": 0,
+      "middle_dimension": 15,
+      "rank_b": 15,
+      "rank_bc": 9,
+      "rank_c": 9,
+      "tensor_split": false
+    }
+  },
+  "one_term_module": {
+    "D2_dimension": 21,
+    "D5_dimension": 21,
+    "D6_dimension": 7,
+    "ambient_basis_action": "Sym^d(g) on the degree-d aggregate target",
+    "coefficient_degree_in_factor_coordinates": {
+      "2": 2,
+      "5": 5,
+      "6": 6
+    },
+    "coordinate_formula": "D_d(prod_j l_j) has columns prod_{j in I} l_j, |I|=d, labelled by (term,I)",
+    "factor_rank": 7,
+    "factor_relabelling_action": "the induced permutation of factor-subset columns",
+    "factor_rescaling_action": "column I is multiplied by the product of the scalars indexed by I",
+    "retained_labelled_dimension_per_term": 49
+  },
+  "rank_fields": {
+    "Walsh_aggregate_and_target_span_ranks": "Q exact elimination",
+    "relation_pairing_and_Sylvester_ranks": "F_65521"
+  },
+  "schema_version": 1,
+  "status": "PACKET_A_LABELLED_SCHEMA_AND_MANDATORY_CONTROLS_SMOKE"
+}

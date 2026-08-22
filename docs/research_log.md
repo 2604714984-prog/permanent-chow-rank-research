@@ -3447,6 +3447,30 @@ non-unipotent rank-one updates, higher-rank perturbations, general
 \(\mathrm{GL}_6\), arbitrary endpoint B, border rank, and ordinary lower 50
 remain open.
 
+## 2026-08-22: arbitrary Packet-B mixed complex fixed at basis level
+
+The arbitrary mixed Packet-B interface now uses the minimal rank space of
+each rectangular catalectic. This is essential for the rank-six `s=2` normal
+form, where the two labelled maps have ranks 31 and 29 but their product has
+rank 25. The exact local ranks are `25,25,35` for rank-six `s=1`, rank-six
+`s=2`, and rank-seven terms, giving global middle dimension 1645. The common
+code morphism is defined only after quotient-frame, graph-block, and
+projective-tail synchronization. Exact single-plane controls show that
+complement geometry alone does not force those conditions. They are not
+permanent-identity or Sylvester-equality counterexamples; B2-05 and B2-CLOSED
+remain open.
+
+## 2026-08-22: Packet-A labelled schema controls corrected
+
+The first Packet-A smoke now preserves `(term,I)` labels and uses the correct
+external-coefficient pairing `K2^T diag(c)^(-1) K5`. Three non-self-inverse
+coefficient controls fail under the wrong orientation and pass the genuine
+kernel-image test. Glynn-49 has degree-six target quotient rank 35, the known
+Glynn-64 identity has zero target-span quotient, and the non-tensor
+Sylvester-equality control prevents a tensor-split inference. These are
+schema and mandatory controls only; general Packet-A factor-plane maps and
+A-01--A-05 remain open.
+
 ## 2026-08-21: overlap-two support-size sum seven is complete
 
 Degree-weighted streamed pivot selection gives a single monomial minor in all

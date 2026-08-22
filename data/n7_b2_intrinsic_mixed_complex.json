@@ -1,0 +1,520 @@
+{
+  "b2_05_decision": "UNRESOLVED_ON_EQUALITY_LOCUS",
+  "basis_actions": {
+    "equality_condition": "ker(global_B) subset image(global_C)",
+    "formal_B": "e_I maps to product_{a in I} ell_a",
+    "formal_C": "theta maps to sum_I theta(product_{a notin I} ell_a)e_I",
+    "global_B": "sum_i intrinsic_B_i on direct_sum_i K_i",
+    "global_C": "stack_i intrinsic_C_i from Sym3(V)^dual",
+    "intrinsic_B_C": "a minimal rank factorization formal_B_i formal_C_i = B_i C_i",
+    "intrinsic_K": "K_i=image(formal_B_i formal_C_i), equivalently image(formal_C_i)/(image(formal_C_i) intersect ker(formal_B_i))",
+    "intrinsic_mixed_obstruction": "ker(B)/(ker(B) intersect image(C))",
+    "target_catalectic_identity": "sum_i B_i C_i = C_(3,4)(perm_7)"
+  },
+  "candidate_cardinality_checked_before_materialization": 1715,
+  "claim_boundary": [
+    "The basis-level B/C formulas are exact and retain factor labels before taking the minimal catalectic rank space.",
+    "The 1715-dimensional formal labelled middle is distinct from the 1645-dimensional minimal intrinsic middle.",
+    "A common degree-three/four point code is defined only after quotient-frame synchronization, block-compatible graph support, and equality of the seven normalized diagonal tails.",
+    "The three exact residual controls are single-plane replacements; they falsify a canonical reduction on one arbitrary complement but provide no generic 42-plane completion and no permanent-identity counterexample.",
+    "Degree-six target containment is a separate necessary condition and is not substituted for ker(B) subset image(C).",
+    "B2-05 remains unresolved on the equality locus; no B2-CLOSED, lower-50, or border-rank claim is made."
+  ],
+  "common_code_residual_controls": [
+    {
+      "block_diagonal_graph_support_holds": true,
+      "common_code_morphism_defined": false,
+      "construction": "Inside one legal rank-seven complement plane, replace the seven factor lines by a sheared quotient frame; this is a single-plane control and supplies no 42-plane completion.",
+      "diagonal_tails": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "nonmonomial_factor_frame",
+      "relative_frame": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "relative_frame_is_monomial": false,
+      "seven_diagonal_tails_match": false
+    },
+    {
+      "block_diagonal_graph_support_holds": false,
+      "common_code_morphism_defined": false,
+      "construction": "Use one legal complement that is the graph of a map with Q_0 to U_1; this is a single-plane control and supplies no 42-plane completion.",
+      "diagonal_tails": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "off_block_graph_map",
+      "relative_frame": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "relative_frame_is_monomial": true,
+      "seven_diagonal_tails_match": false
+    },
+    {
+      "block_diagonal_graph_support_holds": true,
+      "common_code_morphism_defined": false,
+      "construction": "Use one legal block-diagonal graph complement whose seven nonzero diagonal tails are not one projective point; this supplies no 42-plane completion.",
+      "diagonal_tails": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "name": "diagonal_tail_mismatch",
+      "relative_frame": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "relative_frame_is_monomial": true,
+      "seven_diagonal_tails_match": false
+    }
+  ],
+  "conservative_peak_memory_mib": 32,
+  "local_exact_controls": [
+    {
+      "catalectic_shape": [
+        126,
+        56
+      ],
+      "formal_B_rank": 25,
+      "formal_B_shape": [
+        126,
+        35
+      ],
+      "formal_C_rank": 25,
+      "formal_C_shape": [
+        35,
+        56
+      ],
+      "formal_middle_dimension": 35,
+      "intrinsic_B_shape": [
+        126,
+        25
+      ],
+      "intrinsic_C_shape": [
+        25,
+        56
+      ],
+      "invisible_label_overlap_dimension": 0,
+      "minimal_middle_rank": 25,
+      "name": "rank_six_s1"
+    },
+    {
+      "catalectic_shape": [
+        126,
+        56
+      ],
+      "formal_B_rank": 31,
+      "formal_B_shape": [
+        126,
+        35
+      ],
+      "formal_C_rank": 29,
+      "formal_C_shape": [
+        35,
+        56
+      ],
+      "formal_middle_dimension": 35,
+      "intrinsic_B_shape": [
+        126,
+        25
+      ],
+      "intrinsic_C_shape": [
+        25,
+        56
+      ],
+      "invisible_label_overlap_dimension": 4,
+      "minimal_middle_rank": 25,
+      "name": "rank_six_s2"
+    },
+    {
+      "catalectic_shape": [
+        210,
+        84
+      ],
+      "formal_B_rank": 35,
+      "formal_B_shape": [
+        210,
+        35
+      ],
+      "formal_C_rank": 35,
+      "formal_C_shape": [
+        35,
+        84
+      ],
+      "formal_middle_dimension": 35,
+      "intrinsic_B_shape": [
+        210,
+        35
+      ],
+      "intrinsic_C_shape": [
+        35,
+        84
+      ],
+      "invisible_label_overlap_dimension": 0,
+      "minimal_middle_rank": 35,
+      "name": "rank_seven"
+    }
+  ],
+  "packet_cardinality": {
+    "formal_labelled_middle_dimension": 1715,
+    "labelled_four_subsets_per_term": 35,
+    "minimal_intrinsic_middle_dimension": 1645,
+    "rank_seven_graph_complements": 42,
+    "rank_six_terms": 7
+  },
+  "projective_tail_controls": {
+    "all_zero_tails_match": false,
+    "distinct_e0_e1": false,
+    "identical_nonzero": true,
+    "proportional_nonzero": true
+  },
+  "schema_version": 1,
+  "status": "B2_WAVE1_INTRINSIC_COMPLEX_COMMON_CODE_OBSTRUCTION"
+}
