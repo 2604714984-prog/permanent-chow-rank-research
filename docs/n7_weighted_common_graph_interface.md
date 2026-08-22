@@ -70,7 +70,37 @@ H_Z(5)\le (r-2)+(42-r)=\boxed{40}.
 \]
 
 Since `H_Z(4)<=H_Z(5)`, only the five numerical pairs `(32,40)` through
-`(36,36)` can survive the degree-six target condition.
+`(36,36)` can survive the degree-six target condition. The last pair is not a
+Hilbert function of 42 reduced points: once `H_Z(3)=H_Z(4)=36`, the first
+difference vanishes. Taking a linear nonzerodivisor avoiding the points, this
+first difference is the Hilbert function of the Artinian reduction; once it
+is zero, every later graded piece is zero. Thus the original Hilbert function
+can never reach its eventual value 42.
+
+The other four pairs are genuinely realizable. For curve degree `e=8,6,4,2`,
+take respectively `35,28,21,14` points on rational monomial curves in `P^6`
+and add `7,14,21,28` general integer points off the curve. The homogeneous
+exponent sets are
+
+```text
+e=8: (0,1,2,3,4,7,8)
+e=6: (0,1,2,3,4,5,6)
+e=4: (0,1,2,3,4) embedded with two zero coordinates
+e=2: (0,1,2) embedded with four zero coordinates.
+```
+
+Their three- and four-fold exponent sumsets have sizes `3e+1` and `4e+1`.
+The degree-`d` rank is bounded above by
+
+```text
+min(42, min(curve_point_count, e*d+1) + off_curve_point_count).
+```
+
+The same integer constructions attain these upper bounds modulo both
+displayed primes, certifying characteristic-zero profiles `(32,40)`,
+`(33,39)`, `(34,38)`, and `(35,37)`. Attaining the full additive upper bound
+also certifies that the selected extra points contribute off the curve in the
+required degrees; a separate curve-membership heuristic is not used.
 
 ## Minimal exact matrices
 
@@ -105,8 +135,8 @@ For these curve controls, the target failure has a separate integer
 exponent-collision certificate, so their characteristic-zero exclusion does
 not depend on the modular evaluator.
 
-The remaining B1 problem is now confined to the five numerical strata with
-`H_Z(4)<=40`, solving coupling and target containment jointly.
+The remaining B1 problem is now confined to four geometrically feasible
+strata with `H_Z(4)<=40`, solving coupling and target containment jointly.
 
 Replay:
 

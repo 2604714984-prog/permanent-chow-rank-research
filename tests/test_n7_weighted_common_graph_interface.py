@@ -1,4 +1,5 @@
 import importlib.util
+import itertools
 import json
 from pathlib import Path
 import unittest
@@ -25,6 +26,46 @@ class WeightedCommonGraphInterfaceTests(unittest.TestCase):
             MODULE.TARGET_COMPATIBLE_NUMERICAL_STRATA,
             ((32, 40), (33, 39), (34, 38), (35, 37), (36, 36)),
         )
+        self.assertEqual(
+            MODULE.TARGET_COMPATIBLE_GEOMETRIC_STRATA,
+            ((32, 40), (33, 39), (34, 38), (35, 37)),
+        )
+
+    def test_curve_union_construction_cardinality(self) -> None:
+        prime = MODULE.coupled.PRIMES[0]
+        for curve_degree, curve_count, off_count, _ in MODULE.CURVE_UNION_CONSTRUCTIONS:
+            homogeneous_exponents = (0,) + tuple(
+                exponent
+                for exponent in MODULE.CURVE_TAIL_EXPONENTS[curve_degree]
+                if exponent is not None
+            )
+            self.assertEqual(
+                len(
+                    {
+                        sum(choice)
+                        for choice in itertools.combinations_with_replacement(
+                            homogeneous_exponents, 3
+                        )
+                    }
+                ),
+                3 * curve_degree + 1,
+            )
+            self.assertEqual(
+                len(
+                    {
+                        sum(choice)
+                        for choice in itertools.combinations_with_replacement(
+                            homogeneous_exponents, 4
+                        )
+                    }
+                ),
+                4 * curve_degree + 1,
+            )
+            tails = MODULE.rational_curve_union_tails(
+                curve_degree, curve_count, off_count, prime
+            )
+            self.assertEqual(len(tails), 42)
+            self.assertEqual(len(set(tails)), 42)
 
     def test_target_matrix(self) -> None:
         targets = MODULE.degree_six_permanent_targets()

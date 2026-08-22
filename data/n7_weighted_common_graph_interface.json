@@ -2,12 +2,131 @@
   "candidate_cardinality_checked_before_materialization": 2,
   "claim_boundary": [
     "The seven equality-rank pairs are the complete numerical list implied by nested 42-point evaluation codes and rank(E3)+rank(E4)=72; geometric realizability is not asserted for every pair.",
-    "For a minimal 49-term identity, repeated graph points combine and are excluded; after base change to an algebraic closure of characteristic zero, degree-six target containment implies H_Z(5)<=40 by mixed-partial integrability, leaving five numerical strata.",
+    "For a minimal 49-term identity, repeated graph points combine and are excluded; after base change to an algebraic closure of characteristic zero, degree-six target containment implies H_Z(5)<=40 by mixed-partial integrability, leaving five numerical strata; (36,36) is impossible for a reduced length-42 Hilbert function.",
+    "The other four target-compatible strata have integer curve-union constructions attaining their characteristic-zero rank upper bounds modulo both displayed primes.",
     "The finite-field rows are deterministic controls of the exact block formulation, not exclusions of arbitrary point configurations.",
     "The weighted rank-(31,41) control satisfies coupling but fails all seven degree-six targets; its characteristic-zero exclusion is separately certified by integer exponent collisions.",
     "No arbitrary common-graph closure, Packet-B closure, lower-50 theorem, or border-rank conclusion follows."
   ],
   "conservative_peak_memory_mib": 16,
+  "curve_union_constructions": [
+    {
+      "characteristic_zero_profile": [
+        32,
+        40
+      ],
+      "curve_degree": 8,
+      "curve_point_count": 35,
+      "off_curve_point_count": 7,
+      "prime_rows": [
+        {
+          "prime": 65521,
+          "rank_e3": 32,
+          "rank_e4": 40,
+          "rank_upper_bounds": [
+            32,
+            40
+          ]
+        },
+        {
+          "prime": 65519,
+          "rank_e3": 32,
+          "rank_e4": 40,
+          "rank_upper_bounds": [
+            32,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "characteristic_zero_profile": [
+        33,
+        39
+      ],
+      "curve_degree": 6,
+      "curve_point_count": 28,
+      "off_curve_point_count": 14,
+      "prime_rows": [
+        {
+          "prime": 65521,
+          "rank_e3": 33,
+          "rank_e4": 39,
+          "rank_upper_bounds": [
+            33,
+            39
+          ]
+        },
+        {
+          "prime": 65519,
+          "rank_e3": 33,
+          "rank_e4": 39,
+          "rank_upper_bounds": [
+            33,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "characteristic_zero_profile": [
+        34,
+        38
+      ],
+      "curve_degree": 4,
+      "curve_point_count": 21,
+      "off_curve_point_count": 21,
+      "prime_rows": [
+        {
+          "prime": 65521,
+          "rank_e3": 34,
+          "rank_e4": 38,
+          "rank_upper_bounds": [
+            34,
+            38
+          ]
+        },
+        {
+          "prime": 65519,
+          "rank_e3": 34,
+          "rank_e4": 38,
+          "rank_upper_bounds": [
+            34,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "characteristic_zero_profile": [
+        35,
+        37
+      ],
+      "curve_degree": 2,
+      "curve_point_count": 14,
+      "off_curve_point_count": 28,
+      "prime_rows": [
+        {
+          "prime": 65521,
+          "rank_e3": 35,
+          "rank_e4": 37,
+          "rank_upper_bounds": [
+            35,
+            37
+          ]
+        },
+        {
+          "prime": 65519,
+          "rank_e3": 35,
+          "rank_e4": 37,
+          "rank_upper_bounds": [
+            35,
+            37
+          ]
+        }
+      ]
+    }
+  ],
   "equality_rank_strata": [
     [
       30,
@@ -227,6 +346,24 @@
     ],
     "weighted_coupling": "rank(E4^T D E3)=30"
   },
+  "target_compatible_geometrically_feasible_strata": [
+    [
+      32,
+      40
+    ],
+    [
+      33,
+      39
+    ],
+    [
+      34,
+      38
+    ],
+    [
+      35,
+      37
+    ]
+  ],
   "target_compatible_numerical_strata_after_h5_le_40": [
     [
       32,
