@@ -91,6 +91,26 @@ Since the total projection of `L_t` into the direct basis is injective, a
 partial plane with no rank-seven block must contain either a transverse
 rank-one/rank-six pair or two rank-six blocks with distinct kernels.
 
+## Actual-factor support of every one-six exchange
+
+Every allowed partial single-block exchange has the increment pair `(1,6)`
+in one of its two completion orders.  Its scalar surplus floor is
+
+\[
+ \sigma(1)+\sigma(6)=22+7=29.                        \tag{4}
+\]
+
+The refined Boolean incidence calculation for the rank-one quotient says
+that support on at least three actual factors raises its rank-one surplus
+from at least 22 to at least 32.  Together with the rank-six cost seven this
+would consume at least 39, exceeding the total budget 35.  Therefore the
+rank-one quotient in every partial exchange is supported on at most two
+actual factors.
+
+This statement applies to whichever of `L_t` or the completed basis term
+contributes increment one.  It is independent of the choice between the
+transverse `1+6` kernel type and the distinct-kernel `6+6` type.
+
 ## Exact frontier
 
 Together with the full-block theorem, the direct-basis lane is reduced to
@@ -102,5 +122,6 @@ the following partial-block geometries:
 
 This is a necessary structural reduction, not a branch closure.  The next
 load-bearing theorem must propagate the residual degree-three/four module
-through these two-block injective projections.  No scalar packet table may
-replace that multiplication-compatibility step.
+through these two-block injective projections, with the induced rank-one
+quotient supported on at most two actual factors.  No scalar packet table
+may replace that multiplication-compatibility step.

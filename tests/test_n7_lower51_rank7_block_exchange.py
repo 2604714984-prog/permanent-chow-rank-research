@@ -34,6 +34,12 @@ class Lower51RankSevenBlockExchangeTest(unittest.TestCase):
         self.assertIn((6, 6, 6), triples)
         self.assertIn((6, 6, 7), triples)
 
+    def test_one_six_support_gate(self):
+        rank_one_support_floors = [22, 22, 32, 32, 38, 38, 43]
+        rank_six_increment_floor = 7
+        self.assertLessEqual(rank_one_support_floors[1] + rank_six_increment_floor, 35)
+        self.assertGreater(rank_one_support_floors[2] + rank_six_increment_floor, 35)
+
 
 if __name__ == "__main__":
     unittest.main()

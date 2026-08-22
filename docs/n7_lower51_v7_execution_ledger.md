@@ -336,10 +336,15 @@ Decisive markers:
 R7-BLOCK-RANKS
 PAIR-EXCHANGE-BUDGET
 R7-PARTIAL-BLOCK-KERNEL-TYPES
+R7-PARTIAL-D1-SUPPORT-BOUND
 ```
 
 The residual multiplication theorem for these two-block injective geometries
-is still open; the direct-basis lane is therefore not yet closed.
+is still open.  Every surviving partial exchange has a `(1,6)` completion
+order, and the rank-one quotient is supported on at most two actual factors:
+support at least three would cost `32+7>35`.  Thus the direct-basis and
+no-direct-basis rank-seven lanes now share the same support-one/support-two
+cross-degree obstruction.  The direct-basis lane is not yet closed.
 
 ## Wave 1 -- low-factor-rank endpoint atoms
 
