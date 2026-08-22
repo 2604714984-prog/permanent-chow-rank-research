@@ -1,0 +1,1534 @@
+{
+  "allowed_boundary_divisors": [
+    "u1",
+    "u2",
+    "u3",
+    "u4",
+    "t",
+    "q2",
+    "q3",
+    "q4",
+    "leading_right_core"
+  ],
+  "candidate_count": 30,
+  "candidate_start_index": 0,
+  "candidate_stop_index_exclusive": 30,
+  "claim_boundary": [
+    "The exact family has support sizes (5,5), overlap exactly 5, and v^T u=0.",
+    "Every oriented coordinate support and all five positive identity/shear multiplicity splits are represented.",
+    "Exact minor gcd factors are confined to the complement of the dense full-support chart; every such divisor reduces to an imported smaller-overlap, same-overlap lower-support, or disjoint-support certificate.",
+    "The result remains local to rank-one nilpotent shears in the synchronized mixed-Glynn endpoint model and does not prove arbitrary GL(6), arbitrary endpoint-B packets, ordinary lower 50, or border rank."
+  ],
+  "dense_full_support_condition": "all coordinate parameters and the leading right-core form are nonzero",
+  "elapsed_seconds": 46.37020791700343,
+  "face_certificates": [
+    "EXACT_ALL_OVERLAP_FOUR_45_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+    "EXACT_ALL_OVERLAP_FOUR_54_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+  ],
+  "field": "characteristic zero",
+  "full_candidate_count": 30,
+  "left_support_size": 5,
+  "multiplicity_split_count": 5,
+  "nilpotence_identity": "v^T u = 0 because the extra supports are disjoint",
+  "overlap_size": 5,
+  "parameter_count": 8,
+  "parametrization": "u=(1,u_core,left extras), v=t*(-sum(u_i*q_i),1,q_core) plus independent right extras",
+  "right_support_size": 5,
+  "rows": [
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 4,
+        "q3": 8,
+        "q4": 18,
+        "t": 30
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gcd_factorization": "93461343453626897313548933925961728*q2**4*q3**8*q4**18*t**30",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 60,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 2,
+        "q4": 10,
+        "t": 12
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gcd_factorization": "162259276829213363391578010288128*q3**2*q4**10*t**12",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 24,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 2,
+        "t": 2,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4**2*t**2*u1",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 5,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 4,
+        "q3": 8,
+        "q4": 19,
+        "t": 31
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "gcd_factorization": "93461343453626897313548933925961728*q2**4*q3**8*q4**19*t**31",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 62,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 2,
+        "q4": 11,
+        "t": 13
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "gcd_factorization": "162259276829213363391578010288128*q3**2*q4**11*t**13",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 26,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 2,
+        "t": 2,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4**2*t**2*u1",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 5,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 4,
+        "q3": 8,
+        "q4": 19,
+        "t": 31
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "gcd_factorization": "93461343453626897313548933925961728*q2**4*q3**8*q4**19*t**31",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 62,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 2,
+        "q4": 11,
+        "t": 13
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "gcd_factorization": "162259276829213363391578010288128*q3**2*q4**11*t**13",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 26,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 2,
+        "t": 2,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4**2*t**2*u1",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 5,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 6,
+        "q3": 8,
+        "q4": 19,
+        "t": 33
+      },
+      "core_support": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "280384030360880691940646801777885184*q2**6*q3**8*q4**19*t**33",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 66,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 3,
+        "q4": 11,
+        "t": 14
+      },
+      "core_support": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "324518553658426726783156020576256*q3**3*q4**11*t**14",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 28,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 3,
+        "t": 3,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4**3*t**3*u1",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 7,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 6,
+        "q3": 8,
+        "q4": 19,
+        "t": 33
+      },
+      "core_support": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "280384030360880691940646801777885184*q2**6*q3**8*q4**19*t**33",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 66,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 3,
+        "q4": 12,
+        "t": 15
+      },
+      "core_support": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "324518553658426726783156020576256*q3**3*q4**12*t**15",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 30,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 3,
+        "t": 3,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4**3*t**3*u1",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 7,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t*u1",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 6,
+        "q3": 8,
+        "q4": 19,
+        "t": 36
+      },
+      "core_support": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "4486144485774091071050348828446162944*q2**6*q3**8*q4**19*t**36",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 69,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 2,
+        "q3": 4,
+        "q4": 12,
+        "t": 18
+      },
+      "core_support": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "1947111321950560360698936123457536*q2**2*q3**4*q4**12*t**18",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 36,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 1,
+        "q4": 5,
+        "t": 6
+      },
+      "core_support": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "81129638414606681695789005144064*q3*q4**5*t**6",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 12,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1
+      },
+      "core_support": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "t": 1
+      },
+      "core_support": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q4*t",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 2,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    }
+  ],
+  "schema_version": 1,
+  "status": "EXACT_ALL_OVERLAP_FIVE_55_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+  "status_counts": {
+    "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS": 30
+  },
+  "support_count": 6,
+  "weighted_selection": true,
+  "witness_samples_first_5": [
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "identity_count": 1,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "identity_count": 2,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "identity_count": 3,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              4,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "identity_count": 4,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "identity_count": 5,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "workers": 4
+}

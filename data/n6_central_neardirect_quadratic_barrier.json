@@ -1,0 +1,50 @@
+{
+  "arithmetic": "pure support counting plus exact rational sparse elimination",
+  "claim_boundary": "This two-term example does not involve E_m(perm_6), does not realize the lower-28 b=34 relative incidence, and neither proves nor refutes ordinary lower 28, exact rank 32, or a border-rank statement.",
+  "degree_rows": [
+    {
+      "coupled_derivative_rank_of_TA_plus_TB": 29,
+      "individual_derivative_dimensions": [
+        15,
+        15
+      ],
+      "literal_intersection_dimension": 1,
+      "literal_sum_dimension": 29,
+      "ordinary_relation_dimension_kappa": 1,
+      "output_degree": 2
+    },
+    {
+      "coupled_derivative_rank_of_TA_plus_TB": 40,
+      "individual_derivative_dimensions": [
+        20,
+        20
+      ],
+      "literal_intersection_dimension": 0,
+      "literal_sum_dimension": 40,
+      "ordinary_relation_dimension_kappa": 0,
+      "output_degree": 3
+    },
+    {
+      "coupled_derivative_rank_of_TA_plus_TB": 29,
+      "individual_derivative_dimensions": [
+        15,
+        15
+      ],
+      "literal_intersection_dimension": 0,
+      "literal_sum_dimension": 30,
+      "ordinary_relation_dimension_kappa": 0,
+      "output_degree": 4
+    }
+  ],
+  "status": "EXACT_N6_CENTRAL_NEARDIRECT_QUADRATIC_BARRIER",
+  "strict_conclusion": "Even literal directness in degrees three and four does not force quadratic literal directness for sextic Chow terms: kappa_3=kappa_4=0 while kappa_2=1. Hence any backward shortcut requiring kappa_2=0 fails; this does not rule out quantitative relation-shadow inequalities.",
+  "terms": {
+    "TA": "x0*x1*x2*x3*x4*x5",
+    "TB": "x0*x1*x6*x7*x8*x9",
+    "support_intersection": [
+      0,
+      1
+    ],
+    "support_intersection_dimension": 2
+  }
+}

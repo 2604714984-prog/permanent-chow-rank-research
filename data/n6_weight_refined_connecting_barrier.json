@@ -1,0 +1,995 @@
+{
+  "canonical_candidate": "For M=I_P intersect I_Q=I_P intersect I_H and J=I_Q/M, the pushout exact sequence is 0 -> I_P -> I_P+I_Q -> J -> 0. Its degree-six connecting image is exactly the kernel of Tor_3(A_P,k)_6 -> Tor_3(S/(I_P+I_Q),k)_6. Project that kernel to the dual row-heavy and column-heavy twenty-dimensional pieces.",
+  "claim_boundary": "The matching-erasure module is an actual inverse submodule of the permanent, equivalently the graded dual of a quotient of its apolar algebra. It is not proved to equal E(P) intersect E(Q) for a residual Q=P-H with H six Chow terms and Q twenty Chow terms. Thus a nontrivial cap for every actual H remains unproved and is not disproved here. The G-034/G-037 rows are exact stress tests but are not instances of the permanent connecting map.",
+  "field": "characteristic zero",
+  "g034_g037_exact_stress_rows": [
+    {
+      "labelled_presentation_kernel": 0,
+      "name": "g034_completed_three_term_block",
+      "ordinary_middle_relation_dimension": 4
+    },
+    {
+      "labelled_presentation_kernel": 7,
+      "name": "two_full_span_terms",
+      "ordinary_middle_relation_dimension": 4
+    },
+    {
+      "labelled_presentation_kernel": 12,
+      "name": "full_span_plus_uniform_five_span_term",
+      "ordinary_middle_relation_dimension": 2
+    }
+  ],
+  "permanent_apolar_quotient_matching_erasure": {
+    "F2_dimension": 225,
+    "F3_dimension": 380,
+    "column_heavy_classes_in_image": 0,
+    "inverse_system_hilbert_vector_degrees_0_to_6": [
+      1,
+      36,
+      225,
+      380,
+      0,
+      0,
+      0
+    ],
+    "projected_connecting_kernel_rank": 40,
+    "removed_cells_form_perfect_matching": true,
+    "removed_cells_in_20_by_20_grid": 20,
+    "representative_retained_column_count": 114,
+    "representative_retained_exact_QQ_rank": 114,
+    "required_F2_lower": 203,
+    "required_F3_lower": 336,
+    "row_heavy_classes_in_image": 0
+  },
+  "permanent_homology": {
+    "column_heavy_weights": [
+      {
+        "column_weight": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "label": [
+          0,
+          1,
+          2
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          2,
+          0,
+          2,
+          0,
+          0
+        ],
+        "label": [
+          0,
+          1,
+          3
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          2,
+          0,
+          0,
+          2,
+          0
+        ],
+        "label": [
+          0,
+          1,
+          4
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        "label": [
+          0,
+          1,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "label": [
+          0,
+          2,
+          3
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "label": [
+          0,
+          2,
+          4
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          2
+        ],
+        "label": [
+          0,
+          2,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "label": [
+          0,
+          3,
+          4
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          2
+        ],
+        "label": [
+          0,
+          3,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "label": [
+          0,
+          4,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        "label": [
+          1,
+          2,
+          3
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          2,
+          2,
+          0,
+          2,
+          0
+        ],
+        "label": [
+          1,
+          2,
+          4
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          2
+        ],
+        "label": [
+          1,
+          2,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          2,
+          0,
+          2,
+          2,
+          0
+        ],
+        "label": [
+          1,
+          3,
+          4
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          2
+        ],
+        "label": [
+          1,
+          3,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          2,
+          0,
+          0,
+          2,
+          2
+        ],
+        "label": [
+          1,
+          4,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          0,
+          2,
+          2,
+          2,
+          0
+        ],
+        "label": [
+          2,
+          3,
+          4
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          2
+        ],
+        "label": [
+          2,
+          3,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          0,
+          2,
+          0,
+          2,
+          2
+        ],
+        "label": [
+          2,
+          4,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "column_weight": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        "label": [
+          3,
+          4,
+          5
+        ],
+        "row_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "preceding_boundary_on_all_forty_weights": 0,
+    "representative_exact_QQ_audit": {
+      "all_ones_cycle_nonzero_entries": 0,
+      "column_count": 120,
+      "exact_nullity": 1,
+      "exact_rational_rank": 119,
+      "row_support_count": 540
+    },
+    "row_heavy_weights": [
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          1,
+          2
+        ],
+        "row_weight": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          1,
+          3
+        ],
+        "row_weight": [
+          2,
+          2,
+          0,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          1,
+          4
+        ],
+        "row_weight": [
+          2,
+          2,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          1,
+          5
+        ],
+        "row_weight": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          2,
+          3
+        ],
+        "row_weight": [
+          2,
+          0,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          2,
+          4
+        ],
+        "row_weight": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          2,
+          5
+        ],
+        "row_weight": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          3,
+          4
+        ],
+        "row_weight": [
+          2,
+          0,
+          0,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          3,
+          5
+        ],
+        "row_weight": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          0,
+          4,
+          5
+        ],
+        "row_weight": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          1,
+          2,
+          3
+        ],
+        "row_weight": [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          1,
+          2,
+          4
+        ],
+        "row_weight": [
+          0,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          1,
+          2,
+          5
+        ],
+        "row_weight": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          1,
+          3,
+          4
+        ],
+        "row_weight": [
+          0,
+          2,
+          0,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          1,
+          3,
+          5
+        ],
+        "row_weight": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          1,
+          4,
+          5
+        ],
+        "row_weight": [
+          0,
+          2,
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          2,
+          3,
+          4
+        ],
+        "row_weight": [
+          0,
+          0,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          2,
+          3,
+          5
+        ],
+        "row_weight": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          2,
+          4,
+          5
+        ],
+        "row_weight": [
+          0,
+          0,
+          2,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "column_weight": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "label": [
+          3,
+          4,
+          5
+        ],
+        "row_weight": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "weight_line_count": 40
+  },
+  "status": "G040_WEIGHT_REFINED_CONNECTING_FORMALISM_BARRIER",
+  "strict_conclusion": "The forty permanent weight lines and the projected connecting-map candidate are well defined, and the candidate is the kernel of the Tor map to the apolar quotient dual to E(P) intersect E(Q). The scalar lower bounds 336/203 still impose no nontrivial upper bound below forty: a genuine differential submodule of the permanent inverse system with dimensions 380/225 loses all forty heavy classes.",
+  "unconditional_candidate_bounds": {
+    "column_projection_rank": [
+      0,
+      20
+    ],
+    "row_projection_rank": [
+      0,
+      20
+    ],
+    "total_rank": [
+      0,
+      40
+    ]
+  }
+}

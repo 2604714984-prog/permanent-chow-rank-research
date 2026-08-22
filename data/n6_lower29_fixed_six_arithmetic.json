@@ -1,0 +1,613 @@
+{
+  "claim_boundary": "This freezes the integer consequences and already proved local endpoint interfaces. It does not exclude b=31,...,49 or prove ChowRank(perm_6)>=29. In particular, N6-072 depends on the N6-064 fifty-plane flag-hook theorem and does not exclude the all-alpha-three b=47,48,49 layers. No 47-, 48-, or 49-plane equality classification is inferred from the product-shadow numbers alone.",
+  "excluded_b_after_current_proved_interfaces": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    50,
+    51,
+    52
+  ],
+  "formulas": {
+    "literal_q_intersection_floor": "20*q-40-b",
+    "q_projection_cap_before_ambient_saturation": "15*q-12",
+    "residual_upper": "2*b+22*r-400",
+    "selection_lower": "ceil((4000-118*r-10*b)/17)"
+  },
+  "high_layers": [
+    {
+      "b": 47,
+      "scalar_state_count": 13,
+      "status_after_existing_term_caps": "one_all_alpha_three_state_remains_open"
+    },
+    {
+      "b": 48,
+      "scalar_state_count": 13,
+      "status_after_existing_term_caps": "one_all_alpha_three_state_remains_open"
+    },
+    {
+      "b": 49,
+      "scalar_state_count": 13,
+      "status_after_existing_term_caps": "one_all_alpha_three_state_remains_open"
+    },
+    {
+      "b": 50,
+      "scalar_state_count": 13,
+      "status_after_existing_term_caps": "excluded_by_N6-064_and_N6-072"
+    },
+    {
+      "b": 51,
+      "scalar_state_count": 1,
+      "status_after_existing_term_caps": "excluded_by_defect_zero_t12_prolongation_cap"
+    },
+    {
+      "b": 52,
+      "scalar_state_count": 1,
+      "status_after_existing_term_caps": "excluded_by_defect_zero_t12_prolongation_cap"
+    }
+  ],
+  "hypothesis": {
+    "base_field": "algebraically closed of characteristic zero",
+    "fixed_terms": 6,
+    "ordinary_chow_decomposition_terms": 28,
+    "residual_terms": 22
+  },
+  "literal_six_frontier": [
+    {
+      "b": 22,
+      "exact_product_shadow_at_floor": 83,
+      "literal_six_intersection_floor": 58,
+      "outcome": "excluded_by_strict_product_shadow",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 23,
+      "exact_product_shadow_at_floor": 83,
+      "literal_six_intersection_floor": 57,
+      "outcome": "excluded_by_strict_product_shadow",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 24,
+      "exact_product_shadow_at_floor": 83,
+      "literal_six_intersection_floor": 56,
+      "outcome": "excluded_by_strict_product_shadow",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 25,
+      "exact_product_shadow_at_floor": 81,
+      "literal_six_intersection_floor": 55,
+      "outcome": "excluded_by_strict_product_shadow",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 26,
+      "exact_product_shadow_at_floor": 81,
+      "literal_six_intersection_floor": 54,
+      "outcome": "excluded_by_strict_product_shadow",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 27,
+      "exact_product_shadow_at_floor": 81,
+      "literal_six_intersection_floor": 53,
+      "outcome": "excluded_by_strict_product_shadow",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 28,
+      "exact_product_shadow_at_floor": 78,
+      "literal_six_intersection_floor": 52,
+      "outcome": "excluded_by_defect_zero_common_W12_and_N6-044",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 29,
+      "exact_product_shadow_at_floor": 78,
+      "literal_six_intersection_floor": 51,
+      "outcome": "excluded_by_defect_zero_common_W12_and_N6-044",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 30,
+      "exact_product_shadow_at_floor": 75,
+      "literal_six_intersection_floor": 50,
+      "outcome": "excluded_by_local_x_51_52_W12_or_local_x_50_N6-064_N6-072",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 31,
+      "exact_product_shadow_at_floor": 75,
+      "literal_six_intersection_floor": 49,
+      "outcome": "open_49_plane_75_shadow_plateau",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 32,
+      "exact_product_shadow_at_floor": 75,
+      "literal_six_intersection_floor": 48,
+      "outcome": "open_75_shadow_plateau",
+      "six_term_projection_cap": 78
+    },
+    {
+      "b": 33,
+      "exact_product_shadow_at_floor": 75,
+      "literal_six_intersection_floor": 47,
+      "outcome": "open_75_shadow_plateau",
+      "six_term_projection_cap": 78
+    }
+  ],
+  "low_maximum_rank_branches": [
+    {
+      "excluded": true,
+      "maximum_middle_rank_r": 16,
+      "product_shadow_allows_b_at_most": 31,
+      "quadratic_projection_cap": 58,
+      "scalar_feasibility_forces_b_at_least": 67
+    },
+    {
+      "excluded": true,
+      "maximum_middle_rank_r": 17,
+      "product_shadow_allows_b_at_most": 31,
+      "quadratic_projection_cap": 58,
+      "scalar_feasibility_forces_b_at_least": 56
+    },
+    {
+      "excluded": true,
+      "maximum_middle_rank_r": 18,
+      "product_shadow_allows_b_at_most": 41,
+      "quadratic_projection_cap": 68,
+      "scalar_feasibility_forces_b_at_least": 45
+    }
+  ],
+  "maximum_middle_rank_forced": 20,
+  "next_geometric_frontiers": [
+    "b=31: a hereditary 49-plane, 75-shadow common-W15 obstruction",
+    "b=32,33: the 48- and 47-plane portions of the same 75-shadow plateau",
+    "b=34,35: the q=7 floors 66 and 65 have shadow 87 against cap 93"
+  ],
+  "open_b_after_current_proved_interfaces": [
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "proved_local_endpoint_exclusions": {
+    "28": "x=52, defect zero, common W12, literal directness, N6-044",
+    "29": "x=51 or 52, defect zero, common W12, literal directness, N6-044",
+    "30": "x=51 or 52 as above; x=50 uses N6-064 and N6-072"
+  },
+  "q_frontier_before_ambient_cap_saturation": [
+    {
+      "b": 28,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 78,
+      "literal_q_intersection_floor": 52,
+      "nonnegative_shadow_defect": 0,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 29,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 78,
+      "literal_q_intersection_floor": 51,
+      "nonnegative_shadow_defect": 0,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 30,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 75,
+      "literal_q_intersection_floor": 50,
+      "nonnegative_shadow_defect": 3,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 31,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 75,
+      "literal_q_intersection_floor": 49,
+      "nonnegative_shadow_defect": 3,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 32,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 75,
+      "literal_q_intersection_floor": 48,
+      "nonnegative_shadow_defect": 3,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 33,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 75,
+      "literal_q_intersection_floor": 47,
+      "nonnegative_shadow_defect": 3,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 34,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 87,
+      "literal_q_intersection_floor": 66,
+      "nonnegative_shadow_defect": 6,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 35,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 87,
+      "literal_q_intersection_floor": 65,
+      "nonnegative_shadow_defect": 6,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 36,
+      "best_q_before_ambient_cap_saturation": 6,
+      "exact_product_shadow_at_floor": 72,
+      "literal_q_intersection_floor": 44,
+      "nonnegative_shadow_defect": 6,
+      "q_term_projection_cap": 78,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 37,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 84,
+      "literal_q_intersection_floor": 63,
+      "nonnegative_shadow_defect": 9,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 38,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 84,
+      "literal_q_intersection_floor": 62,
+      "nonnegative_shadow_defect": 9,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 39,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 84,
+      "literal_q_intersection_floor": 61,
+      "nonnegative_shadow_defect": 9,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 40,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 84,
+      "literal_q_intersection_floor": 60,
+      "nonnegative_shadow_defect": 9,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 41,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 84,
+      "literal_q_intersection_floor": 59,
+      "nonnegative_shadow_defect": 9,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 42,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 83,
+      "literal_q_intersection_floor": 58,
+      "nonnegative_shadow_defect": 10,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 43,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 83,
+      "literal_q_intersection_floor": 57,
+      "nonnegative_shadow_defect": 10,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 44,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 83,
+      "literal_q_intersection_floor": 56,
+      "nonnegative_shadow_defect": 10,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 45,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 81,
+      "literal_q_intersection_floor": 55,
+      "nonnegative_shadow_defect": 12,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    },
+    {
+      "b": 46,
+      "best_q_before_ambient_cap_saturation": 7,
+      "exact_product_shadow_at_floor": 81,
+      "literal_q_intersection_floor": 54,
+      "nonnegative_shadow_defect": 12,
+      "q_term_projection_cap": 93,
+      "strict_shadow_contradiction": false
+    }
+  ],
+  "rank_19_excluded_by": "N6-031",
+  "rank_twenty_rows": [
+    {
+      "b": 22,
+      "exact_product_shadow_minimum": 48,
+      "residual_middle_rank_upper": 84,
+      "scalar_state_count": 28141,
+      "selection_middle_rank_lower": 84
+    },
+    {
+      "b": 23,
+      "exact_product_shadow_minimum": 52,
+      "residual_middle_rank_upper": 86,
+      "scalar_state_count": 13336,
+      "selection_middle_rank_lower": 83
+    },
+    {
+      "b": 24,
+      "exact_product_shadow_minimum": 53,
+      "residual_middle_rank_upper": 88,
+      "scalar_state_count": 11053,
+      "selection_middle_rank_lower": 83
+    },
+    {
+      "b": 25,
+      "exact_product_shadow_minimum": 54,
+      "residual_middle_rank_upper": 90,
+      "scalar_state_count": 9181,
+      "selection_middle_rank_lower": 82
+    },
+    {
+      "b": 26,
+      "exact_product_shadow_minimum": 54,
+      "residual_middle_rank_upper": 92,
+      "scalar_state_count": 9492,
+      "selection_middle_rank_lower": 82
+    },
+    {
+      "b": 27,
+      "exact_product_shadow_minimum": 54,
+      "residual_middle_rank_upper": 94,
+      "scalar_state_count": 9728,
+      "selection_middle_rank_lower": 81
+    },
+    {
+      "b": 28,
+      "exact_product_shadow_minimum": 54,
+      "residual_middle_rank_upper": 96,
+      "scalar_state_count": 9930,
+      "selection_middle_rank_lower": 80
+    },
+    {
+      "b": 29,
+      "exact_product_shadow_minimum": 57,
+      "residual_middle_rank_upper": 98,
+      "scalar_state_count": 5270,
+      "selection_middle_rank_lower": 80
+    },
+    {
+      "b": 30,
+      "exact_product_shadow_minimum": 57,
+      "residual_middle_rank_upper": 100,
+      "scalar_state_count": 5382,
+      "selection_middle_rank_lower": 79
+    },
+    {
+      "b": 31,
+      "exact_product_shadow_minimum": 57,
+      "residual_middle_rank_upper": 102,
+      "scalar_state_count": 5417,
+      "selection_middle_rank_lower": 79
+    },
+    {
+      "b": 32,
+      "exact_product_shadow_minimum": 59,
+      "residual_middle_rank_upper": 104,
+      "scalar_state_count": 3416,
+      "selection_middle_rank_lower": 78
+    },
+    {
+      "b": 33,
+      "exact_product_shadow_minimum": 59,
+      "residual_middle_rank_upper": 106,
+      "scalar_state_count": 3459,
+      "selection_middle_rank_lower": 78
+    },
+    {
+      "b": 34,
+      "exact_product_shadow_minimum": 59,
+      "residual_middle_rank_upper": 108,
+      "scalar_state_count": 3493,
+      "selection_middle_rank_lower": 77
+    },
+    {
+      "b": 35,
+      "exact_product_shadow_minimum": 60,
+      "residual_middle_rank_upper": 110,
+      "scalar_state_count": 2770,
+      "selection_middle_rank_lower": 76
+    },
+    {
+      "b": 36,
+      "exact_product_shadow_minimum": 60,
+      "residual_middle_rank_upper": 112,
+      "scalar_state_count": 2800,
+      "selection_middle_rank_lower": 76
+    },
+    {
+      "b": 37,
+      "exact_product_shadow_minimum": 60,
+      "residual_middle_rank_upper": 114,
+      "scalar_state_count": 2821,
+      "selection_middle_rank_lower": 75
+    },
+    {
+      "b": 38,
+      "exact_product_shadow_minimum": 60,
+      "residual_middle_rank_upper": 116,
+      "scalar_state_count": 2839,
+      "selection_middle_rank_lower": 75
+    },
+    {
+      "b": 39,
+      "exact_product_shadow_minimum": 60,
+      "residual_middle_rank_upper": 118,
+      "scalar_state_count": 2852,
+      "selection_middle_rank_lower": 74
+    },
+    {
+      "b": 40,
+      "exact_product_shadow_minimum": 60,
+      "residual_middle_rank_upper": 120,
+      "scalar_state_count": 2859,
+      "selection_middle_rank_lower": 73
+    },
+    {
+      "b": 41,
+      "exact_product_shadow_minimum": 66,
+      "residual_middle_rank_upper": 122,
+      "scalar_state_count": 562,
+      "selection_middle_rank_lower": 73
+    },
+    {
+      "b": 42,
+      "exact_product_shadow_minimum": 69,
+      "residual_middle_rank_upper": 124,
+      "scalar_state_count": 207,
+      "selection_middle_rank_lower": 72
+    },
+    {
+      "b": 43,
+      "exact_product_shadow_minimum": 69,
+      "residual_middle_rank_upper": 126,
+      "scalar_state_count": 207,
+      "selection_middle_rank_lower": 72
+    },
+    {
+      "b": 44,
+      "exact_product_shadow_minimum": 72,
+      "residual_middle_rank_upper": 128,
+      "scalar_state_count": 63,
+      "selection_middle_rank_lower": 71
+    },
+    {
+      "b": 45,
+      "exact_product_shadow_minimum": 72,
+      "residual_middle_rank_upper": 130,
+      "scalar_state_count": 63,
+      "selection_middle_rank_lower": 70
+    },
+    {
+      "b": 46,
+      "exact_product_shadow_minimum": 72,
+      "residual_middle_rank_upper": 132,
+      "scalar_state_count": 63,
+      "selection_middle_rank_lower": 70
+    },
+    {
+      "b": 47,
+      "exact_product_shadow_minimum": 75,
+      "residual_middle_rank_upper": 134,
+      "scalar_state_count": 13,
+      "selection_middle_rank_lower": 69
+    },
+    {
+      "b": 48,
+      "exact_product_shadow_minimum": 75,
+      "residual_middle_rank_upper": 136,
+      "scalar_state_count": 13,
+      "selection_middle_rank_lower": 69
+    },
+    {
+      "b": 49,
+      "exact_product_shadow_minimum": 75,
+      "residual_middle_rank_upper": 138,
+      "scalar_state_count": 13,
+      "selection_middle_rank_lower": 68
+    },
+    {
+      "b": 50,
+      "exact_product_shadow_minimum": 75,
+      "residual_middle_rank_upper": 140,
+      "scalar_state_count": 13,
+      "selection_middle_rank_lower": 68
+    },
+    {
+      "b": 51,
+      "exact_product_shadow_minimum": 78,
+      "residual_middle_rank_upper": 142,
+      "scalar_state_count": 1,
+      "selection_middle_rank_lower": 67
+    },
+    {
+      "b": 52,
+      "exact_product_shadow_minimum": 78,
+      "residual_middle_rank_upper": 144,
+      "scalar_state_count": 1,
+      "selection_middle_rank_lower": 66
+    }
+  ],
+  "rank_twenty_scalar_window": [
+    22,
+    52
+  ],
+  "status": [
+    "PURE_FIXED_SIX_REDUCTION",
+    "EXACT_INTEGER_REPLAY",
+    "LOWER_29_ARITHMETIC_FRONTIER",
+    "N6-074"
+  ],
+  "strict_shadow_excluded_b": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ]
+}

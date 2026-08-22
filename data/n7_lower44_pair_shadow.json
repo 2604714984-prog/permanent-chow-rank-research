@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "status": "PURE_EXACT_ORDINARY_LOWER_44",
+  "n": 7,
+  "pair_shadow": {
+    "uniformity": 3,
+    "shadow_table": [
+      0,
+      3,
+      5,
+      6,
+      6,
+      8,
+      9,
+      9,
+      10,
+      10,
+      10,
+      12,
+      13,
+      13,
+      14,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      17,
+      18,
+      18,
+      19,
+      19,
+      19,
+      20,
+      20,
+      20,
+      20,
+      21,
+      21,
+      21,
+      21,
+      21
+    ],
+    "budget": 42,
+    "capacity": 17,
+    "peak_dp_states": 45,
+    "witness_partition": [
+      4,
+      4,
+      4,
+      4,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "witness_area": 17,
+    "witness_shadow": 42
+  },
+  "eighteen_term_intersection_cap": 577,
+  "degree_four_shadow": {
+    "uniformity": 4,
+    "shadow_table": [
+      0,
+      4,
+      7,
+      9,
+      10,
+      10,
+      13,
+      15,
+      16,
+      16,
+      18,
+      19,
+      19,
+      20,
+      20,
+      20,
+      23,
+      25,
+      26,
+      26,
+      28,
+      29,
+      29,
+      30,
+      30,
+      30,
+      32,
+      33,
+      33,
+      34,
+      34,
+      34,
+      35,
+      35,
+      35,
+      35
+    ],
+    "budget": 577,
+    "capacity": 332,
+    "peak_dp_states": 13637,
+    "witness_partition": [
+      35,
+      35,
+      35,
+      35,
+      35,
+      22,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "witness_area": 332,
+    "witness_shadow": 577
+  },
+  "all_selected_q_pair_route": [
+    {
+      "selected_terms": 2,
+      "shadow_budget": 17,
+      "intersection_cap": 1,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 37
+    },
+    {
+      "selected_terms": 3,
+      "shadow_budget": 52,
+      "intersection_cap": 6,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 38
+    },
+    {
+      "selected_terms": 4,
+      "shadow_budget": 87,
+      "intersection_cap": 15,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 39
+    },
+    {
+      "selected_terms": 5,
+      "shadow_budget": 122,
+      "intersection_cap": 27,
+      "remaining_terms_lower_bound": 35,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 6,
+      "shadow_budget": 157,
+      "intersection_cap": 39,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 40
+    },
+    {
+      "selected_terms": 7,
+      "shadow_budget": 192,
+      "intersection_cap": 60,
+      "remaining_terms_lower_bound": 34,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 8,
+      "shadow_budget": 227,
+      "intersection_cap": 79,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 9,
+      "shadow_budget": 262,
+      "intersection_cap": 95,
+      "remaining_terms_lower_bound": 33,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 10,
+      "shadow_budget": 297,
+      "intersection_cap": 116,
+      "remaining_terms_lower_bound": 32,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 11,
+      "shadow_budget": 332,
+      "intersection_cap": 141,
+      "remaining_terms_lower_bound": 31,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 12,
+      "shadow_budget": 367,
+      "intersection_cap": 176,
+      "remaining_terms_lower_bound": 30,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 13,
+      "shadow_budget": 402,
+      "intersection_cap": 225,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 14,
+      "shadow_budget": 437,
+      "intersection_cap": 232,
+      "remaining_terms_lower_bound": 29,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 15,
+      "shadow_budget": 472,
+      "intersection_cap": 248,
+      "remaining_terms_lower_bound": 28,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 16,
+      "shadow_budget": 507,
+      "intersection_cap": 275,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 17,
+      "shadow_budget": 542,
+      "intersection_cap": 305,
+      "remaining_terms_lower_bound": 27,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 18,
+      "shadow_budget": 577,
+      "intersection_cap": 332,
+      "remaining_terms_lower_bound": 26,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 19,
+      "shadow_budget": 612,
+      "intersection_cap": 378,
+      "remaining_terms_lower_bound": 24,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 20,
+      "shadow_budget": 647,
+      "intersection_cap": 413,
+      "remaining_terms_lower_bound": 23,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 21,
+      "shadow_budget": 682,
+      "intersection_cap": 465,
+      "remaining_terms_lower_bound": 22,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 22,
+      "shadow_budget": 717,
+      "intersection_cap": 526,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 23,
+      "shadow_budget": 752,
+      "intersection_cap": 538,
+      "remaining_terms_lower_bound": 20,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 24,
+      "shadow_budget": 787,
+      "intersection_cap": 554,
+      "remaining_terms_lower_bound": 19,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 25,
+      "shadow_budget": 822,
+      "intersection_cap": 585,
+      "remaining_terms_lower_bound": 18,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 26,
+      "shadow_budget": 857,
+      "intersection_cap": 625,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 27,
+      "shadow_budget": 892,
+      "intersection_cap": 645,
+      "remaining_terms_lower_bound": 17,
+      "total_terms_lower_bound": 44
+    },
+    {
+      "selected_terms": 28,
+      "shadow_budget": 927,
+      "intersection_cap": 686,
+      "remaining_terms_lower_bound": 15,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 29,
+      "shadow_budget": 962,
+      "intersection_cap": 731,
+      "remaining_terms_lower_bound": 14,
+      "total_terms_lower_bound": 43
+    },
+    {
+      "selected_terms": 30,
+      "shadow_budget": 997,
+      "intersection_cap": 801,
+      "remaining_terms_lower_bound": 12,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 31,
+      "shadow_budget": 1032,
+      "intersection_cap": 835,
+      "remaining_terms_lower_bound": 11,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 32,
+      "shadow_budget": 1067,
+      "intersection_cap": 881,
+      "remaining_terms_lower_bound": 10,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 33,
+      "shadow_budget": 1102,
+      "intersection_cap": 925,
+      "remaining_terms_lower_bound": 9,
+      "total_terms_lower_bound": 42
+    },
+    {
+      "selected_terms": 34,
+      "shadow_budget": 1137,
+      "intersection_cap": 973,
+      "remaining_terms_lower_bound": 7,
+      "total_terms_lower_bound": 41
+    },
+    {
+      "selected_terms": 35,
+      "shadow_budget": 1172,
+      "intersection_cap": 1040,
+      "remaining_terms_lower_bound": 5,
+      "total_terms_lower_bound": 40
+    }
+  ],
+  "best_total_lower_bound_in_pair_route": 44,
+  "maximizing_selected_q": [
+    17,
+    18,
+    27
+  ],
+  "koszul": {
+    "permanent_rank": 58800,
+    "prolongation_multiplier": 49,
+    "single_term_cap": 1680,
+    "residual_rank_lower_bound": 42532,
+    "twenty_five_term_capacity": 42000,
+    "remaining_terms_lower_bound": 26,
+    "selected_terms": 18,
+    "total_terms_lower_bound": 44
+  },
+  "theorem": "ChowRank(perm_7) >= 44 over characteristic zero",
+  "current_ordinary_interval": [
+    44,
+    64
+  ],
+  "claim_boundary": [
+    "This is an ordinary Chow-rank theorem, not a border-rank theorem.",
+    "It does not prove ChowRank(perm_7)=64.",
+    "The finite certificates concern simultaneous product shadows only."
+  ]
+}

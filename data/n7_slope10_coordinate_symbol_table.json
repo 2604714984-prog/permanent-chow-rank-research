@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "The table is the finite coordinate endpoint of a separate torus-degeneration argument. By itself it does not prove that arbitrary quotients specialize with the required scope.",
+  "full_quotient_correction": "For the actual permanent intersection R, quadratic generation gives E2^(1)=E3 and D3(T) cap E3=0, so the full minus symbol is injective. The last combined ranks are therefore 50 and 70.",
+  "method": "Exhaust all coordinate quotient subsets and all coordinate quadratic relation sets of cardinality at most three.",
+  "rank_five_positive_partitions": [
+    {
+      "exponent_caps": [3, 1, 1, 1, 1],
+      "hilbert_2_3_4": [11, 15, 15],
+      "minimum_combined_rank_by_quotient_rank": [0, 12, 17, 21, 24, 27]
+    },
+    {
+      "exponent_caps": [2, 2, 1, 1, 1],
+      "hilbert_2_3_4": [12, 18, 18],
+      "minimum_combined_rank_by_quotient_rank": [0, 15, 22, 24, 30, 34]
+    }
+  ],
+  "rank_seven": {
+    "exponent_caps": [1, 1, 1, 1, 1, 1, 1],
+    "hilbert_2_3_4": [21, 35, 35],
+    "minimum_combined_rank_by_quotient_rank": [0, 32, 49, 56, 57, 64, 67, 69]
+  },
+  "rank_six": {
+    "exponent_caps": [2, 1, 1, 1, 1, 1],
+    "hilbert_2_3_4": [16, 25, 25],
+    "minimum_combined_rank_by_quotient_rank": [0, 22, 33, 37, 41, 44, 48],
+    "minimum_minus_rank_at_quotient_rank_five": 19
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,53 @@
+{
+  "ambient_dimension": 7,
+  "bivector_coordinate_count": 21,
+  "claim_boundary": [
+    "The three branches are exhaustive for the gauge-free q5=2 relation pencil F3,H6=42.",
+    "Zero relation columns are retained as a separate support stratum.",
+    "The dichotomy does not close F3, weighted coupling, Packet B, lower 50, or border rank."
+  ],
+  "exhaustive_branches": [
+    "BIVECTOR-SPAN-RANK-AT-MOST-ONE",
+    "NON-GRASSMANNIAN-LINE-AT-MOST-TWO-NONZERO-RATIOS",
+    "GRASSMANNIAN-FLAG-LINE"
+  ],
+  "flag_line": {
+    "basis_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "contained_in_grassmannian": true,
+    "nonzero_restricted_quadrics": 0
+  },
+  "plucker_quadric_count": 35,
+  "schema_version": 1,
+  "status": "TI-08A-Q5-TWO-PENCIL-DICHOTOMY",
+  "transverse_line": {
+    "basis_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "contained_in_grassmannian": false,
+    "distinct_projective_intersection_points": 2,
+    "intersection_equation": "s*t=0",
+    "nonzero_restricted_quadrics": {
+      "0123": [
+        0,
+        1,
+        0
+      ]
+    }
+  }
+}

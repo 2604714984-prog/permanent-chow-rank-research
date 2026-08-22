@@ -1,0 +1,306 @@
+{
+  "candidate_cardinality_checked_before_materialization": {
+    "full_degree_seven_monomials_skipped": 202927725,
+    "labelled_middle_columns": 105,
+    "maximum_shear_terms": 3,
+    "quotient_degree_seven_monomials": 1716
+  },
+  "claim_boundary": [
+    "The U-degree profile is an exact characteristic-zero decomposition of the permanent target and gives a bounded hierarchy of necessary equations.",
+    "The quotient-only polynomial identity admits nonmonomial frame decompositions, so target projection alone does not force frame synchronization.",
+    "The displayed shear controls fail the projected kernel-image condition; they are diagnostics, not survivors of the full Sylvester equality locus.",
+    "Full Sylvester equality does not imply projected Sylvester equality after setting U=0, because output projection can enlarge ker(B); the positive projected defects do not exclude or construct a full packet.",
+    "No generic 42-plane completion, permanent decomposition, B2-CLOSED, lower-50, or border-rank claim is made."
+  ],
+  "conservative_peak_memory_mib": 64,
+  "decision": "UNRESOLVED_FULL_EQUALITY_LOCUS",
+  "first_bounded_equations": {
+    "U0_Q7": "sum_t lambda_t product_r p_(t,r) = product_r q_r",
+    "U1_Q6": "sum_t lambda_t sum_s u_(t,s) product_(r!=s) p_(t,r) = 0",
+    "U2_Q5": "the target has exactly 21 transposition monomials"
+  },
+  "full_operator_scale_not_materialized": {
+    "B_shape": [
+      270725,
+      1645
+    ],
+    "C_shape": [
+      1645,
+      20825
+    ],
+    "degree_seven_ambient_monomials": 202927725,
+    "minimal_middle_dimension": 1645,
+    "parameter_upper_bound_before_gauges": 14448,
+    "required_endpoint_ranks": {
+      "rank_BC": 1225,
+      "rank_B_plus_rank_C": 2870
+    },
+    "sym3_V_dimension": 20825,
+    "sym4_V_dimension": 270725
+  },
+  "next_exact_gate": "Stream the U1_Q6 zero equations and U2_Q5 transposition equations into the full labelled B/C rank conditions, branch first on quotient-frame monomiality, and test radical containment of each synchronization defect without materializing Sym7(V).",
+  "permanent_U_degree_profile": [
+    {
+      "q_degree": 7,
+      "target_monomials": 1,
+      "u_degree": 0
+    },
+    {
+      "q_degree": 6,
+      "target_monomials": 0,
+      "u_degree": 1
+    },
+    {
+      "q_degree": 5,
+      "target_monomials": 21,
+      "u_degree": 2
+    },
+    {
+      "q_degree": 4,
+      "target_monomials": 70,
+      "u_degree": 3
+    },
+    {
+      "q_degree": 3,
+      "target_monomials": 315,
+      "u_degree": 4
+    },
+    {
+      "q_degree": 2,
+      "target_monomials": 924,
+      "u_degree": 5
+    },
+    {
+      "q_degree": 1,
+      "target_monomials": 1855,
+      "u_degree": 6
+    },
+    {
+      "q_degree": 0,
+      "target_monomials": 1854,
+      "u_degree": 7
+    }
+  ],
+  "quotient_shear_pencil_controls": [
+    {
+      "all_quotient_frames_invertible": true,
+      "contains_nonmonomial_frame": true,
+      "formal_local_middle_dimension": 70,
+      "kernel_image_defect": 20,
+      "parameters": [
+        -1,
+        1
+      ],
+      "projected_sylvester_equality_holds": false,
+      "quotient_catalectic_identity_holds": true,
+      "quotient_polynomial_identity_holds": true,
+      "rank_B": 45,
+      "rank_BC": 35,
+      "rank_C": 40,
+      "term_count": 2,
+      "weights": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "all_quotient_frames_invertible": true,
+      "contains_nonmonomial_frame": true,
+      "formal_local_middle_dimension": 105,
+      "kernel_image_defect": 55,
+      "parameters": [
+        1,
+        2,
+        3
+      ],
+      "projected_sylvester_equality_holds": false,
+      "quotient_catalectic_identity_holds": true,
+      "quotient_polynomial_identity_holds": true,
+      "rank_B": 45,
+      "rank_BC": 35,
+      "rank_C": 40,
+      "term_count": 3,
+      "weights": [
+        "3",
+        "-3",
+        "1"
+      ]
+    }
+  ],
+  "raw_residual_blocks_per_graph_term": {
+    "diagonal_projective_tail_mismatch_dimension": 30,
+    "off_block_graph_entries": 252,
+    "quotient_frame_off_monomial_big_cell_dimension": 42,
+    "warning": "These are raw diagnostic blocks, not independent moduli after the equality equations and gauges."
+  },
+  "schema_version": 1,
+  "shear_U1_Q6_zero_target_controls": [
+    {
+      "nullity_per_U_coordinate": 2,
+      "nullspace_supports": [
+        [
+          [
+            0,
+            "-1"
+          ],
+          [
+            7,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "-2"
+          ],
+          [
+            1,
+            "-1"
+          ],
+          [
+            8,
+            "1"
+          ]
+        ]
+      ],
+      "operator_shape": [
+        924,
+        14
+      ],
+      "rank_per_U_coordinate": 12,
+      "term_count": 2,
+      "total_nullity_across_42_U_coordinates": 84
+    },
+    {
+      "nullity_per_U_coordinate": 9,
+      "nullspace_supports": [
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            7,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            1,
+            "1"
+          ],
+          [
+            8,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "-1/3"
+          ],
+          [
+            14,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "-2/3"
+          ],
+          [
+            1,
+            "-1/3"
+          ],
+          [
+            15,
+            "1"
+          ]
+        ],
+        [
+          [
+            2,
+            "1/3"
+          ],
+          [
+            9,
+            "2/3"
+          ],
+          [
+            16,
+            "1"
+          ]
+        ],
+        [
+          [
+            3,
+            "1/3"
+          ],
+          [
+            10,
+            "2/3"
+          ],
+          [
+            17,
+            "1"
+          ]
+        ],
+        [
+          [
+            4,
+            "1/3"
+          ],
+          [
+            11,
+            "2/3"
+          ],
+          [
+            18,
+            "1"
+          ]
+        ],
+        [
+          [
+            5,
+            "1/3"
+          ],
+          [
+            12,
+            "2/3"
+          ],
+          [
+            19,
+            "1"
+          ]
+        ],
+        [
+          [
+            6,
+            "1/3"
+          ],
+          [
+            13,
+            "2/3"
+          ],
+          [
+            20,
+            "1"
+          ]
+        ]
+      ],
+      "operator_shape": [
+        924,
+        21
+      ],
+      "rank_per_U_coordinate": 12,
+      "term_count": 3,
+      "total_nullity_across_42_U_coordinates": 378
+    }
+  ],
+  "status": "B2_05_EQUALITY_LOCUS_REDUCED_NOT_DECIDED"
+}

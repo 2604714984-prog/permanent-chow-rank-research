@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "The theorem assumes that every term has one factor in each fixed column, or after transposition one factor in each fixed row. It does not classify arbitrary common-W15 fibers, exclude the general b=50 all-alpha-three state, prove ChowRank(perm_6)>=28, or make a border-rank claim.",
+  "one_factor_squarefree_cubic_shadow_minima_s0_through_s6": [
+    0,
+    3,
+    5,
+    6,
+    6,
+    8,
+    9
+  ],
+  "pure_theorem": {
+    "cubic_permanent_intersection_per_triple_upper": 2,
+    "cubic_triple_block_count": 20,
+    "excluded_target_b": 50,
+    "global_cubic_permanent_intersection_upper": 40,
+    "quadratic_pair_block_dimension": 6,
+    "quadratic_permanent_intersection_per_pair_block": 5,
+    "transpose_included": true
+  },
+  "status": [
+    "PURE_SEPARATED_BLOCK_COUPLING_THEOREM",
+    "EXACT_INTEGER_SHADOW_REPLAY",
+    "B50_COLUMN_ROW_SEPARATED_EXCLUDED",
+    "N6-059"
+  ],
+  "strict_conclusion": "No column-separated or row-separated six-term all-alpha-three common-W15 configuration with d2=90 and h=120 can have b=50; every such separated configuration has b<=40."
+}

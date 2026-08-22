@@ -1,0 +1,207 @@
+{
+  "certificate": "N6-137",
+  "status": "EXACT_QQ_RANK_ONE_SUPPORT_GERMS",
+  "field": "characteristic zero",
+  "hypothesis": "finite K3,2 graph pairs L=graph(D), M=graph(-D) with D a rank-one row-changing coefficient support",
+  "patterns": {
+    "same_source_column": {
+      "base_cross_rank": 6,
+      "base_operator_rank": 1,
+      "jacobian_shape": [
+        360,
+        72
+      ],
+      "jacobian_rank": 67,
+      "kernel_dimension": 5,
+      "kernel_operator_supports": [
+        [
+          {
+            "target": 0,
+            "source": 2,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 1,
+            "source": 2,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 3,
+            "coefficient": -1
+          },
+          {
+            "target": 1,
+            "source": 3,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 4,
+            "coefficient": -1
+          },
+          {
+            "target": 1,
+            "source": 4,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 5,
+            "coefficient": -1
+          },
+          {
+            "target": 1,
+            "source": 5,
+            "coefficient": -1
+          }
+        ]
+      ],
+      "quadratic_generator_count": 3,
+      "quadratic_initial_generators": [
+        "x2*(x0 - x1)",
+        "x3*(x0 - x1)",
+        "x4*(x0 - x1)"
+      ],
+      "quadratic_coefficient_rank": 3,
+      "branches": [
+        {
+          "equations": [
+            "x1-x0"
+          ],
+          "cross_rank": 6,
+          "operator_rank": 1,
+          "sum_rank": 7
+        },
+        {
+          "equations": [
+            "x2",
+            "x3",
+            "x4"
+          ],
+          "cross_rank": 6,
+          "operator_rank": 1,
+          "sum_rank": 7
+        }
+      ],
+      "formal_sandwich": true
+    },
+    "full": {
+      "base_cross_rank": 6,
+      "base_operator_rank": 1,
+      "jacobian_shape": [
+        360,
+        72
+      ],
+      "jacobian_rank": 67,
+      "kernel_dimension": 5,
+      "kernel_operator_supports": [
+        [
+          {
+            "target": 0,
+            "source": 2,
+            "coefficient": -1
+          },
+          {
+            "target": 1,
+            "source": 2,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 2,
+            "coefficient": -1
+          },
+          {
+            "target": 0,
+            "source": 3,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 2,
+            "coefficient": 1
+          },
+          {
+            "target": 1,
+            "source": 3,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 4,
+            "coefficient": -1
+          },
+          {
+            "target": 1,
+            "source": 4,
+            "coefficient": -1
+          }
+        ],
+        [
+          {
+            "target": 0,
+            "source": 5,
+            "coefficient": -1
+          },
+          {
+            "target": 1,
+            "source": 5,
+            "coefficient": -1
+          }
+        ]
+      ],
+      "quadratic_generator_count": 3,
+      "quadratic_initial_generators": [
+        "(x0 - x2)*(x1 - x2)",
+        "x3*(x1 - x2)",
+        "x4*(x1 - x2)"
+      ],
+      "quadratic_coefficient_rank": 3,
+      "branches": [
+        {
+          "equations": [
+            "x1-x2"
+          ],
+          "cross_rank": 6,
+          "operator_rank": 1,
+          "sum_rank": 7
+        },
+        {
+          "equations": [
+            "x0-x2",
+            "x3",
+            "x4"
+          ],
+          "cross_rank": 6,
+          "operator_rank": 1,
+          "sum_rank": 7
+        }
+      ],
+      "formal_sandwich": true
+    }
+  },
+  "consequence": "For the same-source-column and full rank-one support types, the completed rank-at-most-six graph germ is contained in the two explicit noncomplementary branches given by the quadratic initial ideal; the branch sandwich is exact in the completed graph chart.",
+  "boundary": [
+    "does not cover the single-cell type already treated by N6-123",
+    "does not cover the same-target-row type",
+    "does not cover non-graph charts or coupled six-term cocycles",
+    "does not close the full K3,2 or K2,3 normal cone",
+    "does not prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

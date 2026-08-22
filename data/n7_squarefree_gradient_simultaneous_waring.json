@@ -1,0 +1,53 @@
+{
+  "status": "EXACT_COLUMN_UNIFORM_ENDPOINT_EXCLUSION",
+  "field": "characteristic zero",
+  "n": 7,
+  "collection": "the seven first derivatives of x_0*x_1*...*x_6",
+  "common_apolar_ideal": {
+    "generators": [
+      "Y_i^2 for 0 <= i < 7",
+      "Y_0*Y_1*...*Y_6"
+    ],
+    "bounded_monomial_membership_check_count": 2187,
+    "generator_description_verified": true
+  },
+  "coordinate_colon_section": {
+    "linear_form": "Y_0",
+    "ideal": "(Y_0) + ((intersection_i M_i^perp) : Y_0)",
+    "standard_monomial_hilbert_vector": [
+      1,
+      6,
+      15,
+      20,
+      15,
+      6,
+      0
+    ],
+    "standard_monomial_count": 63
+  },
+  "simultaneous_waring": {
+    "apolar_lower_bound": 63,
+    "glynn_differentiated_upper_bound": 64,
+    "strict_interval": [
+      63,
+      64
+    ]
+  },
+  "glynn_identity_check": {
+    "degree_seven_coefficient_count": 1716,
+    "normalizing_denominator": 322560,
+    "nonzero_coefficient_count": 1,
+    "identity_verified": true,
+    "shared_sixth_power_count_after_differentiation": 64
+  },
+  "endpoint_consequence": {
+    "forbidden_shared_power_count": 49,
+    "excluded": true,
+    "scope": "column-uniform/tensor-split endpoint only"
+  },
+  "claim_boundary": [
+    "This does not prove that every 49-term Chow endpoint is column-uniform.",
+    "It does not prove ordinary ChowRank(perm_7) >= 50 by itself.",
+    "It makes no statement about border Chow rank."
+  ]
+}

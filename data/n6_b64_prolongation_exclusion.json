@@ -1,0 +1,246 @@
+{
+  "arithmetic": "integer zero/equality component upper bound",
+  "b64_required_dimension": 456,
+  "claim_boundary": "The fixed-point enumeration supplies an upper bound, not exact prolongation dimensions. Together with the projective torus-fixed-maximum argument in the companion proof it excludes only the b=64 endpoint; it does not prove ChowRank(perm_6)>=27.",
+  "coordinate_extremal_plane": "K_(2,3)",
+  "fixed_F_count": 18564,
+  "fixed_F_count_by_full_rectangle_blocks": {
+    "0": 455,
+    "1": 4095,
+    "2": 9009,
+    "3": 5005
+  },
+  "maximizer_count": 3,
+  "maximizers": [
+    {
+      "full_rectangle_blocks": [],
+      "singleton_axes": [
+        [
+          "square",
+          0
+        ],
+        [
+          "row",
+          0,
+          0,
+          1
+        ],
+        [
+          "row",
+          0,
+          0,
+          2
+        ],
+        [
+          "column",
+          0,
+          0,
+          1
+        ],
+        [
+          "square",
+          1
+        ],
+        [
+          "row",
+          0,
+          1,
+          2
+        ],
+        [
+          "column",
+          1,
+          0,
+          1
+        ],
+        [
+          "square",
+          6
+        ],
+        [
+          "row",
+          1,
+          0,
+          1
+        ],
+        [
+          "row",
+          1,
+          0,
+          2
+        ],
+        [
+          "square",
+          7
+        ],
+        [
+          "row",
+          1,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "full_rectangle_blocks": [],
+      "singleton_axes": [
+        [
+          "square",
+          0
+        ],
+        [
+          "row",
+          0,
+          0,
+          1
+        ],
+        [
+          "row",
+          0,
+          0,
+          2
+        ],
+        [
+          "column",
+          0,
+          0,
+          1
+        ],
+        [
+          "row",
+          0,
+          1,
+          2
+        ],
+        [
+          "square",
+          2
+        ],
+        [
+          "column",
+          2,
+          0,
+          1
+        ],
+        [
+          "square",
+          6
+        ],
+        [
+          "row",
+          1,
+          0,
+          1
+        ],
+        [
+          "row",
+          1,
+          0,
+          2
+        ],
+        [
+          "row",
+          1,
+          1,
+          2
+        ],
+        [
+          "square",
+          8
+        ]
+      ]
+    },
+    {
+      "full_rectangle_blocks": [],
+      "singleton_axes": [
+        [
+          "row",
+          0,
+          0,
+          1
+        ],
+        [
+          "row",
+          0,
+          0,
+          2
+        ],
+        [
+          "square",
+          1
+        ],
+        [
+          "row",
+          0,
+          1,
+          2
+        ],
+        [
+          "column",
+          1,
+          0,
+          1
+        ],
+        [
+          "square",
+          2
+        ],
+        [
+          "column",
+          2,
+          0,
+          1
+        ],
+        [
+          "row",
+          1,
+          0,
+          1
+        ],
+        [
+          "row",
+          1,
+          0,
+          2
+        ],
+        [
+          "square",
+          7
+        ],
+        [
+          "row",
+          1,
+          1,
+          2
+        ],
+        [
+          "square",
+          8
+        ]
+      ]
+    }
+  ],
+  "maximum_prolongation_dimension_upper_bound": 436,
+  "prolongation_component_upper_histogram": {
+    "420": 27,
+    "421": 192,
+    "422": 930,
+    "423": 1560,
+    "424": 2446,
+    "425": 2598,
+    "426": 2420,
+    "427": 1926,
+    "428": 2173,
+    "429": 1560,
+    "430": 1358,
+    "431": 716,
+    "432": 469,
+    "433": 156,
+    "434": 30,
+    "436": 3
+  },
+  "rectangle_weight_blocks": 3,
+  "singleton_weight_blocks": 15,
+  "status": "EXACT_N6_B64_FIXED_POINT_PROLONGATION_UPPER_BOUND",
+  "strict_gap": 20
+}

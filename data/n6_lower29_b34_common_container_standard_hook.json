@@ -1,0 +1,191 @@
+{
+  "a2_72_rows": [
+    {
+      "N6_101_second_shadow_classification_applies": true,
+      "a2": 72,
+      "all_six_alpha_equal_three_forced_by_existing_caps": false,
+      "common_W15_forced": false,
+      "d2": 90,
+      "kappa2": 0,
+      "t2": 18
+    },
+    {
+      "N6_101_second_shadow_classification_applies": true,
+      "a2": 72,
+      "all_six_alpha_equal_three_forced_by_existing_caps": false,
+      "common_W15_forced": false,
+      "d2": 89,
+      "kappa2": 1,
+      "t2": 17
+    },
+    {
+      "N6_101_second_shadow_classification_applies": true,
+      "a2": 72,
+      "all_six_alpha_equal_three_forced_by_existing_caps": true,
+      "common_W15_forced": false,
+      "d2": 88,
+      "kappa2": 2,
+      "t2": 16
+    },
+    {
+      "N6_101_second_shadow_classification_applies": true,
+      "a2": 72,
+      "all_six_alpha_equal_three_forced_by_existing_caps": true,
+      "common_W15_forced": true,
+      "d2": 87,
+      "kappa2": 3,
+      "t2": 15
+    }
+  ],
+  "excluded_branch": {
+    "a2": 72,
+    "kappa2": 3,
+    "reason": "The zero-intersection graph is connected, so the six factor planes span the hook. An invertible block forces common separation and the exact separated bound 33<46; otherwise the directness-free core of N6-072 excludes the all-singular standard hook.",
+    "second_shadow_geometry": "standard flag hook or its transpose",
+    "t2": 15
+  },
+  "global_zero_terms": {
+    "all_nineteen_alpha": 3,
+    "all_nineteen_row_and_column_blocks_forced_singular": true,
+    "alpha_at_most_two_prolongation_cap": 458,
+    "common_container_dimension": "225+t2, hence at most 243",
+    "common_container_statement": "For every epsilon-zero term j, U_j is contained in E3+L_C and F_j is contained in A2=E2+sum_{i in C}F_i.",
+    "critical_middle_intersection_dimension": 46,
+    "critical_six_size": 6,
+    "external_critical_pair_shadow": 12,
+    "external_term_directness": "Every external epsilon-zero F_j is disjoint from the sum of the critical six F_i; hence it is disjoint from every critical F_i.",
+    "minimum_epsilon_zero_terms": 19,
+    "minimum_external_epsilon_zero_terms": 13,
+    "prolongation_lower_bound": 474
+  },
+  "open_boundary": [
+    "the biflag rectangle hook at (a2,kappa2,t2)=(72,3,15)",
+    "both N6-101 geometries at the other three a2=72 states",
+    "all a2=73,74,75 states",
+    "ordinary lower 29 and border rank"
+  ],
+  "quadratic_product_shadow_minima": {
+    "12": 11,
+    "13": 12,
+    "14": 12,
+    "15": 12
+  },
+  "relation_intersection_graph": [
+    {
+      "admissible_intersection_graph_count": 1,
+      "connected_complement_count": 1,
+      "every_complement_connected": true,
+      "kappa": 0
+    },
+    {
+      "admissible_intersection_graph_count": 16,
+      "connected_complement_count": 16,
+      "every_complement_connected": true,
+      "kappa": 1
+    },
+    {
+      "admissible_intersection_graph_count": 141,
+      "connected_complement_count": 141,
+      "every_complement_connected": true,
+      "kappa": 2
+    },
+    {
+      "admissible_intersection_graph_count": 966,
+      "connected_complement_count": 966,
+      "every_complement_connected": true,
+      "kappa": 3
+    }
+  ],
+  "separated_common_W15_bounds": [
+    {
+      "deficit_witness_on_fifteen_column_pairs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "kappa": 0,
+      "maximum_separated_central_dimension": 40
+    },
+    {
+      "deficit_witness_on_fifteen_column_pairs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "kappa": 1,
+      "maximum_separated_central_dimension": 36
+    },
+    {
+      "deficit_witness_on_fifteen_column_pairs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "kappa": 2,
+      "maximum_separated_central_dimension": 36
+    },
+    {
+      "deficit_witness_on_fifteen_column_pairs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "kappa": 3,
+      "maximum_separated_central_dimension": 33
+    }
+  ],
+  "status": [
+    "PURE_COMMON_A2_CONTAINER_REDUCTION",
+    "PURE_A72_KAPPA3_STANDARD_HOOK_EXCLUSION",
+    "EXACT_FINITE_GRAPH_AND_SHADOW_REPLAY",
+    "N6-103"
+  ]
+}

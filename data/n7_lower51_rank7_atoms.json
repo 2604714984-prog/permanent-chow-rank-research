@@ -1,0 +1,77 @@
+{
+  "claim": "Exact accepted rank-seven local atoms for the N=50 defect program: the all-increment surplus row, rank-one support floors, and the unique eight-positive-increment profile under budget 35.",
+  "claim_boundary": "This is not the complete all-rank local atom catalog and does not classify rank-six or lower-rank mixtures.",
+  "nine_or_more_positive_increments_excluded_by_deficiency_cost": true,
+  "rank_one_support_rows": [
+    {
+      "degree3_rank": 15,
+      "degree4_rank": 20,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 22,
+      "support_size": 1
+    },
+    {
+      "degree3_rank": 15,
+      "degree4_rank": 20,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 22,
+      "support_size": 2
+    },
+    {
+      "degree3_rank": 19,
+      "degree4_rank": 26,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 32,
+      "support_size": 3
+    },
+    {
+      "degree3_rank": 19,
+      "degree4_rank": 26,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 32,
+      "support_size": 4
+    },
+    {
+      "degree3_rank": 21,
+      "degree4_rank": 30,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 38,
+      "support_size": 5
+    },
+    {
+      "degree3_rank": 21,
+      "degree4_rank": 30,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 38,
+      "support_size": 6
+    },
+    {
+      "degree3_rank": 21,
+      "degree4_rank": 35,
+      "quadratic_intersection_loss_cap": 3,
+      "rank_one_surplus_floor": 43,
+      "support_size": 7
+    }
+  ],
+  "schema_version": 1,
+  "surplus_by_increment_0_through_7": [
+    0,
+    22,
+    29,
+    26,
+    17,
+    14,
+    7,
+    0
+  ],
+  "unique_eight_positive_profile": [
+    1,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ]
+}

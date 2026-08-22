@@ -1,0 +1,3340 @@
+{
+  "all_rank7_50_residual_cap": 35,
+  "claim_boundary": "These are dimension caps. They do not classify residual multiplication or assert that the cap is attained.",
+  "mixed_49_endpoint_residual_cap": 0,
+  "mixed_50_minimum_profile_residual_cap": 35,
+  "mixed_budget_pairs_checked": 666,
+  "mixed_controls": [
+    {
+      "basis_cost": 0,
+      "outside_cost": 0,
+      "residual_cap": 35
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 1,
+      "residual_cap": 34
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 2,
+      "residual_cap": 33
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 3,
+      "residual_cap": 32
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 4,
+      "residual_cap": 31
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 5,
+      "residual_cap": 30
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 6,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 7,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 8,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 9,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 10,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 11,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 12,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 13,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 14,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 15,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 16,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 17,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 18,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 19,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 20,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 21,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 22,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 23,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 24,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 25,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 26,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 27,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 28,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 29,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 30,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 31,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 32,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 33,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 34,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 0,
+      "outside_cost": 35,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 0,
+      "residual_cap": 34
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 1,
+      "residual_cap": 33
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 2,
+      "residual_cap": 32
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 3,
+      "residual_cap": 31
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 4,
+      "residual_cap": 30
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 5,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 6,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 7,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 8,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 9,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 10,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 11,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 12,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 13,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 14,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 15,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 16,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 17,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 18,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 19,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 20,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 21,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 22,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 23,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 24,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 25,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 26,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 27,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 28,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 29,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 30,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 31,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 32,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 33,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 1,
+      "outside_cost": 34,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 0,
+      "residual_cap": 33
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 1,
+      "residual_cap": 32
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 2,
+      "residual_cap": 31
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 3,
+      "residual_cap": 30
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 4,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 5,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 6,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 7,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 8,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 9,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 10,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 11,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 12,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 13,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 14,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 15,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 16,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 17,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 18,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 19,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 20,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 21,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 22,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 23,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 24,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 25,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 26,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 27,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 28,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 29,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 30,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 31,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 32,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 2,
+      "outside_cost": 33,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 0,
+      "residual_cap": 32
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 1,
+      "residual_cap": 31
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 2,
+      "residual_cap": 30
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 3,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 4,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 5,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 6,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 7,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 8,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 9,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 10,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 11,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 12,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 13,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 14,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 15,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 16,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 17,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 18,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 19,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 20,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 21,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 22,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 23,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 24,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 25,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 26,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 27,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 28,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 29,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 30,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 31,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 3,
+      "outside_cost": 32,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 0,
+      "residual_cap": 31
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 1,
+      "residual_cap": 30
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 2,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 3,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 4,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 5,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 6,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 7,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 8,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 9,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 10,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 11,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 12,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 13,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 14,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 15,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 16,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 17,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 18,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 19,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 20,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 21,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 22,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 23,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 24,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 25,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 26,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 27,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 28,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 29,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 30,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 4,
+      "outside_cost": 31,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 0,
+      "residual_cap": 30
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 1,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 2,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 3,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 4,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 5,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 6,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 7,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 8,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 9,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 10,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 11,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 12,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 13,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 14,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 15,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 16,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 17,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 18,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 19,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 20,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 21,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 22,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 23,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 24,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 25,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 26,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 27,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 28,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 29,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 5,
+      "outside_cost": 30,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 0,
+      "residual_cap": 29
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 1,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 2,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 3,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 4,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 5,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 6,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 7,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 8,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 9,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 10,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 11,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 12,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 13,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 14,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 15,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 16,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 17,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 18,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 19,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 20,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 21,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 22,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 23,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 24,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 25,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 26,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 27,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 28,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 6,
+      "outside_cost": 29,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 0,
+      "residual_cap": 28
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 1,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 2,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 3,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 4,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 5,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 6,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 7,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 8,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 9,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 10,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 11,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 12,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 13,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 14,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 15,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 16,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 17,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 18,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 19,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 20,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 21,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 22,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 23,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 24,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 25,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 26,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 27,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 7,
+      "outside_cost": 28,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 0,
+      "residual_cap": 27
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 1,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 2,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 3,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 4,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 5,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 6,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 7,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 8,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 9,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 10,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 11,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 12,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 13,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 14,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 15,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 16,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 17,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 18,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 19,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 20,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 21,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 22,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 23,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 24,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 25,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 26,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 8,
+      "outside_cost": 27,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 0,
+      "residual_cap": 26
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 1,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 2,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 3,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 4,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 5,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 6,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 7,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 8,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 9,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 10,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 11,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 12,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 13,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 14,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 15,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 16,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 17,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 18,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 19,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 20,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 21,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 22,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 23,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 24,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 25,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 9,
+      "outside_cost": 26,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 0,
+      "residual_cap": 25
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 1,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 2,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 3,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 4,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 5,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 6,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 7,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 8,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 9,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 10,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 11,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 12,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 13,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 14,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 15,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 16,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 17,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 18,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 19,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 20,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 21,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 22,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 23,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 24,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 10,
+      "outside_cost": 25,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 0,
+      "residual_cap": 24
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 1,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 2,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 3,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 4,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 5,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 6,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 7,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 8,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 9,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 10,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 11,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 12,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 13,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 14,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 15,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 16,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 17,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 18,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 19,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 20,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 21,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 22,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 23,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 11,
+      "outside_cost": 24,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 0,
+      "residual_cap": 23
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 1,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 2,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 3,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 4,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 5,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 6,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 7,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 8,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 9,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 10,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 11,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 12,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 13,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 14,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 15,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 16,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 17,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 18,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 19,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 20,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 21,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 22,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 12,
+      "outside_cost": 23,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 0,
+      "residual_cap": 22
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 1,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 2,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 3,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 4,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 5,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 6,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 7,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 8,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 9,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 10,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 11,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 12,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 13,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 14,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 15,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 16,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 17,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 18,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 19,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 20,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 21,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 13,
+      "outside_cost": 22,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 0,
+      "residual_cap": 21
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 1,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 2,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 3,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 4,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 5,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 6,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 7,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 8,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 9,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 10,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 11,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 12,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 13,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 14,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 15,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 16,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 17,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 18,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 19,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 20,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 14,
+      "outside_cost": 21,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 0,
+      "residual_cap": 20
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 1,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 2,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 3,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 4,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 5,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 6,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 7,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 8,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 9,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 10,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 11,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 12,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 13,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 14,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 15,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 16,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 17,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 18,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 19,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 15,
+      "outside_cost": 20,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 0,
+      "residual_cap": 19
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 1,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 2,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 3,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 4,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 5,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 6,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 7,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 8,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 9,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 10,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 11,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 12,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 13,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 14,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 15,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 16,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 17,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 18,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 16,
+      "outside_cost": 19,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 0,
+      "residual_cap": 18
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 1,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 2,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 3,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 4,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 5,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 6,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 7,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 8,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 9,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 10,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 11,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 12,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 13,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 14,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 15,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 16,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 17,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 17,
+      "outside_cost": 18,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 0,
+      "residual_cap": 17
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 1,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 2,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 3,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 4,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 5,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 6,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 7,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 8,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 9,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 10,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 11,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 12,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 13,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 14,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 15,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 16,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 18,
+      "outside_cost": 17,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 0,
+      "residual_cap": 16
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 1,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 2,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 3,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 4,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 5,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 6,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 7,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 8,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 9,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 10,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 11,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 12,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 13,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 14,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 15,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 19,
+      "outside_cost": 16,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 0,
+      "residual_cap": 15
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 1,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 2,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 3,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 4,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 5,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 6,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 7,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 8,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 9,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 10,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 11,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 12,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 13,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 14,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 20,
+      "outside_cost": 15,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 0,
+      "residual_cap": 14
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 1,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 2,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 3,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 4,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 5,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 6,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 7,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 8,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 9,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 10,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 11,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 12,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 13,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 21,
+      "outside_cost": 14,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 0,
+      "residual_cap": 13
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 1,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 2,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 3,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 4,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 5,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 6,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 7,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 8,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 9,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 10,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 11,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 12,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 22,
+      "outside_cost": 13,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 0,
+      "residual_cap": 12
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 1,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 2,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 3,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 4,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 5,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 6,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 7,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 8,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 9,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 10,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 11,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 23,
+      "outside_cost": 12,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 0,
+      "residual_cap": 11
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 1,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 2,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 3,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 4,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 5,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 6,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 7,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 8,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 9,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 10,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 24,
+      "outside_cost": 11,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 0,
+      "residual_cap": 10
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 1,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 2,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 3,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 4,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 5,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 6,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 7,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 8,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 9,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 25,
+      "outside_cost": 10,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 0,
+      "residual_cap": 9
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 1,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 2,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 3,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 4,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 5,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 6,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 7,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 8,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 26,
+      "outside_cost": 9,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 0,
+      "residual_cap": 8
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 1,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 2,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 3,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 4,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 5,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 6,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 7,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 27,
+      "outside_cost": 8,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 0,
+      "residual_cap": 7
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 1,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 2,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 3,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 4,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 5,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 6,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 28,
+      "outside_cost": 7,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 0,
+      "residual_cap": 6
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 1,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 2,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 3,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 4,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 5,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 29,
+      "outside_cost": 6,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 30,
+      "outside_cost": 0,
+      "residual_cap": 5
+    },
+    {
+      "basis_cost": 30,
+      "outside_cost": 1,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 30,
+      "outside_cost": 2,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 30,
+      "outside_cost": 3,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 30,
+      "outside_cost": 4,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 30,
+      "outside_cost": 5,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 31,
+      "outside_cost": 0,
+      "residual_cap": 4
+    },
+    {
+      "basis_cost": 31,
+      "outside_cost": 1,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 31,
+      "outside_cost": 2,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 31,
+      "outside_cost": 3,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 31,
+      "outside_cost": 4,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 32,
+      "outside_cost": 0,
+      "residual_cap": 3
+    },
+    {
+      "basis_cost": 32,
+      "outside_cost": 1,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 32,
+      "outside_cost": 2,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 32,
+      "outside_cost": 3,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 33,
+      "outside_cost": 0,
+      "residual_cap": 2
+    },
+    {
+      "basis_cost": 33,
+      "outside_cost": 1,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 33,
+      "outside_cost": 2,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 34,
+      "outside_cost": 0,
+      "residual_cap": 1
+    },
+    {
+      "basis_cost": 34,
+      "outside_cost": 1,
+      "residual_cap": 0
+    },
+    {
+      "basis_cost": 35,
+      "outside_cost": 0,
+      "residual_cap": 0
+    }
+  ],
+  "schema_version": 1
+}

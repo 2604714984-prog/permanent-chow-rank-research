@@ -41,7 +41,7 @@ This is not a theorem about all two-defect decompositions of `perm_6` and does
 not change the unrestricted interval
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 ## 1. Fixed-base atoms

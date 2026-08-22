@@ -1,0 +1,135 @@
+{
+  "claim_boundary": "This classifies the ordinary 72-to-89 equality locus. The extra missing-pair Boolean branches need not be ambient linear transports of actual Chow frames. The theorem does not exclude an actual x=72 packet, global b=34, ordinary lower 29, or any border-rank configuration.",
+  "coordinate_fixed_points": {
+    "coordinate_fixed_point_count": 2700,
+    "every_coordinate_equality_support_has_a_unique_product_parent": true,
+    "every_coordinate_equality_support_is_the_eight_source_preimage_complement_of_one_parent_quadratic_cell": true,
+    "every_family_is_all_twenty_triples_minus_the_four_supersets_of_one_pair": true,
+    "minimizing_ferrers_profiles": [
+      [
+        20,
+        20,
+        16,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "minimum_first_product_shadow": 89,
+    "missing_quadratic_cells_per_parent": 90,
+    "original_support_classification_proved_without_reverse_compression": true,
+    "product_parent_count": 30,
+    "size_16_shadow_14_family_count": 15,
+    "two_triples_inside_one_C_U4_3_always_have_shadow_five": true
+  },
+  "formal_germ": {
+    "boolean_component_count_at_each_fixed_point": 1024,
+    "complete_formal_germ_is_the_union_of_the_1024_boolean_branches": true,
+    "component_dimension": 6,
+    "forbidden_quadratic_generator_count": 26,
+    "free_group_sizes": [
+      4,
+      4,
+      2,
+      2,
+      4,
+      4
+    ],
+    "linear_dimension": 20
+  },
+  "projective_globalization": {
+    "every_72_to_89_point_lies_in_a_partitioned_80_to_90_product_parent": true,
+    "every_equality_point_has_second_shadow_dimension": 24,
+    "second_shadow_is_partitioned_4_by_6_product_or_transpose": true,
+    "the_72_plane_is_its_full_cubic_prolongation_inside_the_permanent_space": true,
+    "the_89_plane_is_a_hyperplane_in_the_parent_90_plane": true
+  },
+  "standard_local_certificate": {
+    "grounded_quadratic_initial_forms": {
+      "exact_rank_over_Q": 26,
+      "forbidden_unit_count": 26,
+      "grounded_equation_count": 153304,
+      "group_sizes_in_symbolic_order": [
+        4,
+        4,
+        2,
+        2,
+        4,
+        4
+      ],
+      "initial_ideal": "I(K4)+I(K4)+I(K2)+I(K2)+I(K4)+I(K4)",
+      "nonzero_raw_row_count": 1328,
+      "raw_coefficient_histogram": {
+        "2": 1328
+      }
+    },
+    "linear_incidence": {
+      "coordinate_prolongation_dimension": 72,
+      "eta_only_root_count": 0,
+      "free_dimension": 20,
+      "new_missing_cell_root_count": 12,
+      "parent_root_count": 8
+    },
+    "missing_quadratic_cell": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "orientation": "row_product_missing_cell",
+    "symbolic_boolean_branches": {
+      "all_degree_three_to_two_containments_hold": true,
+      "all_degree_two_to_one_containments_hold": true,
+      "count": 1024,
+      "dimension": 6,
+      "second_shadow_dimension": 24,
+      "selected_chart_jacobian_is_identity": true
+    }
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_B72_EQUALITY_LOCUS_CLASSIFICATION",
+    "EXACT_INTEGER_LINEAR_AND_QUADRATIC_ELIMINATION",
+    "EXACT_SYMBOLIC_1024_BRANCH_REPLAY",
+    "N6-092"
+  ]
+}

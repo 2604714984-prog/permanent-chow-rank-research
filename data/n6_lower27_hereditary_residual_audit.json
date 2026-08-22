@@ -1,0 +1,263 @@
+{
+  "arithmetic": "exact integers and Fraction over Q",
+  "claim_boundary": "This is a necessary consequence of a hypothetical 26-term decomposition. It does not exclude that decomposition and does not prove ChowRank(perm_6)>=27.",
+  "conditional_six_subset_middle_lower": "ceil(96-tau/5)",
+  "fixed_six_high_layer_table": [
+    {
+      "b": 52,
+      "central_rank_lower": 88,
+      "margin": 0,
+      "required_for_residual_384": 88,
+      "shadow_lower": 69
+    },
+    {
+      "b": 53,
+      "central_rank_lower": 92,
+      "margin": 2,
+      "required_for_residual_384": 90,
+      "shadow_lower": 70
+    },
+    {
+      "b": 54,
+      "central_rank_lower": 96,
+      "margin": 4,
+      "required_for_residual_384": 92,
+      "shadow_lower": 71
+    },
+    {
+      "b": 55,
+      "central_rank_lower": 98,
+      "margin": 4,
+      "required_for_residual_384": 94,
+      "shadow_lower": 72
+    },
+    {
+      "b": 56,
+      "central_rank_lower": 98,
+      "margin": 2,
+      "required_for_residual_384": 96,
+      "shadow_lower": 72
+    },
+    {
+      "b": 57,
+      "central_rank_lower": 100,
+      "margin": 2,
+      "required_for_residual_384": 98,
+      "shadow_lower": 73
+    },
+    {
+      "b": 58,
+      "central_rank_lower": 110,
+      "margin": 10,
+      "required_for_residual_384": 100,
+      "shadow_lower": 74
+    },
+    {
+      "b": 59,
+      "central_rank_lower": 112,
+      "margin": 10,
+      "required_for_residual_384": 102,
+      "shadow_lower": 75
+    },
+    {
+      "b": 60,
+      "central_rank_lower": 112,
+      "margin": 8,
+      "required_for_residual_384": 104,
+      "shadow_lower": 75
+    },
+    {
+      "b": 61,
+      "central_rank_lower": 116,
+      "margin": 10,
+      "required_for_residual_384": 106,
+      "shadow_lower": 76
+    },
+    {
+      "b": 62,
+      "central_rank_lower": 118,
+      "margin": 10,
+      "required_for_residual_384": 108,
+      "shadow_lower": 77
+    },
+    {
+      "b": 63,
+      "central_rank_lower": 118,
+      "margin": 8,
+      "required_for_residual_384": 110,
+      "shadow_lower": 77
+    },
+    {
+      "b": 64,
+      "central_rank_lower": 120,
+      "margin": 8,
+      "required_for_residual_384": 112,
+      "shadow_lower": 78
+    }
+  ],
+  "hereditary_consequence": "Every nonempty subset of the displayed twenty residual terms is a minimum Chow decomposition certified by its own middle catalecticant; every such central relation-pairing radical has dimension at most 9.",
+  "hereditary_subset_middle_rank_bounds": [
+    {
+      "middle_rank_lower": 4,
+      "shorter_expression_cap": 0,
+      "strict_margin": 4,
+      "subset_size": 1
+    },
+    {
+      "middle_rank_lower": 24,
+      "shorter_expression_cap": 20,
+      "strict_margin": 4,
+      "subset_size": 2
+    },
+    {
+      "middle_rank_lower": 44,
+      "shorter_expression_cap": 40,
+      "strict_margin": 4,
+      "subset_size": 3
+    },
+    {
+      "middle_rank_lower": 64,
+      "shorter_expression_cap": 60,
+      "strict_margin": 4,
+      "subset_size": 4
+    },
+    {
+      "middle_rank_lower": 84,
+      "shorter_expression_cap": 80,
+      "strict_margin": 4,
+      "subset_size": 5
+    },
+    {
+      "middle_rank_lower": 104,
+      "shorter_expression_cap": 100,
+      "strict_margin": 4,
+      "subset_size": 6
+    },
+    {
+      "middle_rank_lower": 124,
+      "shorter_expression_cap": 120,
+      "strict_margin": 4,
+      "subset_size": 7
+    },
+    {
+      "middle_rank_lower": 144,
+      "shorter_expression_cap": 140,
+      "strict_margin": 4,
+      "subset_size": 8
+    },
+    {
+      "middle_rank_lower": 164,
+      "shorter_expression_cap": 160,
+      "strict_margin": 4,
+      "subset_size": 9
+    },
+    {
+      "middle_rank_lower": 184,
+      "shorter_expression_cap": 180,
+      "strict_margin": 4,
+      "subset_size": 10
+    },
+    {
+      "middle_rank_lower": 204,
+      "shorter_expression_cap": 200,
+      "strict_margin": 4,
+      "subset_size": 11
+    },
+    {
+      "middle_rank_lower": 224,
+      "shorter_expression_cap": 220,
+      "strict_margin": 4,
+      "subset_size": 12
+    },
+    {
+      "middle_rank_lower": 244,
+      "shorter_expression_cap": 240,
+      "strict_margin": 4,
+      "subset_size": 13
+    },
+    {
+      "middle_rank_lower": 264,
+      "shorter_expression_cap": 260,
+      "strict_margin": 4,
+      "subset_size": 14
+    },
+    {
+      "middle_rank_lower": 284,
+      "shorter_expression_cap": 280,
+      "strict_margin": 4,
+      "subset_size": 15
+    },
+    {
+      "middle_rank_lower": 304,
+      "shorter_expression_cap": 300,
+      "strict_margin": 4,
+      "subset_size": 16
+    },
+    {
+      "middle_rank_lower": 324,
+      "shorter_expression_cap": 320,
+      "strict_margin": 4,
+      "subset_size": 17
+    },
+    {
+      "middle_rank_lower": 344,
+      "shorter_expression_cap": 340,
+      "strict_margin": 4,
+      "subset_size": 18
+    },
+    {
+      "middle_rank_lower": 364,
+      "shorter_expression_cap": 360,
+      "strict_margin": 4,
+      "subset_size": 19
+    },
+    {
+      "middle_rank_lower": 384,
+      "shorter_expression_cap": 380,
+      "strict_margin": 4,
+      "subset_size": 20
+    }
+  ],
+  "hypothetical_total_terms": 26,
+  "low_maximum_rank_branches": [
+    {
+      "central_intersection_lower": 46,
+      "fixed_six_quadratic_projection_cap": 58,
+      "individual_quadratic_rank_cap": 11,
+      "maximum_individual_middle_rank": 17,
+      "selected_six_middle_rank_lower": 92,
+      "shadow_lower": 65
+    },
+    {
+      "central_intersection_lower": 54,
+      "fixed_six_quadratic_projection_cap": 68,
+      "global_extra_span_upper": 34,
+      "individual_quadratic_rank_cap": 13,
+      "maximum_individual_middle_rank": 18,
+      "selected_six_middle_rank_lower": 88,
+      "shadow_lower": 71
+    }
+  ],
+  "maximum_individual_middle_rank_forced": 20,
+  "minimum_number_of_full_middle_rank_residual_terms": 12,
+  "rank_19_excluded_by": "N6-031",
+  "residual_colored_relations_mod_permanent_lower": 320,
+  "residual_literal_quotient_dimension_window": [
+    20,
+    64
+  ],
+  "residual_permanent_middle_intersection_window": [
+    336,
+    380
+  ],
+  "selected_six_intersection_cut": {
+    "first_shadow_excluded_b": 65,
+    "high_branch": "b>=52 uses the exact fixed-six layer table",
+    "low_branch": "b<=51 uses h>=120-2b/3>=2b-16",
+    "quadratic_projection_cap": 78,
+    "shadow_at_65": 79
+  },
+  "status": "EXACT_N6_LOWER27_HEREDITARY_RESIDUAL_REDUCTION",
+  "twenty_term_residual_exact_chow_rank": 20,
+  "twenty_term_residual_middle_rank_lower": 384
+}

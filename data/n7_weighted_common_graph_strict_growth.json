@@ -1,0 +1,99 @@
+{
+  "claim_boundary": [
+    "The correction uses only the already proved H_Z(5)<=40 ceiling and strict growth of the Hilbert function of 42 distinct reduced projective points until it reaches 42.",
+    "The surviving rank pairs are (33,39), (34,38), and (35,37), refined into six possible H_Z(5) cases.",
+    "The curve-union constructions in the earlier checkpoint realize only the displayed H_Z(3),H_Z(4) profiles; they do not certify degree-six permanent-target containment.",
+    "No weighted common-graph closure, Packet-B closure, lower-50 theorem, exact-rank-64 theorem, or border-rank conclusion follows."
+  ],
+  "degree_six_target_h5_ceiling": 40,
+  "eliminated_strata": [
+    {
+      "reason": "Degree-six target containment gives H_Z(5)<=40, while reduced-point strict growth from H_Z(4)=40 requires H_Z(5)>=41.",
+      "stratum": [
+        32,
+        40
+      ]
+    },
+    {
+      "reason": "H_Z(3)=H_Z(4)<42 is a forbidden plateau for a reduced length-42 projective scheme.",
+      "stratum": [
+        36,
+        36
+      ]
+    }
+  ],
+  "point_count": 42,
+  "pre_growth_candidates": [
+    [
+      32,
+      40
+    ],
+    [
+      33,
+      39
+    ],
+    [
+      34,
+      38
+    ],
+    [
+      35,
+      37
+    ],
+    [
+      36,
+      36
+    ]
+  ],
+  "remaining_target_compatible_strata": [
+    {
+      "admissible_h5_values": [
+        40
+      ],
+      "degree_five_growth": [
+        1
+      ],
+      "stratum": [
+        33,
+        39
+      ]
+    },
+    {
+      "admissible_h5_values": [
+        39,
+        40
+      ],
+      "degree_five_growth": [
+        1,
+        2
+      ],
+      "stratum": [
+        34,
+        38
+      ]
+    },
+    {
+      "admissible_h5_values": [
+        38,
+        39,
+        40
+      ],
+      "degree_five_growth": [
+        1,
+        2,
+        3
+      ],
+      "stratum": [
+        35,
+        37
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_commit": "170bd086a2c836c53160cf6b353e167b1228586c",
+  "status": "B1_STRICT_GROWTH_CORRECTION",
+  "supersedes": [
+    "The four-stratum target-compatible classification in docs/n7_weighted_common_graph_interface.md at the source commit.",
+    "The field target_compatible_geometrically_feasible_strata in data/n7_weighted_common_graph_interface.json at the source commit."
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "conclusion": "For three distinct squarefree degree-six coordinate monomials, central rank above 40 certifies Chow rank three and forces the central pairing radical to have dimension at most 8; equality is attained.",
+  "degree": 6,
+  "equality_type_count": 4,
+  "equality_types": [
+    {
+      "central_rank": 44,
+      "pairing_rank_over_Q": 0,
+      "radical_dimension": 8,
+      "rho": 8,
+      "supports": [
+        [
+          0,
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        0,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "central_rank": 44,
+      "pairing_rank_over_Q": 0,
+      "radical_dimension": 8,
+      "rho": 8,
+      "supports": [
+        [
+          0,
+          1,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        0,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "central_rank": 44,
+      "pairing_rank_over_Q": 0,
+      "radical_dimension": 8,
+      "rho": 8,
+      "supports": [
+        [
+          0,
+          1,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        1,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "central_rank": 44,
+      "pairing_rank_over_Q": 0,
+      "radical_dimension": 8,
+      "rho": 8,
+      "supports": [
+        [
+          0,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          3,
+          4,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        1,
+        1,
+        0,
+        3
+      ]
+    }
+  ],
+  "equality_witness_direct_central_rank_over_Q": 44,
+  "field": "Q",
+  "maximum_radical_dimension_among_strict_types": 8,
+  "method": "exact-rational-exhaustion-of-three-set-venn-types",
+  "rho_nine_type_count": 3,
+  "rho_nine_types": [
+    {
+      "central_rank": 46,
+      "pairing_rank_over_Q": 4,
+      "radical_dimension": 5,
+      "rho": 9,
+      "supports": [
+        [
+          0,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        1,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "central_rank": 46,
+      "pairing_rank_over_Q": 4,
+      "radical_dimension": 5,
+      "rho": 9,
+      "supports": [
+        [
+          0,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "central_rank": 46,
+      "pairing_rank_over_Q": 4,
+      "radical_dimension": 5,
+      "rho": 9,
+      "supports": [
+        [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        [
+          0,
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "venn_parameters_ab_ac_bc_only_and_triple": [
+        2,
+        2,
+        1,
+        2
+      ]
+    }
+  ],
+  "scope": "This is a coordinate-squarefree three-term theorem. It does not classify arbitrary three-term Chow decompositions or q>=4.",
+  "term_count": 3,
+  "two_term_central_rank_cap": 40,
+  "types_with_central_rank_strictly_above_two_term_cap": 180,
+  "valid_ordered_venn_types": 237
+}

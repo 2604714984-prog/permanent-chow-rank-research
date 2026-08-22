@@ -1,0 +1,121 @@
+{
+  "claim_boundary": [
+    "The seven omitted-column torus blocks are streamed through common-kernel updates; the 25,827,165-dimensional full Sym6(Q49) basis is never materialized.",
+    "A nonzero projected target quotient is a valid obstruction for the displayed candidate; a zero quotient is only a survivor of this projection.",
+    "The Glynn49 truncation has QQ-exact permanent target quotient rank 35 and is excluded; it is not a permanent decomposition.",
+    "The Glynn64 control survives with quotient rank zero, but this package does not reprove the degree-seven Glynn identity.",
+    "The non-tensor control concerns Sylvester equality only and is not a Packet-A permanent solution.",
+    "No arbitrary 49-term factor-plane classification, A-CLOSED result, ordinary lower 50, or border-rank theorem is proved."
+  ],
+  "general_factor_plane_projection_control": {
+    "ambient_factor_coordinate_count": 49,
+    "coefficient_ring": "ZZ exact",
+    "column_uniform_formula_matches_general_projection": true,
+    "factor_count": 7,
+    "maximum_projected_DP_state_count": 59136,
+    "non_column_uniform_nonzero_subset_columns": [
+      0,
+      6
+    ],
+    "nonzero_labelled_subset_columns": [
+      0
+    ],
+    "off_column_factor_coefficient_exercised": true,
+    "omitted_column": 6,
+    "projected_block_shape": [
+      924,
+      7
+    ]
+  },
+  "labelled_equality_incidence_controls": {
+    "glynn49_truncation": {
+      "QQ_exact_Walsh_target_quotient_rank": 35,
+      "decision": "PERMANENT_SPECIFIC_NONZERO_TARGET_DEFECT",
+      "finite_field_inverse_coefficient_relation_pairing_rank_per_block": 0,
+      "finite_field_relation_orthogonality_holds": true,
+      "finite_field_streamed_target_incidence": {
+        "augmented_rank": 378,
+        "base_rank": 343,
+        "blocks": [
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 338, "base_common_kernel_dimension_after_block": 294, "omitted_column": 0, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 284, "base_common_kernel_dimension_after_block": 245, "omitted_column": 1, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 230, "base_common_kernel_dimension_after_block": 196, "omitted_column": 2, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 176, "base_common_kernel_dimension_after_block": 147, "omitted_column": 3, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 122, "base_common_kernel_dimension_after_block": 98, "omitted_column": 4, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 68, "base_common_kernel_dimension_after_block": 49, "omitted_column": 5, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 49, "augmented_common_kernel_dimension_after_block": 14, "base_common_kernel_dimension_after_block": 0, "omitted_column": 6, "target_nonzero_column_count": 7}
+        ],
+        "field": "F_65521",
+        "labelled_degree_6_column_count": 343,
+        "permanent_target_column_count": 49,
+        "projected_survivor": false,
+        "rows_per_symmetrized_block": 924,
+        "streamed_without_vertical_materialization": true,
+        "target_quotient_rank": 35,
+        "term_count": 49,
+        "torus_block_count": 7
+      },
+      "term_count": 49
+    },
+    "glynn64_positive_span_control": {
+      "QQ_exact_Walsh_target_quotient_rank": 0,
+      "decision": "PROJECTED_EXACT_CONTROL_SURVIVOR",
+      "finite_field_inverse_coefficient_relation_pairing_rank_per_block": 0,
+      "finite_field_relation_orthogonality_holds": true,
+      "finite_field_streamed_target_incidence": {
+        "augmented_rank": 448,
+        "base_rank": 448,
+        "blocks": [
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 433, "base_common_kernel_dimension_after_block": 384, "omitted_column": 0, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 369, "base_common_kernel_dimension_after_block": 320, "omitted_column": 1, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 305, "base_common_kernel_dimension_after_block": 256, "omitted_column": 2, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 241, "base_common_kernel_dimension_after_block": 192, "omitted_column": 3, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 177, "base_common_kernel_dimension_after_block": 128, "omitted_column": 4, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 113, "base_common_kernel_dimension_after_block": 64, "omitted_column": 5, "target_nonzero_column_count": 7},
+          {"aggregate_nonzero_column_count": 64, "augmented_common_kernel_dimension_after_block": 49, "base_common_kernel_dimension_after_block": 0, "omitted_column": 6, "target_nonzero_column_count": 7}
+        ],
+        "field": "F_65521",
+        "labelled_degree_6_column_count": 448,
+        "permanent_target_column_count": 49,
+        "projected_survivor": true,
+        "rows_per_symmetrized_block": 924,
+        "streamed_without_vertical_materialization": true,
+        "target_quotient_rank": 0,
+        "term_count": 64,
+        "torus_block_count": 7
+      },
+      "term_count": 64
+    },
+    "non_tensor_sylvester_control": {
+      "condition_holds": true,
+      "coupling_defect": 0,
+      "kernel_b_dimension": 0,
+      "kernel_b_intersection_image_c_dimension": 0,
+      "middle_dimension": 15,
+      "rank_b": 15,
+      "rank_bc": 9,
+      "rank_c": 9,
+      "tensor_split": false
+    }
+  },
+  "rank_fields": {
+    "Walsh_target_quotient": "QQ exact",
+    "general_projection_coefficients": "ZZ exact",
+    "relation_pairing_and_non_tensor_Sylvester_control": "F_65521",
+    "streamed_full_labelled_block_incidence": "F_65521"
+  },
+  "resource_preflight": {
+    "conservative_peak_memory_mib": 128,
+    "full_Sym6_Q49_dimension_not_materialized": 25827165,
+    "largest_streamed_control_shape": [
+      924,
+      497
+    ],
+    "largest_streamed_dense_entry_count": 459228,
+    "symmetrized_rows_per_block": 924,
+    "torus_block_count": 7,
+    "vertical_6468_row_matrix_materialized": false
+  },
+  "schema_version": 1,
+  "status": "PACKET_A_PERMANENT_BLOCK_A03_A05_BOUNDED_CONTROLS"
+}

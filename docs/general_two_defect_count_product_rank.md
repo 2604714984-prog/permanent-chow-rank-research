@@ -54,7 +54,7 @@ tensor rank, or unrestricted Chow rank. The active unrestricted `n=6`
 interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 ## 1. Fixed-base atoms and the valid restriction

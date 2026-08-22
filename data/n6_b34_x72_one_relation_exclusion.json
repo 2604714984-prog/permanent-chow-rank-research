@@ -1,0 +1,233 @@
+{
+  "actual_packet_excluded": true,
+  "all_singular_branch": {
+    "a_rank_at_least_two_active_row_block_would_force_common_rank_six": true,
+    "excluded": true,
+    "frame_rank_upper": 4,
+    "n6071_common_quotient_same_row_synchronization_reapplies": true,
+    "otherwise_each_of_four_active_row_blocks_has_rank_at_most_one": true,
+    "required_frame_rank": 6
+  },
+  "claim_boundary": "This excludes only the all-epsilon-zero one-quadratic-relation common-W15 packet. It does not exclude the direct t16 or one-defective-term packets, x_A=72 in full, global b=34, ordinary lower 29, or any border-rank configuration.",
+  "good_pair_consequence": {
+    "all_seven_factor_planes_lie_in_the_product_24_plane": true,
+    "difference_dimension": 15,
+    "factor_pair_span_upper": 12,
+    "factor_planes_are_transverse_and_their_sum_lies_in_the_product_24_plane": true,
+    "their_total_sum_equals_the_product_24_plane": true,
+    "universal_product_shadow_lower": 12
+  },
+  "invertible_block_branch": {
+    "a_two_dimensional_row_factor_span_would_put_six_frames_in_one_two_plane_and_the_last_in_at_most_one_extra_line": true,
+    "excluded": true,
+    "n6061_common_quotient_domain_propagates_separation_to_all_seven_frames": true,
+    "n6069_on_a_good_pair_gives_common_column_or_row_separation": true,
+    "n6070_on_good_edges_forces_each_frame_row_factor_span_to_have_dimension_at_most_two": true,
+    "observed_quadratic_sum_dimension": 104,
+    "observed_remainder_modulo_15": 14,
+    "required_total_row_span": 4,
+    "resulting_total_row_span_upper": 3,
+    "separated_quadratic_sum_dimension_must_be_a_multiple_of_15": true,
+    "therefore_every_frame_row_factor_span_is_one_dimensional": true
+  },
+  "packet": {
+    "common_quotient_dimension": 15,
+    "difference_domain_dimension": 90,
+    "difference_kernel_dimension": 1,
+    "first_shadow_dimension": 24,
+    "frame_count": 7,
+    "permanent_difference_space_dimension": 89,
+    "product_parent_row_dimension": 4,
+    "quadratic_sum_dimension": 104
+  },
+  "pair_difference_graph": {
+    "cases": [
+      {
+        "bad_edge": null,
+        "good_edge_count": 21,
+        "minimum_good_degree": 6
+      },
+      {
+        "bad_edge": [
+          0,
+          1
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          0,
+          2
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          0,
+          3
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          0,
+          4
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          0,
+          5
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          0,
+          6
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          1,
+          2
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          1,
+          3
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          1,
+          4
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          1,
+          5
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          1,
+          6
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          2,
+          3
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          2,
+          4
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          2,
+          5
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          2,
+          6
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          3,
+          4
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          3,
+          5
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          3,
+          6
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          4,
+          5
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          4,
+          6
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      },
+      {
+        "bad_edge": [
+          5,
+          6
+        ],
+        "good_edge_count": 20,
+        "minimum_good_degree": 5
+      }
+    ],
+    "every_vertex_has_two_good_neighbors_joined_by_a_good_edge": true,
+    "good_edge_count_is_21_or_20": true,
+    "kernel_line_positions": 22,
+    "minimum_good_degree": 5
+  },
+  "status": [
+    "PURE_ACTUAL_B34_X72_ONE_RELATION_EXCLUSION",
+    "EXACT_KERNEL_LINE_GRAPH_REPLAY",
+    "N6-094"
+  ],
+  "updated_x72_frontier": [
+    "direct_t16_packet",
+    "one_defective_term_t15_packet"
+  ]
+}

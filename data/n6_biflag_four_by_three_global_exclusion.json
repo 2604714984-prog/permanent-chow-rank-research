@@ -1,0 +1,279 @@
+{
+  "actual_pair_consequence": "N6-068 excludes an actual complementary Chow pair on every product U in Z. Therefore the biflag second-shadow branch at (a2,kappa2,t2)=(72,3,15) is impossible.",
+  "ambient": {
+    "biflag": "M=R4 tensor C5 + R5 tensor C3",
+    "dimension_of_K": 72,
+    "intrinsic_quadratic_space": "K=E2 intersect Sym^2(M)"
+  },
+  "claim_boundary": "The three affine 4x3 chart reductions are exact characteristic-zero certificates over Q. The component globalization is pure projective torus geometry and uses the N6-105 coordinate enumeration and the N6-105/N6-106 local chart theorems. Only the N6-103 biflag branch is excluded here.",
+  "exception_reduction": {
+    "conclusion": "The two noncore R4 tensor B3 charts contain only column-factor products; the tail-row chart contains only row-factor products A4' tensor C3.",
+    "minimum_fixed_weight_rank": 6,
+    "orbit_certificates": [
+      {
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
+        "coordinate_exception_ranks_over_Q": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "exception_parameter_count": 12,
+        "factor_parameter_count": 6,
+        "minimum_fixed_weight_rank": 6,
+        "mode": "column",
+        "name": "4x3_two_core_columns",
+        "pure_exception_weight_count": 12,
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5
+      },
+      {
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
+        "coordinate_exception_ranks_over_Q": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "exception_parameter_count": 24,
+        "factor_parameter_count": 6,
+        "minimum_fixed_weight_rank": 6,
+        "mode": "column",
+        "name": "4x3_one_core_column",
+        "pure_exception_weight_count": 24,
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5
+      },
+      {
+        "conclusion": "Every rank-at-most-five leakage point has zero exception parameters.",
+        "coordinate_exception_ranks_over_Q": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "exception_parameter_count": 24,
+        "factor_parameter_count": 4,
+        "minimum_fixed_weight_rank": 6,
+        "mode": "row",
+        "name": "4x3_tail_row",
+        "pure_exception_weight_count": 24,
+        "rank_allowed_by_retaining_13_of_18_rectangles": 5
+      }
+    ]
+  },
+  "globalization": {
+    "closed_product_locus": "Gr(3,R) x Gr(4,C) union Gr(4,R) x Gr(3,C)",
+    "conclusion": "Every U with dim(K intersect Sym^2(U)) at least 13 is a product A3 tensor B4 or A4 tensor B3.",
+    "coordinate_fixed_point_count": 34,
+    "coordinate_orbit_count": 6,
+    "local_chart_coverage": {
+      "N6-105_core_4x3": 1,
+      "N6-106_3x4": 2,
+      "N6-107_remaining_4x3": 3
+    },
+    "projective_locus": "Z={U in Gr(12,M): dim(K intersect Sym^2(U)) at least 13}"
+  },
+  "linear_graph_reduction": {
+    "minimum_rank_outside_every_kernel": 6,
+    "orbit_certificates": [
+      {
+        "base_rectangle_dimension": 18,
+        "discarded_exception_touched_weight_count": 4,
+        "effective_linear_weight_count": 80,
+        "exception_parameter_count": 12,
+        "factor_parameter_count": 6,
+        "graph_variable_count": 132,
+        "kernel_dimension": 18,
+        "linear_equation_rank_over_Q": 114,
+        "linear_only_weight_count": 84,
+        "minimum_rank_outside_kernel": 6,
+        "mode": "column",
+        "name": "4x3_two_core_columns",
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 12,
+            "independent_output_weight_count": 0,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 0,
+            "variable_count": 1
+          },
+          {
+            "group_count": 88,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 2
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "base_rectangle_dimension": 18,
+        "discarded_exception_touched_weight_count": 16,
+        "effective_linear_weight_count": 72,
+        "exception_parameter_count": 24,
+        "factor_parameter_count": 6,
+        "graph_variable_count": 132,
+        "kernel_dimension": 30,
+        "linear_equation_rank_over_Q": 102,
+        "linear_only_weight_count": 88,
+        "minimum_rank_outside_kernel": 6,
+        "mode": "column",
+        "name": "4x3_one_core_column",
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 24,
+            "independent_output_weight_count": 0,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 0,
+            "variable_count": 1
+          },
+          {
+            "group_count": 84,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "base_rectangle_dimension": 18,
+        "discarded_exception_touched_weight_count": 6,
+        "effective_linear_weight_count": 78,
+        "exception_parameter_count": 24,
+        "factor_parameter_count": 4,
+        "graph_variable_count": 132,
+        "kernel_dimension": 28,
+        "linear_equation_rank_over_Q": 104,
+        "linear_only_weight_count": 84,
+        "minimum_rank_outside_kernel": 6,
+        "mode": "row",
+        "name": "4x3_tail_row",
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 24,
+            "independent_output_weight_count": 0,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 0,
+            "variable_count": 1
+          },
+          {
+            "group_count": 78,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 6,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          }
+        ]
+      }
+    ],
+    "rank_allowed_by_retaining_13_of_18_rectangles": 5
+  },
+  "partial_section_difference_consequence": "At the a2=72 states with kappa2=1 or 2, every complementary-edge pair shadow carrying a 13- or 14-dimensional section difference is also a product. Excluding such partial actual section differences is a new open interface; N6-068 requires the full dimension fifteen.",
+  "product_dimension_gate": {
+    "noncore_R4_tensor_B3": {
+      "branch_count": 9,
+      "branch_dimension": 2,
+      "required_column_quadratic_dimension": 3,
+      "row_quadratic_dimension": 6
+    },
+    "tail_A4_tensor_C3": {
+      "branch_count": 1,
+      "branch_dimension": 4,
+      "column_quadratic_dimension": 3,
+      "row_quadratic_dimensions": [
+        5,
+        6
+      ]
+    }
+  },
+  "remaining_lower29_frontier": "The other nine N6-102 scalar states remain. In particular this theorem does not prove ordinary lower 29, exact Chow rank 32, or a border-rank bound.",
+  "status": [
+    "EXACT_QQ_BIFLAG_4X3_GRAPH_REDUCTION",
+    "PURE_PROJECTIVE_BIFLAG_PRODUCT_GLOBALIZATION",
+    "CERTIFIED_A72_KAPPA3_BIFLAG_BRANCH_EXCLUSION",
+    "N6-107"
+  ]
+}

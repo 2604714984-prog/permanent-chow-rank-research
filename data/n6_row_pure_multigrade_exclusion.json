@@ -1,0 +1,57 @@
+{
+  "b50_equality_shadow_dimension": 23,
+  "claim_boundary": "The result requires K0=Q tensor S0(C). It does not cover partial-rank Smith packets, column jets, different column frames across nodes, End(S0(C))-valued quotient gauges, arbitrary collision trees, the full b=50 endpoint, or lower twenty-eight.",
+  "dimension_rows": [
+    {
+      "can_contain_a_five_plane_Q": false,
+      "row_pure_shadow_dimension": 6,
+      "row_support_dimension_r": 1,
+      "squarefree_row_cap": 0
+    },
+    {
+      "can_contain_a_five_plane_Q": false,
+      "row_pure_shadow_dimension": 12,
+      "row_support_dimension_r": 2,
+      "squarefree_row_cap": 1
+    },
+    {
+      "can_contain_a_five_plane_Q": false,
+      "row_pure_shadow_dimension": 18,
+      "row_support_dimension_r": 3,
+      "squarefree_row_cap": 3
+    },
+    {
+      "can_contain_a_five_plane_Q": true,
+      "row_pure_shadow_dimension": 24,
+      "row_support_dimension_r": 4,
+      "squarefree_row_cap": 6
+    },
+    {
+      "can_contain_a_five_plane_Q": true,
+      "row_pure_shadow_dimension": 30,
+      "row_support_dimension_r": 5,
+      "squarefree_row_cap": 10
+    },
+    {
+      "can_contain_a_five_plane_Q": true,
+      "row_pure_shadow_dimension": 36,
+      "row_support_dimension_r": 6,
+      "squarefree_row_cap": 15
+    }
+  ],
+  "hypothesis": {
+    "flat_limit": "K0=Q tensor S0(C) is contained in E2",
+    "row_factor_dimension": 5,
+    "shared_column_frame_dimension": 15,
+    "valuation_scope": "Arbitrary valuation levels and rooted-tree shape are allowed only when the saturated seventy-five-plane has the stated row-pure tensor form."
+  },
+  "minimum_row_pure_shadow_dimension": 24,
+  "minimum_row_support_dimension": 4,
+  "shadow_gap": 1,
+  "status": [
+    "PURE_CONDITIONAL_ROW_PURE_MULTIGRADE_EXCLUSION",
+    "EXACT_INTEGER_REPLAY",
+    "N6-067"
+  ],
+  "strict_conclusion": "A seventy-five-dimensional row-pure multigrade limit with five-dimensional row factor has derivative shadow at least twenty-four and cannot be the twenty-three-shadow b=50 equality limit."
+}

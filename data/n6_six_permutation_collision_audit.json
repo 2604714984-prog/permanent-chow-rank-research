@@ -1,0 +1,81 @@
+{
+  "aggregate_collision_dimension_j": 36,
+  "collision_subspace_contained_in_permanent_output": true,
+  "collision_subspace_contained_in_six_output_span": true,
+  "common_complement_edges": [
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "conclusion": "Six permutation monomials can have a 36-dimensional aggregate collision with im K_3(perm_6). This presentation is nonminimum, because its sum has a four-term Chow expression inherited from perm_3.",
+  "explicit_cubic_permanent_collision_rank_over_Q": 36,
+  "factorization": "x_33*x_44*x_55*perm_3(rows 0,1,2; columns 0,1,2)",
+  "field": "Q",
+  "internal_output_relation_dimension_eta": 1143,
+  "method": "exact-rational-row-column-torus-block-elimination",
+  "ordinary_six_output_span_rank_over_Q": 3087,
+  "permanent_koszul_rank_over_Q": 14175,
+  "quotient_six_output_span_rank_over_Q": 3051,
+  "scope": "This is a counterexample to unconditional six-term aggregate transversality, not a counterexample for minimum six-term decompositions.",
+  "six_individual_rank_sum": 4230,
+  "six_permutations": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      1,
+      3,
+      4,
+      5
+    ],
+    [
+      1,
+      0,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      1,
+      2,
+      0,
+      3,
+      4,
+      5
+    ],
+    [
+      2,
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      4,
+      5
+    ]
+  ],
+  "six_term_sum_has_chow_rank_upper_bound_four": true
+}

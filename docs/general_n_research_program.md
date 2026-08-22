@@ -16,7 +16,7 @@ The trusted small-`n` boundary is now:
 n=3: exact 4
 n=4: exact 8
 n=5: repaired internal computer-assisted proof draft for exact 16
-n=6: 25 <= ChowRank(perm_6) <= 32
+n=6: post-audit repaired internal exact ordinary-rank proof; exact finite replay
 ```
 
 The `n=5` v14 proof is canonical on `main`; its role in this program is a
@@ -38,6 +38,9 @@ The repository contains:
 - a vector-valued Macaulay prolongation theorem;
 - the specialized `n=6` lower bound 25;
 - exact full column-sign and row-sign rank `2^(n-1)`;
+- a post-audit repaired internal exact ordinary-rank-32 proof at `n=6`, using
+  symmetric image-span and actual-space half-defect quotient-symbol
+  inequalities;
 - a larger anchored diagonal-sign rigidity theorem; and
 - a general count-product atomic-rank theorem for a restricted aggregate.
 
@@ -183,7 +186,47 @@ A weaker but decisive target is the recurrence
 
 The invariant must not factor through the scalar Hilbert profile.
 
+### Post-`n=6` middle-layer decision
+
+The exact `n=6` proof yields a reusable image-span and factor-filtration
+framework, but its one-middle-layer capacity has now been determined. The
+linear route is capacity-feasible only through odd `n=5` and even `n=6`.
+At `n=7`, a full-factor quotient has combined symbol capacity 70 while the
+slope needed for rank 64 demands 145. The immediate target is therefore a
+multi-degree coupled derivative module for `perm_7`, not a rectangular copy
+of the `n=6` half-defect inequality.
+
+The complete N7-002 capacity scan sharpens this requirement.  Even allowing
+every standard higher-wedge Koszul map and taking the permanent-side rank at
+its optimistic dimension maximum gives integer ceiling 61.  Nonnegative
+direct sums cannot improve the best component ratio.  The next candidate must
+therefore impose compatibility across degrees that strictly lowers the
+one-term cap; merely stacking standard flattenings is excluded.
+
+N7-004 through N7-009 show that permanent-specific compatibility can already
+improve the ordinary lower bound without a new flattening.  N7-007 recursively
+applies the same two-dimensional shadow theorem at degrees two, three, and
+four.  The unique optimal nested packet has two terms inside five terms inside
+twenty selected terms.  Continuing the same tower through degrees five and
+six gives \(C_5(46)=405\) and \(C_6(46)=33\).  The raw complementary
+\(C_{6,1}\) catalectic then has residual rank at least \(49-33=16\), forcing
+three more terms and proving
+\(\operatorname{ChowRank}(\operatorname{perm}_7)\ge49\).  Exact selected-size
+scans show that this recursive-shadow plus raw-catalectic route itself stops
+at 49.  Further progress therefore needs a genuinely stronger compatibility
+constraint or a coupled multi-degree module, rather than another packet-size
+optimization in the same tower.
+
 ## 6. Main workstream: natural cross-degree maps
+
+The first exact inventory of the existing theorem-bearing candidates is
+frozen in `data/general_natural_map_inventory.json` and reproduced by
+`scripts/general_natural_map_inventory.py`.  It records permanent rank,
+one-term rank or cap, common-factor behavior, and explicit `UNKNOWN` fields
+without treating a route ceiling as a Chow-rank theorem.  The inventory does
+not promote a candidate; the missing ingredient remains a coordinate-invariant
+cross-degree invariant with a uniform degenerate one-term cap and a
+subadditivity proof.
 
 The first useful candidates must retain higher compatibility, for example:
 

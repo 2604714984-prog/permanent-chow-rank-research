@@ -1,0 +1,173 @@
+{
+  "claim_boundary": "This excludes only the x_A=73 through 76 plateau. It does not classify the new 72-to-89 equality locus, does not exclude global b=34, does not prove ChowRank(perm_6)>=29, and makes no border-rank claim.",
+  "descending_plateau_exclusions": [
+    {
+      "alpha_at_most_two_cap": 458,
+      "dimension": 76,
+      "exact_first_shadow_dimension": 90,
+      "excluded": true,
+      "fifteen_set_literal_dimension_floor": 290,
+      "forced_a2": 90,
+      "forced_alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "forced_common_W15": true,
+      "forced_literal_middle_dimension": 140,
+      "n6083_actual_block_dichotomy_reapplies_because_dimension_is_greater_than_60": true,
+      "n6090_extends_to_partitioned_80_to_90_product_locus": true,
+      "relation_state_count": 11,
+      "required_prolongation_lower": 464,
+      "seven_set_literal_dimension_floor": 130,
+      "strict_cap_gap": 6,
+      "t_at_most_14_states_excluded_count": 10,
+      "unique_pre_geometry_state": {
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kappa2": 0,
+        "t2": 15
+      }
+    },
+    {
+      "alpha_at_most_two_cap": 458,
+      "dimension": 75,
+      "exact_first_shadow_dimension": 90,
+      "excluded": true,
+      "fifteen_set_literal_dimension_floor": 291,
+      "forced_a2": 90,
+      "forced_alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "forced_common_W15": true,
+      "forced_literal_middle_dimension": 140,
+      "n6083_actual_block_dichotomy_reapplies_because_dimension_is_greater_than_60": true,
+      "n6090_extends_to_partitioned_80_to_90_product_locus": true,
+      "relation_state_count": 11,
+      "required_prolongation_lower": 465,
+      "seven_set_literal_dimension_floor": 131,
+      "strict_cap_gap": 7,
+      "t_at_most_14_states_excluded_count": 10,
+      "unique_pre_geometry_state": {
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kappa2": 0,
+        "t2": 15
+      }
+    },
+    {
+      "alpha_at_most_two_cap": 458,
+      "dimension": 74,
+      "exact_first_shadow_dimension": 90,
+      "excluded": true,
+      "fifteen_set_literal_dimension_floor": 292,
+      "forced_a2": 90,
+      "forced_alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "forced_common_W15": true,
+      "forced_literal_middle_dimension": 140,
+      "n6083_actual_block_dichotomy_reapplies_because_dimension_is_greater_than_60": true,
+      "n6090_extends_to_partitioned_80_to_90_product_locus": true,
+      "relation_state_count": 11,
+      "required_prolongation_lower": 466,
+      "seven_set_literal_dimension_floor": 132,
+      "strict_cap_gap": 8,
+      "t_at_most_14_states_excluded_count": 10,
+      "unique_pre_geometry_state": {
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kappa2": 0,
+        "t2": 15
+      }
+    },
+    {
+      "alpha_at_most_two_cap": 458,
+      "dimension": 73,
+      "exact_first_shadow_dimension": 90,
+      "excluded": true,
+      "fifteen_set_literal_dimension_floor": 293,
+      "forced_a2": 90,
+      "forced_alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "forced_common_W15": true,
+      "forced_literal_middle_dimension": 140,
+      "n6083_actual_block_dichotomy_reapplies_because_dimension_is_greater_than_60": true,
+      "n6090_extends_to_partitioned_80_to_90_product_locus": true,
+      "relation_state_count": 11,
+      "required_prolongation_lower": 467,
+      "seven_set_literal_dimension_floor": 133,
+      "strict_cap_gap": 9,
+      "t_at_most_14_states_excluded_count": 10,
+      "unique_pre_geometry_state": {
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kappa2": 0,
+        "t2": 15
+      }
+    }
+  ],
+  "input_after_n6089": "every residual seven-set has x_A<=76 and f_A<=76",
+  "next_target": "the dimension-72 first-product-shadow-89 locus and its defect-four actual packet",
+  "status": [
+    "PURE_B34_SEVEN_SET_X73_TO_X76_EXCLUSION",
+    "EXACT_RELATION_STATE_REPLAY",
+    "N6-091"
+  ],
+  "strict_conclusion": "Every global b=34 survivor satisfies x_A<=72 and f_A<=72 for every residual seven-set A."
+}

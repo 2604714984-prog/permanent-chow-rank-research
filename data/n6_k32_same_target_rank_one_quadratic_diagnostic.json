@@ -1,0 +1,84 @@
+{
+  "certificate": "N6-138",
+  "status": "EXACT_QQ_SAME_TARGET_RANK_ONE_QUADRATIC_DIAGNOSTIC",
+  "field": "characteristic zero",
+  "hypothesis": "finite K3,2 graph pair L=graph(D), M=graph(-D) with D supported on one target row and two source columns",
+  "base_cross_rank": 6,
+  "jacobian_shape": [
+    360,
+    72
+  ],
+  "jacobian_rank": 64,
+  "kernel_dimension": 8,
+  "quadratic_generator_count": 16,
+  "quadratic_initial_generators": [
+    "x3*(x0 - x2)",
+    "x4*(x0 - x2)",
+    "x1*x3",
+    "x1*x4",
+    "x1*x6",
+    "x1*x7",
+    "x3*x4",
+    "x3*x5",
+    "x3*x6",
+    "x3*x7",
+    "x4**2",
+    "x4*x5",
+    "x4*x6",
+    "x4*x7",
+    "x5*x6",
+    "x5*x7"
+  ],
+  "quadratic_coefficient_rank": 16,
+  "quadratic_support_components": 3,
+  "branches": [
+    {
+      "equations": [
+        "x4",
+        "x3",
+        "x1",
+        "x5"
+      ],
+      "generic_cross_rank": 6,
+      "generic_operator_rank": 1,
+      "generic_sum_rank": 7,
+      "generic_cross_rank_at_most_six": true
+    },
+    {
+      "equations": [
+        "x4",
+        "x3",
+        "x6",
+        "x7"
+      ],
+      "generic_cross_rank": 6,
+      "generic_operator_rank": 2,
+      "generic_sum_rank": 8,
+      "generic_cross_rank_at_most_six": true
+    },
+    {
+      "equations": [
+        "x4",
+        "x0-x2",
+        "x1",
+        "x5",
+        "x6",
+        "x7"
+      ],
+      "generic_cross_rank": 6,
+      "generic_operator_rank": 1,
+      "generic_sum_rank": 7,
+      "generic_cross_rank_at_most_six": true
+    }
+  ],
+  "generic_integrated_straight_branch_count": 3,
+  "consequence": "The radical of the quadratic support has three linear components. All three are generic straight rank-at-most-six families, but their operator ranks are one, two, and one, so their sums have ranks seven, eight, and seven and none is complementary.",
+  "boundary": [
+    "does not prove that higher-order nonlinear lifts outside this quadratic support have no solutions",
+    "does not give a full completed-germ sandwich",
+    "does not cover non-graph charts or coupled six-term cocycles",
+    "does not close the full K3,2 or K2,3 normal cone",
+    "does not prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

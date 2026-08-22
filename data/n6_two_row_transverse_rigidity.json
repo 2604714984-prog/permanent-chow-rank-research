@@ -1,0 +1,58 @@
+{
+  "arithmetic": "exact integers and fractions; no floating point",
+  "claim_boundary": "The theorem excludes only actual pairs having a full-rank projection to some complete row pair or complete column pair. At the b=50 endpoint one such pair propagates separation to all six terms and is excluded using N6-059. The closed locus where every projection of every term pair is singular remains open. It does not prove ChowRank(perm_6)>=28 or make a border-rank claim. The two B0 calculations are regression samples; the arbitrary-B0 statement is proved purely, not by enumeration.",
+  "pure_theorem": {
+    "actual_pair_implies_common_column_separation": true,
+    "actual_pair_implies_common_row_separation": true,
+    "arbitrary_invertible_B0_algebra": "proved by direct irreducibility plus Burnside",
+    "b50_one_transverse_pair_excluded_by_N6_059": true,
+    "b50_one_transverse_pair_propagates_to_all_six_terms": true,
+    "full_column_pair_projection_implies_tensor_plane": true,
+    "full_row_pair_projection_implies_tensor_plane": true,
+    "section_difference_dimension": 15,
+    "shadow_dimension": 12
+  },
+  "regression": {
+    "S0_action_rank_by_support_size_1_through_6": [
+      5,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "dimension_S0": 15,
+    "sample_invertible_B0_checks": {
+      "dense_off_diagonal": {
+        "determinant": -5,
+        "generated_algebra_dimension": 36
+      },
+      "perfect_matching": {
+        "determinant": -1,
+        "generated_algebra_dimension": 36
+      }
+    },
+    "scalar_multiplier_equation_rank": 35,
+    "scalar_multiplier_solution_dimension": 1,
+    "six_disjoint_nonempty_column_supports": {
+      "labelled_assignments": 720,
+      "support_size_profiles": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "status": [
+    "PURE_TRANSVERSE_PAIR_RIGIDITY_THEOREM",
+    "EXACT_QQ_LINEAR_ALGEBRA_REGRESSION",
+    "B50_TRANSVERSE_PAIR_EXCLUDED",
+    "N6-061"
+  ],
+  "strict_conclusion": "An actual fifteen-dimensional Chow section-difference pair whose twelve-dimensional shadow projects isomorphically to two complete rows is column-separated; the transposed statement gives row separation for projection to two complete columns. At the b=50 endpoint, one transverse pair propagates separation to all six terms and N6-059 excludes the configuration."
+}

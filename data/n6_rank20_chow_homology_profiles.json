@@ -1,0 +1,190 @@
+{
+  "arithmetic": "integer reconstruction and exact Fraction elimination over Q",
+  "candidate_interface": "The twenty factor-triple-labelled cycles define a natural labelled map, but their images modulo boundaries have ranks 20, 10, 16, and 20. A universal labelled family over the factor-parameter ring, its Fitting ideals, and its colored coupling remain candidate invariants.",
+  "claim_boundary": "These are exact characteristic-zero profiles for four displayed rank-20 configurations. The span-four entry is one bracket-open witness, not a classification of that whole stratum. The result rejects the naive scalar-homology-per-full-rank-term route; it does not prove ChowRank(perm_6)>=27 and makes no border-rank claim.",
+  "profiles": [
+    {
+      "active_delta_3_ranks_wedge_0_to_3": [
+        20,
+        105,
+        216,
+        190
+      ],
+      "active_derivative_dimensions": {
+        "2": 15,
+        "3": 20,
+        "4": 15
+      },
+      "active_homology_dimensions_wedge_0_to_3": [
+        0,
+        0,
+        0,
+        20
+      ],
+      "active_preceding_delta_4_ranks_wedge_0_to_3": [
+        0,
+        15,
+        84,
+        190
+      ],
+      "active_variable_count": 6,
+      "ambient_36_variable_H_3_6_dimension": 20,
+      "ambient_36_variable_middle_third_koszul_rank": 133545,
+      "classification": "full factor-span orbit",
+      "labelled_factor_triple_cycles": {
+        "all_are_cycles": true,
+        "all_factor_triple_products_lie_in_D3": true,
+        "boundary_rank_at_active_wedge_3": 190,
+        "count": 20,
+        "cycle_image_rank_modulo_boundaries": 20,
+        "cycle_span_rank": 20,
+        "factor_triple_product_span_rank": 20,
+        "preceding_image_is_in_the_kernel": true
+      },
+      "name": "span6_independent"
+    },
+    {
+      "active_delta_3_ranks_wedge_0_to_3": [
+        20,
+        85,
+        121,
+        69
+      ],
+      "active_derivative_dimensions": {
+        "2": 15,
+        "3": 20,
+        "4": 15
+      },
+      "active_homology_dimensions_wedge_0_to_3": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "active_preceding_delta_4_ranks_wedge_0_to_3": [
+        0,
+        15,
+        69,
+        121
+      ],
+      "active_variable_count": 5,
+      "ambient_36_variable_H_3_6_dimension": 320,
+      "ambient_36_variable_middle_third_koszul_rank": 133245,
+      "classification": "five-span dependence normal form, support 5",
+      "labelled_factor_triple_cycles": {
+        "all_are_cycles": true,
+        "all_factor_triple_products_lie_in_D3": true,
+        "boundary_rank_at_active_wedge_3": 121,
+        "count": 20,
+        "cycle_image_rank_modulo_boundaries": 10,
+        "cycle_span_rank": 20,
+        "factor_triple_product_span_rank": 20,
+        "preceding_image_is_in_the_kernel": true
+      },
+      "name": "span5_support5"
+    },
+    {
+      "active_delta_3_ranks_wedge_0_to_3": [
+        20,
+        85,
+        115,
+        65
+      ],
+      "active_derivative_dimensions": {
+        "2": 14,
+        "3": 20,
+        "4": 14
+      },
+      "active_homology_dimensions_wedge_0_to_3": [
+        0,
+        1,
+        20,
+        20
+      ],
+      "active_preceding_delta_4_ranks_wedge_0_to_3": [
+        0,
+        14,
+        65,
+        115
+      ],
+      "active_variable_count": 5,
+      "ambient_36_variable_H_3_6_dimension": 1105,
+      "ambient_36_variable_middle_third_koszul_rank": 133055,
+      "classification": "five-span dependence normal form, support 4",
+      "labelled_factor_triple_cycles": {
+        "all_are_cycles": true,
+        "all_factor_triple_products_lie_in_D3": true,
+        "boundary_rank_at_active_wedge_3": 115,
+        "count": 20,
+        "cycle_image_rank_modulo_boundaries": 16,
+        "cycle_span_rank": 20,
+        "factor_triple_product_span_rank": 20,
+        "preceding_image_is_in_the_kernel": true
+      },
+      "name": "span5_support4"
+    },
+    {
+      "active_delta_3_ranks_wedge_0_to_3": [
+        20,
+        45,
+        36,
+        10
+      ],
+      "active_derivative_dimensions": {
+        "2": 10,
+        "3": 20,
+        "4": 10
+      },
+      "active_homology_dimensions_wedge_0_to_3": [
+        0,
+        25,
+        48,
+        25
+      ],
+      "active_preceding_delta_4_ranks_wedge_0_to_3": [
+        0,
+        10,
+        36,
+        45
+      ],
+      "active_variable_count": 4,
+      "ambient_36_variable_H_3_6_dimension": 13961,
+      "ambient_36_variable_middle_third_koszul_rank": 122682,
+      "classification": "exact witness in the bracket-open four-span stratum; not a normal form for every point of that stratum",
+      "four_span_bracket_open_certificate": {
+        "all_nonzero": true,
+        "determinants": {
+          "0123": 1,
+          "0124": 1,
+          "0125": 4,
+          "0134": -1,
+          "0135": -3,
+          "0145": 1,
+          "0234": 1,
+          "0235": 2,
+          "0245": -2,
+          "0345": 1,
+          "1234": -1,
+          "1235": -1,
+          "1245": 3,
+          "1345": -2,
+          "2345": 1
+        },
+        "minor_count": 15
+      },
+      "labelled_factor_triple_cycles": {
+        "all_are_cycles": true,
+        "all_factor_triple_products_lie_in_D3": true,
+        "boundary_rank_at_active_wedge_3": 45,
+        "count": 20,
+        "cycle_image_rank_modulo_boundaries": 20,
+        "cycle_span_rank": 20,
+        "factor_triple_product_span_rank": 20,
+        "preceding_image_is_in_the_kernel": true
+      },
+      "name": "span4_uniform_witness"
+    }
+  ],
+  "status": "G035_EXACT_RANK20_CHOW_HOMOLOGY_PROFILES",
+  "theorem": "Central catalectic rank 20 does not determine scalar H_3,6: the four exact representatives have ambient dimensions 20, 320, 1105, and 13961."
+}

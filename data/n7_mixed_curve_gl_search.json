@@ -1,0 +1,346 @@
+{
+  "best_examples": [
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 0,
+      "seed": 20260815,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        14
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 1,
+      "seed": 21260818,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 2,
+      "seed": 22260821,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 3,
+      "seed": 23260824,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 4,
+      "seed": 24260827,
+      "weights": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 5,
+      "seed": 25260830,
+      "weights": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 6,
+      "seed": 26260833,
+      "weights": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 7,
+      "seed": 27260836,
+      "weights": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 8,
+      "seed": 28260839,
+      "weights": [
+        1,
+        2,
+        3,
+        5,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 9,
+      "seed": 29260842,
+      "weights": [
+        1,
+        2,
+        3,
+        5,
+        10,
+        11
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 10,
+      "seed": 30260845,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 11,
+      "seed": 31260848,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 12,
+      "seed": 32260851,
+      "weights": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        11
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 13,
+      "seed": 33260854,
+      "weights": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 14,
+      "seed": 34260857,
+      "weights": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 15,
+      "seed": 35260860,
+      "weights": [
+        1,
+        2,
+        4,
+        5,
+        9,
+        13
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 16,
+      "seed": 36260863,
+      "weights": [
+        1,
+        2,
+        4,
+        5,
+        10,
+        11
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 17,
+      "seed": 37260866,
+      "weights": [
+        1,
+        2,
+        4,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 18,
+      "seed": 38260869,
+      "weights": [
+        1,
+        2,
+        4,
+        6,
+        10,
+        12
+      ]
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "index": 19,
+      "seed": 39260872,
+      "weights": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        12
+      ]
+    }
+  ],
+  "claim_boundary": [
+    "Each trial independently changes the seven off-diagonal six-block coordinates.",
+    "A positive target increment excludes only that displayed finite-field packet.",
+    "The experiment does not quantify over GL(6)^7 or arbitrary graph complements."
+  ],
+  "degree_seven_increment_histogram": {
+    "1": 2000
+  },
+  "degree_six_increment_histogram": {
+    "49": 2000
+  },
+  "elapsed_seconds": 5.868729768000776,
+  "endpoint_weight_profile_count": 304,
+  "evaluation_columns": 400,
+  "field": "F_65521",
+  "max_weight": 24,
+  "minimum_degree_six_target_increment": 49,
+  "schema_version": 1,
+  "seed": 20260815,
+  "status": "BOUNDED_GL_STRESS_TEST_NOT_A_RANK_PROOF",
+  "trial_count": 2000,
+  "workers": 20
+}

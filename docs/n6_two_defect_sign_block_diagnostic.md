@@ -13,7 +13,7 @@ It does **not** determine the minimum number of two-defect terms. The active
 unrestricted interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 ## 1. The family

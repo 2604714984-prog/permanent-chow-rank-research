@@ -1,0 +1,99 @@
+{
+  "claim_boundary": "This excludes only seven-set shortening dimensions 79 and 80 inside the global b=34 branch. It does not classify or exclude x_A<=78, does not exclude global b=34, does not prove ChowRank(perm_6)>=29, and makes no border-rank claim.",
+  "global_hypothesis": {
+    "coupled_residual_intersection_floor": 366,
+    "global_b": 34,
+    "input_after_n6083": "every f_A<=79",
+    "residual_terms": 22,
+    "subset_terms": 7
+  },
+  "improved_literal_floors": {
+    "every_fifteen_set_literal_dimension_floor": 287,
+    "every_seven_set_literal_dimension_floor": 127
+  },
+  "next_target": "Classify the 78-to-90 equality locus or continue the hereditary shortening without assuming an extension to the 80-plane product locus.",
+  "status": [
+    "PURE_B34_SEVEN_SET_X79_X80_EXCLUSION",
+    "EXACT_RELATION_STATE_REPLAY",
+    "N6-085"
+  ],
+  "strict_conclusion": "Every global b=34 survivor satisfies x_A<=78 and f_A<=78 for every residual seven-set A.",
+  "x79_x80_endpoint_rows": [
+    {
+      "actual_endpoint_excluded_by_n6083_block_dichotomy": true,
+      "alpha_at_most_two_cap": 458,
+      "central_dimension_x": 80,
+      "equality_locus_interface": "N6-082",
+      "exact_first_shadow_dimension": 90,
+      "forced_a2": 90,
+      "forced_alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "forced_common_W15": true,
+      "literal_middle_dimension_after_quadratic_directness": 140,
+      "partitioned_second_shadow_dimension": 24,
+      "relation_state_count": 11,
+      "required_prolongation_lower": 460,
+      "strict_cap_gap": 2,
+      "t_at_most_14_states_excluded_count": 10,
+      "unique_pre_geometry_state": {
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kappa2": 0,
+        "t2": 15
+      }
+    },
+    {
+      "actual_endpoint_excluded_by_n6083_block_dichotomy": true,
+      "alpha_at_most_two_cap": 458,
+      "central_dimension_x": 79,
+      "equality_locus_interface": "N6-084 then N6-082",
+      "exact_first_shadow_dimension": 90,
+      "forced_a2": 90,
+      "forced_alpha": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "forced_common_W15": true,
+      "literal_middle_dimension_after_quadratic_directness": 140,
+      "partitioned_second_shadow_dimension": 24,
+      "relation_state_count": 11,
+      "required_prolongation_lower": 461,
+      "strict_cap_gap": 3,
+      "t_at_most_14_states_excluded_count": 10,
+      "unique_pre_geometry_state": {
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kappa2": 0,
+        "t2": 15
+      }
+    }
+  ]
+}

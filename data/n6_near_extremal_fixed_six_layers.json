@@ -1,0 +1,4977 @@
+{
+  "arithmetic": "exact integer enumeration",
+  "claim_boundary": "These are necessary characteristic-zero consequences of a hypothetical 26-term decomposition.  The 73/11/11 scalar states are not asserted realizable.  Only terms with epsilon=alpha=0 are placed in the 5580 extremal support components; the near-extremal alpha=1 or 2 loci remain unclassified.  No b-layer and no hypothetical decomposition is excluded.",
+  "conditional_on": [
+    "N6-038 omitted-factor and projection inequalities",
+    "N6-031 single-term middle-rank profiles and missing-rank-19 theorem",
+    "the extremal six-plane classification",
+    "N6-025 binary-cubic and relation-factorization lemmas",
+    "cubic directness implies D2(R) equals the sum of the six termwise quadratic spaces"
+  ],
+  "highlighted_common_quotient_states": [
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 1
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 1
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "extremal_rectangle_term_count": 4,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "extremal_rectangle_term_count": 4,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "extremal_rectangle_term_count": 4,
+      "middle_intersection_b": 61,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 62,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 62,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 63,
+      "quadratic_relation_dimension_kappa2": 0
+    },
+    {
+      "common_quotient_dimension": 12,
+      "epsilon_alpha_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "extremal_rectangle_term_count": 5,
+      "middle_intersection_b": 63,
+      "quadratic_relation_dimension_kappa2": 0
+    }
+  ],
+  "layers": [
+    {
+      "canonical_scalar_state_count": 73,
+      "defect_budget_D_b": 2,
+      "middle_intersection_b": 61,
+      "profile_summary": [
+        {
+          "canonical_scalar_state_count": 45,
+          "extremal_rectangle_term_count_range": [
+            0,
+            6
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            76,
+            77,
+            78
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12,
+            13,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimensions": [
+            0,
+            1,
+            2
+          ],
+          "residual_middle_rank_lower": 398,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "canonical_scalar_state_count": 22,
+          "extremal_rectangle_term_count_range": [
+            0,
+            5
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            76,
+            77
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimensions": [
+            0,
+            1
+          ],
+          "residual_middle_rank_lower": 398,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "canonical_scalar_state_count": 3,
+          "extremal_rectangle_term_count_range": [
+            5,
+            5
+          ],
+          "fixed_middle_rank_h": [
+            118
+          ],
+          "fixed_quadratic_intersections_a2": [
+            76
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimensions": [
+            0
+          ],
+          "residual_middle_rank_lower": 396,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "canonical_scalar_state_count": 3,
+          "extremal_rectangle_term_count_range": [
+            4,
+            4
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            76
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimensions": [
+            0
+          ],
+          "residual_middle_rank_lower": 398,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "shadow_lower_m_b": 76,
+      "states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 78,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 2,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 118,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            10,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 118,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 118,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            11,
+            11,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 88,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            14,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            14,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            14,
+            14,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            14,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            14,
+            14,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 76,
+          "fixed_quadratic_quotient_t2": 14,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            14,
+            14,
+            14,
+            14,
+            14,
+            14
+          ],
+          "minimum_full_middle_rank_residual_terms": 19,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 2,
+          "residual_middle_rank_lower": 398
+        }
+      ]
+    },
+    {
+      "canonical_scalar_state_count": 11,
+      "defect_budget_D_b": 1,
+      "middle_intersection_b": 62,
+      "profile_summary": [
+        {
+          "canonical_scalar_state_count": 9,
+          "extremal_rectangle_term_count_range": [
+            0,
+            6
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            77,
+            78
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimensions": [
+            0,
+            1
+          ],
+          "residual_middle_rank_lower": 396,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "canonical_scalar_state_count": 2,
+          "extremal_rectangle_term_count_range": [
+            5,
+            5
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            77
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimensions": [
+            0
+          ],
+          "residual_middle_rank_lower": 396,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "shadow_lower_m_b": 77,
+      "states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 78,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 18,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 4,
+          "residual_middle_rank_lower": 396
+        }
+      ]
+    },
+    {
+      "canonical_scalar_state_count": 11,
+      "defect_budget_D_b": 1,
+      "middle_intersection_b": 63,
+      "profile_summary": [
+        {
+          "canonical_scalar_state_count": 9,
+          "extremal_rectangle_term_count_range": [
+            0,
+            6
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            77,
+            78
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimensions": [
+            0,
+            1
+          ],
+          "residual_middle_rank_lower": 394,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "canonical_scalar_state_count": 2,
+          "extremal_rectangle_term_count_range": [
+            5,
+            5
+          ],
+          "fixed_middle_rank_h": [
+            120
+          ],
+          "fixed_quadratic_intersections_a2": [
+            77
+          ],
+          "fixed_quadratic_quotients_t2": [
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimensions": [
+            0
+          ],
+          "residual_middle_rank_lower": 394,
+          "sorted_epsilon_profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "shadow_lower_m_b": 77,
+      "states": [
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 78,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 6,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 1,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            11,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 5,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 12,
+          "fixed_quadratic_rank_d2": 89,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 4,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            12,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 3,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            12,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 2,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 1,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            12,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        },
+        {
+          "epsilon_alpha_pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "extremal_rectangle_term_count": 0,
+          "fixed_middle_rank_h": 120,
+          "fixed_quadratic_intersection_a2": 77,
+          "fixed_quadratic_quotient_t2": 13,
+          "fixed_quadratic_rank_d2": 90,
+          "individual_quotient_dimensions": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "minimum_full_middle_rank_residual_terms": 17,
+          "quadratic_relation_dimension_kappa2": 0,
+          "residual_defect_plus_relation_budget": 6,
+          "residual_middle_rank_lower": 394
+        }
+      ]
+    }
+  ],
+  "status": "EXACT_NEAR_EXTREMAL_FIXED_SIX_REDUCTION",
+  "strict_conclusions": {
+    "b61_fixed_middle_rank_possibilities": [
+      118,
+      120
+    ],
+    "b61_h118_residual_middle_lower": 396,
+    "b61_h120_residual_middle_lower": 398,
+    "b61_rank118_unique_epsilon_profile": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "b62_b63_fixed_middle_rank": 120,
+    "b62_residual_middle_lower": 396,
+    "b63_residual_middle_lower": 394,
+    "minimum_full_rank_residual_terms": {
+      "b61_h118": 18,
+      "b61_h120": 19,
+      "b62": 18,
+      "b63": 17
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "claim_boundary": [
+    "This closes only the bounded A-01/A-02 operator foundation: general factor input, exact degree-2/5/6 maps, complementary label transport, a QQ kernel-image defect, and a QQ target quotient operator.",
+    "The executed control has two terms in a seven-dimensional ambient space; it is not a 49-term Packet-A equality candidate.",
+    "The target quotient interface is exact over QQ, but the displayed targets are an included-column/pure-power control, not the 49 permanent sixth derivatives.",
+    "The complementary relation pairing is computed over F_65521 and is not promoted to a characteristic-zero zero-rank statement.",
+    "A-03 through A-05, the full permanent equations, the 49-term equality incidence scheme, A-CLOSED, ordinary lower 50, and border rank remain unresolved."
+  ],
+  "general_factor_plane_control": {
+    "ambient_dimension": 7,
+    "degree_maps": [
+      {
+        "QQ_exact_rank": 21,
+        "degree": 2,
+        "labelled_column_count": 21,
+        "shape": [
+          28,
+          21
+        ]
+      },
+      {
+        "QQ_exact_rank": 21,
+        "degree": 5,
+        "labelled_column_count": 21,
+        "shape": [
+          462,
+          21
+        ]
+      },
+      {
+        "QQ_exact_rank": 7,
+        "degree": 6,
+        "labelled_column_count": 7,
+        "shape": [
+          924,
+          7
+        ]
+      }
+    ],
+    "factor_count": 7,
+    "factor_matrix_QQ_rank": 7
+  },
+  "inverse_coefficient_direction_control": {
+    "QQ_exact_kernel_image_defect": {
+      "condition_holds": true,
+      "coupling_defect": 0,
+      "kernel_b_dimension": 21,
+      "kernel_b_intersection_image_c_dimension": 21,
+      "middle_dimension": 42,
+      "rank_b": 21,
+      "rank_bc": 0,
+      "rank_c": 21
+    },
+    "conclusion": "inverse coefficient transport gives equality while direct coefficient transport fails",
+    "description": "the second coordinate term has its first factor scaled by 2; external coefficients are 2 and -1",
+    "external_coefficients": [
+      2,
+      -1
+    ],
+    "factor_scale_product_of_second_term": 2,
+    "finite_field_relation_pairing": {
+      "degree_2_kernel_dimension": 21,
+      "degree_5_kernel_dimension": 21,
+      "field": "F_65521",
+      "inverse_coefficient_pairing_rank": 0,
+      "pairing_formula": "K2^T diag(c)^(-1) P_(2<-5) K5",
+      "wrong_coefficient_pairing_rank": 21
+    }
+  },
+  "rank_fields": {
+    "complementary_relation_pairing": "F_65521",
+    "factor_plane_catalectics_kernels_incidence_and_target_quotient": "QQ exact"
+  },
+  "resource_preflight": {
+    "conservative_executed_peak_memory_mib": 64,
+    "deferred_49_term_matrix_shapes": {
+      "2": [
+        28,
+        1029
+      ],
+      "5": [
+        462,
+        1029
+      ],
+      "6": [
+        924,
+        343
+      ]
+    },
+    "executed_matrix_shapes": {
+      "2": [
+        28,
+        42
+      ],
+      "5": [
+        462,
+        42
+      ],
+      "6": [
+        924,
+        14
+      ]
+    },
+    "executed_term_count": 2,
+    "full_49_term_materialization_performed": false,
+    "largest_executed_dense_entry_count": 19404
+  },
+  "schema_version": 1,
+  "status": "PACKET_A_GENERAL_OPERATOR_A01_A02_FOUNDATION",
+  "two_term_exact_control": {
+    "QQ_exact_degree_6_target_quotient": {
+      "aggregate_kernel_dimension": 7,
+      "aggregate_rank": 7,
+      "field": "QQ",
+      "joint_rank": 8,
+      "quotient_operator_shape": [
+        917,
+        924
+      ],
+      "residual_shape": [
+        917,
+        2
+      ],
+      "target_contained": false,
+      "target_quotient_rank": 1,
+      "target_rank": 2
+    },
+    "QQ_exact_kernel_image_defect": {
+      "condition_holds": false,
+      "coupling_defect": 21,
+      "kernel_b_dimension": 21,
+      "kernel_b_intersection_image_c_dimension": 0,
+      "middle_dimension": 42,
+      "rank_b": 21,
+      "rank_bc": 21,
+      "rank_c": 21
+    },
+    "degree_profiles": {
+      "2": {
+        "QQ_exact_kernel_basis_shape": [
+          42,
+          21
+        ],
+        "QQ_exact_kernel_dimension": 21,
+        "QQ_exact_rank": 21,
+        "shape": [
+          28,
+          42
+        ]
+      },
+      "5": {
+        "QQ_exact_kernel_basis_shape": [
+          42,
+          21
+        ],
+        "QQ_exact_kernel_dimension": 21,
+        "QQ_exact_rank": 21,
+        "shape": [
+          462,
+          42
+        ]
+      },
+      "6": {
+        "QQ_exact_kernel_basis_shape": [
+          14,
+          7
+        ],
+        "QQ_exact_kernel_dimension": 7,
+        "QQ_exact_rank": 7,
+        "shape": [
+          924,
+          14
+        ]
+      }
+    },
+    "description": "two identical coordinate factor planes with external coefficients 2 and 3",
+    "external_coefficients": [
+      2,
+      3
+    ],
+    "finite_field_relation_pairing": {
+      "degree_2_kernel_dimension": 21,
+      "degree_5_kernel_dimension": 21,
+      "field": "F_65521",
+      "inverse_coefficient_pairing_rank": 21,
+      "pairing_formula": "K2^T diag(c)^(-1) P_(2<-5) K5",
+      "wrong_coefficient_pairing_rank": 21
+    },
+    "inverse_coefficient_transport": {
+      "complement_transport_shape": [
+        42,
+        42
+      ],
+      "input_map_formula": "diag(c) P_(2<-5) A5^T",
+      "restricted_pairing_formula": "K2^T diag(c)^(-1) P_(2<-5) K5"
+    },
+    "target_control": {
+      "column_0": "one included labelled degree-six product",
+      "column_1": "the outside pure power x_0^6"
+    }
+  }
+}

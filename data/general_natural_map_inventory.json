@@ -1,0 +1,120 @@
+{
+  "claim_boundary": [
+    "This inventory does not determine ChowRank(perm_6).",
+    "It does not prove or refute ChowRank(perm_n)=2^(n-1).",
+    "UNKNOWN means the cited source did not certify the requested field, not that the value is zero."
+  ],
+  "entries": [
+    {
+      "boundary": "This is a route ceiling, not an upper bound on ChowRank(perm_6). The ordinary interval remains 26 <= ChowRank(perm_6) <= 32.",
+      "common_factor_result": "not a promoted one-term invariant",
+      "integer_ratio_ceiling": "strictly below 26",
+      "name": "standard Koszul-Young family",
+      "one_term_cap": "UNKNOWN_AS_A_UNIFORM_GL(V)_CAP",
+      "permanent_rank": "UNKNOWN_BY_THIS_CERTIFICATE",
+      "profile_determined": false,
+      "scope": "all standard p=2,3 candidates covered by the source replay",
+      "source": "n6_all_koszul_young_ceiling.json"
+    },
+    {
+      "boundary": "The modular ranks are characteristic-zero lower bounds. Exactness is claimed only where the preceding-image upper bound agrees. The audit does not rule out higher wedge order, quotient refinements, or additional intersection geometry.",
+      "common_factor_result": "not an improved integer ratio over first Koszul",
+      "name": "first higher-wedge Koszul p=2",
+      "one_term_cap": "source gives exact/window rank, not a separate degenerate uniform cap",
+      "profile_determined": false,
+      "rows": [
+        {
+          "integer_ratio_lower_bound": 15,
+          "one_term_rank": [
+            8730,
+            8745
+          ],
+          "output_degree": 2,
+          "permanent_rank": [
+            127125,
+            127575
+          ],
+          "rank_exact_in_characteristic_zero": false,
+          "source_status": "exact_or_modular_window_as_marked"
+        },
+        {
+          "integer_ratio_lower_bound": 21,
+          "one_term_rank": [
+            12066,
+            12066
+          ],
+          "output_degree": 3,
+          "permanent_rank": [
+            243936,
+            243936
+          ],
+          "rank_exact_in_characteristic_zero": true,
+          "source_status": "exact_or_modular_window_as_marked"
+        },
+        {
+          "integer_ratio_lower_bound": 16,
+          "one_term_rank": [
+            9235,
+            9235
+          ],
+          "output_degree": 4,
+          "permanent_rank": [
+            140455,
+            140455
+          ],
+          "rank_exact_in_characteristic_zero": true,
+          "source_status": "exact_or_modular_window_as_marked"
+        }
+      ],
+      "source": "n6_second_koszul_rank_audit.json"
+    },
+    {
+      "boundary": "The exact permanent homology dimension uses the published beta_2,4 formula for the apolar algebra. The common-factor rank formula is proved from coupled derivative-space isolation and explicit pairwise image intersections. The six-term example rejects only monotone upper-bound comparisons based on scalar homology dimension; it does not rule out exact-value, multigraded, representation-theoretic, or quotient-coupled homology obstructions.",
+      "common_factor_result": "six-term common-factor family defeats scalar homology upper-bound comparisons",
+      "integer_ratio_lower_bound": 15,
+      "name": "second-Koszul homology beta_(2,4)",
+      "one_term_cap": "not promoted to a uniform degenerate cap",
+      "one_term_rank": 8730,
+      "permanent_rank": 127125,
+      "profile_determined": false,
+      "source": "n6_second_koszul_homology_audit.json"
+    },
+    {
+      "boundary": "The cap does not cover the one-rectangle alpha-two t=15 branch or an all-alpha-three state. It does not yet exclude b=60, prove ChowRank(perm_6)>=27, or make a border-rank claim.",
+      "common_factor_result": "cap is only for extremal and alpha-one closure classes",
+      "integer_ratio_lower_bound": "NOT_APPLICABLE",
+      "name": "global t=15 prolongation cap",
+      "one_term_cap": 458,
+      "permanent_rank": "NOT_APPLICABLE",
+      "profile_determined": false,
+      "source": "n6_global_t15_prolongation_cap.json"
+    },
+    {
+      "boundary": "This cap covers the extremal and alpha-one closures. The one-rectangle alpha-two boundary requires a separate exhaustive calculation. It makes no border-rank or lower29 claim by itself.",
+      "common_factor_result": "one-rectangle alpha-two boundary remains separate",
+      "integer_ratio_lower_bound": "NOT_APPLICABLE",
+      "name": "global t=16 prolongation cap",
+      "one_term_cap": 462,
+      "permanent_rank": "NOT_APPLICABLE",
+      "profile_determined": false,
+      "source": "n6_global_t16_prolongation_cap.json"
+    },
+    {
+      "boundary": "This theorem determines the rank of one coefficient slice in an anchored column-homogeneous dictionary. It does not construct an n-term decomposition of the full permanent, determine arbitrary row-homogeneous tensor rank, or change unrestricted Chow rank.",
+      "common_factor_result": "continuous ratios collapse the Boolean sign slice from 32 to 6",
+      "integer_ratio_lower_bound": "NOT_APPLICABLE",
+      "name": "continuous anchored affine-Segre slice",
+      "one_term_cap": "exact slice rank n; for n=6 it is 6",
+      "permanent_rank": "NOT_APPLICABLE_TO_FULL_PERMANENT",
+      "profile_determined": false,
+      "source": "general_affine_segre_slice_rank.json"
+    }
+  ],
+  "field": "characteristic zero unless source says modular window",
+  "route_decision": {
+    "next_required_theorem": "A coordinate-invariant cross-degree invariant with a proved cap for every degenerate Chow term and a subadditivity inequality.",
+    "promoted_candidate": null,
+    "reason": "Every indexed route either has a strict <26 ceiling, no uniform degenerate one-term cap, or is a restricted slice/cap rather than an unrestricted Chow invariant."
+  },
+  "status": "NGEN_02_NATURAL_MAP_INVENTORY"
+}

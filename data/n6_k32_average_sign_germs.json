@@ -1,0 +1,95 @@
+{
+  "certificate": "N6-127",
+  "status": "EXACT_QQ_AVERAGE_SIGN_GERM_EXCLUSION",
+  "field": "characteristic zero",
+  "hypothesis": "four same-row average/sign first-Schur lines at the K3,2 collision",
+  "profiles": [
+    {
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "base_cross_rank": 6,
+      "base_sum_rank": 6,
+      "linear_rank": 69,
+      "average_rank": 34,
+      "difference_rank": 35,
+      "local_germ": {
+        "linear_rank": 69,
+        "kernel_dimension": 3,
+        "average_rank": 34,
+        "difference_rank": 35,
+        "quadratic_generators": [
+          "x1*x2"
+        ],
+        "branch_ranks": {
+          "diagonal": {
+            "cross_rank": 6,
+            "sum_rank": 6
+          },
+          "separating": {
+            "cross_rank": 6,
+            "sum_rank": 9
+          }
+        },
+        "formal_sandwich": true
+      }
+    },
+    {
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "base_cross_rank": 6,
+      "base_sum_rank": 6,
+      "linear_rank": 69,
+      "average_rank": 33,
+      "difference_rank": 36,
+      "local_germ": {
+        "swap_symmetry_forces_diagonal": true,
+        "consequence_sum_rank": 6
+      }
+    },
+    {
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "base_cross_rank": 6,
+      "base_sum_rank": 6,
+      "linear_rank": 69,
+      "average_rank": 33,
+      "difference_rank": 36,
+      "local_germ": {
+        "swap_symmetry_forces_diagonal": true,
+        "consequence_sum_rank": 6
+      }
+    },
+    {
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "base_cross_rank": 6,
+      "base_sum_rank": 6,
+      "linear_rank": 69,
+      "average_rank": 33,
+      "difference_rank": 36,
+      "local_germ": {
+        "swap_symmetry_forces_diagonal": true,
+        "consequence_sum_rank": 6
+      }
+    }
+  ],
+  "consequence": "The three nontrivial sign-average lines have full difference Jacobian and are formally diagonal. The all-positive line has quadratic ideal (x1*x2), with diagonal and sum-rank-nine branches. All four average/sign lines are therefore noncomplementary.",
+  "boundary": [
+    "does not classify mixed torus-weight sums",
+    "does not classify arbitrary invertible 6 by 6 graph operators",
+    "does not prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

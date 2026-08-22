@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "answer": "unsat",
+      "case": "nonzero_columns",
+      "collision_scope": "all_explicit",
+      "elapsed_seconds": 24.900129487999948,
+      "exit_code": 0,
+      "formula_utf8_bytes": 11211854,
+      "invalid_assignment_count": 112609,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "unsat"
+      ]
+    },
+    {
+      "answer": "unsat",
+      "case": "zero_column",
+      "collision_scope": "all_explicit",
+      "elapsed_seconds": 39.144889231996785,
+      "exit_code": 0,
+      "formula_utf8_bytes": 11211858,
+      "invalid_assignment_count": 112609,
+      "stderr_tail": [],
+      "stdout_tail": [
+        "unsat"
+      ]
+    }
+  ],
+  "claim_boundary": [
+    "The two cases normalize a chosen valid distinct-column realization according to whether it uses column zero.",
+    "UNSAT in both cases would exclude protected characters for every packet with at least three permutation types.",
+    "SAT is a counterexample to that proposed character statement; UNKNOWN or timeout proves nothing.",
+    "This character statement alone does not cover general GL(6) graph transforms or border rank."
+  ],
+  "collision_scope": "all_explicit",
+  "schema_version": 1,
+  "solver": "z3",
+  "status": "EXACT_UNSAT_PROTECTED_CHARACTER_AT_LEAST_THREE_TYPES"
+}

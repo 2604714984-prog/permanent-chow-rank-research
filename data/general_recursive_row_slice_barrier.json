@@ -1,0 +1,305 @@
+{
+  "boundary": "This closes only mixed-derivative flattenings obtained from a fixed linear splitting V=U direct-sum W.  It is not a Chow-rank upper bound and does not exclude nonlinear, quotient, or coupled common-domain invariants.",
+  "identifier": "G-038",
+  "small_n": [
+    {
+      "central_intersections": [
+        {
+          "intersection_dimension": 4,
+          "number_of_cofactors": 1
+        },
+        {
+          "intersection_dimension": 2,
+          "number_of_cofactors": 2
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 3
+        }
+      ],
+      "degrees": [
+        {
+          "m": 0,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 1,
+          "overlap_loss": 2,
+          "permanent_rank": 1,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 3
+        },
+        {
+          "m": 1,
+          "one_cofactor_rank": 4,
+          "one_term_cap": 3,
+          "overlap_loss": 6,
+          "permanent_rank": 6,
+          "rank_ratio": 2,
+          "sum_of_cofactor_ranks": 12
+        },
+        {
+          "m": 2,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 3,
+          "overlap_loss": 0,
+          "permanent_rank": 3,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 3
+        }
+      ],
+      "large_splitting_mixed_ceiling": 3,
+      "n": 3,
+      "row_slice_doubling_from_previous_n": {
+        "holds": true,
+        "twice_previous": 2
+      },
+      "row_slice_max_ratio": 2,
+      "target_two_to_n_minus_1": 4
+    },
+    {
+      "central_intersections": [
+        {
+          "intersection_dimension": 9,
+          "number_of_cofactors": 1
+        },
+        {
+          "intersection_dimension": 3,
+          "number_of_cofactors": 2
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 3
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 4
+        }
+      ],
+      "degrees": [
+        {
+          "m": 0,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 1,
+          "overlap_loss": 3,
+          "permanent_rank": 1,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 4
+        },
+        {
+          "m": 1,
+          "one_cofactor_rank": 9,
+          "one_term_cap": 4,
+          "overlap_loss": 24,
+          "permanent_rank": 12,
+          "rank_ratio": 3,
+          "sum_of_cofactor_ranks": 36
+        },
+        {
+          "m": 2,
+          "one_cofactor_rank": 9,
+          "one_term_cap": 6,
+          "overlap_loss": 18,
+          "permanent_rank": 18,
+          "rank_ratio": 3,
+          "sum_of_cofactor_ranks": 36
+        },
+        {
+          "m": 3,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 4,
+          "overlap_loss": 0,
+          "permanent_rank": 4,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 4
+        }
+      ],
+      "large_splitting_mixed_ceiling": 6,
+      "n": 4,
+      "row_slice_doubling_from_previous_n": {
+        "holds": false,
+        "twice_previous": 4
+      },
+      "row_slice_max_ratio": 3,
+      "target_two_to_n_minus_1": 8
+    },
+    {
+      "central_intersections": [
+        {
+          "intersection_dimension": 36,
+          "number_of_cofactors": 1
+        },
+        {
+          "intersection_dimension": 18,
+          "number_of_cofactors": 2
+        },
+        {
+          "intersection_dimension": 6,
+          "number_of_cofactors": 3
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 4
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 5
+        }
+      ],
+      "degrees": [
+        {
+          "m": 0,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 1,
+          "overlap_loss": 4,
+          "permanent_rank": 1,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 5
+        },
+        {
+          "m": 1,
+          "one_cofactor_rank": 16,
+          "one_term_cap": 5,
+          "overlap_loss": 60,
+          "permanent_rank": 20,
+          "rank_ratio": 4,
+          "sum_of_cofactor_ranks": 80
+        },
+        {
+          "m": 2,
+          "one_cofactor_rank": 36,
+          "one_term_cap": 10,
+          "overlap_loss": 120,
+          "permanent_rank": 60,
+          "rank_ratio": 6,
+          "sum_of_cofactor_ranks": 180
+        },
+        {
+          "m": 3,
+          "one_cofactor_rank": 16,
+          "one_term_cap": 10,
+          "overlap_loss": 40,
+          "permanent_rank": 40,
+          "rank_ratio": 4,
+          "sum_of_cofactor_ranks": 80
+        },
+        {
+          "m": 4,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 5,
+          "overlap_loss": 0,
+          "permanent_rank": 5,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 5
+        }
+      ],
+      "large_splitting_mixed_ceiling": 10,
+      "n": 5,
+      "row_slice_doubling_from_previous_n": {
+        "holds": true,
+        "twice_previous": 6
+      },
+      "row_slice_max_ratio": 6,
+      "target_two_to_n_minus_1": 16
+    },
+    {
+      "central_intersections": [
+        {
+          "intersection_dimension": 100,
+          "number_of_cofactors": 1
+        },
+        {
+          "intersection_dimension": 40,
+          "number_of_cofactors": 2
+        },
+        {
+          "intersection_dimension": 10,
+          "number_of_cofactors": 3
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 4
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 5
+        },
+        {
+          "intersection_dimension": 0,
+          "number_of_cofactors": 6
+        }
+      ],
+      "degrees": [
+        {
+          "m": 0,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 1,
+          "overlap_loss": 5,
+          "permanent_rank": 1,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 6
+        },
+        {
+          "m": 1,
+          "one_cofactor_rank": 25,
+          "one_term_cap": 6,
+          "overlap_loss": 120,
+          "permanent_rank": 30,
+          "rank_ratio": 5,
+          "sum_of_cofactor_ranks": 150
+        },
+        {
+          "m": 2,
+          "one_cofactor_rank": 100,
+          "one_term_cap": 15,
+          "overlap_loss": 450,
+          "permanent_rank": 150,
+          "rank_ratio": 10,
+          "sum_of_cofactor_ranks": 600
+        },
+        {
+          "m": 3,
+          "one_cofactor_rank": 100,
+          "one_term_cap": 20,
+          "overlap_loss": 400,
+          "permanent_rank": 200,
+          "rank_ratio": 10,
+          "sum_of_cofactor_ranks": 600
+        },
+        {
+          "m": 4,
+          "one_cofactor_rank": 25,
+          "one_term_cap": 15,
+          "overlap_loss": 75,
+          "permanent_rank": 75,
+          "rank_ratio": 5,
+          "sum_of_cofactor_ranks": 150
+        },
+        {
+          "m": 5,
+          "one_cofactor_rank": 1,
+          "one_term_cap": 6,
+          "overlap_loss": 0,
+          "permanent_rank": 6,
+          "rank_ratio": 1,
+          "sum_of_cofactor_ranks": 6
+        }
+      ],
+      "large_splitting_mixed_ceiling": 20,
+      "n": 6,
+      "row_slice_doubling_from_previous_n": {
+        "holds": false,
+        "twice_previous": 12
+      },
+      "row_slice_max_ratio": 10,
+      "target_two_to_n_minus_1": 32
+    }
+  ],
+  "status": "PURE_ROUTE_BARRIER_EXACT_INTEGER_REPLAY",
+  "theorems": {
+    "last_row_exact_rank": "binom(n-1,m)*binom(n,m)",
+    "last_row_exact_ratio": "binom(n-1,m)",
+    "permanent_large_splitting_ceiling": "rank/cap <= binom(n,m)",
+    "s_cofactor_intersection": "binom(n-1,m)*binom(n-s,m)",
+    "sharpness_condition": "dim(U)>=n and dim(W)>=n",
+    "uniform_one_term_cap": "rank M_(U,W)^(q,m)(T) <= binom(n,m)"
+  }
+}

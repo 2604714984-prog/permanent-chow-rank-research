@@ -1,0 +1,124 @@
+{
+  "aggregate_collision_dimension_j": 72,
+  "bottom_cubic_permanent_collision_rank_over_Q": 36,
+  "central_derivative_coordinate_count": 120,
+  "central_relation_dimension_rho": 0,
+  "certificate_minor_absolute_determinant": 1,
+  "certified_chow_rank_lower_bound": 6,
+  "compatible_with_q6_central_necessary_condition": false,
+  "conclusion": "A Chow-rank-six fixed sum can have rho=0, eta=0, and aggregate collision j=72 with im K_3(perm_6).",
+  "contained_three_by_three_subpermanents": [
+    {
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "columns": [
+        3,
+        4,
+        5
+      ],
+      "rows": [
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "coordinate_monomial_cap_proof_type": "pure counting and equality-case proof",
+  "displayed_chow_rank_upper_bound": 6,
+  "enumeration_role": "independent exact diagnostic, not a theorem premise",
+  "exact_chow_rank": 6,
+  "explicit_collision_direct_sum_rank_over_Q": 72,
+  "explicit_collision_is_full_intersection": true,
+  "family": "sum over pi in S_3 of the top 3x3 permutation monomial times the identically indexed bottom 3x3 permutation monomial",
+  "field": "Q",
+  "finite_field_or_random_input": false,
+  "general_cap_proof_type": "pure finite combinatorial proof",
+  "general_six_coordinate_monomial_strict_intersection_cap_b": 19,
+  "general_six_permutation_monomial_intersection_cap_b": 2,
+  "hypothetical_25_term_q6_required_minimum_b": 20,
+  "individual_chow_term_central_rank_cap": 20,
+  "internal_output_relation_dimension_eta": 0,
+  "method": "pure middle-catalectic certificate plus exact rational torus-block elimination",
+  "normalized_fiber_intersection_histogram": {
+    "1": 45936,
+    "2": 720
+  },
+  "normalized_fiber_maximum_b": 2,
+  "normalized_six_permutation_fibers_checked": 46656,
+  "ordinary_six_output_span_rank_over_Q": 4230,
+  "permanent_central_derivative_intersection_dimension_b": 2,
+  "permanent_koszul_rank_over_Q": 14175,
+  "quotient_six_output_span_rank_over_Q": 4158,
+  "rank_certificate": "the displayed 120 by 120 middle-catalectic matrix is a permutation matrix; every row and column has one unit entry",
+  "scope": "This disproves claims that minimum length, strict middle-catalectic minimality, or vanishing central/internal relations force aggregate quotient-Koszul transversality. It is not a 25-term decomposition of perm_6 and does not change the 25..32 interval.",
+  "six_individual_koszul_rank_sum": 4230,
+  "six_permutations": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      1,
+      3,
+      5,
+      4
+    ],
+    [
+      1,
+      0,
+      2,
+      4,
+      3,
+      5
+    ],
+    [
+      1,
+      2,
+      0,
+      4,
+      5,
+      3
+    ],
+    [
+      2,
+      0,
+      1,
+      5,
+      3,
+      4
+    ],
+    [
+      2,
+      1,
+      0,
+      5,
+      4,
+      3
+    ]
+  ],
+  "six_term_central_catalectic_rank_over_Q": 120,
+  "subpermanent_support_overlap_histogram": {
+    "0": 308,
+    "1": 72,
+    "2": 18,
+    "6": 2
+  },
+  "top_cubic_permanent_collision_rank_over_Q": 36,
+  "two_intersections_exactly_when_complement_map_is_bijective": true
+}

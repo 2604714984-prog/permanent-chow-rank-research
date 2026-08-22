@@ -1,0 +1,61 @@
+{
+  "claim_boundary": "The nonextension certificate is specific to the displayed rational A, B, and phi; it is not a theorem for every rank-five full-support anchor. It excludes this local Cremona identity from an actual common-W15 pair, but does not exclude the general all-singular rank-five layer or the b=50 endpoint, prove ChowRank(perm_6)>=28, or make a border-rank claim. The certificate retains both diagonal and wedge axes and does not contradict N6-069.",
+  "exact_local_barrier": {
+    "compression_a": [
+      [1, 0, 0, 0, 0, -1],
+      [0, 1, 0, 0, 0, -1],
+      [0, 0, 1, 0, 0, -1],
+      [0, 0, 0, 1, 0, -1],
+      [0, 0, 0, 0, 1, -1],
+      [0, 0, 0, 0, 0, 0]
+    ],
+    "compression_b": [
+      [1, 0, 0, 0, 0, "-1/6"],
+      [0, 1, 0, 0, 0, "-1/3"],
+      [0, 0, 1, 0, 0, "-1/2"],
+      [0, 0, 0, 1, 0, "-2/3"],
+      [0, 0, 0, 0, 1, "-5/6"],
+      [0, 0, 0, 0, 0, 0]
+    ],
+    "determinant_mu_a": -32,
+    "determinant_mu_b": "-40/81",
+    "fixed_edge_count": 10,
+    "full_cross_row_extension": {
+      "displayed_kernel_basis": "(C,D)=(T A,T B), T in Mat_{6 by 5}",
+      "displayed_kernel_rank_over_Q": 30,
+      "strict_conclusion": "For this explicit A, B, and phi, every further row block factors as (C,D)=(T A,T B). Stacking all six row blocks therefore gives rank(X)<=5 and rank(Y)<=5, so this local Cremona identity cannot extend to an actual injective pair.",
+      "system_definition": "For one further row-block pair (C,D), impose zero diagonal and zero skew part on A Z C^T-B phi(Z) D^T for all 15 edge basis tensors Z.",
+      "system_nullity": 30,
+      "system_rank_over_Q": 42,
+      "system_shape": [
+        315,
+        72
+      ],
+      "system_times_displayed_kernel_rank_over_Q": 0
+    },
+    "kernel_a": [1, 1, 1, 1, 1, 1],
+    "kernel_b": [1, 2, 3, 4, 5, 6],
+    "not_monomial_congruence_reason": "A congruence preserving S0 is monomial and therefore sends each edge line to one edge line, whereas phi(F05) has five nonzero edge components.",
+    "phi_F05": [
+      {"coefficient": 1, "edge": [0, 1]},
+      {"coefficient": 2, "edge": [0, 2]},
+      {"coefficient": 3, "edge": [0, 3]},
+      {"coefficient": 4, "edge": [0, 4]},
+      {"coefficient": 6, "edge": [0, 5]}
+    ],
+    "phi_definition": "phi=mu_B^{-1} mu_A",
+    "rank_a": 5,
+    "rank_b": 5
+  },
+  "pure_lemma": {
+    "full_support_conclusion": "If A and B are singular row blocks, rank(A)=5, ker(A) has full coordinate support, and A Z A^T=B phi(Z) B^T for every Z in S0 with phi invertible, then rank(B)=5, ker(B) has full coordinate support, and im(A)=im(B).",
+    "kernel_formula": "ker(mu_A)={a*b^T+b*a^T : b_i=0 whenever a_i!=0}",
+    "rank_formula": "rank(mu_A)=15-number_of_zero_coordinates(a)"
+  },
+  "status": [
+    "PURE_RANK5_FULL_SUPPORT_COMMON_IMAGE_LEMMA",
+    "EXACT_QQ_LOCAL_CREMONA_BARRIER",
+    "EXACT_QQ_EXPLICIT_CROSS_ROW_NONEXTENSION",
+    "G-050"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "certificate": "N6-125",
+  "status": "EXACT_SAME_ROW_FINITE_GERM_EXCLUSION",
+  "field": "characteristic zero",
+  "hypothesis": "the finite graph pair at the same-row K3,2 unit direction T=I3 tensor E00",
+  "exact_certificate": {
+    "base_cross_rank": 6,
+    "base_sum_rank": 9,
+    "schur_shape": [
+      360,
+      72
+    ],
+    "linear_rank": 68,
+    "kernel_dimension": 4,
+    "quadratic_generators": [
+      "(x0 - x2)*(x0 + x2)",
+      "x0*x3",
+      "x2*x3"
+    ],
+    "reduced_components": [
+      "(x3=0, x0-x2=0)",
+      "(x3=0, x0+x2=0)",
+      "(x0=0, x2=0)"
+    ],
+    "branches": {
+      "plus": {
+        "cross_rank": 6,
+        "sum_rank": 9
+      },
+      "minus": {
+        "cross_rank": 6,
+        "sum_rank": 9
+      },
+      "product": {
+        "cross_rank": 6,
+        "sum_rank": 12
+      }
+    },
+    "complement_determinant_on_product": "64*x3**3*(x1 - 1)**3",
+    "initial_ideal": "(x0^2-x2^2,x0*x3,x2*x3)",
+    "formal_sandwich": true
+  },
+  "consequence": "The completed rank-at-most-six germ is the union of two sum-rank-nine branches and one common-A product branch. The product branch is excluded for an actual twelve-dimensional Chow section difference by the N6-119 common-A block barrier.",
+  "symmetry": "column permutations carry this representative to all four same-row directions",
+  "boundary": [
+    "does not classify arbitrary 6 by 6 graph operators",
+    "does not classify mixed-weight sums at the diagonal K3,2 collision",
+    "does not prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

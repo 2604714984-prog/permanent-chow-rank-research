@@ -1,0 +1,122 @@
+{
+  "candidate_count": 3595,
+  "candidate_formula": "(6! - 1) * 5",
+  "claim_boundary": [
+    "A common coordinate permutation normalizes one underlying permutation type to the identity.",
+    "Every nonidentity relative permutation and all five positive multiplicity splits are exhausted.",
+    "The 42 tails are distinct Walsh characters; global tail negation is already a complementary Walsh character because nonzero-count parity equals XOR Hamming-weight parity.",
+    "Arbitrary diagonal signs only rescale monomial columns by nonzero scalars, so they do not change the invalid-feature row rank.",
+    "Rank 42 on invalid monomials forces zero local permanent-target intersection for every packet with exactly two underlying permutation types.",
+    "This does not cover general GL(6) graph transforms, arbitrary endpoint-B packets, ordinary lower 50, or border rank."
+  ],
+  "cycle_type_rank_histogram": {
+    "2+1+1+1+1": {
+      "42": 75
+    },
+    "2+2+1+1": {
+      "42": 225
+    },
+    "2+2+2": {
+      "42": 75
+    },
+    "3+1+1+1": {
+      "42": 200
+    },
+    "3+2+1": {
+      "42": 600
+    },
+    "3+3": {
+      "42": 200
+    },
+    "4+1+1": {
+      "42": 450
+    },
+    "4+2": {
+      "42": 450
+    },
+    "5+1": {
+      "42": 720
+    },
+    "6": {
+      "42": 600
+    }
+  },
+  "distinct_tail_character_count": 42,
+  "elapsed_seconds": 8.507984485004272,
+  "field": "F_65521",
+  "full_walsh_feature_rank": 42,
+  "identity_kernel_dimension": 1,
+  "identity_kernel_target_parities": [
+    63,
+    62,
+    61,
+    59,
+    55,
+    47,
+    31
+  ],
+  "identity_kernel_target_profile": [
+    32,
+    32,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "identity_kernel_target_support": [
+    0,
+    1
+  ],
+  "identity_packet_invalid_tail_rank": 41,
+  "invalid_tail_rank_histogram": {
+    "42": 3595
+  },
+  "schema_version": 1,
+  "status": "EXHAUSTIVE_TWO_PERMUTATION_INVALID_TAIL_RANK",
+  "tail_character_masks": [
+    62,
+    30,
+    46,
+    14,
+    54,
+    22,
+    38,
+    6,
+    58,
+    26,
+    42,
+    10,
+    50,
+    18,
+    34,
+    2,
+    60,
+    28,
+    44,
+    12,
+    52,
+    20,
+    36,
+    4,
+    56,
+    24,
+    40,
+    8,
+    48,
+    16,
+    32,
+    0,
+    63,
+    31,
+    47,
+    15,
+    55,
+    23,
+    39,
+    7,
+    59,
+    27
+  ],
+  "tail_count": 42
+}

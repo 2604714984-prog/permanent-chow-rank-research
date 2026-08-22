@@ -1,0 +1,2363 @@
+{
+  "candidate_count": 75,
+  "claim_boundary": [
+    "This audit repairs the dense-torus common-zero inference for all 75 rows of the coincident overlapping-(2,2) nilpotent family.",
+    "It uses the saved exact determinant factorizations; it does not infer torus emptiness from a multivariate gcd alone.",
+    "The result does not audit the higher-parameter overlap-two certificates and does not prove ordinary lower 50, exact rank 64, or border rank."
+  ],
+  "field": "characteristic zero",
+  "multi_minor_row_count": 56,
+  "proof_method": "Remove the invertible Laurent monomial from every saved exact minor, verify that each residual lies in Q[r*t], and compute the exact univariate gcd. Gcd 1 in Q[z] is a Bezout certificate that the residual minors have no common complex root.",
+  "rows": [
+    {
+      "identity_count": 1,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        1
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        1
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            3
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        1
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            1
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        1
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            1
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        1
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - z**2 + 1/4",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            8
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 2*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        2
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - z**2 + 1/4",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            8
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 2*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        2
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - z**2 + 1/4",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            8
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 2*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        2
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            7
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        2
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            3
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        2
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        3
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        3
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**6 - 3*z**4/2 + 3*z**2/4 - 1/8",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**3 - 3*z**2 + 3*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        3
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        3
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            5
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        3
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        4
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        4
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**6 - 3*z**4/2 + 3*z**2/4 - 1/8",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**3 - 3*z**2 + 3*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        4
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            15
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        4
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        4
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 5*z**8/2 + 5*z**6/2 - 5*z**4/4 + 5*z**2/16 - 1/32",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**5 - 5*z**4 + 10*z**3 - 10*z**2 + 5*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        5
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 5*z**8/2 + 5*z**6/2 - 5*z**4/4 + 5*z**2/16 - 1/32",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**5 - 5*z**4 + 10*z**3 - 10*z**2 + 5*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        5
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        5
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            17
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        5
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            20
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        0,
+        5
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            3
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**14 - 7*z**12/2 + 21*z**10/4 - 35*z**8/8 + 35*z**6/16 - 21*z**4/32 + 7*z**2/64 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            3
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**7 - 7*z**6 + 21*z**5 - 35*z**4 + 35*z**3 - 21*z**2 + 7*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            7
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            3
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            5
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**14 - 7*z**12/2 + 21*z**10/4 - 35*z**8/8 + 35*z**6/16 - 21*z**4/32 + 7*z**2/64 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            5
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**7 - 7*z**6 + 21*z**5 - 35*z**4 + 35*z**3 - 21*z**2 + 7*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            9
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            13
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            5
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            5
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**14 - 7*z**12/2 + 21*z**10/4 - 35*z**8/8 + 35*z**6/16 - 21*z**4/32 + 7*z**2/64 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            5
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**7 - 7*z**6 + 21*z**5 - 35*z**4 + 35*z**3 - 21*z**2 + 7*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            9
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            13
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            15
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            13
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**14 - 7*z**12/2 + 21*z**10/4 - 35*z**8/8 + 35*z**6/16 - 21*z**4/32 + 7*z**2/64 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**7 - 7*z**6 + 21*z**5 - 35*z**4 + 35*z**3 - 21*z**2 + 7*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            13
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 2*z**6 + 3*z**4/2 - z**2/2 + 1/16",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - 4*z**3 + 6*z**2 - 4*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 1/2",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            17
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            20
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            3
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            3
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**12 - 3*z**10 + 15*z**8/4 - 5*z**6/2 + 15*z**4/16 - 3*z**2/16 + 1/64",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            4
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**6 - 6*z**5 + 15*z**4 - 20*z**3 + 15*z**2 - 6*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - z**2 + 1/4",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 2*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            8
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            3
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            3
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**15 + z**14 - 7*z**13/2 - 7*z**12/2 + 21*z**11/4 + 21*z**10/4 - 35*z**9/8 - 35*z**8/8 + 35*z**7/16 + 35*z**6/16 - 21*z**5/32 - 21*z**4/32 + 7*z**3/64 + 7*z**2/64 - z/128 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            3
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**8 - 8*z**7 + 28*z**6 - 56*z**5 + 70*z**4 - 56*z**3 + 28*z**2 - 8*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**12 - 3*z**10 + 15*z**8/4 - 5*z**6/2 + 15*z**4/16 - 3*z**2/16 + 1/64",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            4
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**6 - 6*z**5 + 15*z**4 - 20*z**3 + 15*z**2 - 6*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**4 - z**2 + 1/4",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**2 - 2*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            8
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**17 + z**16 - 4*z**15 - 4*z**14 + 7*z**13 + 7*z**12 - 7*z**11 - 7*z**10 + 35*z**9/8 + 35*z**8/8 - 7*z**7/4 - 7*z**6/4 + 7*z**5/16 + 7*z**4/16 - z**3/16 - z**2/16 + z/256 + 1/256",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            4
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**9 - 9*z**8 + 36*z**7 - 84*z**6 + 126*z**5 - 126*z**4 + 84*z**3 - 36*z**2 + 9*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**17 + z**16 - 4*z**15 - 4*z**14 + 7*z**13 + 7*z**12 - 7*z**11 - 7*z**10 + 35*z**9/8 + 35*z**8/8 - 7*z**7/4 - 7*z**6/4 + 7*z**5/16 + 7*z**4/16 - z**3/16 - z**2/16 + z/256 + 1/256",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            4
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**9 - 9*z**8 + 36*z**7 - 84*z**6 + 126*z**5 - 126*z**4 + 84*z**3 - 36*z**2 + 9*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**14 - 7*z**12/2 + 21*z**10/4 - 35*z**8/8 + 35*z**6/16 - 21*z**4/32 + 7*z**2/64 - 1/128",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            5
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**7 - 7*z**6 + 21*z**5 - 35*z**4 + 35*z**3 - 21*z**2 + 7*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            12
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**6 - 3*z**4/2 + 3*z**2/4 - 1/8",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**3 - 3*z**2 + 3*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            14
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            18
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            1
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            1
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            1
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 5*z**8/2 + 5*z**6/2 - 5*z**4/4 + 5*z**2/16 - 1/32",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            5
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**5 - 5*z**4 + 10*z**3 - 10*z**2 + 5*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            10
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 5*z**8/2 + 5*z**6/2 - 5*z**4/4 + 5*z**2/16 - 1/32",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            6
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**5 - 5*z**4 + 10*z**3 - 10*z**2 + 5*z - 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            16
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "identity_count": 1,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "identity_count": 2,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "identity_count": 3,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "identity_count": 4,
+      "minor_count": 2,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "z**19 + z**18 - 9*z**17/2 - 9*z**16/2 + 9*z**15 + 9*z**14 - 21*z**13/2 - 21*z**12/2 + 63*z**11/8 + 63*z**10/8 - 63*z**9/16 - 63*z**8/16 + 21*z**7/16 + 21*z**6/16 - 9*z**5/32 - 9*z**4/32 + 9*z**3/256 + 9*z**2/256 - z/512 - 1/512",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            2,
+            2
+          ]
+        },
+        {
+          "residual_in_z_equals_r_times_t": "z**10 - 10*z**9 + 45*z**8 - 120*z**7 + 210*z**6 - 252*z**5 + 210*z**4 - 120*z**3 + 45*z**2 - 10*z + 1",
+          "selection_point": [
+            2,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "identity_count": 5,
+      "minor_count": 1,
+      "reductions": [
+        {
+          "residual_in_z_equals_r_times_t": "1",
+          "selection_point": [
+            1,
+            1
+          ],
+          "torus_monomial_exponents_r_t": [
+            0,
+            11
+          ]
+        }
+      ],
+      "residual_gcd_over_Q_z": "1",
+      "status": "EXACT_LAURENT_UNIVARIATE_BEZOUT_EMPTY_TORUS_ZERO_SET",
+      "support": [
+        4,
+        5
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "single_minor_row_count": 19,
+  "source_certificate": "data/n7_mixed_glynn_overlapping_22_nilpotent_shear_tail_rank.json",
+  "status": "EXACT_ALL_OVERLAPPING_22_NILPOTENT_SHEAR_TORUS_IDEAL_AUDITED",
+  "torus_coordinates": [
+    "r",
+    "t"
+  ],
+  "univariate_coordinate": "z=r*t"
+}

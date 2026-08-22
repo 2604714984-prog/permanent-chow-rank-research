@@ -1,0 +1,53 @@
+{
+  "certificate": "N6-129",
+  "status": "PURE_K32_CROSS_ANNIHILATOR_REDUCTION",
+  "field": "characteristic zero",
+  "target_dimension": 18,
+  "spaces": {
+    "A": "S0(A3) tensor S0(P2), dimension 3",
+    "B": "S0(A3) tensor (P2 tensor Q2), dimension 12",
+    "C": "S0(A3) tensor S0(Q2), dimension 3"
+  },
+  "exact_formula": "rank cross(L,M) = 18 - b(T) - c(T), where b(T) is the dimension of {B in B-space: B*T is symmetric} and c(T) is the dimension of {C in C-space: T^T*C*T lies in A-space}.",
+  "rank_six_necessary_condition": "cross rank <= 6 implies b(T) + c(T) >= 12, hence b(T) >= 9",
+  "examples": [
+    {
+      "name": "identity",
+      "determinant": 1,
+      "cross_rank_over_QQ": 6,
+      "annihilator_dimension": 12,
+      "b_dimension": 9,
+      "c_dimension": 3
+    },
+    {
+      "name": "matching_diagonal",
+      "determinant": 8,
+      "cross_rank_over_QQ": 6,
+      "annihilator_dimension": 12,
+      "b_dimension": 9,
+      "c_dimension": 3
+    },
+    {
+      "name": "row_shear",
+      "determinant": 1,
+      "cross_rank_over_QQ": 12,
+      "annihilator_dimension": 6,
+      "b_dimension": 5,
+      "c_dimension": 1
+    },
+    {
+      "name": "column_row_permutation",
+      "determinant": 1,
+      "cross_rank_over_QQ": 14,
+      "annihilator_dimension": 4,
+      "b_dimension": 4,
+      "c_dimension": 0
+    }
+  ],
+  "pure_consequence": "In this K3,2 graph slice, b(T)>=9 forces acyclic off-diagonal block support, hence a common diagonal block and a 2+2 column matching; the remaining obstruction is the full incidence argument outside this graph-pair slice.",
+  "boundary": [
+    "does not classify arbitrary invertible graph operators outside this slice",
+    "does not by itself prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

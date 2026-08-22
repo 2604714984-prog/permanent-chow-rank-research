@@ -1,0 +1,645 @@
+{
+  "ambient_dimensions_covered": [
+    1,
+    36
+  ],
+  "claim_boundary": "This closes linear compression followed by one standard Koszul--Young flattening as a route to lower 27. It is not a Chow-rank upper bound, does not cover coupled or nonlinear invariants, and does not change 26<=ChowRank(perm_6)<=32.",
+  "dimension_36_ratio_upper": [
+    24907497593,
+    958842950
+  ],
+  "dimension_36_source": "n6_all_koszul_young_ceiling.json",
+  "dimension_rows_6_through_35": [
+    {
+      "ambient_dimension": 6,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 2415,
+      "rank_upper": 315,
+      "ratio_upper": [
+        3,
+        1
+      ],
+      "single_term_rank": 105,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 7,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 2662,
+      "rank_upper": 588,
+      "ratio_upper": [
+        588,
+        125
+      ],
+      "single_term_rank": 125,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 8,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 2810,
+      "rank_upper": 960,
+      "ratio_upper": [
+        192,
+        29
+      ],
+      "single_term_rank": 145,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 9,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 2805,
+      "rank_upper": 1485,
+      "ratio_upper": [
+        9,
+        1
+      ],
+      "single_term_rank": 165,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 10,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 2610,
+      "rank_upper": 2200,
+      "ratio_upper": [
+        440,
+        37
+      ],
+      "single_term_rank": 185,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 11,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 2184,
+      "rank_upper": 3146,
+      "ratio_upper": [
+        3146,
+        205
+      ],
+      "single_term_rank": 205,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 12,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 1482,
+      "rank_upper": 4368,
+      "ratio_upper": [
+        1456,
+        75
+      ],
+      "single_term_rank": 225,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 13,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 1170,
+      "rank_upper": 5200,
+      "ratio_upper": [
+        1040,
+        49
+      ],
+      "single_term_rank": 245,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    },
+    {
+      "ambient_dimension": 14,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 5616,
+      "rank_upper": 36400,
+      "ratio_upper": [
+        2275,
+        101
+      ],
+      "single_term_rank": 1616,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 2
+    },
+    {
+      "ambient_dimension": 15,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 6906,
+      "rank_upper": 42000,
+      "ratio_upper": [
+        14000,
+        627
+      ],
+      "single_term_rank": 1881,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 2
+    },
+    {
+      "ambient_dimension": 16,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 22350,
+      "rank_upper": 224000,
+      "ratio_upper": [
+        8960,
+        379
+      ],
+      "single_term_rank": 9475,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 3
+    },
+    {
+      "ambient_dimension": 17,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 40690,
+      "rank_upper": 946764,
+      "ratio_upper": [
+        946764,
+        37979
+      ],
+      "single_term_rank": 37979,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 4
+    },
+    {
+      "ambient_dimension": 18,
+      "certificate": "pure derivative-dimension cap",
+      "margin_below_26": 66120,
+      "rank_upper": 1224000,
+      "ratio_upper": [
+        20400,
+        827
+      ],
+      "single_term_rank": 49620,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 4
+    },
+    {
+      "ambient_dimension": 19,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 304578,
+      "rank_upper": 4336890,
+      "ratio_upper": [
+        722815,
+        29753
+      ],
+      "single_term_rank": 178518,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 104770
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 55130,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 5
+    },
+    {
+      "ambient_dimension": 20,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 242812,
+      "rank_upper": 14408188,
+      "ratio_upper": [
+        3602047,
+        140875
+      ],
+      "single_term_rank": 563500,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 133906
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 71962,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 6
+    },
+    {
+      "ambient_dimension": 21,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 370953,
+      "rank_upper": 41281515,
+      "ratio_upper": [
+        138995,
+        5394
+      ],
+      "single_term_rank": 1602018,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 169708
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 91705,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 7
+    },
+    {
+      "ambient_dimension": 22,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 813276,
+      "rank_upper": 61788692,
+      "ratio_upper": [
+        15447173,
+        601942
+      ],
+      "single_term_rank": 2407768,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 215068
+        },
+        {
+          "output_wedge_degree": 5,
+          "rank_lower": 992699
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 114878,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 7
+    },
+    {
+      "ambient_dimension": 23,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 1155821,
+      "rank_upper": 90790787,
+      "ratio_upper": [
+        90790787,
+        3536408
+      ],
+      "single_term_rank": 3536408,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 262663
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 143096,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 7
+    },
+    {
+      "ambient_dimension": 24,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 2187823,
+      "rank_upper": 261028481,
+      "ratio_upper": [
+        261028481,
+        10123704
+      ],
+      "single_term_rank": 10123704,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 324832
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 179659,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 8
+    },
+    {
+      "ambient_dimension": 25,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 4390963,
+      "rank_upper": 391129643,
+      "ratio_upper": [
+        391129643,
+        15212331
+      ],
+      "single_term_rank": 15212331,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 383057
+        },
+        {
+          "output_wedge_degree": 5,
+          "rank_lower": 2038614
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 220492,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 8
+    },
+    {
+      "ambient_dimension": 26,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 4762958,
+      "rank_upper": 577663042,
+      "ratio_upper": [
+        15201659,
+        589500
+      ],
+      "single_term_rank": 22401000,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 452124
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 265247,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 8
+    },
+    {
+      "ambient_dimension": 27,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 13558395,
+      "rank_upper": 1662681911,
+      "ratio_upper": [
+        1662681911,
+        64470781
+      ],
+      "single_term_rank": 64470781,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 532768
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 316977,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 9
+    },
+    {
+      "ambient_dimension": 28,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 23895105,
+      "rank_upper": 2494465025,
+      "ratio_upper": [
+        498893005,
+        19372001
+      ],
+      "single_term_rank": 96860005,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 628669
+        },
+        {
+          "output_wedge_degree": 5,
+          "rank_lower": 3817636
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 376413,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 9
+    },
+    {
+      "ambient_dimension": 29,
+      "certificate": "pure triangular source and target",
+      "margin_below_26": 11728490,
+      "rank_upper": 3704190288,
+      "ratio_upper": [
+        3704190288,
+        142919953
+      ],
+      "single_term_rank": 142919953,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 715759
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 438786,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 9
+    },
+    {
+      "ambient_dimension": 30,
+      "certificate": "pure triangular source and strict modular target",
+      "margin_below_26": 114306846,
+      "rank_upper": 5279028244,
+      "ratio_upper": [
+        5279028244,
+        207435965
+      ],
+      "single_term_rank": 207435965,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 850149
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 650316,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 9
+    },
+    {
+      "ambient_dimension": 31,
+      "certificate": "pure triangular source and strict modular target",
+      "margin_below_26": 444886585,
+      "rank_upper": 15688480665,
+      "ratio_upper": [
+        12401961,
+        490525
+      ],
+      "single_term_rank": 620514125,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 916525
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 749786,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 10
+    },
+    {
+      "ambient_dimension": 32,
+      "certificate": "pure triangular source and strict modular target",
+      "margin_below_26": 188184620,
+      "rank_upper": 23655684000,
+      "ratio_upper": [
+        7911600,
+        306713
+      ],
+      "single_term_rank": 917071870,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 1006341
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 856000,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 10
+    },
+    {
+      "ambient_dimension": 33,
+      "certificate": "pure triangular source and strict modular target",
+      "margin_below_26": 200812950,
+      "rank_upper": 34513867440,
+      "ratio_upper": [
+        58998064,
+        2282359
+      ],
+      "single_term_rank": 1335180015,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 1109880
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 968883,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 10
+    },
+    {
+      "ambient_dimension": 34,
+      "certificate": "pure triangular source and strict modular target",
+      "margin_below_26": 846007110,
+      "rank_upper": 48999251730,
+      "ratio_upper": [
+        125639107,
+        4915706
+      ],
+      "single_term_rank": 1917125340,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 1220868
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 1088402,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 10
+    },
+    {
+      "ambient_dimension": 35,
+      "certificate": "pure triangular source and strict modular target",
+      "margin_below_26": 208205909,
+      "rank_upper": 153505777891,
+      "ratio_upper": [
+        153505777891,
+        5912076300
+      ],
+      "single_term_rank": 5912076300,
+      "source_certificates": [
+        {
+          "output_wedge_degree": 4,
+          "rank_lower": 1339029
+        }
+      ],
+      "target_output_wedge_degree": 4,
+      "target_rank_lower": 1214569,
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 11
+    }
+  ],
+  "global_ratio_upper": [
+    24907497593,
+    958842950
+  ],
+  "heavy_replay_dimensions": [],
+  "heavy_replays": {},
+  "leading_replay_dimensions": [],
+  "leading_replays": {},
+  "prime": 1000003,
+  "small_dimension_explicit_term_witnesses": [
+    {
+      "ambient_dimension": 1,
+      "explicit_term_rank_lower": 1,
+      "rank_upper": 1,
+      "ratio_upper": [
+        1,
+        1
+      ],
+      "term_exponents": [
+        6
+      ],
+      "worst_output_degree": 1,
+      "worst_wedge_degree": 0
+    },
+    {
+      "ambient_dimension": 2,
+      "explicit_term_rank_lower": 2,
+      "rank_upper": 2,
+      "ratio_upper": [
+        1,
+        1
+      ],
+      "term_exponents": [
+        1,
+        5
+      ],
+      "worst_output_degree": 1,
+      "worst_wedge_degree": 0
+    },
+    {
+      "ambient_dimension": 3,
+      "explicit_term_rank_lower": 7,
+      "rank_upper": 10,
+      "ratio_upper": [
+        10,
+        7
+      ],
+      "term_exponents": [
+        2,
+        2,
+        2
+      ],
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 0
+    },
+    {
+      "ambient_dimension": 4,
+      "explicit_term_rank_lower": 10,
+      "rank_upper": 20,
+      "ratio_upper": [
+        2,
+        1
+      ],
+      "term_exponents": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 0
+    },
+    {
+      "ambient_dimension": 5,
+      "explicit_term_rank_lower": 59,
+      "rank_upper": 150,
+      "ratio_upper": [
+        150,
+        59
+      ],
+      "term_exponents": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "worst_output_degree": 3,
+      "worst_wedge_degree": 1
+    }
+  ],
+  "status": "N6_LINEAR_RESTRICTION_KOSZUL_CEILING_PROOF_DRAFT_COMPLETE",
+  "theorem": "For every linear restriction of perm_6 to a vector space of dimension at most 36, every standard Koszul--Young flattening has rank strictly less than 26 times the maximum rank of one degree-six Chow term."
+}

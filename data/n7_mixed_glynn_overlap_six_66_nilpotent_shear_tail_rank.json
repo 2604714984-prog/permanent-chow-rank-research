@@ -1,0 +1,614 @@
+{
+  "allowed_boundary_divisors": [
+    "u1",
+    "u2",
+    "u3",
+    "u4",
+    "u5",
+    "t",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "leading_right_core"
+  ],
+  "candidate_count": 5,
+  "candidate_start_index": 0,
+  "candidate_stop_index_exclusive": 5,
+  "claim_boundary": [
+    "The exact family has support sizes (6,6), overlap exactly 6, and v^T u=0.",
+    "Every oriented coordinate support and all five positive identity/shear multiplicity splits are represented.",
+    "Exact minor gcd factors are confined to the complement of the dense full-support chart; every such divisor reduces to an imported smaller-overlap, same-overlap lower-support, or disjoint-support certificate.",
+    "The result remains local to rank-one nilpotent shears in the synchronized mixed-Glynn endpoint model and does not prove arbitrary GL(6), arbitrary endpoint-B packets, ordinary lower 50, or border rank."
+  ],
+  "dense_full_support_condition": "all coordinate parameters and the leading right-core form are nonzero",
+  "elapsed_seconds": 35.744362544006435,
+  "face_certificates": [
+    "EXACT_ALL_OVERLAP_FIVE_56_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+    "EXACT_ALL_OVERLAP_FIVE_65_NILPOTENT_SHEAR_INVALID_TAIL_MINORS"
+  ],
+  "field": "characteristic zero",
+  "full_candidate_count": 5,
+  "left_support_size": 6,
+  "multiplicity_split_count": 5,
+  "nilpotence_identity": "v^T u = 0 because the extra supports are disjoint",
+  "overlap_size": 6,
+  "parameter_count": 10,
+  "parametrization": "u=(1,u_core,left extras), v=t*(-sum(u_i*q_i),1,q_core) plus independent right extras",
+  "right_support_size": 6,
+  "rows": [
+    {
+      "allowed_boundary_factor_exponents": {
+        "q2": 3,
+        "q3": 8,
+        "q4": 9,
+        "q5": 20,
+        "t": 40
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "26916866914644546426302092970676977664*q2**3*q3**8*q4**9*q5**20*t**40",
+      "identity_count": 1,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 80,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q3": 2,
+        "q4": 5,
+        "q5": 15,
+        "t": 22
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "3894222643901120721397872246915072*q3**2*q4**5*q5**15*t**22",
+      "identity_count": 2,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 44,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q4": 1,
+        "q5": 6,
+        "t": 7
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "81129638414606681695789005144064*q4*q5**6*t**7",
+      "identity_count": 3,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 14,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q5": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q5*t*u1",
+      "identity_count": 4,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    },
+    {
+      "allowed_boundary_factor_exponents": {
+        "q5": 1,
+        "t": 1,
+        "u1": 1
+      },
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "gcd_factorization": "40564819207303340847894502572032*q5*t*u1",
+      "identity_count": 5,
+      "left_extra_support": [],
+      "minor_count": 1,
+      "minors": [
+        {
+          "determinant_term_count": 1,
+          "determinant_total_degree": 3,
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "right_extra_support": [],
+      "status": "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS",
+      "unresolved_factors": [],
+      "weighted_selection": true
+    }
+  ],
+  "schema_version": 1,
+  "status": "EXACT_ALL_OVERLAP_SIX_66_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+  "status_counts": {
+    "DENSE_FULL_SUPPORT_COVERED_BY_EXACT_MINORS": 5
+  },
+  "support_count": 1,
+  "weighted_selection": true,
+  "witness_samples_first_5": [
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "identity_count": 1,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "identity_count": 2,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "identity_count": 3,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "identity_count": 4,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "core_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "identity_count": 5,
+      "left_extra_support": [],
+      "right_extra_support": [],
+      "witness_sample_sets": [
+        {
+          "selection_point": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "witness_assignments_first_5": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              6,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "workers": 4
+}

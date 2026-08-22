@@ -1,0 +1,245 @@
+{
+  "claim_boundary": [
+    "The intervals are necessary numerical envelopes from Macaulay growth and ideal dimensions.",
+    "No row asserts realizability by a saturated reduced point ideal or compatibility with the permanent target.",
+    "Because S1 I4 is contained in I5, the degree-six image S2 I4 plus S1 I5 equals S1 I5."
+  ],
+  "compressed_cartesian_envelope_candidate_count": 1894,
+  "expanded_cartesian_envelope_candidate_count": 22728,
+  "rows": [
+    {
+      "cartesian_envelope_candidate_count": 308,
+      "expanded_rank_pair_count": 3696,
+      "formal_sequence_count": 12,
+      "frontier": "F1",
+      "hilbert_4_5_6": [
+        39,
+        40,
+        41
+      ],
+      "ideal_dimensions_4_5_6": [
+        171,
+        422,
+        883
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        21
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        13
+      ],
+      "rank_I4_times_S1_interval": [
+        401,
+        422
+      ],
+      "rank_I5_times_S1_interval": [
+        870,
+        883
+      ],
+      "strict_growth_tail_type": "1-1"
+    },
+    {
+      "cartesian_envelope_candidate_count": 273,
+      "expanded_rank_pair_count": 3276,
+      "formal_sequence_count": 12,
+      "frontier": "F2",
+      "hilbert_4_5_6": [
+        38,
+        39,
+        40
+      ],
+      "ideal_dimensions_4_5_6": [
+        172,
+        423,
+        884
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        20
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        12
+      ],
+      "rank_I4_times_S1_interval": [
+        403,
+        423
+      ],
+      "rank_I5_times_S1_interval": [
+        872,
+        884
+      ],
+      "strict_growth_tail_type": "1-1-1"
+    },
+    {
+      "cartesian_envelope_candidate_count": 280,
+      "expanded_rank_pair_count": 3360,
+      "formal_sequence_count": 12,
+      "frontier": "F3",
+      "hilbert_4_5_6": [
+        38,
+        40,
+        41
+      ],
+      "ideal_dimensions_4_5_6": [
+        172,
+        422,
+        883
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        19
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        13
+      ],
+      "rank_I4_times_S1_interval": [
+        403,
+        422
+      ],
+      "rank_I5_times_S1_interval": [
+        870,
+        883
+      ],
+      "strict_growth_tail_type": "1-1"
+    },
+    {
+      "cartesian_envelope_candidate_count": 260,
+      "expanded_rank_pair_count": 3120,
+      "formal_sequence_count": 12,
+      "frontier": "F3",
+      "hilbert_4_5_6": [
+        38,
+        40,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        172,
+        422,
+        882
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        19
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        12
+      ],
+      "rank_I4_times_S1_interval": [
+        403,
+        422
+      ],
+      "rank_I5_times_S1_interval": [
+        870,
+        882
+      ],
+      "strict_growth_tail_type": "2"
+    },
+    {
+      "cartesian_envelope_candidate_count": 273,
+      "expanded_rank_pair_count": 3276,
+      "formal_sequence_count": 12,
+      "frontier": "F4",
+      "hilbert_4_5_6": [
+        37,
+        38,
+        39
+      ],
+      "ideal_dimensions_4_5_6": [
+        173,
+        424,
+        885
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        20
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        12
+      ],
+      "rank_I4_times_S1_interval": [
+        404,
+        424
+      ],
+      "rank_I5_times_S1_interval": [
+        873,
+        885
+      ],
+      "strict_growth_tail_type": "1-1-1-1"
+    },
+    {
+      "cartesian_envelope_candidate_count": 260,
+      "expanded_rank_pair_count": 3120,
+      "formal_sequence_count": 12,
+      "frontier": "F5",
+      "hilbert_4_5_6": [
+        37,
+        39,
+        40
+      ],
+      "ideal_dimensions_4_5_6": [
+        173,
+        423,
+        884
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        19
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        12
+      ],
+      "rank_I4_times_S1_interval": [
+        404,
+        423
+      ],
+      "rank_I5_times_S1_interval": [
+        872,
+        884
+      ],
+      "strict_growth_tail_type": "1-1-1"
+    },
+    {
+      "cartesian_envelope_candidate_count": 240,
+      "expanded_rank_pair_count": 2880,
+      "formal_sequence_count": 12,
+      "frontier": "F5",
+      "hilbert_4_5_6": [
+        37,
+        39,
+        41
+      ],
+      "ideal_dimensions_4_5_6": [
+        173,
+        423,
+        883
+      ],
+      "minimal_generators_degree5_interval": [
+        0,
+        19
+      ],
+      "minimal_generators_degree6_interval": [
+        0,
+        11
+      ],
+      "rank_I4_times_S1_interval": [
+        404,
+        423
+      ],
+      "rank_I5_times_S1_interval": [
+        872,
+        883
+      ],
+      "strict_growth_tail_type": "2-1"
+    }
+  ],
+  "schema_version": 1,
+  "signature_count": 7,
+  "status": "H-03-NUMERICAL-MULTIPLICATION-RANK-ENVELOPES"
+}

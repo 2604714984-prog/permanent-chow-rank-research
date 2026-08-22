@@ -1,0 +1,355 @@
+{
+  "certificate": "N6-122",
+  "status": "EXACT_QQ_RESTRICTED_K32_UNIT_GRAPH_DIRECTION_CLASSIFICATION",
+  "field": "characteristic zero",
+  "hypothesis": "K3,2 collision W=A3 tensor P2; L=graph(t E_target,source), M=graph(-t E_target,source), t nonzero",
+  "exact_certificate": {
+    "parameter": "t",
+    "nonzero_parameter_rank_is_constant": true,
+    "representative_labels": {
+      "same_row_same_column": {
+        "target": 0,
+        "source": 0
+      },
+      "same_row_different_column": {
+        "target": 1,
+        "source": 0
+      },
+      "different_row_same_column": {
+        "target": 2,
+        "source": 0
+      },
+      "different_row_different_column": {
+        "target": 3,
+        "source": 0
+      }
+    },
+    "symbolic_ranks_over_Q_t": {
+      "same_row_same_column": 7,
+      "same_row_different_column": 7,
+      "different_row_same_column": 6,
+      "different_row_different_column": 6
+    },
+    "ranks_at_t_1": {
+      "same_row_same_column": 7,
+      "same_row_different_column": 7,
+      "different_row_same_column": 6,
+      "different_row_different_column": 6
+    },
+    "sum_ranks_at_t_1": {
+      "same_row_same_column": 7,
+      "same_row_different_column": 7,
+      "different_row_same_column": 7,
+      "different_row_different_column": 7
+    },
+    "all_36_records_at_t_1": [
+      {
+        "target": 0,
+        "source": 0,
+        "same_row": true,
+        "same_column": true,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 0,
+        "source": 1,
+        "same_row": true,
+        "same_column": false,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 0,
+        "source": 2,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 0,
+        "source": 3,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 0,
+        "source": 4,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 0,
+        "source": 5,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 1,
+        "source": 0,
+        "same_row": true,
+        "same_column": false,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 1,
+        "source": 1,
+        "same_row": true,
+        "same_column": true,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 1,
+        "source": 2,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 1,
+        "source": 3,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 1,
+        "source": 4,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 1,
+        "source": 5,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 2,
+        "source": 0,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 2,
+        "source": 1,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 2,
+        "source": 2,
+        "same_row": true,
+        "same_column": true,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 2,
+        "source": 3,
+        "same_row": true,
+        "same_column": false,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 2,
+        "source": 4,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 2,
+        "source": 5,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 3,
+        "source": 0,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 3,
+        "source": 1,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 3,
+        "source": 2,
+        "same_row": true,
+        "same_column": false,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 3,
+        "source": 3,
+        "same_row": true,
+        "same_column": true,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 3,
+        "source": 4,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 3,
+        "source": 5,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 4,
+        "source": 0,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 4,
+        "source": 1,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 4,
+        "source": 2,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 4,
+        "source": 3,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 4,
+        "source": 4,
+        "same_row": true,
+        "same_column": true,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 4,
+        "source": 5,
+        "same_row": true,
+        "same_column": false,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 5,
+        "source": 0,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 5,
+        "source": 1,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 5,
+        "source": 2,
+        "same_row": false,
+        "same_column": false,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 5,
+        "source": 3,
+        "same_row": false,
+        "same_column": true,
+        "cross_rank": 6,
+        "sum_rank": 7
+      },
+      {
+        "target": 5,
+        "source": 4,
+        "same_row": true,
+        "same_column": false,
+        "cross_rank": 7,
+        "sum_rank": 7
+      },
+      {
+        "target": 5,
+        "source": 5,
+        "same_row": true,
+        "same_column": true,
+        "cross_rank": 7,
+        "sum_rank": 7
+      }
+    ],
+    "orbit_profile": {
+      "True,True": 6,
+      "True,False": 6,
+      "False,True": 12,
+      "False,False": 12
+    }
+  },
+  "theorem": {
+    "same_row_cross_rank": 7,
+    "different_row_cross_rank": 6,
+    "sum_rank_for_every_unit_direction": 7,
+    "nonzero_parameter_normalized_by_row_column_torus": true,
+    "consequence": "Every unit straight arc with cross rank at most six is noncomplementary because rank(T)=1 and dim(L+M)=7."
+  },
+  "boundary": [
+    "does not classify nonlinear corrections to unit directions",
+    "does not classify arbitrary 6 by 6 graph operators",
+    "does not close the full K2,3/K3,2 formal germ",
+    "does not prove ordinary lower 29 or exact Chow rank 32"
+  ]
+}

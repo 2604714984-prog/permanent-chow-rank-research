@@ -62,6 +62,45 @@ class N6AlternativeRouteAuditTests(unittest.TestCase):
             [False, True, True],
         )
 
+    def test_live_second_koszul_replay_matches_frozen_rank_fields(self) -> None:
+        frozen = json.loads(SECOND_FROZEN.read_text(encoding="utf-8"))
+        live = SECOND.build_payload()
+        for actual, expected in zip(live["degrees"], frozen["degrees"], strict=True):
+            self.assertEqual(
+                actual["permanent"]["domain_dimension"],
+                expected["target_domain_dimension"],
+            )
+            self.assertEqual(
+                actual["permanent"]["weight_block_count"],
+                expected["target_weight_block_count"],
+            )
+            self.assertEqual(
+                actual["permanent"]["modular_rank"],
+                expected["target_modular_rank"],
+            )
+            self.assertEqual(
+                actual["single_independent_chow_term"]["domain_dimension"],
+                expected["single_term_domain_dimension"],
+            )
+            self.assertEqual(
+                actual["single_independent_chow_term"]["modular_rank"],
+                expected["single_term_modular_rank"],
+            )
+
+    def test_second_koszul_orbit_compression_matches_small_full_replay(self) -> None:
+        compressed = SECOND.permanent_rank_audit(1)
+        uncompressed = SECOND.permanent_rank_audit(1, orbit_compression=False)
+        self.assertEqual(compressed, uncompressed)
+
+    def test_second_koszul_weight_orbit_helpers(self) -> None:
+        weight = (2, 0, 1, 0, 2, 1, 1, 0, 2, 0, 1, 2)
+        canonical = SECOND.canonical_weight(weight)
+        self.assertEqual(
+            canonical,
+            (0, 0, 1, 1, 2, 2, 0, 0, 1, 1, 2, 2),
+        )
+        self.assertEqual(SECOND.weight_orbit_size(canonical), 90 * 90)
+
     def test_scalar_second_shadow_is_vacuous_for_q_at_least_six(self) -> None:
         for fixed_terms in (6, 7, 8):
             first_derivative_cap = min(36, 6 * fixed_terms)

@@ -20,7 +20,7 @@ full column-sign family, row-homogeneous tensor rank, or unrestricted Chow
 rank. The active unrestricted interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 The literature boundary is in
@@ -449,7 +449,8 @@ It does not decide:
 - tensor rank of the permanent; or
 - unrestricted Chow rank.
 
-No conclusion from this theorem changes the unrestricted interval `25..32`.
+This theorem does not supply the unrestricted improvement; N6-030 later changes
+the proof-draft interval to `26..32` by an average-subset argument.
 Novelty relative to all literature has not been established.
 
 ## 7. Deterministic reproduction

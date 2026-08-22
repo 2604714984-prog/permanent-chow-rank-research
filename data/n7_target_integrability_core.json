@@ -1,0 +1,74 @@
+{
+  "claim_boundary": [
+    "Target containment makes the quotient mixed-partial map modulo R5 identically zero; it is not an additional obstruction.",
+    "The canonical datum is the relation-tensor class modulo the image of d_A from seven copies of R6.",
+    "The modular line control checks orientations and the gauge law only; it is not a characteristic-zero nonexistence result."
+  ],
+  "control": {
+    "base_relation_tensor_rank": 0,
+    "coefficient_fiber_preserved_by_nonzero_gauge": true,
+    "gauge_difference_equals_d_a": true,
+    "point_count": 8,
+    "points_are_distinct": true,
+    "q5": 2,
+    "q6": 1,
+    "rank_e5": 6,
+    "rank_e6": 7,
+    "shifted_relation_tensor_rank": 2,
+    "shifted_tensor_columns_lie_in_r5": true
+  },
+  "frontier_dimensions": [
+    {
+      "frontier": "F1",
+      "gauge_source_dimension": 7,
+      "q5": 2,
+      "q6": 1,
+      "relation_tensor_dimension": 42
+    },
+    {
+      "frontier": "F2",
+      "gauge_source_dimension": 14,
+      "q5": 3,
+      "q6": 2,
+      "relation_tensor_dimension": 63
+    },
+    {
+      "frontier": "F3-H6-41",
+      "gauge_source_dimension": 7,
+      "q5": 2,
+      "q6": 1,
+      "relation_tensor_dimension": 42
+    },
+    {
+      "frontier": "F3-H6-42",
+      "gauge_source_dimension": 0,
+      "q5": 2,
+      "q6": 0,
+      "relation_tensor_dimension": 42
+    },
+    {
+      "frontier": "F4",
+      "gauge_source_dimension": 21,
+      "q5": 4,
+      "q6": 3,
+      "relation_tensor_dimension": 84
+    },
+    {
+      "frontier": "F5-H6-40",
+      "gauge_source_dimension": 14,
+      "q5": 3,
+      "q6": 2,
+      "relation_tensor_dimension": 63
+    },
+    {
+      "frontier": "F5-H6-41",
+      "gauge_source_dimension": 7,
+      "q5": 3,
+      "q6": 1,
+      "relation_tensor_dimension": 63
+    }
+  ],
+  "prime_control": 65521,
+  "schema_version": 1,
+  "status": "TI-01-TI-03-GAUGE-CORRECTED-COMPLEX"
+}

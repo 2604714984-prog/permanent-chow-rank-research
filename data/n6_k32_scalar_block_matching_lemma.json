@@ -1,0 +1,95 @@
+{
+  "aggregate_matrix_shape": [
+    24,
+    18
+  ],
+  "block_size": 2,
+  "boundary": [
+    "only scalar 2-by-2 row blocks",
+    "only graph charts with x_i-y_i nonzero",
+    "does not classify general 6-by-6 average/relative operators",
+    "does not prove ChowRank(perm_6) or the unrestricted 2^(n-1) conjecture"
+  ],
+  "conclusion": "aggregate rank <= 6 iff x_0=x_1=x_2=lambda and y_i=-lambda, lambda!=0",
+  "field": "QQ",
+  "pair_matrix_shape": [
+    8,
+    6
+  ],
+  "relative_graph_condition": "x_i-y_i != 0 for i=0,1,2",
+  "row_count": 3,
+  "samples": [
+    {
+      "direct_beta_rank": 6,
+      "formula_rank": 6,
+      "x": [
+        1,
+        1,
+        1
+      ],
+      "y": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "direct_beta_rank": 15,
+      "formula_rank": 15,
+      "x": [
+        1,
+        2,
+        3
+      ],
+      "y": [
+        -1,
+        -2,
+        -3
+      ]
+    },
+    {
+      "direct_beta_rank": 12,
+      "formula_rank": 12,
+      "x": [
+        1,
+        1,
+        2
+      ],
+      "y": [
+        -1,
+        -1,
+        -2
+      ]
+    },
+    {
+      "direct_beta_rank": 15,
+      "formula_rank": 15,
+      "x": [
+        1,
+        2,
+        3
+      ],
+      "y": [
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "small_exhaustive_failures": 0,
+  "small_exhaustive_states": 216,
+  "special_rank_six": {
+    "rank": 6,
+    "x": [
+      1,
+      1,
+      1
+    ],
+    "y": [
+      -1,
+      -1,
+      -1
+    ]
+  },
+  "status": "PURE_SCALAR_BLOCK_MATCHING_LEMMA"
+}

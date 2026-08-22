@@ -1,0 +1,242 @@
+{
+  "arithmetic": {
+    "coordinate_twelve_subsets_per_hook": 1352078,
+    "full_column_rank_over_F2_implies_full_rank_over_Q": true,
+    "rank_field": "F_2"
+  },
+  "boundary": "This excludes only pair-incidence components whose torus-fixed endpoint has quadratic intersection dimension exactly twelve. The product endpoints with intersection dimensions fourteen, fifteen, or eighteen remain separate inputs. It does not by itself exclude the kappa2=0 six-color branches, prove ordinary lower 29, determine exact Chow rank 32, or prove a border-rank bound.",
+  "conclusion": {
+    "all_nonproduct_e12_fixed_endpoint_components_are_excluded": true,
+    "biflag_remaining_product_support_count": 34,
+    "remaining_fixed_endpoints_have_product_twelve_cell_support": true,
+    "standard_remaining_product_support_count": 43
+  },
+  "formal_argument": {
+    "an_actual_complementary_pair_cannot_lie_on_the_diagonal": true,
+    "crossfree_equations_are_invariant_under_swapping_P_and_Q": true,
+    "every_component_with_an_e12_fixed_point_is_diagonal": true,
+    "formal_relative_uniqueness_and_swap_force_P_equals_Q": true,
+    "full_pair_variable_jacobian_gives_formal_relative_uniqueness": true,
+    "projective_torus_components_contain_coordinate_fixed_points": true
+  },
+  "hooks": [
+    {
+      "coordinate_complementary_partition_count": 0,
+      "coordinate_twelve_plane_shape_histogram_for_at_least_twelve": {
+        "2x6": 3,
+        "3x4": 30,
+        "4x3": 10,
+        "nonproduct": 4872
+      },
+      "e12_coordinate_crossfree_ordered_pair_count_histogram": {
+        "0": 168,
+        "1": 4704
+      },
+      "e12_no_fixed_pair_count": 168,
+      "e12_unique_diagonal_fixed_endpoint_count": 4704,
+      "fixed_endpoint_representative": {
+        "P_equals_Q_cells": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "U_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "hook": "standard",
+      "intersection_dimension_histogram_for_at_least_twelve": {
+        "12": 4872,
+        "14": 3,
+        "15": 6,
+        "18": 34
+      },
+      "linear_hook_dimension": 23,
+      "pair_variable_jacobian_rank_over_F2_histogram": {
+        "72": 4704
+      },
+      "pair_variable_jacobian_size": [
+        432,
+        72
+      ],
+      "quadratic_dimension": 72,
+      "rank_over_Q_is_72_at_every_fixed_endpoint": true
+    },
+    {
+      "coordinate_complementary_partition_count": 0,
+      "coordinate_twelve_plane_shape_histogram_for_at_least_twelve": {
+        "3x4": 20,
+        "4x3": 14,
+        "nonproduct": 5124
+      },
+      "e12_coordinate_crossfree_ordered_pair_count_histogram": {
+        "0": 204,
+        "1": 4920
+      },
+      "e12_no_fixed_pair_count": 204,
+      "e12_unique_diagonal_fixed_endpoint_count": 4920,
+      "fixed_endpoint_representative": {
+        "P_equals_Q_cells": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "U_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "hook": "biflag",
+      "intersection_dimension_histogram_for_at_least_twelve": {
+        "12": 5124,
+        "18": 34
+      },
+      "linear_hook_dimension": 23,
+      "pair_variable_jacobian_rank_over_F2_histogram": {
+        "72": 4920
+      },
+      "pair_variable_jacobian_size": [
+        432,
+        72
+      ],
+      "quadratic_dimension": 72,
+      "rank_over_Q_is_72_at_every_fixed_endpoint": true
+    }
+  ],
+  "status": "EXACT_PROJECTIVE_NONPRODUCT_E12_PAIR_COMPONENT_EXCLUSION"
+}

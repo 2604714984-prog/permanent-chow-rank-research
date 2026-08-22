@@ -1,0 +1,176 @@
+{
+  "arithmetic": "pure sign-fiber proof; exact QQ example and exact modular coordinate-quotient differential diagnostic",
+  "claim_boundary": "This excludes the two row/column-separated common-quotient families, not every all-alpha-three configuration or every degeneration through their coordinate endpoints. It does not yet exclude b=60, prove ChowRank(perm_6)>=27, or make a border-rank claim.",
+  "coordinate_quotient_differential_diagnostic": {
+    "domain_dimension": 210,
+    "exceptional_orbits": [
+      {
+        "explicit_kernel_dimension": 5,
+        "modular_differential_rank": 205,
+        "orbit_index": 0,
+        "row_masks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          63
+        ],
+        "support": [
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ]
+        ]
+      },
+      {
+        "explicit_kernel_dimension": 5,
+        "modular_differential_rank": 205,
+        "orbit_index": 65,
+        "row_masks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "support": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ]
+        ]
+      }
+    ],
+    "exceptional_rank_upper_reason": "same-row and same-column families have an explicit five-dimensional first-order kernel; together with modular rank 205 this proves exact rank 205 in characteristic zero",
+    "rank_histogram": {
+      "205": 2,
+      "210": 74
+    },
+    "rectangle_free_support_orbit_count": 76
+  },
+  "exact_QQ_sign_example": {
+    "exact_QQ_rank_one_cube_span_rank": 6,
+    "exact_QQ_rank_one_square_span_rank": 6,
+    "exact_QQ_sign_matrix_rank": 4,
+    "normalized_sign_rows": [
+      [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1
+      ]
+    ],
+    "per_column_triple_intersection_dimension": 2,
+    "total_twenty_column_triple_intersection_dimension": 40
+  },
+  "pure_coupling_theorem": {
+    "common_quotient_classification": "q(F_u)=q(F_v) iff the coordinate-square vectors (u_r^2) and (v_r^2) are projectively proportional; after scaling, v is a coordinatewise sign transform of u",
+    "hypercube_affine_bound": "a normalized sign matrix of rank r has at most 2^(r-1) distinct rows, so six distinct rows force r>=4",
+    "intersection_formula": "for each column triple, dim(E3_block intersection H3_block) =6-rank(normalized sign matrix)",
+    "literal_directness_consequence": "the six rank-one squares u_i^2 are independent, hence their normalized sign rows are six distinct classes modulo global sign",
+    "required_intersection_b": 60,
+    "strict_gap": 20,
+    "total_intersection_upper_bound": 40
+  },
+  "status": "N6_053_ALPHA3_ROW_COLUMN_COUPLING_EXCLUSION",
+  "strict_conclusion": "The all-alpha-three b=60 state cannot lie in the common-quotient same-row family or its transposed same-column family: literal directness forces b<=40, contradicting b=60.",
+  "surviving_state_id": "b60_state_366",
+  "surviving_state_profile": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      3
+    ]
+  ]
+}

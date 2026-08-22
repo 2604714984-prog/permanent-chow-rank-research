@@ -1,0 +1,4482 @@
+{
+  "claim_boundary": "This proves the 77-to-80 same-shadow extension. It does not classify 76-planes, does not by itself exclude an actual x=77 packet, does not exclude global b=34, and makes no border-rank claim.",
+  "coordinate_fixed_points": {
+    "all_children_have_first_shadow_90": true,
+    "distinct_coordinate_77_plane_count": 2464800,
+    "every_coordinate_equality_support_has_a_unique_80_plane_product_parent": true,
+    "labelled_80_plane_parent_count": 30,
+    "minimizing_ferrers_profiles": [
+      [
+        20,
+        20,
+        20,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        20,
+        20,
+        19,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        20,
+        19,
+        19,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        2
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3
+      ]
+    ],
+    "minimum_first_product_shadow": 90,
+    "original_support_classification_proved_without_reverse_compression": true,
+    "three_cell_deletions_per_parent": 82160
+  },
+  "formal_germ": {
+    "boolean_component_count": 16,
+    "complete_formal_germ_is_union_of_relative_Grassmann_branches": true,
+    "component_dimension": 233,
+    "forbidden_quadratic_generator_count": 12,
+    "initial_ideal_is_parent_J_extended_by_231_smooth_variables": true,
+    "linear_dimension": 239,
+    "parent_boolean_variable_count": 8,
+    "smooth_relative_Gr_77_80_factor_dimension": 231
+  },
+  "grounded_signature_histogram": [
+    {
+      "grounded_equation_count": 162855,
+      "nonzero_raw_row_count": 1386,
+      "orbit_count": 66
+    }
+  ],
+  "local_orbit_representatives": [
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 80,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 480,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 720,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 720,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 720,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 1440,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 1440,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 1440,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2880,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 8640,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 8640,
+      "orientation": "row_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 80,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 240,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 480,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 720,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 720,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 720,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 1440,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 1440,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 1440,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2160,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 2880,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 4320,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 8640,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    },
+    {
+      "deleted_cells": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ]
+      ],
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 162855,
+        "nonzero_raw_row_count": 1386,
+        "raw_coefficient_histogram": {
+          "2": 1386
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "eta_only_root_count": 0,
+        "free_dimension": 239,
+        "parent_linear_dimension": 8,
+        "relative_Gr_77_80_dimension": 231
+      },
+      "orbit_size": 8640,
+      "orientation": "transpose_product",
+      "relative_boolean_branches": {
+        "count": 16,
+        "dimension": 233,
+        "parent_branch_dimension": 2,
+        "tautological_Gr_77_80_chart_dimension": 231
+      }
+    }
+  ],
+  "projective_globalization": {
+    "every_77_to_90_plane_extends_to_an_80_to_90_plane_with_the_same_90_shadow": true,
+    "every_77_to_90_plane_has_second_shadow_dimension_24": true,
+    "second_shadow_is_partitioned_4_by_6_product_or_transpose": true
+  },
+  "stabilizer_orbit_coverage": {
+    "all_parent_three_cell_deletions_are_covered": true,
+    "row_orbit_size_histogram": {
+      "1440": 3,
+      "2160": 11,
+      "240": 4,
+      "2880": 1,
+      "4320": 7,
+      "480": 1,
+      "720": 3,
+      "80": 1,
+      "8640": 2
+    },
+    "row_product_orbit_count": 33,
+    "total_orbit_count": 66,
+    "transpose_product_orbit_count": 33
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_B77_EQUALITY_LOCUS_EXTENSION",
+    "EXACT_SIXTY_SIX_ORBIT_LINEAR_AND_QUADRATIC_ELIMINATION",
+    "N6-088"
+  ]
+}

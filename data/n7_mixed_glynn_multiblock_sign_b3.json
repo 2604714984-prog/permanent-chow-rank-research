@@ -1,0 +1,30 @@
+{
+  "candidate_count": 262144,
+  "candidate_formula": "64^3",
+  "claim_boundary": [
+    "Only independent diagonal sign changes on the selected graph blocks are varied.",
+    "The complete finite family is exhausted, but permutations and general GL(6) changes are not included.",
+    "This is an endpoint-family computation and not an ordinary lower-fifty proof."
+  ],
+  "degree_six_rank_histogram": {
+    "336": 262144
+  },
+  "elapsed_seconds": 955.8695702379919,
+  "evaluation_columns": 400,
+  "field": "F_65521",
+  "intersection_histogram": {
+    "0": 261954,
+    "1": 189,
+    "7": 1
+  },
+  "maximizer_count": 1,
+  "maximizer_indices_first_100": [
+    262143
+  ],
+  "maximum_target_intersection": 7,
+  "schema_version": 1,
+  "seed": 97531,
+  "status": "EXHAUSTIVE_MULTIBLOCK_SIGN_SEARCH",
+  "varying_blocks": 3,
+  "workers": 20
+}

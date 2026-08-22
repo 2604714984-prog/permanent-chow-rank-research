@@ -1,0 +1,172 @@
+{
+  "actual_transport_interface": "On each partitioned component the four row generators have disjoint coordinate supports. Their degree-two and degree-three Boolean maps therefore equal the corresponding actual linear changes on the displayed product spaces; no repeated-row collision term occurs.",
+  "claim_boundary": "This classifies the 80-to-90 product-shadow equality locus and its second shadow. It does not by itself exclude an actual seven-frame common-quotient endpoint, does not exclude global b=34, does not prove ChowRank(perm_6)>=29, and makes no border-rank claim.",
+  "coordinate_fixed_points": {
+    "all_coordinate_fixed_points_have_first_shadow_90": true,
+    "every_four_triple_shadow_six_family_is_C_U4_3": true,
+    "four_triples_shadow_six_family_count": 15,
+    "minimizing_ferrers_profiles": [
+      [
+        20,
+        20,
+        20,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    ],
+    "minimum_first_product_shadow": 90,
+    "original_support_classification_proved_without_reverse_compression": true,
+    "row_product_coordinate_support_count": 15,
+    "total_coordinate_fixed_point_count": 30,
+    "transpose_product_coordinate_support_count": 15
+  },
+  "formal_germ": {
+    "boolean_component_count_at_each_fixed_point": 16,
+    "complete_formal_germ_is_the_union_of_the_sixteen_boolean_branches": true,
+    "component_dimension": 2,
+    "forbidden_quadratic_generator_count": 12,
+    "free_group_sizes": [
+      4,
+      4
+    ],
+    "initial_ideal": "I(K4)+I(K4)",
+    "linear_dimension": 8
+  },
+  "local_representatives": [
+    {
+      "boolean_branches": {
+        "all_first_shadow_symbolic_containments_hold": true,
+        "all_second_shadow_symbolic_containments_hold": true,
+        "all_selected_chart_jacobians_are_identity": true,
+        "count": 16,
+        "dimension": 2,
+        "each_branch_is_an_actual_linear_shear_on_the_product_support": true
+      },
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 169200,
+        "nonzero_raw_row_count": 1440,
+        "raw_coefficient_histogram": {
+          "2": 1440
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "coordinate_prolongation_equals_the_original_80_plane": true,
+        "eta_only_root_count": 0,
+        "free_dimension": 8,
+        "free_group_sizes": [
+          4,
+          4
+        ]
+      },
+      "orientation": "row_product"
+    },
+    {
+      "boolean_branches": {
+        "all_first_shadow_symbolic_containments_hold": true,
+        "all_second_shadow_symbolic_containments_hold": true,
+        "all_selected_chart_jacobians_are_identity": true,
+        "count": 16,
+        "dimension": 2,
+        "each_branch_is_an_actual_linear_shear_on_the_product_support": true
+      },
+      "grounded_quadratic_initial_forms": {
+        "exact_rank_over_Q": 12,
+        "forbidden_unit_count": 12,
+        "grounded_equation_count": 169200,
+        "nonzero_raw_row_count": 1440,
+        "raw_coefficient_histogram": {
+          "2": 1440
+        },
+        "row_span_is_exactly_the_twelve_forbidden_units": true
+      },
+      "linear_incidence": {
+        "coordinate_prolongation_dimension": 80,
+        "coordinate_prolongation_equals_the_original_80_plane": true,
+        "eta_only_root_count": 0,
+        "free_dimension": 8,
+        "free_group_sizes": [
+          4,
+          4
+        ]
+      },
+      "orientation": "transpose_product"
+    }
+  ],
+  "projective_globalization": {
+    "every_80_to_90_point_is_partitioned_row_product_or_its_transpose": true,
+    "every_component_is_a_product_of_projective_spaces_of_total_dimension_two": true,
+    "proof_interface": "The incidence is projective and torus stable. Every irreducible component contains one of the thirty coordinate fixed points. The complete fixed germ is the union of the exact partitioned-product branches, so closedness propagates the classification to the entire component.",
+    "row_product_component_count": 65,
+    "set_partitions_of_six_coordinates_into_four_nonempty_blocks": 65,
+    "transpose_product_component_count": 65
+  },
+  "second_product_shadow": {
+    "every_equality_point_has_second_shadow_dimension": 24,
+    "first_ferrers_witness": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "second_shadow_is_a_genuine_partitioned_4_by_6_product_plane_or_transpose": true,
+    "universal_minimum_at_dimension_90": 24
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_B80_EQUALITY_LOCUS_CLASSIFICATION",
+    "EXACT_INTEGER_LINEAR_AND_QUADRATIC_ELIMINATION",
+    "EXACT_SYMBOLIC_16_BRANCH_REPLAY",
+    "N6-082"
+  ]
+}

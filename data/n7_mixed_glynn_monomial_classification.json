@@ -1,0 +1,300 @@
+{
+  "claim_boundary": [
+    "The theorem covers invertible monomial graph transformations: arbitrary nonzero diagonal scalings followed by coordinate permutations.",
+    "It does not cover non-monomial GL(6) transformations, arbitrary endpoint-B packets, ordinary lower 50, or border rank."
+  ],
+  "column_pair_count": 21,
+  "derived_swap_relation_count": 15,
+  "derived_swap_relations_first_5": [
+    {
+      "bridge_column": 2,
+      "columns": [
+        0,
+        1
+      ],
+      "from_column_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "bridge_column": 2,
+      "columns": [
+        0,
+        1
+      ],
+      "from_column_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "rows": [
+        0,
+        2
+      ]
+    },
+    {
+      "bridge_column": 2,
+      "columns": [
+        0,
+        1
+      ],
+      "from_column_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "rows": [
+        0,
+        3
+      ]
+    },
+    {
+      "bridge_column": 2,
+      "columns": [
+        0,
+        1
+      ],
+      "from_column_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "rows": [
+        0,
+        4
+      ]
+    },
+    {
+      "bridge_column": 2,
+      "columns": [
+        0,
+        1
+      ],
+      "from_column_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "rows": [
+        0,
+        5
+      ]
+    }
+  ],
+  "direct_swap_relation_count": 300,
+  "field": "characteristic zero (indeed characteristic not two)",
+  "global_classification": {
+    "every_other_seven_block_assignment": 0,
+    "one_exceptional_block": 1,
+    "seven_equal_monomial_transforms": 7
+  },
+  "identity_kernel_target_support": [
+    0,
+    1
+  ],
+  "imported_certificates": {
+    "three_or_more_underlying_permutations": {
+      "cases": [
+        {
+          "answer": "unsat",
+          "case": "nonzero_columns"
+        },
+        {
+          "answer": "unsat",
+          "case": "zero_column"
+        }
+      ],
+      "status": "EXACT_UNSAT_PROTECTED_CHARACTER_AT_LEAST_THREE_TYPES"
+    },
+    "two_underlying_permutations": {
+      "candidate_count": 3595,
+      "invalid_tail_rank_histogram": {
+        "42": 3595
+      }
+    }
+  },
+  "local_classification": {
+    "every_other_six_block_assignment": 0,
+    "six_equal_monomial_transforms": 1
+  },
+  "proof_summary": [
+    "For one underlying permutation, its one-dimensional invalid kernel is nonzero on exactly two missing-column target fibres.",
+    "Twenty of the 21 column pairs admit a direct swap while omitting one of those two supported columns; the remaining pair follows through any bridge column.",
+    "Thus target membership forces d_ia*d_jb=d_ib*d_ja for all 15 row pairs and 21 column pairs, so the 6-by-7 scaling matrix has multiplicative rank one.",
+    "Its column-zero entries are all one, forcing every row to be identical and hence all six monomial transforms to agree.",
+    "For two underlying permutations, arbitrary nonzero diagonal scalars only rescale invalid-monomial columns and preserve the certified rank 42.",
+    "For at least three underlying permutations, the protected-character obstruction is likewise unchanged by nonzero column rescaling."
+  ],
+  "row_pair_count": 15,
+  "schema_version": 1,
+  "status": "EXACT_MONOMIAL_TRANSFORM_PACKET_CLASSIFICATION",
+  "swap_extension_witnesses_first_5": [
+    {
+      "assignment": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "columns": [
+        0,
+        2
+      ],
+      "missing_column": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "swapped_assignment": [
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "assignment": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        6
+      ],
+      "columns": [
+        0,
+        3
+      ],
+      "missing_column": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "swapped_assignment": [
+        3,
+        0,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "assignment": [
+        0,
+        4,
+        2,
+        3,
+        5,
+        6
+      ],
+      "columns": [
+        0,
+        4
+      ],
+      "missing_column": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "swapped_assignment": [
+        4,
+        0,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "assignment": [
+        0,
+        5,
+        2,
+        3,
+        4,
+        6
+      ],
+      "columns": [
+        0,
+        5
+      ],
+      "missing_column": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "swapped_assignment": [
+        5,
+        0,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "assignment": [
+        0,
+        6,
+        2,
+        3,
+        4,
+        5
+      ],
+      "columns": [
+        0,
+        6
+      ],
+      "missing_column": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "swapped_assignment": [
+        6,
+        0,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "swap_relation_count": 315
+}

@@ -1,0 +1,107 @@
+{
+  "all_block_singular_reason": "Each complete row and column contains two coordinates of U, so every two-row and two-column projection has dimension at most 4<12.",
+  "ambient_quotient_axis_count": 441,
+  "claim_boundary": "This exhausts only the displayed two-matching family over F_3 and its coordinate 6+6 splits. It is not a characteristic-zero theorem, does not exclude the general all-row/all-column-block-singular layer, does not exclude the b=50 endpoint, does not prove ChowRank(perm_6)>=28, and makes no border-rank claim.",
+  "coordinate_split_screens": {
+    "2+2+2": {
+      "both_individual_quotient_dimensions_15": 396,
+      "common_true_quotient_splits": 0,
+      "unordered_six_plus_six_splits": 462
+    },
+    "3+3": {
+      "both_individual_quotient_dimensions_15": 462,
+      "common_true_quotient_splits": 0,
+      "unordered_six_plus_six_splits": 462
+    },
+    "4+2": {
+      "both_individual_quotient_dimensions_15": 434,
+      "common_true_quotient_splits": 0,
+      "unordered_six_plus_six_splits": 462
+    },
+    "6": {
+      "both_individual_quotient_dimensions_15": 462,
+      "common_true_quotient_splits": 0,
+      "unordered_six_plus_six_splits": 462
+    }
+  },
+  "coordinate_splits_tested_total": 1848,
+  "csp_screens": {
+    "2+2+2": {
+      "common_true_quotient_pairs": 0,
+      "ordered_state_space": 2985984,
+      "pair_compatibility_count_histogram": {
+        "0": 12,
+        "12": 3
+      },
+      "visited_prefixes_by_length": [1, 12, 12, 0, 0, 0, 0]
+    },
+    "3+3": {
+      "common_true_quotient_pairs": 0,
+      "ordered_state_space": 2985984,
+      "pair_compatibility_count_histogram": {
+        "0": 15
+      },
+      "visited_prefixes_by_length": [1, 12, 0, 0, 0, 0, 0]
+    },
+    "4+2": {
+      "common_true_quotient_pairs": 0,
+      "ordered_state_space": 2985984,
+      "pair_compatibility_count_histogram": {
+        "0": 14,
+        "12": 1
+      },
+      "visited_prefixes_by_length": [1, 12, 0, 0, 0, 0, 0]
+    },
+    "6": {
+      "common_true_quotient_pairs": 0,
+      "ordered_state_space": 2985984,
+      "pair_compatibility_count_histogram": {
+        "0": 15
+      },
+      "visited_prefixes_by_length": [1, 12, 0, 0, 0, 0, 0]
+    }
+  },
+  "cycle_type_representatives": {
+    "2+2+2": [1, 0, 3, 2, 5, 4],
+    "3+3": [1, 2, 0, 4, 5, 3],
+    "4+2": [1, 2, 3, 0, 5, 4],
+    "6": [1, 2, 3, 4, 5, 0]
+  },
+  "diagonal_only_false_positive_guard": {
+    "cycle_type": "2+2+2",
+    "diagonal_projections_equal_out_of_15": 15,
+    "full_diag_plus_wedge_lines_equal_out_of_15": 2,
+    "nonzero_diagonal_equal_out_of_15": 1,
+    "ordered_line_pairs": [
+      [[1, 0], [0, 1]],
+      [[1, 0], [0, 1]],
+      [[1, 0], [0, 1]],
+      [[1, 0], [0, 1]],
+      [[1, 0], [1, 1]],
+      [[1, 1], [0, 1]]
+    ],
+    "pairs_rejected_only_after_full_test": [
+      [0, 2],
+      [0, 3],
+      [0, 4],
+      [0, 5],
+      [1, 2],
+      [1, 3],
+      [1, 4],
+      [1, 5],
+      [2, 4],
+      [2, 5],
+      [3, 4],
+      [3, 5],
+      [4, 5]
+    ],
+    "state_indices": [0, 0, 0, 0, 1, 7]
+  },
+  "family": "U is the coordinate span of the identity matching and one disjoint permutation matching. In each of the six column fibres, L and M choose an ordered pair of distinct P1(F_3) lines.",
+  "field": "F_3",
+  "ordered_complementary_line_pair_count_per_column": 12,
+  "status": [
+    "FINITE_FIELD_BOUNDED_DIAGNOSTIC",
+    "G-051"
+  ]
+}

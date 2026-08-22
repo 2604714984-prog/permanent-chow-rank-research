@@ -1,0 +1,1130 @@
+{
+  "candidate_count": 120,
+  "candidates_per_second": 288.3269396789913,
+  "claim_boundary": [
+    "A positive augmented-rank increment rigorously excludes that fixed finite-field column-uniform candidate.",
+    "The 64-point Glynn control checks that the encoded mixed-catalectic target and flattening are consistent.",
+    "The search covers only the displayed line-packet samples, not the full rank-at-most-47 fifth-Veronese locus.",
+    "It proves no ordinary or border Chow-rank bound by itself."
+  ],
+  "elapsed_seconds": 0.41619420000643004,
+  "estimated_peak_memory_gib": 0.6,
+  "field": "F_65521",
+  "glynn_64_term_positive_control": {
+    "augmented_rank": 64,
+    "coefficient_rank": 64,
+    "point_count": 64,
+    "target_increment": 0
+  },
+  "logical_cpus_left_free": 4,
+  "matrix_shape": [
+    1225,
+    49
+  ],
+  "results": [
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460815,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460816,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460817,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460818,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460819,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460820,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460821,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460822,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460823,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460824,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460825,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460826,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460827,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460828,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460829,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460830,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460831,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460832,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460833,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460834,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460835,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460836,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460837,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460838,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460839,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460840,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460841,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460842,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460843,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460844,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460845,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460846,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460847,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460848,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460849,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460850,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460851,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460852,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460853,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 2,
+      "seed": 20460854,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560815,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560816,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560817,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560818,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560819,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560820,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560821,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560822,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560823,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560824,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560825,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560826,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560827,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560828,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560829,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560830,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560831,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560832,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560833,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560834,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560835,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560836,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560837,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560838,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560839,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560840,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560841,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560842,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560843,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560844,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560845,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560846,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560847,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560848,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560849,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560850,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560851,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560852,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560853,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 3,
+      "seed": 20560854,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960815,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960816,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960817,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960818,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960819,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960820,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960821,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960822,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960823,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960824,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960825,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960826,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960827,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960828,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960829,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960830,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960831,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960832,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960833,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960834,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960835,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960836,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960837,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960838,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960839,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960840,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960841,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960842,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960843,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960844,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960845,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960846,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960847,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960848,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960849,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960850,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960851,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960852,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960853,
+      "target_increment": 1,
+      "unknown_count": 49
+    },
+    {
+      "augmented_rank": 50,
+      "coefficient_rank": 49,
+      "equation_count": 1225,
+      "forced_line_count": 7,
+      "seed": 20960854,
+      "target_increment": 1,
+      "unknown_count": 49
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260815,
+  "status": "BOUNDED_FINITE_FIELD_MIXED_CATALECTIC_SEARCH_NOT_A_RANK_CERTIFICATE",
+  "summary_by_forced_line_count": {
+    "2": {
+      "consistent_count": 0,
+      "count": 40,
+      "minimum_coefficient_rank": 49,
+      "minimum_target_increment": 1
+    },
+    "3": {
+      "consistent_count": 0,
+      "count": 40,
+      "minimum_coefficient_rank": 49,
+      "minimum_target_increment": 1
+    },
+    "7": {
+      "consistent_count": 0,
+      "count": 40,
+      "minimum_coefficient_rank": 49,
+      "minimum_target_increment": 1
+    }
+  },
+  "workers": 20
+}

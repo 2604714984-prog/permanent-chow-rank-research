@@ -1,0 +1,1061 @@
+{
+  "claim_boundary": "The exact replay checks coordinate supports, tangent witnesses, and rectangle pairs. The arbitrary-point classification is the projective torus proof, not a finite-field enumeration. This fixed K3,4 theorem does not control a general twelve-plane whose torus limit is K3,4, because the two complementary six-planes may collide in the limit; it does not exclude b=50 or prove ChowRank(perm_6)>=28.",
+  "fixed_support_scan": {
+    "modulus": 1000003,
+    "rank_at_most_nine_supports": [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        8,
+        9,
+        10
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7
+      ],
+      [
+        0,
+        1,
+        3,
+        8,
+        9,
+        11
+      ],
+      [
+        0,
+        1,
+        4,
+        5,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        8,
+        10,
+        11
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      [
+        0,
+        3,
+        4,
+        7,
+        8,
+        11
+      ],
+      [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11
+      ],
+      [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10
+      ],
+      [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      [
+        2,
+        3,
+        6,
+        7,
+        10,
+        11
+      ],
+      [
+        4,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      [
+        4,
+        5,
+        7,
+        8,
+        9,
+        11
+      ],
+      [
+        4,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      [
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ]
+    ],
+    "rank_histogram": {
+      "10": 84,
+      "12": 822,
+      "9": 18
+    },
+    "rectangle_count": 18,
+    "total_coordinate_six_planes": 924,
+    "witness_coefficients_in_support_order": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      11
+    ]
+  },
+  "pure_theorem": {
+    "complementary_pair_in_fixed_K3_4_layer_is_impossible": true,
+    "cross_image_dimension_at_most_three_pair_incidence_is_diagonal": true,
+    "rank_nine_fano_scheme_has_exactly_eighteen_reduced_points": true
+  },
+  "rectangle_pair_incidence": {
+    "cross_image_dimension_histogram": {
+      "12": 6,
+      "15": 72,
+      "18": 72,
+      "3": 18,
+      "6": 36,
+      "9": 120
+    },
+    "dimension_at_most_three_is_exactly_diagonal": true,
+    "dimension_at_most_three_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        14
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        17,
+        17
+      ]
+    ],
+    "ordered_pair_count": 324
+  },
+  "schema": "n6-k34-rank-nine-fano-exclusion-v1",
+  "status": "EXACT_COORDINATE_CERTIFICATE_PLUS_PURE_GLOBAL_PROOF",
+  "tangent_certificates": {
+    "three_by_two": {
+      "certified_tangent_dimension": 0,
+      "dimension_of_grassmann_tangent": 36,
+      "representative_singleton_orbit_witness": {
+        "directions_output_from_source": [
+          [
+            2,
+            4
+          ]
+        ],
+        "kernel": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "left_kernel": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "pairings": [
+          1
+        ],
+        "x": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "representative_three_block_witnesses": [
+        {
+          "directions_output_from_source": [
+            [
+              2,
+              0
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "kernel": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            -1,
+            1,
+            0
+          ],
+          "x": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              2,
+              0
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "kernel": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "pairings": [
+            2,
+            2,
+            0
+          ],
+          "x": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              2,
+              0
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "kernel": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            -1,
+            0,
+            1
+          ],
+          "x": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "singleton_weight_spaces": 24,
+      "three_dimensional_weight_blocks": 4
+    },
+    "two_by_three": {
+      "certified_tangent_dimension": 0,
+      "dimension_of_grassmann_tangent": 36,
+      "representative_singleton_orbit_witnesses": [
+        {
+          "directions_output_from_source": [
+            [
+              3,
+              4
+            ]
+          ],
+          "kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            2
+          ],
+          "x": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              8,
+              1
+            ]
+          ],
+          "kernel": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            1
+          ],
+          "x": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              11,
+              0
+            ]
+          ],
+          "kernel": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            1
+          ],
+          "x": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "representative_three_block_witnesses": [
+        {
+          "directions_output_from_source": [
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "kernel": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            1,
+            -1,
+            0
+          ],
+          "x": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "kernel": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          "pairings": [
+            2,
+            2,
+            0
+          ],
+          "x": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "kernel": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            1,
+            0,
+            -1
+          ],
+          "x": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "representative_two_block_witnesses": [
+        {
+          "directions_output_from_source": [
+            [
+              3,
+              0
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "kernel": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            2,
+            0
+          ],
+          "x": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "directions_output_from_source": [
+            [
+              3,
+              0
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          "kernel": [
+            1,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_kernel": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pairings": [
+            0,
+            2
+          ],
+          "x": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "singleton_weight_spaces": 24,
+      "three_dimensional_weight_blocks": 2,
+      "two_dimensional_weight_blocks": 3
+    }
+  }
+}

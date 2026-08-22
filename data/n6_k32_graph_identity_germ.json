@@ -1,0 +1,115 @@
+{
+  "certificate": "N6-120",
+  "status": "PURE_FORMAL_LOCAL_K32_GRAPH_GERM",
+  "field": "characteristic zero",
+  "hypothesis": "L=graph(T), M=graph(-T) for T in GL_6 near identity, with the K3,2 3-by-4 rectangle map",
+  "exact_certificate": {
+    "base_cross_matrix_shape": [
+      36,
+      18
+    ],
+    "base_cross_rank": 6,
+    "pivot_rows": [
+      3,
+      5,
+      8,
+      10,
+      17,
+      22
+    ],
+    "pivot_columns": [
+      0,
+      2,
+      6,
+      8,
+      12,
+      14
+    ],
+    "pivot_determinant": -8,
+    "schur_shape": [
+      30,
+      12
+    ],
+    "jacobian_shape": [
+      360,
+      36
+    ],
+    "jacobian_rank": 34,
+    "tangent_dimension": 2,
+    "free_coordinates": [
+      "T[0,0]",
+      "T[1,1]"
+    ],
+    "normal_minor_rows": [
+      3,
+      7,
+      12,
+      13,
+      15,
+      16,
+      17,
+      19,
+      24,
+      25,
+      27,
+      28,
+      29,
+      36,
+      37,
+      40,
+      41,
+      73,
+      74,
+      75,
+      77,
+      78,
+      85,
+      86,
+      89,
+      90,
+      123,
+      132,
+      133,
+      135,
+      144,
+      145,
+      205,
+      206
+    ],
+    "normal_minor_determinant": -256,
+    "nullspace_generators": [
+      "column_0_scaling",
+      "column_1_scaling"
+    ],
+    "diagonal_family": "diag(x,y,x,y,x,y)",
+    "diagonal_pivot_determinant": "-8*y^3",
+    "diagonal_schur_identically_zero": true
+  },
+  "diagonal_examples": {
+    "examples": [
+      {
+        "x": 1,
+        "y": 1,
+        "cross_rank": 6
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "cross_rank": 6
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "cross_rank": 6
+      }
+    ]
+  },
+  "pure_consequence": "The rank-at-most-six formal germ at T=I is exactly T=diag(x,y,x,y,x,y) in the pivot chart.",
+  "graph_component_consequence": "The row-column torus orbit of T=I is this two-parameter family; inside the invertible graph incidence, the component through T=I is exactly that matching orbit.",
+  "boundary": [
+    "does not classify arbitrary invertible T globally",
+    "does not describe lower-rank collision points",
+    "does not by itself supply the six-term Chow cocycle",
+    "does not prove ordinary lower 29 or exact rank 32"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "candidate_count": 1,
+  "candidate_formula": "binom(63,0) * binom(5,0)",
+  "claim_boundary": [
+    "The target and graph derivatives are restricted to one fixed omitted-row multidegree block.",
+    "Common sign multiplication and row-block permutation justify the normalized marked multisets.",
+    "The modular full-rank minors lift the zero-intersection conclusions to characteristic zero."
+  ],
+  "combination_count": 1,
+  "composition_count": 1,
+  "elapsed_seconds": 0.21708349999971688,
+  "evaluation_columns": 64,
+  "field": "F_65521",
+  "local_derivative_rank_histogram": {
+    "42": 1
+  },
+  "local_target_intersection_histogram": {
+    "1": 1
+  },
+  "maximizer_count": 1,
+  "maximizer_indices_first_100": [
+    0
+  ],
+  "maximum_local_target_intersection": 1,
+  "normalization": "one marked sign type is normalized to digit 63",
+  "schema_version": 1,
+  "seed": 97531,
+  "status": "EXHAUSTIVE_NORMALIZED_LOCAL_SIGN_MULTISET_SEARCH",
+  "type_count": 1,
+  "workers": 1
+}

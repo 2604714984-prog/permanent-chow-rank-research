@@ -1,0 +1,11 @@
+{
+  "basis_labels": 7,
+  "claim": "The three-label span floor 12 permits at most one nonbasis label parallel to each of seven basis planes, leaving at least 36 nonparallel labels.",
+  "claim_boundary": "This controls only the counting step in the proof; multiplication propagation and the centroid obstruction are mathematical lemmas.",
+  "common_plane_span": 7,
+  "maximum_parallel_nonbasis": 7,
+  "minimum_nonparallel_nonbasis": 36,
+  "nonbasis_labels": 43,
+  "schema_version": 1,
+  "three_label_span_floor": 12
+}

@@ -1,0 +1,107 @@
+{
+  "ambient": "A3 tensor P2 to A3 tensor Q2 with one fixed 2+2 matching",
+  "certificate": "N6-134",
+  "claim_boundary": "This is a pure theorem only for the fixed relative matching T=I up to diagonal/monomial normalization. It does not prove that an arbitrary invertible relative graph T has a matching, does not cover non-graph charts or K2,3 transpose components, and does not exclude the resulting relaxed product pair from an actual Chow section difference. It does not prove lower 29 or exact ChowRank(perm_6).",
+  "graph_pair": "L=graph(I+S), M=graph(S-I)",
+  "pure_conclusion": "If the complementary fixed-matching graph pair has E34 cross rank at most 6, then S=0. Hence its average vanishes and it is the N6-115 matching product family after diagonal normalization.",
+  "rank_identity": "The rank of the 18-variable annihilator map equals the cross rank; cross rank <=6 forces the skew subsystem to have rank <=3.",
+  "row_edge_pair_certificate": {
+    "constant_rank_two_minor": {
+      "columns": [
+        0,
+        2
+      ],
+      "rows": [
+        1,
+        6
+      ],
+      "value": 2
+    },
+    "matrix_shape": [
+      8,
+      6
+    ],
+    "rank_at_zero": 2,
+    "rank_le_two_implication": "u=v=delta_i=delta_j=tau=0",
+    "rank_three_minors": [
+      {
+        "columns": [
+          0,
+          2,
+          3
+        ],
+        "polynomial": "4*v",
+        "rows": [
+          0,
+          1,
+          6
+        ]
+      },
+      {
+        "columns": [
+          0,
+          2,
+          3
+        ],
+        "polynomial": "4*u",
+        "rows": [
+          1,
+          6,
+          7
+        ]
+      },
+      {
+        "columns": [
+          0,
+          2,
+          3
+        ],
+        "polynomial": "2*delta_i - 2*delta_j",
+        "rows": [
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "columns": [
+          0,
+          1,
+          3
+        ],
+        "polynomial": "delta_i + delta_j + 2*tau",
+        "rows": [
+          0,
+          1,
+          6
+        ]
+      },
+      {
+        "columns": [
+          0,
+          2,
+          4
+        ],
+        "polynomial": "delta_i + delta_j - 2*tau",
+        "rows": [
+          1,
+          3,
+          6
+        ]
+      }
+    ]
+  },
+  "skew_exceptional_subspace": {
+    "exact_QQ_nullity": 6,
+    "exact_QQ_rank": 30,
+    "exceptional_form": "S is block diagonal with S_i=[[ (tau+delta_i)/2,u ],[v,(tau-delta_i)/2]], i=0,1,2; tau,u,v are common.",
+    "matrix_shape": [
+      36,
+      36
+    ]
+  },
+  "status": [
+    "PURE_CHARACTERISTIC_ZERO_FIXED_MATCHING_AVERAGE_EXCLUSION",
+    "EXACT_QQ_SYMBOLIC_MINORS"
+  ]
+}

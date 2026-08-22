@@ -1,0 +1,96 @@
+{
+  "base_permanent_cubic_dimension": 400,
+  "changed_cubic_weight_block_count": 75,
+  "claim_boundary": "This coordinate thirteen-plane is not asserted to arise from six actual alpha-one Chow terms. It does not contradict N6-047, whose ambient A contains an actual extremal term, and it does not prove that any surviving all-alpha-one state is realizable.",
+  "conclusion": "No dimension-only theorem can bound the first prolongation of every A containing E2 with dim(A/E2)=13 by less than 457.",
+  "dimension_required_at_b63_h120": 457,
+  "exact_QQ_prolongation_dimension": 475,
+  "field": "characteristic zero",
+  "increment_per_changed_block": 1,
+  "modular_regression_prolongation_dimension": 475,
+  "prime_for_regression": 1000003,
+  "row_zero_variables": [
+    "x00",
+    "x02",
+    "x03",
+    "x04",
+    "x05"
+  ],
+  "selected_axis_count": 13,
+  "selected_quotient_axes": [
+    [
+      "row",
+      0,
+      0,
+      2
+    ],
+    [
+      "row",
+      0,
+      0,
+      3
+    ],
+    [
+      "row",
+      0,
+      0,
+      4
+    ],
+    [
+      "row",
+      0,
+      0,
+      5
+    ],
+    [
+      "row",
+      0,
+      2,
+      3
+    ],
+    [
+      "row",
+      0,
+      2,
+      4
+    ],
+    [
+      "row",
+      0,
+      2,
+      5
+    ],
+    [
+      "row",
+      0,
+      3,
+      4
+    ],
+    [
+      "row",
+      0,
+      3,
+      5
+    ],
+    [
+      "row",
+      0,
+      4,
+      5
+    ],
+    [
+      "square",
+      2
+    ],
+    [
+      "square",
+      3
+    ],
+    [
+      "square",
+      4
+    ]
+  ],
+  "status": "G_041_ARBITRARY_QUOTIENT_PROLONGATION_BARRIER",
+  "strict_excess_over_457": 18
+}

@@ -1,0 +1,177 @@
+{
+  "augmented_rank": 83,
+  "candidate_cardinality_checked_before_enumeration": {
+    "loopless_full_functions": 279936,
+    "proper_partial_maps": 543607
+  },
+  "claim_boundary": [
+    "All loopless coordinate graph maps are covered after exact S7 orbit reduction.",
+    "Exact rational elimination proves the characteristic-zero rank jump; the modular ranks independently agree.",
+    "The separate degree-two rank jump still excludes arbitrary common graph scalings after relaxing their moments degree by degree.",
+    "Arbitrary noncoordinate graph complements are outside this finite family."
+  ],
+  "coefficient_matrix_shape": [
+    243,
+    100
+  ],
+  "coefficient_rank": 82,
+  "cumulative_jet_ranks": [
+    {
+      "augmented_rank": 1,
+      "coefficient_rank": 1,
+      "maximum_A_degree": 0,
+      "orbit_equation_count": 1
+    },
+    {
+      "augmented_rank": 2,
+      "coefficient_rank": 1,
+      "maximum_A_degree": 1,
+      "orbit_equation_count": 2
+    },
+    {
+      "augmented_rank": 4,
+      "coefficient_rank": 3,
+      "maximum_A_degree": 2,
+      "orbit_equation_count": 6
+    },
+    {
+      "augmented_rank": 8,
+      "coefficient_rank": 7,
+      "maximum_A_degree": 3,
+      "orbit_equation_count": 16
+    },
+    {
+      "augmented_rank": 20,
+      "coefficient_rank": 19,
+      "maximum_A_degree": 4,
+      "orbit_equation_count": 45
+    },
+    {
+      "augmented_rank": 43,
+      "coefficient_rank": 42,
+      "maximum_A_degree": 5,
+      "orbit_equation_count": 113
+    },
+    {
+      "augmented_rank": 83,
+      "coefficient_rank": 82,
+      "maximum_A_degree": 6,
+      "orbit_equation_count": 243
+    }
+  ],
+  "degree_two_combinatorial_certificate": {
+    "coefficient_matrix_evaluation_is_zero": true,
+    "combinatorial_identity": "collision+disjoint-2*path-5*two_cycle=0",
+    "left_kernel_coefficients": [
+      -5,
+      -2,
+      1,
+      1
+    ],
+    "row_orbits": [
+      {
+        "labelled_orbit_size": 21,
+        "name": "two_cycle",
+        "representative_domain": [
+          0,
+          1
+        ],
+        "representative_image": [
+          1,
+          0
+        ]
+      },
+      {
+        "labelled_orbit_size": 210,
+        "name": "length_two_path",
+        "representative_domain": [
+          0,
+          1
+        ],
+        "representative_image": [
+          2,
+          0
+        ]
+      },
+      {
+        "labelled_orbit_size": 105,
+        "name": "common_target_collision",
+        "representative_domain": [
+          0,
+          1
+        ],
+        "representative_image": [
+          2,
+          2
+        ]
+      },
+      {
+        "labelled_orbit_size": 420,
+        "name": "disjoint_edges",
+        "representative_domain": [
+          0,
+          1
+        ],
+        "representative_image": [
+          3,
+          2
+        ]
+      }
+    ],
+    "target_evaluation": -5
+  },
+  "degreewise_relaxed_moment_ranks": [
+    {
+      "A_degree": 0,
+      "augmented_rank": 1,
+      "coefficient_rank": 1,
+      "orbit_equation_count": 1
+    },
+    {
+      "A_degree": 1,
+      "augmented_rank": 1,
+      "coefficient_rank": 1,
+      "orbit_equation_count": 1
+    },
+    {
+      "A_degree": 2,
+      "augmented_rank": 4,
+      "coefficient_rank": 3,
+      "orbit_equation_count": 4
+    },
+    {
+      "A_degree": 3,
+      "augmented_rank": 8,
+      "coefficient_rank": 7,
+      "orbit_equation_count": 10
+    },
+    {
+      "A_degree": 4,
+      "augmented_rank": 20,
+      "coefficient_rank": 19,
+      "orbit_equation_count": 29
+    },
+    {
+      "A_degree": 5,
+      "augmented_rank": 43,
+      "coefficient_rank": 42,
+      "orbit_equation_count": 68
+    },
+    {
+      "A_degree": 6,
+      "augmented_rank": 83,
+      "coefficient_rank": 82,
+      "orbit_equation_count": 130
+    }
+  ],
+  "field": "F_65521",
+  "full_function_count": 279936,
+  "full_function_orbit_count": 100,
+  "inconsistent_over_Q": true,
+  "proper_partial_map_count": 543607,
+  "proper_partial_map_orbit_count": 243,
+  "rational_augmented_rank": 83,
+  "rational_coefficient_rank": 82,
+  "schema_version": 1,
+  "status": "EXACT_COORDINATE_GRAPH_FAMILY_EXCLUDED_NOT_A_CHOW_RANK_BOUND"
+}

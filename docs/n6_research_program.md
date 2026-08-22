@@ -5,21 +5,21 @@
 `OPEN`. The current in-repository proof-draft interval is
 
 \[
-25
+26
 \le
 \operatorname{ChowRank}(\operatorname{perm}_6)
 \le
 32.
 \]
 
-The lower bound 25 is the fixed-six relation-module argument in
-`docs/n6_fixed_six_lower25.md`. The upper bound is Glynn's 32-term
-decomposition. No lower-26, border-lower-25, or exact-32 claim is made.
+The lower bound 26 is the average-subset argument in
+`docs/n6_lower26_average_subset_closure.md`. The upper bound is Glynn's
+32-term decomposition. No border-lower-26 or exact-32 claim is made.
 
-The central first-Koszul fixed-count route, the first higher-wedge ratio route,
-the scalar second-shadow route, the scalar second-Koszul homology route, and
-two explicit low-base sign-aggregate constructions have now been tested. None
-proves lower 26 or produces a sub-32 decomposition.
+The original fixed-count state route did not prove lower 26 by itself. The new
+selection theorem averages over all six-subsets, forces one subset into the
+already excluded high-intersection range, and closes lower 26. No sub-32
+decomposition is known.
 
 ## 1. Exact numerical baseline
 
@@ -42,6 +42,7 @@ zero-intersection shadow removal:       22
 multidimensional-shadow intersection:   23
 fixed-four scalar prolongation:         24
 fixed-six vector relation module:       25
+average-six-subset selection:           26
 ```
 
 ## 2. What closed the 24-term problem
@@ -139,6 +140,24 @@ fixed terms:
 Six fixed terms are arithmetically smallest, but the frontier is not compact.
 No fixed count is selected and the central first-Koszul state route is
 suspended for lower 26.
+
+### 4.1 Average-subset closure
+
+The diagnostic failed only because an arbitrary six-subset can lie in one of
+the 327 surviving states. Under a hypothetical 25-term decomposition, let
+`U_i` be the individual middle-catalectic images. The rank function
+
+\[
+S\longmapsto\dim\sum_{i\in S}U_i
+\]
+
+is submodular. Since every `U_i` is transverse to the permanent central image,
+condition on a term of maximum central rank and average the other five choices.
+The relation-pairing identity gives average lower bound `260/3`, so some
+six-subset has coupled central rank at least 87. Its nineteen-term residual
+forces `b>=54`. The exact high-intersection part of the same fixed-six
+diagnostic proves `b<=53`: the eleven layers `54..64` are centrally strict and `b>=65` violates
+the Bukh-shadow projection cap. This proves the ordinary lower bound 26.
 
 ## 5. Completed alternative-route diagnostics
 
@@ -301,150 +320,237 @@ Therefore the 16-base assignment costs exactly
 
 actual terms.
 
+### 7.4 Full column-sign and row-sign families
+
+The Boolean monomial slice in `docs/general_column_row_sign_rank.md` removes the
+need to optimize two-defect aggregate assignments.  Every normalized
+column-sign term, with arbitrary signs in every column, restricts to one Walsh
+character on a `32`-point slice.  The permanent restricts to a delta function
+whose 32 Fourier coefficients are all nonzero.  Therefore
+
+\[
+\boxed{
+\operatorname{ColumnSignRank}(\operatorname{perm}_6)
+=
+\operatorname{RowSignRank}(\operatorname{perm}_6)
+=32.}
+\]
+
+The full two-defect family is a subfamily of the column-sign family and contains
+the 32 Glynn terms, so its exact minimum is also 32.
+
 ### Sign-route conclusion
 
 ```text
 UNIFORM_MINIMUM=32
 ONE_DEFECT_MINIMUM=32
+FULL_COLUMN_SIGN_MINIMUM=32
+FULL_ROW_SIGN_MINIMUM=32
+GLOBAL_TWO_DEFECT_MINIMUM=32
 FIRST_TWO_DEFECT_FIXED_ASSIGNMENT_COST=744
 SECOND_TWO_DEFECT_FIXED_ASSIGNMENT_COST=576
-GLOBAL_TWO_DEFECT_MINIMUM=OPEN
+SIGN_ROUTE=CLOSED
 ```
 
-Low aggregate support is not a reliable proxy for actual term support. Both
-explicit separator constructions are closed constructive failures.
+Low aggregate support is not a reliable proxy for actual term support.  The two
+explicit separator constructions remain useful exact examples, but the global
+sign minimum is now closed without optimizing their aggregate costs.
 
-## 8. Current mathematical target: a joint aggregate-cost invariant
+## 8. Sign-route closure
 
-A two-defect decomposition can be grouped by its unique majority base. Let
+The former N6-24 joint aggregate-cost program is cancelled.  Its target was a
+lower bound for a proper subfamily that G-023 now settles by a shorter theorem.
+No full sign dictionary, sparse optimizer, or additional defect hierarchy is
+authorized.
 
-\[
-W_a
-\]
+This closure has no unrestricted consequence.  A general Chow term may have a
+zero row-zero anchor or arbitrary normalized diagonal coefficients.  In
+particular, the diagonal monomial Chow term already restricts to the same delta
+function on the Boolean slice, so the slice cannot lower-bound unrestricted
+Chow rank.
 
-be the pairwise aggregate attached to base label `a in G`. Fourier
-transformation in the base label gives, for every parity `p`, the constraints
+## 9. Current unrestricted target: a coupled inverse-system invariant
 
-\[
-\left.
-\sum_{a\in G}\chi_p(a)W_a
-\right|_{X_p}
-=
-\begin{cases}
-1,&p=31,\\
-0,&p\ne31.
-\end{cases}
-\tag{8.1}
-\]
-
-The actual term objective is
+Let
 
 \[
-\sum_{a\in G}\rho_2(W_a),
-\tag{8.2}
+\mathcal M(f)=\bigoplus_{m=0}^{6}\mathcal D_m(f)
 \]
 
-not the number of nonzero `W_a`.
+with its action by the full algebra of constant-coefficient differential
+operators.  Degreewise dimensions, first higher wedges, scalar second shadows,
+and scalar homology have reached their documented ceilings.  A new invariant
+must use compatibility between degrees and relations, not another scalar sum of
+dimensions.
 
-The next sign-family theorem must act on the complete vector-valued assignment
-`a -> W_a`. Candidate ingredients that remain sufficiently small are:
+The next theorem candidate must satisfy all of the following before any large
+calculation starts:
 
-1. the direct sum of the 15 pure pair ANOVA blocks;
-2. matrix-rank lower bounds on each pair block;
-3. the exact kernels of the 32 parity-fiber restriction maps; and
-4. Fourier/Reed--Muller constraints on the base-label dependence.
+1. it is functorial under `GL(V)`, so arbitrary Chow factors cannot evade it by
+   changing coordinates;
+2. it controls the inverse-system module of a coupled sum rather than replacing
+   it by a literal direct sum of term modules;
+3. it survives the exact six-term common-factor family from N6-017;
+4. its single-term contribution is bounded for dependent and repeated factors;
+5. its finite interface is small enough for exact rational or integer replay.
 
-A useful theorem would prove a lower bound on (8.2) directly, or reduce the
-search for an actual sub-32 decomposition to a small exact interface.
+A concrete first step is to derive one universal inequality for a quotient of
+the relation module of `M(sum_i T_i)` that couples two adjacent derivative
+degrees.  If no such inequality beats the common-factor example on paper, the
+route stops before implementation.
 
-## 9. Hidden assumptions and their negation
-
-### Assumptions
-
-1. The two-defect family is broad enough to contain a shorter decomposition
-   near Glynn's construction.
-2. The Fourier-fiber constraints contain a joint cost invariant not visible in
-   base support alone.
-3. Pair-block rank and ordinary corrections can be combined without a broad
-   dictionary search.
-4. A useful reduction remains independently replayable.
-
-### Assume all are false
-
-Then the sign-family route should stop. The correct state would remain a
-restricted one-defect theorem, exact two-defect block diagnostics, two failed
-separator constructions, and an open unrestricted interval `25..32`.
-
-The program must not build a generic sparse optimizer merely to preserve the
-route.
-
-## 10. Falsification first
-
-Before promoting a joint invariant, search for a compact exact counterexample:
-
-- an aggregate assignment satisfying (8.1) with certified actual support at
-  most 31;
-- a pair-block rank cancellation invalidating a proposed additive lower bound;
-- a base-label Fourier codeword with support below the assumed minimum;
-- a term represented under two different majority bases; or
-- a finite-field compression that disappears over characteristic zero.
-
-A dangerous example changes a characteristic-zero conclusion only after exact
-rational elimination, an integer minor, or a proved semicontinuity bridge.
-
-## 11. Next authorized sequence
-
-### N6-24A — derive the joint lower-bound candidate
-
-Write an explicit inequality
+That first step is now completed in G-024.  Literal relation dimensions satisfy
 
 \[
-L((W_a)_a)
-\le
-\sum_a\rho_2(W_a)
+\kappa_{m+1}\le\kappa_m^{\langle m\rangle},
 \]
 
-using pair-block ranks and ordinary support. Prove it for every fixed-base
-atom. Do not implement a search before this inequality is stated.
+and the coupled noncentral catalectic obeys
 
-### N6-24B — optimize the linearized invariant under Fourier fibers
+\[
+\operatorname{rank}C_{n-m,m}\left(\sum_iT_i\right)
+\ge C-\kappa_m-\kappa_{n-m}.
+\]
 
-If `L` is explicit, compute its exact ceiling under (8.1) using symmetry and
-rational linear algebra. Proceed only if the ceiling can reach at least 32 or
-produces a small counterexample.
+At the center there is an exact extra term
 
-### N6-24C — independent reconstruction
+\[
+\operatorname{rank}\left(\sum_iA_i\right)
+=C-2\rho+\operatorname{rank}(\beta|_{\mathcal R}).
+\]
 
-Any promoted finite result must have a second implementation that rebuilds the
-parity fibers, restriction kernels, and objective without importing the first
-generator.
+The dimension-only route nevertheless fails.  Two squarefree degree-six Chow
+terms sharing four factors form a strict rank-two sum with `rho=4` and zero
+pairing correction.  Moreover the two-step cap at `kappa_2=37` is 331 and hence
+ambient-vacuous.  G-024 alone is not a lower-26 theorem. N6-030 later combines
+its nonnegative relation-pairing correction with submodular subset selection.
 
-### N6-24D — stop rule
+G-025 then falsifies the first naive radical controls.  An explicit six-term
+squarefree presentation has `rho=47`, restricted pairing rank 24, and radical
+dimension `23>4(6-1)`.  Its raw derivative shadow from fourth-order relations
+is all of the 47-dimensional central relation space, not the 23-dimensional
+radical.  This does not yet falsify a bound restricted to minimum
+decompositions, because the six-term presentation is not proved minimum.  The
+next bounded question is therefore whether minimum length itself forces a
+radical cap, or whether an example can be certified minimum by an independent
+Koszul flattening while violating that cap.
 
-Suspend the sign route if `L` has ceiling below 32, if the optimization needs a
-large nonlinear dictionary before a theorem is stated, or if the finite
-interface cannot be independently reconstructed.
+G-026 answers the smallest coordinate test case sharply.  For three distinct
+squarefree sextic monomials whose central rank exceeds the two-term cap 40,
+minimum length is three and the radical has dimension at most `8=4(3-1)`;
+equality occurs for a common-four-factor triple.  Its pure Venn-intersection
+proof does not extend to arbitrary Chow factors or to the six fixed terms
+formerly sought in the lower-26 program.  It is a positive unit test for a
+minimum-length radical principle, not that principle itself.
 
-## 12. Fail-closed exit criteria
+G-027 isolates the remaining obstruction further.  If the middle
+catalecticant itself certifies a sextic decomposition as minimum, the exact
+pairing identity forces radical dimension at most nine.  Hence every such
+minimum decomposition with at least four terms already satisfies the proposed
+`4(q-1)` cap.  This route did not itself close lower 26; N6-030 bypasses the
+minimum-decomposition radical question by selecting a high-rank six-subset.
 
-Suspend a route if any of the following occurs:
+G-028 proves the analogous necessary radical bound when the ordinary global
+first-Koszul flattening certifies minimum length.  In the 36-dimensional
+sextic ambient space its conditional radical caps are 10, 10, 11, 14, and 14
+at certified lengths 4, 5, 6, 21, and 25.  But `perm_6` has first-Koszul rank
+14175 against one-term cap 705, so it certifies only 21 terms and does not meet
+the length-25 hypothesis.  Thus this theorem alone did not close lower 26.
 
-- it yields only an already-known integer rank ratio;
-- it needs hundreds of structural states before a new theorem is stated;
-- its shadow dimension is bounded only by the ambient dimension;
-- it assumes equality between a coupled catalectic image and a literal sum;
-- it relies on finite-field equality without characteristic-zero transfer;
-- it optimizes aggregate count while ignoring actual atomic cost;
-- its symmetry quotient cannot be reconstructed independently; or
-- an exact decomposition or counterexample invalidates its premise.
+G-029 provides the first exact quotient-level relation budget.  After
+projection away from `im K_3(perm_6)`, every individual fixed-term map retains
+its rank, while the fixed-sum gain obeys
 
-## 13. Strongest objection
+\[
+ \Gamma\ge\sum_i r_i-36\rho-\eta-j.
+\]
 
-Even an exact lower bound of 32 inside the full two-defect sign family would
-remain a theorem for a highly special proper subfamily. It would not prove
-unrestricted Chow rank 32 or lower 26.
+Here `rho` is the literal central image-relation dimension, `eta` measures
+relations among the fixed terms' ordinary Koszul output spaces, and `j`
+measures the aggregate collision of their sum with the permanent Koszul image.
+The single-term theorem does not control `eta+j`, and the `36 rho` cap is
+vacuous in many surviving large-relation states.  The next theorem must bound
+the combined output loss, especially `j`, rather than only central relations.
 
-That objection is decisive for project scope. N6-24 is authorized only because
-it may either construct a shorter explicit decomposition or supply a reusable
-Fourier-cost invariant. It is not grounds for a full column-sign solver,
-row-homogeneous tensor-rank program, or new process architecture.
+N6-024 checks the smallest nontrivial aggregate collision exactly.  For every
+pair of permutation monomials, all eleven relative cycle types satisfy `j=0`;
+even the types with 143 or 36 internal output relations remain transverse to
+the permanent Koszul image.  This is evidence that `j` is not forced by simple
+factor overlap, but it remains a restricted two-term coordinate theorem.  The
+next finite falsification target is three permutation monomials or two general
+coordinate monomials, before attempting arbitrary fixed six-term geometry.
+
+N6-025 then shows that aggregate collision eventually occurs inside the same
+permutation subfamily.  Six terms sharing three complement edges and ranging
+over a `3 x 3` permutation block have `j=36`; the collision is exactly the
+36-dimensional Koszul image of that cubic subpermanent.  Their sum shortens
+from six Chow terms to four, so this first example does not test minimum fixed
+sums.
+
+N6-026 closes that loophole.  Pair each top-block permutation monomial with
+the identically indexed bottom-block permutation monomial.  The resulting
+six-term sum has a unimodular middle catalectic of rank 120 and therefore exact
+Chow rank six.  Nevertheless its individual output spaces form a direct sum
+(`eta=0`), its central derivative spaces form a direct sum (`rho=0`), and its
+aggregate collision is `j=72`.  Thus minimum length, middle-catalectic
+certification, and vanishing central/internal relations cannot control `j`.
+The active target must now use compatibility with the residual equation
+`perm_6=R+Q`, rather than an invariant of the fixed sum `R` alone.  Indeed the
+N6-026 example has central intersection `b=2`, whereas every six-fixed state
+in a hypothetical 25-term decomposition has `b>=20`.  The next bounded target
+is therefore a high-intersection aggregate inequality, not another
+minimum-length criterion.
+
+N6-027 closes the permutation-monomial version of that target.  A pure
+normalization argument proves that any six permutation monomials cover at most
+two cubic-subpermanent weights, so their central intersection satisfies
+`b<=2`.  The lower-26 six-fixed frontier forces `b>=20`; coordinate
+permutation monomials therefore cannot model the relevant high-intersection
+geometry.  Further enumeration of this subfamily has no value.  The next
+object must be a genuinely non-coordinate six-term Chow sum or a general
+high-intersection theorem.
+
+N6-028 closes the larger coordinate-monomial family without enumeration.  Six
+degree-six coordinate monomials provide at most 120 cubic derivative
+monomials, while every covered subpermanent consumes six disjoint matching
+monomials.  Equality at `b=20` would force all twenty derivative monomials of
+each term to be matchings, hence every term to be a permutation monomial,
+contradicting N6-027.  Therefore `b<=19` for all six coordinate monomials.
+The high-intersection frontier is now provably non-coordinate.
+
+N6-029 also excludes the first natural non-coordinate model.  Six distinct
+column-uniform sign terms have twenty identical middle-catalectic blocks.  A
+short Boolean Fourier argument makes every block rank six, so `h=120`, while
+their subpermanent intersection is `b=20(6-rank D)<=40`.  A nineteen-term
+residual would require `h<=2b-20<=60`, an immediate contradiction.  This is a
+mixed-decomposition exclusion: the residual terms are unrestricted.  The
+remaining frontier is therefore not represented by coordinate monomials or
+column-uniform sign terms.
+
+N6-030 closes the unrestricted lower-26 problem without classifying that
+remaining frontier. The key is to select, rather than preassign, the six fixed
+terms. Conditional submodular averaging gives a six-subset with central rank
+at least 87; the residual inequality sends it to `b>=54`, exactly where the earlier
+fixed-six vector-Macaulay table has a strict margin in every layer. This is an
+ordinary-rank proof and does not imply the analogous border-rank bound.
+
+## 10. Falsification and stop rules
+
+Every candidate must first be tested against:
+
+- the six-term common-factor family with scalar homology 465;
+- repeated or dependent factors;
+- sums whose catalectic images overlap heavily;
+- the diagonal-monomial Boolean-slice counterexample; and
+- specialization, to ensure every characteristic-zero inequality is used in
+  the correct semicontinuity direction.
+
+Suspend a route if it reproduces an existing rank ratio, uses only coordinate
+row/column weights, needs a broad state tree before stating a theorem, or
+assumes additivity of derivative images or homology.
+
+The active unrestricted interval remains
+
+\[
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+\]

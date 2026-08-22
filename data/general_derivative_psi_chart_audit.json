@@ -1,0 +1,113 @@
+{
+  "claim_boundary": "The proof is uniform, but the conclusion controls one added direction. It does not make several quotient gains additive and does not prove the exact unrestricted Chow rank for n>=6.",
+  "field": "characteristic zero",
+  "method": "exact weighted coefficient-constraint components over Fraction",
+  "replayed_cases": [
+    {
+      "ambient_variable_dimension": 9,
+      "base_first_koszul_rank": 80,
+      "coordinate_relative_prolongation_nullity": 2,
+      "degree_m": 2,
+      "extended_first_koszul_rank_lower": 88,
+      "full_prolongation_nullity": 1,
+      "n": 3,
+      "one_new_direction_gain": 8,
+      "permanent_derivative_dimension": 9,
+      "psi_rank": 35,
+      "psi_source_dimension": 36
+    },
+    {
+      "ambient_variable_dimension": 16,
+      "base_first_koszul_rank": 560,
+      "coordinate_relative_prolongation_nullity": 17,
+      "degree_m": 2,
+      "extended_first_koszul_rank_lower": 575,
+      "full_prolongation_nullity": 16,
+      "n": 4,
+      "one_new_direction_gain": 15,
+      "permanent_derivative_dimension": 36,
+      "psi_rank": 99,
+      "psi_source_dimension": 100
+    },
+    {
+      "ambient_variable_dimension": 16,
+      "base_first_koszul_rank": 255,
+      "coordinate_relative_prolongation_nullity": 2,
+      "degree_m": 3,
+      "extended_first_koszul_rank_lower": 270,
+      "full_prolongation_nullity": 1,
+      "n": 4,
+      "one_new_direction_gain": 15,
+      "permanent_derivative_dimension": 16,
+      "psi_rank": 799,
+      "psi_source_dimension": 800
+    },
+    {
+      "ambient_variable_dimension": 25,
+      "base_first_koszul_rank": 2400,
+      "coordinate_relative_prolongation_nullity": 101,
+      "degree_m": 2,
+      "extended_first_koszul_rank_lower": 2424,
+      "full_prolongation_nullity": 100,
+      "n": 5,
+      "one_new_direction_gain": 24,
+      "permanent_derivative_dimension": 100,
+      "psi_rank": 224,
+      "psi_source_dimension": 225
+    },
+    {
+      "ambient_variable_dimension": 25,
+      "base_first_koszul_rank": 2475,
+      "coordinate_relative_prolongation_nullity": 26,
+      "degree_m": 3,
+      "extended_first_koszul_rank_lower": 2499,
+      "full_prolongation_nullity": 25,
+      "n": 5,
+      "one_new_direction_gain": 24,
+      "permanent_derivative_dimension": 100,
+      "psi_rank": 2824,
+      "psi_source_dimension": 2825
+    },
+    {
+      "ambient_variable_dimension": 25,
+      "base_first_koszul_rank": 624,
+      "coordinate_relative_prolongation_nullity": 2,
+      "degree_m": 4,
+      "extended_first_koszul_rank_lower": 648,
+      "full_prolongation_nullity": 1,
+      "n": 5,
+      "one_new_direction_gain": 24,
+      "permanent_derivative_dimension": 25,
+      "psi_rank": 20449,
+      "psi_source_dimension": 20450
+    },
+    {
+      "ambient_variable_dimension": 36,
+      "base_first_koszul_rank": 7700,
+      "coordinate_relative_prolongation_nullity": 401,
+      "degree_m": 2,
+      "extended_first_koszul_rank_lower": 7735,
+      "full_prolongation_nullity": 400,
+      "n": 6,
+      "one_new_direction_gain": 35,
+      "permanent_derivative_dimension": 225,
+      "psi_rank": 440,
+      "psi_source_dimension": 441
+    },
+    {
+      "ambient_variable_dimension": 36,
+      "base_first_koszul_rank": 14175,
+      "coordinate_relative_prolongation_nullity": 226,
+      "degree_m": 3,
+      "extended_first_koszul_rank_lower": 14210,
+      "full_prolongation_nullity": 225,
+      "n": 6,
+      "one_new_direction_gain": 35,
+      "permanent_derivative_dimension": 400,
+      "psi_rank": 8035,
+      "psi_source_dimension": 8036
+    }
+  ],
+  "status": "EXACT_GENERAL_DERIVATIVE_PSI_CHART_REPLAY",
+  "theorem": "For every n>=3, 2<=m<=n-1, and nonzero v, the degree-m permanent derivative psi chart has kernel span([v^m]); one new degree-m direction adds at least n^2-1 first-Koszul dimensions."
+}

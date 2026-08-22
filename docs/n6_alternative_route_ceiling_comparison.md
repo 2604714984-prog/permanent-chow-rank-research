@@ -7,7 +7,7 @@
 The current in-repository interval remains
 
 \[
-25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
+26\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
 \]
 
 This note compares three genuinely different next-step ideas after the fixed-count central first-Koszul route was suspended:
@@ -48,7 +48,16 @@ The script
 scripts/n6_second_koszul_rank_audit.py
 ```
 
-reconstructs every row-column torus block from the definitions and performs sparse Gaussian elimination modulo `1,000,003`.
+reconstructs every row-column torus block from the definitions and performs
+sparse Gaussian elimination modulo `1,000,003`.  The implementation uses the
+exact \(S_6\times S_6\) row-column symmetry: it eliminates only the canonical
+block for each pair of weight multisets, then multiplies its rank and histogram
+contribution by the exact orbit size.  Signed row and column permutations
+identify the omitted blocks with their representative, and a weighted-domain
+identity checks that no column has been lost or duplicated.  For output
+degrees \(2,3,4\), this reduces \(73{,}657\) block eliminations to \(45\) while
+preserving every frozen field; the complete replay takes about one second on
+the current development machine.
 
 For the permanent and one independent six-factor Chow term, the certified values are:
 

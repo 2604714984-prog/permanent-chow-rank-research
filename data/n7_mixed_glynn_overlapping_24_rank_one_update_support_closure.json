@@ -1,0 +1,48 @@
+{
+  "boundary_face_map": {
+    "extra_left": {
+      "g=0": "overlapping_23_32_closure",
+      "homogeneous_coordinates": "u=x*e_a+y*e_b+z*e_c+g*e_d; v=p*e_a^*+q*e_b^* for distinct a,b,c,d",
+      "p=0": "singleton_four_closure",
+      "q=0": "singleton_four_closure",
+      "x=0": "overlap_one_23_32_closure",
+      "y=0": "overlap_one_23_32_closure",
+      "z=0": "overlapping_23_32_closure"
+    },
+    "extra_right": {
+      "h=0": "overlapping_23_32_closure",
+      "homogeneous_coordinates": "u=x*e_a+y*e_b; v=p*e_a^*+q*e_b^*+h*e_c^*+k*e_d^* for distinct a,b,c,d",
+      "k=0": "overlapping_23_32_closure",
+      "p=0": "overlap_one_23_32_closure",
+      "q=0": "overlap_one_23_32_closure",
+      "x=0": "singleton_four_closure",
+      "y=0": "singleton_four_closure"
+    }
+  },
+  "certificate_statuses": {
+    "dense_overlapping_24_42": "EXACT_ALL_OVERLAPPING_24_42_DENSE_INVERTIBLE_RANK_ONE_UPDATE_MINORS",
+    "lower_overlap_torus_audit": "EXACT_ALL_1189_LOWER_OVERLAP_TORUS_IDEALS_AUDITED",
+    "nilpotent_overlap_two_24": "EXACT_ALL_OVERLAP_TWO_24_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+    "nilpotent_overlap_two_42": "EXACT_ALL_OVERLAP_TWO_42_NILPOTENT_SHEAR_INVALID_TAIL_MINORS",
+    "overlap_one_23_32_closure": "EXACT_ALL_OVERLAP_ONE_23_32_INVERTIBLE_RANK_ONE_UPDATE_MINORS",
+    "overlapping_23_32_closure": "EXACT_ALL_OVERLAPPING_23_32_PROJECTIVE_SUPPORT_CLOSURE",
+    "singleton_four_closure": "EXACT_ALL_SINGLETON_FOUR_INVERTIBLE_RANK_ONE_UPDATE_MINORS"
+  },
+  "claim_boundary": [
+    "This is a finite projective support-closure theorem for one identity transform and one rank-one update in the synchronized mixed-Glynn endpoint model.",
+    "It combines exact dense, internal-face, nilpotent, Laurent-torus, and proper-support certificates; it introduces no multivariate-gcd inference.",
+    "It does not cover larger nonnilpotent supports, higher-rank perturbations, arbitrary GL(6), arbitrary endpoint-B packets, ordinary lower 50, exact rank 64, or border rank."
+  ],
+  "conclusion": "Every nonidentity invertible rank-one update in the projective support closure of the overlapping (2,4)/(4,2) patterns has invalid-tail rank 42 in the synchronized mixed-Glynn two-transform packet.",
+  "dense_chart_summary": {
+    "candidate_count": 900,
+    "direct_primary_minor_rows": 325,
+    "first_internal_face_rows": 527,
+    "second_internal_face_rows": 48,
+    "unresolved_rows": 0
+  },
+  "face_intersections": "Every nonempty intersection drops to a proper support face of an imported projective-closure certificate; no new support type occurs.",
+  "field": "characteristic zero",
+  "schema_version": 1,
+  "status": "EXACT_ALL_OVERLAPPING_24_42_PROJECTIVE_SUPPORT_CLOSURE"
+}

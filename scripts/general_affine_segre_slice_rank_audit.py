@@ -23,12 +23,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+from collections.abc import Iterator
 from fractions import Fraction
 from math import factorial
 from pathlib import Path
 
 MIN_D = 1
 MAX_D = 12
+MAX_BOOLEAN_ASSIGNMENT_CANDIDATES = 1_000_000
 
 
 def require(condition: bool, message: object) -> None:
@@ -111,16 +113,16 @@ def lagrange_construction(d: int) -> dict[str, object]:
     }
 
 
-def anchored_slice_vector(parameters: list[Fraction]) -> list[Fraction]:
+def anchored_slice_vector(parameters: list[Fraction]) -> Iterator[Fraction]:
+    """Yield anchored-slice coefficients without materializing ``2^d`` items."""
+
     d = len(parameters)
-    result: list[Fraction] = []
     for mask in range(1 << d):
         coefficient = Fraction(1)
         for index, parameter in enumerate(parameters):
             if (mask >> index) & 1:
                 coefficient *= parameter
-        result.append(coefficient)
-    return result
+        yield coefficient
 
 
 def deterministic_anchored_checks(max_d: int) -> int:
@@ -131,14 +133,15 @@ def deterministic_anchored_checks(max_d: int) -> int:
                 Fraction(2 + 5 * index + 3 * variant, 1 + ((index + variant) % 5))
                 for index in range(d)
             ]
-            vector = anchored_slice_vector(parameters)
-            require(len(vector) == 1 << d, (d, variant, len(vector)))
-            for mask, coefficient in enumerate(vector):
+            coefficient_count = 0
+            for mask, coefficient in enumerate(anchored_slice_vector(parameters)):
                 direct = Fraction(1)
                 for index, parameter in enumerate(parameters):
                     direct *= parameter if (mask >> index) & 1 else 1
                 require(coefficient == direct, (d, variant, mask))
+                coefficient_count += 1
                 checked += 1
+            require(coefficient_count == 1 << d, (d, variant, coefficient_count))
     return checked
 
 
@@ -152,6 +155,12 @@ def compact_rows_sha256(rows: list[dict[str, object]]) -> str:
 def build_payload(max_d: int = MAX_D) -> dict[str, object]:
     if max_d < MIN_D:
         raise ValueError("max_d must be positive")
+    if max_d >= MAX_BOOLEAN_ASSIGNMENT_CANDIDATES.bit_length():
+        raise ValueError(
+            f"max_d={max_d} requires 2**{max_d} Boolean-assignment "
+            f"candidates, exceeding the limit of "
+            f"{MAX_BOOLEAN_ASSIGNMENT_CANDIDATES:,}"
+        )
     rows = [lagrange_construction(d) for d in range(MIN_D, max_d + 1)]
     anchored_checks = deterministic_anchored_checks(max_d)
 
@@ -214,7 +223,10 @@ def main() -> int:
     parser.add_argument("--json", type=Path)
     args = parser.parse_args()
 
-    payload = build_payload(args.max_d)
+    try:
+        payload = build_payload(args.max_d)
+    except ValueError as error:
+        parser.error(str(error))
     text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)

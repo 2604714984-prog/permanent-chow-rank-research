@@ -1,0 +1,355 @@
+{
+  "claim_boundary": [
+    "The seven signatures reversibly encode all 84 surviving formal O-sequences.",
+    "They are numerical inputs to H-03 and do not assert reduced-point or target-compatible realizability."
+  ],
+  "input_formal_sequence_count": 84,
+  "reconstructed_sequence_count": 84,
+  "schema_version": 1,
+  "signature_count": 7,
+  "signatures": [
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 26,
+      "fixed_delta4_delta5": [
+        6,
+        1
+      ],
+      "frontier": "F1",
+      "hilbert_3_4_5": [
+        33,
+        39,
+        40
+      ],
+      "hilbert_6_to_stabilization": [
+        41,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        171,
+        422,
+        883
+      ],
+      "q3_q4_q5_q6": [
+        9,
+        3,
+        2,
+        1
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "1-1",
+      "tail_after_degree5": [
+        1,
+        1
+      ]
+    },
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 27,
+      "fixed_delta4_delta5": [
+        4,
+        1
+      ],
+      "frontier": "F2",
+      "hilbert_3_4_5": [
+        34,
+        38,
+        39
+      ],
+      "hilbert_6_to_stabilization": [
+        40,
+        41,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        172,
+        423,
+        884
+      ],
+      "q3_q4_q5_q6": [
+        8,
+        4,
+        3,
+        2
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "1-1-1",
+      "tail_after_degree5": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 27,
+      "fixed_delta4_delta5": [
+        4,
+        2
+      ],
+      "frontier": "F3",
+      "hilbert_3_4_5": [
+        34,
+        38,
+        40
+      ],
+      "hilbert_6_to_stabilization": [
+        41,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        172,
+        422,
+        883
+      ],
+      "q3_q4_q5_q6": [
+        8,
+        4,
+        2,
+        1
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "1-1",
+      "tail_after_degree5": [
+        1,
+        1
+      ]
+    },
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 27,
+      "fixed_delta4_delta5": [
+        4,
+        2
+      ],
+      "frontier": "F3",
+      "hilbert_3_4_5": [
+        34,
+        38,
+        40
+      ],
+      "hilbert_6_to_stabilization": [
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        172,
+        422,
+        882
+      ],
+      "q3_q4_q5_q6": [
+        8,
+        4,
+        2,
+        0
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "2",
+      "tail_after_degree5": [
+        2
+      ]
+    },
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 28,
+      "fixed_delta4_delta5": [
+        2,
+        1
+      ],
+      "frontier": "F4",
+      "hilbert_3_4_5": [
+        35,
+        37,
+        38
+      ],
+      "hilbert_6_to_stabilization": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        173,
+        424,
+        885
+      ],
+      "q3_q4_q5_q6": [
+        7,
+        5,
+        4,
+        3
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "1-1-1-1",
+      "tail_after_degree5": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 28,
+      "fixed_delta4_delta5": [
+        2,
+        2
+      ],
+      "frontier": "F5",
+      "hilbert_3_4_5": [
+        35,
+        37,
+        39
+      ],
+      "hilbert_6_to_stabilization": [
+        40,
+        41,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        173,
+        423,
+        884
+      ],
+      "q3_q4_q5_q6": [
+        7,
+        5,
+        3,
+        2
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "1-1-1",
+      "tail_after_degree5": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "delta2_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "delta3_plus_delta2": 28,
+      "fixed_delta4_delta5": [
+        2,
+        2
+      ],
+      "frontier": "F5",
+      "hilbert_3_4_5": [
+        35,
+        37,
+        39
+      ],
+      "hilbert_6_to_stabilization": [
+        41,
+        42
+      ],
+      "ideal_dimensions_4_5_6": [
+        173,
+        423,
+        883
+      ],
+      "q3_q4_q5_q6": [
+        7,
+        5,
+        3,
+        1
+      ],
+      "sequence_count": 12,
+      "strict_growth_tail_type": "2-1",
+      "tail_after_degree5": [
+        2,
+        1
+      ]
+    }
+  ],
+  "status": "H-02-REVERSIBLE-HILBERT-SIGNATURES"
+}

@@ -14,7 +14,7 @@ SIGN_FAMILY_CONSTRUCTION_ROUTE=CLOSED
 The unrestricted interval remains
 
 \[
-25\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
+26\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
 \]
 
 The exact sign-family theorem does not change this interval.
@@ -183,7 +183,7 @@ Therefore:
 FULL_COLUMN_SIGN_RANK=32
 FULL_ROW_SIGN_RANK=32
 ARBITRARY_COMPLEX_ROW_HOMOGENEOUS_RANK=OPEN
-UNRESTRICTED_CHOW_RANK=25..32
+UNRESTRICTED_CHOW_RANK=26..32
 ```
 
 ## 7. Route decision
@@ -207,6 +207,6 @@ N6_FULL_COLUMN_SIGN_RANK=32
 N6_TWO_DEFECT_MINIMUM=32
 SIGN_DEFECT_EXPANSION_AUTHORIZED=false
 ROW_HOMOGENEOUS_TENSOR_RANK=OPEN
-UNRESTRICTED_CHOW_INTERVAL=25..32
+UNRESTRICTED_CHOW_INTERVAL=26..32
 NOVELTY_CLAIM=FORBIDDEN
 ```

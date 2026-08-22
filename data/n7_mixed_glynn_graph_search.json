@@ -1,0 +1,208 @@
+{
+  "best_examples": [
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 0,
+      "seed": 20260815
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 1,
+      "seed": 21260818
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 2,
+      "seed": 22260821
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 3,
+      "seed": 23260824
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 4,
+      "seed": 24260827
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 5,
+      "seed": 25260830
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 6,
+      "seed": 26260833
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 7,
+      "seed": 27260836
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 8,
+      "seed": 28260839
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 9,
+      "seed": 29260842
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 10,
+      "seed": 30260845
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 11,
+      "seed": 31260848
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 12,
+      "seed": 32260851
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 13,
+      "seed": 33260854
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 14,
+      "seed": 34260857
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 15,
+      "seed": 35260860
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 16,
+      "seed": 36260863
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 17,
+      "seed": 37260866
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 18,
+      "seed": 38260869
+    },
+    {
+      "degree_seven_rank": 49,
+      "degree_seven_target_increment": 1,
+      "degree_six_rank": 336,
+      "degree_six_target_increment": 49,
+      "degree_six_target_intersection": 0,
+      "index": 19,
+      "seed": 39260872
+    }
+  ],
+  "claim_boundary": [
+    "The complete normalized 32-point Glynn tail dictionary is present in every trial.",
+    "The search varies only seven independent signed coordinate permutations and ten extras.",
+    "The result is a finite-field subfamily diagnostic and not a lower-fifty proof."
+  ],
+  "degree_six_intersection_histogram": {
+    "0": 5000
+  },
+  "elapsed_seconds": 14.515430055995239,
+  "evaluation_columns": 400,
+  "field": "F_65521",
+  "identity_control": {
+    "degree_seven_rank": 49,
+    "degree_seven_target_increment": 1,
+    "degree_six_rank": 336,
+    "degree_six_target_increment": 42,
+    "degree_six_target_intersection": 7
+  },
+  "maximum_degree_six_target_intersection": 0,
+  "schema_version": 1,
+  "seed": 20260815,
+  "status": "DIRECTED_GLYNN_GRAPH_SEARCH_NOT_A_RANK_PROOF",
+  "trial_count": 5000,
+  "workers": 20
+}

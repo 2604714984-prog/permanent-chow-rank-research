@@ -1,0 +1,132 @@
+{
+  "claim_boundary": [
+    "The checker proves the displayed matrix kernel-image inclusions exactly over the listed finite fields.",
+    "The five-plane control shows that Sylvester equality alone does not force a tensor split.",
+    "No perm_7 endpoint packet is classified and no lower-50 or border-rank conclusion is made."
+  ],
+  "next_gate": "Construct labelled K_i, B, and C for packet B before computing the 252 general GL(6)^7 tangent directions.",
+  "primes": [
+    65521,
+    65519
+  ],
+  "rows": [
+    {
+      "basis_invariance_control": {
+        "original": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 2
+        },
+        "transformed": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 2
+        }
+      },
+      "five_plane_non_tensor_split_control": {
+        "condition_holds": true,
+        "coupling_defect": 0,
+        "kernel_b_dimension": 0,
+        "kernel_b_intersection_image_c_dimension": 0,
+        "middle_dimension": 15,
+        "rank_b": 15,
+        "rank_bc": 9,
+        "rank_c": 9,
+        "tensor_split": false
+      },
+      "prime": 65521,
+      "small_kernel_controls": {
+        "nontrivial_kernel_contained": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 2
+        },
+        "one_kernel_direction_missing": {
+          "condition_holds": false,
+          "coupling_defect": 1,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 0,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 1
+        }
+      }
+    },
+    {
+      "basis_invariance_control": {
+        "original": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 2
+        },
+        "transformed": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 2
+        }
+      },
+      "five_plane_non_tensor_split_control": {
+        "condition_holds": true,
+        "coupling_defect": 0,
+        "kernel_b_dimension": 0,
+        "kernel_b_intersection_image_c_dimension": 0,
+        "middle_dimension": 15,
+        "rank_b": 15,
+        "rank_bc": 9,
+        "rank_c": 9,
+        "tensor_split": false
+      },
+      "prime": 65519,
+      "small_kernel_controls": {
+        "nontrivial_kernel_contained": {
+          "condition_holds": true,
+          "coupling_defect": 0,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 1,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 2
+        },
+        "one_kernel_direction_missing": {
+          "condition_holds": false,
+          "coupling_defect": 1,
+          "kernel_b_dimension": 1,
+          "kernel_b_intersection_image_c_dimension": 0,
+          "middle_dimension": 3,
+          "rank_b": 2,
+          "rank_bc": 1,
+          "rank_c": 1
+        }
+      }
+    }
+  ],
+  "schema_version": 1,
+  "status": "EXACT_ABSTRACT_SYLVESTER_COUPLING_CHECKER"
+}

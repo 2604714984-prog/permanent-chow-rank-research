@@ -10,10 +10,11 @@ counterexample to scalar homology subadditivity. The current Chow-rank interval
 is unchanged:
 
 \[
-25\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
+26\le \operatorname{ChowRank}(\operatorname{perm}_6)\le 32.
 \]
 
-No lower-26, border-lower-25, or exact-32 claim is made.
+This route does not prove lower 26. N6-030 supplies the ordinary lower bound by
+a different average-subset argument. No border-lower-26 or exact-32 claim is made.
 
 ## 1. The relevant complex and its apolar interpretation
 

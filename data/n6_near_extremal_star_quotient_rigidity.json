@@ -1,0 +1,80 @@
+{
+  "arithmetic": "exact rational elimination; no finite field or random input",
+  "coupling_consequence": "A global quotient of dimension at most fourteen cannot contain two explicit star quotients while the six-term quadratic relation kernel has dimension at most two: their intersection would have dimension at least twelve, forcing equal fifteen-dimensional quadratic spaces and hence a relation kernel of dimension at least fifteen.",
+  "exact_qq_regression": {
+    "distinct_quotient_spaces": 16,
+    "full_quadratic_dimensions": [
+      15
+    ],
+    "nonzero_parameters": [
+      -2,
+      -1,
+      1,
+      2
+    ],
+    "pairwise_full_intersection_histogram": {
+      "4": 78,
+      "6": 42
+    },
+    "pairwise_quotient_intersection_histogram": {
+      "5": 78,
+      "7": 42
+    },
+    "quotient_dimensions": [
+      13
+    ],
+    "source_subsets": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "standard_support_case_count": 16
+  },
+  "pure_theorem": "Distinct thirteen-dimensional quotient spaces of explicit row- or column-star terms intersect in dimension at most eleven. Equality of quotient spaces determines the fifteen-dimensional Chow quadratic space.",
+  "state_contingent_sublocus_counts": [
+    {
+      "all_canonical_scalar_states": 73,
+      "b": 61,
+      "excluded_only_under_condition": "At least two of those epsilon-zero alpha-one terms belong to the explicit N6-043 row/column star family.",
+      "selected_t2_histogram": {
+        "13": 22,
+        "14": 15
+      },
+      "states_with_at_least_two_epsilon0_alpha1_entries": 37
+    },
+    {
+      "all_canonical_scalar_states": 11,
+      "b": 62,
+      "excluded_only_under_condition": "At least two of those epsilon-zero alpha-one terms belong to the explicit N6-043 row/column star family.",
+      "selected_t2_histogram": {
+        "13": 5
+      },
+      "states_with_at_least_two_epsilon0_alpha1_entries": 5
+    },
+    {
+      "all_canonical_scalar_states": 11,
+      "b": 63,
+      "excluded_only_under_condition": "At least two of those epsilon-zero alpha-one terms belong to the explicit N6-043 row/column star family.",
+      "selected_t2_histogram": {
+        "13": 5
+      },
+      "states_with_at_least_two_epsilon0_alpha1_entries": 5
+    }
+  ],
+  "status": "N6_045_NEAR_EXTREMAL_STAR_QUOTIENT_RIGIDITY",
+  "strict_boundary": "The counts do not exclude complete scalar states. They exclude only the subloci in which at least two epsilon-zero alpha-one terms lie in the explicit N6-043 star family. The general alpha-one component classification remains open."
+}

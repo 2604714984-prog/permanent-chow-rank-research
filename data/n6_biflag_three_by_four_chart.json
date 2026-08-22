@@ -1,0 +1,220 @@
+{
+  "actual_pair_consequence": "Every graph-chart U with intersection dimension at least 13 is a product. N6-068 excludes an actual complementary Chow pair when its full fifteen-dimensional section-difference space is present.",
+  "ambient": {
+    "biflag": "M=R4 tensor C5 + R5 tensor C3",
+    "coordinate_3x4_orbit_count": 2,
+    "dimension_of_K": 72,
+    "intrinsic_quadratic_space": "K=E2 intersect Sym^2(M)"
+  },
+  "claim_boundary": "The linear calculations are deterministic characteristic-zero certificates over Q, and the final product dimension gate is pure. This note does not exclude every 4x3 endpoint, the full biflag branch, prove ordinary lower 29, determine exact Chow rank 32, or make a border-rank claim.",
+  "linear_only_graph_reduction": {
+    "kernel_normal_form": "row factor a tensor I_B, column factor I_A tensor b, an arbitrary twelve-coordinate corner gamma, and on the missing-core-column orbit twelve additional tail coordinates",
+    "orbit_certificates": [
+      {
+        "base_rectangle_dimension": 18,
+        "discarded_tail_touched_weight_count": 6,
+        "effective_linear_quotient_weight_count": 75,
+        "expected_normal_form_dimension": 31,
+        "graph_variable_count": 132,
+        "kernel_dimension": 31,
+        "linear_equation_rank_over_Q": 101,
+        "linear_only_quotient_weight_count": 81,
+        "minimum_rank_outside_kernel": 6,
+        "name": "3x4_missing_core_column",
+        "tail_parameter_count": 12,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 24,
+            "independent_output_weight_count": 0,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 0,
+            "variable_count": 1
+          },
+          {
+            "group_count": 78,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 10,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 2
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      },
+      {
+        "base_rectangle_dimension": 18,
+        "discarded_tail_touched_weight_count": 0,
+        "effective_linear_quotient_weight_count": 81,
+        "expected_normal_form_dimension": 19,
+        "graph_variable_count": 132,
+        "kernel_dimension": 19,
+        "linear_equation_rank_over_Q": 113,
+        "linear_only_quotient_weight_count": 81,
+        "minimum_rank_outside_kernel": 6,
+        "name": "3x4_missing_wing_column",
+        "tail_parameter_count": 0,
+        "weight_group_signature_histogram": [
+          {
+            "group_count": 12,
+            "independent_output_weight_count": 0,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 0,
+            "variable_count": 1
+          },
+          {
+            "group_count": 87,
+            "independent_output_weight_count": 6,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 1
+          },
+          {
+            "group_count": 4,
+            "independent_output_weight_count": 9,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 0,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 3
+          },
+          {
+            "group_count": 3,
+            "independent_output_weight_count": 12,
+            "kernel_dimension": 1,
+            "minimum_rank_outside_kernel": 6,
+            "variable_count": 4
+          }
+        ]
+      }
+    ],
+    "rank_allowed_by_retaining_13_of_18_rectangles": 5
+  },
+  "product_dimension_gate": {
+    "conclusion": "Intersection dimension at least 13 holds exactly when the missing-row functional uses at most one selected coordinate.",
+    "row_parameter_support_at_least_two": {
+      "column_quadratic_dimension": [
+        5,
+        6
+      ],
+      "intersection_dimensions": [
+        10,
+        12
+      ],
+      "row_quadratic_dimension": 2
+    },
+    "row_parameter_support_at_most_one": {
+      "column_quadratic_dimension": [
+        5,
+        6
+      ],
+      "intersection_dimensions": [
+        15,
+        18
+      ],
+      "row_quadratic_dimension": 3
+    }
+  },
+  "remaining_geometric_interface": "The four 4x3 endpoint orbits remain, although the core orbit was excluded purely in N6-105.",
+  "status": [
+    "EXACT_QQ_BIFLAG_3X4_GRAPH_REDUCTION",
+    "PURE_3X4_THRESHOLD13_PRODUCT_DIMENSION_GATE",
+    "CERTIFIED_BIFLAG_3X4_ACTUAL_PAIR_EXCLUDED",
+    "N6-106"
+  ],
+  "tail_and_corner_defect_reduction": {
+    "conclusion": "On both 3x4 charts, all tail parameters and d vanish, so the twelve-plane is an exact tensor product A3' tensor B4'.",
+    "defect": "d=gamma-a tensor b",
+    "minimum_fixed_weight_rank": 6,
+    "orbit_certificates": [
+      {
+        "conclusion": "Every rank-at-most-five leakage point has zero tail parameters and gamma=a tensor b.",
+        "coordinate_corner_defect_ranks_over_Q": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "coordinate_tail_ranks_over_Q": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "corner_parameter_count": 12,
+        "factor_parameter_count": 7,
+        "minimum_fixed_weight_rank": 6,
+        "name": "3x4_missing_core_column",
+        "pure_corner_defect_quotient_weight_count": 12,
+        "pure_tail_quotient_weight_count": 12,
+        "rank_allowed_by_a_thirteen_plane": 5,
+        "tail_parameter_count": 12
+      },
+      {
+        "conclusion": "Every rank-at-most-five leakage point has zero tail parameters and gamma=a tensor b.",
+        "coordinate_corner_defect_ranks_over_Q": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "coordinate_tail_ranks_over_Q": [],
+        "corner_parameter_count": 12,
+        "factor_parameter_count": 7,
+        "minimum_fixed_weight_rank": 6,
+        "name": "3x4_missing_wing_column",
+        "pure_corner_defect_quotient_weight_count": 12,
+        "pure_tail_quotient_weight_count": 0,
+        "rank_allowed_by_a_thirteen_plane": 5,
+        "tail_parameter_count": 0
+      }
+    ]
+  }
+}

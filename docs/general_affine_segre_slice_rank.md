@@ -290,9 +290,11 @@ GENERAL_AFFINE_SEGRE_SLICE_RANK_AUDIT_PASS
 
 The audit uses exact rational arithmetic. It verifies the Lagrange and closed
 finite-difference coefficients, all `2^d` Boolean coordinates through `d=12`,
-and deterministic anchored slice vectors. The lower bound remains the written
-contraction induction; computation is a transcription check of the matching
-upper construction.
+and deterministic anchored slice vectors. Those vector coefficients are checked
+as a stream rather than stored as a `2^d`-element list. The CLI refuses a
+`--max-d` whose largest Boolean slice exceeds 1,000,000 assignments. The lower
+bound remains the written contraction induction; computation is a transcription
+check of the matching upper construction.
 
 ## Claim boundary
 

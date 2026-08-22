@@ -23,7 +23,7 @@ import argparse
 import json
 from collections import Counter, defaultdict
 from itertools import combinations, permutations
-from math import comb
+from math import comb, factorial
 from pathlib import Path
 from typing import Iterable
 
@@ -114,6 +114,24 @@ def row_column_weight(
     return tuple(row_weight + column_weight)
 
 
+def canonical_weight(weight: tuple[int, ...]) -> tuple[int, ...]:
+    """Canonical labeled weight under independent row/column permutations."""
+
+    return tuple(sorted(weight[:N])) + tuple(sorted(weight[N:]))
+
+
+def weight_orbit_size(weight: tuple[int, ...]) -> int:
+    """Size of the S_6 x S_6 orbit of one row-column weight."""
+
+    size = 1
+    for half in (weight[:N], weight[N:]):
+        half_size = factorial(N)
+        for multiplicity in Counter(half).values():
+            half_size //= factorial(multiplicity)
+        size *= half_size
+    return size
+
+
 def full_variable_weight(
     monomial: tuple[int, ...],
     wedge: tuple[int, int],
@@ -126,7 +144,11 @@ def full_variable_weight(
     return tuple(weight)
 
 
-def permanent_rank_audit(output_degree: int) -> dict[str, object]:
+def permanent_rank_audit(
+    output_degree: int,
+    *,
+    orbit_compression: bool = True,
+) -> dict[str, object]:
     row_subsets = tuple(combinations(range(N), output_degree))
     basis = tuple(
         (rows, columns)
@@ -144,9 +166,20 @@ def permanent_rank_audit(output_degree: int) -> dict[str, object]:
     ] = defaultdict(list)
     for rows, columns in basis:
         for wedge in WEDGE_TWO:
-            blocks[row_column_weight(rows, columns, wedge)].append(
+            weight = row_column_weight(rows, columns, wedge)
+            if orbit_compression and weight != canonical_weight(weight):
+                continue
+            blocks[weight].append(
                 (rows, columns, wedge)
             )
+
+    represented_domain = sum(
+        (weight_orbit_size(weight) if orbit_compression else 1)
+        * len(descriptors)
+        for weight, descriptors in blocks.items()
+    )
+    if represented_domain != len(basis) * len(WEDGE_TWO):
+        raise AssertionError((represented_domain, len(basis) * len(WEDGE_TWO)))
 
     def column(
         descriptor: tuple[
@@ -191,15 +224,18 @@ def permanent_rank_audit(output_degree: int) -> dict[str, object]:
 
     total_rank = 0
     block_histogram: Counter[tuple[int, int]] = Counter()
-    for descriptors in blocks.values():
+    weight_block_count = 0
+    for weight, descriptors in blocks.items():
+        multiplicity = weight_orbit_size(weight) if orbit_compression else 1
         block_rank = sparse_rank_mod(column(value) for value in descriptors)
-        total_rank += block_rank
-        block_histogram[(len(descriptors), block_rank)] += 1
+        total_rank += multiplicity * block_rank
+        block_histogram[(len(descriptors), block_rank)] += multiplicity
+        weight_block_count += multiplicity
 
     return {
         "basis_dimension": len(basis),
         "domain_dimension": len(basis) * len(WEDGE_TWO),
-        "weight_block_count": len(blocks),
+        "weight_block_count": weight_block_count,
         "maximum_block_column_count": max(map(len, blocks.values())),
         "modular_rank": total_rank,
         "block_histogram": {

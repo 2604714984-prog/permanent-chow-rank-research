@@ -1,0 +1,76 @@
+{
+  "claim_boundary": "This is a strict global reduction, not an exclusion of b=34. It does not classify arbitrary 46-planes, prove ordinary lower29, determine the exact rank, or make a border-rank claim.",
+  "critical_six_shortening": {
+    "central_intersection_lower_from_sixteen_term_complement_capacity": 46,
+    "complementary_sixteen_term_literal_sum_dimension": 320,
+    "complementary_sixteen_terms_are_literal_direct": true,
+    "dimension_at_least_47_is_excluded_by_N6_078_or_the_t14_fallback": true,
+    "for_every_seven_set_N6_099_selects_a_six_subset_with_quadratic_permanent_relation_dimension_at_most": 75,
+    "product_shadow_first_minimizer": [
+      16,
+      10,
+      10,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "product_shadow_m46": 72,
+    "product_shadow_m47": 75,
+    "product_shadow_m53": 81,
+    "product_shadow_minimizer_count": 4,
+    "selected_six_product_shadow_dimension_range": [
+      72,
+      75
+    ],
+    "six_literal_cubic_sum_dimension": 120,
+    "therefore_selected_six_intersection_dimension": 46
+  },
+  "forced_local_frontier": {
+    "N6_080_old_cap_excluded_count": 43,
+    "N6_080_relation_state_count": 56,
+    "defect": 6,
+    "every_seven_set_first_shadow_lower": 87,
+    "every_seven_set_lies_in_one_of_the_thirteen_states": true,
+    "open_exact_state_count": 13,
+    "quadratic_projection_cap": 93
+  },
+  "global_hypothesis": {
+    "central_space_dimension_floor": 366,
+    "fixed_terms": 6,
+    "global_b": 34,
+    "ordinary_terms": 28,
+    "residual_terms": 22
+  },
+  "hereditary_seven_set_equality": {
+    "N6_074_lower_for_every_residual_seven_set": 66,
+    "N6_099_upper_for_every_residual_seven_set": 66,
+    "every_at_most_fifteen_term_family_is_literal_direct": true,
+    "every_fifteen_term_literal_sum_dimension": 300,
+    "every_seven_term_literal_and_coupled_sum_dimension": 140,
+    "every_term_cubic_dimension": 20,
+    "global_central_space_dimension": 366,
+    "therefore_every_coupled_seven_set_intersection_dimension": 66,
+    "therefore_every_literal_seven_set_intersection_dimension": 66
+  },
+  "next_target": "Use actual Chow common-section and coproduct structure to exclude the critical six-term 46-plane packets with quadratic shadow 72 through 75.",
+  "status": [
+    "PURE_GLOBAL_B34_TO_HEREDITARY_X66_REDUCTION",
+    "EXACT_FIXED_SIX_AND_RELATION_ENVELOPE_REPLAY",
+    "N6-100"
+  ],
+  "strict_conclusion": "A hypothetical ordinary 28-term decomposition in the b=34 branch forces every residual seven-set into the exact x=66, first-shadow-at-least-87 N6-080 frontier. Every such seven-set contains a six-set whose central intersection is exactly 46, whose product shadow has dimension 72 through 75, and whose sixteen-term complement is literal direct. This is now the first unresolved b=34 layer."
+}

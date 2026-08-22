@@ -1,0 +1,583 @@
+{
+  "all_states": [
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 140,
+      "d2": 105,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excluded_at_x72_by_existing_cap": false,
+      "excluded_by_existing_cap": false,
+      "existing_cap": null,
+      "kappa2": 0,
+      "required_prolongation_lower": 460,
+      "required_prolongation_lower_at_x72": 468,
+      "t2_upper": 16
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 138,
+      "d2": 104,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excluded_at_x72_by_existing_cap": false,
+      "excluded_by_existing_cap": false,
+      "existing_cap": null,
+      "kappa2": 1,
+      "required_prolongation_lower": 458,
+      "required_prolongation_lower_at_x72": 466,
+      "t2_upper": 15
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 136,
+      "d2": 103,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 453,
+      "kappa2": 2,
+      "required_prolongation_lower": 456,
+      "required_prolongation_lower_at_x72": 464,
+      "t2_upper": 14
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 132,
+      "d2": 102,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 440,
+      "kappa2": 3,
+      "required_prolongation_lower": 452,
+      "required_prolongation_lower_at_x72": 460,
+      "t2_upper": 13
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 130,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 4,
+      "required_prolongation_lower": 450,
+      "required_prolongation_lower_at_x72": 458,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 140,
+      "d2": 104,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": false,
+      "excluded_by_existing_cap": false,
+      "existing_cap": null,
+      "kappa2": 0,
+      "required_prolongation_lower": 460,
+      "required_prolongation_lower_at_x72": 468,
+      "t2_upper": 15
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 138,
+      "d2": 103,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 453,
+      "kappa2": 1,
+      "required_prolongation_lower": 458,
+      "required_prolongation_lower_at_x72": 466,
+      "t2_upper": 14
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 136,
+      "d2": 102,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 440,
+      "kappa2": 2,
+      "required_prolongation_lower": 456,
+      "required_prolongation_lower_at_x72": 464,
+      "t2_upper": 13
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 132,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 3,
+      "required_prolongation_lower": 452,
+      "required_prolongation_lower_at_x72": 460,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 138,
+      "d2": 103,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 453,
+      "kappa2": 0,
+      "required_prolongation_lower": 458,
+      "required_prolongation_lower_at_x72": 466,
+      "t2_upper": 14
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 136,
+      "d2": 102,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 440,
+      "kappa2": 1,
+      "required_prolongation_lower": 456,
+      "required_prolongation_lower_at_x72": 464,
+      "t2_upper": 13
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 134,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 2,
+      "required_prolongation_lower": 454,
+      "required_prolongation_lower_at_x72": 462,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 134,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 0,
+      "required_prolongation_lower": 454,
+      "required_prolongation_lower_at_x72": 462,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 140,
+      "d2": 103,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 453,
+      "kappa2": 0,
+      "required_prolongation_lower": 460,
+      "required_prolongation_lower_at_x72": 468,
+      "t2_upper": 14
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 138,
+      "d2": 102,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 440,
+      "kappa2": 1,
+      "required_prolongation_lower": 458,
+      "required_prolongation_lower_at_x72": 466,
+      "t2_upper": 13
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 136,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 2,
+      "required_prolongation_lower": 456,
+      "required_prolongation_lower_at_x72": 464,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 138,
+      "d2": 102,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 440,
+      "kappa2": 0,
+      "required_prolongation_lower": 458,
+      "required_prolongation_lower_at_x72": 466,
+      "t2_upper": 13
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 136,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 1,
+      "required_prolongation_lower": 456,
+      "required_prolongation_lower_at_x72": 464,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 136,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 0,
+      "required_prolongation_lower": 456,
+      "required_prolongation_lower_at_x72": 464,
+      "t2_upper": 12
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 140,
+      "d2": 102,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 440,
+      "kappa2": 0,
+      "required_prolongation_lower": 460,
+      "required_prolongation_lower_at_x72": 468,
+      "t2_upper": 13
+    },
+    {
+      "a2_lower": 89,
+      "conservative_h_lower": 138,
+      "d2": 101,
+      "epsilon": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "excluded_at_x72_by_existing_cap": true,
+      "excluded_by_existing_cap": true,
+      "existing_cap": 436,
+      "kappa2": 1,
+      "required_prolongation_lower": 458,
+      "required_prolongation_lower_at_x72": 466,
+      "t2_upper": 12
+    }
+  ],
+  "claim_boundary": "This is a scalar and equality-locus frontier, not an exclusion of x_A=72 or global b=34. It does not prove ChowRank(perm_6)>=29 and makes no border-rank claim.",
+  "existing_cap_excluded_count": 18,
+  "input_after_n6091": "every residual seven-set has x_A<=72 and f_A<=72",
+  "next_target": "Use the product second shadow and the missing-quadratic-cell geometry to exclude, first, the one-relation common-W15 packet, then the one-defective-term and t16 packets.",
+  "open_actual_packets": [
+    {
+      "actual_refinement": {
+        "existing_t15_cap_does_not_apply_without_first_forcing_t2_at_most_15": true,
+        "literal_middle_dimension": 140,
+        "name": "direct_t16_packet",
+        "quotient_sum_dimension_upper": 16,
+        "required_prolongation_lower": 468,
+        "seven_quadratic_spaces_literal_direct": true
+      },
+      "state": {
+        "a2_lower": 89,
+        "conservative_h_lower": 140,
+        "d2": 105,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "excluded_at_x72_by_existing_cap": false,
+        "excluded_by_existing_cap": false,
+        "existing_cap": null,
+        "kappa2": 0,
+        "required_prolongation_lower": 460,
+        "required_prolongation_lower_at_x72": 468,
+        "t2_upper": 16
+      }
+    },
+    {
+      "actual_refinement": {
+        "all_seven_quotient_images_equal_one_common_W15": true,
+        "epsilon_zero_alpha_at_most_two_subcases_excluded_by_cap_458": true,
+        "forced_a2": 89,
+        "forced_alpha": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "forced_t2": 15,
+        "name": "one_quadratic_relation_common_W15_packet",
+        "quadratic_relation_dimension": 1,
+        "quadratic_sum_dimension": 104,
+        "required_prolongation_lower": 466
+      },
+      "state": {
+        "a2_lower": 89,
+        "conservative_h_lower": 138,
+        "d2": 104,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "excluded_at_x72_by_existing_cap": false,
+        "excluded_by_existing_cap": false,
+        "existing_cap": null,
+        "kappa2": 1,
+        "required_prolongation_lower": 458,
+        "required_prolongation_lower_at_x72": 466,
+        "t2_upper": 15
+      }
+    },
+    {
+      "actual_refinement": {
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "forced_t2": 15,
+        "name": "one_defective_term_t15_packet",
+        "positive_epsilon_term_alpha_floor": 2,
+        "positive_epsilon_term_quotient_dimension_options": [
+          13,
+          14,
+          15
+        ],
+        "quadratic_sum_dimension": 104,
+        "required_prolongation_lower": 468,
+        "six_epsilon_zero_terms_forced_alpha_three": true
+      },
+      "state": {
+        "a2_lower": 89,
+        "conservative_h_lower": 140,
+        "d2": 104,
+        "epsilon": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "excluded_at_x72_by_existing_cap": false,
+        "excluded_by_existing_cap": false,
+        "existing_cap": null,
+        "kappa2": 0,
+        "required_prolongation_lower": 460,
+        "required_prolongation_lower_at_x72": 468,
+        "t2_upper": 15
+      }
+    }
+  ],
+  "open_packet_count": 3,
+  "scalar_state_count": 21,
+  "status": [
+    "EXACT_B34_X72_DEFECT_FOUR_SCALAR_FRONTIER",
+    "THREE_ACTUAL_PACKETS_REMAIN_OPEN",
+    "N6-093"
+  ],
+  "strict_conclusion": "The x_A=72 layer is reduced to three displayed actual packets; it is not excluded.",
+  "x72_geometry_from_n6092": {
+    "first_shadow_dimension": 89,
+    "lies_in_partitioned_80_to_90_product_parent": true,
+    "missing_quadratic_hyperplane_direction_is_boolean_not_assumed_to_transport_actual_frames": true,
+    "second_shadow_dimension": 24
+  }
+}

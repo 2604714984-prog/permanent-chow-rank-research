@@ -420,9 +420,10 @@ constraints, uses zero central lower bounds for all quadratic dimensions at
 most ten, and replaces the actual relation module by its dimension cap. A new
 bulk theorem could therefore eliminate many states at once.
 
-That objection does not justify extending the present state table. It
-justifies searching for one such theorem or changing the flattening. Until a
-bulk inequality is stated and independently checked, lower 26 remains open.
+That objection did not justify extending the state table. N6-030 later supplies
+the missing bulk step by averaging over six-subsets and proves the ordinary
+lower bound 26 without resolving the surviving arbitrary-subset states one by
+one.
 
 ## 12. Reproduction
 

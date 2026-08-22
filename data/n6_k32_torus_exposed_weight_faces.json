@@ -1,0 +1,819 @@
+{
+  "certificate": "N6-139",
+  "status": "EXACT_INTEGER_TORUS_EXPOSED_WEIGHT_FACES",
+  "field": "integer character lattice",
+  "hypothesis": "full 72-variable graph chart at L=M=A3 tensor P2",
+  "character_coordinate_convention": "three row coordinates followed by four column coordinates; each graph variable has target weight minus source weight",
+  "character_count": 28,
+  "row_changing_count": 24,
+  "same_row_count": 4,
+  "row_changing_exposed_count": 24,
+  "same_row_non_exposed_count": 4,
+  "row_changing_profiles": [
+    {
+      "label": [
+        "row",
+        0,
+        1,
+        0,
+        0
+      ],
+      "character": [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "witness": [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        1,
+        0,
+        1
+      ],
+      "character": [
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "witness": [
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        1,
+        1,
+        0
+      ],
+      "character": [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "witness": [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        1,
+        1,
+        1
+      ],
+      "character": [
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "witness": [
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        2,
+        0,
+        0
+      ],
+      "character": [
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "witness": [
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        2,
+        0,
+        1
+      ],
+      "character": [
+        1,
+        0,
+        -1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "witness": [
+        1,
+        0,
+        -1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        2,
+        1,
+        0
+      ],
+      "character": [
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "witness": [
+        1,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        0,
+        2,
+        1,
+        1
+      ],
+      "character": [
+        1,
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "witness": [
+        1,
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        0,
+        0,
+        0
+      ],
+      "character": [
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "witness": [
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        0,
+        0,
+        1
+      ],
+      "character": [
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "witness": [
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        0,
+        1,
+        0
+      ],
+      "character": [
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "witness": [
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        0,
+        1,
+        1
+      ],
+      "character": [
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "witness": [
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        2,
+        0,
+        0
+      ],
+      "character": [
+        0,
+        1,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "witness": [
+        0,
+        1,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        2,
+        0,
+        1
+      ],
+      "character": [
+        0,
+        1,
+        -1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "witness": [
+        0,
+        1,
+        -1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        2,
+        1,
+        0
+      ],
+      "character": [
+        0,
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "witness": [
+        0,
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        1,
+        2,
+        1,
+        1
+      ],
+      "character": [
+        0,
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "witness": [
+        0,
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        0,
+        0,
+        0
+      ],
+      "character": [
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "witness": [
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        0,
+        0,
+        1
+      ],
+      "character": [
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "witness": [
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        0,
+        1,
+        0
+      ],
+      "character": [
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "witness": [
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        0,
+        1,
+        1
+      ],
+      "character": [
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "witness": [
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        1,
+        0,
+        0
+      ],
+      "character": [
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "witness": [
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        1,
+        0,
+        1
+      ],
+      "character": [
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "witness": [
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        1,
+        1,
+        0
+      ],
+      "character": [
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "witness": [
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    },
+    {
+      "label": [
+        "row",
+        2,
+        1,
+        1,
+        1
+      ],
+      "character": [
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "witness": [
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "top_score": 4,
+      "second_score": 3,
+      "strict_gap": 1
+    }
+  ],
+  "same_row_profiles": [
+    {
+      "label": [
+        "same",
+        0,
+        0,
+        0,
+        0
+      ],
+      "character": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      "non_exposure_reason": "If row potentials are not all equal, an ordered row-changing character with the same column difference is larger; if they are all equal, that row-changing character ties."
+    },
+    {
+      "label": [
+        "same",
+        0,
+        0,
+        0,
+        1
+      ],
+      "character": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "non_exposure_reason": "If row potentials are not all equal, an ordered row-changing character with the same column difference is larger; if they are all equal, that row-changing character ties."
+    },
+    {
+      "label": [
+        "same",
+        0,
+        0,
+        1,
+        0
+      ],
+      "character": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "non_exposure_reason": "If row potentials are not all equal, an ordered row-changing character with the same column difference is larger; if they are all equal, that row-changing character ties."
+    },
+    {
+      "label": [
+        "same",
+        0,
+        0,
+        1,
+        1
+      ],
+      "character": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "non_exposure_reason": "If row potentials are not all equal, an ordered row-changing character with the same column difference is larger; if they are all equal, that row-changing character ties."
+    }
+  ],
+  "consequence": "All 24 row-changing first-Schur characters are strict exposed faces. None of the four same-row characters is exposed. Therefore a torus exposed-face reduction can only isolate the already classified row-changing directions; it cannot isolate the four average/sign same-row directions. Those four individual finite germs are already excluded by N6-125 and N6-127; the remaining issue is mixed-character sums and their finite-point realization.",
+  "boundary": [
+    "This is a character-polytope statement, not an integration theorem.",
+    "It does not turn a tangent direction into a finite actual Chow pair.",
+    "Mixed-character sums and nonlinear same-row lifts remain open.",
+    "It does not prove ordinary lower 29 or exact ChowRank(perm_6)."
+  ]
+}

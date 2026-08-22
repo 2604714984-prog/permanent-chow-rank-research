@@ -1,0 +1,86 @@
+{
+  "arithmetic": "pure coefficient formulas plus exact integer/QQ ranks",
+  "claim_boundary": "The constructed six-term family has b=0, not b=60. It does not realize the residual fixed-six state, refute its exclusion, or change the Chow-rank lower bound. It isolates the remaining obstruction as cubic coupling.",
+  "construction": {
+    "exact_QQ_cube_rank": 6,
+    "exact_QQ_repeated_cubic_projection_rank": 6,
+    "exact_QQ_sign_rank": 6,
+    "exact_QQ_square_rank": 6,
+    "linear_forms": "ell_(i,c)=sum_(r=0)^5 sigma_(i,r) x_(r,c), T_i=product_(c=0)^5 ell_(i,c)",
+    "selected_sign_minor_determinant": -32,
+    "sign_rows": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ]
+    ]
+  },
+  "coupled_cubic_data": {
+    "b": 0,
+    "h": 120,
+    "required_b_in_residual_state": 60
+  },
+  "coupled_quadratic_data": {
+    "a2": 75,
+    "common_quotient_W_dimension": 15,
+    "d2": 90,
+    "pairwise_F_intersection_dimension": 0,
+    "six_F_literal_direct": true,
+    "t2": 15
+  },
+  "individual_term_data": {
+    "cubic_derivative_dimension": 20,
+    "epsilon_alpha": [
+      0,
+      3
+    ],
+    "permanent_quadratic_intersection_dimension": 0,
+    "quadratic_derivative_dimension": 15
+  },
+  "status": "EXACT_N6_ALPHA3_COMMON_QUOTIENT_COUNTEREXAMPLE",
+  "strict_conclusion": "The assertion that two actual epsilon-zero alpha-three Chow spaces with the same W15 must intersect is false, even for six literal-direct spaces. Pure quadratic common-quotient geometry cannot exclude the residual state."
+}

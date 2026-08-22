@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "EXHAUSTIVE_SINGLE_BLOCK_SIGNED_COORDINATE_SEARCH",
+  "field": "F_65521",
+  "seed": 97531,
+  "evaluation_columns": 400,
+  "candidate_formula": "6! * 2^6",
+  "candidate_count": 46080,
+  "workers": 20,
+  "intersection_histogram": {
+    "1": 46079,
+    "7": 1
+  },
+  "maximum_target_intersection": 7,
+  "maximizer_count": 1,
+  "maximizers": [
+    {
+      "index": 45360,
+      "degree_six_rank": 336,
+      "degree_six_target_intersection": 7
+    }
+  ],
+  "elapsed_seconds": 105.84554564999416,
+  "claim_boundary": [
+    "Exactly one of the seven graph blocks is transformed.",
+    "The transform group is signed coordinate permutations, not GL(6).",
+    "This finite-field exhaustion is not a general lower-fifty proof."
+  ]
+}

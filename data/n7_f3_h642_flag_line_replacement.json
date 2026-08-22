@@ -1,0 +1,42 @@
+{
+  "branch_replacement_bounds": {
+    "bivector_span_one": 42,
+    "bivector_span_zero": 42,
+    "flag_line_with_p_point": 48,
+    "flag_line_without_p_point": 43,
+    "non_grassmannian_line": 42
+  },
+  "claim_boundary": [
+    "The complete gauge-free F3,H6=42 q5=2 pencil is closed.",
+    "F3,H6=41 has q6=1 gauge and is not closed here.",
+    "This replay does not prove lower 50 or border Chow rank."
+  ],
+  "exceptional_residual_identity": {
+    "Q": "6*M*P^5+kappa*P^6",
+    "dF_dM_coefficients_in_M_P5__P6": [
+      0,
+      1
+    ],
+    "dF_dP_coefficients_in_M_P5__P6": [
+      6,
+      5
+    ],
+    "dQ_dM_coefficients_in_M_P4__P5": [
+      0,
+      6
+    ],
+    "primitive": "M*P^6+(kappa/7)*P^7",
+    "waring_cost_upper_bound": 7
+  },
+  "exhaustive_q5_two_branches": [
+    "BIVECTOR-SPAN-RANK-AT-MOST-ONE",
+    "NON-GRASSMANNIAN-LINE-AT-MOST-TWO-NONZERO-RATIOS",
+    "GRASSMANNIAN-FLAG-LINE"
+  ],
+  "flag_support_sizes_checked_per_stratum": 42,
+  "permanent_waring_rank": 64,
+  "relation_support_sizes_checked": 36,
+  "schema_version": 1,
+  "status": "F3-H6-42-Q5-2-CLOSED",
+  "total_points": 42
+}

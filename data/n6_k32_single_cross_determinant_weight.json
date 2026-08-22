@@ -1,0 +1,202 @@
+{
+  "certificate": "N6-123",
+  "status": "PURE_TORUS_WEIGHT_COMPLETED_K32_SINGLE_CROSS_EXCLUSION",
+  "field": "characteristic zero",
+  "hypothesis": "completed rank-at-most-six germ at the N6-116 single-cross K3,2 point, with N6-116 quadratic initial ideal",
+  "exact_certificate": {
+    "source_certificate": "N6-116",
+    "weight_basis": [
+      "r0+r1",
+      "r2",
+      "c0+r1",
+      "c1",
+      "c2-r1",
+      "c3"
+    ],
+    "base_constraint": "wt(12)-wt(00)=0",
+    "tangent_variable_weights": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        0,
+        0
+      ]
+    ],
+    "determinant_weight": [
+      0,
+      0,
+      -3,
+      -3,
+      3,
+      3
+    ],
+    "positive_c3_variables": [
+      1
+    ],
+    "facets": [
+      [
+        0,
+        1,
+        3,
+        6,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        3,
+        6,
+        7
+      ],
+      [
+        0,
+        3,
+        5,
+        6,
+        7
+      ]
+    ],
+    "facet_obstructions": [
+      {
+        "facet": [
+          0,
+          1,
+          3,
+          6,
+          7
+        ],
+        "forced_variable": "x1^3",
+        "residual_weight": [
+          0,
+          0,
+          -3,
+          -3,
+          6,
+          0
+        ],
+        "remaining_c0_weights": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "reason": "required residual c0 is negative but all remaining c0 weights are nonnegative"
+      },
+      {
+        "facet": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "reason": "no variable has positive c3 weight",
+        "required_c3": 3
+      },
+      {
+        "facet": [
+          0,
+          2,
+          3,
+          6,
+          7
+        ],
+        "reason": "no variable has positive c3 weight",
+        "required_c3": 3
+      },
+      {
+        "facet": [
+          0,
+          3,
+          5,
+          6,
+          7
+        ],
+        "reason": "no variable has positive c3 weight",
+        "required_c3": 3
+      }
+    ],
+    "no_surviving_determinant_weight_monomial": true
+  },
+  "theorem": "The complement determinant vanishes in the completed local incidence ring; every branch through this point is noncomplementary.",
+  "symmetry_orbit": {
+    "unit_directions_covered": 24,
+    "condition": "target row differs from source row",
+    "nonzero_coefficient_torus_orbit": true
+  },
+  "proof_interface": [
+    "N6-116 supplies J subset in_m(I) and the four facet primes.",
+    "The determinant is a semi-invariant for the base-preserving row-column subtorus.",
+    "No monomial in the four facet quotients has its determinant weight.",
+    "Completeness of the m-adic ring then forces the determinant to vanish identically."
+  ],
+  "boundary": [
+    "does not classify the other K3,2 collision points",
+    "does not classify nonlinear lifts at the remaining K32 facets outside this exact representative orbit",
+    "does not classify arbitrary invertible 6 by 6 graph operators",
+    "does not prove ordinary lower 29 or exact Chow rank 32"
+  ]
+}

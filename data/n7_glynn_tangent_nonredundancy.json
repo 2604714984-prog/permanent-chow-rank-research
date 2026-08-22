@@ -1,0 +1,136 @@
+{
+  "status": "N7_GLYNN_LOCAL_RIGIDITY",
+  "field": "characteristic zero, certified by a nonzero modular minor",
+  "prime": 1000003,
+  "glynn_term_count": 64,
+  "ambient_variable_count": 49,
+  "affine_chow_tangent_dimension_per_term": 337,
+  "effective_source_dimension_after_intrinsic_factor_gauge": 21568,
+  "walsh_blocks": {
+    "base_multidegree_representatives_by_parity_weight": [
+      {
+        "parity_weight": 0,
+        "modular_rank_lower_bound": 43,
+        "theoretical_rank_upper_bound": 43,
+        "witness_rows_scanned": 16698
+      },
+      {
+        "parity_weight": 1,
+        "modular_rank_lower_bound": 43,
+        "theoretical_rank_upper_bound": 43,
+        "witness_rows_scanned": 16698
+      },
+      {
+        "parity_weight": 2,
+        "modular_rank_lower_bound": 43,
+        "theoretical_rank_upper_bound": 43,
+        "witness_rows_scanned": 12427
+      },
+      {
+        "parity_weight": 3,
+        "modular_rank_lower_bound": 43,
+        "theoretical_rank_upper_bound": 43,
+        "witness_rows_scanned": 12427
+      },
+      {
+        "parity_weight": 4,
+        "modular_rank_lower_bound": 43,
+        "theoretical_rank_upper_bound": 43,
+        "witness_rows_scanned": 8521
+      },
+      {
+        "parity_weight": 5,
+        "modular_rank_lower_bound": 43,
+        "theoretical_rank_upper_bound": 43,
+        "witness_rows_scanned": 8521
+      },
+      {
+        "parity_weight": 6,
+        "modular_rank_lower_bound": 37,
+        "theoretical_rank_upper_bound": 37,
+        "witness_rows_scanned": 4321
+      }
+    ],
+    "base_multidegree_total_rank": 2746,
+    "off_diagonal_multidegree_count": 42,
+    "one_off_diagonal_multidegree_rank": 448,
+    "off_diagonal_parity_ranks": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ]
+  },
+  "sum_map_tangent_rank": 21562,
+  "kernel_after_intrinsic_factor_gauge": 6,
+  "identified_kernel": {
+    "dimension": 6,
+    "source": "row-diagonal torus stabilizing perm_7"
+  },
+  "conclusion": "The ordered decomposition fiber is smooth of dimension six at the Glynn point; locally it is exactly the row-diagonal stabilizer orbit. After quotienting that orbit, the point is isolated and reduced.",
+  "claim_boundary": [
+    "This is local rigidity of the Glynn decomposition modulo its stabilizer.",
+    "It does not prove that no unrelated 63-term decomposition exists.",
+    "It does not prove ordinary or border Chow rank 64."
+  ]
+}

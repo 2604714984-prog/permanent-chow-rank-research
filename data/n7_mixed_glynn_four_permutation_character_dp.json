@@ -1,0 +1,426 @@
+{
+  "candidate_interval": [
+    0,
+    25740300
+  ],
+  "claim_boundary": [
+    "Common output-coordinate normalization makes one type the identity.",
+    "Simultaneous input/output relabelling conjugates all relative permutations without changing protected-character existence.",
+    "Marking any nonidentity type and reducing it to one of the ten nonidentity cycle types covers every four-type packet, with harmless duplicates.",
+    "A zero protected-character count on the complete cover proves zero local target intersection independently of signs."
+  ],
+  "cover_candidate_count": 25740300,
+  "cover_candidate_formula": "10 * binom(718, 2) * binom(5, 3)",
+  "elapsed_seconds": 868.2498713710011,
+  "maximizers_first_100": [
+    {
+      "index": 0,
+      "protected_characters": []
+    },
+    {
+      "index": 1,
+      "protected_characters": []
+    },
+    {
+      "index": 2,
+      "protected_characters": []
+    },
+    {
+      "index": 3,
+      "protected_characters": []
+    },
+    {
+      "index": 4,
+      "protected_characters": []
+    },
+    {
+      "index": 5,
+      "protected_characters": []
+    },
+    {
+      "index": 6,
+      "protected_characters": []
+    },
+    {
+      "index": 7,
+      "protected_characters": []
+    },
+    {
+      "index": 8,
+      "protected_characters": []
+    },
+    {
+      "index": 9,
+      "protected_characters": []
+    },
+    {
+      "index": 10,
+      "protected_characters": []
+    },
+    {
+      "index": 11,
+      "protected_characters": []
+    },
+    {
+      "index": 12,
+      "protected_characters": []
+    },
+    {
+      "index": 13,
+      "protected_characters": []
+    },
+    {
+      "index": 14,
+      "protected_characters": []
+    },
+    {
+      "index": 15,
+      "protected_characters": []
+    },
+    {
+      "index": 16,
+      "protected_characters": []
+    },
+    {
+      "index": 17,
+      "protected_characters": []
+    },
+    {
+      "index": 18,
+      "protected_characters": []
+    },
+    {
+      "index": 19,
+      "protected_characters": []
+    },
+    {
+      "index": 20,
+      "protected_characters": []
+    },
+    {
+      "index": 21,
+      "protected_characters": []
+    },
+    {
+      "index": 22,
+      "protected_characters": []
+    },
+    {
+      "index": 23,
+      "protected_characters": []
+    },
+    {
+      "index": 24,
+      "protected_characters": []
+    },
+    {
+      "index": 25,
+      "protected_characters": []
+    },
+    {
+      "index": 26,
+      "protected_characters": []
+    },
+    {
+      "index": 27,
+      "protected_characters": []
+    },
+    {
+      "index": 28,
+      "protected_characters": []
+    },
+    {
+      "index": 29,
+      "protected_characters": []
+    },
+    {
+      "index": 30,
+      "protected_characters": []
+    },
+    {
+      "index": 31,
+      "protected_characters": []
+    },
+    {
+      "index": 32,
+      "protected_characters": []
+    },
+    {
+      "index": 33,
+      "protected_characters": []
+    },
+    {
+      "index": 34,
+      "protected_characters": []
+    },
+    {
+      "index": 35,
+      "protected_characters": []
+    },
+    {
+      "index": 36,
+      "protected_characters": []
+    },
+    {
+      "index": 37,
+      "protected_characters": []
+    },
+    {
+      "index": 38,
+      "protected_characters": []
+    },
+    {
+      "index": 39,
+      "protected_characters": []
+    },
+    {
+      "index": 40,
+      "protected_characters": []
+    },
+    {
+      "index": 41,
+      "protected_characters": []
+    },
+    {
+      "index": 42,
+      "protected_characters": []
+    },
+    {
+      "index": 43,
+      "protected_characters": []
+    },
+    {
+      "index": 44,
+      "protected_characters": []
+    },
+    {
+      "index": 45,
+      "protected_characters": []
+    },
+    {
+      "index": 46,
+      "protected_characters": []
+    },
+    {
+      "index": 47,
+      "protected_characters": []
+    },
+    {
+      "index": 48,
+      "protected_characters": []
+    },
+    {
+      "index": 49,
+      "protected_characters": []
+    },
+    {
+      "index": 50,
+      "protected_characters": []
+    },
+    {
+      "index": 51,
+      "protected_characters": []
+    },
+    {
+      "index": 52,
+      "protected_characters": []
+    },
+    {
+      "index": 53,
+      "protected_characters": []
+    },
+    {
+      "index": 54,
+      "protected_characters": []
+    },
+    {
+      "index": 55,
+      "protected_characters": []
+    },
+    {
+      "index": 56,
+      "protected_characters": []
+    },
+    {
+      "index": 57,
+      "protected_characters": []
+    },
+    {
+      "index": 58,
+      "protected_characters": []
+    },
+    {
+      "index": 59,
+      "protected_characters": []
+    },
+    {
+      "index": 60,
+      "protected_characters": []
+    },
+    {
+      "index": 61,
+      "protected_characters": []
+    },
+    {
+      "index": 62,
+      "protected_characters": []
+    },
+    {
+      "index": 63,
+      "protected_characters": []
+    },
+    {
+      "index": 64,
+      "protected_characters": []
+    },
+    {
+      "index": 65,
+      "protected_characters": []
+    },
+    {
+      "index": 66,
+      "protected_characters": []
+    },
+    {
+      "index": 67,
+      "protected_characters": []
+    },
+    {
+      "index": 68,
+      "protected_characters": []
+    },
+    {
+      "index": 69,
+      "protected_characters": []
+    },
+    {
+      "index": 70,
+      "protected_characters": []
+    },
+    {
+      "index": 71,
+      "protected_characters": []
+    },
+    {
+      "index": 72,
+      "protected_characters": []
+    },
+    {
+      "index": 73,
+      "protected_characters": []
+    },
+    {
+      "index": 74,
+      "protected_characters": []
+    },
+    {
+      "index": 75,
+      "protected_characters": []
+    },
+    {
+      "index": 76,
+      "protected_characters": []
+    },
+    {
+      "index": 77,
+      "protected_characters": []
+    },
+    {
+      "index": 78,
+      "protected_characters": []
+    },
+    {
+      "index": 79,
+      "protected_characters": []
+    },
+    {
+      "index": 80,
+      "protected_characters": []
+    },
+    {
+      "index": 81,
+      "protected_characters": []
+    },
+    {
+      "index": 82,
+      "protected_characters": []
+    },
+    {
+      "index": 83,
+      "protected_characters": []
+    },
+    {
+      "index": 84,
+      "protected_characters": []
+    },
+    {
+      "index": 85,
+      "protected_characters": []
+    },
+    {
+      "index": 86,
+      "protected_characters": []
+    },
+    {
+      "index": 87,
+      "protected_characters": []
+    },
+    {
+      "index": 88,
+      "protected_characters": []
+    },
+    {
+      "index": 89,
+      "protected_characters": []
+    },
+    {
+      "index": 90,
+      "protected_characters": []
+    },
+    {
+      "index": 91,
+      "protected_characters": []
+    },
+    {
+      "index": 92,
+      "protected_characters": []
+    },
+    {
+      "index": 93,
+      "protected_characters": []
+    },
+    {
+      "index": 94,
+      "protected_characters": []
+    },
+    {
+      "index": 95,
+      "protected_characters": []
+    },
+    {
+      "index": 96,
+      "protected_characters": []
+    },
+    {
+      "index": 97,
+      "protected_characters": []
+    },
+    {
+      "index": 98,
+      "protected_characters": []
+    },
+    {
+      "index": 99,
+      "protected_characters": []
+    }
+  ],
+  "maximum_protected_character_count": 0,
+  "protected_character_count_histogram": {
+    "0": 25740300
+  },
+  "raw_normalized_candidate_count": 616909190,
+  "raw_normalized_candidate_formula": "binom(719, 3) * binom(5, 3)",
+  "schema_version": 1,
+  "status": "EXHAUSTIVE_FOUR_PERMUTATION_CHARACTER_COLLISION_DP",
+  "workers": 20
+}

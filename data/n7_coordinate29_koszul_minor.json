@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "status": "EXACT_COORDINATE_RESTRICTION_UNITRIANGULAR_MINOR_SCAN",
+  "field": "integer minors; valid in characteristic zero",
+  "n": 7,
+  "active_edge_count": 29,
+  "ambient_coordinate_graph_candidate_count": 28277527346376,
+  "active_edges": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      6,
+      4
+    ]
+  ],
+  "supported_degree_three_and_four_subpermanent_count": 1061,
+  "bounded_enumeration": {
+    "maximum_parent_events_per_output": 16,
+    "full_matrices_materialized": false,
+    "wedge_degrees_recovered_from_one_histogram": 29
+  },
+  "signed_union_size_histogram": [
+    0,
+    1061,
+    -226,
+    537,
+    -546,
+    1137,
+    -760,
+    -210,
+    -267,
+    -68,
+    215,
+    537,
+    -1097,
+    809,
+    593,
+    195,
+    -2039,
+    1565,
+    -52,
+    -1011,
+    1000,
+    -178,
+    -123,
+    -310,
+    390,
+    25,
+    -142,
+    -5,
+    41,
+    -10
+  ],
+  "rows": [
+    {
+      "wedge_degree": 0,
+      "leading_minor_rank": 1061,
+      "one_independent_chow_term_rank": 35,
+      "ratio_numerator": 1061,
+      "ratio_denominator": 35,
+      "integer_lower_bound": 31,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 1,
+      "leading_minor_rank": 29482,
+      "one_independent_chow_term_rank": 994,
+      "ratio_numerator": 29482,
+      "ratio_denominator": 994,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 2,
+      "leading_minor_rank": 395493,
+      "one_independent_chow_term_rank": 13608,
+      "ratio_numerator": 395493,
+      "ratio_denominator": 13608,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 3,
+      "leading_minor_rank": 3409926,
+      "one_independent_chow_term_rank": 119566,
+      "ratio_numerator": 3409926,
+      "ratio_denominator": 119566,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 4,
+      "leading_minor_rank": 21224937,
+      "one_independent_chow_term_rank": 757329,
+      "ratio_numerator": 21224937,
+      "ratio_denominator": 757329,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 5,
+      "leading_minor_rank": 101567708,
+      "one_independent_chow_term_rank": 3682056,
+      "ratio_numerator": 101567708,
+      "ratio_denominator": 3682056,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 6,
+      "leading_minor_rank": 388544632,
+      "one_independent_chow_term_rank": 14286384,
+      "ratio_numerator": 388544632,
+      "ratio_denominator": 14286384,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 7,
+      "leading_minor_rank": 1219889261,
+      "one_independent_chow_term_rank": 45405976,
+      "ratio_numerator": 1219889261,
+      "ratio_denominator": 45405976,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 8,
+      "leading_minor_rank": 3202310772,
+      "one_independent_chow_term_rank": 120403899,
+      "ratio_numerator": 3202310772,
+      "ratio_denominator": 120403899,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 9,
+      "leading_minor_rank": 7124242583,
+      "one_independent_chow_term_rank": 269951066,
+      "ratio_numerator": 7124242583,
+      "ratio_denominator": 269951066,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 10,
+      "leading_minor_rank": 13566439589,
+      "one_independent_chow_term_rank": 516760024,
+      "ratio_numerator": 13566439589,
+      "ratio_denominator": 516760024,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 11,
+      "leading_minor_rank": 22274488177,
+      "one_independent_chow_term_rank": 850661046,
+      "ratio_numerator": 22274488177,
+      "ratio_denominator": 850661046,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 12,
+      "leading_minor_rank": 31696607620,
+      "one_independent_chow_term_rank": 1210333649,
+      "ratio_numerator": 31696607620,
+      "ratio_denominator": 1210333649,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 13,
+      "leading_minor_rank": 39225356645,
+      "one_independent_chow_term_rank": 1493562336,
+      "ratio_numerator": 39225356645,
+      "ratio_denominator": 1493562336,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 14,
+      "leading_minor_rank": 42294534282,
+      "one_independent_chow_term_rank": 1601656224,
+      "ratio_numerator": 42294534282,
+      "ratio_denominator": 1601656224,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 15,
+      "leading_minor_rank": 39751618070,
+      "one_independent_chow_term_rank": 1493562336,
+      "ratio_numerator": 39751618070,
+      "ratio_denominator": 1493562336,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 16,
+      "leading_minor_rank": 32535505007,
+      "one_independent_chow_term_rank": 1210333649,
+      "ratio_numerator": 32535505007,
+      "ratio_denominator": 1210333649,
+      "integer_lower_bound": 27,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 17,
+      "leading_minor_rank": 23133584475,
+      "one_independent_chow_term_rank": 850661046,
+      "ratio_numerator": 23133584475,
+      "ratio_denominator": 850661046,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 18,
+      "leading_minor_rank": 14232599566,
+      "one_independent_chow_term_rank": 516760024,
+      "ratio_numerator": 14232599566,
+      "ratio_denominator": 516760024,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 19,
+      "leading_minor_rank": 7533416208,
+      "one_independent_chow_term_rank": 269951066,
+      "ratio_numerator": 7533416208,
+      "ratio_denominator": 269951066,
+      "integer_lower_bound": 28,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 20,
+      "leading_minor_rank": 3403905282,
+      "one_independent_chow_term_rank": 120403899,
+      "ratio_numerator": 3403905282,
+      "ratio_denominator": 120403899,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 21,
+      "leading_minor_rank": 1299381764,
+      "one_independent_chow_term_rank": 45405976,
+      "ratio_numerator": 1299381764,
+      "ratio_denominator": 45405976,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 22,
+      "leading_minor_rank": 413329269,
+      "one_independent_chow_term_rank": 14286384,
+      "ratio_numerator": 413329269,
+      "ratio_denominator": 14286384,
+      "integer_lower_bound": 29,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 23,
+      "leading_minor_rank": 107547344,
+      "one_independent_chow_term_rank": 3682056,
+      "ratio_numerator": 107547344,
+      "ratio_denominator": 3682056,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 24,
+      "leading_minor_rank": 22303882,
+      "one_independent_chow_term_rank": 757329,
+      "ratio_numerator": 22303882,
+      "ratio_denominator": 757329,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 25,
+      "leading_minor_rank": 3547517,
+      "one_independent_chow_term_rank": 119566,
+      "ratio_numerator": 3547517,
+      "ratio_denominator": 119566,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 26,
+      "leading_minor_rank": 406608,
+      "one_independent_chow_term_rank": 13608,
+      "ratio_numerator": 406608,
+      "ratio_denominator": 13608,
+      "integer_lower_bound": 30,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 27,
+      "leading_minor_rank": 29911,
+      "one_independent_chow_term_rank": 994,
+      "ratio_numerator": 29911,
+      "ratio_denominator": 994,
+      "integer_lower_bound": 31,
+      "passes_lower_50_test": false
+    },
+    {
+      "wedge_degree": 28,
+      "leading_minor_rank": 1061,
+      "one_independent_chow_term_rank": 35,
+      "ratio_numerator": 1061,
+      "ratio_denominator": 35,
+      "integer_lower_bound": 31,
+      "passes_lower_50_test": false
+    }
+  ],
+  "best_row": {
+    "wedge_degree": 0,
+    "leading_minor_rank": 1061,
+    "one_independent_chow_term_rank": 35,
+    "ratio_numerator": 1061,
+    "ratio_denominator": 35,
+    "integer_lower_bound": 31,
+    "passes_lower_50_test": false
+  },
+  "any_lower_50_test_passes": false,
+  "ordinary_chow_lower_bound_from_best_minor": 31,
+  "claim_boundary": [
+    "Coordinate restriction preserves every ordinary Chow decomposition termwise.",
+    "Each displayed rank is an exact integer unitriangular minor of the restricted permanent Koszul map.",
+    "The independent seven-factor rank is a uniform upper cap for a specialized Chow term.",
+    "The finite graph search that found the witness is not used in the proof.",
+    "No border Chow-rank claim is made."
+  ]
+}

@@ -1,0 +1,662 @@
+{
+  "arithmetic": "exact integers and Fraction over Q",
+  "b64_endpoint": {
+    "fixed_quadratic_intersection_a2": 78,
+    "fixed_quadratic_quotient_t2": 12,
+    "fixed_quadratic_rank_d2": 90,
+    "fixed_quartic_intersection_J4_upper": 22,
+    "middle_intersection_b": 64,
+    "middle_rank_h": 120,
+    "residual_C42_rank_window": [
+      215,
+      237
+    ]
+  },
+  "claim_boundary": "This is a characteristic-zero consequence and a route ceiling, not a construction of Chow terms and not a proof of lower 27.",
+  "conditional_on": "the N6-032 fixed-six reduction of a hypothetical 26-term decomposition of perm_6",
+  "inherited_high_layers_verified_against": "data/n6_lower27_hereditary_residual_audit.json",
+  "rows": [
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 45,
+        "integer_shadow_lower_bound": 64,
+        "lower_separator": "113/25",
+        "upper_separator": "453/100"
+      },
+      "fixed_middle_shadow_lower": 64,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 26,
+      "fixed_quartic_intersection_J4_upper": 15,
+      "lower_optimization_witness": {
+        "central_relation_cap": 30,
+        "coupled_quadratic_lower": 21,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 14,
+        "quartic_relation_cap": 55,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 45,
+      "middle_rank_h_lower": 90,
+      "residual_C42_rank_lower_from_current_interfaces": 211,
+      "residual_C42_rank_upper_from_common_sum_space": 251
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 46,
+        "integer_shadow_lower_bound": 65,
+        "lower_separator": "567/125",
+        "upper_separator": "4537/1000"
+      },
+      "fixed_middle_shadow_lower": 65,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 25,
+      "fixed_quartic_intersection_J4_upper": 15,
+      "lower_optimization_witness": {
+        "central_relation_cap": 26,
+        "coupled_quadratic_lower": 32,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 13,
+        "quartic_relation_cap": 45,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 46,
+      "middle_rank_h_lower": 90,
+      "residual_C42_rank_lower_from_current_interfaces": 211,
+      "residual_C42_rank_upper_from_common_sum_space": 250
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 47,
+        "integer_shadow_lower_bound": 66,
+        "lower_separator": "1137/250",
+        "upper_separator": "4549/1000"
+      },
+      "fixed_middle_shadow_lower": 66,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 24,
+      "fixed_quartic_intersection_J4_upper": 16,
+      "lower_optimization_witness": {
+        "central_relation_cap": 23,
+        "coupled_quadratic_lower": 39,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 12,
+        "quartic_relation_cap": 39,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 47,
+      "middle_rank_h_lower": 89,
+      "residual_C42_rank_lower_from_current_interfaces": 210,
+      "residual_C42_rank_upper_from_common_sum_space": 249
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 48,
+        "integer_shadow_lower_bound": 66,
+        "lower_separator": "114/25",
+        "upper_separator": "4561/1000"
+      },
+      "fixed_middle_shadow_lower": 66,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 24,
+      "fixed_quartic_intersection_J4_upper": 16,
+      "lower_optimization_witness": {
+        "central_relation_cap": 23,
+        "coupled_quadratic_lower": 39,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 12,
+        "quartic_relation_cap": 39,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 48,
+      "middle_rank_h_lower": 88,
+      "residual_C42_rank_lower_from_current_interfaces": 210,
+      "residual_C42_rank_upper_from_common_sum_space": 249
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 49,
+        "integer_shadow_lower_bound": 67,
+        "lower_separator": "4571/1000",
+        "upper_separator": "1143/250"
+      },
+      "fixed_middle_shadow_lower": 67,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 23,
+      "fixed_quartic_intersection_J4_upper": 16,
+      "lower_optimization_witness": {
+        "central_relation_cap": 21,
+        "coupled_quadratic_lower": 43,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 11,
+        "quartic_relation_cap": 36,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 49,
+      "middle_rank_h_lower": 88,
+      "residual_C42_rank_lower_from_current_interfaces": 210,
+      "residual_C42_rank_upper_from_common_sum_space": 248
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 50,
+        "integer_shadow_lower_bound": 68,
+        "lower_separator": "229/50",
+        "upper_separator": "459/100"
+      },
+      "fixed_middle_shadow_lower": 68,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 22,
+      "fixed_quartic_intersection_J4_upper": 17,
+      "lower_optimization_witness": {
+        "central_relation_cap": 20,
+        "coupled_quadratic_lower": 45,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 10,
+        "quartic_relation_cap": 35,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 50,
+      "middle_rank_h_lower": 87,
+      "residual_C42_rank_lower_from_current_interfaces": 209,
+      "residual_C42_rank_upper_from_common_sum_space": 247
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 51,
+        "integer_shadow_lower_bound": 69,
+        "lower_separator": "2297/500",
+        "upper_separator": "919/200"
+      },
+      "fixed_middle_shadow_lower": 69,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 21,
+      "fixed_quartic_intersection_J4_upper": 17,
+      "lower_optimization_witness": {
+        "central_relation_cap": 16,
+        "coupled_quadratic_lower": 56,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 9,
+        "quartic_relation_cap": 25,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 51,
+      "middle_rank_h_lower": 86,
+      "residual_C42_rank_lower_from_current_interfaces": 209,
+      "residual_C42_rank_upper_from_common_sum_space": 246
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 52,
+        "integer_shadow_lower_bound": 69,
+        "lower_separator": "921/200",
+        "upper_separator": "2303/500"
+      },
+      "fixed_middle_shadow_lower": 69,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 21,
+      "fixed_quartic_intersection_J4_upper": 17,
+      "lower_optimization_witness": {
+        "central_relation_cap": 16,
+        "coupled_quadratic_lower": 56,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 9,
+        "quartic_relation_cap": 25,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 52,
+      "middle_rank_h_lower": 88,
+      "residual_C42_rank_lower_from_current_interfaces": 209,
+      "residual_C42_rank_upper_from_common_sum_space": 246
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 53,
+        "integer_shadow_lower_bound": 70,
+        "lower_separator": "461/100",
+        "upper_separator": "231/50"
+      },
+      "fixed_middle_shadow_lower": 70,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 20,
+      "fixed_quartic_intersection_J4_upper": 18,
+      "lower_optimization_witness": {
+        "central_relation_cap": 13,
+        "coupled_quadratic_lower": 63,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 8,
+        "quartic_relation_cap": 19,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 53,
+      "middle_rank_h_lower": 92,
+      "residual_C42_rank_lower_from_current_interfaces": 208,
+      "residual_C42_rank_upper_from_common_sum_space": 245
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 54,
+        "integer_shadow_lower_bound": 71,
+        "lower_separator": "4627/1000",
+        "upper_separator": "1157/250"
+      },
+      "fixed_middle_shadow_lower": 71,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 19,
+      "fixed_quartic_intersection_J4_upper": 18,
+      "lower_optimization_witness": {
+        "central_relation_cap": 11,
+        "coupled_quadratic_lower": 67,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 7,
+        "quartic_relation_cap": 16,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 54,
+      "middle_rank_h_lower": 96,
+      "residual_C42_rank_lower_from_current_interfaces": 208,
+      "residual_C42_rank_upper_from_common_sum_space": 244
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 55,
+        "integer_shadow_lower_bound": 72,
+        "lower_separator": "4637/1000",
+        "upper_separator": "2319/500"
+      },
+      "fixed_middle_shadow_lower": 72,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 18,
+      "fixed_quartic_intersection_J4_upper": 18,
+      "lower_optimization_witness": {
+        "central_relation_cap": 10,
+        "coupled_quadratic_lower": 69,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 6,
+        "quartic_relation_cap": 15,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 55,
+      "middle_rank_h_lower": 98,
+      "residual_C42_rank_lower_from_current_interfaces": 208,
+      "residual_C42_rank_upper_from_common_sum_space": 243
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 56,
+        "integer_shadow_lower_bound": 72,
+        "lower_separator": "581/125",
+        "upper_separator": "4649/1000"
+      },
+      "fixed_middle_shadow_lower": 72,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 18,
+      "fixed_quartic_intersection_J4_upper": 19,
+      "lower_optimization_witness": {
+        "central_relation_cap": 10,
+        "coupled_quadratic_lower": 69,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 6,
+        "quartic_relation_cap": 15,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 56,
+      "middle_rank_h_lower": 98,
+      "residual_C42_rank_lower_from_current_interfaces": 207,
+      "residual_C42_rank_upper_from_common_sum_space": 243
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 57,
+        "integer_shadow_lower_bound": 73,
+        "lower_separator": "93/20",
+        "upper_separator": "233/50"
+      },
+      "fixed_middle_shadow_lower": 73,
+      "fixed_quadratic_quotient_t2_lower": 1,
+      "fixed_quadratic_quotient_t2_upper": 17,
+      "fixed_quartic_intersection_J4_upper": 19,
+      "lower_optimization_witness": {
+        "central_relation_cap": 7,
+        "coupled_quadratic_lower": 76,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 5,
+        "quartic_relation_cap": 9,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 57,
+      "middle_rank_h_lower": 100,
+      "residual_C42_rank_lower_from_current_interfaces": 207,
+      "residual_C42_rank_upper_from_common_sum_space": 242
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 58,
+        "integer_shadow_lower_bound": 74,
+        "lower_separator": "1167/250",
+        "upper_separator": "4669/1000"
+      },
+      "fixed_middle_shadow_lower": 74,
+      "fixed_quadratic_quotient_t2_lower": 2,
+      "fixed_quadratic_quotient_t2_upper": 16,
+      "fixed_quartic_intersection_J4_upper": 19,
+      "lower_optimization_witness": {
+        "central_relation_cap": 5,
+        "coupled_quadratic_lower": 80,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 4,
+        "quartic_relation_cap": 6,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 58,
+      "middle_rank_h_lower": 110,
+      "residual_C42_rank_lower_from_current_interfaces": 208,
+      "residual_C42_rank_upper_from_common_sum_space": 241
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 59,
+        "integer_shadow_lower_bound": 75,
+        "lower_separator": "2339/500",
+        "upper_separator": "4679/1000"
+      },
+      "fixed_middle_shadow_lower": 75,
+      "fixed_quadratic_quotient_t2_lower": 4,
+      "fixed_quadratic_quotient_t2_upper": 15,
+      "fixed_quartic_intersection_J4_upper": 20,
+      "lower_optimization_witness": {
+        "central_relation_cap": 4,
+        "coupled_quadratic_lower": 82,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 3,
+        "quartic_relation_cap": 5,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 59,
+      "middle_rank_h_lower": 112,
+      "residual_C42_rank_lower_from_current_interfaces": 209,
+      "residual_C42_rank_upper_from_common_sum_space": 240
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 60,
+        "integer_shadow_lower_bound": 75,
+        "lower_separator": "117/25",
+        "upper_separator": "469/100"
+      },
+      "fixed_middle_shadow_lower": 75,
+      "fixed_quadratic_quotient_t2_lower": 4,
+      "fixed_quadratic_quotient_t2_upper": 15,
+      "fixed_quartic_intersection_J4_upper": 20,
+      "lower_optimization_witness": {
+        "central_relation_cap": 4,
+        "coupled_quadratic_lower": 82,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 3,
+        "quartic_relation_cap": 5,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 60,
+      "middle_rank_h_lower": 112,
+      "residual_C42_rank_lower_from_current_interfaces": 209,
+      "residual_C42_rank_upper_from_common_sum_space": 240
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 61,
+        "integer_shadow_lower_bound": 76,
+        "lower_separator": "4697/1000",
+        "upper_separator": "2349/500"
+      },
+      "fixed_middle_shadow_lower": 76,
+      "fixed_quadratic_quotient_t2_lower": 8,
+      "fixed_quadratic_quotient_t2_upper": 14,
+      "fixed_quartic_intersection_J4_upper": 21,
+      "lower_optimization_witness": {
+        "central_relation_cap": 2,
+        "coupled_quadratic_lower": 86,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 2,
+        "quartic_relation_cap": 2,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 61,
+      "middle_rank_h_lower": 116,
+      "residual_C42_rank_lower_from_current_interfaces": 212,
+      "residual_C42_rank_upper_from_common_sum_space": 239
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 62,
+        "integer_shadow_lower_bound": 77,
+        "lower_separator": "4707/1000",
+        "upper_separator": "1177/250"
+      },
+      "fixed_middle_shadow_lower": 77,
+      "fixed_quadratic_quotient_t2_lower": 10,
+      "fixed_quadratic_quotient_t2_upper": 13,
+      "fixed_quartic_intersection_J4_upper": 21,
+      "lower_optimization_witness": {
+        "central_relation_cap": 1,
+        "coupled_quadratic_lower": 88,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 1,
+        "quartic_relation_cap": 1,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 62,
+      "middle_rank_h_lower": 118,
+      "residual_C42_rank_lower_from_current_interfaces": 214,
+      "residual_C42_rank_upper_from_common_sum_space": 238
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 63,
+        "integer_shadow_lower_bound": 77,
+        "lower_separator": "1179/250",
+        "upper_separator": "4717/1000"
+      },
+      "fixed_middle_shadow_lower": 77,
+      "fixed_quadratic_quotient_t2_lower": 10,
+      "fixed_quadratic_quotient_t2_upper": 13,
+      "fixed_quartic_intersection_J4_upper": 21,
+      "lower_optimization_witness": {
+        "central_relation_cap": 1,
+        "coupled_quadratic_lower": 88,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 1,
+        "quartic_relation_cap": 1,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 63,
+      "middle_rank_h_lower": 118,
+      "residual_C42_rank_lower_from_current_interfaces": 214,
+      "residual_C42_rank_upper_from_common_sum_space": 238
+    },
+    {
+      "fixed_middle_shadow_certificate": {
+        "dimension": 64,
+        "integer_shadow_lower_bound": 78,
+        "lower_separator": "118/25",
+        "upper_separator": "473/100"
+      },
+      "fixed_middle_shadow_lower": 78,
+      "fixed_quadratic_quotient_t2_lower": 12,
+      "fixed_quadratic_quotient_t2_upper": 12,
+      "fixed_quartic_intersection_J4_upper": 22,
+      "lower_optimization_witness": {
+        "central_relation_cap": 0,
+        "coupled_quadratic_lower": 90,
+        "fixed_intersection_upper": 78,
+        "quadratic_capacity": 90,
+        "quadratic_relation_cap": 0,
+        "quartic_relation_cap": 0,
+        "sorted_quadratic_defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "middle_intersection_b": 64,
+      "middle_rank_h_lower": 120,
+      "residual_C42_rank_lower_from_current_interfaces": 215,
+      "residual_C42_rank_upper_from_common_sum_space": 237
+    }
+  ],
+  "status": "EXACT_N6_FIXED_SIX_OFFCENTRAL_C42_CEILING",
+  "strict_route_conclusion": "For every surviving b in 45..64, rank C_(4,2)(perm_6-R) is at most 315-Shadow(b), hence at most 251 and strictly below the twenty-term cap 300.  The proposed direct rank-above-300 endpoint cannot occur."
+}

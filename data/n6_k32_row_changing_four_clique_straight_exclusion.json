@@ -1,0 +1,78 @@
+{
+  "certificate": "N6-136",
+  "status": "EXACT_QQ_ROW_CHANGING_FOUR_CLIQUE_STRAIGHT_EXCLUSION",
+  "field": "characteristic zero",
+  "hypothesis": "K3,2 collision W=A3 tensor P2; D is supported in one ordered source/target row pair with a 2 by 2 column block C; L=graph(D), M=graph(-D)",
+  "cross_matrix_shape": [
+    36,
+    18
+  ],
+  "determinant_polynomial": "a*d-b*c",
+  "generic_rank": 8,
+  "generic_minor": {
+    "rows": [
+      3,
+      5,
+      15,
+      16,
+      17,
+      22,
+      23,
+      27
+    ],
+    "columns": [
+      0,
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ],
+    "factor": "-2*b*(a*d - b*c)**2"
+  },
+  "b_zero_rank_eight_minor": {
+    "rows": [
+      3,
+      5,
+      15,
+      16,
+      17,
+      22,
+      23,
+      27
+    ],
+    "columns": [
+      0,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ],
+    "factor": "-2*a**2*d**3"
+  },
+  "determinant_zero_chart_ranks": {
+    "a_nonzero": 6,
+    "a_zero_b_zero": 6,
+    "a_zero_c_zero": 6
+  },
+  "theorem": {
+    "det_nonzero_cross_rank": 8,
+    "det_zero_cross_rank_at_most": 6,
+    "det_zero_D_rank_at_most": 1,
+    "det_zero_sum_rank_at_most": 7,
+    "row_pair_symmetry_count": 12
+  },
+  "consequence": "Every straight graph pair supported on a row-changing four-clique which satisfies cross rank at most six is noncomplementary: det(C)=0 forces rank(D)<=1 and hence dim(L+M)<=7.",
+  "boundary": [
+    "does not classify nonlinear corrections to the four-clique",
+    "does not classify non-graph charts or coupled six-term cocycles",
+    "does not close the full K3,2 or K2,3 normal cone",
+    "does not prove ordinary lower 29 or exact Chow rank 32",
+    "does not make a border-rank claim"
+  ]
+}

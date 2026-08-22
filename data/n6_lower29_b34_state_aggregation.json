@@ -1,0 +1,78 @@
+{
+  "boundary": [
+    "This is a state synchronization, not a new lower-29 proof.",
+    "At a2=72 only the kappa2=0 standard and biflag geometries remain open.",
+    "All a2=73,74,75 states remain open.",
+    "It does not determine ChowRank(perm_6) or prove the 2^(n-1) conjecture."
+  ],
+  "closed_states": [
+    {
+      "a2": 72,
+      "geometry": "standard and biflag product branches",
+      "kappa2": 1,
+      "t2": 17,
+      "theorem": "N6-108 and N6-109"
+    },
+    {
+      "a2": 72,
+      "geometry": "standard and biflag product branches",
+      "kappa2": 2,
+      "t2": 16,
+      "theorem": "N6-108 and N6-109"
+    },
+    {
+      "a2": 72,
+      "geometry": "standard and biflag hook branches",
+      "kappa2": 3,
+      "t2": 15,
+      "theorem": "N6-103 and N6-107"
+    }
+  ],
+  "current_open_state_count": 7,
+  "current_open_states": [
+    {
+      "a2": 72,
+      "kappa2": 0,
+      "t2": 18
+    },
+    {
+      "a2": 73,
+      "kappa2": 0,
+      "t2": 17
+    },
+    {
+      "a2": 74,
+      "kappa2": 0,
+      "t2": 16
+    },
+    {
+      "a2": 75,
+      "kappa2": 0,
+      "t2": 15
+    },
+    {
+      "a2": 73,
+      "kappa2": 1,
+      "t2": 16
+    },
+    {
+      "a2": 74,
+      "kappa2": 1,
+      "t2": 15
+    },
+    {
+      "a2": 73,
+      "kappa2": 2,
+      "t2": 15
+    }
+  ],
+  "initial_scalar_state_count": 10,
+  "source_certificates": [
+    "n6_lower29_b34_critical_six_scalar_frontier.json",
+    "n6_biflag_four_by_three_global_exclusion.json",
+    "n6_product_34_partial_pair_exclusion.json",
+    "n6_standard_hook_partial_pair_exclusion.json"
+  ],
+  "status": "N6_133_B34_FRONTIER_SYNCHRONIZED",
+  "strict_conclusion": "N6-108 and N6-109 remove both product geometries at (a2,kappa2,t2)=(72,1,17) and (72,2,16), while N6-103 and N6-107 remove both hook geometries at (72,3,15); seven scalar states remain open."
+}

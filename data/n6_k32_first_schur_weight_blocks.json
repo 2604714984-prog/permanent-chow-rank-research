@@ -1,0 +1,492 @@
+{
+  "certificate": "N6-124",
+  "status": "EXACT_QQ_FIRST_SCHUR_WEIGHT_BLOCK_PROFILES",
+  "field": "characteristic zero",
+  "hypothesis": "relative graph direction T at the coordinate K3,2 collision L=M=A3 tensor P2",
+  "exact_certificate": {
+    "base_cross_rank": 3,
+    "first_schur_shape": [
+      33,
+      15
+    ],
+    "weight_convention": "(target_row,source_row,target_Q_column,source_P_column)",
+    "singleton_count": 24,
+    "singleton_profiles": [
+      {
+        "weight_key": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "target": 0,
+        "source": 2,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "target": 0,
+        "source": 3,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "target": 1,
+        "source": 2,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "target": 1,
+        "source": 3,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "target": 0,
+        "source": 4,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          2,
+          0,
+          1
+        ],
+        "target": 0,
+        "source": 5,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        "target": 1,
+        "source": 4,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          0,
+          2,
+          1,
+          1
+        ],
+        "target": 1,
+        "source": 5,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "target": 2,
+        "source": 0,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "target": 2,
+        "source": 1,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "target": 3,
+        "source": 0,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "target": 3,
+        "source": 1,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          2,
+          0,
+          0
+        ],
+        "target": 2,
+        "source": 4,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        "target": 2,
+        "source": 5,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          2,
+          1,
+          0
+        ],
+        "target": 3,
+        "source": 4,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "target": 3,
+        "source": 5,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        "target": 4,
+        "source": 0,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          0,
+          0,
+          1
+        ],
+        "target": 4,
+        "source": 1,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          0,
+          1,
+          0
+        ],
+        "target": 5,
+        "source": 0,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          0,
+          1,
+          1
+        ],
+        "target": 5,
+        "source": 1,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        "target": 4,
+        "source": 2,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          1,
+          0,
+          1
+        ],
+        "target": 4,
+        "source": 3,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          1,
+          1,
+          0
+        ],
+        "target": 5,
+        "source": 2,
+        "schur_rank": 3
+      },
+      {
+        "weight_key": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "target": 5,
+        "source": 3,
+        "schur_rank": 3
+      }
+    ],
+    "same_row_group_count": 4,
+    "same_row_profiles": [
+      {
+        "weight_key": [
+          0,
+          0,
+          0
+        ],
+        "locus": {
+          "items": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "generic_rank": 6,
+          "equal_coefficient_rank": 3,
+          "nonzero_4x4_minor_count": 177,
+          "groebner_basis": [
+            "(a0 - a2)*(a0 + a2)*(a0**2 + a2**2)",
+            "a0**3*a1 - a2**4",
+            "(a0*a1 - a2**2)*(a0*a1 + a2**2)",
+            "a0*a1**3 - a2**4",
+            "(a1 - a2)*(a1 + a2)*(a1**2 + a2**2)",
+            "a2*(a0 - a2)*(a0**2 + a0*a2 + a2**2)",
+            "a2*(a0**2*a1 - a2**3)",
+            "a2*(a0*a1**2 - a2**3)",
+            "a2*(a1 - a2)*(a1**2 + a1*a2 + a2**2)",
+            "a2**2*(a0 - a2)*(a0 + a2)",
+            "a2**2*(a0*a1 - a2**2)",
+            "a2**2*(a1 - a2)*(a1 + a2)",
+            "a2**3*(a0 - a2)",
+            "a2**3*(a1 - a2)"
+          ],
+          "rank_at_most_three_locus": "a0=a1=a2",
+          "locus_argument": "The basis contains c^3(a-c), c^3(b-c), and with c=0 also a^4,b^4; hence its zero set is a=b=c."
+        }
+      },
+      {
+        "weight_key": [
+          0,
+          0,
+          1
+        ],
+        "locus": {
+          "items": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "generic_rank": 6,
+          "equal_coefficient_rank": 3,
+          "nonzero_4x4_minor_count": 176,
+          "groebner_basis": [
+            "(a0 - a2)*(a0 + a2)*(a0**2 + a2**2)",
+            "a0**3*a1 - a2**4",
+            "(a0*a1 - a2**2)*(a0*a1 + a2**2)",
+            "a0*a1**3 - a2**4",
+            "(a1 - a2)*(a1 + a2)*(a1**2 + a2**2)",
+            "a2*(a0 - a2)*(a0**2 + a0*a2 + a2**2)",
+            "a2*(a0**2*a1 - a2**3)",
+            "a2*(a0*a1**2 - a2**3)",
+            "a2*(a1 - a2)*(a1**2 + a1*a2 + a2**2)",
+            "a2**2*(a0 - a2)*(a0 + a2)",
+            "a2**2*(a0*a1 - a2**2)",
+            "a2**2*(a1 - a2)*(a1 + a2)",
+            "a2**3*(a0 - a2)",
+            "a2**3*(a1 - a2)"
+          ],
+          "rank_at_most_three_locus": "a0=a1=a2",
+          "locus_argument": "The basis contains c^3(a-c), c^3(b-c), and with c=0 also a^4,b^4; hence its zero set is a=b=c."
+        }
+      },
+      {
+        "weight_key": [
+          0,
+          1,
+          0
+        ],
+        "locus": {
+          "items": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "generic_rank": 6,
+          "equal_coefficient_rank": 3,
+          "nonzero_4x4_minor_count": 177,
+          "groebner_basis": [
+            "(a0 - a2)*(a0 + a2)*(a0**2 + a2**2)",
+            "a0**3*a1 - a2**4",
+            "(a0*a1 - a2**2)*(a0*a1 + a2**2)",
+            "a0*a1**3 - a2**4",
+            "(a1 - a2)*(a1 + a2)*(a1**2 + a2**2)",
+            "a2*(a0 - a2)*(a0**2 + a0*a2 + a2**2)",
+            "a2*(a0**2*a1 - a2**3)",
+            "a2*(a0*a1**2 - a2**3)",
+            "a2*(a1 - a2)*(a1**2 + a1*a2 + a2**2)",
+            "a2**2*(a0 - a2)*(a0 + a2)",
+            "a2**2*(a0*a1 - a2**2)",
+            "a2**2*(a1 - a2)*(a1 + a2)",
+            "a2**3*(a0 - a2)",
+            "a2**3*(a1 - a2)"
+          ],
+          "rank_at_most_three_locus": "a0=a1=a2",
+          "locus_argument": "The basis contains c^3(a-c), c^3(b-c), and with c=0 also a^4,b^4; hence its zero set is a=b=c."
+        }
+      },
+      {
+        "weight_key": [
+          0,
+          1,
+          1
+        ],
+        "locus": {
+          "items": [
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "generic_rank": 6,
+          "equal_coefficient_rank": 3,
+          "nonzero_4x4_minor_count": 176,
+          "groebner_basis": [
+            "(a0 - a2)*(a0 + a2)*(a0**2 + a2**2)",
+            "a0**3*a1 - a2**4",
+            "(a0*a1 - a2**2)*(a0*a1 + a2**2)",
+            "a0*a1**3 - a2**4",
+            "(a1 - a2)*(a1 + a2)*(a1**2 + a2**2)",
+            "a2*(a0 - a2)*(a0**2 + a0*a2 + a2**2)",
+            "a2*(a0**2*a1 - a2**3)",
+            "a2*(a0*a1**2 - a2**3)",
+            "a2*(a1 - a2)*(a1**2 + a1*a2 + a2**2)",
+            "a2**2*(a0 - a2)*(a0 + a2)",
+            "a2**2*(a0*a1 - a2**2)",
+            "a2**2*(a1 - a2)*(a1 + a2)",
+            "a2**3*(a0 - a2)",
+            "a2**3*(a1 - a2)"
+          ],
+          "rank_at_most_three_locus": "a0=a1=a2",
+          "locus_argument": "The basis contains c^3(a-c), c^3(b-c), and with c=0 also a^4,b^4; hence its zero set is a=b=c."
+        }
+      }
+    ],
+    "candidate_rank_three_lines": 28
+  },
+  "consequence": "The 24 row-changing singleton weight blocks have Schur rank 3. Each of the four same-row three-variable blocks has generic rank 6 and rank at most 3 exactly on its equal-coefficient line.",
+  "boundary": [
+    "does not classify sums of different torus-weight blocks",
+    "does not classify the full first tangent cone",
+    "does not classify nonlinear lifts or arbitrary 6 by 6 graph T",
+    "does not prove ordinary lower 29 or exact Chow rank 32"
+  ]
+}

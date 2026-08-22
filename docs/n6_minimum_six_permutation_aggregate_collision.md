@@ -1,0 +1,268 @@
+# A minimum six-term aggregate Koszul collision
+
+## Status and scope
+
+`PROOF_DRAFT_COMPLETE`, `COMPUTATION_REPLAYED`, `ROUTE_DIAGNOSTIC`.
+
+This note strengthens N6-025 by giving a six-term fixed sum whose displayed
+Chow decomposition is provably minimum, whose central derivative spaces have
+no relations, and whose individual Koszul output spaces have no internal
+relations, but whose aggregate output still meets the permanent Koszul image
+in dimension 72.  It disproves several possible shortcuts for G-029.  It is
+not a decomposition of `perm_6` and does not change the unrestricted interval
+
+\[
+26\leq\operatorname{ChowRank}(\operatorname{perm}_6)\leq32.
+\]
+
+## 1. The fixed sum
+
+Split the rows and columns into two blocks of size three.  For
+`pi in S_3`, put
+
+\[
+ A_\pi=\prod_{i=0}^2x_{i,\pi(i)},\qquad
+ B_\pi=\prod_{i=0}^2x_{i+3,\pi(i)+3},
+\]
+
+and define
+
+\[
+ R=\sum_{\pi\in S_3}A_\pi B_\pi.                 \tag{1.1}
+\]
+
+Equation (1.1) is a six-term Chow decomposition.
+
+## 2. The six-term expression is minimum
+
+Two distinct permutations of three letters have at most one common matching
+edge.  Hence the supports of `A_pi B_pi` and `A_tau B_tau` share at most two
+variables.  No degree-three divisor of one support is therefore a
+degree-three divisor of another support.
+
+Each squarefree sextic monomial has 20 degree-three divisors.  The six terms
+in (1.1) consequently give 120 distinct central derivative coordinates.  In
+those coordinates the middle catalectic matrix is a permutation matrix: a
+three-subset of a term support is paired with its complementary three-subset.
+Thus
+
+\[
+ \operatorname{rank}C_{3,3}(R)=120.               \tag{2.1}
+\]
+
+The corresponding 120 by 120 minor has determinant `+1` or `-1`.  A sextic
+Chow term has middle-catalectic rank at most
+
+\[
+ \binom63=20.
+\]
+
+Therefore (2.1) gives `ChowRank(R)>=6`, while (1.1) gives the reverse
+inequality.  Hence
+
+\[
+ \boxed{\operatorname{ChowRank}(R)=6.}             \tag{2.2}
+\]
+
+The six central derivative spaces are a direct sum, so the central relation
+dimension in G-029 is
+
+\[
+ \rho=0.                                           \tag{2.3}
+\]
+
+## 3. Two explicit collision spaces
+
+Let `p_A` and `p_B` be the two `3 x 3` permanents in the top and bottom
+blocks.  Differentiating the term `A_pi B_pi` by the three variables of
+`B_pi` gives `A_pi`; summing over `pi` gives `p_A`.  Consequently
+
+\[
+ \delta_3(p_A\otimes V)
+ \subseteq\sum_{\pi\in S_3}\operatorname{im}K_3(A_\pi B_\pi).
+                                                        \tag{3.1}
+\]
+
+The same argument with the blocks reversed gives the analogous inclusion for
+`p_B`.  Both cubics are third derivatives of `perm_6`, so both displayed
+spaces lie in `im K_3(perm_6)`.
+
+For a nonzero cubic `p`, a vector `v` can lie in the kernel of
+`v -> delta_3(p tensor v)` only when `p` is a cube of a linear form parallel
+to `v`.  Neither block permanent is a cube.  Hence each space in (3.1) has
+dimension 36.  Their row multidegrees are disjoint, so their sum is direct.
+This gives an explicit 72-dimensional aggregate collision.
+
+## 4. Exact closure of the collision
+
+Exact rational elimination in all row-column torus blocks gives
+
+\[
+\begin{aligned}
+ \dim Y_P&=14175,\\
+ \dim\sum_\pi Y_\pi&=4230,\\
+ \dim\frac{Y_P+\sum_\pi Y_\pi}{Y_P}&=4158,
+\end{aligned}
+\]
+
+where `Y_pi=im K_3(A_pi B_pi)`.  Therefore
+
+\[
+ \eta=6\cdot705-4230=0,
+ \qquad
+ j=4230-4158=72.                                  \tag{4.1}
+\]
+
+The exact rank calculation also checks that the two explicit spaces from
+Section 3 span the full intersection.  All arithmetic is over `Q`; no random
+or finite-field rank is used.
+
+## 5. Consequence for the lower-26 route
+
+This example simultaneously has
+
+\[
+ \operatorname{ChowRank}(R)=6,
+ \qquad \rho=0,
+ \qquad \eta=0,
+ \qquad j=72.                                      \tag{5.1}
+\]
+
+Thus none of the following statements is true without an additional
+hypothesis:
+
+1. minimum fixed sums have `j=0`;
+2. middle-catalectic certification of minimum length forces `j=0`;
+3. `j` is bounded by a constant multiple of the central relation dimension
+   `rho`;
+4. vanishing internal output relation dimension `eta` forces aggregate
+   transversality.
+
+A successful successor to G-029 must control the combined loss in the actual
+permanent residual configuration; it cannot control `j` solely through
+minimum length, `rho`, or `eta`.
+
+There is an important fail-closed boundary.  The 400 cubic subpermanents of
+`perm_6` have distinct row-column weights.  At one weight, their intersection
+with the coordinate-monomial space `D_3(R)` is nonzero exactly when all six
+monomials of that subpermanent occur among the 120 middle divisors above.
+Only the top and bottom block permanents satisfy this condition.  Therefore
+
+\[
+ b=\dim(D_3(\operatorname{perm}_6)\cap D_3(R))=2.  \tag{5.2}
+\]
+
+A hypothetical 25-term decomposition with six fixed terms necessarily has
+`b>=20`.  Hence this example cannot itself be such a fixed sum.  It rules out
+fixed-sum-only bounds, but leaves open a theorem using the high-intersection
+condition `b>=20` together with the residual rank capacity.
+
+## 6. No six permutation monomials reach the high-intersection frontier
+
+The preceding value `b=2` is maximal in the entire six-permutation-monomial
+family.
+
+### Theorem 6.1
+
+For any six degree-six permutation monomials, with repetitions allowed, if
+`H` is the span of their middle derivative spaces, then
+
+\[
+ \dim(D_3(\operatorname{perm}_6)\cap H)\leq2.       \tag{6.1}
+\]
+
+### Proof
+
+The cubic subpermanents of `perm_6` occupy distinct row-column weights.  A
+subpermanent lies in the coordinate-monomial space `H` exactly when all its
+six matching monomials occur as middle divisors of the selected permutation
+monomials.  If no subpermanent is covered, (6.1) is immediate.
+
+Otherwise normalize one covered block to the top `3 x 3` block.  Its six
+matchings require six distinct selected permutations.  Label them by their
+top restrictions `pi in S_3`.  Their bottom restrictions define an arbitrary
+function
+
+\[
+ \phi:S_3\longrightarrow S_3.                     \tag{6.2}
+\]
+
+Consider another three-row set.  If it contains one or two top rows, the
+images of those rows vary through more than one top-column set as `pi` ranges
+over all of `S_3`.  Hence the six selected permutations do not map that row
+set to one fixed three-column set, so it cannot support a covered
+subpermanent.  The only candidates are therefore the original top block and
+the complementary bottom block.  The bottom block is covered exactly when
+the six values of `phi` are distinct.  Thus there are one or two covered
+subpermanents, proving (6.1).
+
+This pure argument also handles repetitions: fewer than six distinct selected
+permutations cannot cover even the first six matchings.  The exact audit
+independently enumerates all `6^6=46,656` functions in (6.2), obtaining 45,936
+families with intersection one and `6!=720` families with intersection two.
+The enumeration is a diagnostic, not a premise of the theorem.
+
+Consequently no six-fixed permutation-monomial configuration can enter the
+hypothetical lower-26 frontier `b>=20`.  Any relevant high-intersection
+geometry must use genuinely non-coordinate Chow terms.
+
+## 7. No six coordinate monomials reach the frontier
+
+The preceding exclusion extends from permutation monomials to arbitrary
+degree-six coordinate monomials, including repeated variables.
+
+### Theorem 7.1
+
+Let `T_1,...,T_6` be coordinate monomials of degree six and put
+
+\[
+ H=D_3(T_1)+\cdots+D_3(T_6).
+\]
+
+Then
+
+\[
+ \boxed{\dim(D_3(\operatorname{perm}_6)\cap H)\leq19.} \tag{7.1}
+\]
+
+### Proof
+
+Each `D_3(T_i)` is spanned by at most `binom(6,3)=20` coordinate cubic
+monomials, so `dim H<=120`.  The 400 cubic subpermanents have distinct
+row-column weights.  Each is a sum of six partial permutation monomials, and
+the six-monomial supports belonging to different row-column weights are
+disjoint.  Since `H` is a coordinate-monomial space, every dimension in the
+intersection consumes all six coordinate monomials of one such weight.
+Therefore
+
+\[
+ 6\dim(D_3(\operatorname{perm}_6)\cap H)
+ \leq\dim H\leq120.                               \tag{7.2}
+\]
+
+Suppose equality 20 held in (7.2).  Then `H` would contain exactly 120
+distinct cubic monomials, all belonging to the twenty covered subpermanents.
+Every `T_i` would have twenty distinct cubic divisors, so it would be
+squarefree on six variables.  Moreover every three-subset of its six-variable
+support would be a partial permutation matching.  No two support variables
+can share a row or column: adjoining any third support variable would
+otherwise produce a nonmatching three-subset.  Thus every `T_i` is a
+permutation monomial.  Theorem 6.1 then gives intersection dimension at most
+two, contradicting equality 20.  This proves (7.1).
+
+Consequently every coordinate-monomial six-fixed sum misses the necessary
+lower-26 condition `b>=20`.  The remaining geometry requires non-coordinate
+linear factors; further coordinate-support enumeration cannot close lower 26.
+
+## 8. Reproduction
+
+Run
+
+```bash
+python scripts/n6_minimum_six_permutation_collision_audit.py
+python -m unittest tests.test_n6_minimum_six_permutation_collision -v
+```
+
+The script first builds the unimodular middle-catalectic certificate and then
+reconstructs the integer Koszul columns and performs exact `Fraction`
+elimination in every torus block.

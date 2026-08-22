@@ -1,0 +1,507 @@
+{
+  "candidate_coordinate_quotients": 384,
+  "claim": "Exact ranks of the unquotiented plus/minus symbols on all coordinate quotients of all six rank-six normal forms.",
+  "claim_boundary": "R is fixed to zero and quotient orientations are coordinate in the normal-form frame. The rows do not prove arbitrary-orientation surplus floors and are not used to close a v7 packet branch.",
+  "field": "Q",
+  "rows": [
+    {
+      "delta": 10,
+      "middle_dimension": 25,
+      "quotient_rows": [
+        {
+          "active_coordinates": [],
+          "minimum_R0_surplus": 10,
+          "minus_rank": 0,
+          "plus_rank": 0,
+          "quotient_rank": 0
+        },
+        {
+          "active_coordinates": [
+            1
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 11,
+          "plus_rank": 14,
+          "quotient_rank": 1
+        },
+        {
+          "active_coordinates": [
+            1,
+            2
+          ],
+          "minimum_R0_surplus": 29,
+          "minus_rank": 18,
+          "plus_rank": 21,
+          "quotient_rank": 2
+        },
+        {
+          "active_coordinates": [
+            1,
+            2,
+            3
+          ],
+          "minimum_R0_surplus": 26,
+          "minus_rank": 22,
+          "plus_rank": 24,
+          "quotient_rank": 3
+        },
+        {
+          "active_coordinates": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 19,
+          "minus_rank": 24,
+          "plus_rank": 25,
+          "quotient_rank": 4
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 10,
+          "minus_rank": 25,
+          "plus_rank": 25,
+          "quotient_rank": 5
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 0,
+          "minus_rank": 25,
+          "plus_rank": 25,
+          "quotient_rank": 6
+        }
+      ],
+      "support_size": 1
+    },
+    {
+      "delta": 10,
+      "middle_dimension": 25,
+      "quotient_rows": [
+        {
+          "active_coordinates": [],
+          "minimum_R0_surplus": 10,
+          "minus_rank": 0,
+          "plus_rank": 0,
+          "quotient_rank": 0
+        },
+        {
+          "active_coordinates": [
+            2
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 11,
+          "plus_rank": 14,
+          "quotient_rank": 1
+        },
+        {
+          "active_coordinates": [
+            2,
+            3
+          ],
+          "minimum_R0_surplus": 29,
+          "minus_rank": 18,
+          "plus_rank": 21,
+          "quotient_rank": 2
+        },
+        {
+          "active_coordinates": [
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 26,
+          "minus_rank": 22,
+          "plus_rank": 24,
+          "quotient_rank": 3
+        },
+        {
+          "active_coordinates": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 19,
+          "minus_rank": 24,
+          "plus_rank": 25,
+          "quotient_rank": 4
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 10,
+          "minus_rank": 25,
+          "plus_rank": 25,
+          "quotient_rank": 5
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 0,
+          "minus_rank": 25,
+          "plus_rank": 25,
+          "quotient_rank": 6
+        }
+      ],
+      "support_size": 2
+    },
+    {
+      "delta": 4,
+      "middle_dimension": 31,
+      "quotient_rows": [
+        {
+          "active_coordinates": [],
+          "minimum_R0_surplus": 4,
+          "minus_rank": 0,
+          "plus_rank": 0,
+          "quotient_rank": 0
+        },
+        {
+          "active_coordinates": [
+            3
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 13,
+          "plus_rank": 18,
+          "quotient_rank": 1
+        },
+        {
+          "active_coordinates": [
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 33,
+          "minus_rank": 22,
+          "plus_rank": 27,
+          "quotient_rank": 2
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            3
+          ],
+          "minimum_R0_surplus": 32,
+          "minus_rank": 28,
+          "plus_rank": 30,
+          "quotient_rank": 3
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 30,
+          "plus_rank": 31,
+          "quotient_rank": 4
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 16,
+          "minus_rank": 31,
+          "plus_rank": 31,
+          "quotient_rank": 5
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 6,
+          "minus_rank": 31,
+          "plus_rank": 31,
+          "quotient_rank": 6
+        }
+      ],
+      "support_size": 3
+    },
+    {
+      "delta": 1,
+      "middle_dimension": 34,
+      "quotient_rows": [
+        {
+          "active_coordinates": [],
+          "minimum_R0_surplus": 1,
+          "minus_rank": 0,
+          "plus_rank": 0,
+          "quotient_rank": 0
+        },
+        {
+          "active_coordinates": [
+            4
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 14,
+          "plus_rank": 20,
+          "quotient_rank": 1
+        },
+        {
+          "active_coordinates": [
+            0,
+            1
+          ],
+          "minimum_R0_surplus": 35,
+          "minus_rank": 25,
+          "plus_rank": 29,
+          "quotient_rank": 2
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            4
+          ],
+          "minimum_R0_surplus": 34,
+          "minus_rank": 30,
+          "plus_rank": 33,
+          "quotient_rank": 3
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "minimum_R0_surplus": 28,
+          "minus_rank": 33,
+          "plus_rank": 34,
+          "quotient_rank": 4
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 19,
+          "minus_rank": 34,
+          "plus_rank": 34,
+          "quotient_rank": 5
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 9,
+          "minus_rank": 34,
+          "plus_rank": 34,
+          "quotient_rank": 6
+        }
+      ],
+      "support_size": 4
+    },
+    {
+      "delta": 0,
+      "middle_dimension": 35,
+      "quotient_rows": [
+        {
+          "active_coordinates": [],
+          "minimum_R0_surplus": 0,
+          "minus_rank": 0,
+          "plus_rank": 0,
+          "quotient_rank": 0
+        },
+        {
+          "active_coordinates": [
+            0
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 15,
+          "plus_rank": 20,
+          "quotient_rank": 1
+        },
+        {
+          "active_coordinates": [
+            0,
+            1
+          ],
+          "minimum_R0_surplus": 35,
+          "minus_rank": 25,
+          "plus_rank": 30,
+          "quotient_rank": 2
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2
+          ],
+          "minimum_R0_surplus": 35,
+          "minus_rank": 31,
+          "plus_rank": 34,
+          "quotient_rank": 3
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "minimum_R0_surplus": 29,
+          "minus_rank": 34,
+          "plus_rank": 35,
+          "quotient_rank": 4
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 20,
+          "minus_rank": 35,
+          "plus_rank": 35,
+          "quotient_rank": 5
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 10,
+          "minus_rank": 35,
+          "plus_rank": 35,
+          "quotient_rank": 6
+        }
+      ],
+      "support_size": 5
+    },
+    {
+      "delta": 0,
+      "middle_dimension": 35,
+      "quotient_rows": [
+        {
+          "active_coordinates": [],
+          "minimum_R0_surplus": 0,
+          "minus_rank": 0,
+          "plus_rank": 0,
+          "quotient_rank": 0
+        },
+        {
+          "active_coordinates": [
+            0
+          ],
+          "minimum_R0_surplus": 25,
+          "minus_rank": 15,
+          "plus_rank": 20,
+          "quotient_rank": 1
+        },
+        {
+          "active_coordinates": [
+            0,
+            1
+          ],
+          "minimum_R0_surplus": 35,
+          "minus_rank": 25,
+          "plus_rank": 30,
+          "quotient_rank": 2
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2
+          ],
+          "minimum_R0_surplus": 35,
+          "minus_rank": 31,
+          "plus_rank": 34,
+          "quotient_rank": 3
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "minimum_R0_surplus": 29,
+          "minus_rank": 34,
+          "plus_rank": 35,
+          "quotient_rank": 4
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "minimum_R0_surplus": 20,
+          "minus_rank": 35,
+          "plus_rank": 35,
+          "quotient_rank": 5
+        },
+        {
+          "active_coordinates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "minimum_R0_surplus": 10,
+          "minus_rank": 35,
+          "plus_rank": 35,
+          "quotient_rank": 6
+        }
+      ],
+      "support_size": 6
+    }
+  ],
+  "schema_version": 1
+}

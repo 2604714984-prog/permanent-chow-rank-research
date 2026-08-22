@@ -1,0 +1,88 @@
+{
+  "ambient_quotient_dimension": 7,
+  "claim_boundary": "This is a quotient-dimension classification only. Graph maps, multiplication compatibility, and a permanent identity are not supplied.",
+  "fixed_first_plane_rank": 6,
+  "intrinsic_role_geometry": {
+    "intersection_dimension": 0,
+    "ranks": [
+      6,
+      1
+    ]
+  },
+  "positive_increment_profile": [
+    1,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "rows": [
+    {
+      "allowed": true,
+      "reversed_increments": [
+        1,
+        6
+      ],
+      "second_plane_quotient_rank": 1
+    },
+    {
+      "allowed": false,
+      "reversed_increments": [
+        2,
+        5
+      ],
+      "second_plane_quotient_rank": 2
+    },
+    {
+      "allowed": false,
+      "reversed_increments": [
+        3,
+        4
+      ],
+      "second_plane_quotient_rank": 3
+    },
+    {
+      "allowed": false,
+      "reversed_increments": [
+        4,
+        3
+      ],
+      "second_plane_quotient_rank": 4
+    },
+    {
+      "allowed": false,
+      "reversed_increments": [
+        5,
+        2
+      ],
+      "second_plane_quotient_rank": 5
+    },
+    {
+      "allowed": true,
+      "reversed_increments": [
+        6,
+        1
+      ],
+      "second_plane_quotient_rank": 6
+    },
+    {
+      "allowed": false,
+      "reversed_increments": [
+        7,
+        0
+      ],
+      "second_plane_quotient_rank": 7
+    }
+  ],
+  "schema_version": 1,
+  "swapping_role_geometry": {
+    "intersection_dimension": 5,
+    "ranks": [
+      6,
+      6
+    ]
+  }
+}
