@@ -470,6 +470,37 @@ The cap alone does not give `RESIDUAL-MULTIPLICATION`,
 `RESIDUAL-CONNECTING-MAP`, or `RESIDUAL-THEOREM`; those remain the active
 load-bearing tasks.
 
+### Redundant-image residual propagation
+
+For an outside rank-seven term put
+`W_tc=im((A_c)_1 -> (A_t)_1)`.  The multiplication proof now extends from
+invertible restriction blocks to the exact deletion-spanning hypothesis
+
+```text
+sum_{j != c} W_tj = (A_t)_1 for every basis block c.
+```
+
+It forces `K4 -> (A_t)_4` onto.  Therefore every residual cap below 35 is
+incompatible with such an outside block, while cap 35 forces
+`(dim K3,dim K4)=(0,35)` and evaluation is an isomorphism.  This eliminates
+the redundant-image portion of every positive-cost mixed row.
+
+The proof and its sharp boundary are in
+`docs/n7_lower51_residual_redundancy_theorem.md`; the 36 possible integer
+caps are replayed by `scripts/n7_lower51_residual_redundancy.py`.
+
+Decisive scoped markers:
+
+```text
+RESIDUAL-MULTIPLICATION-REDUNDANT
+RESIDUAL-PROPAGATION-REDUNDANT
+RESIDUAL-THRESHOLD-REDUNDANT
+```
+
+The unrestricted `RESIDUAL-THEOREM` remains open on essential projection
+cores: a rank-seven pivot, a transverse one-six pair, or two rank-six blocks
+with distinct kernels.
+
 ## Waves 5 and optional lanes -- value-gate decisions
 
 The exact existing Fitting/Schur replay passes but proves that every tested
