@@ -27,9 +27,9 @@
   ],
   "files": [
     {
-      "bytes": 44323,
+      "bytes": 44354,
       "path": "docs/n7_ordinary_chow_rank_lower50.md",
-      "sha256": "90de8d6993e233dba0d910442344061e2fa84d7578f7f1ba0cf2525c5aa49f52"
+      "sha256": "e3e2d6cfbce2ea80815f78c65ba0c9e795a352e23c63544379545a431cc075d3"
     },
     {
       "bytes": 7452,
@@ -54,7 +54,7 @@
     {
       "bytes": 10847,
       "path": "data/n7_lower50_section_caps_audit.json",
-      "sha256": "f1ea928c18be29ffc2d22a24b664a831ba313a604d36f2589413db8057fba83a"
+      "sha256": "69466240daf46ca011655bd18351908bf6b999e4cfbadc1afc42d972f2786bbc"
     },
     {
       "bytes": 5504,
@@ -94,7 +94,7 @@
     {
       "bytes": 357,
       "path": "data/n7_lower50_boolean_controls.json",
-      "sha256": "c6008a909eae0bee5514c8d6229dc54ce8e4f491c43c3c0fdb6a6341ec50476b"
+      "sha256": "db484de80fcddbfc90cbf1eae3fcafc109bed6f10e41061f47caed47beabde61"
     },
     {
       "bytes": 2541,
@@ -104,7 +104,7 @@
     {
       "bytes": 10456,
       "path": "scripts/rethlas_perm7_20260822/slope10_adversarial_modular.py",
-      "sha256": "198150e1001a6c6f9620a1070502e0bb1e7a7e1fdb4c6f25165aa8ad57915c11"
+      "sha256": "b4738cd84b2d6373528feb3c6193eca595953c6eb40e93b6effbe7ed345a8f4e"
     },
     {
       "bytes": 1426,
@@ -127,6 +127,7 @@
       "sha256": "caa6b2287b6220726d07ed05e19e5616748c2e423baa02725eb4f59789175c83"
     }
   ],
+  "hash_mode": "sha256 after CRLF-to-LF text normalization",
   "replay_commands": [
     "python scripts/n7_lower50_section_caps_audit.py --verify-json data/n7_lower50_section_caps_audit.json",
     "python scripts/n7_rank6_normal_form_profiles.py --verify-json data/n7_rank6_normal_form_profiles.json",

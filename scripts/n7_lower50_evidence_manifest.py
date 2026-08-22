@@ -35,11 +35,10 @@ PATHS = (
 
 
 def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1 << 20), b""):
-            digest.update(block)
-    return digest.hexdigest()
+    # Git stores these proof assets as text.  Normalize checkout-specific line
+    # endings so one committed blob has the same receipt on Windows and Linux.
+    payload = path.read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def build_manifest() -> dict[str, object]:
@@ -55,6 +54,7 @@ def build_manifest() -> dict[str, object]:
         )
     return {
         "schema_version": 1,
+        "hash_mode": "sha256 after CRLF-to-LF text normalization",
         "claim": "ChowRank(perm_7) >= 50",
         "scope": {
             "rank": "ordinary Chow rank",

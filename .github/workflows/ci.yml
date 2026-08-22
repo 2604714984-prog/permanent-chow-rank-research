@@ -37,6 +37,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Replay optimized independent fixed-six arithmetic
         run: python scripts/n6_fixed_six_lower25_independent_audit.py
+      - name: Replay Rethlas perm7 publication checks
+        run: python scripts/rethlas_perm7_20260822/replay_all.py
 
   full-replay:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.full_replay }}

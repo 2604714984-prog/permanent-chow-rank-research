@@ -1,0 +1,1993 @@
+[
+  {
+    "n": 2,
+    "terms": 2,
+    "ambient_dimension": 4,
+    "permutation_coordinate_dimension": 2,
+    "offweight_coordinate_dimension": 2,
+    "one_term_tangent_dimension": 3,
+    "direct_sum_tangent_dimension": 6,
+    "rank_full_jacobian": 4,
+    "rank_offweight_jacobian": 2,
+    "rank_target_restriction": 2,
+    "kernel_full_jacobian_dimension": 2,
+    "kernel_offweight_jacobian_dimension": 4,
+    "compatible_target_motion_dimension": 2,
+    "expected_coordinate_torus_motion_dimension": 2,
+    "full_zero_tangent_relations": [
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 2,
+          "epsilon": [
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 2,
+          "epsilon": [
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        }
+      ],
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 2,
+          "epsilon": [
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 2,
+          "epsilon": [
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        }
+      ]
+    ],
+    "independent_modular_replays": {
+      "1000003": {
+        "full": 4,
+        "off": 2,
+        "target": 2
+      },
+      "1000033": {
+        "full": 4,
+        "off": 2,
+        "target": 2
+      }
+    },
+    "checks": {
+      "target_motion_equals_full_minus_off_rank": true,
+      "target_motion_is_exactly_coordinate_torus_tangent": true,
+      "all_ranks_over_Q": true
+    }
+  },
+  {
+    "n": 3,
+    "terms": 4,
+    "ambient_dimension": 27,
+    "permutation_coordinate_dimension": 6,
+    "offweight_coordinate_dimension": 21,
+    "one_term_tangent_dimension": 7,
+    "direct_sum_tangent_dimension": 28,
+    "rank_full_jacobian": 26,
+    "rank_offweight_jacobian": 21,
+    "rank_target_restriction": 5,
+    "kernel_full_jacobian_dimension": 2,
+    "kernel_offweight_jacobian_dimension": 7,
+    "compatible_target_motion_dimension": 5,
+    "expected_coordinate_torus_motion_dimension": 5,
+    "full_zero_tangent_relations": [
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        }
+      ],
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        }
+      ]
+    ],
+    "independent_modular_replays": {
+      "1000003": {
+        "full": 26,
+        "off": 21,
+        "target": 5
+      },
+      "1000033": {
+        "full": 26,
+        "off": 21,
+        "target": 5
+      }
+    },
+    "checks": {
+      "target_motion_equals_full_minus_off_rank": true,
+      "target_motion_is_exactly_coordinate_torus_tangent": true,
+      "all_ranks_over_Q": true
+    }
+  },
+  {
+    "n": 4,
+    "terms": 8,
+    "ambient_dimension": 256,
+    "permutation_coordinate_dimension": 24,
+    "offweight_coordinate_dimension": 232,
+    "one_term_tangent_dimension": 13,
+    "direct_sum_tangent_dimension": 104,
+    "rank_full_jacobian": 101,
+    "rank_offweight_jacobian": 91,
+    "rank_target_restriction": 10,
+    "kernel_full_jacobian_dimension": 3,
+    "kernel_offweight_jacobian_dimension": 13,
+    "compatible_target_motion_dimension": 10,
+    "expected_coordinate_torus_motion_dimension": 10,
+    "full_zero_tangent_relations": [
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 1
+        }
+      ],
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 2
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 2
+        }
+      ],
+      [
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            -1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            -1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        },
+        {
+          "coefficient": -1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "scale",
+          "mode": -1,
+          "row": -1
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 0,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 1,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 2,
+          "row": 3
+        },
+        {
+          "coefficient": 1,
+          "epsilon": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "kind": "vary",
+          "mode": 3,
+          "row": 3
+        }
+      ]
+    ],
+    "independent_modular_replays": {
+      "1000003": {
+        "full": 101,
+        "off": 91,
+        "target": 10
+      },
+      "1000033": {
+        "full": 101,
+        "off": 91,
+        "target": 10
+      }
+    },
+    "checks": {
+      "target_motion_equals_full_minus_off_rank": true,
+      "target_motion_is_exactly_coordinate_torus_tangent": true,
+      "all_ranks_over_Q": true
+    }
+  }
+]
