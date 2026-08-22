@@ -1,0 +1,1042 @@
+{
+  "candidate_cardinality_checked_before_materialization": {
+    "B_shape_with_fifth_term": [
+      1001,
+      175
+    ],
+    "C_shape_with_fifth_term": [
+      175,
+      286
+    ],
+    "fifth_term_structural_controls_per_join": 3,
+    "full_degree_seven_monomials_skipped": 202927725,
+    "gap_dimensions": [
+      10,
+      12
+    ],
+    "join_types": 2,
+    "maximum_middle_dimension": 175
+  },
+  "claim_boundary": [
+    "The quotient-gap representatives are exact rational kernel vectors selected modulo the exact image of C.",
+    "Every displayed gap representative crosses all four original 35-column term blocks.",
+    "The dense exact point proves the generic full-rank increment statement; the diagonal and zero-graph rows are structured degenerations, not a random scan.",
+    "Special rank-drop graph terms not represented by these controls may satisfy the necessary increment equation and remain open under joint deformation.",
+    "No exact five-term polynomial survivor, full Packet-B decision, lower-50, or border-rank claim is made."
+  ],
+  "conservative_peak_memory_mib": 128,
+  "decision": "GENERIC_ONE_TERM_OPERATOR_REPAIR_IMPOSSIBLE_DIRECT_IDENTITY_APPEND_IMPOSSIBLE",
+  "fifth_term_controls": [
+    {
+      "defect_eliminated": false,
+      "fifth_term_factor_rank": 7,
+      "fifth_term_kind": "zero_graph",
+      "join_type": "shared_row_01_02",
+      "new_defect": 40,
+      "new_ranks_B_C_BC": [
+        115,
+        95,
+        75
+      ],
+      "old_defect": 10,
+      "old_ranks_B_C_BC": [
+        111,
+        94,
+        75
+      ],
+      "polynomial_identity_preserved_by_direct_append": false,
+      "rank_increments_B_C_BC": [
+        4,
+        1,
+        0
+      ]
+    },
+    {
+      "defect_eliminated": false,
+      "fifth_term_factor_rank": 7,
+      "fifth_term_kind": "diagonal",
+      "join_type": "shared_row_01_02",
+      "new_defect": 11,
+      "new_ranks_B_C_BC": [
+        146,
+        127,
+        109
+      ],
+      "old_defect": 10,
+      "old_ranks_B_C_BC": [
+        111,
+        94,
+        75
+      ],
+      "polynomial_identity_preserved_by_direct_append": false,
+      "rank_increments_B_C_BC": [
+        35,
+        33,
+        34
+      ]
+    },
+    {
+      "defect_eliminated": false,
+      "fifth_term_factor_rank": 7,
+      "fifth_term_kind": "dense_vandermonde",
+      "join_type": "shared_row_01_02",
+      "new_defect": 10,
+      "new_ranks_B_C_BC": [
+        146,
+        129,
+        110
+      ],
+      "old_defect": 10,
+      "old_ranks_B_C_BC": [
+        111,
+        94,
+        75
+      ],
+      "polynomial_identity_preserved_by_direct_append": false,
+      "rank_increments_B_C_BC": [
+        35,
+        35,
+        35
+      ]
+    },
+    {
+      "defect_eliminated": false,
+      "fifth_term_factor_rank": 7,
+      "fifth_term_kind": "zero_graph",
+      "join_type": "disjoint_01_23",
+      "new_defect": 46,
+      "new_ranks_B_C_BC": [
+        115,
+        95,
+        81
+      ],
+      "old_defect": 12,
+      "old_ranks_B_C_BC": [
+        114,
+        95,
+        81
+      ],
+      "polynomial_identity_preserved_by_direct_append": false,
+      "rank_increments_B_C_BC": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "defect_eliminated": false,
+      "fifth_term_factor_rank": 7,
+      "fifth_term_kind": "diagonal",
+      "join_type": "disjoint_01_23",
+      "new_defect": 14,
+      "new_ranks_B_C_BC": [
+        149,
+        126,
+        114
+      ],
+      "old_defect": 12,
+      "old_ranks_B_C_BC": [
+        114,
+        95,
+        81
+      ],
+      "polynomial_identity_preserved_by_direct_append": false,
+      "rank_increments_B_C_BC": [
+        35,
+        31,
+        33
+      ]
+    },
+    {
+      "defect_eliminated": false,
+      "fifth_term_factor_rank": 7,
+      "fifth_term_kind": "dense_vandermonde",
+      "join_type": "disjoint_01_23",
+      "new_defect": 12,
+      "new_ranks_B_C_BC": [
+        149,
+        130,
+        116
+      ],
+      "old_defect": 12,
+      "old_ranks_B_C_BC": [
+        114,
+        95,
+        81
+      ],
+      "polynomial_identity_preserved_by_direct_append": false,
+      "rank_increments_B_C_BC": [
+        35,
+        35,
+        35
+      ]
+    }
+  ],
+  "generic_increment_theorem": {
+    "conclusion": "The simultaneous maximum-rank locus is a nonempty Zariski-open set. On it defect_new=defect_old, so a general rank-seven graph term cannot repair either join gap.",
+    "exact_dense_point_increments": [
+      35,
+      35,
+      35
+    ],
+    "formula": "defect_new=defect_old+35-delta_B-delta_C+delta_BC",
+    "maximum_increment_bounds": [
+      35,
+      35,
+      35
+    ],
+    "necessary_special_condition_for_repair": "delta_B+delta_C-delta_BC must equal 35+defect_old; in particular, if delta_B=35 then delta_C-delta_BC must equal defect_old."
+  },
+  "identity_append_obstruction": "The four joined terms already equal the three-monomial target. Directly appending one nonzero rank-seven Chow product changes the polynomial, so an identity-preserving fifth-term completion is impossible without jointly deforming the first four terms.",
+  "next_exact_gate": "Impose the special equation delta_C-delta_BC=10 or 12 on a jointly deformed fifth-term chart, beginning with rank-one graph updates aligned to the explicit sparse gap representatives.",
+  "quotient_gaps": [
+    {
+      "join_type": "shared_row_01_02",
+      "kernel_B_dimension": 29,
+      "kernel_B_intersection_image_C_dimension": 19,
+      "quotient_gap_dimension": 10,
+      "rank_C": 94,
+      "selected_kernel_basis_columns": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sparse_gap_representatives": [
+        {
+          "entries": [
+            [
+              16,
+              "-1"
+            ],
+            [
+              26,
+              "1/4"
+            ],
+            [
+              30,
+              "1/2"
+            ],
+            [
+              51,
+              "-1"
+            ],
+            [
+              61,
+              "-1/4"
+            ],
+            [
+              86,
+              "1"
+            ],
+            [
+              96,
+              "-1/2"
+            ],
+            [
+              121,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 10,
+          "support_by_35_column_term_block": [
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              17,
+              "-1"
+            ],
+            [
+              27,
+              "1/4"
+            ],
+            [
+              31,
+              "1/2"
+            ],
+            [
+              52,
+              "-1"
+            ],
+            [
+              62,
+              "-1/4"
+            ],
+            [
+              87,
+              "1"
+            ],
+            [
+              97,
+              "-1/2"
+            ],
+            [
+              122,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 11,
+          "support_by_35_column_term_block": [
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              18,
+              "-1"
+            ],
+            [
+              28,
+              "1/4"
+            ],
+            [
+              32,
+              "1/2"
+            ],
+            [
+              53,
+              "-1"
+            ],
+            [
+              63,
+              "-1/4"
+            ],
+            [
+              88,
+              "1"
+            ],
+            [
+              98,
+              "-1/2"
+            ],
+            [
+              123,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 12,
+          "support_by_35_column_term_block": [
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              19,
+              "-1"
+            ],
+            [
+              29,
+              "1/4"
+            ],
+            [
+              33,
+              "1/2"
+            ],
+            [
+              54,
+              "-1"
+            ],
+            [
+              64,
+              "-1/4"
+            ],
+            [
+              89,
+              "1"
+            ],
+            [
+              99,
+              "-1/2"
+            ],
+            [
+              124,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 13,
+          "support_by_35_column_term_block": [
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              20,
+              "-1"
+            ],
+            [
+              55,
+              "-1"
+            ],
+            [
+              90,
+              "1"
+            ],
+            [
+              125,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 14,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              21,
+              "-1"
+            ],
+            [
+              56,
+              "-1"
+            ],
+            [
+              91,
+              "1"
+            ],
+            [
+              126,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 15,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              22,
+              "-1"
+            ],
+            [
+              57,
+              "-1"
+            ],
+            [
+              92,
+              "1"
+            ],
+            [
+              127,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 16,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              23,
+              "-1"
+            ],
+            [
+              58,
+              "-1"
+            ],
+            [
+              93,
+              "1"
+            ],
+            [
+              128,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 17,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              24,
+              "-1"
+            ],
+            [
+              59,
+              "-1"
+            ],
+            [
+              94,
+              "1"
+            ],
+            [
+              129,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 18,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              25,
+              "-1"
+            ],
+            [
+              60,
+              "-1"
+            ],
+            [
+              95,
+              "1"
+            ],
+            [
+              130,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 19,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "join_type": "disjoint_01_23",
+      "kernel_B_dimension": 26,
+      "kernel_B_intersection_image_C_dimension": 14,
+      "quotient_gap_dimension": 12,
+      "rank_C": 95,
+      "selected_kernel_basis_columns": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sparse_gap_representatives": [
+        {
+          "entries": [
+            [
+              13,
+              "-1"
+            ],
+            [
+              16,
+              "1"
+            ],
+            [
+              23,
+              "1/4"
+            ],
+            [
+              26,
+              "-1/4"
+            ],
+            [
+              48,
+              "-1"
+            ],
+            [
+              51,
+              "1"
+            ],
+            [
+              58,
+              "-1/4"
+            ],
+            [
+              61,
+              "1/4"
+            ],
+            [
+              83,
+              "1"
+            ],
+            [
+              93,
+              "-1/2"
+            ],
+            [
+              118,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 7,
+          "support_by_35_column_term_block": [
+            4,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              14,
+              "-1"
+            ],
+            [
+              17,
+              "1"
+            ],
+            [
+              24,
+              "1/4"
+            ],
+            [
+              27,
+              "-1/4"
+            ],
+            [
+              49,
+              "-1"
+            ],
+            [
+              52,
+              "1"
+            ],
+            [
+              59,
+              "-1/4"
+            ],
+            [
+              62,
+              "1/4"
+            ],
+            [
+              84,
+              "1"
+            ],
+            [
+              94,
+              "-1/2"
+            ],
+            [
+              119,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 8,
+          "support_by_35_column_term_block": [
+            4,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              15,
+              "-1"
+            ],
+            [
+              18,
+              "1"
+            ],
+            [
+              25,
+              "1/4"
+            ],
+            [
+              28,
+              "-1/4"
+            ],
+            [
+              50,
+              "-1"
+            ],
+            [
+              53,
+              "1"
+            ],
+            [
+              60,
+              "-1/4"
+            ],
+            [
+              63,
+              "1/4"
+            ],
+            [
+              85,
+              "1"
+            ],
+            [
+              95,
+              "-1/2"
+            ],
+            [
+              120,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 9,
+          "support_by_35_column_term_block": [
+            4,
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              23,
+              "-1/4"
+            ],
+            [
+              26,
+              "1/4"
+            ],
+            [
+              58,
+              "-1/4"
+            ],
+            [
+              61,
+              "1/4"
+            ],
+            [
+              86,
+              "1"
+            ],
+            [
+              96,
+              "-1/2"
+            ],
+            [
+              121,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 10,
+          "support_by_35_column_term_block": [
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              24,
+              "-1/4"
+            ],
+            [
+              27,
+              "1/4"
+            ],
+            [
+              59,
+              "-1/4"
+            ],
+            [
+              62,
+              "1/4"
+            ],
+            [
+              87,
+              "1"
+            ],
+            [
+              97,
+              "-1/2"
+            ],
+            [
+              122,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 11,
+          "support_by_35_column_term_block": [
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              25,
+              "-1/4"
+            ],
+            [
+              28,
+              "1/4"
+            ],
+            [
+              60,
+              "-1/4"
+            ],
+            [
+              63,
+              "1/4"
+            ],
+            [
+              88,
+              "1"
+            ],
+            [
+              98,
+              "-1/2"
+            ],
+            [
+              123,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 12,
+          "support_by_35_column_term_block": [
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              16,
+              "-4"
+            ],
+            [
+              26,
+              "1"
+            ],
+            [
+              51,
+              "-4"
+            ],
+            [
+              61,
+              "-1"
+            ],
+            [
+              93,
+              "1"
+            ],
+            [
+              128,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 14,
+          "support_by_35_column_term_block": [
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              17,
+              "-4"
+            ],
+            [
+              27,
+              "1"
+            ],
+            [
+              52,
+              "-4"
+            ],
+            [
+              62,
+              "-1"
+            ],
+            [
+              94,
+              "1"
+            ],
+            [
+              129,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 15,
+          "support_by_35_column_term_block": [
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              18,
+              "-4"
+            ],
+            [
+              28,
+              "1"
+            ],
+            [
+              53,
+              "-4"
+            ],
+            [
+              63,
+              "-1"
+            ],
+            [
+              95,
+              "1"
+            ],
+            [
+              130,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 16,
+          "support_by_35_column_term_block": [
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              26,
+              "-1"
+            ],
+            [
+              61,
+              "-1"
+            ],
+            [
+              96,
+              "1"
+            ],
+            [
+              131,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 17,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              27,
+              "-1"
+            ],
+            [
+              62,
+              "-1"
+            ],
+            [
+              97,
+              "1"
+            ],
+            [
+              132,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 18,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "entries": [
+            [
+              28,
+              "-1"
+            ],
+            [
+              63,
+              "-1"
+            ],
+            [
+              98,
+              "1"
+            ],
+            [
+              133,
+              "1"
+            ]
+          ],
+          "kernel_basis_column": 19,
+          "support_by_35_column_term_block": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "status": "JOIN_GAP_EXPLICIT_GENERIC_FIFTH_TERM_CANNOT_REPAIR"
+}

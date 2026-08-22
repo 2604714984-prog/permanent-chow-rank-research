@@ -1,0 +1,50 @@
+{
+  "claim_boundary": [
+    "The forced-Hessian equations are a universal necessary lemma for a true identity, not a proof that their zero locus is empty.",
+    "No Glynn-family control is added in this package.",
+    "The 924-row gradient projection alone cannot yield the oriented cross-column syzygy because it forgets 116725 row-assignment dimensions per omitted-column block.",
+    "No exact 49-term survivor or universal nonzero defect is produced.",
+    "A-CLOSED, ordinary lower 50, and border rank remain unresolved pending classification of Z_A_grad_hess or the displayed K5 consequence."
+  ],
+  "exact_minimal_residual_component": {
+    "conservative_peak_memory_mib": 128,
+    "definition": "Z_A_grad intersect all equations A5_{b,d}(F) R2_{b,d}(F,c)=T_{b,d} for unordered omitted-column pairs",
+    "displayed_scalar_equations_before_dependencies": 475398,
+    "labelled_degree_5_columns_for_49_terms": 1029,
+    "largest_single_49_term_block_shape": [
+      462,
+      1029
+    ],
+    "maximum_DP_state_count_per_labelled_product": 14784,
+    "omitted_column_pair_count": 21,
+    "ordered_row_pair_target_columns": 49,
+    "previous_component": "Z_A_grad",
+    "refined_component": "Z_A_grad_hess",
+    "rows_per_forced_hessian_block": 462,
+    "zero_diagonal_row_pair_targets": 7
+  },
+  "gradient_Jacobian_information_loss": {
+    "consequence": "the Jacobian of the 924-row gradient projection retains only column-averaged mixed partials and cannot recover a specified second omitted column",
+    "forgotten_dimensions_before_factor_relations": 116725,
+    "symmetrized_gradient_block_rows": 924,
+    "unsymmetrized_one_omitted_column_row_assignments": 117649
+  },
+  "schema_version": 1,
+  "smallest_remaining_invariant": "classify Z_A_grad_hess on the simple-matroid open set, or prove that its forced A5 transport creates a nonzero aggregate K5 relation incompatible with the inverse-coefficient 2/5 pairing",
+  "status": "PACKET_A_GRADIENT_SYZYGY_REFINED_TO_FORCED_HESSIAN_COMPONENT",
+  "universal_lemma": {
+    "executable_QQ_control": {
+      "coefficient_field": "QQ exact",
+      "column_swap_requires_row_pair_swap": true,
+      "factor_input_is_non_column_uniform": true,
+      "identity": "E_(b,d)(u,v) = E_(d,b)(v,u)",
+      "mixed_partial_symmetry_holds": true,
+      "residual_shape": [
+        462,
+        49
+      ]
+    },
+    "proof_method": "differentiate each labelled Chow term twice; the two orders pair the same omitted-factor pair and differ only by swapping the ordered row labels",
+    "statement": "Every Packet-A permanent identity satisfies the 21 forced-Hessian torus blocks and their exact mixed-partial swap symmetry"
+  }
+}
