@@ -1,0 +1,101 @@
+[
+  {
+    "n": 2,
+    "terms": 2,
+    "full_symmetric_ambient_dimension": 10,
+    "tangent_support_rows": 10,
+    "row_multilinear_ambient_dimension": 4,
+    "one_term_full_chow_tangent_dimension": 7,
+    "direct_sum_tangent_dimension": 14,
+    "rank_full_jacobian": 10,
+    "rank_row_offweight_jacobian": 6,
+    "rank_row_target_restriction": 4,
+    "kernel_full_jacobian_dimension": 4,
+    "kernel_row_offweight_jacobian_dimension": 8,
+    "compatible_row_target_motion_dimension": 4,
+    "expected_row_block_orbit_tangent_dimension": 4,
+    "independent_modular_replays": {
+      "1000003": {
+        "full": 10,
+        "off": 6,
+        "target": 4
+      },
+      "1000033": {
+        "full": 10,
+        "off": 6,
+        "target": 4
+      }
+    },
+    "checks": {
+      "compatible_motion_equals_full_minus_off_rank": true,
+      "compatible_motion_is_exactly_row_block_GL_tangent": true,
+      "all_ranks_over_Q": true
+    }
+  },
+  {
+    "n": 3,
+    "terms": 4,
+    "full_symmetric_ambient_dimension": 165,
+    "tangent_support_rows": 135,
+    "row_multilinear_ambient_dimension": 27,
+    "one_term_full_chow_tangent_dimension": 25,
+    "direct_sum_tangent_dimension": 100,
+    "rank_full_jacobian": 98,
+    "rank_row_offweight_jacobian": 75,
+    "rank_row_target_restriction": 23,
+    "kernel_full_jacobian_dimension": 2,
+    "kernel_row_offweight_jacobian_dimension": 25,
+    "compatible_row_target_motion_dimension": 23,
+    "expected_row_block_orbit_tangent_dimension": 23,
+    "independent_modular_replays": {
+      "1000003": {
+        "full": 98,
+        "off": 75,
+        "target": 23
+      },
+      "1000033": {
+        "full": 98,
+        "off": 75,
+        "target": 23
+      }
+    },
+    "checks": {
+      "compatible_motion_equals_full_minus_off_rank": true,
+      "compatible_motion_is_exactly_row_block_GL_tangent": true,
+      "all_ranks_over_Q": true
+    }
+  },
+  {
+    "n": 4,
+    "terms": 8,
+    "full_symmetric_ambient_dimension": 3876,
+    "tangent_support_rows": 2176,
+    "row_multilinear_ambient_dimension": 256,
+    "one_term_full_chow_tangent_dimension": 61,
+    "direct_sum_tangent_dimension": 488,
+    "rank_full_jacobian": 485,
+    "rank_row_offweight_jacobian": 427,
+    "rank_row_target_restriction": 58,
+    "kernel_full_jacobian_dimension": 3,
+    "kernel_row_offweight_jacobian_dimension": 61,
+    "compatible_row_target_motion_dimension": 58,
+    "expected_row_block_orbit_tangent_dimension": 58,
+    "independent_modular_replays": {
+      "1000003": {
+        "full": 485,
+        "off": 427,
+        "target": 58
+      },
+      "1000033": {
+        "full": 485,
+        "off": 427,
+        "target": 58
+      }
+    },
+    "checks": {
+      "compatible_motion_equals_full_minus_off_rank": true,
+      "compatible_motion_is_exactly_row_block_GL_tangent": true,
+      "all_ranks_over_Q": true
+    }
+  }
+]

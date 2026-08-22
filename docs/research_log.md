@@ -369,3 +369,33 @@ In the normalization `binom(n,floor(n/2))/n`, the odd constant is twice the even
   \[
   23\le\operatorname{ChowRank}(\operatorname{perm}_6)\le32.
   \]
+
+## 2026-08-22 — Rethlas `perm_7` theory-first run
+
+### Corrected unrestricted lower bound
+
+The run produced a working proof draft for
+
+\[
+50\leq\operatorname{ChowRank}(\operatorname{perm}_7)\leq64.
+\]
+
+An initial quadratic-restriction surjectivity claim was false because it reversed the apolar degree. The run explicitly retracted that step, retained counterexamples, and rebuilt the two endpoint exclusions using the correct degree-three and degree-four local restriction maps. Independent internal audits accepted the corrected middle-degree proof.
+
+### Exact-64 route boundary
+
+The exact value 64 remains open. The strongest residual-section formulation currently requires
+
+\[
+\operatorname{borderCR}(\operatorname{perm}_7|_{x_{77}=0})\geq63,
+\]
+
+while a Glynn-factor degeneration supplies the matching upper bound. The run also records why scalar slope surplus, one-step Tor/Koszul functors, purely linear row-normal layers, and local rigidity at the Glynn point do not close the global problem.
+
+### Evidence and authorship boundary
+
+- Argument source: the Rethlas generation run `perm7_theory_first_20260822` and its recursive branches.
+- Verification source: independent internal Rethlas audits and deterministic publication replays.
+- No named independent human review or proof-assistant formalization has been completed.
+- No whole-problem verifier was called and no `blueprint_verified.md` was produced.
+- Detailed proof, status, reports, scripts, and frozen outputs are indexed from `docs/rethlas_perm7_20260822/README.md`.

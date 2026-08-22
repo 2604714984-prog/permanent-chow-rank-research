@@ -25,6 +25,7 @@ The repository does **not** own large upstream proof bundles. External submissio
 | `n=3` | accepted baseline | `ChowRank(perm_3)=4` |
 | `n=4` | independently exact-replayed | `ChowRank(perm_4)=8` |
 | `n=5` | repaired proof draft complete; conditional model-assisted external audit | `ChowRank(perm_5)=16`; v14 supplies a characteristic-zero projective degeneration and a deterministic exact endpoint certificate over 886,464 flags; named independent human review remains pending |
+| `n=7` | proof draft complete; deterministic subclaims replayed; named human review pending | `50<=ChowRank(perm_7)<=64`; the exact value 64 remains open |
 | General derivative tower | proof draft complete | `dim D_m(perm_n)=binom(n,m)^2` and `D_m(perm_n)^(1)=D_{m+1}(perm_n)` |
 | General first-Koszul bound | proof draft complete | exact formula; its unique optimizing output degree is `m=ceil(n/2)` |
 | Border Chow-rank bound | proof draft complete | the determinantal first-Koszul obstruction gives `border-ChowRank(perm_n)>=L_K(n)` |

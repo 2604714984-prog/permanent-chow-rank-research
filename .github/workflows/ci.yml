@@ -19,6 +19,8 @@ jobs:
         run: python scripts/check_english_only.py
       - name: Unit tests
         run: python -m unittest discover -s tests -v
+      - name: Replay Rethlas perm7 publication checks
+        run: python scripts/rethlas_perm7_20260822/replay_all.py
       - name: Replay repaired n5 one-intersection endpoint theorem
         run: python -O scripts/perm5_one_intersection_flag_standalone_exact.py
       - name: Install full small-n replay dependency
