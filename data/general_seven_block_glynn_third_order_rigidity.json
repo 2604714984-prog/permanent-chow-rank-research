@@ -1,0 +1,221 @@
+{
+  "all_deletion_second_pair_data": {
+    "full_second_nonzero_pairs": [
+      104,
+      104,
+      116,
+      104,
+      116,
+      116,
+      104
+    ],
+    "full_second_quotient_ranks": [
+      66,
+      66,
+      66,
+      66,
+      66,
+      66,
+      70
+    ]
+  },
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "fourth_or_higher_order_coalescence": "NOT_EXCLUDED",
+    "global_six_block_literal_sum": "OPEN",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4": "OPEN_IN_[6,7]",
+    "remote_or_singular_six_block_witness": "NOT_EXCLUDED",
+    "unrestricted_chow_rank_improvement": false
+  },
+  "classification": "STRICT_LOCAL_THIRD_ORDER_ROUTE_BARRIER",
+  "conclusion": {
+    "first_order_absorption": "IMPOSSIBLE",
+    "local_higher_order_escalation": "STOP_AFTER_ORDER_THREE",
+    "second_order_absorption": "IMPOSSIBLE",
+    "standard_witness_locally_six_irreducible_through_order_three": true,
+    "third_order_absorption": "IMPOSSIBLE"
+  },
+  "core_sha256": "a719b2d7f2f021737024931d2c11502e59affaf4012dc1f38792bb7699fe3f62",
+  "deletion_symmetry": {
+    "all_seven_deletions_covered": true,
+    "exact_representative_indices": [
+      0,
+      2,
+      6
+    ],
+    "group": "permutations of the three free sign coordinates",
+    "orbits_by_hamming_weight": {
+      "1": 3,
+      "2": 3,
+      "3": 1
+    }
+  },
+  "field": "characteristic_zero",
+  "parameter_model": {
+    "factor_parameters_per_block": 96,
+    "full_degree_four_ambient_dimension": 3876,
+    "independent_prime": 1000037,
+    "kernel_prime": 1000003,
+    "projected_column_multidegree_dimension": 256,
+    "six_block_parameter_count": 666,
+    "source_parameters_per_block": 15,
+    "total_parameters_per_block": 111
+  },
+  "representative_checks": [
+    {
+      "corrected_third_span_rank": 24,
+      "full_second_nonzero_pairs": 104,
+      "full_second_quotient_rank": 66,
+      "full_tangent_rank": 574,
+      "kernel_coefficient_set": [
+        "-1",
+        "-1/2",
+        "1",
+        "1/2"
+      ],
+      "kernel_dimension": 92,
+      "kernel_support_pattern_counts": {
+        "(0, 1, 2, 3)": 4,
+        "(0, 1, 4, 5)": 4,
+        "(0,)": 14,
+        "(1,)": 14,
+        "(2,)": 14,
+        "(3,)": 14,
+        "(4,)": 14,
+        "(5,)": 14
+      },
+      "missing_hamming_weight": 1,
+      "missing_remainder_support": 70,
+      "missing_sign_bits": 4,
+      "missing_summand_outside_projected_tangent": true,
+      "pair_correction_coefficient_set": [
+        "-1",
+        "-1/2",
+        "-1/4",
+        "-2",
+        "-3/2",
+        "1",
+        "1/2",
+        "1/4",
+        "2",
+        "3/2"
+      ],
+      "pair_splitting_count": 4278,
+      "polarized_third_triple_count": 134044,
+      "projected_tangent_rank": 108,
+      "raw_nonzero_corrected_third_triples": 1320,
+      "third_quotient_rank": 0
+    },
+    {
+      "corrected_third_span_rank": 24,
+      "full_second_nonzero_pairs": 116,
+      "full_second_quotient_rank": 66,
+      "full_tangent_rank": 574,
+      "kernel_coefficient_set": [
+        "-1",
+        "-1/2",
+        "-2",
+        "1",
+        "1/2",
+        "2"
+      ],
+      "kernel_dimension": 92,
+      "kernel_support_pattern_counts": {
+        "(0, 1, 2, 3, 5)": 4,
+        "(0, 1, 3, 4)": 4,
+        "(0,)": 14,
+        "(1,)": 14,
+        "(2,)": 14,
+        "(3,)": 14,
+        "(4,)": 14,
+        "(5,)": 14
+      },
+      "missing_hamming_weight": 2,
+      "missing_remainder_support": 50,
+      "missing_sign_bits": 6,
+      "missing_summand_outside_projected_tangent": true,
+      "pair_correction_coefficient_set": [
+        "-1",
+        "-1/2",
+        "-1/4",
+        "-2",
+        "-3",
+        "-3/2",
+        "1",
+        "1/2",
+        "1/4",
+        "2",
+        "3/2",
+        "4"
+      ],
+      "pair_splitting_count": 4278,
+      "polarized_third_triple_count": 134044,
+      "projected_tangent_rank": 108,
+      "raw_nonzero_corrected_third_triples": 1320,
+      "third_quotient_rank": 0
+    },
+    {
+      "corrected_third_span_rank": 24,
+      "full_second_nonzero_pairs": 104,
+      "full_second_quotient_rank": 70,
+      "full_tangent_rank": 574,
+      "kernel_coefficient_set": [
+        "-1",
+        "-1/2",
+        "1",
+        "1/2"
+      ],
+      "kernel_dimension": 92,
+      "kernel_support_pattern_counts": {
+        "(0, 2, 3, 5)": 4,
+        "(0,)": 14,
+        "(1, 2, 3, 4)": 4,
+        "(1,)": 14,
+        "(2,)": 14,
+        "(3,)": 14,
+        "(4,)": 14,
+        "(5,)": 14
+      },
+      "missing_hamming_weight": 3,
+      "missing_remainder_support": 46,
+      "missing_sign_bits": 7,
+      "missing_summand_outside_projected_tangent": true,
+      "pair_correction_coefficient_set": [
+        "-1",
+        "-1/2",
+        "-1/4",
+        "-2",
+        "-3/2",
+        "1",
+        "1/2",
+        "1/4",
+        "2",
+        "3/2"
+      ],
+      "pair_splitting_count": 4278,
+      "polarized_third_triple_count": 134044,
+      "projected_tangent_rank": 108,
+      "raw_nonzero_corrected_third_triples": 1320,
+      "third_quotient_rank": 0
+    }
+  ],
+  "schema": "general_seven_block_glynn_third_order_rigidity/v1",
+  "standard_witness": {
+    "first_order_local_rigidity_core": "7958a27a326b5155bb9e119061f98eabbc81945ca2a931ef9551d73798f2c710",
+    "inherited_witness_core": "045dcbd80846a35e6b9716771721c542ed86b0c1a246cf716cebb8e57df65a0e",
+    "retained_summands": 7,
+    "second_order_local_rigidity_core": "e80c3b30e9df09144eef28f3424d0b4e44b0f3e6a737e12ef0a8e4a6d5f84a4c"
+  },
+  "uniform_exact_data": {
+    "corrected_third_span_rank": 24,
+    "full_tangent_rank": 574,
+    "kernel_dimension": 92,
+    "missing_augmented_projected_rank": 109,
+    "pair_splitting_count": 4278,
+    "polarized_third_triple_count": 134044,
+    "projected_tangent_rank": 108,
+    "raw_nonzero_corrected_third_triples": 1320,
+    "third_quotient_rank": 0
+  }
+}
