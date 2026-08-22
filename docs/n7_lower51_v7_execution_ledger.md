@@ -558,10 +558,20 @@ rank-five equality locus is larger than both the triple-parallel monomial
 boundary and the diagonal family.  See `docs/n7_lower51_rank5_binary_equality.md` and
 `scripts/n7_lower51_rank5_binary_equality.py`.
 
-Decisive scoped marker: `R5-BINARY-EQUALITY-FAMILY`.
+The ternary `6 by 10` middle catalectic and selected exact `5 by 5` minors
+exclude every equality form genuinely using three or more frame directions.
+Thus, up to a frame permutation, the displayed binary divisor is the full
+middle-dimension-15 equality locus.
 
-The full `R5-EQUALITY-FORMS` marker is withheld until extra factors with
-three-or-more-direction support are eliminated or classified.
+Decisive markers:
+
+```text
+R5-BINARY-EQUALITY-FAMILY
+R5-EQUALITY-FORMS
+```
+
+Intermediate quotient directions and full 50-term rank-five packets remain
+open; this marker concerns the full-increment equality normal forms only.
 
 ## Waves 5 and optional lanes -- value-gate decisions
 

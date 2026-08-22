@@ -1,4 +1,4 @@
-# `perm_7` lower-51: rank-five binary equality family
+# `perm_7` lower-51: rank-five equality forms
 
 Fix five independent factor directions as `x_1,...,x_5`.  If the two
 remaining factors are supported on `span(x_1,x_2)`, write their product as
@@ -61,8 +61,49 @@ nonzero cross coefficient.  The equality locus is therefore strictly larger
 than the monomial normal form `x_1^3x_2x_3x_4x_5`; treating that monomial, or
 even the diagonal family, as the whole equality locus would be incorrect.
 
+## Excluding support on three or more frame directions
+
+Let `Q=LM` and suppose first that its support is contained in three frame
+directions.  Put `g=x_1x_2x_3Q` and `h=x_4x_5`.  The same disjoint-variable
+calculation gives
+
+\[
+ \dim\mathcal D_3(gh)=3+3\dim\mathcal D_2(g).
+\]
+
+Thus equality 15 requires the `6 by 10` middle catalectic of `g` to have
+rank at most four.  Write
+
+\[
+ Q=q_{00}x_1^2+q_{11}x_2^2+q_{22}x_3^2+
+ q_{01}x_1x_2+q_{02}x_1x_3+q_{12}x_2x_3.
+\]
+
+Exact `5 by 5` minors give the following finite case split.
+
+- If all three diagonal coefficients are nonzero, minors proportional to
+  `q00^3*q01*q22`, `q00^3*q02*q11`, and `q00^3*q12*q22` force all cross
+  coefficients to vanish.  The resulting diagonal quadratic has rank three,
+  contradicting `Q=LM`.
+- If exactly two diagonal coefficients are nonzero, say `q00,q11`, minors
+  force `q02=q12=0`; the remaining condition is precisely
+  `q01*(9*q00*q11-2*q01^2)=0`.
+- If exactly one diagonal coefficient is nonzero, three power minors force
+  all cross coefficients to vanish.  If none is nonzero, fifth-power minors
+  force `Q=0`.
+
+For a putative equality form with larger support, specialize the coefficients
+of `L,M` outside any chosen three frame directions to zero.  Catalectic rank
+cannot increase under specialization, while the five fixed coordinate
+factors keep factor rank five, whose universal lower bound is 15.  Hence
+every nonzero three-direction specialization is again an equality form and
+the preceding case split applies.  If the union of the supports of `L,M`
+contained at least three indices, one could choose three retaining both
+factors and genuinely using all three, a contradiction.  Consequently, after
+a coordinate permutation both extra factors lie in one coordinate two-plane,
+and (3) is the complete rank-five middle-equality classification.
+
 The computation is replayed by
-`scripts/n7_lower51_rank5_binary_equality.py`.  This closes the binary-tail
-subcase of `R5-EQUALITY-FORMS`, but not the full task: one must still prove
-that a middle-dimension-15 pair with support on three or more frame
-directions reduces to this family, or classify an additional component.
+`scripts/n7_lower51_rank5_binary_equality.py`.  This completes
+`R5-EQUALITY-FORMS`.  It does not classify intermediate quotient directions
+or close every rank-five 50-term packet.

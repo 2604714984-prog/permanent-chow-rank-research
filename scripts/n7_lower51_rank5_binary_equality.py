@@ -3,11 +3,12 @@
 
 from __future__ import annotations
 
+import itertools
 import json
 import sys
 from pathlib import Path
 
-from sympy import Matrix, factor, symbols
+from sympy import Matrix, expand, factor, symbols
 
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -52,6 +53,41 @@ def binary_middle_matrix(a: object, b: object, c: object) -> Matrix:
     )
 
 
+def ternary_middle_matrix(q: tuple[object, ...]) -> Matrix:
+    q00, q11, q22, q01, q02, q12 = q
+    return Matrix(
+        [
+            [0, 0, 0, 0, 0, 6 * q22, 2 * q12, 0, 2 * q02, 0],
+            [0, 0, 0, 0, 3 * q22, 4 * q12, 3 * q11, 2 * q02, 2 * q01, q00],
+            [0, 0, 0, 0, 2 * q12, 6 * q11, 0, 2 * q01, 0, 0],
+            [0, 3 * q22, 2 * q12, q11, 0, 4 * q02, 2 * q01, 0, 3 * q00, 0],
+            [q22, 2 * q12, 3 * q11, 0, 2 * q02, 4 * q01, 0, 3 * q00, 0, 0],
+            [0, 2 * q02, 2 * q01, 0, 0, 6 * q00, 0, 0, 0, 0],
+        ]
+    )
+
+
+def five_minors(matrix: Matrix) -> tuple[object, ...]:
+    values = set()
+    for rows in itertools.combinations(range(matrix.rows), 5):
+        for columns in itertools.combinations(range(matrix.cols), 5):
+            value = factor(matrix.extract(rows, columns).det())
+            if value:
+                values.add(value)
+    return tuple(values)
+
+
+def contains_scalar_multiple(
+    polynomials: tuple[object, ...], target: object, substitutions: dict | None = None
+) -> bool:
+    substitutions = substitutions or {}
+    for polynomial in polynomials:
+        value = factor(polynomial.subs(substitutions))
+        if value and expand(value / target).is_number:
+            return True
+    return False
+
+
 def build() -> dict:
     matrix, a, b, c = catalectic_matrix()
     diagonal_rank = matrix.subs(c, 0).rank()
@@ -60,6 +96,30 @@ def build() -> dict:
     conic_rank = matrix.subs({a: 2, b: 1, c: 3}).rank()
     middle = binary_middle_matrix(a, b, c)
     determinant = factor(middle.det())
+    q = symbols("q00 q11 q22 q01 q02 q12")
+    q00, q11, q22, q01, q02, q12 = q
+    ternary = ternary_middle_matrix(q)
+    minors = five_minors(ternary)
+    for target in (
+        q00**3 * q01 * q22,
+        q00**3 * q02 * q11,
+        q00**3 * q12 * q22,
+    ):
+        assert contains_scalar_multiple(minors, target)
+    assert contains_scalar_multiple(minors, q00**3 * q11 * q12)
+    assert contains_scalar_multiple(minors, q00 * q02**3 * q11)
+    binary_substitutions = {q22: 0, q02: 0, q12: 0}
+    assert contains_scalar_multiple(
+        minors,
+        q00 * q01 * q11 * (9 * q00 * q11 - 2 * q01**2),
+        binary_substitutions,
+    )
+    one_diagonal = {q11: 0, q22: 0}
+    for target in (q00 * q01**4, q00**2 * q02**3, q00 * q12**4):
+        assert contains_scalar_multiple(minors, target, one_diagonal)
+    zero_diagonal = {q00: 0, q11: 0, q22: 0}
+    for target in (q01**5, q02**5, q12**5):
+        assert contains_scalar_multiple(minors, target, zero_diagonal)
     assert matrix.shape == (35, 70)
     assert (diagonal_rank, conic_rank, cross_rank, generic_rank) == (15, 15, 18, 18)
     assert determinant == 8 * c * (9 * a * b - 2 * c**2)
@@ -72,14 +132,20 @@ def build() -> dict:
         "generic_binary_tail_rank": generic_rank,
         "binary_middle_determinant": "8*c*(9*a*b-2*c^2)",
         "tensor_rank_formula": "dim D3(T) = 9 + 3*rank(C2(g))",
+        "ternary_middle_matrix_shape": list(ternary.shape),
+        "nonzero_five_minor_polynomials": len(minors),
+        "full_equality_normal_form": (
+            "After a coordinate permutation, both extra factors lie in "
+            "span(x1,x2) and c*(9*a*b-2*c^2)=0."
+        ),
         "claim": (
-            "For a rank-five coordinate frame and two extra factors supported "
-            "on one coordinate pair, the middle dimension is 15 exactly on "
-            "c*(9*a*b-2*c^2)=0, and is 18 off that divisor."
+            "Every rank-five middle-dimension-15 product has, after a frame "
+            "permutation, both extra factors in one coordinate two-plane and "
+            "lies on c*(9*a*b-2*c^2)=0."
         ),
         "claim_boundary": (
-            "This proves the binary-tail equality family but does not classify "
-            "extra factors supported on three or more frame directions."
+            "This classifies the full-increment middle equality forms only; "
+            "intermediate quotient orientations remain outside the result."
         ),
     }
 
