@@ -19,13 +19,11 @@ cannot equal the 5040-term permanent.  See
 `docs/n7_packet_a_k2zero_exclusion.md`.
 
 This is not `A-CLOSED`.  The exact active component now has
-`W^all != 0`, `K2 != 0`, and `K5 != 0`, with the nonzero spaces still required
-to be orthogonal under the inverse-coefficient complementary pairing.  The
-Hessian subspace is automatically orthogonal to `K2`, because its pairing is
-the second derivative of the defining zero quadratic relation.  It therefore
-cannot close this component.  The active invariant is the transverse image
-of `K5` in `M2/im A2^T`; A-07 through A-14 must be read with that corrected
-boundary.
+`W^all != 0`, `K2 != 0`, and `K5 != 0`.  The Hessian subspace is automatically
+orthogonal to `K2`, and target containment plus endpoint dimensions make the
+entire `2/5` apolar induction map automatically surjective.  Thus the plain
+`2/5` interface is exhausted rather than obstructed; see
+`docs/n7_packet_a_25_route_exhaustion.md`.
 
 The transverse obstruction is now canonically the cokernel of the quadratic
 apolar induction map
@@ -35,12 +33,12 @@ apolar induction map
 \]
 
 Here `dim F2^perp=784`, with explicit row-internal, column-internal, and
-rectangle-difference summands of dimensions 196, 147, and 441.  Endpoint
-surjectivity on the remaining `K2 != 0` branch forces
-`dim ker Phi=196+dim K2>196`.  Thus the final A-12 problem is the exact
-permanent-apolar array-rigidity bound `dim ker Phi<=196` outside the already
-excluded row-separated component.  See
-`docs/n7_packet_a_apolar_induction_cokernel.md`.
+rectangle-difference summands of dimensions 196, 147, and 441.  Target
+containment forces `ker Phi=ker A2^T`, of dimension
+`196+dim K2`; at endpoint its rank is exactly `dim K5`.  The previously
+proposed opposite array bound is withdrawn.  A-13 must add information beyond
+the plain complementary `3/4` Sylvester inclusion, since that unrefined
+inclusion is subject to the same rank-factorization tautology.
 
 ## Schema/control smoke
 

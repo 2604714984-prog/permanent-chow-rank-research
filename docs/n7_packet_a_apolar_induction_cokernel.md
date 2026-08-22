@@ -2,7 +2,7 @@
 
 ## Status
 
-`EXACT REFORMULATION; ONE ARRAY-RIGIDITY LEMMA REMAINS.`
+`EXACT REFORMULATION; THE PROPOSED ARRAY-RIGIDITY LEMMA IS WITHDRAWN.`
 
 The transverse `2/5` obstruction is canonically the cokernel of a map that
 induces degree-five factor relations from quadratic apolar operators of the
@@ -276,27 +276,21 @@ Thus endpoint equality requires a subspace of dimension strictly greater than
 is the dimension of the explicit row-internal summand `R`; this comparison is
 only a threshold, not an assertion that `R` itself lies in `ker Phi`.
 
-## 6. Unique remaining array-rigidity lemma
+## 6. Correction: the large kernel is target-forced
 
-The exact final statement needed to close Packet A is now:
+The inequality suggested after (10) cannot hold.  Target containment gives
+`E2(F) subset im A2`; after taking annihilators,
 
-> **Permanent-apolar array-rigidity lemma.** For a non-row-separated packet of
-> 49 rank-seven factor frames satisfying the surviving permanent
-> gradient/Hessian equations and the simple-multilinear endpoint hypotheses,
-> \[
-> \dim\left(F_2^\perp\cap\ker A_2^{\mathsf T}\right)\le196.
-> \]
+\[
+ \ker A_2^{\mathsf T}\subseteq F_2^\perp.
+\]
 
-Equivalently, there is no subspace of dimension greater than 196 among the
-784 explicit permanent-apolar quadrics in `R direct-sum C direct-sum X` whose
-off-diagonal factor-pair evaluations all vanish on all 49 frames.
+Therefore the intersection in (4) is always the full transpose kernel, and
+its dimension is identically `196+dim K2`.  At endpoint equality (9), the
+rank of `Phi` is `588-dim K2=dim K5`, so (3) is automatically an equality and
+the cokernel (6) vanishes.  The complete proof is recorded in
+`docs/n7_packet_a_25_route_exhaustion.md`.
 
-The row-separated alternative has already been excluded by the tensor-rank
-lower bound for `perm_7`.  No proof of the array-rigidity lemma is presently
-known from the existing Packet-A interfaces.  It is not a dimension-only
-statement: the evaluation map has 1029 target coordinates, but its entries
-are coupled products from the same 49 seven-factor frames.
-
-Proving the lemma would contradict (10) and close the remaining ordinary
-Packet-A endpoint.  Until then, Packet A, the ordinary lower bound 50, and all
-border-rank claims remain unresolved.
+Thus the greater-than-196 kernel is mandatory, not an exceptional array to
+exclude.  Packet A remains open, but no further quadratic-apolar or plain
+`2/5` relation calculation can close it.

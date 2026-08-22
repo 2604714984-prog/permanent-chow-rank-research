@@ -4139,6 +4139,19 @@ single array-rigidity statement: outside the excluded row-separated
 component, no greater-than-196-dimensional permanent-apolar quadratic
 subspace can vanish on every off-diagonal pair in all 49 factor frames.
 
+## 2026-08-22: Packet-A 2/5 array route exhausted and corrected
+
+The proposed greater-than-196 array exclusion has the wrong direction.
+Target containment gives `E2(perm7) subset im A2`, hence
+`ker A2^T subset F2^perp`.  The apolar-induction kernel is therefore always
+the full transpose kernel, of dimension `196+dim K2`.  Its rank is
+`588-dim K2`, which equals `dim K5` at the endpoint; the induction map is
+automatically surjective and the entire transverse `2/5` obstruction
+vanishes.  The preceding entry is retained as the intermediate proposal but
+is superseded by this correction.  Plain labelled `3/4` kernel-image
+inclusion has the same formal risk and must be audited before X34 adds any
+new computation.
+
 ## 2026-08-22: Packet-B equality rewritten as cubic apolar surjectivity
 
 For arbitrary Packet B, restrict the stacked complementary-triple evaluation
