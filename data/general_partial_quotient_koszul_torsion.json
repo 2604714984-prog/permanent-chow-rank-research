@@ -1,0 +1,72 @@
+{
+  "claim_boundary": {
+    "arbitrary_multi_relation_chow_term": "OPEN",
+    "border_rank_improvement": false,
+    "complete_one_relation_family": "PASS",
+    "exact_sequence": "PROVED",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "new_general_chow_rank_lower_bound": false,
+    "simultaneously_diagonalizable_cap": "PROVED",
+    "sum_subquotient_inequality": "OPEN"
+  },
+  "exact_sequence": {
+    "base_change_tor": "Tor_1^S(S/(I_2),S/(W))_3",
+    "corrected_kernel": "(V*I_2 intersect W*S_2)/(W*I_2)",
+    "full_cubic_generators": "I_3/(V*I_2)",
+    "partial_low_h1": "(I_3 intersect W*S_2)/(W*I_2)"
+  },
+  "field": "algebraically_closed_characteristic_zero",
+  "one_relation_family": {
+    "all_supports_and_quotients_checked_through_r": 12,
+    "normal_form": "x_1*...*x_r*(x_1+...+x_s)",
+    "passes_independent_scale": true,
+    "quadratic_dimension": "r-s+1_(s=2)",
+    "selected_rows": [
+      {
+        "caps": [0, 3, 4, 3, 0],
+        "quadratic_dimension": 3,
+        "r": 4,
+        "support_size": 2
+      },
+      {
+        "caps": [0, 0, 0, 0, 0],
+        "quadratic_dimension": 0,
+        "r": 4,
+        "support_size": 4
+      },
+      {
+        "caps": [0, 5, 8, 9, 6, 3, 0],
+        "quadratic_dimension": 3,
+        "r": 6,
+        "support_size": 3
+      },
+      {
+        "caps": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "quadratic_dimension": 0,
+        "r": 8,
+        "support_size": 8
+      },
+      {
+        "caps": [0, 11, 20, 27, 32, 35, 36, 35, 32, 27, 20, 11, 0],
+        "quadratic_dimension": 11,
+        "r": 12,
+        "support_size": 2
+      }
+    ]
+  },
+  "schema": "general_partial_quotient_koszul_torsion/v1",
+  "simultaneously_diagonalizable_cap": {
+    "fixed_point_replay_through_r": 8,
+    "formula": "(r-d)*min(q,d)",
+    "independent_scale": "d*(r-d)",
+    "selected_rows": [
+      {"d": 1, "maximum": 2, "q": 3, "r": 3},
+      {"d": 2, "maximum": 4, "q": 2, "r": 4},
+      {"d": 3, "maximum": 6, "q": 4, "r": 5},
+      {"d": 3, "maximum": 9, "q": 6, "r": 6},
+      {"d": 4, "maximum": 16, "q": 5, "r": 8}
+    ]
+  },
+  "theorem_core": "f8c9b5ff8a9f09c9dd31dd9c4d123ce68aa6a0ea49e593ecc97da548dbd82bd2",
+  "theorem_id": "G-PARTIAL-QUOTIENT-KOSZUL-TORSION-v1"
+}
