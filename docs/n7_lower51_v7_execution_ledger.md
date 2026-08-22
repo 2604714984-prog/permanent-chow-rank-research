@@ -541,6 +541,28 @@ Each frozen row also records the sharp scalar maximum residual cap
 an outside rank-seven term only if that term has an essential projection
 block; otherwise the redundant-image theorem excludes it.
 
+### Rank-five binary equality component
+
+After fixing five independent factors, suppose the two extra factors lie in
+one coordinate two-plane.  The exact symbolic `35 by 70` catalectic has rank
+15 exactly on the divisor
+
+```text
+c*(9*a*b-2*c^2)=0,
+```
+
+where `a*x1^2+c*x1*x2+b*x2^2` is the product of the two extra factors.
+The two components are the zero-cross family and the conic
+`9*a*b=2*c^2`; off their union the rank is 18.  This proves that the
+rank-five equality locus is larger than both the triple-parallel monomial
+boundary and the diagonal family.  See `docs/n7_lower51_rank5_binary_equality.md` and
+`scripts/n7_lower51_rank5_binary_equality.py`.
+
+Decisive scoped marker: `R5-BINARY-EQUALITY-FAMILY`.
+
+The full `R5-EQUALITY-FORMS` marker is withheld until extra factors with
+three-or-more-direction support are eliminated or classified.
+
 ## Waves 5 and optional lanes -- value-gate decisions
 
 The exact existing Fitting/Schur replay passes but proves that every tested
