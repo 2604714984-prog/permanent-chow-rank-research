@@ -290,3 +290,33 @@ N50-DEGREE4-FLOORS
 MINIMAL-SUBSUM-LEMMA
 SUBSET-FLOOR-CONTROLS
 ```
+
+## Wave 3 -- all-rank-seven direct-basis lane
+
+Status: the simple branch and the larger full-block branch are closed.  The
+partial-block branch remains open, so `R7-DIRECT-CLOSED` is not issued.
+
+The theorem in `docs/n7_lower51_rank7_full_block_direct_basis.md` removes
+global simplicity from the imported direct-basis argument under the exact
+hypothesis that every nonzero basis restriction block is invertible.  It
+allows parallel planes.  The three-label span floor permits at most seven
+parallel nonbasis labels, leaving at least 36 nonparallel labels on which the
+existing residual multiplication propagation applies.  It forces
+`(K3,K4)=(0,35)` and one common support.  Full support contradicts the
+three-label floor; proper support gives a nontrivial direct-sum decomposition
+of the permanent and contradicts its scalar centroid.
+
+Decisive markers:
+
+```text
+SIMPLE-R7-IMPORTED
+R7-PARALLEL-BRANCH
+R7-RESIDUAL-KERNELS-FULL-BLOCK
+R7-RESIDUAL-PROPAGATION-FULL-BLOCK
+R7-CIRCUIT-SUPPORTS-FULL-BLOCK
+R7-FULL-BLOCK-BRANCH-CLOSED
+```
+
+The exact remaining direct-basis branch has at least one restriction block of
+rank `1,...,6`.  No statement in the full-block theorem is applied to that
+partial-block locus.
