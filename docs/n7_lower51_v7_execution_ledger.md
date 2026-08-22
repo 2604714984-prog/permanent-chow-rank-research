@@ -340,3 +340,33 @@ R7-PARTIAL-BLOCK-KERNEL-TYPES
 
 The residual multiplication theorem for these two-block injective geometries
 is still open; the direct-basis lane is therefore not yet closed.
+
+## Wave 1 -- low-factor-rank endpoint atoms
+
+Status: exact full-increment floors and immediate subset-floor exclusions are
+frozen; equality forms and intermediate increments remain open.
+
+Choosing `r` independent factors and applying a diagonal one-parameter
+degeneration sends an essential rank-`r` product to a positive `r`-variable
+monomial.  Middle catalectic rank is lower semicontinuous, so enumeration of
+the positive exponent partitions of seven gives
+
+```text
+factor rank r:             1  2  3  4  5
+minimum middle dimension:  1  2  4  8 15
+full-increment surplus:    26 17  9  3  0.
+```
+
+The exact 13 positive partitions are frozen in
+`data/n7_lower51_low_rank_endpoint_atoms.json`.  The pair span floor 5
+immediately excludes rank pairs `(1,1)`, `(1,2)`, `(1,3)`, and `(2,2)`.
+The triple floor 12 remains active in the packet filter.  These statements do
+not classify rank-five equality forms or any intermediate quotient direction,
+so `LOW-RANK-SURPLUS-ATLAS` and `LOW-RANK-VERDICT` remain open.
+
+Decisive markers:
+
+```text
+LOW-RANK-FULL-ENDPOINT-FLOORS
+LOW-RANK-PAIR-FLOOR-FILTER
+```

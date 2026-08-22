@@ -1,0 +1,180 @@
+{
+  "claim": "A product of seven linear forms with essential factor rank r<=5 degenerates to a positive r-variable monomial. The table gives the minimum middle dimension and resulting full-increment surplus floor.",
+  "claim_boundary": "Equality forms outside the monomial special fibre and intermediate quotient increments are not classified here.",
+  "pair_span_floor": 5,
+  "rows": [
+    {
+      "factor_rank": 1,
+      "full_increment_surplus_floor": 26,
+      "minimum_middle_dimension": 1,
+      "minimum_partition": [
+        7
+      ],
+      "positive_partitions": [
+        {
+          "middle_dimension": 1,
+          "partition": [
+            7
+          ]
+        }
+      ],
+      "zero_increment_surplus_for_minimum_partition": 34
+    },
+    {
+      "factor_rank": 2,
+      "full_increment_surplus_floor": 17,
+      "minimum_middle_dimension": 2,
+      "minimum_partition": [
+        6,
+        1
+      ],
+      "positive_partitions": [
+        {
+          "middle_dimension": 2,
+          "partition": [
+            6,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 3,
+          "partition": [
+            5,
+            2
+          ]
+        },
+        {
+          "middle_dimension": 4,
+          "partition": [
+            4,
+            3
+          ]
+        }
+      ],
+      "zero_increment_surplus_for_minimum_partition": 33
+    },
+    {
+      "factor_rank": 3,
+      "full_increment_surplus_floor": 9,
+      "minimum_middle_dimension": 4,
+      "minimum_partition": [
+        5,
+        1,
+        1
+      ],
+      "positive_partitions": [
+        {
+          "middle_dimension": 4,
+          "partition": [
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 6,
+          "partition": [
+            4,
+            2,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 7,
+          "partition": [
+            3,
+            3,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 8,
+          "partition": [
+            3,
+            2,
+            2
+          ]
+        }
+      ],
+      "zero_increment_surplus_for_minimum_partition": 31
+    },
+    {
+      "factor_rank": 4,
+      "full_increment_surplus_floor": 3,
+      "minimum_middle_dimension": 8,
+      "minimum_partition": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "positive_partitions": [
+        {
+          "middle_dimension": 8,
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 11,
+          "partition": [
+            3,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 13,
+          "partition": [
+            2,
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "zero_increment_surplus_for_minimum_partition": 27
+    },
+    {
+      "factor_rank": 5,
+      "full_increment_surplus_floor": 0,
+      "minimum_middle_dimension": 15,
+      "minimum_partition": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "positive_partitions": [
+        {
+          "middle_dimension": 15,
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "middle_dimension": 18,
+          "partition": [
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "zero_increment_surplus_for_minimum_partition": 20
+    }
+  ],
+  "schema_version": 1,
+  "triple_span_floor": 12
+}
