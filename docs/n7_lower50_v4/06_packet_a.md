@@ -11,11 +11,17 @@ decomposition contradicts the ordinary tensor-rank lower bound
 `R(perm_7) >= 55`.  See
 `docs/n7_packet_a_wzero_tensor_rank_closure.md`.
 
-This is not `A-CLOSED`.  The exact active component is `W^all != 0`, where a
-nonzero aggregate degree-five relation is forced but compatibility with the
-rectangular endpoint inclusion (equivalently, the complementary `2/5`
-relation system) is not yet decided.  A-07 through A-14 must be read with
-that reduced boundary.
+The extreme `K2=0` branch is also empty.  Endpoint dimensions would force the
+aggregate degree-five space to equal the 441-dimensional permanent derivative
+space; all five-factor subproducts would then be row- and column-multilinear,
+forcing every term to be one permutation monomial.  Forty-nine such monomials
+cannot equal the 5040-term permanent.  See
+`docs/n7_packet_a_k2zero_exclusion.md`.
+
+This is not `A-CLOSED`.  The exact active component now has
+`W^all != 0`, `K2 != 0`, and `K5 != 0`, with the nonzero spaces still required
+to be orthogonal under the inverse-coefficient complementary pairing.  A-07
+through A-14 must be read with that reduced boundary.
 
 ## Schema/control smoke
 

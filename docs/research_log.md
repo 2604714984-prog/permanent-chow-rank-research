@@ -4099,3 +4099,17 @@ stability of `im(BC)` does not automatically lift to `im B`, `im C`, or the
 term spaces.  The remaining B2 theorem is therefore an identifiability or
 torus-compatible termwise-splitting result.  Existing low-layer survivors
 only rule out local shortcuts; they are not complete Packet-B counterexamples.
+
+## 2026-08-22: Packet-A K2-zero endpoint excluded
+
+The Packet-A quotient orientation gives the exact endpoint identity
+`dim K2 + dim K5=588`.  If `K2=0`, the aggregate five-factor space has
+dimension 441 and contains the 441-dimensional fifth-degree derivative space
+of the permanent, so the two spaces coincide.  Every five-factor subproduct
+is then multilinear in each row and column group.  Additivity of grouped
+degree forces the seven factors of each term to have pairwise disjoint row
+supports and pairwise disjoint column supports, hence every factor is one
+matrix coordinate and every term is a permutation monomial.  Forty-nine such
+terms cannot support all `7!=5040` monomials of the permanent.  Therefore any
+Packet-A survivor must have `W^all != 0`, `K2 != 0`, and `K5 != 0`; their
+forced orthogonality is the remaining Packet-A obstruction.
