@@ -3980,3 +3980,16 @@ two-dimensional non-Grassmannian pencil branch in the gauge-free layer. A
 remaining two-dimensional survivor must be a Grassmannian flag line with at
 least three nonzero ratios. Bivector-span-zero/one cases, the `H6=41` gauge
 branch, and F3 as a whole remain open.
+
+## 2026-08-22: F3 `H6=42` gauge-free layer closed
+
+The remaining `q5=2,q6=0` pencil branches now admit exact Waring
+replacements. Bivector span zero gives 42 termwise powers; span one replaces
+its relation support by a binary septic and costs at most 42. For a
+Grassmannian flag line, removing the parallel power contributions leaves a
+closed residual in one variable, costing at most 43 globally. If the unique
+flag point itself occurs, the residual is a binary septic and the global
+cost is at most 48. All bounds contradict the squarefree septic Waring rank
+64. Combined with the sparse-ratio theorem, this closes the complete F3
+`H6=42` layer. F3 `H6=41` retains a one-dimensional `R6` coefficient gauge
+and remains open; no lower-50 or border-rank claim follows.

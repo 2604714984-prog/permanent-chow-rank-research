@@ -19,10 +19,10 @@ class, nonzero weighted coupling, and decisive exact output.
 
 ## F3 — `(34,38,40)`, `q5=2`, `q6=0 or 1`
 
-Executed subcase: for `H6=42`, the two-dimensional non-Grassmannian pencil
-branch is closed. Any remaining two-dimensional gauge-free survivor is a
-Grassmannian flag-line configuration with at least three nonzero ratios.
-The bivector-span-zero/one cases and the `H6=41` gauge branch remain open.
+Executed subcase: `H6=42` is closed completely. The bivector-span-zero/one,
+two-dimensional non-Grassmannian, and Grassmannian flag-line branches all
+admit Waring replacements of cost strictly below 64. The `H6=41` gauge branch
+remains open, so F3 as a whole is not yet closed.
 
 - **F3-01:** split the 24 signatures by `H6=42` and `H6=41`.
 - **F3-02:** exploit uniqueness of target coefficients when `q6=0`.

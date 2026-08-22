@@ -163,6 +163,13 @@ point distinctness, and weighted coupling.
 
 ## TI-10 — Grassmannian-line replacement
 
+Executed for the gauge-free F3 `H6=42` layer in
+`docs/n7_f3_h642_flag_line_replacement.md`. Bivector span zero or one has
+replacement cost at most 42. A Grassmannian flag line has total cost at most
+43 without the flag point and at most 48 with its unique flag point. Together
+with TI-09, every `q5=2,q6=0` pencil branch is impossible. This argument does
+not pass through the `q6=1` coefficient gauge.
+
 Classify a line of decomposable bivectors by its flag data. Prove the sharp
 replacement cost for the supported compatible gradient and compare it with
 the support cardinality. The desired contradiction is with
