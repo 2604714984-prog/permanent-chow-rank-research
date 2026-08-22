@@ -1,1312 +1,1432 @@
-# `perm_7` lower-50 major execution package v2
+# `perm_7` lower-50 decisive large task package
 
-## Status
+## Status and claim boundary
 
-`ACTIVE MAJOR RESEARCH PACKAGE — NOT A NEW LOWER-BOUND RESULT.`
+`ACTIVE RESEARCH PACKAGE — NOT A NEW CHOW-RANK RESULT.`
 
 Created: 2026-08-22  
 Input research snapshot: `170bd086a2c836c53160cf6b353e167b1228586c`  
 Active research PR: `#31`  
-Current ordinary characteristic-zero interval:
+Active branch: `agent/general-column-sign-rank`
+
+The current ordinary characteristic-zero interval remains
 
 \[
-49\leq \operatorname{ChowRank}(\operatorname{perm}_7)\leq64.
+\boxed{49\leq \operatorname{ChowRank}(\operatorname{perm}_7)\leq64}.
 \]
 
-Primary promotion target:
+The sole theorem-promotion target of this package is
 
 \[
-\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\geq50.}
+\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\geq50}.
 \]
 
-This package supersedes the short implementation checkpoint in
-`docs/n7_lower50_next_phase_task_plan.md`. The earlier checkpoint has done its
-job: it produced the exact weighted common-graph interface, classified the
-numerical equality ranks, removed `(36,36)`, exhibited characteristic-zero
-realisations of the remaining four Hilbert profiles, and excluded the old
-`(30,42)` and weighted `(31,41)` controls from the degree-six permanent target.
+This package does not claim lower 50, exact rank 64, border rank, or a general
+formula for `perm_n`. It replaces the smaller first-checkpoint plan with a
+continuous, decisive program covering the complete remaining common-graph
+problem, the passage to arbitrary Packet B, Packet A, and final theorem audit.
 
-The lower-50 theorem itself is not yet proved. The present package is designed
-to carry the project from the current four-stratum common-graph frontier all
-the way through arbitrary Packet B, Packet A, theorem assembly, adversarial
-audit, and promotion if the mathematics supports it.
+## 1. Why a larger package is now justified
 
-The package is intentionally large. It is not an architecture expansion. It
-contains mathematical work, exact evaluators, theorem-facing replays, and
-review tasks only.
+The previous plan deliberately stopped after its first implementation
+checkpoint. That checkpoint has now been completed:
 
----
+1. the seven numerical middle-equality rank pairs were identified;
+2. the weighted coupling condition was compressed to
+   `rank(E4^T D E3)=30`;
+3. degree-six permanent containment was written as
+   `rank(stack(E6,S6))=rank(E6)`;
+4. the target condition was shown to imply `H_Z(5)<=40`;
+5. deterministic controls and focused tests were frozen;
+6. CI passed at the completed checkpoint head.
 
-# 0. Frozen input boundary
+The checkpoint did not close weighted common-graph Packet B. It exposed the
+correct finite relation-defect range and therefore permits a substantially
+larger, more concrete task package.
 
-The following facts are fixed inputs and are not to be reproved unless a later
-argument exposes a contradiction.
+## 2. Mandatory correction to the completed checkpoint
 
-## 0.1 Current endpoint reduction
+The strict-growth correction in
+`docs/n7_weighted_common_graph_strict_growth_correction.md` is part of the
+starting boundary of this package.
 
-Any hypothetical 49-term decomposition lies in one of two slope-ten equality
-packets.
-
-### Packet A
-
-All 49 terms have factor rank seven.
-
-### Packet B
-
-Seven rank-six equality terms span a direct 42-space and the remaining 42
-terms are rank-seven graph complements.
-
-Both packets obey term-labelled complementary-degree equality, not just scalar
-Hilbert-function inequalities.
-
-## 0.2 Common-graph Packet-B interface
-
-For 42 graph points in `P^6`, write `E_d` for the homogeneous degree-`d`
-evaluation matrix and let
-
-\[
-D=\operatorname{diag}(d_1,\ldots,d_{42}),\qquad d_i\neq0.
-\]
-
-Scalar equality and coupling give
-
-\[
-\operatorname{rank}E_3+\operatorname{rank}E_4=72,
-\]
-
-\[
-\boxed{\operatorname{rank}(E_4^TDE_3)=30}.
-\]
-
-Degree-six permanent containment is
-
-\[
-\operatorname{rank}\begin{bmatrix}E_6\\S_6\end{bmatrix}
-=\operatorname{rank}E_6,
-\]
-
-where `S_6` is the `7 x 924` matrix of the seven squarefree sextic permanent
-targets for one missing-row block.
-
-## 0.3 Completed rank classification
-
-The seven numerical middle-equality profiles are
+For 42 distinct reduced projective points, the Hilbert function grows
+strictly until it reaches 42. Combining this with `H_Z(5)<=40` removes both
 
 ```text
-(30,42), (31,41), (32,40), (33,39), (34,38), (35,37), (36,36).
+(32,40) and (36,36).
 ```
 
-Degree-six target integrability forces `H_Z(5)<=40`, removing `(30,42)` and
-`(31,41)` from any target-compatible solution. The reduced-point Hilbert
-function argument removes `(36,36)`.
-
-The surviving geometrically feasible profiles are exactly
+Exactly three degree-three/degree-four rank pairs remain:
 
 ```text
-(32,40), (33,39), (34,38), (35,37).
+(33,39), (34,38), (35,37).
 ```
 
-Each of these four profiles has an explicit characteristic-zero curve-union
-realisation. Therefore no future proof may dismiss a profile merely because
-it appears nongeneric or was absent from a previous random sample.
+They refine into six degree-five cases:
 
-## 0.4 Existing controls
-
-The old unit `(30,42)` and weighted `(31,41)` monomial-curve controls satisfy
-middle equality and coupling but fail all seven degree-six permanent targets.
-Their target failure has characteristic-zero integer certificates.
-
-The 130-point monomial-curve weight box is closed as a restricted family. Do
-not enlarge the same box without a new theorem explaining what new component
-would be hit.
-
-## 0.5 Claim boundary
-
-Nothing in the frozen input closes the arbitrary weighted common-graph family,
-Packet B, or Packet A. No lower 50, exact 64, or border-rank conclusion follows
-from the present checkpoint.
-
----
-
-# 1. Overall execution strategy
-
-The work is divided into five theorem layers.
-
-```text
-Layer I    Close the four common-graph strata.
-Layer II   Remove the common-graph assumption and close arbitrary Packet B.
-Layer III  Close the all-rank-seven Packet A.
-Layer IV   Assemble and adversarially audit the lower-50 theorem.
-Layer V    Only after promotion, open the lower-51 / exact-rank frontier.
-```
-
-Recommended research effort until lower 50 is decided:
-
-```text
-45%  Layer I: common-graph four-stratum closure
-25%  Layer II: arbitrary Packet-B reduction and closure
-20%  Layer III: Packet-A term-labelled equations
-10%  exact replay, counterexamples, audit, theorem assembly
-```
-
-This allocation is a priority guide, not a scheduling subsystem.
-
----
-
-# 2. Workstream B1-F — freeze the four surviving common-graph strata
-
-## Goal
-
-Turn the current four numerical profiles into explicit algebraic strata with
-all rank hypotheses, nonvanishing conditions, and target equations written in
-a form suitable for exact elimination and structural proof.
-
-## B1-F.1 — define stratum-local coordinates
-
-For each profile
-
-```text
-S32 = (32,40)
-S33 = (33,39)
-S34 = (34,38)
-S35 = (35,37)
-```
-
-choose a representation that keeps the following visible:
-
-- the degree-three kernel `K_3`;
-- the degree-four kernel `K_4`;
-- the nesting/multiplication compatibility between them;
-- the nonzero diagonal weights `D`;
-- the seven degree-six target rows;
-- point distinctness and graph nondegeneracy.
-
-Do not start with a giant unrestricted coordinate ring in 252 point
-coordinates plus 42 weights. First quotient the obvious projective and basis
-redundancies that do not change the evaluation codes.
-
-**Output:** one short specification note containing dimensions and variables
-for all four strata.
-
-## B1-F.2 — derive kernel-side coupling equations
-
-Rewrite
-
-\[
-\ker(E_4^T)\subseteq D\operatorname{im}(E_3)
-\]
-
-as equations involving bases for `K_3` and `K_4` whenever this reduces the
-variable count.
-
-The derivation must remain equivalent to the rank-30 formulation on the fixed
-stratum. Record explicitly which minors or nonvanishing assumptions are used.
-
-**Output:** exact symbolic equations plus equivalence lemma.
-
-## B1-F.3 — derive quotient-side degree-six target equations
-
-Instead of repeatedly forming the full `49 x 924` stack, compute the image of
-the seven permanent rows in the quotient
-
-\[
-S^6(V^*)/\operatorname{rowspan}(E_6).
-\]
-
-Exploit row/column multidegrees and the graph chart to split this quotient into
-the smallest exact blocks available.
-
-**Output:** deterministic target-defect evaluator returning block defects and a
-proof that zero block defect is equivalent to full degree-six containment.
-
-## B1-F.4 — construct exact positive controls per stratum
-
-For each of the four Hilbert profiles, retain at least one exact integer point
-configuration realising the profile. It need not satisfy coupling or target.
-The purpose is to prevent accidental algebraic assumptions from deleting the
-entire stratum.
-
-**Gate:** every stratum-local parameterization must successfully represent its
-control.
-
-## B1-F.5 — construct negative controls
-
-At least two controls must fail for the correct reason:
-
-1. a configuration satisfying the profile and coupling but failing target;
-2. a configuration satisfying profile and target-like rank conditions but
-   failing the weighted coupling or weight nonvanishing condition, if such a
-   control can be constructed exactly.
-
-The evaluator must distinguish these failure modes.
-
----
-
-# 3. Workstream B1-S32 — close `(32,40)`
-
-## Goal
-
-Prove that no reduced 42-point weighted common-graph configuration with
-
-\[
-(\operatorname{rank}E_3,\operatorname{rank}E_4)=(32,40)
-\]
-
-can satisfy coupling and all degree-six permanent targets, or produce an exact
-characteristic-zero survivor satisfying every encoded condition.
-
-## B1-S32.1 — exploit the ten-dimensional cubic relation space
+| case ID | `H_Z(3)` | `H_Z(4)` | `H_Z(5)` | `dim R_3` | `dim R_4` | `dim R_5` |
+|---|---:|---:|---:|---:|---:|---:|
+| `B1-33-39-40` | 33 | 39 | 40 | 9 | 3 | 2 |
+| `B1-34-38-39` | 34 | 38 | 39 | 8 | 4 | 3 |
+| `B1-34-38-40` | 34 | 38 | 40 | 8 | 4 | 2 |
+| `B1-35-37-38` | 35 | 37 | 38 | 7 | 5 | 4 |
+| `B1-35-37-39` | 35 | 37 | 39 | 7 | 5 | 3 |
+| `B1-35-37-40` | 35 | 37 | 40 | 7 | 5 | 2 |
 
 Here
 
-```text
-dim K_3 = 10
-dim K_4 = 2
-```
-
-for the 42-point code. Determine the multiplication map from the cubic
-relations into quartic relations and classify the possible two-dimensional
-quartic kernel compatible with a ten-dimensional cubic kernel.
-
-The first target is a structural statement, not brute-force elimination.
-
-## B1-S32.2 — constrain `D` from the two quartic relations
-
-The weighted coupling condition means that the two quartic relations, after
-weighting, lie in the degree-three evaluation image in the precise transpose
-sense. Eliminate `D` symbolically as far as possible.
-
-Questions to answer:
-
-- Is `D` unique up to scalar on a dense component?
-- Does existence of nonzero `D` impose a determinantal condition on the point
-  configuration alone?
-- Are there forced support partitions or low-degree curves?
-
-## B1-S32.3 — intersect with degree-six target containment
-
-Substitute the coupling consequences into the target-defect blocks. Search for
-a load-bearing exact minor, resultant, syzygy, or integrability contradiction.
-
-## B1-S32.4 — classify boundary components
-
-If the dense component is excluded, explicitly enumerate rank-drop and pivot
-boundary cases introduced by the local chart. Do not assume they are covered
-by continuity unless the equations used are closed on that boundary.
-
-## B1-S32.5 — decisive outcome
-
-Return one of:
-
-```text
-S32-CLOSED
-S32-SURVIVOR
-S32-REDUCED-TO-EXPLICIT-FINITE-SUBCASES
-```
-
-The third outcome is accepted only if the subcases are theorem-defined and
-small enough to exhaust exactly in the next pass.
-
----
-
-# 4. Workstream B1-S33 — close `(33,39)`
-
-## Goal
-
-Handle the next Hilbert stratum without copying the S32 calculation blindly.
-
-Here
-
-```text
-dim K_3 = 9
-dim K_4 = 3.
-```
-
-## B1-S33.1 — determine allowed `K_3 -> K_4` growth
-
-Use Macaulay/Gotzmann-type growth only where it is sharp for reduced points.
-Record every possible initial ideal or Hilbert-Burch pattern compatible with
-`H(3)=33`, `H(4)=39`, and eventual length 42.
-
-## B1-S33.2 — classify low-degree geometric support forced by the Hilbert
-function
-
-Test whether the stratum necessarily contains a substantial subset on a
-curve, conic bundle, rational normal projection, or another low-degree
-subscheme. Separate theorem from diagnostic examples.
-
-## B1-S33.3 — solve the weighted coupling on each structural component
-
-For each component, derive the dimension of admissible diagonal weights. A
-component on which no invertible diagonal exists is immediately closed.
-
-## B1-S33.4 — apply permanent-target blocks
-
-Use the seven sextic targets only after the coupling structure has reduced the
-problem. Prefer a small multidegree block with positive unavoidable defect to
-full elimination.
-
-## B1-S33.5 — exact replay
-
-Any component exclusion relying on a determinant must preserve the actual
-integer determinant or a modular nonzero minor with a valid characteristic-
-zero interpretation.
-
----
-
-# 5. Workstream B1-S34 — close `(34,38)`
-
-## Goal
-
-Analyze
-
-```text
-dim K_3 = 8
-dim K_4 = 4.
-```
-
-This more balanced kernel profile may admit more coupling freedom, so the plan
-must use complementary-degree structure early.
-
-## B1-S34.1 — compute the multiplication incidence
-
-Construct the exact incidence between cubic relations, their seven linear
-multiples, and the four-dimensional quartic relation space.
-
-Measure:
-
-- multiplication rank;
-- first syzygy dimension;
-- common-factor possibilities;
-- support decomposition possibilities.
-
-## B1-S34.2 — derive coupling-induced bilinear form constraints
-
-Interpret `E_4^T D E_3` as a weighted pairing between degree-three and
-degree-four evaluation spaces. Determine what rank exactly 30 says about the
-radicals on this `(34,38)` stratum.
-
-## B1-S34.3 — permanent-specific incompatibility search
-
-Split the sextic target rows by the row/column torus. For each target block,
-write the minimal condition imposed on the pairing radicals. Attempt to prove
-that at least one block cannot vanish simultaneously.
-
-## B1-S34.4 — survivor extraction
-
-If symbolic reduction leaves a positive-dimensional component, search it for
-an exact rational or number-field point satisfying every condition. A genuine
-survivor is higher priority than continuing exclusion by increasingly narrow
-families.
-
----
-
-# 6. Workstream B1-S35 — close `(35,37)`
-
-## Goal
-
-Analyze the most balanced surviving profile
-
-```text
-dim K_3 = 7
-dim K_4 = 5.
-```
-
-This is expected to be the hardest common-graph stratum and should be treated
-as such rather than as a final small case.
-
-## B1-S35.1 — classify seven cubic relations with only five quartic relations
-
-Determine the strongest possible common structure of the cubic kernel forced
-by this unusually small growth.
-
-Candidate tools include:
-
-- generic initial ideals;
-- Green/Macaulay restrictions;
-- Hilbert-Burch or minimal free resolution data;
-- Cayley-Bacharach consequences;
-- reduced-point separator degrees.
-
-Use only statements valid in characteristic zero and record assumptions.
-
-## B1-S35.2 — identify the minimal geometric carrier
-
-Test whether every such 42-point set must lie substantially on a low-degree
-curve or reducible union. The existing degree-two curve-union construction is
-a positive control for profile realisability, not evidence that all points
-have that form.
-
-## B1-S35.3 — solve diagonal coupling dimension
-
-Compute the linear system on the 42 diagonal entries after fixing the point
-configuration. Determine generic and special dimensions of admissible weight
-space.
-
-## B1-S35.4 — impose nonzero weights exactly
-
-Do not accept a solution supported on fewer than 42 graph terms. Saturate by
-
 \[
-\prod_i d_i
+C_d=\operatorname{im}E_d\subset k^{42},
+\qquad
+R_d=C_d^\perp=\ker(E_d^T).
 \]
 
-or use an equivalent chart-by-chart exact argument.
+The relation spaces form the nested flag
 
-## B1-S35.5 — combine with sextic target
+\[
+R_5\subseteq R_4\subseteq R_3.
+\]
 
-If target containment and coupling define separate loci, compute their
-intersection dimension or exhibit a separating invariant.
+This six-case table, not the earlier four-pair label, is the authoritative B1
+starting point.
 
-## B1-S35.6 — boundary and degeneration audit
+## 3. Definition of package completion
 
-Because this stratum is likely to contain degenerations of higher-Hilbert
-profiles, explicitly check whether a closure argument accidentally admits
-nonreduced points, repeated graph points, or zero weights.
+This package is complete only after one of the following decisive outcomes.
+
+### Outcome L50
+
+Both endpoint packets are excluded in characteristic zero:
+
+```text
+Packet A: CLOSED
+Packet B: CLOSED
+```
+
+and the ordinary theorem
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_7)\geq50
+\]
+
+passes exact replay and adversarial audit.
+
+### Outcome EXACT-SURVIVOR
+
+An exact characteristic-zero object survives every equation actually encoded
+for its workstream. A survivor must include exact coordinates or a controlled
+number-field representation, all nonvanishing conditions, and deterministic
+verification of every hypothesis. It must then be analyzed before any search
+family is enlarged.
+
+A finite-field survivor, a numerical approximate point, a restricted-family
+failure, or a larger negative random sample is not package completion.
+
+## 4. Execution rule
+
+This document authorizes continuous execution through the listed dependent
+tasks. Do not stop after each small checkpoint to request a new plan. Stop
+only for one of these reasons:
+
+1. a load-bearing mathematical contradiction in the package is found;
+2. an exact survivor is found;
+3. a workstream reaches its stated decisive outcome;
+4. the lower-50 promotion gate is satisfied.
+
+Intermediate results should be committed in coherent theorem-facing groups,
+not as one commit per tiny calculation.
+
+## 5. Priority allocation
+
+Approximate research allocation:
+
+```text
+50%  B1: the six weighted common-graph relation-flag cases
+25%  B2: arbitrary mixed graph-complement Packet B
+20%  A: all-rank-seven Packet A
+ 5%  independent replay, adversarial review, and promotion closure
+```
+
+Packet-A module construction may proceed in parallel with B1. Heavy B2 case
+enumeration must wait for a structural reduction; unrestricted `GL_6` search
+is not authorized.
 
 ---
 
-# 7. Workstream B1-X — cross-stratum theorem extraction
+# Work Package 0 — repair and freeze the true starting boundary
 
-## Goal
+## WP0 objective
 
-Avoid four unrelated case proofs if one structural theorem explains them all.
-This workstream begins after at least two strata have been analyzed deeply
-enough to reveal a pattern.
+Remove the stale four-stratum label, freeze the six corrected relation-defect
+cases, and establish one exact HEAD from which all later work proceeds.
 
-## B1-X.1 — weighted apolar / evaluation-code formulation
+## Task 0.1 — replay the strict-growth correction
 
-Search for a theorem of the following form:
-
-> If a reduced 42-point set in `P^6` has `H(3)+H(4)=72`, admits an invertible
-> diagonal pairing of rank 30, and contains the permanent sextic gradient,
-> then its degree-three/four Hilbert function violates one of the four allowed
-> profiles or its points satisfy an impossible permanent-specific incidence.
-
-A theorem even slightly weaker may remove several strata at once.
-
-## B1-X.2 — relation-support theorem
-
-Determine whether coupling forces the supports of low-degree relations to
-align with row/column partitions of the permanent variables. If yes, classify
-those partitions exactly.
-
-## B1-X.3 — target integrability upgrade
-
-The existing integrability argument only proves `H_Z(5)<=40`. Seek the next
-permanent-specific consequence, for example:
+Verify independently that a reduced length-42 projective Hilbert function
+cannot plateau below 42 and then grow again. Check both eliminated cases:
 
 ```text
-H_Z(5)<=39,
-a forbidden shape of the degree-five relation space,
-or a forced rank defect in one torus block.
+H3=H4=36<42,
+H4=H5=40<42.
 ```
 
-Any universal improvement must be checked against the four explicit Hilbert
-profile controls.
+**Required output:** exact proof note, deterministic payload, and focused test.
 
-## B1-X.4 — close B1
+## Task 0.2 — reconcile the earlier checkpoint artifacts
 
-B1 is closed only when all four strata are excluded for arbitrary invertible
-weights and arbitrary reduced common-graph point configurations.
-
-Required status line:
+Update or explicitly supersede every occurrence of:
 
 ```text
-B1-CLOSED: no weighted common-graph Packet-B solution exists in
-characteristic zero.
+target-compatible geometrically feasible strata = four pairs
 ```
 
-If a survivor remains, record `B1-SURVIVOR` instead and stop broad exclusion
-work until the survivor is understood.
+in the checkpoint documentation, payload fields, tests, and research log.
+The rational-curve-union examples remain valid only as degree-three/four
+profile controls. They are not target-containment witnesses.
+
+**Acceptance condition:** repository search finds no theorem-facing text that
+still treats `(32,40)` as compatible with `H_Z(5)<=40`.
+
+## Task 0.3 — freeze the six relation flags
+
+For each of the six cases, record:
+
+- `dim C_3,C_4,C_5`;
+- `dim R_3,R_4,R_5`;
+- all strictly increasing admissible `H_Z(6)` values;
+- all Macaulay-admissible first differences through stabilization;
+- whether the points necessarily span `P^6` and, if used, the proof.
+
+**Required output:** one compact machine-readable case table. Do not create six
+nearly identical payloads at this stage.
+
+## Task 0.4 — freeze matrix conventions
+
+Use one convention throughout the package:
+
+```text
+E_d: 42 x binom(d+6,6) evaluation matrix,
+C_d: row/column code in k^42 as explicitly declared,
+R_d: dual relation space,
+D: nonzero diagonal term-weight matrix,
+w_i=d_i^{-1}.
+```
+
+Every later script must state whether vectors are rows or columns. Add one
+transpose regression test so that `ker(E4^T)` and `im(E3)` cannot silently be
+interchanged.
+
+## Task 0.5 — exact baseline gate
+
+Run:
+
+- the strict-growth replay;
+- the weighted common-graph interface replay;
+- all focused B1 tests;
+- the repository English-only gate;
+- the full repository test workflow.
+
+**WP0 completion:** one exact commit with successful CI and the six-case table
+as the only active B1 boundary.
 
 ---
 
-# 8. Workstream B2-R — remove the common-graph assumption
+# Work Package 1 — common-graph relation-flag foundation
 
-## Goal
+## WP1 objective
 
-Pass from the common-graph model to the actual arbitrary mixed Packet-B
-equality packet.
+Replace large undifferentiated rank conditions by a small exact system on the
+nested relation flag
 
-This is not optional. B1-CLOSED alone does not prove Packet B impossible.
+\[
+R_5\subseteq R_4\subseteq R_3\subset k^{42},
+\]
 
-## B2-R.1 — restate arbitrary Packet B in intrinsic coordinates
+the point-coordinate matrix, the seven target coefficient rows, and the
+nonzero weights.
 
-Write the seven rank-six terms as a direct sum of six-factor spaces and each
-of the 42 rank-seven terms as an appropriate graph complement relative to the
-fixed 42-space.
+## Task 1.1 — derive the evaluation-code multiplication identities
 
-Make explicit which graph maps may differ term-by-term.
+Prove and implement the exact Schur-product relations among the point codes:
 
-## B2-R.2 — identify shared equality data
+\[
+C_{d+1}=\operatorname{span}(C_d*C_1)
+\]
 
-Derive what the slope-ten equality forces globally across the 42 separate
-graph complements:
+in the chosen affine/homogeneous convention. Record the dual multiplication
+maps
 
-- shared domain/codomain flags;
-- common evaluation-code quotients;
-- synchronized relation spaces;
-- overlap ranks;
-- term-weight equations.
+\[
+R_{d+1}\longrightarrow R_d\otimes C_1^*
+\]
 
-## B2-R.3 — prove a common-code reduction if possible
+for `d=3,4,5`.
 
-The strongest desired theorem is not necessarily “all graph maps are equal.”
-It is enough to show that all terms induce one common pair of degree-three and
-degree-four codes, or a finite number of code types covered by B1-like
-arguments.
+The implementation must work with exact integers or rationals on symbolic
+controls and with modular arithmetic only as a replay acceleration.
 
-## B2-R.4 — otherwise classify residual moduli
+## Task 1.2 — enumerate admissible Hilbert and Betti data
 
-If a common-code theorem is false, construct an exact counterexample and list
-the true residual moduli. Then stratify only by invariants that actually enter
-the coupling and permanent target equations.
+For each of the six cases, enumerate every Macaulay-admissible continuation
+through degree six and stabilization. Determine:
 
-## B2-R.5 — derive finite structural branches
+- first-difference sequences;
+- possible regularity;
+- dimensions of `I_Z(d)` for `d=3,4,5,6`;
+- forced numbers of new generators in degrees four, five, and six;
+- any Gotzmann-persistent branches;
+- any branch forcing a positive-dimensional base locus.
 
-A valid reduction should end in a finite list resembling:
+Do not enumerate arbitrary ideals. First use numerical growth to reduce to a
+small finite list of Hilbert/Betti types.
+
+**Decisive sub-outcome:** if a listed type is not realizable by 42 distinct
+reduced points, remove it with a characteristic-zero proof.
+
+## Task 1.3 — construct a minimal target-support representation
+
+Let `a_i in k^7` be homogeneous point vectors and let `c_i in k^7` be the
+column of coefficients representing the seven permanent degree-six targets
+as combinations of `l_i^6`.
+
+Choose an inclusion-minimal target-support subset and prove the exact
+independence properties needed for that choice. Keep repeated-point exclusion
+and nonzero combined coefficients explicit.
+
+**Required output:** a coordinate-free statement and a small evaluator that
+checks minimality without enumerating all subsets.
+
+## Task 1.4 — derive the full mixed-partial relation-web equation
+
+From equality of mixed partials derive
+
+\[
+c_i\wedge a_i
+ =\sum_{\alpha=1}^{q_5}\rho_i^{(\alpha)}\beta_\alpha,
+\qquad q_5=\dim R_5\in\{2,3,4\},
+\]
+
+where `rho^(alpha)` is a basis of fifth-power relations and
+`beta_alpha in wedge^2 k^7`.
+
+Prove basis-change invariance in `R_5`, target-row invariance, and the exact
+relation between this equation and degree-six target containment. Separate:
+
+- necessary integrability equations;
+- sufficient reconstruction equations;
+- open nonvanishing/minimality conditions.
+
+No theorem may be promoted from the necessary equations alone.
+
+## Task 1.5 — classify the `q_5=2` alternating pencil
+
+This lane covers:
 
 ```text
-common-code branch
-rank-drop branch
-overlap branch
-boundary/degeneration branch
-exceptional support-partition branch
+B1-33-39-40,
+B1-34-38-40,
+B1-35-37-40.
 ```
 
-The list must be mathematically exhaustive, not empirically observed.
+For the pencil
+
+\[
+\beta(s,t)=s\beta_1+t\beta_2,
+\]
+
+analyze the rank-at-most-two points forced by the 42 relation-coordinate
+columns. Use exact Pfaffian equations. Split into:
+
+1. the entire pencil lies in the decomposable Grassmannian;
+2. the relation-coordinate points occupy at most two Pfaffian roots;
+3. one or more coefficient columns vanish or leave the minimal support;
+4. a boundary with common vector or fixed three-space support.
+
+Classify every branch in characteristic zero. For branches where the entire
+pencil is decomposable, apply the classification of linear spaces in
+`Gr(2,7)` and derive the resulting restriction on the point vectors `a_i` and
+target coefficient vectors `c_i`.
+
+**Preferred theorem:** every full-support target representation in the
+`q_5=2` cases integrates to a shorter Waring expression or forces a forbidden
+Hilbert plateau.
+
+## Task 1.6 — classify the `q_5=3` alternating net
+
+This lane covers:
+
+```text
+B1-34-38-39,
+B1-35-37-39.
+```
+
+Let the relation coordinates be 42 points in `P^2`. Determine the common zero
+scheme of the `4 x 4` Pfaffian quadrics of the alternating net. Split by the
+quadratic Hilbert function of those 42 relation-coordinate points:
+
+- not contained in a conic;
+- contained in a reduced conic;
+- contained in a double line or two lines;
+- supported on a line plus residual points;
+- finite Pfaffian base locus.
+
+For each branch determine whether the net is contained in the decomposable
+Grassmannian, has a common vector, is supported in a fixed four-space, or has
+only finitely many rank-two members.
+
+Tie every surviving branch back to the nested relation flag `R_5 subset R_4`
+and the actual evaluation-code multiplication maps.
+
+## Task 1.7 — classify the `q_5=4` alternating web
+
+This lane is specific to `B1-35-37-38`.
+
+Let the relation-coordinate points lie in `P^3`. Compute the Pfaffian-quadric
+system and split by its base locus:
+
+- all of `P^3`;
+- a surface component;
+- a curve component;
+- a finite scheme;
+- coordinate points lying in a proper plane or line.
+
+Use exact primary decomposition only after exploiting the low-dimensional
+skew-form classification. Avoid a generic elimination in all point
+coordinates.
+
+**Required output:** a finite list of structural web types or a proof that no
+full-support web is compatible with the target representation.
+
+## Task 1.8 — compress weighted coupling to a full-support kernel problem
+
+For each point configuration choose:
+
+- a parity-check matrix `P_3` with `ker P_3=C_3`;
+- a basis matrix `Q_4` for `R_4`.
+
+With reciprocal weights `w_i=d_i^{-1}`, prove that
+
+\[
+R_4\subseteq D C_3
+\]
+
+is equivalent to
+
+\[
+\boxed{P_3\operatorname{diag}(w)Q_4=0}.
+\]
+
+Flatten this to a linear system
+
+\[
+A_Zw=0
+\]
+
+with respectively 27, 32, and 35 displayed scalar rows for the three rank
+pairs. The real condition is not merely `ker A_Z != 0`; it is
+
+\[
+\ker A_Z\cap(k^\times)^{42}\ne\varnothing.
+\]
+
+Determine exact criteria for the kernel to meet the full-support torus:
+
+- coordinate hyperplanes do not cover the kernel;
+- matroid-coloop formulation;
+- maximal-minor or dual-support certificate;
+- behavior under basis changes of `P_3` and `Q_4`.
+
+## Task 1.9 — derive the coupling degeneracy loci
+
+For each rank pair, determine the locus where `A_Z` has:
+
+- its generic rank;
+- rank drop by one;
+- larger rank drop;
+- a kernel contained in a coordinate hyperplane;
+- a full-support kernel.
+
+The output should be a small determinantal or matroid condition on the
+relation flag, not all minors of the original `210 x 84` matrix.
+
+## Task 1.10 — compress degree-six target containment through the ideal
+
+Let `I_Z(6)=ker E_6`. Prove that containment of the seven target rows is
+equivalent to vanishing of the projection
+
+\[
+I_Z(6)\longrightarrow k^7
+\]
+
+onto the seven squarefree target coordinates.
+
+Then express this projection using the smallest available data from:
+
+- generators of `I_Z` in degrees at most six;
+- multiplication maps from `I_Z(4)` and `I_Z(5)`;
+- the relation-web equation;
+- the six-case Hilbert/Betti type.
+
+The goal is to avoid repeatedly forming `42 x 924` matrices during symbolic
+elimination.
+
+## Task 1.11 — prove target sufficiency or record the missing equations
+
+For every compressed target system, prove one of:
+
+```text
+EQUIVALENT:
+The small equations plus the declared open conditions are equivalent to
+rank(stack(E6,S6))=rank(E6).
+```
+
+or
+
+```text
+NECESSARY ONLY:
+The exact additional equations still missing are listed and implemented in
+the final verifier.
+```
+
+No case may be closed using a necessary-only compression without checking the
+full target matrix at the final exact point or certificate.
+
+## Task 1.12 — choose quotient and gauge coordinates
+
+Remove only genuine symmetries:
+
+- projective scaling of each point;
+- basis changes in relation spaces;
+- target-row basis changes preserving the fixed target subspace;
+- common ambient coordinate changes that preserve the permanent target when
+  actually allowed.
+
+Do not quotient by arbitrary `PGL_7` if it changes the seven permanent target
+monomials. Record every gauge denominator as an explicit nonvanishing
+condition.
+
+## Task 1.13 — build mandatory controls
+
+The foundation must include at least these controls:
+
+1. a reduced 42-point profile control for every displayed `(H3,H4)` pair;
+2. the old weighted `(31,41)` coupling-positive, target-negative control;
+3. a target-row omission regression that becomes a false positive;
+4. a weight omission regression that becomes a false positive;
+5. a repeated-point control rejected by minimality;
+6. a synthetic system satisfying integrability but failing full target
+   reconstruction;
+7. a full-support weight vector and a coordinate-hyperplane-only kernel
+   control.
+
+## WP1 completion gate
+
+WP1 is complete when all six cases have:
+
+- a finite Hilbert/Betti list;
+- an exact relation-web type list;
+- the small full-support coupling system;
+- an equivalent or explicitly completed target system;
+- a deterministic final verifier.
+
+WP1 does not require that the six cases are already excluded.
 
 ---
 
-# 9. Workstream B2-E — exhaust arbitrary Packet-B branches
+# Work Package 2 — decisive solution of the six B1 cases
 
-## Goal
+## WP2 objective
 
-Close every branch produced by B2-R, reusing the existing exact certificate
-library wherever possible.
+Return `CLOSED` or an exact survivor for each of the six corrected
+common-graph cases. Work by relation-defect dimension, not by another blind
+point scan.
 
-## B2-E.1 — certificate map
+## Common lane protocol
 
-Create a small table mapping each branch to already proved exclusions:
+Every case lane follows all seven steps below.
 
-- high-overlap dense strata;
-- Laurent-torus boundary audit;
-- `(2,3)/(3,2)` rank-one update exclusions;
-- `(2,4)/(4,2)` rank-one update exclusions;
-- signed families;
-- monomial families;
-- elementary-shear families;
-- common-graph B1 theorem when applicable.
+### Lane step A — exact chart inventory
 
-This is documentation, not a new registry or database.
+Construct a finite chart cover justified by the WP1 structural classification.
+State why every reduced full-support configuration in that case enters at
+least one chart.
 
-## B2-E.2 — prove uncovered branches
+### Lane step B — finite-field reconnaissance
 
-For every branch not covered by an existing theorem, derive the smallest exact
-invariant capable of distinguishing it. New computation is justified only for
-these explicitly uncovered branches.
+Use at most a few controlled primes to:
 
-## B2-E.3 — mixed-term coupling
+- locate components;
+- choose pivots;
+- estimate dimensions;
+- find candidate exact points;
+- falsify proposed universal lemmas.
 
-Retain term labels. Scalar sums of code dimensions are insufficient. The
-arbitrary packet must satisfy the exact relation transport between the
-individual graph complements and the seven rank-six terms.
+Finite-field emptiness alone is not a characteristic-zero exclusion.
 
-## B2-E.4 — target containment
+### Lane step C — characteristic-zero closure
 
-At least degree six must be enforced. Degree seven is added only if a branch
-passes every degree-six test and the original Packet-B reduction really
-requires a seventh-degree condition.
+Close each chart using one or more of:
 
-## B2-E.5 — Packet-B decisive outcome
+- exact rational row reduction;
+- integer nonzero minors;
+- Groebner or resultant elimination with a stated monomial order;
+- saturation by all declared open conditions;
+- a controlled algebraic-number certificate;
+- a pure structural theorem that makes elimination unnecessary.
+
+### Lane step D — full verifier
+
+Recheck, independently of the elimination representation:
+
+```text
+42 distinct reduced points,
+correct H3/H4/H5 ranks,
+seven degree-six target containments,
+nonzero weights,
+rank(E4^T D E3)=30,
+all graph and minimality hypotheses.
+```
+
+### Lane step E — survivor rule
+
+An exact survivor is investigated immediately. Determine whether it:
+
+- gives a genuine common-graph equality packet;
+- violates a reduction hypothesis;
+- exposes a missing higher-degree target equation;
+- extends to the full 49-term permanent identity;
+- supplies a counterexample to the planned exclusion lemma.
+
+### Lane step F — independent replay
+
+A second implementation must verify the load-bearing determinant, ideal, or
+exact point without importing the first implementation's intermediate
+matrices.
+
+### Lane step G — lane verdict
+
+Use exactly one verdict:
+
+```text
+CASE-CLOSED
+CASE-SURVIVOR
+CASE-BLOCKED-BY-EXPLICIT-MISSING-LEMMA
+```
+
+`BLOCKED` must name one precise lemma and its smallest falsifiable test; it is
+not permission to resume broad search.
+
+## Case 2.1 — `B1-33-39-40`
+
+Relation dimensions:
+
+```text
+(dim R3, dim R4, dim R5)=(9,3,2).
+```
+
+Primary route:
+
+1. apply the alternating-pencil classification;
+2. classify the one-dimensional growth `H4 -> H5`;
+3. determine the unique or finite possible degree-five base-locus geometry;
+4. combine the three-dimensional `R4` flag with the 27-row weight system;
+5. test whether any full-support reciprocal weight survives the exact target
+   equations.
+
+Preferred closure certificate: a pure pencil/base-locus contradiction or one
+small saturated ideal.
+
+## Case 2.2 — `B1-34-38-39`
+
+Relation dimensions:
+
+```text
+(dim R3, dim R4, dim R5)=(8,4,3).
+```
+
+Primary route:
+
+1. classify the alternating net and the relation-coordinate conic cases;
+2. exploit the single growth from 38 to 39;
+3. determine whether `R5` forces a common-vector or fixed-four-space web;
+4. impose the 32-row full-support weight system;
+5. close every conic, line-pair, and finite-Pfaffian branch separately.
+
+## Case 2.3 — `B1-34-38-40`
+
+Relation dimensions:
+
+```text
+(dim R3, dim R4, dim R5)=(8,4,2).
+```
+
+Primary route:
+
+1. apply the alternating-pencil classification;
+2. exploit two-dimensional growth from degree four to five;
+3. compare the extra degree-five code direction with the four-dimensional
+   `R4` relation space;
+4. determine whether the coupling kernel necessarily loses full support;
+5. otherwise solve the remaining exact target incidence.
+
+This lane must not be inferred from Case 2.2; the smaller `R5` changes the
+integrability geometry.
+
+## Case 2.4 — `B1-35-37-38`
+
+Relation dimensions:
+
+```text
+(dim R3, dim R4, dim R5)=(7,5,4).
+```
+
+Primary route:
+
+1. classify the alternating web in `P^3`;
+2. exploit the minimal one-dimensional degree-five growth;
+3. classify positive-dimensional Pfaffian base loci before any elimination;
+4. combine the five-dimensional `R4` flag with the 35-row weight system;
+5. use exact saturation to remove coordinate-weight and repeated-point
+   boundary components.
+
+This is expected to be the broadest single common-graph lane. It receives the
+largest B1 computational budget, but still may not begin with arbitrary point
+coordinates.
+
+## Case 2.5 — `B1-35-37-39`
+
+Relation dimensions:
+
+```text
+(dim R3, dim R4, dim R5)=(7,5,3).
+```
+
+Primary route:
+
+1. classify the alternating net;
+2. exploit two-dimensional degree-five growth;
+3. compare net Pfaffian branches with the five-dimensional `R4` extension;
+4. impose full-support reciprocal weights;
+5. solve target and coupling jointly, not sequentially.
+
+## Case 2.6 — `B1-35-37-40`
+
+Relation dimensions:
+
+```text
+(dim R3, dim R4, dim R5)=(7,5,2).
+```
+
+Primary route:
+
+1. classify the alternating pencil;
+2. exploit three-dimensional degree-five growth;
+3. determine whether the larger growth forces the pencil relation points to
+   occupy too few Pfaffian roots;
+4. impose the five-dimensional `R4` extension and 35-row weight system;
+5. close all full-support branches exactly.
+
+## Task 2.7 — cross-case consolidation
+
+After all six lane verdicts:
+
+- identify shared lemmas and remove duplicated proofs;
+- verify every strict-growth and Hilbert branch appears exactly once;
+- ensure no lane silently assumes generic points;
+- ensure saturation includes all nonzero weights and chart denominators;
+- ensure the final full verifier uses the original `E3,E4,E5,E6,S6`
+  matrices.
+
+## Task 2.8 — B1 decisive verdict
 
 Return exactly one of:
 
 ```text
-PACKET-B-CLOSED
-PACKET-B-SURVIVOR
+B1-CLOSED:
+No weighted common-graph Packet-B solution exists in characteristic zero.
 ```
 
-`PACKET-B-CLOSED` requires coverage of arbitrary allowed graph complements,
-not just common graphs or a finite sampled family.
-
----
-
-# 10. Workstream A0 — rebuild the Packet-A interface at the current frontier
-
-## Goal
-
-Prepare the all-rank-seven packet for theorem work without reopening already
-failed scalar routes.
-
-## A0.1 — freeze exact one-term derivative modules
-
-For a generic rank-seven Chow term `T_i`, record bases and dimensions for
-
-\[
-D_2(T_i),\quad D_5(T_i),\quad D_6(T_i),
-\]
-
-plus the multiplication/differentiation maps needed below.
-
-## A0.2 — term-labelled direct sum
-
-Construct the labelled spaces
-
-\[
-\bigoplus_{i=1}^{49}D_d(T_i)
-\]
-
-and the map to the aggregate permanent derivative space. Do not quotient away
-term labels before the cross-degree relations are formed.
-
-## A0.3 — mandatory adversarial controls
-
-Every proposed lemma must be tested against:
-
-1. the 49-term Glynn truncation counterexample;
-2. existing non-tensor-split Sylvester-equality examples;
-3. a generic random rank-seven Chow-term ensemble as a sanity control.
-
-Only the first two are theorem-relevant adversarial examples; the random
-ensemble is diagnostic.
-
----
-
-# 11. Workstream A25 — degree `2/5` relation pairing
-
-## Goal
-
-Exploit complementary degrees before introducing the larger `3/4` interface.
-
-## A25.1 — define the labelled relation spaces
-
-Let `R_2` and `R_5` be the kernels of the maps from the labelled one-term
-derivative sums to the corresponding aggregate derivative spaces. Construct
-the exact termwise pairing induced by multiplication/differentiation.
-
-## A25.2 — derive Sylvester equality constraints
-
-Translate equality in the endpoint rank bound into a condition of the form
-
-\[
-\ker B\subseteq\operatorname{im}C
-\]
-
-with all term labels retained. State dimensions and radicals explicitly.
-
-## A25.3 — split by permanent torus weights
-
-Decompose the pairing by row/column multidegrees. Identify the smallest block
-in which the permanent target has a rank demand that a 49-term all-rank-seven
-packet may fail.
-
-## A25.4 — defect theorem or survivor
-
-Try to prove one permanent-specific positive defect in the `2/5` system. If
-no defect exists, construct an exact packet satisfying the full encoded
-`2/5` equations and use it to identify what information is missing.
-
----
-
-# 12. Workstream A6 — degree-six permanent target for Packet A
-
-## Goal
-
-Use degree six as the first explicit permanent-specific target beyond the
-relation pairing.
-
-## A6.1 — construct target quotient blocks
-
-For the 49 labelled rank-seven terms, compute the span available in each
-missing-row/missing-column sextic block and compare it with the permanent
-sextic derivative target.
-
-## A6.2 — couple A6 to A25
-
-The same term coefficients and factor planes must realize both interfaces.
-Do not optimize degree-six containment independently from the `2/5` relation
-pairing.
-
-## A6.3 — factor-plane matroid constraints
-
-Use the forced simple multilinear matroid only after the term-labelled maps
-are written. Existing counterexamples show that unlabelled incidence data is
-insufficient by itself.
-
-## A6.4 — search for a blockwise contradiction
-
-Preferred theorem forms include:
-
-- one torus block has unavoidable positive defect;
-- equality forces a tensor-split normal form already known to be impossible;
-- complementary-degree radicals cannot be simultaneously represented by 49
-  rank-seven Chow terms;
-- the sextic target forces a forbidden dependence among factor seven-planes.
-
----
-
-# 13. Workstream A34 — conditional degree `3/4` escalation
-
-## Entry condition
-
-Start only if a genuine exact or symbolically unresolved survivor passes the
-complete A25+A6 interface.
-
-## Goal
-
-Add the larger middle complementary-degree system only where it is needed.
-
-## A34.1 — construct term-labelled middle codes
-
-Build the exact degree-three and degree-four labelled derivative maps for the
-survivor component.
-
-## A34.2 — relation transport
-
-Track how every term-labelled relation in degree three differentiates or
-multiplies into degree four and how the Sylvester equality couples the two.
-
-## A34.3 — permanent torus decomposition
-
-Again split by row/column weights before any large elimination.
-
-## A34.4 — classify surviving components
-
-Return a finite theorem-defined list, an exact survivor, or a contradiction.
-Do not replace this step with an unrestricted random search.
-
----
-
-# 14. Workstream AX — cross-Packet structural lemmas
-
-## Goal
-
-Search for permanent-specific endpoint principles that simultaneously explain
-why both equality packets should fail.
-
-This is a secondary stream and must not delay concrete B1/B2 work.
-
-## AX.1 — common complementary-degree obstruction
-
-Compare the exact equality maps in Packets A and B. Determine whether both are
-instances of one general statement about minimal 49-term decompositions of
-`perm_7`.
-
-## AX.2 — gradient integrability with Chow structure
-
-The current B1 integrability theorem uses Waring rank after passing to powers.
-Seek a version retaining Chow factorization and term labels. Even a modest
-strengthening may eliminate multiple B1 strata or constrain Packet A.
-
-## AX.3 — apolar resolution interface
-
-Determine whether the permanent's low-degree apolar resolution has a Betti or
-syzygy feature incompatible with either endpoint packet while remaining
-satisfied by the existing counterexample controls.
-
-A speculative invariant is kept only if it produces a concrete exact test in
-one research cycle.
-
----
-
-# 15. Workstream C — exact computation support
-
-## Goal
-
-Provide only the computation needed by the theorem streams above.
-
-## C.1 — reusable exact evaluation-code primitives
-
-Factor out only genuinely reused routines for:
-
-- homogeneous monomial enumeration;
-- evaluation matrices;
-- exact/modular rank;
-- kernel bases;
-- target quotient defect;
-- diagonal coupling rank.
-
-Do not build a general computer-algebra framework.
-
-## C.2 — modular discovery protocol
-
-Finite fields may be used to:
-
-- find pivots;
-- locate likely components;
-- discover candidate minors;
-- search for counterexamples;
-- estimate dimensions.
-
-They may not by themselves certify characteristic-zero nonexistence.
-
-## C.3 — characteristic-zero promotion
-
-Every theorem-facing finite calculation must end as one of:
-
-- exact rational elimination;
-- exact integer determinant/minor;
-- modular nonzero minor with a valid integer lift argument;
-- exact number-field certificate with minimal polynomial and replay.
-
-## C.4 — survivor serialization
-
-Every exact survivor must be written to one compact machine-readable artifact
-containing points/factors, weights, and every claimed rank. Avoid proliferating
-intermediate search dumps.
-
-## C.5 — independent replay
-
-A load-bearing computation gets one independent replay implementation or one
-mathematically independent certificate. Routine exploratory calculations do
-not require duplicated infrastructure.
-
----
-
-# 16. Workstream D — adversarial theorem audit
-
-## Goal
-
-Prevent a false lower-50 promotion while keeping review proportional.
-
-## D.1 — hypothesis ledger
-
-For each endpoint-exclusion theorem, record:
+or
 
 ```text
-characteristic
-ordinary vs border rank
-point reducedness
-weight nonvanishing
-minimality assumptions
-rank-stratum assumptions
-closure/boundary coverage
-external theorems invoked
+B1-SURVIVOR:
+An exact characteristic-zero common-graph object satisfies every equality,
+coupling, target, reducedness, distinctness, and nonvanishing condition.
 ```
 
-This is a markdown table, not a new database.
+If some cases are closed and one is blocked, the workstream remains open and
+the blocked lemma becomes the sole next B1 target.
 
-## D.2 — counterexample attack
+## Task 2.9 — B1 adversarial audit
 
-For every major lemma ask:
+An independent audit must attack:
 
-- Does Glynn truncation violate it?
-- Does the lemma accidentally assume generic points?
-- Does setting one weight to zero create a false proof?
-- Does a repeated-point degeneration escape the argument?
-- Does a nonreduced flat limit invalidate a continuity step?
-- Is a modular rank being interpreted in the wrong direction?
+- the strict-growth use;
+- minimal target-support independence;
+- relation-web sufficiency;
+- basis and transpose conventions;
+- saturation by weight coordinates;
+- finite-field-to-characteristic-zero inferences;
+- omitted boundary charts;
+- use of curve controls as anything more than profile controls.
 
-## D.3 — boundary audit
-
-Any proof using a chart or invertible minor must explicitly cover its
-complement. Boundary coverage may cite another theorem; it need not duplicate
-it.
-
-## D.4 — independent mathematical review
-
-Before promotion, perform at least one fresh proof-chain audit from the
-slope-ten endpoint reduction to Packet-A and Packet-B exclusion without using
-the authors' intended proof order as an assumption.
+All fatal and major findings must be repaired before B1 is used in B2.
 
 ---
 
-# 17. Workstream P — lower-50 theorem assembly
+# Work Package 3 — arbitrary mixed graph-complement Packet B
 
-## Entry condition
+## WP3 objective
 
-Start final assembly only when both statuses exist:
+Upgrade the common-graph result to the full mixed equality packet consisting
+of seven direct rank-six equality terms and 42 arbitrary permitted rank-seven
+graph complements.
 
-```text
-PACKET-A-CLOSED
-PACKET-B-CLOSED
-```
+B1 closure alone is not Packet-B closure.
 
-## P.1 — theorem dependency graph
+## Task 3.1 — write the coordinate-free full Packet-B variables
 
-Write the shortest dependency chain from established lower 49 to exclusion of
-all 49-term identities. Remove exploratory lemmas that are not load-bearing.
-
-## P.2 — statement scope
-
-The promoted statement must be exactly scoped. Unless separately proved, it
-should read as an ordinary characteristic-zero Chow-rank result:
+Fix the 42-space
 
 \[
-\operatorname{ChowRank}(\operatorname{perm}_7)\ge50.
+A=A_1\oplus\cdots\oplus A_7,
+\qquad \dim A_r=6,
 \]
 
-Do not silently promote to border rank or arbitrary characteristic.
+from the seven rank-six equality terms. Parameterize each rank-seven
+complement by the smallest graph data over the common seven-dimensional
+quotient. Keep:
 
-## P.3 — exact frozen evidence
+- the 42 individual term labels;
+- all 42 term weights;
+- the seven factor directions inside each complement;
+- pairwise intersection restrictions;
+- graph nondegeneracy.
 
-Freeze only the artifacts used by the final theorem. Suggested maximum:
+Do not identify different terms merely because their unlabelled spans agree.
+
+## Task 3.2 — derive the exact full Sylvester-equality equations
+
+Construct the labelled maps
+
+\[
+B:\bigoplus_i K_i\to H_4,
+\qquad
+C:H_3^*\to\bigoplus_i K_i
+\]
+
+for the full mixed packet and encode
+
+\[
+\ker B\subseteq\operatorname{im}C.
+\]
+
+Retain the permanent target equations in degrees six and, only when genuinely
+needed, seven. Give a block decomposition by row-subset multidegrees.
+
+## Task 3.3 — isolate the coupled rank-drop locus
+
+The synchronized mixed-Glynn packet has coupling defect 35 and is not on the
+equality locus. Therefore:
+
+- do not linearize at that packet as though it were a solution;
+- do not use its tangent space as a model of the desired component;
+- do not continue support-by-support perturbations around it unless a proved
+  degeneration connects it to the actual rank-drop locus.
+
+Instead determine the equations forcing the required drop to
 
 ```text
-1 theorem/proof note
-1 dependency/audit note
-1 compact exact evidence payload per genuinely computational lemma
-1 independent replay per load-bearing computation
+rank(BC)=1225,
+rank(B)+rank(C)=2870.
+```
+
+## Task 3.4 — prove a common-code reduction or expose the exact obstruction
+
+Attempt to prove that every full Packet-B equality object admits, after only
+allowed changes of basis, a common evaluation-code model covered by B1.
+
+A valid reduction must preserve:
+
+- term labels;
+- term weights;
+- the seven target blocks;
+- the relation inclusion;
+- reducedness and graph nondegeneracy.
+
+If the reduction fails, return an explicit parameter list for the surviving
+extra moduli. Examples include:
+
+- block-dependent point codes;
+- noncommuting quotient identifications;
+- rank drops in graph maps;
+- changing factor frames;
+- boundary complete-collineation data.
+
+The failure itself is progress only when the extra moduli are finite and
+precisely described.
+
+## Task 3.5 — derive a finite structural stratum list
+
+From Task 3.4 produce one of:
+
+```text
+COMMON-CODE THEOREM
+```
+
+or
+
+```text
+FINITE MIXED STRATA S_1,...,S_m.
+```
+
+Each mixed stratum must specify dimensions, support/intersection pattern,
+open conditions, and which existing exact certificate applies.
+
+No unrestricted `GL_6^42` search is authorized as a substitute.
+
+## Task 3.6 — build the existing-certificate coverage matrix
+
+Map every stratum against the already completed library, including:
+
+- the full monomial-transform classification;
+- diagonal, signed-coordinate, and permutation-type closures;
+- elementary and multi-direction shear families;
+- coincident and overlap-one `(2,2)` closures;
+- overlapping `(2,3)/(3,2)` projective support closure;
+- overlapping `(2,4)/(4,2)` projective support closure;
+- overlap-four-through-six exact minor certificates;
+- the repaired Laurent-torus face audit;
+- all target-negative common-curve controls.
+
+For every imported certificate record:
+
+- exact hypotheses;
+- characteristic;
+- covered boundary faces;
+- missing nonnilpotent or higher-rank parameters.
+
+Do not rerun or duplicate a closed family.
+
+## Task 3.7 — handle true boundary degenerations
+
+Only for residual strata produced by Task 3.5, construct the correct compact
+boundary object. Raw limits of sums of moving subspaces are not sufficient.
+Use, as required:
+
+- flat limits;
+- Rees modules;
+- complete-collineation data;
+- Smith/valuation packets;
+- initial modules with retained term labels.
+
+Prove that the chosen compactification preserves the equations actually used.
+
+## Task 3.8 — close residual rank-one nonnilpotent strata
+
+If Task 3.5 produces rank-one strata beyond the already completed projective
+support closures, classify them by exact support and nilpotence type. Use
+projective face closure and saturation. Do not expand support size without a
+structural reason from the reduction.
+
+## Task 3.9 — close residual higher-rank perturbation strata
+
+If higher-rank graph perturbations survive, first prove a normal form reducing
+them to finitely many ranks and support dimensions. Then encode target and
+coupling simultaneously. Random higher-rank matrices are diagnostic only.
+
+## Task 3.10 — mixed-stratum exact verifier
+
+For every residual exact point or exclusion certificate, independently check:
+
+- seven rank-six terms in the correct equality normal form;
+- 42 rank-seven graph complements;
+- pairwise intersection limits;
+- full middle equality;
+- `ker B subset im C`;
+- all nonzero term weights;
+- permanent target containment;
+- the actual 49-term coefficient identity when claimed.
+
+## Task 3.11 — Packet-B survivor analysis
+
+An exact mixed survivor takes priority over further exclusion. Determine
+whether it is:
+
+- a genuine 49-term decomposition;
+- a point satisfying the endpoint equations but not the full identity;
+- a counterexample to common-code reduction;
+- evidence that degree seven or another labelled module is necessary.
+
+## Task 3.12 — B2 decisive verdict
+
+Return exactly one of:
+
+```text
+B2-CLOSED:
+Every arbitrary mixed graph-complement equality packet is impossible in
+characteristic zero.
+```
+
+or
+
+```text
+B2-SURVIVOR:
+An exact characteristic-zero mixed packet satisfies every proved endpoint,
+coupling, graph, and permanent-target condition.
+```
+
+Packet B is closed only after `B2-CLOSED`.
+
+## Task 3.13 — independent Packet-B audit
+
+Audit the structural reduction before auditing individual computations. A
+perfect residual-stratum computation cannot repair an incomplete reduction.
+The audit must explicitly search for:
+
+- unlisted quotient identifications;
+- mixed weights lost by normalization;
+- non-flat boundary limits;
+- term-label permutations that change the equations;
+- a hidden reliance on the synchronized mixed-Glynn packet.
+
+---
+
+# Work Package 4 — all-rank-seven Packet A
+
+## WP4 objective
+
+Exclude or exactly classify the 49 rank-seven equality terms whose factor
+seven-planes form the forced simple rank-seven multilinear matroid.
+
+Unlabelled Hilbert data, the quadratic interface, factor-plane incidence, and
+current scalar erasure bounds are already known to be insufficient.
+
+## Task 4.1 — define the minimal term-labelled module
+
+For every term `T_i`, retain the labelled spaces
+
+\[
+D_2(T_i),\quad D_5(T_i),\quad D_6(T_i)
+\]
+
+and the termwise multiplication/differentiation maps linking them. Build the
+smallest global module that sees:
+
+- the degree `2/5` complementary relation pairing;
+- degree-six target containment;
+- the Sylvester equality condition;
+- the individual term labels.
+
+Do not add degree `3/4` unless the smaller module leaves a genuine survivor.
+
+## Task 4.2 — derive exact dimensions and one-term caps
+
+Compute the target-module rank on `perm_7` and the maximum contribution of one
+rank-seven Chow term under the Packet-A transversality constraints. The gain
+must come from compatibility, not a nonnegative direct sum of known maps.
+
+Prove all one-term caps in characteristic zero. A modular rank gives only a
+lower bound on a denominator and must be paired with a structural upper bound.
+
+## Task 4.3 — split the module by permanent torus weights
+
+Decompose the target and term-labelled maps into row/column multidegrees or
+another exact permanent torus grading. Produce small blocks and identify:
+
+- target-only weights;
+- term-relation weights;
+- complementary `2/5` pairs;
+- blocks where the 49-term Glynn truncation is a mandatory negative control.
+
+## Task 4.4 — formulate the degree `2/5` relation pairing
+
+Let the degree-two relation module and degree-five image module retain the
+same term labels. Derive the exact pairing or connecting map forced by an
+actual identity
+
+\[
+\sum_{i=1}^{49}T_i=\operatorname{perm}_7.
+\]
+
+State clearly which equations disappear after forgetting labels. The
+resulting map should reject the known quadratic-interface counterexample only
+when permanent-specific higher-degree data are included.
+
+## Task 4.5 — formulate degree-six target containment
+
+Construct the smallest block matrix equivalent to
+
+\[
+E_6\subseteq\sum_iD_6(T_i)
+\]
+
+under the Packet-A factor-plane conditions. Keep all 49 target blocks, not
+only dimensions or random evaluations.
+
+## Task 4.6 — derive a structural defect theorem
+
+Aim for one theorem of one of these forms:
+
+1. at least one permanent target block has positive defect;
+2. equality forces a tensor-split or column-uniform normal form;
+3. a term-labelled degree-two relation cannot be realized compatibly in
+   degree five;
+4. the target module has rank greater than 49 times the one-term cap;
+5. every zero-defect configuration lies in an explicit finite list.
+
+The theorem must use permanent-specific hypotheses. Abstract multilinear
+matroid plus Sylvester equality is known to be insufficient.
+
+## Task 4.7 — analyze the zero-output-kernel branch
+
+Separate configurations where the relevant output summation map is injective
+from those with nonzero labelled relations. The lower-dimensional
+non-tensor-split Sylvester-equality example is a mandatory control: any lemma
+claiming equality alone forces a tensor split must fail on it.
+
+## Task 4.8 — analyze nonzero relation branches
+
+Classify the smallest possible labelled relation supports. Use factor-plane
+transversality and complementary-degree multiplication to determine whether a
+relation can propagate across 49 terms without violating a permanent target
+block.
+
+Prefer support-minimal relation arguments over enumerating subsets of 49
+terms.
+
+## Task 4.9 — mandatory Packet-A controls
+
+Every proposed Packet-A theorem must be tested against:
+
+1. the 49-term Glynn truncation, which passes weaker quadratic/scalar
+   interfaces but fails higher-degree permanent containment;
+2. the non-tensor-split Sylvester-equality plane configuration;
+3. the full 64-term Glynn decomposition as a positive identity control;
+4. repeated or proportional terms as a minimality-negative control;
+5. a synthetic labelled module with correct dimensions but deliberately
+   broken multiplication maps.
+
+## Task 4.10 — finite structural strata only after a theorem
+
+If Task 4.6 reduces Packet A to finitely many normal forms, construct exact
+charts for those forms. Do not begin a general search over 49 arbitrary
+seven-planes before such a reduction.
+
+## Task 4.11 — exact closure or survivor
+
+For each theorem-produced stratum, return:
+
+```text
+A-STRATUM-CLOSED
+```
+
+or an exact characteristic-zero survivor with the full labelled module and
+target verification.
+
+## Task 4.12 — Packet-A decisive verdict
+
+Return exactly one of:
+
+```text
+A-CLOSED:
+No all-rank-seven 49-term equality packet can satisfy the permanent identity.
+```
+
+or
+
+```text
+A-SURVIVOR:
+An exact characteristic-zero Packet-A object satisfies every encoded
+term-labelled cross-degree and target condition.
+```
+
+## Task 4.13 — independent Packet-A audit
+
+The audit must check:
+
+- no accidental replacement of the identity by dimension equalities;
+- no loss of term labels;
+- no unjustified torus degeneration of arbitrary terms;
+- no use of a direct-sum capacity already proved insufficient;
+- every control behaves in the expected direction;
+- every structural stratum is actually exhaustive.
+
+---
+
+# Work Package 5 — combine, audit, and promote lower 50
+
+## WP5 objective
+
+Convert `A-CLOSED` and `B2-CLOSED` into one frozen ordinary lower-50 theorem
+with exact replay and a clean claim boundary.
+
+## Task 5.1 — endpoint-exhaustion reconciliation
+
+Re-read the slope-ten endpoint theorem and verify that the two packets remain
+exhaustive after all later corrections. Check:
+
+- the rank-five branch exclusion;
+- the integer equation `6a+7b=49`;
+- all equality increments;
+- characteristic-zero scope;
+- ordinary-rank versus border-rank wording.
+
+## Task 5.2 — assemble the proof chain
+
+The theorem draft must expose the chain in this order:
+
+```text
+existing lower 49
+-> slope-ten equality classification
+-> Packet B exclusion
+-> Packet A exclusion
+-> lower 50.
+```
+
+Every imported lemma must cite its exact repository artifact and frozen
+commit.
+
+## Task 5.3 — independent exact replay
+
+A clean replay must regenerate all load-bearing finite certificates from one
+exact commit. It should not require historical checkpoint chunks that have
+already been merged into complete payloads.
+
+## Task 5.4 — adversarial mathematical review
+
+The review must actively attempt to break:
+
+- strict Hilbert growth;
+- target-support minimality;
+- relation-web classification;
+- coupling full-support weights;
+- common-code or mixed-stratum exhaustiveness;
+- Packet-A module sufficiency;
+- characteristic-zero lifting;
+- boundary saturation;
+- the final endpoint dichotomy.
+
+Classify findings as fatal, major, minor, or editorial. Repair all fatal,
+major, and claim-affecting minor findings.
+
+## Task 5.5 — theorem-facing repository update
+
+Update, at minimum:
+
+- `README.md`;
+- `STATUS.md`;
+- `docs/research_log.md`;
+- the relevant `n7` program note;
+- the PR body with the exact final HEAD and test result.
+
+Remove or clearly mark historical status lines that still state an earlier
+lower bound as current.
+
+## Task 5.6 — promotion gate
+
+The statement
+
+\[
+\operatorname{ChowRank}(\operatorname{perm}_7)\geq50
+\]
+
+may be promoted only when all boxes are checked:
+
+```text
+[ ] The strict-growth correction is integrated and replayed.
+[ ] All six B1 cases are closed or subsumed by a stronger exact theorem.
+[ ] Arbitrary Packet B is closed, not only the common-graph specialization.
+[ ] Packet A is closed using permanent-specific term-labelled equations.
+[ ] Every structural reduction is proved exhaustive.
+[ ] Every load-bearing computation has an exact characteristic-zero meaning.
+[ ] Independent replay succeeds at one exact commit.
+[ ] Adversarial review has no unresolved fatal or major finding.
+[ ] The theorem-facing CI workflow passes.
+```
+
+Until every item is satisfied, the current interval remains
+
+\[
+49\leq\operatorname{ChowRank}(\operatorname{perm}_7)\leq64.
+\]
+
+---
+
+# 6. Dependency and parallel-execution map
+
+## Mandatory order
+
+```text
+WP0
+  -> WP1 relation-flag foundation
+      -> WP2 six B1 cases
+          -> WP3 Packet-B global closure
+
+WP0
+  -> WP4 Packet-A module construction and structural theorem
+
+WP3 B2-CLOSED + WP4 A-CLOSED
+  -> WP5 lower-50 promotion
+```
+
+## Authorized parallel work
+
+After WP0:
+
+- Tasks 1.1--1.10 may be developed in parallel where interfaces are frozen.
+- The three `q5=2` cases may share the pencil theorem but require separate
+  final verifiers.
+- The two `q5=3` cases may share the net theorem but require separate
+  `R4`-extension analysis.
+- Packet-A Tasks 4.1--4.5 may proceed while B1 cases are being solved.
+- Packet-B Task 3.1--3.4 may begin after the B1 conventions are frozen, but
+  heavy residual-stratum computation waits for Task 3.5.
+
+## No artificial serialization
+
+A completed lemma should immediately unlock every dependent case. Do not wait
+for all sibling cases when one shared theorem already applies.
+
+---
+
+# 7. Default artifact map
+
+These names are defaults, not a requirement to create empty placeholders.
+Consolidate artifacts when one theorem closes several cases.
+
+```text
+docs/n7_b1_relation_flag_foundation.md
+scripts/n7_b1_relation_flag_foundation.py
+data/n7_b1_relation_flag_foundation.json
+tests/test_n7_b1_relation_flag_foundation.py
+
+docs/n7_b1_case_33_39_40.md
+docs/n7_b1_case_34_38_39.md
+docs/n7_b1_case_34_38_40.md
+docs/n7_b1_case_35_37_38.md
+docs/n7_b1_case_35_37_39.md
+docs/n7_b1_case_35_37_40.md
+
+docs/n7_packet_b_global_reduction.md
+docs/n7_packet_b_global_closure.md
+
+docs/n7_packet_a_term_labelled_module.md
+docs/n7_packet_a_global_closure.md
+
+docs/n7_lower50_proof.md
+docs/n7_lower50_adversarial_review.md
+```
+
+For each theorem-facing finite result, the minimal preferred artifact set is:
+
+```text
+one proof note
+one deterministic implementation
+one frozen payload when the output is nontrivial
 focused tests
+one independent replay when the computation is load-bearing
 ```
 
-## P.4 — full repository test
-
-Run the theorem-facing exact tests and the existing repository suite at one
-frozen commit.
-
-## P.5 — adversarial signoff
-
-No lower-50 promotion while a fatal or major mathematical finding remains.
-Minor editorial findings may be repaired in place without creating a new
-research architecture.
+Do not create a manager, registry, database, generalized experiment platform,
+or one payload per trivial subcase.
 
 ---
 
-# 18. Workstream N50-S — survivor protocol
+# 8. Resource and computation discipline
 
-## Goal
-
-Treat exact survivors as valuable results rather than failed searches.
-
-Any exact survivor to a major interface immediately changes priorities.
-
-## S.1 — verify every hypothesis
-
-Recompute all required ranks and nonvanishing conditions independently.
-
-## S.2 — determine whether the survivor is a true endpoint packet
-
-Check whether it satisfies only a relaxed interface or all hypotheses of the
-Packet-A/Packet-B reduction.
-
-## S.3 — identify the missing invariant
-
-If it is not a true decomposition, isolate the first condition separating it
-from an actual 49-term identity. That condition becomes the next theorem
-target.
-
-## S.4 — do not bury survivors
-
-A structurally meaningful survivor gets a dedicated note and frozen exact
-coordinates. Do not keep expanding a search family merely to find more of the
-same type.
+1. Estimate candidate count and peak memory before every large run.
+2. Stream candidates; do not materialize large combinatorial families.
+3. Use finite fields to discover pivots and components, not as the final
+   theorem unless paired with a valid characteristic-zero inference.
+4. Prefer small exact blocks over random evaluation matrices.
+5. Reuse complete certificates instead of recomputing them.
+6. A single exact survivor outranks millions of negative samples.
+7. Stop a search when the open dense failure is already understood and the
+   equality locus has not been encoded.
+8. Do not launch unrestricted `GL_6`, arbitrary 42-point, or arbitrary
+   49-plane brute force.
 
 ---
 
-# 19. Workstream N50-M — milestone sequence
+# 9. Suspended routes
 
-This package is intentionally larger than one checkpoint. Progress should be
-recorded against the following milestones.
+The following remain suspended unless a new theorem explicitly reopens them:
 
-## Milestone M1 — four-stratum algebra frozen
-
-Required:
-
-```text
-[ ] S32/S33/S34/S35 exact coordinates defined
-[ ] coupling equations equivalent on each stratum
-[ ] degree-six target quotient blocks implemented
-[ ] positive and negative controls pass
-```
-
-## Milestone M2 — first two common-graph strata decided
-
-Required:
-
-```text
-[ ] S32 decisive outcome
-[ ] S33 decisive outcome
-[ ] exact certificates or exact survivors frozen
-```
-
-## Milestone M3 — common-graph family decided
-
-Required:
-
-```text
-[ ] S34 decisive outcome
-[ ] S35 decisive outcome
-[ ] B1-X cross-stratum theorem applied where useful
-[ ] B1-CLOSED or B1-SURVIVOR
-```
-
-## Milestone M4 — arbitrary Packet B decided
-
-Required:
-
-```text
-[ ] exhaustive arbitrary-graph structural reduction
-[ ] existing certificate library mapped to branches
-[ ] uncovered branches resolved
-[ ] PACKET-B-CLOSED or PACKET-B-SURVIVOR
-```
-
-## Milestone M5 — Packet A minimal interface decided
-
-Required:
-
-```text
-[ ] A25 relation pairing frozen
-[ ] A6 target coupled to A25
-[ ] adversarial controls checked
-[ ] either PACKET-A-CLOSED or an exact survivor entering A34
-```
-
-## Milestone M6 — both equality packets decided
-
-Required:
-
-```text
-[ ] PACKET-A-CLOSED
-[ ] PACKET-B-CLOSED
-```
-
-or an exact endpoint survivor demonstrating that lower 50 cannot be promoted
-by the present strategy.
-
-## Milestone M7 — theorem promotion
-
-Required:
-
-```text
-[ ] complete dependency chain
-[ ] exact evidence frozen
-[ ] independent replay
-[ ] adversarial audit no fatal/major issue
-[ ] CI and focused tests pass at one exact HEAD
-```
-
-Only at M7 may the lower bound be changed to 50.
-
----
-
-# 20. Parallel execution map
-
-The following tasks may run in parallel without creating duplicate work.
-
-```text
-Lane 1: B1-F -> S32 -> S33
-Lane 2: B1-F -> S34 -> S35
-Lane 3: B2-R intrinsic reduction, using B1 outputs as they become available
-Lane 4: A0 -> A25 -> A6
-Lane 5: exact-computation support + adversarial controls
-```
-
-Dependencies:
-
-```text
-B2-E waits for B2-R structural branches.
-A34 waits for a real A25+A6 survivor.
-Final theorem assembly waits for PACKET-A-CLOSED and PACKET-B-CLOSED.
-```
-
-No lane is created solely to keep hardware busy.
-
----
-
-# 21. Immediate execution batch
-
-The next concrete batch should be large enough to generate multiple genuine
-research decisions before the next replanning cycle.
-
-## Batch 1A — common-graph algebra and two primary strata
-
-Execute all of:
-
-```text
-B1-F.1
-B1-F.2
-B1-F.3
-B1-F.4
-B1-F.5
-B1-S32.1 .. B1-S32.5
-B1-S33.1 .. B1-S33.5
-```
-
-Expected deliverables:
-
-1. one exact four-stratum interface note;
-2. one deterministic evaluator shared only where mathematics is identical;
-3. S32 decision note;
-4. S33 decision note;
-5. compact exact evidence for any load-bearing calculations;
-6. focused tests.
-
-## Batch 1B — hard-stratum preparation
-
-In parallel execute:
-
-```text
-B1-S34.1
-B1-S34.2
-B1-S35.1
-B1-S35.2
-```
-
-The purpose is to expose structural invariants early, not to finish both
-strata before S32/S33 feedback is available.
-
-## Batch 1C — arbitrary Packet-B reduction
-
-Execute:
-
-```text
-B2-R.1
-B2-R.2
-B2-R.3
-B2-R.4 if the common-code reduction fails
-```
-
-Do not wait for B1 closure to discover whether the common-graph assumption is
-actually removable.
-
-## Batch 1D — Packet-A minimal system
-
-Execute:
-
-```text
-A0.1
-A0.2
-A0.3
-A25.1
-A25.2
-A25.3
-A6.1
-```
-
-This is enough to make Packet A a concrete algebraic problem while keeping
-A34 deferred.
-
-## Batch 1E — review controls
-
-Execute:
-
-```text
-D.1 hypothesis ledger skeleton
-C.2 modular-discovery rules in the relevant scripts/tests
-mandatory Glynn and Sylvester adversarial controls
-```
-
-These are lightweight safeguards attached to actual research outputs.
-
----
-
-# 22. Explicit stop rules
-
-The following work remains suspended unless a new theorem specifically
-reopens it:
-
-- larger scalar derivative/shadow dynamic programs;
+- additional scalar derivative or shadow dynamic programs;
 - more uncoupled standard Koszul sweeps;
-- more one-number Hilbert-function inequalities with no term labels;
-- enlargement of the completed 130-case monomial-curve weight box;
+- nonnegative direct sums of existing flattenings;
+- a direct transfer of the `perm_6` one-middle-layer proof;
+- increasing the old monomial-curve weight box;
 - unit-weight-only Packet-B classification;
-- unrestricted random point searches advertised as evidence of nonexistence;
-- unrestricted `GL_6` scans;
-- broad mixed-Glynn support enumeration without a theorem-defined component;
-- exact-64 engineering before the 49-term equality packets are understood;
-- generalized experiment managers, databases, job schedulers, registries, or
-  evidence platforms.
-
-A workstream also stops when it produces an exact survivor that satisfies all
-its encoded hypotheses. Analyze the survivor before expanding the search.
+- blind random finite-field point searches;
+- tangent expansion around the synchronized mixed-Glynn packet;
+- unrestricted general-`GL_6` scans;
+- unstructured expansion of mixed-Glynn support families;
+- exact-rank-64 work before the two 49-term packets are resolved.
 
 ---
 
-# 23. What counts as substantive progress
+# 10. Substantive-progress standard
 
-The following count as substantive progress:
+A result counts as substantive progress if it does at least one of the
+following:
 
-- closing one of S32/S33/S34/S35 for arbitrary characteristic-zero points and
-  nonzero weights;
-- finding an exact survivor to one of those strata;
-- proving a cross-stratum theorem that removes at least two strata;
-- proving an exhaustive reduction from arbitrary Packet B to finitely many
-  branches;
-- closing an uncovered arbitrary-Packet-B branch;
-- proving a term-labelled Packet-A defect;
-- finding a Packet-A survivor that exposes the missing invariant;
-- closing Packet A or Packet B;
-- promoting lower 50 after full audit.
+1. closes one of the six B1 cases in characteristic zero;
+2. proves a shared pencil, net, or web theorem closing multiple cases;
+3. produces an exact B1 survivor;
+4. proves the common-code reduction or a finite exhaustive mixed-stratum list;
+5. closes arbitrary Packet B;
+6. builds a sufficient Packet-A term-labelled module;
+7. closes Packet A;
+8. promotes lower 50 after audit.
 
-The following do **not** count as substantive progress by themselves:
+The following do not count as substantive completion by themselves:
 
-- a larger random sample with no survivor;
-- another finite-field prime agreeing with the first two;
-- a prettier implementation of an already available rank test;
-- eliminating a narrowly parameterized family not forced by the endpoint
-  equations;
-- adding infrastructure unrelated to a theorem-facing calculation.
+- another restricted family with no reduction theorem;
+- a larger negative random sample;
+- a finite-field empty search;
+- a new dimension bound already compatible with all six cases;
+- a planning-only status update;
+- more tests without a new load-bearing claim.
 
 ---
 
-# 24. Promotion gate
+# 11. Immediate launch batch
 
-The repository may state
-
-\[
-\boxed{\operatorname{ChowRank}(\operatorname{perm}_7)\ge50}
-\]
-
-only when every item below is satisfied.
+The next execution batch is deliberately larger than the previous one. Begin
+without requesting another planning round:
 
 ```text
-[ ] Every one of S32, S33, S34, S35 is excluded or subsumed by a valid
-    cross-stratum theorem.
-[ ] The common-graph assumption is removed by an exhaustive Packet-B
-    structural reduction.
-[ ] Every arbitrary Packet-B branch is excluded.
-[ ] Packet A is excluded by permanent-specific term-labelled complementary-
-    degree equations.
-[ ] Every boundary introduced by chart choices is covered.
-[ ] Nonzero weights and reduced-point hypotheses are handled correctly.
-[ ] Every load-bearing computation has a characteristic-zero certificate.
-[ ] Mandatory adversarial controls do not contradict any promoted lemma.
-[ ] An independent proof-chain review has no fatal or major finding.
-[ ] Focused tests and repository CI pass at one frozen exact commit.
+1. Replay and integrate the strict-growth correction.
+2. Freeze the six H3/H4/H5 relation-flag cases.
+3. Enumerate their admissible Hilbert/Betti continuations.
+4. Derive the mixed-partial relation-web equation for q5=2,3,4.
+5. Prove the full-support coupling compression P3 diag(w) Q4=0.
+6. Build the small ideal-based degree-six target projection.
+7. Classify the q5=2 alternating pencil completely.
+8. Start the q5=3 net classification and its conic/line branches.
+9. Build final exact verifiers for all six cases.
+10. In parallel, construct the Packet-A degree-2/5/6 labelled module.
+11. Begin the coordinate-free Packet-B reduction, but do not brute-force its
+    residual moduli before the reduction theorem is available.
 ```
 
-Until then the status remains
+The first major checkpoint is not another interface note. It is one of:
 
-\[
-\boxed{49\leq\operatorname{ChowRank}(\operatorname{perm}_7)\leq64}.
-\]
+```text
+- at least three of the six B1 cases closed exactly;
+- one shared theorem closing an entire q5 class;
+- an exact B1 survivor;
+- a proved structural reduction that makes all six cases finite and explicit.
+```
 
----
+# 12. Final success criterion
 
-# 25. Post-promotion package trigger
+The preferred output is the ordinary lower-50 theorem. The other scientifically
+valid decisive output is an exact survivor showing that the current endpoint
+invariants are insufficient and identifying the smallest missing invariant.
 
-Do **not** pre-build the lower-51 program now. Once lower 50 is genuinely
-promoted, immediately create a fresh frontier report answering:
-
-1. which inequalities were strict versus endpoint equalities at 50 terms;
-2. whether the 50-term endpoint has finitely many packet types or a broad new
-   family;
-3. whether the lower-50 proof supplies reusable slack toward 51;
-4. whether exact 64 remains a realistic medium-term target or a different
-   invariant is required.
-
-Only then should the project choose between lower 51, a larger jump, exact 64,
-or a general-`n` theorem.
-
----
-
-# 26. Success criterion for this major package
-
-The preferred success is a fully audited ordinary characteristic-zero lower-50
-theorem.
-
-A second scientifically successful outcome is an exact 49-term endpoint
-survivor to all currently proved equality conditions that demonstrates a
-missing invariant and sharply redirects the research.
-
-A third acceptable intermediate outcome is closure of Packet B or Packet A
-with the other packet reduced to one explicit, structurally meaningful
-component.
-
-Repeated closure of arbitrary restricted search families without advancing
-one of these three outcomes is a signal to stop and re-evaluate the invariant,
-not to increase search volume.
+Repeatedly enlarging restricted negative families without either output is
+not success for this package.
