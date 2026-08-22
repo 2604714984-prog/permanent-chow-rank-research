@@ -407,3 +407,37 @@ R7-EIGHT-BLOCK-QUOTIENT-DIMENSIONS
 The graph maps into the first six blocks and the common degree-two-through-five
 coefficient system are not determined by quotient dimensions.  Consequently
 `R7-MULTIDEGREE-SYSTEM`, `R7-CONNECTING-MAP`, and the lane verdict remain open.
+
+## Wave 2 -- rank-six/rank-seven mixed scalar count
+
+Status: the direct-basis count layer is exact and independently counted; it
+is not a represented packet table.
+
+For a direct basis using only rank-six and rank-seven planes, the dimension
+equation is `6a+7b=49`.  Its only solutions are the seven-rank-seven basis and
+the mixed basis of seven rank-six planes plus one rank-seven plane.  For the
+mixed basis, support types `1,...,6` have full-increment costs
+`(0,0,6,9,10,10)`.  The remaining 42 labels have zero increment and rank-six
+costs `(10,10,4,1,0,0)`; unused labels are rank seven at cost zero.
+
+There are `C(12,5)=792` six-type basis count vectors before the budget and 272
+after it.  A recursion and an independent generating-function DP agree on
+exactly `11,683,105` compressed basis/outside count patterns.  The earlier
+exploratory count `12,339,014` used 43 outside labels and was rejected: an
+eight-plane mixed basis leaves exactly 42 labels.
+
+The DP stores only the 272 basis rows and cost distribution; it never
+materializes the 11.7 million patterns.  Its payload is
+`data/n7_lower51_rank6_mixed_count_dp.json`.
+
+This large exact scalar frontier proves that defect counts alone are not the
+v7 packet table.  Representable factor-plane ranks, subset floors, the true
+`R_T` quotient, and residual multiplication must still be imposed.
+
+Decisive markers:
+
+```text
+R6-COUNT-TABLE-SCALAR
+R6-TYPE-SPLIT-ENDPOINTS
+R6-MIXED-BASE-DIMENSIONS
+```
