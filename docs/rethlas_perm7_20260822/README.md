@@ -24,6 +24,7 @@ It does not prove equality with 64. No whole-problem verifier was called, and no
 
 - Primary proof draft: `../n7_ordinary_chow_rank_lower50.md`.
 - Status and route summary: `../n7_rethlas_research_status_20260822.md`.
+- Generation-3 continuation: `../n7_rethlas_round3_20260822.md`.
 - Publication replay summary: `../n7_rethlas_publish_audit_20260822.md`.
 - Detailed branch reports: this directory, preserving their Rethlas-relative hierarchy.
 - Replay programs: `../../scripts/rethlas_perm7_20260822/`.

@@ -13,6 +13,7 @@ BASE = ROOT / "scripts" / "rethlas_perm7_20260822"
 
 CASES = [
     (("slope10_adversarial_modular.py",), "PASS slope-ten adversarial modular diagnostic"),
+    (("exact64_slope_surplus/rank_one_support_audit.py",), "N50_RANK_ONE_SUPPORT_AUDIT_PASS"),
     (("p64_ordinary_valuative_residual/residual_barrier_audit.py",), "PASS: all residual/projection barrier checks are exact"),
     (("round2_frobenius_tor/f2_dual_cospan.py",), "F2_DUAL_COSPAN_PASS"),
     (("round2_frobenius_tor/glynn_dual_cospan.py",), "GLYNN_DUAL_COSPAN_PASS"),

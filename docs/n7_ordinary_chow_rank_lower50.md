@@ -1096,6 +1096,91 @@ surplus.  Thus every ordering has total surplus \(10+25=35\), exactly the
 right side of (P1) at \(N=50\).  This packet is a countermodel to the
 proposed local-symbol exclusion, not a Chow decomposition of the permanent.
 
+# proposition prop:N50-rank-one-support
+
+## statement
+
+Suppose a hypothetical 50-term identity consists entirely of factor-rank-seven
+terms, and suppose that no seven of their factor planes form a direct sum of
+dimension 49.  In every ordering, the nonzero factor-plane increments have
+the unique profile
+
+\[
+1,6,7,7,7,7,7,7.                                    \tag{P3}
+\]
+
+Moreover, for the term having rank-one increment, the corresponding quotient
+functional on its seven Boolean factor directions is supported on at most two
+actual factors.
+
+## proof
+
+Fix an ordering and let \(d_i\) be its factor-plane increments.  They sum to
+49.  The hypothesis excluding a direct seven-plane basis forces at least eight
+of them to be positive.  If \(k\ge9\) increments are positive, their total
+deficiency from full rank seven is
+
+\[
+\sum_{d_i>0}(7-d_i)=7k-49\ge14.
+\]
+
+From the exact surplus row (P2), every unit of deficiency costs at least
+\(22/6=11/3\) units of surplus.  This would cost more than 35, contradicting
+(P1).  Hence exactly eight increments are positive and their total deficiency
+is seven.  If none equals one, (P2) gives a cost of at least \(17/3\) per
+deficiency unit, again more than 35.  Thus one increment is one; it consumes
+six deficiency units and 22 units of surplus.  The remaining deficiency unit
+must be a rank-six increment, and the other six positive increments have rank
+seven.  This proves (P3).
+
+Consider now the term with one-dimensional quotient \(D\).  In Boolean
+coordinates for its seven independent factors, diagonal rescaling writes its
+quotient functional as
+
+\[
+\alpha=e_1+\cdots+e_s
+\]
+
+where \(s\) is the number of actual factors in its support.  Let \(B_{r,k}\)
+denote squarefree degree-\(k\) polynomials in \(r\) variables.  Under
+\(B_{7,k}=\bigoplus_b B_{s,k-b}\otimes B_{7-s,b}\), contraction by \(\alpha\)
+has rank
+
+\[
+r_k(s)=\sum_b\binom{7-s}{b}
+ \min\!\left\{\binom{s}{k-b},\binom{s}{k-b-1}\right\}. \tag{P4}
+\]
+
+Indeed, this is the tensor decomposition by outside degree together with the
+full-rank property in characteristic zero of every Boolean incidence map
+\(B_{s,a}\to B_{s,a-1}\).  Formula (P4), in degrees four and three, gives
+
+\[
+\begin{array}{c|rrrrrrr}
+s&1&2&3&4&5&6&7\\ \hline
+r_4(s)&20&20&26&26&30&30&35\\
+r_3(s)&15&15&19&19&21&21&21.
+\end{array}                                           \tag{P5}
+\]
+
+These are the ranks of the positive and unquotiented negative local symbols.
+Passing from \(\mathcal D_2(T)\) to
+\(\mathcal D_2(T)/(\mathcal D_2(T)\cap E_2)\) can lower the negative rank by
+at most three, by Lemma lem:small-permanent-intersections.  After subtracting
+the baseline ten for \(d=1\), its surplus is therefore at least
+
+\[
+22,22,32,32,38,38,43                                 \tag{P6}
+\]
+
+for \(s=1,\ldots,7\).  The rank-six increment in (P3) contributes at least
+seven more units by (P2).  If \(s\ge3\), the total is at least \(32+7=39\),
+contradicting the budget (P1).  Consequently \(s\le2\), as claimed.
+
+The profile enumeration, the rank formula, and two independent modular matrix
+rank replays are audited by
+results/perm7_theory_first_20260822/exact64_slope_surplus/rank_one_support_audit.py.
+
 # lemma lem:complementary-koszul-residual
 
 ## statement

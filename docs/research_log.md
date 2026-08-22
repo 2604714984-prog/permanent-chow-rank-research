@@ -399,3 +399,9 @@ while a Glynn-factor degeneration supplies the matching upper bound. The run als
 - No named independent human review or proof-assistant formalization has been completed.
 - No whole-problem verifier was called and no `blueprint_verified.md` was produced.
 - Detailed proof, status, reports, scripts, and frozen outputs are indexed from `docs/rethlas_perm7_20260822/README.md`.
+
+### Generation-3 continuation
+
+A fresh first-principles audit again accepted the ordinary lower bound 50 as a partial theorem. In the all-rank-seven 50-term branch with no direct seven-plane basis, the continuation proved that every ordering has positive increment profile `(1,6,7,7,7,7,7,7)`. The quotient functional of the rank-one block is supported on at most two actual factors. Exact profile enumeration and independent modular Boolean-incidence ranks replay this statement.
+
+The result narrows but does not eliminate the 50-term branch. Abstract nonsplit arrangements still realize the same profile, standard multiplication/Fitting constructions fail the established subadditivity gates, and the coordinate-section flattening route still stops at 60 rather than 63. The next target is a permanent-specific multiplication-compatibility theorem across degrees two through five for the rank-one block, rank-six block, and six full Boolean blocks.
