@@ -12,6 +12,20 @@ controls show that complement geometry alone does not force these data.
 `B2-05` remains unresolved after imposing both the permanent identity and
 Sylvester equality.
 
+## Current theorem-level boundary
+
+The endpoint condition has now been reduced exactly to a global extension:
+`ker B subset im C`, together with the canonical isomorphism
+`K/im C ~= im B/im(BC)`.  This structure does not canonically split across
+the 49 labelled term spaces.  In particular, the 35 row-subset blocks used in
+the common-graph proof are not defined for arbitrary quotient frames and
+off-block graph maps.  See `docs/n7_packet_b2_global_extension_boundary.md`.
+
+Thus the active B2-05 task is a genuine identifiability or torus-compatible
+termwise-splitting theorem, not another restricted-family block computation.
+The existing low-layer survivors refute local synchronization shortcuts but
+are not complete Packet-B counterexamples.
+
 ## Goal
 
 Remove the common-graph specialization. `B1-CLOSED` alone does not prove

@@ -4085,3 +4085,17 @@ empty.  The complementary `W^all != 0` branch remains: it supplies a nonzero
 aggregate degree-five relation, but its compatibility with the endpoint
 kernel-image inclusion has not yet been excluded.  Thus Packet A, arbitrary
 Packet B, ordinary lower 50, and border rank remain open.
+
+## 2026-08-22: arbitrary Packet-B global extension boundary
+
+At the 49-term endpoint, rectangular Sylvester equality is exactly the global
+inclusion `ker B subset im C`.  It yields a short exact sequence from `im C`
+onto the 1225-dimensional permanent catalectic image and a canonical
+isomorphism `K/im C ~= im B/im(BC)`, with `dim K=1645` and
+`rank B + rank C=2870`.  These data do not canonically split across the 49
+term summands.  For arbitrary quotient frames and graph maps, the 35
+row-subset blocks of the common-graph proof are not defined, and target-torus
+stability of `im(BC)` does not automatically lift to `im B`, `im C`, or the
+term spaces.  The remaining B2 theorem is therefore an identifiability or
+torus-compatible termwise-splitting result.  Existing low-layer survivors
+only rule out local shortcuts; they are not complete Packet-B counterexamples.
