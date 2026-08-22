@@ -122,8 +122,13 @@ finite classification of non-tensor components.
 
 ## A-13 — conditional `3/4` escalation
 
-Construct the larger middle-degree system only for an exact component that
-passes the complete `2/5/6` interface.
+The plain larger middle-degree system has been audited and is automatic at
+endpoint equality: `dim M3=dim M4=1715`, the target rank is 1225,
+`k3+k4=490`, and cubic apolar induction has rank exactly `k4`.  See
+`docs/n7_packet_a_34_plain_route_exhaustion.md`.  Any continued A-13 work must
+therefore add a Koszul/recursive-Koszul wedge, Plucker, cross-weight, or other
+representation component not determined by the ordinary catalectic
+factorization.  Rechecking the plain `3/4` kernel-image inclusion is stopped.
 
 ## A-14 — decision
 

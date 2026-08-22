@@ -35,6 +35,14 @@ simultaneous-diagonalization theorem under both the permanent composite and
 this apolar surjectivity; see
 `docs/n7_packet_b2_apolar_surjectivity_boundary.md`.
 
+The target-torus lift is not automatic.  It exists exactly when `ker C` and
+`im B` are torus-stable, conditions not forced by the composite and extension
+alone.  Even a lift has framed automorphism group
+`Hom(K/im C,ker B)`, of dimension `(b-1225)(c-1225)`.  Row-torus local
+identifiability of the labelled Chow fiber would recover monomial frames and
+block graph support, but tail synchronization is a separate rank-one-minor
+radical problem.  See `docs/n7_packet_b2_torus_lift_obstruction.md`.
+
 ## Goal
 
 Remove the common-graph specialization. `B1-CLOSED` alone does not prove

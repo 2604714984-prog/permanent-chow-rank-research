@@ -4164,3 +4164,29 @@ rank-six normal forms and the 35-dimensional rank-seven blocks distinct.
 Common-code reduction still requires a structured-array simultaneous-
 diagonalization theorem using both this surjectivity and the full permanent
 composite; abstract exactness alone does not create the missing row grading.
+
+## 2026-08-22: plain Packet-A 3/4 escalation also exhausted
+
+The central labelled spaces both have dimension 1715 and the permanent
+middle catalectic has rank 1225.  Endpoint rank sum 2940 is therefore
+equivalent to `k3+k4=490`.  The cubic apolar space has dimension 19600, and
+target containment makes the cubic induction kernel the full transpose
+kernel of dimension `19110+k3`; its rank is consequently
+`490-k3=k4`.  Thus the plain `3/4` induction is automatically surjective just
+like `2/5`.  A-13 can continue only with an additional Koszul/wedge, Plucker,
+cross-weight, or other representation component.  Rebuilding the ordinary
+`M3/M4` Sylvester inclusion is stopped.
+
+## 2026-08-22: Packet-B torus-lift obstruction isolated
+
+A target-torus action lifts through the Packet-B middle factorization exactly
+when `ker C` and `im B` are torus-stable; the permanent composite and apolar
+surjectivity do not force either subspace to be stable.  The framed extension
+automorphism group is `Hom(K/im C,ker B)`, with dimension
+`(b-1225)(c-1225)` and maximum 44100 on the equality rank line.  Hence the
+extension does not canonically recover term summands.  Local quasi-finiteness
+of the labelled Chow fiber along the row torus would suffice to recover
+monomial frames and block-supported graph maps, but it does not synchronize
+the seven projective tails.  The remaining B2 statement is the radical
+containment of their rank-one `2x2` minors in the full row-split permanent and
+kernel-image equality ideal, or an equivalent cross-row Chow-array theorem.
