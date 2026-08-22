@@ -1,5 +1,24 @@
 # Program TI — target-integrability complex
 
+## Executable correction to TI-02 and TI-03
+
+The seven target sextics are already the gradient of the squarefree septic.
+Consequently, once `C E6=S6` holds, equality of mixed partials automatically
+puts the wedge-coordinate vectors in `R5`.  The map to
+`(k^42/R5) tensor Lambda^2(k^7)` proposed in the first version of this file is
+therefore identically zero on the complete coefficient-solution space; it is
+not an additional rank obstruction.
+
+The useful gauge-invariant datum is instead the class
+
+`[Psi_A(C)] in coker(d_A: R6 tensor k^7 -> R5 tensor Lambda^2(k^7))`,
+
+where `d_A(U)_(jk)=u_j star a_k-u_k star a_j`.  A fixed span of coefficient
+bivectors is not gauge invariant when `R6` is nonzero.  All tasks below are
+to be read with this correction.  In particular, arbitrary target-basis
+changes are allowed only together with the corresponding variable/gradient
+change.
+
 ## Goal
 
 Replace the coarse consequence `H_Z(5)<=40` by the full linear compatibility
@@ -25,7 +44,7 @@ Prove, with orientations fixed once and for all:
 
 **Output:** a basis-independent exact sequence and deterministic constructor.
 
-## TI-02 — mixed-partial obstruction
+## TI-02 — automatic mixed-partial relation tensor
 
 For the `i`-th columns `c_i` of `C` and `a_i` of `A`, define
 
@@ -33,25 +52,30 @@ For the `i`-th columns `c_i` of `C` and `a_i` of `A`, define
 \Phi_A(C)_i=c_i\wedge a_i\in\Lambda^2 k^7.
 \]
 
-Prove that the represented sextic gradient integrates iff every coordinate
-coefficient vector of `Phi_A(C)` belongs to `R_5`. Equivalently define
+Differentiate `C E6=S6` and prove that every coordinate coefficient vector of
+`Phi_A(C)` belongs to `R_5`. Equivalently, the map
 
 \[
 \overline\Phi_A:\mathcal S_6(A)\to
 (k^{42}/R_5)\otimes\Lambda^2 k^7.
 \]
 
-**Output:** exact theorem and regressions to the already established
-zero- and one-relation arguments.
+vanishes identically on `mathcal S_6(A)`.  This is a structural relation
+tensor, not an independent target-containment obstruction.
 
-## TI-03 — quotient the `R6` gauge
+**Output:** exact automatic-compatibility theorem and regressions to the
+already established zero- and one-relation arguments.
 
-Do not choose a preferred coefficient representation. Quotient the translation
-action coming from `R_6` and express existence of an integrable target
-representation as one affine-linear rank condition.
+## TI-03 — quotient the `R6` gauge correctly
+
+Do not choose a preferred coefficient representation.  Under translation by
+`U in R6 tensor k^7`, the relation tensor changes by `d_A(U)`.  Freeze the
+class of `Psi_A(C)` in `coker(d_A)` and prove that it is independent of the
+chosen solution `C`.
 
 For every possible `(q5,q6)` in `F1` through `F5`, record source, gauge,
-obstruction, and required deficiency dimensions.
+target, and cokernel dimensions.  Do not claim a new existence condition from
+the identically zero quotient in TI-02.
 
 ## TI-04 — permanent torus blocks
 

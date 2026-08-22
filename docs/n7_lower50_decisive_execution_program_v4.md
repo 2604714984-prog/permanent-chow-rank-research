@@ -113,6 +113,13 @@ q5 = 4: F4
 Full Hilbert-scheme construction of all 84 formal sequences is deferred until
 a target/coupling survivor actually requires it.
 
+Execution note: because the seven sextic targets already form a gradient,
+the mixed-partial map modulo `R5` is identically zero after target containment.
+The nontrivial canonical datum is the relation-tensor class modulo the `R6`
+gauge differential. The authoritative correction is recorded in
+`docs/n7_lower50_v4/01_target_integrability.md`; no independent affine-rank
+obstruction may be inferred from the zero quotient map.
+
 ## Authoritative workstream files
 
 | file | scope |

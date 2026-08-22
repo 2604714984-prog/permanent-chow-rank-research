@@ -3892,3 +3892,27 @@ by Macaulay growth. The active formal frontier has five triples. This result
 does not assert that any of the 84 remaining O-sequences is realizable by 42
 distinct reduced graph points; Betti, realizability, weight, and target gates
 remain open, as do ordinary lower 50 and border rank.
+
+## 2026-08-22: corrected v4 target-integrability core and first pencil reduction
+
+The modular v4 execution package was integrated at planning commit `0dcc07f`.
+Its first target-integrability formulation required one correction before
+execution. Once `C E6=S6` represents the seven sextics that are already the
+gradient of the squarefree septic, differentiating the identity makes the
+mixed-partial tensor land in `R5` automatically. Therefore its image modulo
+`R5` is identically zero and is not an additional rank obstruction.
+
+Under an `R6` coefficient gauge `U`, the relation tensor changes by the exact
+differential `d_A(U)`. The canonical object is its class in the cokernel of
+`d_A`, and a chosen span of coefficient bivectors is not gauge invariant when
+`q6>0`. An eight-point projective-line control with `(q5,q6)=(2,1)` verifies
+the matrix orientations, nontrivial gauge change, unchanged target, and
+automatic `R5` membership.
+
+An independent H-01 replay recovers all 84 formal O-sequences, and H-02
+compresses them reversibly to seven signatures. The gauge-free signature is
+the F3 subcase `H6=42`, with `(q5,q6)=(2,0)`. For that subcase the relation
+bivectors satisfy an exhaustive pencil dichotomy: bivector-span rank at most
+one, at most two distinct nonzero relation ratios, or a complete
+Grassmannian flag line. This is a structural reduction, not yet an exclusion
+of F3, the full q5=2 class, Packet B, ordinary lower 50, or border rank.
