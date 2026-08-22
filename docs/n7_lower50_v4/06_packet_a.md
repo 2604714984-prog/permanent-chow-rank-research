@@ -27,6 +27,21 @@ cannot close this component.  The active invariant is the transverse image
 of `K5` in `M2/im A2^T`; A-07 through A-14 must be read with that corrected
 boundary.
 
+The transverse obstruction is now canonically the cokernel of the quadratic
+apolar induction map
+
+\[
+ \Phi=P^{\mathsf T}D A_2^{\mathsf T}:F_2^\perp\longrightarrow K_5.
+\]
+
+Here `dim F2^perp=784`, with explicit row-internal, column-internal, and
+rectangle-difference summands of dimensions 196, 147, and 441.  Endpoint
+surjectivity on the remaining `K2 != 0` branch forces
+`dim ker Phi=196+dim K2>196`.  Thus the final A-12 problem is the exact
+permanent-apolar array-rigidity bound `dim ker Phi<=196` outside the already
+excluded row-separated component.  See
+`docs/n7_packet_a_apolar_induction_cokernel.md`.
+
 ## Schema/control smoke
 
 `docs/n7_packet_a_labelled_256_operator.md` freezes the `(term,I)` labels,

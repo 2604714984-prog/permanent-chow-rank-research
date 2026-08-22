@@ -4125,3 +4125,16 @@ pairing.  The corrected Packet-A obstruction is the image of the full `K5`
 under `D^(-1)P` in `M2/im A2^T`, after removing all derivative-generated
 relations.  Further same-row derivatives or linear combinations of the
 existing witnesses are stopped by this identity.
+
+## 2026-08-22: Packet-A obstruction reduced to one array-rigidity lemma
+
+The corrected transverse obstruction is the cokernel of
+`Phi=P^T D A2^T:F2^perp -> K5`.  The quadratic apolar space of `perm7` has the
+explicit direct sum of 196 row-internal operators, 147 additional
+column-internal operators, and 441 rectangle differences, hence dimension
+784.  Endpoint equality is equivalent to surjectivity of `Phi`.  On the
+remaining branch `dim K2+dim K5=588` with both kernels nonzero, so surjectivity
+would force `dim ker Phi=196+dim K2>196`.  Packet A is therefore reduced to a
+single array-rigidity statement: outside the excluded row-separated
+component, no greater-than-196-dimensional permanent-apolar quadratic
+subspace can vanish on every off-diagonal pair in all 49 factor frames.
