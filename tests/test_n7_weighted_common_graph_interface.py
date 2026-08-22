@@ -27,9 +27,28 @@ class WeightedCommonGraphInterfaceTests(unittest.TestCase):
             ((32, 40), (33, 39), (34, 38), (35, 37), (36, 36)),
         )
         self.assertEqual(
-            MODULE.TARGET_COMPATIBLE_GEOMETRIC_STRATA,
-            ((32, 40), (33, 39), (34, 38), (35, 37)),
+            MODULE.TARGET_COMPATIBLE_RANK_PAIRS,
+            ((33, 39), (34, 38), (35, 37)),
         )
+        self.assertEqual(
+            MODULE.TARGET_COMPATIBLE_HILBERT_TRIPLES,
+            (
+                (33, 39, 40),
+                (34, 38, 39),
+                (34, 38, 40),
+                (35, 37, 38),
+                (35, 37, 39),
+                (35, 37, 40),
+            ),
+        )
+
+    def test_hilbert_plateau_regressions(self) -> None:
+        self.assertTrue(MODULE.has_forbidden_plateau((36, 36, 36)))
+        self.assertTrue(MODULE.has_forbidden_plateau((32, 40, 40)))
+        self.assertTrue(MODULE.has_forbidden_plateau((33, 39, 39)))
+        self.assertTrue(MODULE.has_forbidden_plateau((30, 35, 35, 36)))
+        self.assertFalse(MODULE.has_forbidden_plateau((33, 39, 40, 42)))
+        self.assertFalse(MODULE.has_forbidden_plateau((35, 37, 39, 41, 42)))
 
     def test_curve_union_construction_cardinality(self) -> None:
         prime = MODULE.coupled.PRIMES[0]

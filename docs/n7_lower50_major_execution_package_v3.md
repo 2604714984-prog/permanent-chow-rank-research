@@ -58,18 +58,19 @@ and degree-six permanent containment
 \]
 
 The old `(30,42)` and `(31,41)` profiles are incompatible with degree-six
-target containment, `(36,36)` is impossible for 42 reduced points, and four
-geometrically feasible profiles remain:
+target containment. Reduced-point strict growth removes `(36,36)` and also
+`(32,40)`, because the latter would force `H_Z(4)=H_Z(5)=40<42`. Three rank
+pairs and six numerical Hilbert triples remain:
 
 ```text
-(32,40)
-(33,39)
-(34,38)
-(35,37)
+(33,39,40)
+(34,38,39), (34,38,40)
+(35,37,38), (35,37,39), (35,37,40)
 ```
 
-Each remaining profile has a characteristic-zero positive control. None may
-be discarded because it is nongeneric or absent from a random search.
+These triples are numerical candidates, not six asserted geometric or target
+controls. The four curve-union constructions remain only `H_3/H_4` profile
+controls.
 
 ---
 
@@ -359,24 +360,26 @@ packet.
 
 Combine Hilbert continuation, integrability, target blocks, Hadamard coupling,
 point distinctness, and graph nondegeneracy into one theorem-facing interface.
-All four numerical profiles must instantiate the same definitions.
+All six numerical Hilbert triples must instantiate the same definitions.
 
 ---
 
-# Workstream B1-S — decide all four common-graph strata
+# Workstream B1-S — decide all six common-graph Hilbert triples
 
 For clarity set
 
 ```text
-S32 = (32,40)
-S33 = (33,39)
-S34 = (34,38)
-S35 = (35,37)
+S1 = (33,39,40)
+S2 = (34,38,39)
+S3 = (34,38,40)
+S4 = (35,37,38)
+S5 = (35,37,39)
+S6 = (35,37,40)
 ```
 
 For each `Sxx`, execute the same four decision tasks.
 
-## B1-S1.1 / S2.1 / S3.1 / S4.1 — freeze the full stratum inventory
+## B1-S1.1 through S6.1 — freeze the full stratum inventory
 
 Freeze:
 
@@ -387,13 +390,13 @@ Freeze:
 - target-block ranks;
 - positive characteristic-zero profile controls.
 
-## B1-S1.2 / S2.2 / S3.2 / S4.2 — classify integrability types
+## B1-S1.2 through S6.2 — classify integrability types
 
 Use B1-C3 through C6 to determine every multi-relation type that can occur for
 that profile and Hilbert continuation. Do not transfer a type from another
 profile without verifying the dimensions.
 
-## B1-S1.3 / S2.3 / S3.3 / S4.3 — impose coupling plus target jointly
+## B1-S1.3 through S6.3 — impose coupling plus target jointly
 
 Intersect:
 
@@ -410,7 +413,7 @@ reduced distinct points
 Use exact elimination only after structural reduction. Finite fields are for
 component discovery and candidate minors, not nonexistence certificates.
 
-## B1-S1.4 / S2.4 / S3.4 / S4.4 — decisive output
+## B1-S1.4 through S6.4 — decisive output
 
 Return one of:
 
@@ -423,7 +426,7 @@ Sxx-FINITE-EXACT-SUBCASES
 The third state is temporary and accepted only when the finite list is proved
 complete and small enough for exact exhaustion in the same phase.
 
-B1 is complete only after all four profiles are decided.
+B1 is complete only after all six triples are decided.
 
 ---
 
@@ -674,7 +677,7 @@ theorem. An exact survivor supersedes that milestone.
 Execute:
 
 ```text
-remaining S32/S33/S34/S35 decisions
+remaining S1/S2/S3/S4/S5/S6 decisions
 B1 assembly gate
 B2-M5 through B2-M7
 A-T6 through A-T7
@@ -706,11 +709,11 @@ P2-M1  CORE-FROZEN
        are exact and independently checked.
 
 P2-M2  FIRST-STRATUM-DECIDED
-       One of S32/S33/S34/S35 is CLOSED or has an exact characteristic-zero
+       One of S1/S2/S3/S4/S5/S6 is CLOSED or has an exact characteristic-zero
        survivor.
 
 P2-M3  B1-DECIDED
-       All four profiles are decided: B1-CLOSED or B1-SURVIVOR.
+       All six triples are decided: B1-CLOSED or B1-SURVIVOR.
 
 P2-M4  B2-REDUCTION-FROZEN
        Arbitrary mixed packets reduce to B1 plus a proved-complete finite

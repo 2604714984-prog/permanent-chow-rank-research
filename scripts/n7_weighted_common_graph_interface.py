@@ -21,8 +21,18 @@ EQUALITY_RANK_STRATA = tuple((rank3, 72 - rank3) for rank3 in range(30, 37))
 TARGET_COMPATIBLE_NUMERICAL_STRATA = tuple(
     pair for pair in EQUALITY_RANK_STRATA if pair[1] <= 40
 )
-TARGET_COMPATIBLE_GEOMETRIC_STRATA = tuple(
-    pair for pair in TARGET_COMPATIBLE_NUMERICAL_STRATA if pair != (36, 36)
+TARGET_COMPATIBLE_RANK_PAIRS = (
+    (33, 39),
+    (34, 38),
+    (35, 37),
+)
+TARGET_COMPATIBLE_HILBERT_TRIPLES = (
+    (33, 39, 40),
+    (34, 38, 39),
+    (34, 38, 40),
+    (35, 37, 38),
+    (35, 37, 39),
+    (35, 37, 40),
 )
 CONTROLS = (
     ("unit_30_42", (1, 2, 3, 4, 5, 12), "unit"),
@@ -93,6 +103,20 @@ def exact_curve_union_rank_upper_bound(
         min(curve_point_count, curve_degree * degree + 1)
         + off_curve_point_count,
     )
+
+
+def has_forbidden_plateau(
+    hilbert_values: tuple[int, ...] | list[int], point_count: int = 42
+) -> bool:
+    values = tuple(int(value) for value in hilbert_values)
+    if any(value < 0 or value > point_count for value in values):
+        raise ValueError("Hilbert values must lie between zero and point count")
+    if any(left > right for left, right in zip(values, values[1:])):
+        raise ValueError("Hilbert values must be nondecreasing")
+    for left, right in zip(values, values[1:]):
+        if left == right and right < point_count:
+            return True
+    return False
 
 
 def evaluate_interface(
@@ -180,54 +204,68 @@ def build_payload() -> dict[str, object]:
             tails = rational_curve_union_tails(
                 curve_degree, curve_count, off_count, prime
             )
-            rank3 = curve_coupling.point_code_rank(tails, 3, prime)
-            rank4 = curve_coupling.point_code_rank(tails, 4, prime)
-            upper3 = exact_curve_union_rank_upper_bound(
-                curve_degree, curve_count, off_count, 3
+            ranks = tuple(
+                curve_coupling.point_code_rank(tails, degree, prime)
+                for degree in range(3, 7)
             )
-            upper4 = exact_curve_union_rank_upper_bound(
-                curve_degree, curve_count, off_count, 4
+            upper_bounds = tuple(
+                exact_curve_union_rank_upper_bound(
+                    curve_degree, curve_count, off_count, degree
+                )
+                for degree in range(3, 7)
             )
-            if (rank3, rank4) != (upper3, upper4):
+            if ranks != upper_bounds:
                 raise AssertionError(
                     (
                         "curve-union construction missed its upper bound",
                         curve_degree,
                         prime,
-                        (rank3, rank4),
-                        (upper3, upper4),
+                        ranks,
+                        upper_bounds,
                     )
                 )
-            if (rank3, rank4) != expected_profile:
+            if ranks[:2] != expected_profile:
                 raise AssertionError("curve-union construction has the wrong profile")
             prime_rows.append(
                 {
                     "prime": prime,
-                    "rank_e3": rank3,
-                    "rank_e4": rank4,
-                    "rank_upper_bounds": [upper3, upper4],
+                    "hilbert_3_to_6": list(ranks),
+                    "rank_upper_bounds_3_to_6": list(upper_bounds),
                 }
             )
+        characteristic_zero_hilbert = prime_rows[0]["hilbert_3_to_6"]
         constructions.append(
             {
                 "curve_degree": curve_degree,
                 "curve_point_count": curve_count,
                 "off_curve_point_count": off_count,
                 "characteristic_zero_profile": list(expected_profile),
+                "characteristic_zero_hilbert_3_to_6": characteristic_zero_hilbert,
+                "inside_target_implied_h5_le_40_locus": (
+                    characteristic_zero_hilbert[2] <= 40
+                ),
                 "prime_rows": prime_rows,
             }
         )
     return {
         "schema_version": 1,
         "status": "B1_WEIGHTED_COMMON_GRAPH_INTERFACE_CHECKPOINT",
-        "candidate_cardinality_checked_before_materialization": len(CONTROLS),
+        "candidate_cardinality_checked_before_materialization": (
+            len(CONTROLS) + len(CURVE_UNION_CONSTRUCTIONS)
+        ),
         "conservative_peak_memory_mib": 16,
         "equality_rank_strata": [list(pair) for pair in EQUALITY_RANK_STRATA],
         "target_compatible_numerical_strata_after_h5_le_40": [
             list(pair) for pair in TARGET_COMPATIBLE_NUMERICAL_STRATA
         ],
-        "target_compatible_geometrically_feasible_strata": [
-            list(pair) for pair in TARGET_COMPATIBLE_GEOMETRIC_STRATA
+        "geometrically_realized_h3_h4_profile_controls": [
+            list(item[3]) for item in CURVE_UNION_CONSTRUCTIONS
+        ],
+        "target_compatible_rank_pairs_after_strict_growth": [
+            list(pair) for pair in TARGET_COMPATIBLE_RANK_PAIRS
+        ],
+        "target_compatible_numerical_hilbert_triples": [
+            list(triple) for triple in TARGET_COMPATIBLE_HILBERT_TRIPLES
         ],
         "curve_union_constructions": constructions,
         "rows": rows,
@@ -239,8 +277,9 @@ def build_payload() -> dict[str, object]:
         },
         "claim_boundary": [
             "The seven equality-rank pairs are the complete numerical list implied by nested 42-point evaluation codes and rank(E3)+rank(E4)=72; geometric realizability is not asserted for every pair.",
-            "For a minimal 49-term identity, repeated graph points combine and are excluded; after base change to an algebraic closure of characteristic zero, degree-six target containment implies H_Z(5)<=40 by mixed-partial integrability, leaving five numerical strata; (36,36) is impossible for a reduced length-42 Hilbert function.",
-            "The other four target-compatible strata have integer curve-union constructions attaining their characteristic-zero rank upper bounds modulo both displayed primes.",
+            "For a minimal 49-term identity, repeated graph points combine and are excluded; after base change to an algebraic closure of characteristic zero, degree-six target containment implies H_Z(5)<=40 by mixed-partial integrability.",
+            "Reduced-point strict growth removes both (36,36) and (32,40), leaving three rank pairs and six numerical Hilbert triples.",
+            "The four integer curve-union constructions are H3/H4 profile controls only; their replayed H5/H6 values decide whether they remain inside the target-implied H5<=40 locus, not whether target containment holds.",
             "The finite-field rows are deterministic controls of the exact block formulation, not exclusions of arbitrary point configurations.",
             "The weighted rank-(31,41) control satisfies coupling but fails all seven degree-six targets; its characteristic-zero exclusion is separately certified by integer exponent collisions.",
             "No arbitrary common-graph closure, Packet-B closure, lower-50 theorem, or border-rank conclusion follows.",

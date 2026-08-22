@@ -3849,21 +3849,23 @@ Nested length-42 evaluation codes leave seven numerical middle-equality pairs
 from `(30,42)` through `(36,36)`. A characteristic-zero mixed-partial
 integrability argument applied first to a minimal simultaneous sixth-power
 support gives `H_S(5)<=|S|-2`; adding the unused graph points back yields
-`H_Z(5)<=40`. Hence only `(32,40)` through `(36,36)` remain numerically
-compatible with degree-six containment. This does not assert geometric
-realizability of all five strata.
+`H_Z(5)<=40`. Reduced-point strict growth removes `(36,36)` because it
+plateaus from degree three to four, and also removes `(32,40)` because the cap
+would force `H_Z(4)=H_Z(5)=40<42`. The corrected rank-pair frontier is
+`(33,39)`, `(34,38)`, and `(35,37)`, refined into the six numerical triples
+`(33,39,40)`, `(34,38,39/40)`, and `(35,37,38/39/40)`. Their geometric
+realizability and full target compatibility remain open.
 
-The `(36,36)` pair is then removed: a reduced finite-point Hilbert function
-cannot stop growing from degree three to four at 36 and later resume toward
-length 42. The other four pairs are realized by exact integer constructions
-formed from points on rational monomial curves of degrees 8, 6, 4, and 2 in
-`P^6` together with general off-curve points. Their degree-three/four ranks
-reach the corresponding geometric upper bounds over both test primes, so the
-characteristic-zero profiles are exactly `(32,40)`, `(33,39)`, `(34,38)`, and
-`(35,37)`.
+The four exact integer curve-union constructions remain only `H_3/H_4`
+profile controls. Their replayed characteristic-zero values through degree
+six are `(32,40,42,42)`, `(33,39,42,42)`, `(34,38,42,42)`, and
+`(35,37,39,41)`. Thus the first three leave the target-implied fifth-degree
+cap; the last lies inside the numerical cap but does not thereby satisfy
+target containment.
 
 Over both 65,521 and 65,519, the unit `(30,42)` and weighted `(31,41)` curve
 controls satisfy middle equality and coupling rank 30, yet adjoining `S6`
 raises rank by seven per missing-row block. Their characteristic-zero target
 failure remains certified by the separate integer exponent-collision
-certificate. The arbitrary-point four-stratum system remains open.
+certificate. The arbitrary-point six-triple system remains open, and lower 50
+is not yet proved.
