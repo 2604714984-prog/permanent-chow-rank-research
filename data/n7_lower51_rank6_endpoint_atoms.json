@@ -1,0 +1,51 @@
+{
+  "claim": "For every rank-six seven-factor normal form, the d=0 surplus is delta=35-u and the full d=6 surplus is u-25.",
+  "claim_boundary": "Intermediate increments d=1,...,5 and their orientation jump loci are not classified here; this is not the complete R6 surplus atlas.",
+  "proof": "At d=0 both symbols vanish. At the full quotient both symbols are injective by the lower-50 full-symbol argument, so the surplus is 2u+(35-u)-60=u-25.",
+  "rows": [
+    {
+      "delta": 10,
+      "increment_six_surplus": 0,
+      "increment_zero_surplus": 10,
+      "middle_dimension": 25,
+      "support_size": 1
+    },
+    {
+      "delta": 10,
+      "increment_six_surplus": 0,
+      "increment_zero_surplus": 10,
+      "middle_dimension": 25,
+      "support_size": 2
+    },
+    {
+      "delta": 4,
+      "increment_six_surplus": 6,
+      "increment_zero_surplus": 4,
+      "middle_dimension": 31,
+      "support_size": 3
+    },
+    {
+      "delta": 1,
+      "increment_six_surplus": 9,
+      "increment_zero_surplus": 1,
+      "middle_dimension": 34,
+      "support_size": 4
+    },
+    {
+      "delta": 0,
+      "increment_six_surplus": 10,
+      "increment_zero_surplus": 0,
+      "middle_dimension": 35,
+      "support_size": 5
+    },
+    {
+      "delta": 0,
+      "increment_six_surplus": 10,
+      "increment_zero_surplus": 0,
+      "middle_dimension": 35,
+      "support_size": 6
+    }
+  ],
+  "schema_version": 1,
+  "source": "data/n7_rank6_normal_form_profiles.json"
+}

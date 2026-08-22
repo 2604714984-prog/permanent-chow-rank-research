@@ -195,6 +195,44 @@ R7-SURPLUS-ROW
 R7-D1-SUPPORT-COST
 ```
 
+### Exact rank-six endpoint atoms
+
+For the six rank-six support normal forms, the middle dimensions are
+`(25,25,31,34,35,35)`.  At increment zero both local symbols vanish, so the
+surplus is `delta=35-u`.  At the full rank-six quotient both local symbols
+are injective, so the surplus is `2u+delta-60=u-25`.  Therefore the exact
+endpoint rows, ordered by support size `1,...,6`, are
+
+```text
+d=0: (10,10,4,1,0,0)
+d=6: (0,0,6,9,10,10).
+```
+
+These rows are frozen in `data/n7_lower51_rank6_endpoint_atoms.json`.  They
+show why zero-increment high-support terms cannot be discarded by scalar
+budget alone, while only support one and two attain equality at full
+increment.  Intermediate increments and orientation jump loci remain open,
+so neither `R6-SURPLUS-ATLAS` nor `ZERO-INCREMENT-COSTS` is issued yet.
+
+A bounded exact-rational diagnostic now evaluates both unquotiented symbols
+on all `6*2^6=384` coordinate quotients of the six normal forms.  Its minimum
+`R=0` surplus rows are
+
+```text
+s=1,2: (10,25,29,26,19,10,0)
+s=3:   (4,25,33,32,25,16,6)
+s=4:   (1,25,35,34,28,19,9)
+s=5,6: (0,25,35,35,29,20,10).
+```
+
+The payload is
+`data/n7_lower51_rank6_coordinate_quotient_diagnostic.json`.  Because the
+actual minus target is quotiented by `R_T` of dimension at most three and
+the quotient orientation need not be coordinate in this frame, these rows
+are `PROJECTED-SURVIVOR` diagnostics only.  They identify the intermediate
+jump loci that D-07 must control; they are not inserted into the packet
+enumerator as theorem floors.
+
 ## Wave 1 -- subset floors and minimality
 
 Status: S-01 through S-04 and the finite S-13 controls are complete.  S-05
