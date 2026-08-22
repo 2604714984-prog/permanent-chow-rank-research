@@ -114,7 +114,8 @@ zero-column-safe replacement bounds are frozen in
 `docs/n7_q5_three_net_replacement.md`.
 
 ### M4 — common graph
-`F4` and all remaining signatures are decided; B1 status is frozen.
+`F4-CLOSED`; all remaining signatures are decided and the common-graph status
+is `B1-CLOSED`.
 
 ### M5 — arbitrary Packet B
 Common-code theorem/falsification, exhaustive exceptions, certificate mapping,

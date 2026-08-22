@@ -4057,3 +4057,17 @@ Therefore F2 and F5 are closed for all displayed `q6` values. Together with
 F1 and F3, four of the five common-graph frontiers are now closed; the
 `q5=4` frontier F4, arbitrary Packet B, Packet A, lower 50, and border rank
 remain open.
+
+## 2026-08-22: F4 and the complete common-graph packet closed
+
+After a projective normalization, contraction embeds the three-dimensional
+sixth-power relation space `R6` into the four-dimensional fifth-power
+relation space `R5`. Delete three coordinates forming an invertible minor of
+`R6`. The remaining 39 sixth powers are a basis of the original 39-dimensional
+space and still span all permanent sextic targets, while their fifth-power
+relation space has dimension one and their sixth-power relation space is
+zero. The unique retained gradient representation therefore has a binary
+replacement of total cost at most 39, contradicting squarefree septic Waring
+rank 64. This closes F4. Together with F1, F2, F3, and F5, it establishes
+`B1-CLOSED` for the weighted common-graph specialization. Arbitrary Packet B,
+Packet A, ordinary lower 50, and border rank remain open.

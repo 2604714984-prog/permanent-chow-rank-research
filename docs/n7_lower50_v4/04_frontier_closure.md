@@ -43,6 +43,12 @@ is now also closed by the gauge theorem.
 
 ## F4 — `(35,37,38)`, `q5=4`, `q6=3`
 
+`F4-CLOSED.` Delete three coordinates selected by an invertible minor of
+`R6`. The retained 39 sixth powers still span the complete target-containing
+space, while their fifth-power relation space is one-dimensional. The
+resulting unique gradient representation has Waring replacement cost at most
+39.
+
 - **F4-01:** freeze the 12 signatures and four-step tail.
 - **F4-02:** apply the web/Pfaffian theorem with the full `R_6` gauge.
 - **F4-03:** combine the `(7,5)` Schur-product and separator constraints.
@@ -71,5 +77,9 @@ complete triples or at least twenty formal sequences.
 
 Second extracted theorem: the same common-graph model with `q5=3` is
 impossible for every displayed `q6`. This closes F2 and F5 in addition to F1
-and F3. Only the `q5=4` frontier F4 remains in the target-integrability
-sequence.
+and F3.
+
+Final extracted theorem: deleting three coordinates reduces the F4
+`q5=4,q6=3` layer to a gauge-free one-relation configuration, which is also
+impossible. Hence F1 through F5 are all closed and the weighted common-graph
+Packet-B specialization has status `B1-CLOSED`.

@@ -220,6 +220,13 @@ target contradiction. Reuse the same proof for `F2` and `F5` where only the
 
 ## TI-13 — the `q5=4` web theorem
 
+Decision: complete without a web classification. In F4, normalize the 42
+points so contraction embeds `R6` into `R5`. Delete three coordinates on
+which the three-dimensional `R6` restricts isomorphically. The retained 39
+sixth powers are a basis of the original target-containing space, while the
+retained fifth-power relation space has dimension one. The one-relation
+replacement gives Waring rank at most 39, a contradiction.
+
 For `F4`, restrict the Plucker quadrics to `P(B)=P^3`. Prioritize:
 
 - common-kernel strata;
@@ -244,6 +251,15 @@ valid for every nontrivial `q5=2,3,4` compatibility type. Test it against
 exact compatible gradients in fewer variables.
 
 ## TI-15 — target-only decision
+
+Decision:
+
+```text
+TARGET-INTEGRABILITY-CLOSED
+```
+
+The q5=2, q5=3, and q5=4 classes close F1 through F5. No weighted-coupling
+survivor remains in the common-graph Packet-B specialization.
 
 Return exactly one:
 
