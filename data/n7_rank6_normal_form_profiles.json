@@ -1,0 +1,41 @@
+{
+  "case_B_capacity_threshold": 245,
+  "case_B_direct_basis_middle_sum": 210,
+  "claim_boundary": "This classifies one-term catalectic profiles. It neither proves the external slope-ten endpoint classification nor constructs a permanent decomposition.",
+  "classification": "Every nonzero product of seven linear forms with essential factor-span dimension six is GL-equivalent, after individual factor rescaling, to exactly one listed support normal form.",
+  "conclusion": "The direct-factor-basis capacity lemma does not exclude seven mutually direct support-one/two rank-six terms plus one rank-seven complement: their local middle sum is 210.",
+  "field": "Q",
+  "normal_forms": [
+    {
+      "hilbert_profile": [1, 6, 16, 25, 25, 16, 6, 1],
+      "normal_form": "x1*x2*x3*x4*x5*x6*(x1)",
+      "support_size": 1
+    },
+    {
+      "hilbert_profile": [1, 6, 16, 25, 25, 16, 6, 1],
+      "normal_form": "x1*x2*x3*x4*x5*x6*(x1+x2)",
+      "support_size": 2
+    },
+    {
+      "hilbert_profile": [1, 6, 18, 31, 31, 18, 6, 1],
+      "normal_form": "x1*x2*x3*x4*x5*x6*(x1+x2+x3)",
+      "support_size": 3
+    },
+    {
+      "hilbert_profile": [1, 6, 19, 34, 34, 19, 6, 1],
+      "normal_form": "x1*x2*x3*x4*x5*x6*(x1+x2+x3+x4)",
+      "support_size": 4
+    },
+    {
+      "hilbert_profile": [1, 6, 20, 35, 35, 20, 6, 1],
+      "normal_form": "x1*x2*x3*x4*x5*x6*(x1+x2+x3+x4+x5)",
+      "support_size": 5
+    },
+    {
+      "hilbert_profile": [1, 6, 21, 35, 35, 21, 6, 1],
+      "normal_form": "x1*x2*x3*x4*x5*x6*(x1+x2+x3+x4+x5+x6)",
+      "support_size": 6
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,146 @@
+{
+  "arithmetic_domains": {
+    "arbitrary_quotient_search": "F_1000033 diagnostic only",
+    "boolean_control": "exhaustive F_2 falsifier only",
+    "rank_six_independent": "F_1000003 and F_1000033 lower-bound/equality replays",
+    "rank_six_primary": "exact rational elimination",
+    "section_caps": "exact integers; two DP orientations",
+    "slope_independent": "independent bit-mask enumeration",
+    "slope_primary": "exact coordinate support counting"
+  },
+  "candidate_source": {
+    "commit": "107912a550cc4688b160e69008e7f7bb33650447",
+    "merge_base": "111a022c8de36619c32a0c2cf660aa4dd5b5aeab",
+    "proof_blob": "2e322ccc6b823721244962844e43a0815c804402",
+    "tree": "14495e67b2c77046dedb25a7228c68c433c3e99f"
+  },
+  "claim": "ChowRank(perm_7) >= 50",
+  "external_sources": [
+    {
+      "id": "Bukh-MDKK-1009.2375v2",
+      "use": "Theorem 1 and compression Lemmas 2-3"
+    },
+    {
+      "id": "Shafiei-Apolarity-1212.0515v2",
+      "use": "Theorem 2.13 for the generic permanent apolar ideal"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 44323,
+      "path": "docs/n7_ordinary_chow_rank_lower50.md",
+      "sha256": "90de8d6993e233dba0d910442344061e2fa84d7578f7f1ba0cf2525c5aa49f52"
+    },
+    {
+      "bytes": 7452,
+      "path": "docs/n7_lower50_v6_wave0_audit.md",
+      "sha256": "055e251d2282709b29d5db8453bd595bb1c3be57da45966050878b50ea8b8673"
+    },
+    {
+      "bytes": 9057,
+      "path": "docs/n7_lower50_v6_core_audit.md",
+      "sha256": "f38e62e09da8c7c81ab6f62a031aeea68255efa6d7efd4b55df04c489043c8a9"
+    },
+    {
+      "bytes": 4774,
+      "path": "docs/n7_lower50_v6_integration_audit.md",
+      "sha256": "0d45b103e450c0a72274061c06d595fe58bd994b177bcaf3b260380fe21b44e7"
+    },
+    {
+      "bytes": 17183,
+      "path": "scripts/n7_lower50_section_caps_audit.py",
+      "sha256": "52b8003983142178d37bde2826f6614add6ec2dfa8d15e661c443682de185b79"
+    },
+    {
+      "bytes": 10847,
+      "path": "data/n7_lower50_section_caps_audit.json",
+      "sha256": "f1ea928c18be29ffc2d22a24b664a831ba313a604d36f2589413db8057fba83a"
+    },
+    {
+      "bytes": 5504,
+      "path": "scripts/n7_rank6_normal_form_profiles.py",
+      "sha256": "8600496f169f6d69e497fd40b959cf475a868386bd6f7d2dbd36183a3bc9d8c1"
+    },
+    {
+      "bytes": 3230,
+      "path": "scripts/n7_rank6_normal_form_profiles_independent.py",
+      "sha256": "6ecd98a57769444552e85c640367b48bae30f894b0000365291537efd6cc5f0e"
+    },
+    {
+      "bytes": 1593,
+      "path": "data/n7_rank6_normal_form_profiles.json",
+      "sha256": "469d392dd1a7c8ef75582c1ddba1b59a8dc09be7008b78cf21f193d27e9a1c4a"
+    },
+    {
+      "bytes": 7400,
+      "path": "scripts/n7_slope10_coordinate_symbol_table.py",
+      "sha256": "4b3756993d4f237e338e9e365274e94bc4dfba418f92a6c288816eebbcae9dc7"
+    },
+    {
+      "bytes": 2839,
+      "path": "scripts/n7_slope10_coordinate_symbol_table_independent.py",
+      "sha256": "bb755ac7cf4002eaef589e19b1393a00555be9054ba2fbc861df1e681e32759c"
+    },
+    {
+      "bytes": 1340,
+      "path": "data/n7_slope10_coordinate_symbol_table.json",
+      "sha256": "7129afcfde25c87af09a9084c09ad79a368fa68ad0bfa1ff36790ab55befd2a3"
+    },
+    {
+      "bytes": 4552,
+      "path": "scripts/n7_lower50_boolean_controls.py",
+      "sha256": "8e5ec438259ea287cec3ad565863679e2fa828e42b5b8bb238114e8086928011"
+    },
+    {
+      "bytes": 357,
+      "path": "data/n7_lower50_boolean_controls.json",
+      "sha256": "c6008a909eae0bee5514c8d6229dc54ce8e4f491c43c3c0fdb6a6341ec50476b"
+    },
+    {
+      "bytes": 2541,
+      "path": "scripts/n7_lower50_proof_contract.py",
+      "sha256": "cff961e4f947798f81adce73230d4140e715356d16c9d7d399e24357e0980d28"
+    },
+    {
+      "bytes": 10456,
+      "path": "scripts/rethlas_perm7_20260822/slope10_adversarial_modular.py",
+      "sha256": "198150e1001a6c6f9620a1070502e0bb1e7a7e1fdb4c6f25165aa8ad57915c11"
+    },
+    {
+      "bytes": 1426,
+      "path": "tests/test_n7_lower50_section_caps_audit.py",
+      "sha256": "269fd2e4590a1c3e09deabd9acde3b87d2a604fd85b34f53ffbfe547804b48f4"
+    },
+    {
+      "bytes": 2565,
+      "path": "tests/test_n7_lower50_slope_replays.py",
+      "sha256": "b9aeeca92bb9fa745f62e533ab61ef3b2081e089484e7207c1bdb6ef8ccea1a3"
+    },
+    {
+      "bytes": 1019,
+      "path": "tests/test_n7_lower50_boolean_controls.py",
+      "sha256": "50e43fb1910bba4655fa8ba1fba01d9d13d047cf52398214edd1eeb99a0eb273"
+    },
+    {
+      "bytes": 1802,
+      "path": "tests/test_n7_lower50_proof_contract.py",
+      "sha256": "caa6b2287b6220726d07ed05e19e5616748c2e423baa02725eb4f59789175c83"
+    }
+  ],
+  "replay_commands": [
+    "python scripts/n7_lower50_section_caps_audit.py --verify-json data/n7_lower50_section_caps_audit.json",
+    "python scripts/n7_rank6_normal_form_profiles.py --verify-json data/n7_rank6_normal_form_profiles.json",
+    "python scripts/n7_rank6_normal_form_profiles_independent.py",
+    "python scripts/n7_slope10_coordinate_symbol_table.py --verify-json data/n7_slope10_coordinate_symbol_table.json",
+    "python scripts/n7_slope10_coordinate_symbol_table_independent.py",
+    "python scripts/n7_lower50_boolean_controls.py --verify-json data/n7_lower50_boolean_controls.json",
+    "python scripts/n7_lower50_proof_contract.py",
+    "python scripts/rethlas_perm7_20260822/slope10_adversarial_modular.py"
+  ],
+  "schema_version": 1,
+  "scope": {
+    "border_rank_claim": false,
+    "field": "algebraically closed characteristic zero",
+    "rank": "ordinary Chow rank"
+  }
+}

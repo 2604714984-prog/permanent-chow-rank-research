@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "Exhaustive finite-field falsifier only; the arbitrary-W characteristic-zero Boolean quotient lemma is proved in the v6 core audit note.",
+  "degree_three_no_socle_rank": 35,
+  "dimension_A3": 35,
+  "dimension_A4": 35,
+  "field": "F_2",
+  "five_planes_checked": 2667,
+  "minimum_rank_W_times_A3": 35,
+  "schema_version": 1
+}
