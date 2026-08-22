@@ -501,6 +501,42 @@ The unrestricted `RESIDUAL-THEOREM` remains open on essential projection
 cores: a rank-seven pivot, a transverse one-six pair, or two rank-six blocks
 with distinct kernels.
 
+## Wave 2 -- exhaustive scalar direct-basis compositions
+
+For a direct factor-plane basis, let `n_r` count its rank-`r` planes.  The
+dimension equation is
+
+```text
+sum(r*n_r) = 49.
+```
+
+The universal full-increment surplus floors for ranks one through seven are
+
+```text
+(26,17,9,3,0,0,0).
+```
+
+Applying the 35-unit budget together with the pair and triple subset floors
+to every integer solution leaves exactly 69 rank-count vectors.  Exactly 67
+contain a rank-at-most-five block; the other two are the all-rank-seven basis
+and the seven-rank-six-plus-one-rank-seven basis already isolated above.
+
+Two independent bounded recursions produce the same ordered table in
+`scripts/n7_lower51_direct_basis_compositions.py`, frozen at
+`data/n7_lower51_direct_basis_compositions.json`.
+
+Decisive scoped markers:
+
+```text
+N50-DIRECT-BASE-RANK-COMPOSITIONS
+LOW-RANK-DIRECT-BASE-COMPOSITIONS
+DIRECT-BASIS-COMPOSITION-INDEPENDENT
+```
+
+These 69 rows are exhaustive for the stated scalar gates.  They are not the
+represented packet table: rank-six support costs, intermediate increments,
+outside zero placements, and the actual factor maps still refine them.
+
 ## Waves 5 and optional lanes -- value-gate decisions
 
 The exact existing Fitting/Schur replay passes but proves that every tested
