@@ -2,7 +2,7 @@
 
 ## Status
 
-`W=0 CLASSIFIED; ALL-SAME-ROW-ZERO BRANCH REDUCED TO TENSOR RANK.`
+`W=0 CLASSIFIED; ALL-SAME-ROW-ZERO BRANCH CLOSED BY TENSOR RANK.`
 
 Fix one term and one matrix row, and write `v_r in k^7` for the seven-column
 slice of factor `r`.  On `W=0`, every pair satisfies
@@ -45,8 +45,12 @@ each row space.  Any true identity remaining in this necessary component is a
 
 The off-row Hessian nonzero targets become mixed flattening equations of this
 tensor identity.  Ordinary row-bipartition flattenings have ranks
-`1,7,21,35,35,21,7,1`, so their maximum lower bound is only 35 and they cannot
-exclude 49 terms.  A stronger tensor-rank invariant is required.
+`1,7,21,35,35,21,7,1`, so their maximum lower bound is only 35.  The required
+stronger invariant is supplied in
+`docs/n7_packet_a_wzero_tensor_rank_closure.md`: Han--Ju--Kim's recursive
+Koszul flattening gives ordinary tensor rank at least 55 for the seventh-order
+permanent tensor in characteristic zero.  Hence 49 row-separated summands are
+impossible and the completed all-same-row-witness-zero branch is closed.
 
 No full catalectic matrix or enumeration is used.  Classification stores only
 the 49 coefficients of one term-row slice family, with a 16 MiB conservative

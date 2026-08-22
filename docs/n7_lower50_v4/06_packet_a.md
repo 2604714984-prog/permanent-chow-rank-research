@@ -1,5 +1,22 @@
 # Program A — all-rank-seven Packet A
 
+## Current execution state
+
+A-01 through A-06 now have exact labelled operator, aggregate-kernel,
+inverse-coefficient transport, permanent-target, forced-gradient, and
+forced-Hessian interfaces.  The completed same-row witness matrix gives two
+branches.  Its zero branch is empty in characteristic zero: the structure
+theorem makes every term row-separated, while the resulting 49-term tensor
+decomposition contradicts the ordinary tensor-rank lower bound
+`R(perm_7) >= 55`.  See
+`docs/n7_packet_a_wzero_tensor_rank_closure.md`.
+
+This is not `A-CLOSED`.  The exact active component is `W^all != 0`, where a
+nonzero aggregate degree-five relation is forced but compatibility with the
+rectangular endpoint inclusion (equivalently, the complementary `2/5`
+relation system) is not yet decided.  A-07 through A-14 must be read with
+that reduced boundary.
+
 ## Schema/control smoke
 
 `docs/n7_packet_a_labelled_256_operator.md` freezes the `(term,I)` labels,

@@ -4071,3 +4071,17 @@ replacement of total cost at most 39, contradicting squarefree septic Waring
 rank 64. This closes F4. Together with F1, F2, F3, and F5, it establishes
 `B1-CLOSED` for the weighted common-graph specialization. Arbitrary Packet B,
 Packet A, ordinary lower 50, and border rank remain open.
+
+## 2026-08-22: Packet-A all-witness-zero branch closed
+
+The completed same-row Hessian witness has 147 distinct-column and 49
+same-column columns.  If all 196 vanish, the internal slice classification
+forces every product term, after permuting its seven factors, to have exactly
+one factor in each matrix row.  A hypothetical 49-term Chow identity would
+then be a 49-term simple-tensor decomposition of the seventh-order permanent
+tensor.  Han--Ju--Kim's recursive Koszul flattening proves ordinary tensor
+rank at least 55 for that tensor over characteristic zero, so this branch is
+empty.  The complementary `W^all != 0` branch remains: it supplies a nonzero
+aggregate degree-five relation, but its compatibility with the endpoint
+kernel-image inclusion has not yet been excluded.  Thus Packet A, arbitrary
+Packet B, ordinary lower 50, and border rank remain open.
