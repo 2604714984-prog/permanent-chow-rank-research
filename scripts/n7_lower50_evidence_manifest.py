@@ -34,22 +34,26 @@ PATHS = (
 )
 
 
-def sha256(path: Path) -> str:
+def canonical_payload(path: Path) -> bytes:
     # Git stores these proof assets as text.  Normalize checkout-specific line
     # endings so one committed blob has the same receipt on Windows and Linux.
-    payload = path.read_bytes().replace(b"\r\n", b"\n")
-    return hashlib.sha256(payload).hexdigest()
+    return path.read_bytes().replace(b"\r\n", b"\n")
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(canonical_payload(path)).hexdigest()
 
 
 def build_manifest() -> dict[str, object]:
     files = []
     for relative in PATHS:
         path = ROOT / relative
+        payload = canonical_payload(path)
         files.append(
             {
                 "path": relative,
-                "bytes": path.stat().st_size,
-                "sha256": sha256(path),
+                "bytes": len(payload),
+                "sha256": hashlib.sha256(payload).hexdigest(),
             }
         )
     return {
