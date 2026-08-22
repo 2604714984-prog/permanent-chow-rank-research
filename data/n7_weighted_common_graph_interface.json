@@ -1,0 +1,252 @@
+{
+  "candidate_cardinality_checked_before_materialization": 2,
+  "claim_boundary": [
+    "The seven equality-rank pairs are the complete numerical list implied by nested 42-point evaluation codes and rank(E3)+rank(E4)=72; geometric realizability is not asserted for every pair.",
+    "For a minimal 49-term identity, repeated graph points combine and are excluded; after base change to an algebraic closure of characteristic zero, degree-six target containment implies H_Z(5)<=40 by mixed-partial integrability, leaving five numerical strata.",
+    "The finite-field rows are deterministic controls of the exact block formulation, not exclusions of arbitrary point configurations.",
+    "The weighted rank-(31,41) control satisfies coupling but fails all seven degree-six targets; its characteristic-zero exclusion is separately certified by integer exponent collisions.",
+    "No arbitrary common-graph closure, Packet-B closure, lower-50 theorem, or border-rank conclusion follows."
+  ],
+  "conservative_peak_memory_mib": 16,
+  "equality_rank_strata": [
+    [
+      30,
+      42
+    ],
+    [
+      31,
+      41
+    ],
+    [
+      32,
+      40
+    ],
+    [
+      33,
+      39
+    ],
+    [
+      34,
+      38
+    ],
+    [
+      35,
+      37
+    ],
+    [
+      36,
+      36
+    ]
+  ],
+  "rows": [
+    {
+      "control": "unit_30_42",
+      "coupling_holds_on_equality_stratum": true,
+      "curve_weights": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12
+      ],
+      "degree_six_seven_target_increment_in_one_missing_row_block": 7,
+      "degree_six_target_containment_holds": false,
+      "matrix_shapes": {
+        "e3": [
+          42,
+          84
+        ],
+        "e4": [
+          42,
+          210
+        ],
+        "e6": [
+          42,
+          924
+        ],
+        "targets": [
+          7,
+          924
+        ],
+        "weighted_coupling": [
+          210,
+          84
+        ]
+      },
+      "middle_equality_holds": true,
+      "prime": 65521,
+      "rank_e3": 30,
+      "rank_e4": 42,
+      "rank_e5": 42,
+      "rank_e6": 42,
+      "term_weight_mode": "unit",
+      "weighted_coupling_rank": 30
+    },
+    {
+      "control": "unit_30_42",
+      "coupling_holds_on_equality_stratum": true,
+      "curve_weights": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12
+      ],
+      "degree_six_seven_target_increment_in_one_missing_row_block": 7,
+      "degree_six_target_containment_holds": false,
+      "matrix_shapes": {
+        "e3": [
+          42,
+          84
+        ],
+        "e4": [
+          42,
+          210
+        ],
+        "e6": [
+          42,
+          924
+        ],
+        "targets": [
+          7,
+          924
+        ],
+        "weighted_coupling": [
+          210,
+          84
+        ]
+      },
+      "middle_equality_holds": true,
+      "prime": 65519,
+      "rank_e3": 30,
+      "rank_e4": 42,
+      "rank_e5": 42,
+      "rank_e6": 42,
+      "term_weight_mode": "unit",
+      "weighted_coupling_rank": 30
+    },
+    {
+      "control": "weighted_31_41",
+      "coupling_holds_on_equality_stratum": true,
+      "curve_weights": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        10
+      ],
+      "degree_six_seven_target_increment_in_one_missing_row_block": 7,
+      "degree_six_target_containment_holds": false,
+      "matrix_shapes": {
+        "e3": [
+          42,
+          84
+        ],
+        "e4": [
+          42,
+          210
+        ],
+        "e6": [
+          42,
+          924
+        ],
+        "targets": [
+          7,
+          924
+        ],
+        "weighted_coupling": [
+          210,
+          84
+        ]
+      },
+      "middle_equality_holds": true,
+      "prime": 65521,
+      "rank_e3": 31,
+      "rank_e4": 41,
+      "rank_e5": 42,
+      "rank_e6": 42,
+      "term_weight_mode": "kernel_relation",
+      "weighted_coupling_rank": 30
+    },
+    {
+      "control": "weighted_31_41",
+      "coupling_holds_on_equality_stratum": true,
+      "curve_weights": [
+        1,
+        2,
+        3,
+        6,
+        9,
+        10
+      ],
+      "degree_six_seven_target_increment_in_one_missing_row_block": 7,
+      "degree_six_target_containment_holds": false,
+      "matrix_shapes": {
+        "e3": [
+          42,
+          84
+        ],
+        "e4": [
+          42,
+          210
+        ],
+        "e6": [
+          42,
+          924
+        ],
+        "targets": [
+          7,
+          924
+        ],
+        "weighted_coupling": [
+          210,
+          84
+        ]
+      },
+      "middle_equality_holds": true,
+      "prime": 65519,
+      "rank_e3": 31,
+      "rank_e4": 41,
+      "rank_e5": 42,
+      "rank_e6": 42,
+      "term_weight_mode": "kernel_relation",
+      "weighted_coupling_rank": 30
+    }
+  ],
+  "schema_version": 1,
+  "status": "B1_WEIGHTED_COMMON_GRAPH_INTERFACE_CHECKPOINT",
+  "symbolic_interface": {
+    "degree_six_target": "rank(stack(E6,S6))=rank(E6)",
+    "middle_equality": "rank(E3)+rank(E4)=72",
+    "target_matrix_shape": [
+      7,
+      924
+    ],
+    "weighted_coupling": "rank(E4^T D E3)=30"
+  },
+  "target_compatible_numerical_strata_after_h5_le_40": [
+    [
+      32,
+      40
+    ],
+    [
+      33,
+      39
+    ],
+    [
+      34,
+      38
+    ],
+    [
+      35,
+      37
+    ],
+    [
+      36,
+      36
+    ]
+  ]
+}

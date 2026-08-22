@@ -3837,3 +3837,24 @@ omitted-row blocks are independent, so the exact packet degree-six increment
 is 49 in every case. This is an integer, characteristic-zero certificate and
 supersedes reliance on the earlier random finite-field evaluation for these
 130 exclusions. It remains restricted to the displayed monomial-curve box.
+
+## 2026-08-22: weighted common-graph B1 interface frozen
+
+The next-phase B1 checkpoint writes the common-graph conditions as the exact
+block ranks `rank(E3)+rank(E4)=72`, `rank(E4^T D E3)=30`, and
+`rank(stack(E6,S6))=rank(E6)`, with `E6` of shape `42 x 924` and the seven
+squarefree permanent targets `S6` of shape `7 x 924`.
+
+Nested length-42 evaluation codes leave seven numerical middle-equality pairs
+from `(30,42)` through `(36,36)`. A characteristic-zero mixed-partial
+integrability argument applied first to a minimal simultaneous sixth-power
+support gives `H_S(5)<=|S|-2`; adding the unused graph points back yields
+`H_Z(5)<=40`. Hence only `(32,40)` through `(36,36)` remain numerically
+compatible with degree-six containment. This does not assert geometric
+realizability of all five strata.
+
+Over both 65,521 and 65,519, the unit `(30,42)` and weighted `(31,41)` curve
+controls satisfy middle equality and coupling rank 30, yet adjoining `S6`
+raises rank by seven per missing-row block. Their characteristic-zero target
+failure remains certified by the separate integer exponent-collision
+certificate. The arbitrary-point five-stratum system remains open.
