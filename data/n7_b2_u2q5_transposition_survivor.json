@@ -1,0 +1,89 @@
+{
+  "U2_residual_bilinear_form": {
+    "controls": {
+      "cross_pairing": 1,
+      "first_line_isotropic": 0,
+      "second_line_isotropic": 0
+    },
+    "determinant": -1,
+    "formula": "x0*y1+x1*y0+2*x1*y1",
+    "isotropic_lines": [
+      "x1=0",
+      "x0+x1=0"
+    ],
+    "matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "candidate_cardinality_checked_before_materialization": {
+    "degree_seven_monomials_in_nine_variables": 6435,
+    "labelled_four_subsets": 70,
+    "sym3_dimension_in_nine_variables": 165,
+    "sym4_dimension_in_nine_variables": 495,
+    "terms": 2
+  },
+  "claim_boundary": [
+    "This is an exact characteristic-zero identity with two rank-seven Chow terms and nonmonomial quotient frames.",
+    "Its unprojected nine-variable minimal B/C complex has zero kernel-image defect.",
+    "It matches the U0_Q7 identity target, the zero U1_Q6 target, and one U2_Q5 transposition target exactly, with no higher-U terms.",
+    "It proves that those layers plus local Sylvester equality do not force quotient-frame synchronization.",
+    "It is not a 42-complement packet and does not meet or test the global ranks 2870 and 1225; compatibility among all 21 transpositions remains open.",
+    "No B2-SURVIVOR for the full equality locus, B2-CLOSED, lower-50, or border-rank claim is made."
+  ],
+  "conservative_peak_memory_mib": 64,
+  "coordinate_order": [
+    "q0",
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "u01",
+    "u10"
+  ],
+  "decision": "EXACT_SURVIVOR_OF_IDENTITY_PLUS_SYLVESTER_ON_ONE_TRANSPOSITION_SLICE_ONLY",
+  "exact_identity": "1/2(q0-q1-u01-u10)(q1-u10)prod(q2..q6) + 1/2(q0+q1+u01-u10)(q1+u10)prod(q2..q6) = (q0q1+u01u10)prod(q2..q6)",
+  "factor_ranks": [
+    7,
+    7
+  ],
+  "global_rank_join_rule": "Any completion must assemble every term in the original 49-variable B and C, retain cross-term intersections, and finish with rank(B)+rank(C)=2870 and rank(BC)=1225; slice defects cannot be added independently.",
+  "minimal_complex": {
+    "kernel_image_defect": 0,
+    "middle_dimension": 70,
+    "rank_B": 65,
+    "rank_BC": 55,
+    "rank_C": 60,
+    "sylvester_equality_holds": true
+  },
+  "next_exact_gate": "Attempt compatible gluing of the 21 transposition-slice survivors; test the first pair of transpositions sharing a row versus a disjoint pair, while updating the original unprojected B/C ranks.",
+  "quotient_frame_determinants": [
+    "1/2",
+    "1/2"
+  ],
+  "quotient_frames_monomial": [
+    false,
+    false
+  ],
+  "schema_version": 1,
+  "status": "EXACT_U2Q5_TRANSPOSITION_SLICE_SURVIVOR",
+  "target_U_degree_histogram": {
+    "0": 1,
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0
+  },
+  "term_count": 2
+}
