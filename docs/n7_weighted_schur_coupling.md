@@ -2,7 +2,9 @@
 
 ## Status
 
-`W-01-COMPLETE; W-02-COMPLETE; W-03-COMPLETE.`
+`W-01-COMPLETE; W-02-COMPLETE; W-03-COMPLETE; W-04 FIXED-CODE OPERATOR COMPLETE.`
+
+The W-04 structural classification of special point subsets remains open.
 
 Let `C3=im(E3)`, `R3=ker(E3^T)`, and `R4=ker(E4^T)`.  If
 `D=diag(d_i)` has no zero entry and `w_i=d_i^{-1}`, then
@@ -37,11 +39,31 @@ coordinate vectors belongs to the Schur span.  For a fixed point code this
 replaces saturation by 42 exact membership tests in a matrix with at most 35
 columns on the active frontier.
 
+## Puncturing, shortening, and separators
+
+Let `L=R3 star R4`, and let `pi_i` delete coordinate `i`. Then
+
+\[
+e_i\in L\quad\Longleftrightarrow\quad
+\dim L-\dim\pi_i(L)=1.
+\]
+
+This is the W-04 puncture test. The shortening of `R_d` at coordinate `i`
+has dimension `q_d-1` when the coordinate functional is nonzero, and `q_d`
+when it vanishes identically. In the common-graph affine normalization (or
+after trivializing by a nowhere-zero linear form), `C3 subset C4`, hence
+`R4 subset R3`.
+If coordinate `i` vanishes on `R4`, then it vanishes on every Schur product,
+so `e_i` cannot belong to `L`. Equivalently, `e_i in C4`: the point has a
+degree-four separator. The evaluator freezes these separator coordinates at
+each stated control prime and
+checks that they never appear among the puncture rank drops.
+
 ## Controls and boundary
 
 The deterministic replay evaluates the three existing curve-union profile
 controls over the two standard primes.  Those rows test matrix orientation and
-the membership criterion only.  They do not satisfy the permanent target in
+the membership/puncture criteria only.  They do not satisfy the permanent target in
 general and cannot close any F frontier from weighted coupling alone.
 
 The theorem is used over characteristic zero (or any infinite field).  A

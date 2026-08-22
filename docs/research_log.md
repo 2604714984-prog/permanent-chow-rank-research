@@ -3933,3 +3933,25 @@ obstruction. These are fixed-code orientation controls only: they show that
 arbitrary nonzero weights remain available on those controls, not that the
 permanent target is contained or that any F frontier survives. Common-graph
 B1, arbitrary Packet B, ordinary lower 50, and border rank remain open.
+
+## 2026-08-22: H-03 multiplication ranks reduced to a finite envelope
+
+Macaulay growth and the ideal inclusions now reduce the seven reversible
+Hilbert signatures to a Cartesian envelope of 1,894 numerical
+multiplication-rank candidates, or 22,728 after attaching the twelve formal
+O-sequence labels per signature. The
+degree-six image needs only `S1 I5`, since `S2 I4` is already contained in
+it. The compact frozen payload records intervals rather than materializing
+the expanded list. All seven envelopes are nonempty, so this is an input to
+the target-preserving and weighted-coupling gates, not an exclusion of F1
+through F5 or a new lower bound.
+
+## 2026-08-22: W-04 reduced to puncture rank drops
+
+For a fixed Schur span, coordinate-vector membership is now independently
+expressed as a one-rank loss after puncturing that coordinate. Coordinates
+vanishing identically on `R4` are exactly degree-four separator coordinates;
+they vanish on all products and therefore cannot obstruct a nonzero weight.
+This completes the fixed-code W-04 operator without saturation. It does not
+enumerate parameter families or close a frontier before TI/H produce an exact
+target-compatible survivor. W-05 remains stabilizer-sensitive and open.

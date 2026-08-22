@@ -2,10 +2,13 @@
 
 ## Executed foundation
 
-`W-01`, `W-02`, and `W-03` are implemented and replayed in
+`W-01` through `W-03`, together with the W-04 fixed-code operator, are
+implemented and replayed in
 `docs/n7_weighted_schur_coupling.md` and
 `scripts/n7_weighted_schur_coupling.py`.  Subsequent tasks may use the
-coordinate-vector membership criterion directly for a fixed point code.
+coordinate-vector membership or puncture-rank criterion directly for a fixed
+point code. W-04 structural subset classification and the stabilizer-aware
+W-05 Schur-product bound remain open.
 
 ## Goal
 
@@ -52,6 +55,11 @@ This replaces a 42-variable saturation by exact membership tests whenever the
 point configuration is fixed.
 
 ## W-04 — puncturing and shortening
+
+Fixed-code operator executed: `e_i` belongs to the Schur span exactly when
+deleting coordinate `i` lowers its rank by one. Degree-four separator
+coordinates are recorded and cannot be obstructions. Structural
+classification of special subsets remains open.
 
 Interpret `e_i in R_3 star R_4` through punctured/shortened evaluation codes,
 low-degree separators, and special subsets of points.

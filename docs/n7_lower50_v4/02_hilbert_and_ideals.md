@@ -24,6 +24,12 @@ strict-growth tail type
 
 ## H-03 — degree-4-to-6 multiplication ranks
 
+Executed as the necessary numerical envelope in
+`docs/n7_lower50_hilbert_multiplication_envelopes.md`. The seven H-02
+signatures give a Cartesian envelope of 1,894 candidate rank pairs (22,728
+after formal-sequence labels). No frontier is excluded before the target and
+reduced-point gates.
+
 For every signature enumerate the numerically possible ranks of
 
 \[

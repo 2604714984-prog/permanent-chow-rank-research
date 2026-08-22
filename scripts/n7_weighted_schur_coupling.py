@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact fixed-code evaluator for W-01 through W-03."""
+"""Exact fixed-code evaluator for W-01 through W-04."""
 
 from __future__ import annotations
 
@@ -50,11 +50,38 @@ def coordinate_membership_mask(span: np.ndarray, prime: int) -> list[bool]:
     return mask
 
 
+def puncture_rank_drop_mask(span: np.ndarray, prime: int) -> list[bool]:
+    """Detect ``e_i`` in a column span by deleting coordinate ``i``."""
+    span = np.asarray(span, dtype=np.int64) % prime
+    base_rank = coupled.modular_rank(span, prime)
+    return [
+        base_rank - coupled.modular_rank(np.delete(span, index, axis=0), prime) == 1
+        for index in range(span.shape[0])
+    ]
+
+
+def coordinate_zero_indices(space: np.ndarray, prime: int) -> list[int]:
+    """Return coordinates on which every vector in a column space vanishes."""
+    space = np.asarray(space, dtype=np.int64) % prime
+    return [index for index in range(space.shape[0]) if not np.any(space[index, :])]
+
+
 def evaluate_relations(relation3: np.ndarray, relation4: np.ndarray, prime: int) -> dict[str, object]:
+    relation3 = np.asarray(relation3, dtype=np.int64) % prime
+    relation4 = np.asarray(relation4, dtype=np.int64) % prime
+    if coupled.modular_rank(np.column_stack((relation3, relation4)), prime) != coupled.modular_rank(relation3, prime):
+        raise ValueError("the fixed-code operator requires R4 to be contained in R3")
     span = schur_columns(relation3, relation4, prime)
     rank = coupled.modular_rank(span, prime)
     mask = coordinate_membership_mask(span, prime)
+    puncture_mask = puncture_rank_drop_mask(span, prime)
+    if puncture_mask != mask:
+        raise AssertionError("puncturing and unit-vector membership disagree")
     weight_space = coupled.modular_nullspace_columns(span.T, prime)
+    relation3_zero = coordinate_zero_indices(relation3, prime)
+    relation4_zero = coordinate_zero_indices(relation4, prime)
+    if any(mask[index] for index in relation4_zero):
+        raise AssertionError("a degree-four separator coordinate entered the Schur span")
     return {
         "q3": relation3.shape[1],
         "q4": relation4.shape[1],
@@ -64,6 +91,12 @@ def evaluate_relations(relation3: np.ndarray, relation4: np.ndarray, prime: int)
         "coordinate_membership_indices": [
             index for index, contained in enumerate(mask) if contained
         ],
+        "puncture_rank_drop_indices": [
+            index for index, contained in enumerate(puncture_mask) if contained
+        ],
+        "relation3_coordinate_zero_indices": relation3_zero,
+        "relation4_coordinate_zero_indices": relation4_zero,
+        "degree4_separator_indices_mod_prime": relation4_zero,
         "no_coordinate_vector_in_schur_span_mod_prime": not any(mask),
     }
 
@@ -98,12 +131,15 @@ def build_payload() -> dict[str, object]:
             }
         )
     return {
-        "schema_version": 1,
-        "status": "W-01-W-03-SCHUR-COORDINATE-CRITERION",
+        "schema_version": 2,
+        "status": "W-01-W-03-COMPLETE-W-04-FIXED-CODE-OPERATOR",
         "maximum_active_matrix_shape": [42, 35],
         "controls": controls,
         "claim_boundary": [
             "The dense-torus equivalence is a theorem over an infinite field for each fixed point code.",
+            "Puncture rank drop is exactly unit-vector membership for each fixed Schur span.",
+            "Separator indices in the displayed rows are modular control data at the stated prime.",
+            "W-04 structural classification of special point subsets remains open.",
             "The displayed modular curve-union rows are orientation controls, not target-compatible frontier components.",
             "No F frontier, Packet B endpoint, lower-50 theorem, or border-rank claim follows.",
         ],
