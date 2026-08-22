@@ -1,0 +1,60 @@
+{
+  "claim_boundary": "The coordinate size-725 shadow-950 locus is classified into three orbit types up to transposition. The result does not classify noncoordinate equality loci, prove seventeen-term Chow realizability or nonrealizability, supply the missing 1377 rank dimensions, prove lower 78, or make a border-rank claim.",
+  "column_incidence": {
+    "profile_A_column_flag_count": 168,
+    "profile_B_column_biflag_count": 336
+  },
+  "core_sha256": "0eda32ad2a4c8a88ca899d3b09083f06c93e015cf7ec6a33272f876456087e27",
+  "external_equality_input": {
+    "source": "Serra--Vena, arXiv:2304.05145, Theorem 4",
+    "used_sizes": [5,15,25,35,45,55]
+  },
+  "family_counts": {
+    "A1_common_apex": 56448,
+    "A2_exchanged_apex": 56448,
+    "all_four_profiles": 451584,
+    "profile_A_total": 112896,
+    "profile_A_transposes": 112896,
+    "profile_B_biflag": 112896,
+    "profile_B_transposes": 112896
+  },
+  "orbit_counts": {
+    "S8xS8": 6,
+    "with_transposition": 3
+  },
+  "profile_A_row_incidence": {
+    "A1_common_apex_count": 336,
+    "A2_exchanged_apex_count": 336,
+    "connectivity_signature_count": 2,
+    "extremal_45_family_count": 168,
+    "extremal_55_family_count": 56,
+    "nested_pair_count": 672
+  },
+  "profile_A_row_records_sha256": "c7859f526011d84333d2ef712d0a6efda34df14c910c96cdd16dcce1489746fc",
+  "profile_B_row_incidence": {
+    "connectivity_signature_count": 1,
+    "row_flag_count": 336
+  },
+  "representative_families": {
+    "A1_common_apex": {
+      "coordinate_pair_count": 725,
+      "row_profile_runs": [[15,45],[5,10],[0,15]],
+      "simultaneous_shadow_size": 950
+    },
+    "A2_exchanged_apex": {
+      "coordinate_pair_count": 725,
+      "row_profile_runs": [[15,45],[5,10],[0,15]],
+      "simultaneous_shadow_size": 950
+    },
+    "B_biflag": {
+      "coordinate_pair_count": 725,
+      "row_profile_runs": [[35,5],[25,10],[15,20],[0,35]],
+      "simultaneous_shadow_size": 950
+    }
+  },
+  "status": [
+    "PURE_COORDINATE_EQUALITY_THEOREM",
+    "EXACT_NESTED_EXTREMAL_INCIDENCE_REPLAY",
+    "N8_Q17_B725_SHADOW950"
+  ]
+}
