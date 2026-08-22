@@ -1,0 +1,26 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3554276,
+      "file": "perm3456_chow_rank_v15_repaired_zh_ams.pdf",
+      "sha256": "7545FE117A69F87741BDDC83BCA604DE83FA7B57348AF112354E3CF08EFBB5A7"
+    },
+    {
+      "bytes": 1436081,
+      "file": "perm3456_reviewer_submission_v15_20260822.zip",
+      "sha256": "8C2DBC3A1A4928E3B3A7659678E6832F03BA806663C93125A68D42A828BB4DA5"
+    }
+  ],
+  "active_computation_premises": [
+    "n=4 exact rational chart certificate",
+    "n=5 one-intersection flag endpoint bound",
+    "n=6 half-defect finite tables and actual derivative profiles"
+  ],
+  "external_review_complete": false,
+  "format": "perm3456-v15-repaired-release-assets-v1",
+  "ordinary_rank_only": true,
+  "pdf_embedded_files": 111,
+  "pdf_pages": 46,
+  "proof_status": "REPAIRED_INTERNAL_COMPUTER_ASSISTED_PROOF",
+  "zip_entries": 119
+}
