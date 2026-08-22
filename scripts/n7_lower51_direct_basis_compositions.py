@@ -69,13 +69,15 @@ def build() -> dict:
     rows = []
     for counts in recursive:
         ranks = [rank for rank, count in enumerate(counts, 1) for _ in range(count)]
+        surplus_floor = sum(
+            a * b for a, b in zip(counts, FULL_INCREMENT_FLOOR)
+        )
         rows.append(
             {
                 "counts_rank_1_through_7": list(counts),
                 "basis_labels": len(ranks),
-                "full_increment_surplus_floor": sum(
-                    a * b for a, b in zip(counts, FULL_INCREMENT_FLOOR)
-                ),
+                "full_increment_surplus_floor": surplus_floor,
+                "maximum_residual_middle_cap": BUDGET - surplus_floor,
                 "contains_rank_at_most_5": any(counts[:5]),
             }
         )

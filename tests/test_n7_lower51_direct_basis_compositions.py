@@ -29,13 +29,19 @@ class DirectBasisCompositionTests(unittest.TestCase):
         self.assertEqual(payload["low_rank_compositions"], 67)
 
     def test_every_row_satisfies_gates(self) -> None:
-        for counts in MODULE.enumerate_recursive():
+        payload = MODULE.build()
+        for row in payload["rows"]:
+            counts = row["counts_rank_1_through_7"]
             self.assertEqual(sum(rank * count for rank, count in enumerate(counts, 1)), 49)
             self.assertLessEqual(
                 sum(a * b for a, b in zip(counts, MODULE.FULL_INCREMENT_FLOOR)),
                 35,
             )
             self.assertTrue(MODULE.subset_floor_ok(counts))
+            self.assertEqual(
+                row["maximum_residual_middle_cap"],
+                35 - row["full_increment_surplus_floor"],
+            )
 
 
 if __name__ == "__main__":

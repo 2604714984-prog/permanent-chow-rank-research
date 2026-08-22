@@ -536,6 +536,10 @@ DIRECT-BASIS-COMPOSITION-INDEPENDENT
 These 69 rows are exhaustive for the stated scalar gates.  They are not the
 represented packet table: rank-six support costs, intermediate increments,
 outside zero placements, and the actual factor maps still refine them.
+Each frozen row also records the sharp scalar maximum residual cap
+`35-full_increment_surplus_floor`.  Thus every positive-cost row can contain
+an outside rank-seven term only if that term has an essential projection
+block; otherwise the redundant-image theorem excludes it.
 
 ## Waves 5 and optional lanes -- value-gate decisions
 
