@@ -3993,3 +3993,29 @@ cost is at most 48. All bounds contradict the squarefree septic Waring rank
 64. Combined with the sparse-ratio theorem, this closes the complete F3
 `H6=42` layer. F3 `H6=41` retains a one-dimensional `R6` coefficient gauge
 and remains open; no lower-50 or border-rank claim follows.
+
+## 2026-08-22: target-preserving torus degeneration fixed
+
+For a diagonal one-parameter subgroup, the seven squarefree sextic targets
+form a stable weight subspace. Flat degeneration preserves the complete
+Hilbert function, and `I6 subset T6^perp` passes to the associated graded
+limit by closedness in the Grassmannian. This authorizes a one-way
+target-compatible monomial-initial exclusion. Coupling ranks may drop, the
+relation/code spaces may fail to extend as constant-rank subbundles, the
+nonzero weight torus may hit its boundary, and distinct points may become
+nonreduced; none of those properties is promoted without a separate gate.
+This completes H-04 but does not enumerate H-05 or close a frontier.
+
+## 2026-08-22: complete common-graph `q5=2` class closed
+
+Let `tau` generate the one-dimensional sixth-power relation space in F1 or
+the `H6=41` half of F3. The coefficient gauge changes the relation tensor by
+`tau_i(lambda wedge a_i)` but changes the represented vector field by
+`lambda sum_i tau_i l_i^6=0`. The gauge differential is injective, with rank
+seven and cokernel dimension 35. Every representative still lies in the
+exhaustive bivector-span, non-Grassmannian, or Grassmannian-flag trichotomy;
+the replacement bounds are at most 42, 42, and 48. Thus F1 and the remaining
+F3 layer are impossible. Together with the gauge-free result, both F1 and F3
+are closed and the entire common-graph `q5=2` class is decided. The `q5=3`
+and `q5=4` frontiers, arbitrary Packet B, Packet A, lower 50, and border rank
+remain open.

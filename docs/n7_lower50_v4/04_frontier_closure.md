@@ -5,6 +5,11 @@ class, nonzero weighted coupling, and decisive exact output.
 
 ## F1 — `(33,39,40)`, `q5=2`, `q6=1`
 
+`F1-CLOSED.` The `R6` gauge differential has rank seven, but its coefficient
+change adds the zero vector field. Applying the exhaustive pencil theorem to
+any representative gives a Waring replacement of cost at most 48, strictly
+below 64.
+
 - **F1-01:** freeze the 12 signatures and degree-4-to-6 multiplication types.
 - **F1-02:** apply the complete pencil theorem.
 - **F1-03:** apply the `(9,3)` Schur-product test to every target survivor.
@@ -19,10 +24,14 @@ class, nonzero weighted coupling, and decisive exact output.
 
 ## F3 — `(34,38,40)`, `q5=2`, `q6=0 or 1`
 
+`F3-CLOSED.` The `H6=42` gauge-free layer is closed by TI-09/TI-10. The
+`H6=41` layer is closed by the same representative-wise replacement after
+observing that the `R6` gauge adds the zero vector field.
+
 Executed subcase: `H6=42` is closed completely. The bivector-span-zero/one,
 two-dimensional non-Grassmannian, and Grassmannian flag-line branches all
 admit Waring replacements of cost strictly below 64. The `H6=41` gauge branch
-remains open, so F3 as a whole is not yet closed.
+is now also closed by the gauge theorem.
 
 - **F3-01:** split the 24 signatures by `H6=42` and `H6=41`.
 - **F3-02:** exploit uniqueness of target coefficients when `q6=0`.
@@ -44,6 +53,11 @@ remains open, so F3 as a whole is not yet closed.
 - **F5-04:** return `F5-CLOSED` or an exact `F5-SURVIVOR`.
 
 ## Cross-frontier extraction
+
+Extracted theorem: a 42-point target-compatible common graph with `q5=2`
+and `q6` equal to zero or one is impossible over an algebraically closed
+field of characteristic zero. This removes the complete F1 and F3 triples,
+covering 36 formal O-sequences.
 
 After any two cases are decided, extract a statement in terms of
 `(q3,q4,q5,q6)`. It counts as substantive only if it removes at least two

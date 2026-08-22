@@ -68,6 +68,13 @@ already established zero- and one-relation arguments.
 
 ## TI-03 — quotient the `R6` gauge correctly
 
+For the complete `q5=2,q6=1` class, executed in
+`docs/n7_q5_two_q6_one_gauge.md`, the gauge differential is injective with
+rank seven and cokernel dimension 35. More importantly, every gauge change
+adds the zero vector field. Although a fixed pencil type is not canonical,
+every representative lies in the same exhaustive three-branch theorem and
+every branch has replacement cost at most 48.
+
 Do not choose a preferred coefficient representation.  Under translation by
 `U in R6 tensor k^7`, the relation tensor changes by `d_A(U)`.  Freeze the
 class of `Psi_A(C)` in `coker(d_A)` and prove that it is independent of the
@@ -127,6 +134,10 @@ P(B)\cap\operatorname{Gr}(2,7)\subset P(\Lambda^2k^7).
 Separate zero, decomposable, and higher alternating-rank values.
 
 ## TI-08 — the `q5=2` pencil theorem
+
+Decision: complete for the common-graph frontier. TI-09/TI-10 close the
+gauge-free F3 `H6=42` layer, and the zero-vector-field gauge argument closes
+F1 and F3 `H6=41`. Hence all F1/F3 `q5=2` signatures are impossible.
 
 For `F1` and `F3`, classify only the pencil types actually compatible with
 TI-07:

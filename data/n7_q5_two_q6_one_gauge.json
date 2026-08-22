@@ -1,0 +1,35 @@
+{
+  "bounded_sparse_cases_checked": 1740,
+  "branch_replacement_bounds": {
+    "bivector_span_at_most_one": 42,
+    "grassmannian_flag_with_p_point": 48,
+    "grassmannian_flag_without_p_point": 43,
+    "non_grassmannian_sparse_ratio": 42
+  },
+  "claim_boundary": [
+    "The bivector pencil is gauge-dependent; only its exhaustive branch union is used.",
+    "All q5=2 common-graph signatures F1/F3 are closed.",
+    "No conclusion is made here for q5=3, q5=4, arbitrary Packet B, lower 50, or border rank."
+  ],
+  "closed_signatures": [
+    "F1-(33,39,40,41)",
+    "F3-(34,38,40,41)"
+  ],
+  "gauge": {
+    "cokernel_dimension": 35,
+    "kernel_dimension": 0,
+    "minimum_tau_support": 8,
+    "rank": 7,
+    "source_dimension": 7,
+    "target_dimension": 42
+  },
+  "permanent_waring_rank": 64,
+  "point_count": 42,
+  "q5_q6": [
+    2,
+    1
+  ],
+  "schema_version": 1,
+  "status": "Q5-TWO-Q6-ONE-GAUGE-CLOSED",
+  "wedge_dimension": 21
+}

@@ -47,6 +47,13 @@ resolution when these ranks already decide the target block.
 
 ## H-04 — target-preserving torus degeneration
 
+Executed in `docs/n7_target_preserving_torus_degeneration.md`. Hilbert
+functions and degree-six target containment pass to a diagonal associated
+graded limit. Coupling passes only when its relation/code spaces extend as
+constant-rank subbundles in a fixed ambient bundle and the diagonal weights
+extend invertibly; reducedness and point distinctness do not pass
+automatically.
+
 Prove the exact statement for a diagonal one-parameter subgroup preserving
 the seven squarefree target monomials:
 
