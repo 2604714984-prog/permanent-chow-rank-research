@@ -1,0 +1,33 @@
+{
+  "claim_boundary": {
+    "coefficient_system_reduced": true,
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false,
+    "second_order_lift_decided": false
+  },
+  "cross_boundary_target_count": 18,
+  "cross_boundary_target_edge_bijection": true,
+  "distinct_source_monomials": 81,
+  "fixed_33_target_count": 6,
+  "frame_count": 6,
+  "frame_graph": "K3,3_ON_EVEN_AND_ODD_S3_PERMUTATIONS",
+  "order_zero_kernel_basis": "NINE_PAIRWISE_CROSS_DIFFERENCES",
+  "order_zero_kernel_dimension": 9,
+  "schema": "general_quartic_c6_second_order_source_reduction/v1",
+  "source_collision_graph": {
+    "common_tangent_channels_per_edge": 4,
+    "degree": 4,
+    "edges": 18,
+    "vertices": 9
+  },
+  "source_coordinates": 90,
+  "source_multiplicity_distribution": {
+    "1": 72,
+    "2": 9
+  },
+  "source_mode_count": 9,
+  "source_modes_per_fixed_33_target": [6],
+  "sources_per_frame": 15
+}

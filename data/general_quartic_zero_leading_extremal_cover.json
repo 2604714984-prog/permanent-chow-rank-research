@@ -1,0 +1,10 @@
+{
+  "core_sha256": "da8f9cf8d79ef2c6ba40babdb0d632449492d3c638a207ad4007b0b14fdca125",
+  "equality_frames": 288,
+  "exact_24_matching_covers": 2016,
+  "extremal_four_zero_cover_first_order": "EXCLUDED",
+  "global_maximum_reachable_matching_count": 7,
+  "orbit_maximum_reachable_matching_counts": [6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7],
+  "perm4_matching_count": 24,
+  "row_column_cover_orbits": 18
+}

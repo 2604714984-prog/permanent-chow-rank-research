@@ -1,0 +1,41 @@
+{
+  "component_count": 6,
+  "conclusion": {
+    "coordinate_regular_first_order_six_block_lift": "IMPOSSIBLE",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false,
+    "noncoordinate_singular_or_higher_order_lifts": "OPEN"
+  },
+  "coordinate_order": 4,
+  "field": "characteristic_zero",
+  "frame_audit": {
+    "coordinate_multisets_checked": 54264,
+    "maximum_local_score_e_plus_p_plus_v": 6,
+    "maximum_vertical_non_direct_support": 2
+  },
+  "global_incidence": {
+    "contradiction_margin": 12,
+    "degree_one_direct_or_vertical": true,
+    "maximum_available_sum_e_plus_p_plus_v": 36,
+    "minimum_required_sum_e_plus_p_plus_v": 48,
+    "target_count": 24
+  },
+  "schema": "general_quartic_coordinate_first_order_closure/v1",
+  "support_audit": {
+    "maximum_envelope_by_support_size": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 4,
+      "6": 6
+    },
+    "support_refinements_verified": true,
+    "supports_checked": 14893,
+    "two_direct_six_cell_supports": 72
+  },
+  "target_matching_count": 24
+}

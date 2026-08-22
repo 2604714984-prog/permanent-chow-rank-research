@@ -1,0 +1,16 @@
+{
+  "conclusion": {
+    "coordinate_regular_first_order_q8_existence": "OPEN",
+    "coordinate_regular_first_order_q_le_7": "IMPOSSIBLE",
+    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "new_border_rank_bound": false,
+    "new_unrestricted_chow_rank_bound": false
+  },
+  "maximum_local_budget": 6,
+  "minimum_component_count": 8,
+  "minimum_required_global_budget": 48,
+  "q6_margin": 12,
+  "q7_margin": 6,
+  "schema": "general_quartic_coordinate_first_order_eight_term_floor/v1",
+  "target_matching_count": 24
+}

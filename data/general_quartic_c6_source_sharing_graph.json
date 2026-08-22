@@ -1,0 +1,51 @@
+{
+  "claim_boundary": {
+    "canonical_fixed_3x3_orbit": "ALREADY_CLOSED_BY_PAIR_CANCELLATION",
+    "distinct_c6_order_zero_common_source_kernel": "DIMENSION_AT_MOST_9",
+    "general_six_block_zero_theorem": false,
+    "mu_6_4": "OPEN_IN_[6,7]",
+    "two_noncanonical_maximal_orbits": "OPEN"
+  },
+  "frame_count": 96,
+  "frame_pair_intersection_histogram": {
+    "0": 144,
+    "1": 576,
+    "2": 2448,
+    "3": 960,
+    "4": 432
+  },
+  "labeled_k33_six_sets": 112,
+  "orbit_profiles": [
+    {
+      "omitted_column_multiplicities": [6],
+      "omitted_row_multiplicities": [6],
+      "orbit_size": 16,
+      "representative": [0, 1, 2, 3, 4, 5]
+    },
+    {
+      "omitted_column_multiplicities": [2, 2, 2],
+      "omitted_row_multiplicities": [6],
+      "orbit_size": 48,
+      "representative": [0, 1, 6, 7, 12, 13]
+    },
+    {
+      "omitted_column_multiplicities": [6],
+      "omitted_row_multiplicities": [2, 2, 2],
+      "orbit_size": 48,
+      "representative": [0, 1, 24, 25, 48, 49]
+    }
+  ],
+  "orbit_sizes": [16, 48, 48],
+  "row_column_orbits": 3,
+  "schema": "general_quartic_c6_source_sharing_graph/v1",
+  "six_frame_equality_graph": "K3,3",
+  "six_frame_kernel_dimension_upper_bound": 9,
+  "source_count": 1008,
+  "source_multiplicity_histogram": {
+    "1": 576,
+    "2": 432
+  },
+  "source_sharing_degree": 9,
+  "source_sharing_edges": 432,
+  "triangle_count": 0
+}

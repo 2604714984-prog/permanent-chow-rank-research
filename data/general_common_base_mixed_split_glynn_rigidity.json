@@ -1,0 +1,51 @@
+{
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "common_base_mixed_split_dictionary": "THRESHOLD_AND_EQUALITY_EXACT",
+    "global_six_block_literal_sum": "OPEN",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "non_sign_frames": "NOT_INCLUDED",
+    "unrestricted_chow_rank_improvement": false,
+    "variable_base_and_variable_split_simultaneously": "NOT_INCLUDED"
+  },
+  "classification": "STRICT_DICTIONARY_RIGIDITY_THEOREM",
+  "core_sha256": "b060620eec6f6a4dc016024ffec05230494b280af9275e8b4693be3a042ff93b",
+  "family": {
+    "atom": "PRODUCT_ON_SHARED_SPLIT TIMES (SOURCE_TAIL_PRODUCT-BASE_TAIL_PRODUCT)",
+    "column_split": "ARBITRARY_PER_ATOM",
+    "common_deleted_base": true,
+    "source_sign": "ARBITRARY_NONBASE_SIGN"
+  },
+  "field": "characteristic_zero",
+  "general_theorem": {
+    "equality_classification": "ALL NONBASE SIGNS ONCE AND ONE UNIFORM COLUMN SPLIT",
+    "minimum_atoms": "2^(m-1)-1",
+    "orders_replayed": [3,4,5,6,7,8,9,10]
+  },
+  "quartic_application": {
+    "all_base_and_split_equality_families": 48,
+    "fixed_base_dictionary_atoms": 42,
+    "minimum_blocks": 7,
+    "mu_6_4": "OPEN_IN_[6,7]",
+    "six_block_representation": "IMPOSSIBLE",
+    "uniform_split_equality_families_per_base": 6
+  },
+  "quartic_exhaustive_equality_scan": {
+    "all_solutions_uniform": true,
+    "assignments_checked": 279936,
+    "meet_in_middle_prefixes_checked": 46656,
+    "solution_split_indices": [[0,0,0,0,0,0,0],[1,1,1,1,1,1,1],[2,2,2,2,2,2,2],[3,3,3,3,3,3,3],[4,4,4,4,4,4,4],[5,5,5,5,5,5,5]],
+    "solutions": 6
+  },
+  "rows": [
+    {"column_splits":3,"common_base_dictionary_atoms":9,"defect_relation_support":3,"degree_m_minus_two_defect_rank":2,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":3,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":12,"minimal_uniform_split_families_per_base":3,"minimum_atom_count":3,"order":3,"retained_source_signs":3,"sign_count":4},
+    {"column_splits":6,"common_base_dictionary_atoms":42,"defect_relation_support":7,"degree_m_minus_two_defect_rank":6,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":7,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":48,"minimal_uniform_split_families_per_base":6,"minimum_atom_count":7,"order":4,"retained_source_signs":7,"sign_count":8},
+    {"column_splits":10,"common_base_dictionary_atoms":150,"defect_relation_support":15,"degree_m_minus_two_defect_rank":14,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":15,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":160,"minimal_uniform_split_families_per_base":10,"minimum_atom_count":15,"order":5,"retained_source_signs":15,"sign_count":16},
+    {"column_splits":15,"common_base_dictionary_atoms":465,"defect_relation_support":31,"degree_m_minus_two_defect_rank":30,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":31,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":480,"minimal_uniform_split_families_per_base":15,"minimum_atom_count":31,"order":6,"retained_source_signs":31,"sign_count":32},
+    {"column_splits":21,"common_base_dictionary_atoms":1323,"defect_relation_support":63,"degree_m_minus_two_defect_rank":62,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":63,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":1344,"minimal_uniform_split_families_per_base":21,"minimum_atom_count":63,"order":7,"retained_source_signs":63,"sign_count":64},
+    {"column_splits":28,"common_base_dictionary_atoms":3556,"defect_relation_support":127,"degree_m_minus_two_defect_rank":126,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":127,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":3584,"minimal_uniform_split_families_per_base":28,"minimum_atom_count":127,"order":8,"retained_source_signs":127,"sign_count":128},
+    {"column_splits":36,"common_base_dictionary_atoms":9180,"defect_relation_support":255,"degree_m_minus_two_defect_rank":254,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":255,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":9216,"minimal_uniform_split_families_per_base":36,"minimum_atom_count":255,"order":9,"retained_source_signs":255,"sign_count":256},
+    {"column_splits":45,"common_base_dictionary_atoms":22995,"defect_relation_support":511,"degree_m_minus_two_defect_rank":510,"degree_m_minus_two_defect_relation_dimension":1,"degree_m_quotient_rank":511,"degree_m_quotient_relation_dimension":0,"equality_structure":"ONE ATOM PER NONBASE SIGN, ALL USING ONE COMMON SPLIT","minimal_uniform_split_families_all_bases":23040,"minimal_uniform_split_families_per_base":45,"minimum_atom_count":511,"order":10,"retained_source_signs":511,"sign_count":512}
+  ],
+  "schema": "general_common_base_mixed_split_glynn_rigidity/v1"
+}
