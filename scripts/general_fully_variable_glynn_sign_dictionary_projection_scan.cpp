@@ -85,7 +85,7 @@ int rank(const std::vector<std::array<std::int64_t, 8>>& columns) {
 
 int main(int argc, char** argv) {
     const std::string output_path =
-        argc >= 2 ? argv[1] : "full_sign_projection_scan.json";
+        argc >= 2 ? argv[1] : "full_sign_projection_correction.json";
 
     std::array<int, 8> parity{};
     for (int value = 0; value < 8; ++value) {
@@ -162,15 +162,17 @@ int main(int argc, char** argv) {
         }
     };
 
-    for (int size = 1; size <= 6; ++size) {
+    for (int size = 1; size <= 4; ++size) {
         visit(0, size, size);
         if (minimum == size) {
             break;
         }
     }
 
-    if (minimum != 6 || solutions.size() != 16 || checked != 4598478ULL) {
-        std::cerr << "projection classification mismatch\n";
+    if (minimum != 4 || solutions.size() != 16 || checked != 102090ULL) {
+        std::cerr << "projection correction mismatch: minimum=" << minimum
+                  << " solutions=" << solutions.size()
+                  << " checked=" << checked << "\n";
         return 1;
     }
 
@@ -194,6 +196,7 @@ int main(int argc, char** argv) {
     }
     output << "  ]\n}\n";
 
-    std::cout << "GENERAL_FULLY_VARIABLE_GLYNN_SIGN_PROJECTION_SCAN_PASS\n";
+    std::cout
+        << "GENERAL_FULLY_VARIABLE_GLYNN_SIGN_PROJECTION_CORRECTION_PASS\n";
     return 0;
 }

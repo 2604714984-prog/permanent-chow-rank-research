@@ -1,39 +1,26 @@
-# Handoff delta: the full quartic Glynn sign dictionary is closed
+# Handoff delta: fully variable sign-dictionary correction
 
-## Result
-
-Allow every compressed-Glynn atom to choose both its deleted/base sign and its
-oriented two-column shared set independently. The resulting quartic dictionary
-contains 336 atoms. Its exact threshold for `perm_4` is seven.
-
-The eight-point diagonal evaluation reduces every hypothetical six-atom
-identity to 16 supports. Each is a pair of opposite-parity directed
-three-stars with unique coefficients `parity(source)/6`. Restoring the six
-column splits per atom leaves `16*6^6=746,496` exact tensor assignments; none is
-a solution.
+Replace the claim that the 336-atom dictionary has threshold seven with:
 
 ```text
-fully variable sign dictionary threshold = 7
-six-atom sign identity = ZERO
-seven-atom sign identity = EXPLICIT
+diagonal projected minimum                 4
+minimal projected four-direction states   16
+full lifts checked                    186,624
+four-direction full solutions              0
+five atoms                                  ZERO by inherited theorem
+six sign atoms                              OPEN
+seven sign atoms                            NONZERO
+full sign threshold                         OPEN IN [6,7]
 ```
 
-## Consequence
-
-Do not continue deleted-sign or column-split searches. Any six-block witness
-must leave the Glynn sign dictionary and use genuinely mixed factor frames or
-ambient common-source cancellation.
-
-## Next task
-
-Impose the inherited full-support six-element quotient circuit on arbitrary
-mixed blocks and synchronize the source layers
+The prior theorem identifier
+`G-FULLY-VARIABLE-SIGN-DICTIONARY-RIGIDITY-v1` is superseded.  The corrected
+core is:
 
 ```text
-(2,1,1)
-(2,2)
-(3,1)
-(4)
+7e838f0507771694d3ecf4598cfd90851eada69be0f26c476abc694f65b83c42
 ```
 
-The unrestricted boundary remains `6 <= mu(6,4) <= 7`.
+Next classify projected five- and six-direction states or the equivalent short
+circuits in the quotient matroid of 168 mixed sign tensors.  Do not move to the
+general non-sign system while this finite sign boundary remains unresolved.

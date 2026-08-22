@@ -1,6 +1,6 @@
 # Research ledger
 
-High-level ledger for the active permanent Chow-rank repository. Git history
+High-level ledger for the active permanent Chow-rank repository.  Git history
 retains the detailed historical inventory.
 
 Last consolidated: **2026-08-22**  
@@ -32,40 +32,53 @@ six blocks        OPEN
 seven blocks      NONZERO
 ```
 
-## `G-ONE-TERM-GLYNN-COMPRESSION`
+## Retained theorem packets
 
 ```text
-mu(n,m) <= 2^(m-1)-1 for m>=3 and n>=m+2
+G-ONE-TERM-GLYNN-COMPRESSION
 core: 045dcbd80846a35e6b9716771721c542ed86b0c1a246cf716cebb8e57df65a0e
 status: EXPLICIT_NONZERO_FAMILY
-```
 
-## `G-VARIABLE-BASE-FIXED-SPLIT-RIGIDITY`
-
-```text
-atom: U_v tensor (B_v-B_u), with one fixed column split
-exact threshold: 2^(m-1)-1
-equality: one omitted source and one forced common base
-quartic atoms: 56
-quartic threshold: 7
-quartic equality families: 8
+G-VARIABLE-BASE-FIXED-SPLIT-RIGIDITY
 core: 6d45f40e47ad3e150a9e62224f0f93145ce137db92fc3229c2ef9cc8d0c6aaca
+quartic threshold: 7
+
+G-COMMON-BASE-MIXED-SPLIT-RIGIDITY
+core: b060620eec6f6a4dc016024ffec05230494b280af9275e8b4693be3a042ff93b
+quartic threshold: 7
 ```
 
-## `G-COMMON-BASE-MIXED-SPLIT-RIGIDITY`
+## Corrected fully variable sign boundary
 
-Fix one deleted base but allow a different column split for every atom.
+The prior packet claiming exact threshold seven is superseded.
 
 ```text
-exact threshold: 2^(m-1)-1
-equality: every nonbase source once and one forced common split
-quartic atoms per base: 42
-quartic split assignments checked: 279,936
-quartic threshold: 7
-quartic minimal formulas per base: 6
-quartic minimal formulas across all bases: 48
-core: b060620eec6f6a4dc016024ffec05230494b280af9275e8b4693be3a042ff93b
-status: STRICT_DICTIONARY_RIGIDITY_THEOREM
+superseded theorem id:
+G-FULLY-VARIABLE-SIGN-DICTIONARY-RIGIDITY-v1
+
+correction reason:
+diagonal projection minimum is four, not six
+```
+
+Corrected exact data:
+
+```text
+projected directions                         40
+supports checked                         102,090
+projected minimum                            4
+minimal four-direction states               16
+full lifts checked                       186,624
+exact four-direction solutions               0
+corrected core:
+7e838f0507771694d3ecf4598cfd90851eada69be0f26c476abc694f65b83c42
+```
+
+```text
+four sign atoms = ZERO
+five sign atoms = ZERO by inherited five-block theorem
+six sign atoms = OPEN
+seven sign atoms = NONZERO
+fully variable sign threshold = OPEN IN [6,7]
 ```
 
 ## Standard seven-block local chart
@@ -95,11 +108,14 @@ global coordinate second-order q=6 = OPEN
 
 ## Current decisive interface
 
-The two one-axis enlargements of compressed Glynn atoms are exact: varying
-bases alone and varying splits alone both retain threshold seven. The remaining
-finite sign problem allows both to vary simultaneously. If that dictionary also
-has threshold seven, the sign route is closed and work moves to the full
-common-source six-element quotient circuit.
+The finite sign route is not yet closed.  Its remaining honest problem is the
+classification and lifting of projected five- and six-direction states.  The
+preferred formulation is the short-circuit problem for the 168 mixed sign
+tensors modulo the eight-dimensional pure sign span.
+
+After that, the general non-sign problem is the full-support six-element
+quotient circuit coupled across repeated-column layers `(2,1,1)`, `(2,2)`,
+`(3,1)`, and `(4)`.
 
 ## Strict boundary
 
@@ -107,10 +123,9 @@ common-source six-element quotient circuit.
 six-block literal sum = OPEN
 seven-block literal sum = NONZERO
 mu(6,4) = OPEN IN [6,7]
-variable-base fixed-split threshold = 7
-common-base mixed-split threshold = 7
-both base and split varying = OPEN
+fully variable sign threshold = OPEN IN [6,7]
 standard local absorption through order three = ZERO
+coordinate regular first-order q<=7 = ZERO
 global coordinate second-order q=6 = OPEN
 noncoordinate / singular / multigrade q=6 = OPEN
 unrestricted Chow-rank improvement = false

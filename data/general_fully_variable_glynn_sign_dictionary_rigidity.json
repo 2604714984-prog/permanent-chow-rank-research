@@ -5,57 +5,49 @@
     "literature_novelty": "NOT_ESTABLISHED",
     "mu_6_4": "OPEN_IN_[6,7]",
     "non_sign_mixed_frames": "NOT_EXCLUDED",
+    "projected_five_and_six_direction_states": "NOT_CLASSIFIED_HERE",
     "singular_or_puiseux_paths": "NOT_EXCLUDED",
     "unrestricted_chow_rank_improvement": false
   },
-  "classification": "STRICT_FULL_SIGN_DICTIONARY_ROUTE_THEOREM",
+  "classification": "CORRECTED_PARTIAL_SIGN_DICTIONARY_ROUTE_BARRIER",
   "conclusion": {
-    "fully_variable_quartic_sign_dictionary_threshold": 7,
+    "five_atom_representation": "IMPOSSIBLE_BY_INHERITED_FIVE_BLOCK_ZERO",
+    "four_atom_representation": "IMPOSSIBLE",
+    "fully_variable_sign_dictionary_threshold": "OPEN_IN_[6,7]",
     "seven_atom_representation": "EXPLICIT_ONE_TERM_GLYNN_COMPRESSION",
-    "six_atom_representation": "IMPOSSIBLE"
+    "six_atom_sign_dictionary_representation": "OPEN"
   },
+  "core_sha256": "7e838f0507771694d3ecf4598cfd90851eada69be0f26c476abc694f65b83c42",
   "diagonal_evaluation": {
-    "candidate_coefficients": "parity(source)/6",
-    "candidate_family": "one omitted even sign and one omitted odd sign; three stars in each direction",
-    "hadamard_minor_bound": "(32*sqrt(7))^7 < 3.2e13 < prime",
+    "candidate_coefficients": [
+      "3/2",
+      "-3/2",
+      "-3/2",
+      "3/2"
+    ],
+    "candidate_family": "L_even,L_odd,C_even_odd,C_odd_even",
     "large_prime_certificate": 2305843009213693951,
     "minimal_projected_supports": 16,
-    "minimum_projected_term_count": 6,
-    "supports_checked_through_six": 4598478,
+    "minimum_projected_direction_count": 4,
+    "supports_checked_through_first_survivor": 102090,
     "unique_projected_directions": 40
   },
   "dictionary": {
     "ordered_source_base_pairs": 56,
-    "oriented_two_column_splits": 6,
     "raw_atoms": 336,
-    "sign_count": 8
+    "sign_count": 8,
+    "two_column_splits": 6
   },
   "field": "characteristic_zero",
-  "full_tensor_scan": {
-    "assignments_checked": 746496,
-    "assignments_per_support": 46656,
-    "candidate_checks": [
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 0, "omitted_odd": 1, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 0, "omitted_odd": 2, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 0, "omitted_odd": 4, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 0, "omitted_odd": 7, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 3, "omitted_odd": 1, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 3, "omitted_odd": 2, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 3, "omitted_odd": 4, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 3, "omitted_odd": 7, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 5, "omitted_odd": 1, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 5, "omitted_odd": 2, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 5, "omitted_odd": 4, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 5, "omitted_odd": 7, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 6, "omitted_odd": 1, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 6, "omitted_odd": 2, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 6, "omitted_odd": 4, "right_states": 216},
-      {"distinct_left_states": 216, "exact_solutions": 0, "left_states": 216, "omitted_even": 6, "omitted_odd": 7, "right_states": 216}
-    ],
+  "four_direction_full_tensor_scan": {
+    "assignments_checked": 186624,
     "candidate_supports": 16,
-    "exact_solutions": 0,
-    "split_choices_per_atom": 6
+    "exact_solutions": 0
   },
-  "schema": "general_fully_variable_glynn_sign_dictionary_rigidity/v1",
-  "theorem_id": "G-FULLY-VARIABLE-SIGN-DICTIONARY-RIGIDITY-v1"
+  "schema": "general_fully_variable_glynn_sign_dictionary_projection_correction/v2",
+  "superseded_claim": {
+    "reason": "the diagonal projection minimum is four, not six",
+    "superseded_theorem_id": "G-FULLY-VARIABLE-SIGN-DICTIONARY-RIGIDITY-v1"
+  },
+  "theorem_id": "G-FULLY-VARIABLE-SIGN-DICTIONARY-PROJECTION-CORRECTION-v2"
 }

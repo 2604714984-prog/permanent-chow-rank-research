@@ -35,44 +35,39 @@ def load_module(name: str, path: Path):
     return module
 
 
-class FullyVariableGlynnSignDictionaryRigidityTests(unittest.TestCase):
+class FullyVariableGlynnSignDictionaryCorrectionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.module = load_module("fully_variable_sign_primary", PRIMARY)
+        cls.module = load_module("fully_variable_sign_correction", PRIMARY)
         cls.payload = cls.module.payload()
 
-    def test_dictionary_and_projection_counts(self) -> None:
+    def test_dictionary_and_corrected_projection_counts(self) -> None:
         self.assertEqual(self.payload["dictionary"]["raw_atoms"], 336)
         projection = self.payload["diagonal_evaluation"]
         self.assertEqual(projection["unique_projected_directions"], 40)
         self.assertEqual(
-            projection["supports_checked_through_six"],
-            4_598_478,
+            projection["supports_checked_through_first_survivor"],
+            102_090,
         )
-        self.assertEqual(projection["minimum_projected_term_count"], 6)
+        self.assertEqual(projection["minimum_projected_direction_count"], 4)
         self.assertEqual(projection["minimal_projected_supports"], 16)
 
-    def test_all_projected_candidates_have_fixed_coefficients(self) -> None:
+    def test_four_direction_candidate_coefficients(self) -> None:
         candidates = self.module.projected_candidates()
         self.assertEqual(len(candidates), 16)
         self.assertTrue(
             all(
-                value["positive_coefficient"] == "1/6"
-                for value in candidates
-            )
-        )
-        self.assertTrue(
-            all(
-                value["negative_coefficient"] == "-1/6"
+                value["coefficients"]
+                == ["3/2", "-3/2", "-3/2", "3/2"]
                 for value in candidates
             )
         )
 
-    def test_complete_full_tensor_scan(self) -> None:
-        scan = self.payload["full_tensor_scan"]
-        self.assertEqual(scan["assignments_checked"], 746_496)
+    def test_complete_four_direction_lift_scan(self) -> None:
+        scan = self.payload["four_direction_full_tensor_scan"]
+        self.assertEqual(scan["assignments_checked"], 186_624)
         self.assertEqual(scan["exact_solutions"], 0)
-        self.assertEqual(len(scan["candidate_checks"]), 16)
+        self.assertEqual(scan["candidate_supports"], 16)
 
     def test_frozen_payload(self) -> None:
         self.assertEqual(
@@ -90,20 +85,28 @@ class FullyVariableGlynnSignDictionaryRigidityTests(unittest.TestCase):
         )
         self.assertIn(
             "GENERAL_FULLY_VARIABLE_GLYNN_SIGN_DICTIONARY_"
-            "RIGIDITY_INDEPENDENT_PASS",
+            "PROJECTION_CORRECTION_INDEPENDENT_PASS",
             completed.stdout,
         )
 
-    def test_claim_boundary(self) -> None:
+    def test_claim_boundary_and_retraction(self) -> None:
         conclusion = self.payload["conclusion"]
         boundary = self.payload["claim_boundary"]
         self.assertEqual(
-            conclusion["fully_variable_quartic_sign_dictionary_threshold"],
-            7,
+            conclusion["fully_variable_sign_dictionary_threshold"],
+            "OPEN_IN_[6,7]",
+        )
+        self.assertEqual(
+            conclusion["six_atom_sign_dictionary_representation"],
+            "OPEN",
         )
         self.assertEqual(boundary["global_six_block_literal_sum"], "OPEN")
         self.assertEqual(boundary["mu_6_4"], "OPEN_IN_[6,7]")
         self.assertFalse(boundary["unrestricted_chow_rank_improvement"])
+        self.assertEqual(
+            self.payload["superseded_claim"]["reason"],
+            "the diagonal projection minimum is four, not six",
+        )
 
 
 if __name__ == "__main__":

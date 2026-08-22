@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Independent XOR-character replay of the fully variable sign audit."""
+"""Independent XOR replay of the corrected four-direction lift barrier."""
 
 from __future__ import annotations
 
 import argparse
 import json
-from collections import Counter
 from itertools import combinations, product
 from pathlib import Path
 
@@ -15,12 +14,15 @@ EVEN = tuple(value for value in SIGNS if value.bit_count() % 2 == 0)
 ODD = tuple(value for value in SIGNS if value.bit_count() % 2 == 1)
 SPLITS = tuple(combinations(range(4), 2))
 ROW_TUPLES = tuple(product(range(4), repeat=4))
-THEOREM_ID = "G-FULLY-VARIABLE-SIGN-DICTIONARY-RIGIDITY-v1"
 
 
 def require(condition: bool, message: object) -> None:
     if not condition:
         raise RuntimeError(message)
+
+
+def parity(value: int) -> int:
+    return 1 if value.bit_count() % 2 == 0 else -1
 
 
 def character(sign: int, label: int) -> int:
@@ -32,32 +34,32 @@ def atom(source: int, base: int, split: tuple[int, int]) -> tuple[int, ...]:
     result = []
     for rows in ROW_TUPLES:
         labels = [ROW_CHARACTERS[row] for row in rows]
-        total = 0
-        shared_total = 0
-        tail_total = 0
+        all_label = 0
+        shared_label = 0
+        tail_label = 0
         for column, label in enumerate(labels):
-            total ^= label
+            all_label ^= label
             if column in shared:
-                shared_total ^= label
+                shared_label ^= label
             else:
-                tail_total ^= label
+                tail_label ^= label
         result.append(
-            character(source, total)
-            - character(source, shared_total) * character(base, tail_total)
+            character(source, all_label)
+            - character(source, shared_label) * character(base, tail_label)
         )
     return tuple(result)
 
 
-def add(values):
+def add_scaled(terms) -> tuple[int, ...]:
     result = [0] * 256
-    for value in values:
+    for scalar, value in terms:
         for index, coefficient in enumerate(value):
-            result[index] += coefficient
+            result[index] += scalar * coefficient
     return tuple(result)
 
 
 def target() -> tuple[int, ...]:
-    return tuple(6 if len(set(rows)) == 4 else 0 for rows in ROW_TUPLES)
+    return tuple(2 if len(set(rows)) == 4 else 0 for rows in ROW_TUPLES)
 
 
 def audit() -> dict[str, int]:
@@ -69,43 +71,45 @@ def audit() -> dict[str, int]:
         for split_index in range(6)
     }
     goal = target()
-    checked = 0
+    assignments = 0
     solutions = 0
-    for omitted_even in EVEN:
-        for omitted_odd in ODD:
-            positive = [
-                (source, omitted_odd)
-                for source in EVEN
-                if source != omitted_even
+    for even in EVEN:
+        for odd in ODD:
+            even_same = [
+                (even, base, split)
+                for base in SIGNS
+                if base != even and parity(base) == parity(even)
+                for split in range(6)
             ]
-            negative = [
-                (source, omitted_even)
-                for source in ODD
-                if source != omitted_odd
+            odd_same = [
+                (odd, base, split)
+                for base in SIGNS
+                if base != odd and parity(base) == parity(odd)
+                for split in range(6)
             ]
-            left = Counter()
-            for choices in product(range(6), repeat=3):
-                value = add(
-                    cache[source, base, split]
-                    for (source, base), split in zip(
-                        positive, choices, strict=True
+            left = {}
+            for left_even in even_same:
+                for left_odd in odd_same:
+                    value = add_scaled(
+                        ((3, cache[left_even]), (-3, cache[left_odd]))
                     )
-                )
-                left[
-                    tuple(value[index] - goal[index] for index in range(256))
-                ] += 1
-            for choices in product(range(6), repeat=3):
-                value = add(
-                    cache[source, base, split]
-                    for (source, base), split in zip(
-                        negative, choices, strict=True
+                    left[value] = left.get(value, 0) + 1
+            for split_even in range(6):
+                for split_odd in range(6):
+                    right = add_scaled(
+                        (
+                            (-3, cache[even, odd, split_even]),
+                            (3, cache[odd, even, split_odd]),
+                        )
                     )
-                )
-                checked += sum(left.values())
-                solutions += left.get(value, 0)
-    require(checked == 746_496, checked)
+                    need = tuple(
+                        goal[index] - right[index] for index in range(256)
+                    )
+                    solutions += left.get(need, 0)
+                    assignments += len(even_same) * len(odd_same)
+    require(assignments == 186_624, assignments)
     require(solutions == 0, solutions)
-    return {"assignments_checked": checked, "exact_solutions": solutions}
+    return {"assignments_checked": assignments, "exact_solutions": solutions}
 
 
 def main() -> None:
@@ -120,9 +124,8 @@ def main() -> None:
         )
     print(
         "GENERAL_FULLY_VARIABLE_GLYNN_SIGN_DICTIONARY_"
-        "RIGIDITY_INDEPENDENT_PASS"
+        "PROJECTION_CORRECTION_INDEPENDENT_PASS"
     )
-    print(THEOREM_ID)
 
 
 if __name__ == "__main__":
