@@ -1,0 +1,450 @@
+{
+  "claim_boundary": {
+    "arbitrary_dependent_or_repeated_term": "OPEN",
+    "border_rank_improvement": false,
+    "general_glynn_optimality": "OPEN",
+    "independent_full_factor_term": "EXACT",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "new_chow_rank_lower_bound": false,
+    "permanent_side_homology": "NOT_COMPUTED",
+    "sum_or_subquotient_inequality": "NOT_PROVED"
+  },
+  "complex": "Sq^(k+1)(F) -> D tensor Sq^k(F) -> wedge^2(D) tensor Sq^(k-1)(F)",
+  "field": "algebraically_closed_characteristic_zero",
+  "schema": "general_squarefree_quotient_koszul_homology/v1",
+  "selected_profiles": [
+    {
+      "adjacent_middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 6
+        },
+        {
+          "d": 2,
+          "dimension": 6
+        },
+        {
+          "d": 3,
+          "dimension": 3
+        },
+        {
+          "d": 4,
+          "dimension": 0
+        }
+      ],
+      "all_degree_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 8
+        },
+        {
+          "d": 2,
+          "dimension": 8
+        },
+        {
+          "d": 3,
+          "dimension": 6
+        },
+        {
+          "d": 4,
+          "dimension": 4
+        }
+      ],
+      "middle_degree": 2,
+      "middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 3
+        },
+        {
+          "d": 2,
+          "dimension": 4
+        },
+        {
+          "d": 3,
+          "dimension": 3
+        },
+        {
+          "d": 4,
+          "dimension": 0
+        }
+      ],
+      "n": 4
+    },
+    {
+      "adjacent_middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 20
+        },
+        {
+          "d": 2,
+          "dimension": 20
+        },
+        {
+          "d": 3,
+          "dimension": 12
+        },
+        {
+          "d": 4,
+          "dimension": 4
+        },
+        {
+          "d": 5,
+          "dimension": 0
+        },
+        {
+          "d": 6,
+          "dimension": 0
+        }
+      ],
+      "all_degree_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 32
+        },
+        {
+          "d": 2,
+          "dimension": 32
+        },
+        {
+          "d": 3,
+          "dimension": 24
+        },
+        {
+          "d": 4,
+          "dimension": 16
+        },
+        {
+          "d": 5,
+          "dimension": 10
+        },
+        {
+          "d": 6,
+          "dimension": 6
+        }
+      ],
+      "middle_degree": 3,
+      "middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 10
+        },
+        {
+          "d": 2,
+          "dimension": 12
+        },
+        {
+          "d": 3,
+          "dimension": 9
+        },
+        {
+          "d": 4,
+          "dimension": 4
+        },
+        {
+          "d": 5,
+          "dimension": 0
+        },
+        {
+          "d": 6,
+          "dimension": 0
+        }
+      ],
+      "n": 6
+    },
+    {
+      "adjacent_middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 70
+        },
+        {
+          "d": 2,
+          "dimension": 70
+        },
+        {
+          "d": 3,
+          "dimension": 45
+        },
+        {
+          "d": 4,
+          "dimension": 20
+        },
+        {
+          "d": 5,
+          "dimension": 5
+        },
+        {
+          "d": 6,
+          "dimension": 0
+        },
+        {
+          "d": 7,
+          "dimension": 0
+        },
+        {
+          "d": 8,
+          "dimension": 0
+        }
+      ],
+      "all_degree_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 128
+        },
+        {
+          "d": 2,
+          "dimension": 128
+        },
+        {
+          "d": 3,
+          "dimension": 96
+        },
+        {
+          "d": 4,
+          "dimension": 64
+        },
+        {
+          "d": 5,
+          "dimension": 40
+        },
+        {
+          "d": 6,
+          "dimension": 24
+        },
+        {
+          "d": 7,
+          "dimension": 14
+        },
+        {
+          "d": 8,
+          "dimension": 8
+        }
+      ],
+      "middle_degree": 4,
+      "middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 35
+        },
+        {
+          "d": 2,
+          "dimension": 40
+        },
+        {
+          "d": 3,
+          "dimension": 30
+        },
+        {
+          "d": 4,
+          "dimension": 16
+        },
+        {
+          "d": 5,
+          "dimension": 5
+        },
+        {
+          "d": 6,
+          "dimension": 0
+        },
+        {
+          "d": 7,
+          "dimension": 0
+        },
+        {
+          "d": 8,
+          "dimension": 0
+        }
+      ],
+      "n": 8
+    },
+    {
+      "adjacent_middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 252
+        },
+        {
+          "d": 2,
+          "dimension": 252
+        },
+        {
+          "d": 3,
+          "dimension": 168
+        },
+        {
+          "d": 4,
+          "dimension": 84
+        },
+        {
+          "d": 5,
+          "dimension": 30
+        },
+        {
+          "d": 6,
+          "dimension": 6
+        },
+        {
+          "d": 7,
+          "dimension": 0
+        },
+        {
+          "d": 8,
+          "dimension": 0
+        },
+        {
+          "d": 9,
+          "dimension": 0
+        },
+        {
+          "d": 10,
+          "dimension": 0
+        }
+      ],
+      "all_degree_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 512
+        },
+        {
+          "d": 2,
+          "dimension": 512
+        },
+        {
+          "d": 3,
+          "dimension": 384
+        },
+        {
+          "d": 4,
+          "dimension": 256
+        },
+        {
+          "d": 5,
+          "dimension": 160
+        },
+        {
+          "d": 6,
+          "dimension": 96
+        },
+        {
+          "d": 7,
+          "dimension": 56
+        },
+        {
+          "d": 8,
+          "dimension": 32
+        },
+        {
+          "d": 9,
+          "dimension": 18
+        },
+        {
+          "d": 10,
+          "dimension": 10
+        }
+      ],
+      "middle_degree": 5,
+      "middle_h1_cap": [
+        {
+          "d": 0,
+          "dimension": 0
+        },
+        {
+          "d": 1,
+          "dimension": 126
+        },
+        {
+          "d": 2,
+          "dimension": 140
+        },
+        {
+          "d": 3,
+          "dimension": 105
+        },
+        {
+          "d": 4,
+          "dimension": 60
+        },
+        {
+          "d": 5,
+          "dimension": 25
+        },
+        {
+          "d": 6,
+          "dimension": 6
+        },
+        {
+          "d": 7,
+          "dimension": 0
+        },
+        {
+          "d": 8,
+          "dimension": 0
+        },
+        {
+          "d": 9,
+          "dimension": 0
+        },
+        {
+          "d": 10,
+          "dimension": 0
+        }
+      ],
+      "n": 10
+    }
+  ],
+  "theorem": {
+    "adjacent_maximum": "d*C(n-d+1,k)",
+    "all_positive_degrees_maximum": "d*2^(n-d)",
+    "coordinate_quotient_attains_maximum": true,
+    "maximum_h1_dimension": "d*C(n-d,k-1)",
+    "rank_one_all_degree_cap": "2^(n-1)"
+  },
+  "theorem_core_sha256": "7beab85037ef5c9f0e4b6efc22a19d98ee9fc7b88bc3b7eac9e1f0288c4dbf8c",
+  "theorem_id": "G-SQUAREFREE-QUOTIENT-KOSZUL-HOMOLOGY-v1"
+}
