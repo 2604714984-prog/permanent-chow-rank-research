@@ -4138,3 +4138,16 @@ would force `dim ker Phi=196+dim K2>196`.  Packet A is therefore reduced to a
 single array-rigidity statement: outside the excluded row-separated
 component, no greater-than-196-dimensional permanent-apolar quadratic
 subspace can vanish on every off-diagonal pair in all 49 factor frames.
+
+## 2026-08-22: Packet-B equality rewritten as cubic apolar surjectivity
+
+For arbitrary Packet B, restrict the stacked complementary-triple evaluation
+map `C` to the 19600-dimensional cubic apolar space `I3(perm7)`.  Its image is
+exactly `im C intersect ker B`, and its cokernel dimension is the coupling
+defect `2870-rank B-rank C`.  Thus the endpoint condition is precisely
+surjectivity `I3(perm7)->ker B`, or injectivity of the dual transpose-
+evaluation map.  This keeps the intrinsic 25-dimensional quotients of both
+rank-six normal forms and the 35-dimensional rank-seven blocks distinct.
+Common-code reduction still requires a structured-array simultaneous-
+diagonalization theorem using both this surjectivity and the full permanent
+composite; abstract exactness alone does not create the missing row grading.

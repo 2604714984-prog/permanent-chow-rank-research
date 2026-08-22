@@ -26,6 +26,15 @@ termwise-splitting theorem, not another restricted-family block computation.
 The existing low-layer survivors refute local synchronization shortcuts but
 are not complete Packet-B counterexamples.
 
+Equivalently, if `I3(perm7)` is the 19600-dimensional cubic apolar space,
+the restricted stacked complementary-triple evaluation
+`E:I3(perm7)->ker B` has cokernel dimension exactly the coupling defect
+`2870-rank B-rank C`.  Endpoint equality is precisely surjectivity of this
+map.  The remaining synchronization problem is therefore a structured-array
+simultaneous-diagonalization theorem under both the permanent composite and
+this apolar surjectivity; see
+`docs/n7_packet_b2_apolar_surjectivity_boundary.md`.
+
 ## Goal
 
 Remove the common-graph specialization. `B1-CLOSED` alone does not prove
