@@ -5,6 +5,9 @@
 `W-01-COMPLETE; W-02-COMPLETE; W-03-COMPLETE; W-04 FIXED-CODE OPERATOR COMPLETE.`
 
 The W-04 structural classification of special point subsets remains open.
+The W-05 stabilizer operator is complete for a fixed code; a
+characteristic-zero Kneser proof and equality-case classification remain
+open.
 
 Let `C3=im(E3)`, `R3=ker(E3^T)`, and `R4=ker(E4^T)`.  If
 `D=diag(d_i)` has no zero entry and `w_i=d_i^{-1}`, then
@@ -58,6 +61,31 @@ so `e_i` cannot belong to `L`. Equivalently, `e_i in C4`: the point has a
 degree-four separator. The evaluator freezes these separator coordinates at
 each stated control prime and
 checks that they never appear among the puncture rank drops.
+
+## Coordinate stabilizer operator
+
+For a column basis `B=[b_1,...,b_l]` of `L` and a row basis `A` of
+`L^perp`, the coordinate stabilizer is the kernel of
+
+\[
+K=\begin{bmatrix}
+A\operatorname{diag}(b_1)\\
+\vdots\\
+A\operatorname{diag}(b_l)
+\end{bmatrix}.
+\]
+
+Indeed, `Kx=0` says exactly that `x star b_j` lies in `L` for every basis
+vector. This gives the W-05 fixed-code operator with only 42 unknowns and at
+most 341 rows on the active controls.
+
+Over the two control primes, the three curve-union Schur spans have ambient
+stabilizer dimensions 15, 22, and 29. These equal the number of zero
+coordinates plus one. After puncturing the zero coordinates, every control
+has stabilizer dimension one and attains the modular Kneser value 11. Thus
+they are effective-support equality controls, not 42-coordinate equality
+models and not permanent-target controls. The general characteristic-zero
+bound and its equality cases are not promoted here.
 
 ## Controls and boundary
 

@@ -148,6 +148,14 @@ proved finite list.
 
 ## TI-09 — sparse-ratio partitions
 
+Executed in `docs/n7_f3_h642_sparse_ratio_closure.md` for the gauge-free
+F3 layer. Every at-most-two-ratio configuration is impossible by a
+blockwise binary-septic replacement contradiction. This closes the
+two-dimensional non-Grassmannian pencil branch there. Within the
+two-dimensional bivector-span branch, only a Grassmannian flag line with at
+least three nonzero ratios remains; lower-dimensional bivector spans are a
+separate unresolved branch.
+
 When the `q5=2` relation-coordinate map takes at most two nonzero projective
 values, derive the induced partition of fifth-power relations and evaluation
 codes. Compute consequences for strict Hilbert growth, degree-six target span,

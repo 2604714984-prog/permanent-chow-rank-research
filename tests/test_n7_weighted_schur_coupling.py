@@ -77,6 +77,27 @@ class WeightedSchurCouplingTests(unittest.TestCase):
         self.assertEqual(zero_indices, membership)
         self.assertEqual(membership, [0])
 
+    def test_stabilizer_controls(self) -> None:
+        prime = 65521
+        empty = np.zeros((4, 0), dtype=np.int64)
+        full = np.eye(4, dtype=np.int64)
+        ones = np.ones((4, 1), dtype=np.int64)
+        coordinate_ideal = np.asarray(
+            [[1, 0], [0, 1], [0, 0], [0, 0]], dtype=np.int64
+        )
+        blocks = np.asarray([[1, 0], [1, 0], [0, 1], [0, 1]], dtype=np.int64)
+        self.assertEqual(MODULE.coordinate_stabilizer_dimension(empty, prime), 4)
+        self.assertEqual(MODULE.coordinate_stabilizer_dimension(full, prime), 4)
+        self.assertEqual(MODULE.coordinate_stabilizer_dimension(ones, prime), 1)
+        self.assertEqual(
+            MODULE.coordinate_stabilizer_dimension(coordinate_ideal, prime), 4
+        )
+        self.assertEqual(MODULE.coordinate_stabilizer_dimension(blocks, prime), 2)
+        changed_basis = blocks @ np.asarray([[1, 1], [0, 1]], dtype=np.int64)
+        self.assertEqual(
+            MODULE.coordinate_stabilizer_dimension(changed_basis, prime), 2
+        )
+
     def test_active_shapes_and_profiles(self) -> None:
         expected = {
             "F1": (9, 3, 27),
@@ -89,6 +110,30 @@ class WeightedSchurCouplingTests(unittest.TestCase):
                     (row["q3"], row["q4"], row["schur_generator_count"]),
                     expected[control["frontier_profiles"]],
                 )
+                stabilizers = {
+                    "F1": (15, 14, 28, 1),
+                    "F2-F3": (22, 21, 21, 1),
+                    "F4-F5": (29, 28, 14, 1),
+                }
+                ambient, zero_count, support_size, effective = stabilizers[
+                    control["frontier_profiles"]
+                ]
+                self.assertEqual(
+                    row["ambient_stabilizer_dimension_mod_prime"], ambient
+                )
+                self.assertEqual(
+                    len(row["schur_zero_coordinate_indices_mod_prime"]), zero_count
+                )
+                self.assertEqual(
+                    row["effective_support_size_mod_prime"], support_size
+                )
+                self.assertEqual(
+                    row["effective_support_stabilizer_dimension_mod_prime"], effective
+                )
+                self.assertEqual(
+                    row["effective_support_kneser_lower_bound_mod_prime"], 11
+                )
+                self.assertTrue(row["effective_support_kneser_equality_mod_prime"])
 
 
 if __name__ == "__main__":

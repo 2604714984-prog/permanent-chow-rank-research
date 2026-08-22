@@ -4,6 +4,8 @@
     "Puncture rank drop is exactly unit-vector membership for each fixed Schur span.",
     "Separator indices in the displayed rows are modular control data at the stated prime.",
     "W-04 structural classification of special point subsets remains open.",
+    "The displayed W-05 stabilizer and Kneser rows are modular fixed-code controls.",
+    "A characteristic-zero Kneser proof and equality-case classification remain open.",
     "The displayed modular curve-union rows are orientation controls, not target-compatible frontier components.",
     "No F frontier, Packet B endpoint, lower-50 theorem, or border-rank claim follows."
   ],
@@ -13,6 +15,7 @@
       "frontier_profiles": "F1",
       "prime_rows": [
         {
+          "ambient_stabilizer_dimension_mod_prime": 15,
           "coordinate_membership_indices": [],
           "degree4_separator_indices_mod_prime": [
             28,
@@ -30,6 +33,10 @@
             40,
             41
           ],
+          "effective_support_kneser_equality_mod_prime": true,
+          "effective_support_kneser_lower_bound_mod_prime": 11,
+          "effective_support_size_mod_prime": 28,
+          "effective_support_stabilizer_dimension_mod_prime": 1,
           "no_coordinate_vector_in_schur_span_mod_prime": true,
           "prime": 65521,
           "puncture_rank_drop_indices": [],
@@ -71,9 +78,26 @@
           ],
           "schur_generator_count": 27,
           "schur_rank": 11,
+          "schur_zero_coordinate_indices_mod_prime": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
           "weight_space_dimension": 31
         },
         {
+          "ambient_stabilizer_dimension_mod_prime": 15,
           "coordinate_membership_indices": [],
           "degree4_separator_indices_mod_prime": [
             28,
@@ -91,6 +115,10 @@
             40,
             41
           ],
+          "effective_support_kneser_equality_mod_prime": true,
+          "effective_support_kneser_lower_bound_mod_prime": 11,
+          "effective_support_size_mod_prime": 28,
+          "effective_support_stabilizer_dimension_mod_prime": 1,
           "no_coordinate_vector_in_schur_span_mod_prime": true,
           "prime": 65519,
           "puncture_rank_drop_indices": [],
@@ -132,6 +160,22 @@
           ],
           "schur_generator_count": 27,
           "schur_rank": 11,
+          "schur_zero_coordinate_indices_mod_prime": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
           "weight_space_dimension": 31
         }
       ]
@@ -141,6 +185,7 @@
       "frontier_profiles": "F2-F3",
       "prime_rows": [
         {
+          "ambient_stabilizer_dimension_mod_prime": 22,
           "coordinate_membership_indices": [],
           "degree4_separator_indices_mod_prime": [
             21,
@@ -165,6 +210,10 @@
             40,
             41
           ],
+          "effective_support_kneser_equality_mod_prime": true,
+          "effective_support_kneser_lower_bound_mod_prime": 11,
+          "effective_support_size_mod_prime": 21,
+          "effective_support_stabilizer_dimension_mod_prime": 1,
           "no_coordinate_vector_in_schur_span_mod_prime": true,
           "prime": 65521,
           "puncture_rank_drop_indices": [],
@@ -220,9 +269,33 @@
           ],
           "schur_generator_count": 32,
           "schur_rank": 11,
+          "schur_zero_coordinate_indices_mod_prime": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
           "weight_space_dimension": 31
         },
         {
+          "ambient_stabilizer_dimension_mod_prime": 22,
           "coordinate_membership_indices": [],
           "degree4_separator_indices_mod_prime": [
             21,
@@ -247,6 +320,10 @@
             40,
             41
           ],
+          "effective_support_kneser_equality_mod_prime": true,
+          "effective_support_kneser_lower_bound_mod_prime": 11,
+          "effective_support_size_mod_prime": 21,
+          "effective_support_stabilizer_dimension_mod_prime": 1,
           "no_coordinate_vector_in_schur_span_mod_prime": true,
           "prime": 65519,
           "puncture_rank_drop_indices": [],
@@ -302,6 +379,29 @@
           ],
           "schur_generator_count": 32,
           "schur_rank": 11,
+          "schur_zero_coordinate_indices_mod_prime": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
           "weight_space_dimension": 31
         }
       ]
@@ -311,6 +411,7 @@
       "frontier_profiles": "F4-F5",
       "prime_rows": [
         {
+          "ambient_stabilizer_dimension_mod_prime": 29,
           "coordinate_membership_indices": [],
           "degree4_separator_indices_mod_prime": [
             14,
@@ -342,6 +443,10 @@
             40,
             41
           ],
+          "effective_support_kneser_equality_mod_prime": true,
+          "effective_support_kneser_lower_bound_mod_prime": 11,
+          "effective_support_size_mod_prime": 14,
+          "effective_support_stabilizer_dimension_mod_prime": 1,
           "no_coordinate_vector_in_schur_span_mod_prime": true,
           "prime": 65521,
           "puncture_rank_drop_indices": [],
@@ -411,9 +516,40 @@
           ],
           "schur_generator_count": 35,
           "schur_rank": 11,
+          "schur_zero_coordinate_indices_mod_prime": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
           "weight_space_dimension": 31
         },
         {
+          "ambient_stabilizer_dimension_mod_prime": 29,
           "coordinate_membership_indices": [],
           "degree4_separator_indices_mod_prime": [
             14,
@@ -445,6 +581,10 @@
             40,
             41
           ],
+          "effective_support_kneser_equality_mod_prime": true,
+          "effective_support_kneser_lower_bound_mod_prime": 11,
+          "effective_support_size_mod_prime": 14,
+          "effective_support_stabilizer_dimension_mod_prime": 1,
           "no_coordinate_vector_in_schur_span_mod_prime": true,
           "prime": 65519,
           "puncture_rank_drop_indices": [],
@@ -514,6 +654,36 @@
           ],
           "schur_generator_count": 35,
           "schur_rank": 11,
+          "schur_zero_coordinate_indices_mod_prime": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
           "weight_space_dimension": 31
         }
       ]
@@ -523,6 +693,6 @@
     42,
     35
   ],
-  "schema_version": 2,
-  "status": "W-01-W-03-COMPLETE-W-04-FIXED-CODE-OPERATOR"
+  "schema_version": 3,
+  "status": "W-01-W-03-COMPLETE-W-04-W-05-FIXED-CODE-OPERATORS"
 }

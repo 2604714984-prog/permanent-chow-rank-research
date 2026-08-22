@@ -3955,3 +3955,28 @@ they vanish on all products and therefore cannot obstruct a nonzero weight.
 This completes the fixed-code W-04 operator without saturation. It does not
 enumerate parameter families or close a frontier before TI/H produce an exact
 target-compatible survivor. W-05 remains stabilizer-sensitive and open.
+
+## 2026-08-22: W-05 fixed-code stabilizers
+
+The coordinate-multiplication stabilizer of a fixed Schur span is now the
+kernel of an exact linear system with 42 unknowns and at most 341 rows on the
+active controls. The three curve-union controls have ambient stabilizer
+dimensions 15, 22, and 29 because their Schur spans vanish on 14, 21, and 28
+coordinates. After puncturing those zeros each stabilizer has dimension one
+and the modular Schur rank 11 attains the effective-support Kneser value.
+These are punctured equality controls only. The characteristic-zero Kneser
+proof, equality classification, target compatibility, and all frontier
+closures remain open.
+
+## 2026-08-22: F3 gauge-free sparse-ratio branch closed
+
+In the F3 `H6=42` layer, at most two nonzero relation-coordinate values split
+`R5` into two disjoint circuits. Every block with nonzero relation bivector
+consists of exactly seven distinct projective-line points, is separately
+integrable, and yields a binary septic of Waring rank at most seven; zero
+bivector blocks integrate termwise. The resulting Waring decomposition has
+at most 42 terms, contrary to `WaringRank(x0...x6)=64`. This closes the
+two-dimensional non-Grassmannian pencil branch in the gauge-free layer. A
+remaining two-dimensional survivor must be a Grassmannian flag line with at
+least three nonzero ratios. Bivector-span-zero/one cases, the `H6=41` gauge
+branch, and F3 as a whole remain open.

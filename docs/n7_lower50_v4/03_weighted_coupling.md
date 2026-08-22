@@ -8,7 +8,8 @@ implemented and replayed in
 `scripts/n7_weighted_schur_coupling.py`.  Subsequent tasks may use the
 coordinate-vector membership or puncture-rank criterion directly for a fixed
 point code. W-04 structural subset classification and the stabilizer-aware
-W-05 Schur-product bound remain open.
+W-05 characteristic-zero bound/equality classification remain open. The
+W-05 fixed-code stabilizer operator is implemented.
 
 ## Goal
 
@@ -65,6 +66,11 @@ Interpret `e_i in R_3 star R_4` through punctured/shortened evaluation codes,
 low-degree separators, and special subsets of points.
 
 ## W-05 — universal Schur-product bounds
+
+Fixed-code stabilizer operator executed. The curve controls have ambient
+stabilizer dimensions `15,22,29`, caused by `14,21,28` zero coordinates;
+after puncturing, all have stabilizer dimension one and modular Schur rank
+11. A characteristic-zero proof and equality classification remain open.
 
 For dimensions `(9,3)`, `(8,4)`, and `(7,5)`, prove the strongest bounds on
 

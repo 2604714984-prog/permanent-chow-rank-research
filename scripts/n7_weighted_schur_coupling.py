@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact fixed-code evaluator for W-01 through W-04."""
+"""Exact fixed-code evaluator for W-01 through W-05 operators."""
 
 from __future__ import annotations
 
@@ -66,9 +66,61 @@ def coordinate_zero_indices(space: np.ndarray, prime: int) -> list[int]:
     return [index for index in range(space.shape[0]) if not np.any(space[index, :])]
 
 
+def column_basis(space: np.ndarray, prime: int) -> np.ndarray:
+    """Select a deterministic independent subset of the input columns."""
+    space = np.asarray(space, dtype=np.int64) % prime
+    basis = np.zeros((space.shape[0], 0), dtype=np.int64)
+    rank = 0
+    for index in range(space.shape[1]):
+        candidate = np.column_stack((basis, space[:, index]))
+        candidate_rank = coupled.modular_rank(candidate, prime)
+        if candidate_rank > rank:
+            basis = candidate
+            rank = candidate_rank
+    return basis
+
+
+def coordinate_stabilizer_dimension(span: np.ndarray, prime: int) -> int:
+    """Return dim{x: x star L subset L} for the column span L."""
+    basis = column_basis(span, prime)
+    n = basis.shape[0]
+    annihilator_columns = coupled.modular_nullspace_columns(basis.T, prime)
+    if basis.shape[1] == 0:
+        return n
+    blocks = [
+        annihilator_columns.T * basis[:, index][None, :] % prime
+        for index in range(basis.shape[1])
+    ]
+    equations = np.vstack(blocks)
+    return n - coupled.modular_rank(equations, prime)
+
+
+def stabilizer_profile(span: np.ndarray, q3: int, q4: int, prime: int) -> dict[str, object]:
+    span = np.asarray(span, dtype=np.int64) % prime
+    zero_indices = coordinate_zero_indices(span, prime)
+    support = [index for index in range(span.shape[0]) if index not in zero_indices]
+    effective = span[support, :]
+    rank = coupled.modular_rank(span, prime)
+    ambient_stabilizer = coordinate_stabilizer_dimension(span, prime)
+    effective_stabilizer = coordinate_stabilizer_dimension(effective, prime)
+    return {
+        "ambient_stabilizer_dimension_mod_prime": ambient_stabilizer,
+        "schur_zero_coordinate_indices_mod_prime": zero_indices,
+        "effective_support_size_mod_prime": len(support),
+        "effective_support_stabilizer_dimension_mod_prime": effective_stabilizer,
+        "effective_support_kneser_lower_bound_mod_prime": q3 + q4 - effective_stabilizer,
+        "effective_support_kneser_equality_mod_prime": rank
+        == q3 + q4 - effective_stabilizer,
+    }
+
+
 def evaluate_relations(relation3: np.ndarray, relation4: np.ndarray, prime: int) -> dict[str, object]:
     relation3 = np.asarray(relation3, dtype=np.int64) % prime
     relation4 = np.asarray(relation4, dtype=np.int64) % prime
+    if coupled.modular_rank(relation3, prime) != relation3.shape[1]:
+        raise ValueError("relation3 must be a column basis")
+    if coupled.modular_rank(relation4, prime) != relation4.shape[1]:
+        raise ValueError("relation4 must be a column basis")
     if coupled.modular_rank(np.column_stack((relation3, relation4)), prime) != coupled.modular_rank(relation3, prime):
         raise ValueError("the fixed-code operator requires R4 to be contained in R3")
     span = schur_columns(relation3, relation4, prime)
@@ -82,7 +134,7 @@ def evaluate_relations(relation3: np.ndarray, relation4: np.ndarray, prime: int)
     relation4_zero = coordinate_zero_indices(relation4, prime)
     if any(mask[index] for index in relation4_zero):
         raise AssertionError("a degree-four separator coordinate entered the Schur span")
-    return {
+    answer = {
         "q3": relation3.shape[1],
         "q4": relation4.shape[1],
         "schur_generator_count": span.shape[1],
@@ -99,6 +151,8 @@ def evaluate_relations(relation3: np.ndarray, relation4: np.ndarray, prime: int)
         "degree4_separator_indices_mod_prime": relation4_zero,
         "no_coordinate_vector_in_schur_span_mod_prime": not any(mask),
     }
+    answer.update(stabilizer_profile(span, relation3.shape[1], relation4.shape[1], prime))
+    return answer
 
 
 def evaluate_tails(tails: list[tuple[int, ...]], prime: int) -> dict[str, object]:
@@ -131,8 +185,8 @@ def build_payload() -> dict[str, object]:
             }
         )
     return {
-        "schema_version": 2,
-        "status": "W-01-W-03-COMPLETE-W-04-FIXED-CODE-OPERATOR",
+        "schema_version": 3,
+        "status": "W-01-W-03-COMPLETE-W-04-W-05-FIXED-CODE-OPERATORS",
         "maximum_active_matrix_shape": [42, 35],
         "controls": controls,
         "claim_boundary": [
@@ -140,6 +194,8 @@ def build_payload() -> dict[str, object]:
             "Puncture rank drop is exactly unit-vector membership for each fixed Schur span.",
             "Separator indices in the displayed rows are modular control data at the stated prime.",
             "W-04 structural classification of special point subsets remains open.",
+            "The displayed W-05 stabilizer and Kneser rows are modular fixed-code controls.",
+            "A characteristic-zero Kneser proof and equality-case classification remain open.",
             "The displayed modular curve-union rows are orientation controls, not target-compatible frontier components.",
             "No F frontier, Packet B endpoint, lower-50 theorem, or border-rank claim follows.",
         ],
