@@ -1,0 +1,359 @@
+{
+  "candidate_rows": 50,
+  "claim": "For a hypothetical minimal 50-term identity, every retained k-subpacket has degree-d derivative-space sum dimension at least dim(E_d)-C_d(50-k), for d=4,5,6; the d=6 row is its factor-span floor.",
+  "claim_boundary": "These are necessary subpacket floors. They do not assert that every integer rank function is representable or Chow-realizable, and they do not prove lower 51.",
+  "rows": [
+    {
+      "complement_terms": 49,
+      "degree4_derivative_floor": 0,
+      "degree5_derivative_floor": 0,
+      "factor_span_floor_from_degree6": 0,
+      "retained_terms": 1
+    },
+    {
+      "complement_terms": 48,
+      "degree4_derivative_floor": 0,
+      "degree5_derivative_floor": 0,
+      "factor_span_floor_from_degree6": 5,
+      "retained_terms": 2
+    },
+    {
+      "complement_terms": 47,
+      "degree4_derivative_floor": 0,
+      "degree5_derivative_floor": 15,
+      "factor_span_floor_from_degree6": 12,
+      "retained_terms": 3
+    },
+    {
+      "complement_terms": 46,
+      "degree4_derivative_floor": 0,
+      "degree5_derivative_floor": 36,
+      "factor_span_floor_from_degree6": 16,
+      "retained_terms": 4
+    },
+    {
+      "complement_terms": 45,
+      "degree4_derivative_floor": 9,
+      "degree5_derivative_floor": 57,
+      "factor_span_floor_from_degree6": 20,
+      "retained_terms": 5
+    },
+    {
+      "complement_terms": 44,
+      "degree4_derivative_floor": 44,
+      "degree5_derivative_floor": 78,
+      "factor_span_floor_from_degree6": 24,
+      "retained_terms": 6
+    },
+    {
+      "complement_terms": 43,
+      "degree4_derivative_floor": 79,
+      "degree5_derivative_floor": 99,
+      "factor_span_floor_from_degree6": 25,
+      "retained_terms": 7
+    },
+    {
+      "complement_terms": 42,
+      "degree4_derivative_floor": 114,
+      "degree5_derivative_floor": 120,
+      "factor_span_floor_from_degree6": 28,
+      "retained_terms": 8
+    },
+    {
+      "complement_terms": 41,
+      "degree4_derivative_floor": 149,
+      "degree5_derivative_floor": 139,
+      "factor_span_floor_from_degree6": 30,
+      "retained_terms": 9
+    },
+    {
+      "complement_terms": 40,
+      "degree4_derivative_floor": 184,
+      "degree5_derivative_floor": 153,
+      "factor_span_floor_from_degree6": 32,
+      "retained_terms": 10
+    },
+    {
+      "complement_terms": 39,
+      "degree4_derivative_floor": 219,
+      "degree5_derivative_floor": 174,
+      "factor_span_floor_from_degree6": 34,
+      "retained_terms": 11
+    },
+    {
+      "complement_terms": 38,
+      "degree4_derivative_floor": 254,
+      "degree5_derivative_floor": 186,
+      "factor_span_floor_from_degree6": 34,
+      "retained_terms": 12
+    },
+    {
+      "complement_terms": 37,
+      "degree4_derivative_floor": 289,
+      "degree5_derivative_floor": 200,
+      "factor_span_floor_from_degree6": 35,
+      "retained_terms": 13
+    },
+    {
+      "complement_terms": 36,
+      "degree4_derivative_floor": 324,
+      "degree5_derivative_floor": 208,
+      "factor_span_floor_from_degree6": 35,
+      "retained_terms": 14
+    },
+    {
+      "complement_terms": 35,
+      "degree4_derivative_floor": 359,
+      "degree5_derivative_floor": 220,
+      "factor_span_floor_from_degree6": 36,
+      "retained_terms": 15
+    },
+    {
+      "complement_terms": 34,
+      "degree4_derivative_floor": 394,
+      "degree5_derivative_floor": 233,
+      "factor_span_floor_from_degree6": 39,
+      "retained_terms": 16
+    },
+    {
+      "complement_terms": 33,
+      "degree4_derivative_floor": 429,
+      "degree5_derivative_floor": 254,
+      "factor_span_floor_from_degree6": 40,
+      "retained_terms": 17
+    },
+    {
+      "complement_terms": 32,
+      "degree4_derivative_floor": 464,
+      "degree5_derivative_floor": 268,
+      "factor_span_floor_from_degree6": 41,
+      "retained_terms": 18
+    },
+    {
+      "complement_terms": 31,
+      "degree4_derivative_floor": 499,
+      "degree5_derivative_floor": 275,
+      "factor_span_floor_from_degree6": 41,
+      "retained_terms": 19
+    },
+    {
+      "complement_terms": 30,
+      "degree4_derivative_floor": 534,
+      "degree5_derivative_floor": 284,
+      "factor_span_floor_from_degree6": 41,
+      "retained_terms": 20
+    },
+    {
+      "complement_terms": 29,
+      "degree4_derivative_floor": 569,
+      "degree5_derivative_floor": 298,
+      "factor_span_floor_from_degree6": 42,
+      "retained_terms": 21
+    },
+    {
+      "complement_terms": 28,
+      "degree4_derivative_floor": 604,
+      "degree5_derivative_floor": 303,
+      "factor_span_floor_from_degree6": 42,
+      "retained_terms": 22
+    },
+    {
+      "complement_terms": 27,
+      "degree4_derivative_floor": 639,
+      "degree5_derivative_floor": 309,
+      "factor_span_floor_from_degree6": 42,
+      "retained_terms": 23
+    },
+    {
+      "complement_terms": 26,
+      "degree4_derivative_floor": 674,
+      "degree5_derivative_floor": 314,
+      "factor_span_floor_from_degree6": 42,
+      "retained_terms": 24
+    },
+    {
+      "complement_terms": 25,
+      "degree4_derivative_floor": 709,
+      "degree5_derivative_floor": 330,
+      "factor_span_floor_from_degree6": 45,
+      "retained_terms": 25
+    },
+    {
+      "complement_terms": 24,
+      "degree4_derivative_floor": 744,
+      "degree5_derivative_floor": 348,
+      "factor_span_floor_from_degree6": 46,
+      "retained_terms": 26
+    },
+    {
+      "complement_terms": 23,
+      "degree4_derivative_floor": 779,
+      "degree5_derivative_floor": 363,
+      "factor_span_floor_from_degree6": 47,
+      "retained_terms": 27
+    },
+    {
+      "complement_terms": 22,
+      "degree4_derivative_floor": 814,
+      "degree5_derivative_floor": 371,
+      "factor_span_floor_from_degree6": 47,
+      "retained_terms": 28
+    },
+    {
+      "complement_terms": 21,
+      "degree4_derivative_floor": 849,
+      "degree5_derivative_floor": 375,
+      "factor_span_floor_from_degree6": 47,
+      "retained_terms": 29
+    },
+    {
+      "complement_terms": 20,
+      "degree4_derivative_floor": 884,
+      "degree5_derivative_floor": 389,
+      "factor_span_floor_from_degree6": 48,
+      "retained_terms": 30
+    },
+    {
+      "complement_terms": 19,
+      "degree4_derivative_floor": 909,
+      "degree5_derivative_floor": 395,
+      "factor_span_floor_from_degree6": 48,
+      "retained_terms": 31
+    },
+    {
+      "complement_terms": 18,
+      "degree4_derivative_floor": 944,
+      "degree5_derivative_floor": 400,
+      "factor_span_floor_from_degree6": 48,
+      "retained_terms": 32
+    },
+    {
+      "complement_terms": 17,
+      "degree4_derivative_floor": 973,
+      "degree5_derivative_floor": 404,
+      "factor_span_floor_from_degree6": 48,
+      "retained_terms": 33
+    },
+    {
+      "complement_terms": 16,
+      "degree4_derivative_floor": 989,
+      "degree5_derivative_floor": 405,
+      "factor_span_floor_from_degree6": 48,
+      "retained_terms": 34
+    },
+    {
+      "complement_terms": 15,
+      "degree4_derivative_floor": 1011,
+      "degree5_derivative_floor": 416,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 35
+    },
+    {
+      "complement_terms": 14,
+      "degree4_derivative_floor": 1046,
+      "degree5_derivative_floor": 420,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 36
+    },
+    {
+      "complement_terms": 13,
+      "degree4_derivative_floor": 1066,
+      "degree5_derivative_floor": 426,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 37
+    },
+    {
+      "complement_terms": 12,
+      "degree4_derivative_floor": 1099,
+      "degree5_derivative_floor": 430,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 38
+    },
+    {
+      "complement_terms": 11,
+      "degree4_derivative_floor": 1127,
+      "degree5_derivative_floor": 434,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 39
+    },
+    {
+      "complement_terms": 10,
+      "degree4_derivative_floor": 1143,
+      "degree5_derivative_floor": 435,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 40
+    },
+    {
+      "complement_terms": 9,
+      "degree4_derivative_floor": 1150,
+      "degree5_derivative_floor": 435,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 41
+    },
+    {
+      "complement_terms": 8,
+      "degree4_derivative_floor": 1179,
+      "degree5_derivative_floor": 439,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 42
+    },
+    {
+      "complement_terms": 7,
+      "degree4_derivative_floor": 1195,
+      "degree5_derivative_floor": 440,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 43
+    },
+    {
+      "complement_terms": 6,
+      "degree4_derivative_floor": 1204,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 44
+    },
+    {
+      "complement_terms": 5,
+      "degree4_derivative_floor": 1216,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 45
+    },
+    {
+      "complement_terms": 4,
+      "degree4_derivative_floor": 1220,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 46
+    },
+    {
+      "complement_terms": 3,
+      "degree4_derivative_floor": 1224,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 47
+    },
+    {
+      "complement_terms": 2,
+      "degree4_derivative_floor": 1225,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 48
+    },
+    {
+      "complement_terms": 1,
+      "degree4_derivative_floor": 1225,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 49
+    },
+    {
+      "complement_terms": 0,
+      "degree4_derivative_floor": 1225,
+      "degree5_derivative_floor": 441,
+      "factor_span_floor_from_degree6": 49,
+      "retained_terms": 50
+    }
+  ],
+  "schema_version": 1,
+  "source": "data/n7_lower50_section_caps_audit.json"
+}
