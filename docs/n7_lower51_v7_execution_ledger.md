@@ -375,3 +375,35 @@ Decisive markers:
 LOW-RANK-FULL-ENDPOINT-FLOORS
 LOW-RANK-PAIR-FLOOR-FILTER
 ```
+
+## Wave 3 -- all-rank-seven no-direct-basis lane
+
+Status: the quotient two-plane geometry is exhaustive; its cross-degree graph
+compatibility remains open.
+
+After six direct rank-seven increments, quotient by their 42-dimensional sum.
+The final two positive labels span a seven-dimensional quotient with
+increments `(6,1)`.  Reversing only these labels shows that the second
+label's quotient plane has rank exactly one or six.  Hence there are only two
+geometries: a direct `6+1` pair with intrinsic roles, or two six-dimensional
+hyperplanes meeting in dimension five and swapping roles.  In the first case
+the rank-one label has actual-factor support one or two; in the second case
+both labels satisfy the support-at-most-two theorem.
+
+The proof and exact enumeration are frozen in
+`docs/n7_lower51_rank7_no_basis_two_plane_geometry.md` and
+`data/n7_lower51_no_basis_two_plane.json`.
+
+Decisive markers:
+
+```text
+R7-D1-TWO-BRANCHES
+R7-D6-BLOCK
+R7-ROLE-CONSISTENCY
+R7-ONE-SIX-GEOMETRY
+R7-EIGHT-BLOCK-QUOTIENT-DIMENSIONS
+```
+
+The graph maps into the first six blocks and the common degree-two-through-five
+coefficient system are not determined by quotient dimensions.  Consequently
+`R7-MULTIDEGREE-SYSTEM`, `R7-CONNECTING-MAP`, and the lane verdict remain open.
