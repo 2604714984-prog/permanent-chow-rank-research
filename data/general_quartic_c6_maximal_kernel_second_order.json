@@ -1,0 +1,34 @@
+{
+  "all_distinct_c6_maximal_kernel_orbits": "SECOND_ORDER_CLOSED",
+  "canonical_maximal_orbit": "CLOSED_BY_EXISTING_PAIR_CANCELLATION",
+  "claim_boundary": {
+    "distinct_c6_kernel_dimension_9": "ZERO_AT_SECOND_ORDER_FOR_PERM4",
+    "general_six_block_zero_theorem": false,
+    "lower_kernel_dimension_c6_states": "OPEN",
+    "mu_6_4": "OPEN_IN_[6,7]",
+    "repeated_c6_frames": "OPEN"
+  },
+  "noncanonical_row_column_orbits": 2,
+  "representatives": [
+    {
+      "active_source_outside_target_overlap_histogram": {"0": 60, "1": 48},
+      "maximum_active_source_outside_target_overlap": 1,
+      "one_factor_envelope_union": 12,
+      "outside_target_count": 12,
+      "representative": [0, 1, 6, 7, 12, 13],
+      "second_order_outside_targets": "ZERO",
+      "shared_sources": 9
+    },
+    {
+      "active_source_outside_target_overlap_histogram": {"0": 60, "1": 48},
+      "maximum_active_source_outside_target_overlap": 1,
+      "one_factor_envelope_union": 12,
+      "outside_target_count": 12,
+      "representative": [0, 1, 24, 25, 48, 49],
+      "second_order_outside_targets": "ZERO",
+      "shared_sources": 9
+    }
+  ],
+  "schema": "general_quartic_c6_maximal_kernel_second_order/v1",
+  "transposition_pair": true
+}
