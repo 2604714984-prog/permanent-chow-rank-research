@@ -469,3 +469,34 @@ R6-RESIDUAL-BUDGETS
 The cap alone does not give `RESIDUAL-MULTIPLICATION`,
 `RESIDUAL-CONNECTING-MAP`, or `RESIDUAL-THEOREM`; those remain the active
 load-bearing tasks.
+
+## Waves 5 and optional lanes -- value-gate decisions
+
+The exact existing Fitting/Schur replay passes but proves that every tested
+bare-presentation universal construction misses either the Glynn retention
+gate or the `F2` killing gate.  It is frozen as `UNIVERSAL-STOP`; no variant of
+the same functor is reopened.  The exact section Koszul/Young replay has
+maximum standard ceiling 60, and the 10,426-case profile diagnostic also
+passes.  Since no residual invariant currently transports to the section,
+the section lane stops at `STOP-UNTIL-RESIDUAL-TRANSPORT`.
+
+The detailed decision ledger is `docs/n7_lower51_v7_route_decisions.md`.
+
+Decisive markers:
+
+```text
+INVARIANT-SHORTLIST
+FITTING-DECISION
+TOR-COSPAN-DECISION
+INVARIANT-STOP-DECISION
+UNIVERSAL-BOUNDARY
+UNIVERSAL-STOP
+SECTION-CEILING
+SECTION-CONTROLS
+SECTION-ADVANCE-OR-STOP
+SECTION-LANE-VERDICT-STOP-UNTIL-RESIDUAL-TRANSPORT
+```
+
+The retained active invariant is the true permanent degree-two-through-five
+connecting system.  It has not yet been constructed with the required
+subadditivity and boundary coverage, so `FINAL-OBSTRUCTION-MAP` is not issued.
