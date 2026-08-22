@@ -1,0 +1,94 @@
+{
+  "claim_boundary": [
+    "This is an exact reduction of the remaining Packet-A component, not a classification of that component.",
+    "The Glynn49 truncation is excluded by forced-gradient residual rank 5 per omitted-column block, total 35 across the seven disjoint blocks.",
+    "The 64-term Glynn identity is an exact forced-gradient survivor and prevents treating the equations themselves as contradictory.",
+    "No exact 49-term survivor is produced, and no universal nonzero block defect is proved.",
+    "A-CLOSED, ordinary lower 50, and border rank remain unresolved until the displayed missing syzygy or an equivalent component classification is proved."
+  ],
+  "exact_incidence_schema": {
+    "aggregate_relation_capacity": {
+      "A2_shape": [
+        1225,
+        1029
+      ],
+      "A5_shape": [
+        2869685,
+        1029
+      ],
+      "both_maps_can_be_injective_by_dimension": true,
+      "consequence": "simple-matroid ranks plus dimensions do not force K2 or K5 nonzero; on K2=K5=0 the complementary pairing is vacuous"
+    },
+    "external_coefficient_variables": 49,
+    "factor_coordinate_variables_before_quotients": 16807,
+    "forced_gradient_component": {
+      "coefficient_transport": "R_b[(i,omit r),(s,b)] = c_i times coefficient of x_(s,b) in ell_(i,r)",
+      "displayed_scalar_equation_count_before_dependencies": 45276,
+      "equations": "A6_b(F) R_b(F,c) = T_b for b=0,...,6",
+      "labelled_degree_6_middle_columns": 343,
+      "name": "Z_A_grad",
+      "omitted_column_blocks": 7,
+      "rows_per_block": 924,
+      "target_columns_per_block": 7
+    },
+    "simple_multilinear_matroid_condition": "an open collection of nonvanishing Plucker/rank minors; it supplies no fixed torus-weight equation",
+    "smallest_missing_invariant": "a permanent-specific syzygy proving that Z_A_grad intersect the simple-matroid open set forces a nonzero 2/5 relation incompatible with inverse-coefficient pairing, or is empty",
+    "total_affine_variables_before_open_conditions_and_symmetries": 16856
+  },
+  "mandatory_existing_controls": {
+    "glynn49_truncation": {
+      "coefficient_field": "QQ exact",
+      "decision": "FORCED_GRADIENT_EXCLUDED",
+      "forced_gradient_equations_hold": false,
+      "one_omitted_column_nonzero_entry_count": 6468,
+      "one_omitted_column_residual_column_ranks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "one_omitted_column_residual_rank": 5,
+      "one_omitted_column_residual_shape": [
+        924,
+        7
+      ],
+      "seven_disjoint_column_blocks_total_residual_rank": 35,
+      "term_count": 49
+    },
+    "glynn64_identity_control": {
+      "coefficient_field": "QQ exact",
+      "decision": "EXACT_FORCED_GRADIENT_SURVIVOR",
+      "forced_gradient_equations_hold": true,
+      "one_omitted_column_nonzero_entry_count": 0,
+      "one_omitted_column_residual_column_ranks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "one_omitted_column_residual_rank": 0,
+      "one_omitted_column_residual_shape": [
+        924,
+        7
+      ],
+      "seven_disjoint_column_blocks_total_residual_rank": 0,
+      "term_count": 64
+    },
+    "non_tensor_control_role": "Sylvester kernel-image equality alone cannot replace the forced-gradient equations or imply tensor split"
+  },
+  "schema_version": 1,
+  "status": "PACKET_A_EQUALITY_LOCUS_REDUCED_TO_FORCED_GRADIENT_COMPONENT",
+  "structural_conclusion": [
+    "Target containment must be strengthened to the forced coefficient transport A6_b(F) R_b(F,c)=T_b.",
+    "The same factors and external coefficients occur in all seven blocks; arbitrary target-span coefficients are not allowed.",
+    "The simple multilinear matroid condition is open and GL(49)-invariant, whereas an omitted-column block is tied to the permanent torus; the former alone gives no universal fixed-block defect.",
+    "The 2/5 pairing does not give a universal defect without a theorem forcing nonzero K2 or K5 on Z_A_grad."
+  ],
+  "universal_block_defect_decision": "NOT_DERIVED_FROM_CURRENT_HYPOTHESES"
+}
