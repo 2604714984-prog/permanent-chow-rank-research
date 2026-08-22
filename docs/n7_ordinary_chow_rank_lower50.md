@@ -12,8 +12,9 @@ The false quadratic-surjectivity claims are retained as counterexamples, and
 the endpoint exclusions are repaired in degrees three and four using the
 full slope symbols.  This draft does **not** prove the original exact-rank
 target.  The independent reconstruction is recorded in
-`docs/n7_lower50_v6_core_audit.md`; exact-head CI and external human review
-remain separate evidence gates.
+`docs/n7_lower50_v6_core_audit.md`.  GitHub Actions run `32582021981`
+completed successfully at proof head `4f93d26`; named external human review
+remains a separate evidence boundary.
 
 All Chow summands below are arbitrary nonzero products of seven linear forms.
 Their factors may be repeated or linearly dependent.

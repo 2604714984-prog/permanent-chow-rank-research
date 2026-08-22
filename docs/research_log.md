@@ -4190,3 +4190,28 @@ monomial frames and block-supported graph maps, but it does not synchronize
 the seven projective tails.  The remaining B2 statement is the radical
 containment of their rank-one `2x2` minors in the full row-split permanent and
 kernel-image equality ideal, or an equivalent cross-row Chow-array theorem.
+
+## 2026-08-23: v6 lower-50 proof promoted and lower-51 gate opened
+
+The divergent Rethlas lower-50 draft was reconstructed against the active
+v4/v5 history rather than cherry-picked wholesale.  The audit repaired the
+arbitrary-orientation Boolean quotient argument in endpoint B, recorded the
+rank-five full-quotient equality type, and imported the missing rank-six and
+slope-table replay sources.  Exact section caps, two-prime rank-six profiles,
+independent local-symbol tables, negative proof-contract tests, and the full
+repository suite passed at proof head `4f93d26` in GitHub Actions run
+`32582021981`.
+
+Therefore the ordinary characteristic-zero interval is now
+
+\[
+50\le\operatorname{ChowRank}(\operatorname{perm}_7)\le64.
+\]
+
+The v5 packet-specific closure program remains available as a dormant
+fallback.  v6 Modules 09--12 are now active.  Existing lower-51 progress
+excludes the simple all-rank-seven 50-term branch and narrows the
+all-rank-seven no-direct-basis branch to increment profile
+`(1,6,7,7,7,7,7,7)` with rank-one support at most two.  Rank-six mixtures and
+the remaining multiplication compatibility are still open; no lower-51,
+exact-64, or border-rank claim follows yet.

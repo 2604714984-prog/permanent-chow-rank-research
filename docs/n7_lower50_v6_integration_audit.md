@@ -11,13 +11,16 @@ ACTIVE-HISTORY-RECONCILED
 L50-MINIMAL-DEPENDENCY-GRAPH
 L50-SCOPE-FROZEN
 L50-PRE-CI-GATE-PASS
+L50-EVIDENCE-GATE-PASS
+L50-INTEGRATED-AND-PROMOTED
+V5-FALLBACK-DORMANT
+LOWER51-GATE-OPEN
 ```
 
-This note records the integration decision before public promotion.  The
-repository interval remains `49..64` until a successful GitHub Actions run is
-tied to the exact proof-and-evidence commit.  A local test result, a running
-workflow, or a successful workflow at another commit is not the required
-receipt.
+This note records the completed integration decision.  GitHub Actions run
+`32582021981` succeeded at proof-and-evidence head `4f93d26`, so the repository
+interval is promoted to `50..64`.  A local test result, a running workflow, or
+a successful workflow at another commit was not used as the receipt.
 
 ## Findings ledger
 
@@ -95,14 +98,8 @@ All summands are arbitrary nonzero products of seven linear forms; repeated
 or dependent factors are allowed.  No border-rank, positive-characteristic,
 exact-rank-64, or general-`n` conclusion is made.
 
-The remaining sequence is mechanical but mandatory:
-
-1. commit the proof and evidence at one exact active-branch head;
-2. obtain a completed successful configured GitHub Actions receipt for it;
-3. update `README.md`, `STATUS.md`, and the research log in a promotion commit;
-4. obtain a second successful receipt for that exact promoted head;
-5. freeze the head, tree, proof hash, manifest, and workflow receipt and then
-   open the lower-51 gate.
-
-Until step 2 completes, the decisive repository status is
-`L50-PRE-CI-GATE-PASS`, not `L50-INTEGRATED-AND-PROMOTED`.
+The proof-and-evidence receipt is complete.  This promotion commit updates the
+public status, marks v5 packet-specific closure work as a dormant fallback,
+and opens v6 Modules 09--12.  It must receive its own successful exact-head CI
+receipt before final signoff; the workflow result itself supplies that
+head-to-receipt binding without requiring a self-referential metadata commit.

@@ -2,22 +2,23 @@
 
 ## Status and claim boundary
 
-`ACTIVE STRUCTURAL-CLOSURE PROGRAM — NOT A NEW CHOW-RANK RESULT.`
+`DORMANT FALLBACK PROGRAM — LOWER 50 WAS PROMOTED BY V6.`
 
 Created: 2026-08-22  
 Frozen mathematical input HEAD: `508dd5594a7f97ed830a5acf42ba47aa45ad7e6a`  
 Active research PR: `#31`  
 Active branch: `agent/general-column-sign-rank`
 
-This program is the authoritative successor to
-`docs/n7_lower50_decisive_execution_program_v4.md` for the unresolved
-lower-50 theorem.  It consumes the completed v4 results rather than repeating
-them.
+This program is retained as the packet-specific fallback to
+`docs/n7_lower50_decisive_execution_program_v4.md`.  The v6 direct
+middle-degree proof bypassed these closure tasks and promoted lower 50; the
+modules below remain independent structural research rather than active
+promotion gates.
 
 The current ordinary characteristic-zero interval remains
 
 \[
-\boxed{49\leq\operatorname{ChowRank}(\operatorname{perm}_7)\leq64}.
+\boxed{50\leq\operatorname{ChowRank}(\operatorname{perm}_7)\leq64}.
 \]
 
 The sole promotion target of this program is
