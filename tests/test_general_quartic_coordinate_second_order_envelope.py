@@ -13,7 +13,8 @@ INDEPENDENT = ROOT / "scripts" / "general_quartic_coordinate_second_order_envelo
 DATA = ROOT / "data" / "general_quartic_coordinate_second_order_envelope.json"
 
 spec = importlib.util.spec_from_file_location("coordinate_second_order_envelope", SCRIPT)
-assert spec is not None and spec.loader is not None
+if spec is None or spec.loader is None:
+    raise RuntimeError(SCRIPT)
 module = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = module
 spec.loader.exec_module(module)
@@ -27,19 +28,31 @@ class CoordinateSecondOrderEnvelopeTests(unittest.TestCase):
     def test_frozen_payload(self) -> None:
         self.assertEqual(self.payload, json.loads(DATA.read_text(encoding="utf-8")))
 
-    def test_exact_maximum_and_equality_locus(self) -> None:
-        self.assertEqual(self.payload["supports_checked"], 14893)
-        self.assertEqual(self.payload["maximum_second_order_envelope"], 14)
-        self.assertEqual(self.payload["equality_supports"], 96)
-        self.assertEqual(self.payload["equality_row_column_orbits"], 1)
+    def test_correct_unrestricted_maximum(self) -> None:
+        data = self.payload["unrestricted"]
+        self.assertEqual(data["maximum_second_order_envelope"], 18)
+        self.assertEqual(data["equality_supports"], 16)
+        self.assertEqual(data["equality_row_column_orbits"], 1)
+        self.assertEqual(data["equality_graph"], "PUNCTURED_ROW_COLUMN_CROSS")
         self.assertEqual(
-            self.payload["equality_partial_matching_counts"],
+            data["equality_partial_matching_counts"],
+            {"r2": 9, "r3": 0, "r4": 0},
+        )
+
+    def test_c6_maximum_under_degree_cap_two(self) -> None:
+        data = self.payload["row_column_degree_cap_two"]
+        self.assertEqual(data["maximum_second_order_envelope"], 14)
+        self.assertEqual(data["equality_supports"], 96)
+        self.assertEqual(data["equality_row_column_orbits"], 1)
+        self.assertEqual(
+            data["equality_partial_matching_counts"],
             {"r2": 9, "r3": 2, "r4": 0},
         )
 
-    def test_six_extremal_envelopes_cover_the_target(self) -> None:
-        self.assertEqual(self.payload["explicit_cover_frame_count"], 6)
-        self.assertEqual(self.payload["explicit_cover_union"], 24)
+    def test_six_c6_envelopes_cover_the_target(self) -> None:
+        cover = self.payload["explicit_c6_cover"]
+        self.assertEqual(cover["frame_count"], 6)
+        self.assertEqual(cover["union"], 24)
         self.assertEqual(
             self.payload["claim_boundary"]["raw_second_order_support_route"],
             "INSUFFICIENT",

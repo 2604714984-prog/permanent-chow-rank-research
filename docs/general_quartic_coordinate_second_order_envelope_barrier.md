@@ -1,147 +1,96 @@
-# Coordinate second-order matching-envelope barrier
+# Corrected coordinate second-order matching envelopes
 
-## Status and claim boundary
+## Status and correction boundary
 
-`ROUTE_BARRIER`, `EXACT_FINITE_INTERFACES_REPLAYED`,
+`CORRECTED_ROUTE_DIAGNOSTIC`, `EXACT_FINITE_INTERFACES_REPLAYED`,
 `COORDINATE_SECOND_ORDER_SUPPORT_ONLY`.
 
-For a set `A` of at most six coordinate cells in a `4 x 4` block, define the
-raw second-order matching envelope
+For a support `A` of at most six coordinate cells in a `4 x 4` block, define
 
 \[
 E_2(A)=\{M:\ M\text{ is a perfect matching and }|M\cap A|\ge2\}.
-\tag{0.1}
 \]
 
-A quartic matching produced by two regular factor motions leaves at least two
-unchanged coordinate factors, so it belongs to this envelope. The exact
-maximum is
+The previously recorded unrestricted bound `|E_2(A)|<=14` was false. Complete
+replay gives
 
 \[
-\boxed{|E_2(A)|\le14}.
-\tag{0.2}
+\boxed{|E_2(A)|\le18}.
 \]
 
-Equality holds for exactly 96 labeled supports. They form one orbit under
-independent row and column permutations, and every equality support is a
-six-cycle `C6` on a selected `3 x 3` subblock: equivalently, it is `K_(3,3)`
-minus one perfect matching.
-
-However, six equality envelopes already cover all 24 perfect matchings.
-Therefore raw second-order matching-support counting cannot exclude a
-coordinate six-block lift. Coefficients, lower-order cancellation, and the
-common-source equations are indispensable.
-
-This note does not construct a second-order six-block witness and does not
-change
+Exactly 16 supports attain 18. They form one row-column orbit and are the
+punctured row-column crosses
 
 \[
-6\le\mu(6,4)\le8.
+A_{r,c}=\{(r,j):j\ne c\}\cup\{(i,c):i\ne r\}.
 \]
 
-## 1. Exact moment formula
+Their row and column degree sequences are both `(3,1,1,1)` and their matching
+moments are `(r_2,r_3,r_4)=(9,0,0)`.
 
-Let `r_j(A)` be the number of `j`-edge matchings contained in `A`. For a target
-perfect matching `M`, put `k_M=|M cap A|`. On `k=0,1,2,3,4`,
+The value 14 remains correct after imposing the additional condition that
+every row and every column has degree at most two. In that restricted locus,
+there are exactly 96 equality supports, one row-column orbit, and every support
+is a six-cycle `C6`, equivalently `K_(3,3)` minus one perfect matching.
+
+This correction does not construct a six-block witness and does not change
 
 \[
-\mathbf 1_{k\ge2}
-=\binom{k}{2}-2\binom{k}{3}+3\binom{k}{4}.
-\tag{1.1}
+\boxed{6\le\mu(6,4)\le7}.
 \]
 
-Every two-edge matching extends to two perfect matchings, every three-edge
-matching extends uniquely, and every four-edge matching already is perfect.
-Summing (1.1) gives
+## Exact moment formula
+
+Let `r_j(A)` be the number of `j`-edge matchings contained in `A`. On
+`k=0,1,2,3,4`,
+
+\[
+\mathbf1_{k\ge2}=\binom{k}{2}-2\binom{k}{3}+3\binom{k}{4}.
+\]
+
+Every two-edge matching extends to two perfect matchings and every three-edge
+matching extends uniquely, hence
 
 \[
 \boxed{|E_2(A)|=2r_2(A)-2r_3(A)+3r_4(A).}
-\tag{1.2}
 \]
 
-This identity provides an implementation independent of direct enumeration of
-the 24 target matchings.
-
-## 2. Equality classification
-
-The exact scan checks
+The two equality families follow by exact exhaustion of all
 
 \[
-\sum_{a=0}^{6}\binom{16}{a}=14893
+\sum_{a=0}^{6}\binom{16}{a}=14,893
 \]
 
-cell supports. The maximum is fourteen and is attained by 96 supports. Every
-one has row and column degree sequences
+supports and independent row-column orbit reduction.
+
+## The C6 cover remains valid
+
+Fix rows and columns `0,1,2`. For every `mu in S_3`, let
+
+\[
+A_\mu=\{(r,c):0\le r,c<3,\ c\ne\mu(r)\}.
+\]
+
+Each `A_mu` is a degree-capped C6 equality support with `|E_2(A_mu)|=14`, and
+
+\[
+\bigcup_{\mu\in S_3}E_2(A_\mu)=S_4.
+\]
+
+Thus raw support counting remains insufficient even after the correction. The
+canonical C6 source-reduction and pair-cancellation theorems concern this
+specific degree-capped cover and are not invalidated by the larger global
+maximum.
+
+## Claim boundary
 
 ```text
-(2,2,2,0) and (2,2,2,0),
+unrestricted raw second-order maximum                 18
+unrestricted equality supports                        16
+max under row/column degree cap two                    14
+C6 equality supports under that cap                    96
+six C6 envelopes cover all 24 target matchings        true
+raw support route                                      insufficient
+coordinate second-order witness                        not constructed
+mu(6,4)                                                open in [6,7]
 ```
-
-is connected after deleting the isolated row and column, and hence is a `C6`.
-For every equality support,
-
-```text
-r_2=9,
-r_3=2,
-r_4=0,
-|E_2|=2*9-2*2=14.
-```
-
-There are `4*4*6=96` such supports: choose the omitted row, omitted column, and
-the perfect matching removed from the remaining `K_(3,3)`.
-
-## 3. Explicit six-envelope cover
-
-Fix rows and columns `0,1,2`. For every permutation `mu in S_3`, define
-
-\[
-A_\mu
-=\{(r,c):0\le r,c<3,\ c\ne\mu(r)\}.
-\tag{3.1}
-\]
-
-Each `A_mu` is an equality `C6` support and has a fourteen-element envelope.
-The six envelopes satisfy
-
-\[
-\boxed{\bigcup_{\mu\in S_3}E_2(A_\mu)=S_4.}
-\tag{3.2}
-\]
-
-If a target matching fixes the omitted fourth row and column, choose `mu` with
-at most one agreement with its `3 x 3` restriction. Otherwise the target uses
-exactly two edges inside the selected `3 x 3` block, and one can choose `mu`
-that avoids both. In either case at least two target edges belong to `A_mu`.
-
-Equation (3.2) is only a support cover. It does not solve the order-zero and
-order-one cancellation equations and does not provide integrable component
-coefficients.
-
-## 4. Consequence for the active search
-
-The coordinate regular first-order boundary is closed by the preceding local
-budget theorem. At second order, the analogous raw envelope is already broad
-enough for six extremal frames to cover the target. Therefore the next valid
-object is not a larger support enumeration. It is the coefficient-valued
-second-order common-source system, including:
-
-- two-factor motions from order-zero source coefficients;
-- factor-source mixed terms;
-- second-order source motion;
-- repeated-factor source-kernel directions; and
-- simultaneous cancellation of the complete order-zero and order-one
-  quartics, including nonmatching monomials.
-
-## 5. Verification
-
-Run
-
-```bash
-python scripts/general_quartic_coordinate_second_order_envelope.py \
-  --json /tmp/general_quartic_coordinate_second_order_envelope.json
-python scripts/general_quartic_coordinate_second_order_envelope_independent.py
-python -m unittest tests.test_general_quartic_coordinate_second_order_envelope -v
-```
-
-The primary replay enumerates supports and row-column orbits. The independent
-replay uses the matching-moment identity (1.2).

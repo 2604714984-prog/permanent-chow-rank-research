@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Exact support and orbit replay for the coordinate second-order envelope."""
+"""Exact support and orbit replay for the coordinate second-order envelope.
+
+Version 2 corrects the unrestricted maximum. The global maximum is 18 and is
+attained by punctured row-column crosses. The previously reported value 14 is
+the sharp maximum only under the additional row/column degree cap two; that
+restricted equality locus is the C6 family used by the canonical cover.
+"""
 
 from __future__ import annotations
 
@@ -29,7 +35,9 @@ def envelope_two(support: frozenset[int]) -> frozenset[int]:
     )
 
 
-def row_column_degrees(support: frozenset[int]) -> tuple[tuple[int, ...], tuple[int, ...]]:
+def row_column_degrees(
+    support: frozenset[int],
+) -> tuple[tuple[int, ...], tuple[int, ...]]:
     rows = [0] * ORDER
     columns = [0] * ORDER
     for cell in support:
@@ -69,7 +77,26 @@ def partial_matching_counts(support: frozenset[int]) -> tuple[int, int, int]:
     return r2, r3, r4
 
 
-def explicit_six_cover() -> tuple[list[frozenset[int]], frozenset[int]]:
+def is_punctured_row_column_cross(support: frozenset[int]) -> bool:
+    if len(support) != 6:
+        return False
+    for row in range(ORDER):
+        for column in range(ORDER):
+            expected = {
+                row * ORDER + other_column
+                for other_column in range(ORDER)
+                if other_column != column
+            } | {
+                other_row * ORDER + column
+                for other_row in range(ORDER)
+                if other_row != row
+            }
+            if support == expected:
+                return True
+    return False
+
+
+def explicit_six_c6_cover() -> tuple[list[frozenset[int]], frozenset[int]]:
     frames = []
     for missing in permutations(range(3)):
         support = frozenset(
@@ -90,6 +117,8 @@ def payload() -> dict[str, object]:
     checked = 0
     maximum = -1
     equality_supports: list[frozenset[int]] = []
+    capped_maximum = -1
+    capped_equality_supports: list[frozenset[int]] = []
 
     for size in range(7):
         for values in combinations(CELLS, size):
@@ -104,15 +133,24 @@ def payload() -> dict[str, object]:
             elif envelope_size == maximum:
                 equality_supports.append(support)
 
-    require(checked == 14893, checked)
-    require(maximum == 14, maximum)
-    require(len(equality_supports) == 96, len(equality_supports))
+            row_degrees, column_degrees = row_column_degrees(support)
+            if row_degrees[0] <= 2 and column_degrees[0] <= 2:
+                if envelope_size > capped_maximum:
+                    capped_maximum = envelope_size
+                    capped_equality_supports = [support]
+                elif envelope_size == capped_maximum:
+                    capped_equality_supports.append(support)
+
+    require(checked == 14_893, checked)
+    require(maximum == 18, maximum)
+    require(len(equality_supports) == 16, len(equality_supports))
     require(
         all(
             len(support) == 6
             and row_column_degrees(support)
-            == ((2, 2, 2, 0), (2, 2, 2, 0))
-            and partial_matching_counts(support) == (9, 2, 0)
+            == ((3, 1, 1, 1), (3, 1, 1, 1))
+            and partial_matching_counts(support) == (9, 0, 0)
+            and is_punctured_row_column_cross(support)
             for support in equality_supports
         ),
         equality_supports,
@@ -121,22 +159,60 @@ def payload() -> dict[str, object]:
         len({canonical_support(support) for support in equality_supports}) == 1,
         equality_supports,
     )
-    frames, union = explicit_six_cover()
+
+    require(capped_maximum == 14, capped_maximum)
+    require(len(capped_equality_supports) == 96, len(capped_equality_supports))
+    require(
+        all(
+            len(support) == 6
+            and row_column_degrees(support)
+            == ((2, 2, 2, 0), (2, 2, 2, 0))
+            and partial_matching_counts(support) == (9, 2, 0)
+            for support in capped_equality_supports
+        ),
+        capped_equality_supports,
+    )
+    require(
+        len({canonical_support(support) for support in capped_equality_supports}) == 1,
+        capped_equality_supports,
+    )
+
+    frames, union = explicit_six_c6_cover()
 
     return {
-        "schema": "general_quartic_coordinate_second_order_envelope/v1",
+        "schema": "general_quartic_coordinate_second_order_envelope/v2",
         "supports_checked": checked,
-        "maximum_second_order_envelope": maximum,
-        "equality_supports": len(equality_supports),
-        "equality_row_column_orbits": 1,
-        "equality_graph": "C6_EQUALS_K33_MINUS_PERFECT_MATCHING",
-        "equality_partial_matching_counts": {"r2": 9, "r3": 2, "r4": 0},
-        "explicit_cover_frame_count": len(frames),
-        "explicit_cover_union": len(union),
+        "unrestricted": {
+            "maximum_second_order_envelope": maximum,
+            "equality_supports": len(equality_supports),
+            "equality_row_column_orbits": 1,
+            "equality_graph": "PUNCTURED_ROW_COLUMN_CROSS",
+            "equality_degree_sequences": {
+                "row": [3, 1, 1, 1],
+                "column": [3, 1, 1, 1],
+            },
+            "equality_partial_matching_counts": {"r2": 9, "r3": 0, "r4": 0},
+        },
+        "row_column_degree_cap_two": {
+            "maximum_second_order_envelope": capped_maximum,
+            "equality_supports": len(capped_equality_supports),
+            "equality_row_column_orbits": 1,
+            "equality_graph": "C6_EQUALS_K33_MINUS_PERFECT_MATCHING",
+            "equality_partial_matching_counts": {"r2": 9, "r3": 2, "r4": 0},
+        },
+        "explicit_c6_cover": {
+            "frame_count": len(frames),
+            "union": len(union),
+        },
+        "correction": {
+            "superseded_unrestricted_maximum": 14,
+            "correct_unrestricted_maximum": 18,
+            "value_14_scope": "MAX_ROW_DEGREE_AND_MAX_COLUMN_DEGREE_AT_MOST_TWO",
+        },
         "claim_boundary": {
             "raw_second_order_support_route": "INSUFFICIENT",
             "second_order_six_block_witness": False,
-            "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+            "mu_6_4_exact_value": "OPEN_IN_[6,7]",
             "new_unrestricted_chow_rank_bound": False,
             "new_border_rank_bound": False,
             "literature_novelty": "NOT_ESTABLISHED",

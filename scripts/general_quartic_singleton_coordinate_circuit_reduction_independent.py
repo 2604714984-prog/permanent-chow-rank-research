@@ -107,7 +107,6 @@ MATCHING_MASKS = tuple(
     sum(1 << (row * ORDER + value[row]) for row in range(ORDER))
     for value in GROUP
 )
-ALL_MATCHING_BITS = (1 << len(GROUP)) - 1
 
 
 def abstract_automorphisms(
@@ -127,10 +126,7 @@ def abstract_automorphisms(
         moved_singletons = Counter(
             relabeling[value] for value in singletons
         )
-        if (
-            moved_pairs == target_pairs
-            and moved_singletons == target_singletons
-        ):
+        if moved_pairs == target_pairs and moved_singletons == target_singletons:
             result.append(relabeling)
     return tuple(result)
 
@@ -147,10 +143,7 @@ def orbit_key(
             for position in range(len(group_values))
         ]
         left_inverse = inverse(ordered[0])
-        normalized = [
-            compose(left_inverse, value)
-            for value in ordered
-        ]
+        normalized = [compose(left_inverse, value) for value in ordered]
         for relabeling in GROUP:
             candidates.append(
                 tuple(
@@ -164,10 +157,7 @@ def orbit_key(
 @lru_cache(maxsize=None)
 def embedding_orbits(name: str) -> dict[tuple[int, ...], int]:
     pattern = PATTERNS[name]
-    simple_edges = {
-        tuple(sorted(pair))
-        for pair in pattern["pairs"]
-    }
+    simple_edges = {tuple(sorted(pair)) for pair in pattern["pairs"]}
     automorphisms = abstract_automorphisms(pattern)
     classes: dict[tuple[int, ...], int] = defaultdict(int)
     for remaining in permutations(
@@ -180,14 +170,8 @@ def embedding_orbits(name: str) -> dict[tuple[int, ...], int]:
             for left, right in simple_edges
         ):
             classes[orbit_key(values, automorphisms)] += 1
-    require(
-        len(classes) == EXPECTED_ORBITS[name],
-        (name, len(classes)),
-    )
-    require(
-        sum(classes.values()) == EXPECTED_EMBEDDINGS[name],
-        (name, sum(classes.values())),
-    )
+    require(len(classes) == EXPECTED_ORBITS[name], (name, len(classes)))
+    require(sum(classes.values()) == EXPECTED_EMBEDDINGS[name], (name, sum(classes.values())))
     return dict(classes)
 
 
@@ -195,10 +179,7 @@ def embedding_orbits(name: str) -> dict[tuple[int, ...], int]:
 def singleton_frames() -> tuple[int, ...]:
     identity_mask = MATCHING_MASKS[0]
     frames = []
-    for left, right in combinations_with_replacement(
-        range(ORDER * ORDER),
-        2,
-    ):
+    for left, right in combinations_with_replacement(range(ORDER * ORDER), 2):
         frame_mask = identity_mask | (1 << left) | (1 << right)
         contained = sum(
             (matching_mask & frame_mask) == matching_mask
@@ -216,10 +197,7 @@ def singleton_frames() -> tuple[int, ...]:
 
 
 @lru_cache(maxsize=None)
-def transform_identity_frame(
-    frame_mask: int,
-    base_index: int,
-) -> int:
+def transform_identity_frame(frame_mask: int, base_index: int) -> int:
     base = GROUP[base_index]
     result = 0
     for cell in range(ORDER * ORDER):
@@ -230,20 +208,14 @@ def transform_identity_frame(
 
 
 @lru_cache(maxsize=None)
-def envelope_bits(
-    frame_mask: int,
-    leading: tuple[int, ...],
-) -> int:
+def envelope_bits(frame_mask: int, leading: tuple[int, ...]) -> int:
     result = 0
     for index, matching_mask in enumerate(MATCHING_MASKS):
         if (matching_mask & frame_mask).bit_count() >= 3:
             result |= 1 << index
             continue
         if any(
-            (
-                matching_mask
-                & MATCHING_MASKS[base_index]
-            ).bit_count() >= 2
+            (matching_mask & MATCHING_MASKS[base_index]).bit_count() >= 2
             for base_index in leading
         ):
             result |= 1 << index
@@ -260,16 +232,13 @@ def pair_envelope(left: int, right: int) -> int:
 @lru_cache(maxsize=None)
 def pattern_envelope_histogram(name: str) -> Counter[int]:
     frames = singleton_frames()
-    histogram: Counter[int] = Counter[]
+    histogram: Counter[int] = Counter()
     pattern = PATTERNS[name]
     for key in embedding_orbits(name):
         values = tuple(key)
         base_union = 0
         for left, right in pattern["pairs"]:
-            base_union |= pair_envelope(
-                values[left],
-                values[right],
-            )
+            base_union |= pair_envelope(values[left], values[right])
         singleton_vertices = tuple(pattern["singletons"])
         if len(singleton_vertices) == 1:
             base_index = values[singleton_vertices[0]]
@@ -281,9 +250,7 @@ def pattern_envelope_histogram(name: str) -> Counter[int]:
                 for frame in frames
             ]
             for singleton_envelope in singleton_envelopes:
-                histogram[
-                    (base_union | singleton_envelope).bit_count()
-                ] += 1
+                histogram[(base_union | singleton_envelope).bit_count()] += 1
         else:
             left_index = values[singleton_vertices[0]]
             right_index = values[singleton_vertices[1]]
@@ -304,18 +271,12 @@ def pattern_envelope_histogram(name: str) -> Counter[int]:
             for left_envelope in left_envelopes:
                 partial = base_union | left_envelope
                 for right_envelope in right_envelopes:
-                    histogram[
-                        (partial | right_envelope).bit_count()
-                    ] += 1
+                    histogram[(partial | right_envelope).bit_count()] += 1
     require(
-        dict(sorted(histogram.items()))
-        == EXPECTED_HISTOGRAMS[name],
+        dict(sorted(histogram.items())) == EXPECTED_HISTOGRAMS[name],
         (name, histogram),
     )
-    require(
-        max(histogram) == EXPECTED_MAXIMA[name],
-        (name, max(histogram)),
-    )
+    require(max(histogram) == EXPECTED_MAXIMA[name], (name, max(histogram)))
     return histogram
 
 

@@ -1,7 +1,7 @@
 # Research ledger
 
-High-level ledger for the active permanent Chow-rank repository. `STATUS.md`
-and Git history retain the detailed historical inventory.
+High-level ledger for the active permanent Chow-rank repository. Git history
+retains the detailed historical inventory.
 
 Last consolidated: **2026-08-22**  
 Active branch: `research/quartic-six-circuit-compatibility`  
@@ -20,13 +20,9 @@ Active Draft PR: **#92**.
 | `perm_9` | `164 <= ChowRank <= 256` | stacked draft |
 | `perm_10` | `307 <= ChowRank <= 512` | stacked draft |
 
-The ordinary upper bound remains Glynn's `2^(n-1)` decomposition. The results
-below change derivative-block thresholds and route boundaries, not ordinary
-Chow rank.
+The ordinary bounds are unchanged by the derivative-block results below.
 
 ## Active quartic frontier
-
-At `(n,m)=(6,4)`,
 
 \[
 \boxed{6\le\mu(6,4)\le7}.
@@ -36,141 +32,114 @@ At `(n,m)=(6,4)`,
 five blocks       ZERO
 six blocks        OPEN
 seven blocks      NONZERO
-eight blocks      NONZERO
 ```
 
 ## `G-ONE-TERM-GLYNN-COMPRESSION`
 
-For every `m>=3` and `n>=m+2`,
+For every `m>=3`, `n>=m+2`,
 
 \[
-\boxed{\mu(n,m)\le2^{m-1}-1.}
+\mu(n,m)\le2^{m-1}-1.
 \]
-
-The unique missing Walsh character at tensor order `m-2` removes one term from
-Glynn's formula. Each compressed summand is a difference of two `m`-factor
-products sharing `m-2` factors and therefore lies in one degree-`m+2` Chow
-derivative block. Padding extends the construction to larger `n`.
 
 ```text
 core: 045dcbd80846a35e6b9716771721c542ed86b0c1a246cf716cebb8e57df65a0e
-status: EXPLICIT_NONZERO_FAMILY, EXACT_COMBINATORIAL_REPLAYED
+status: EXPLICIT_NONZERO_FAMILY
 ```
 
-For `m=4`, seven is exact in the paired-column family `a_i b_i Q_i`: the
-grouped contraction image is the six-dimensional symmetric zero-diagonal
-matrix space, which contains no nonzero rank-one matrix.
+## `G-VARIABLE-BASE-GLYNN-RIGIDITY`
+
+For one fixed split into `m-2` shared columns and two tail columns, allow every
+atom `U_v tensor (B_v-B_u)` to choose its own base `u`. The exact threshold is
+still `2^(m-1)-1`.
+
+Equality consists exactly of one omitted source sign and the ordinary
+one-term compression using that sign as the common base.
+
+```text
+core: 6d45f40e47ad3e150a9e62224f0f93145ce137db92fc3229c2ef9cc8d0c6aaca
+status: EXACT_RESTRICTED_DICTIONARY_RIGIDITY
+quartic directed atoms: 56
+quartic exact threshold: 7
+quartic equality families: 8
+```
 
 ## `Q6-SEVEN-BLOCK-LOCAL-RIGIDITY`
 
-The standard compressed Glynn witness cannot be reduced to six by direct pair
-merging or first-order tangent absorption.
-
-- every pair sum has mode ranks `(2,2,3,3)` and essential dimension ten;
-- one standard projected tangent space has dimension 18;
-- after any deletion the six projected tangent spaces have rank 108;
-- adjoining the missing summand raises the rank to 109.
-
 ```text
-core: 7958a27a326b5155bb9e119061f98eabbc81945ca2a931ef9551d73798f2c710
-status: STRICT_LOCAL_ROUTE_BARRIER
+direct pair merge                       ZERO
+first-order absorption                  ZERO
+second-order absorption                 ZERO
+third-order absorption                  ZERO
 ```
 
-## `Q6-SEVEN-BLOCK-SECOND-ORDER-RIGIDITY`
-
-For each deleted standard summand, the other six complete degree-four tangent
-maps have exact rank 574 on 666 parameters. Their complete
-characteristic-zero kernel has dimension 92.
-
-All 4,278 polarized pairs of that exact kernel are evaluated. Exactly 306 have
-nonzero projected curvature; their span has dimension 24. Every curvature
-vector lies in the 108-dimensional projected tangent sum, so the quotient
-second fundamental form has rank zero. The missing summand remains outside the
-tangent sum and gives augmented rank 109.
-
 ```text
-core: e80c3b30e9df09144eef28f3424d0b4e44b0f3e6a737e12ef0a8e4a6d5f84a4c
-status: STRICT_LOCAL_SECOND_ORDER_ROUTE_BARRIER
+first core:  7958a27a326b5155bb9e119061f98eabbc81945ca2a931ef9551d73798f2c710
+second core: e80c3b30e9df09144eef28f3424d0b4e44b0f3e6a737e12ef0a8e4a6d5f84a4c
+third core:  a719b2d7f2f021737024931d2c11502e59affaf4012dc1f38792bb7699fe3f62
 ```
 
-The known seven-block witness is therefore locally six-irreducible through
-order two. This does not exclude a remote representation, singular/Puiseux
-path, or third- or higher-order coalescence.
-
-## Coordinate degeneration results
-
-### `Q6-TWO-SUPPORTED-TWO-JET`
+Third-order exact data:
 
 ```text
-core: 0435988b71e2697ba07a8eed4290b4b58be3792612d2737d4126f72a914ff2a9
-status: STRICT_ROUTE_BARRIER
+full tangent rank                         574
+kernel dimension                           92
+projected tangent rank                    108
+full second-cokernel ranks           66,66,70
+corrected triples per representative   134,044
+nonzero corrected triples                1,320
+raw corrected span rank                      24
+third quotient rank                           0
+missing augmented rank                      109
 ```
 
-### `Q6-POSITIVE-SINGLETON-TWO-JET`
+## `Q6-COORDINATE-SECOND-ORDER-ENVELOPE-CORRECTION`
+
+The unrestricted raw support maximum is 18, not 14.
 
 ```text
-corrected core: cf26c24029832ce564bb462d47a94add93f9e706a9c825e1e57fe2ab7a84b223
-superseded core: a17aa6de25348a88773f81a05d6d2eaa9212d1d8d213804a365b3015a1f7e99f
-status: STRICT_ROUTE_BARRIER, CORRECTED_PACKET
+unrestricted equality supports             16
+unrestricted orbit             punctured row-column cross
 ```
 
-The exact families are square lollipop, double-edge tail, and endpoint-marked
-`P5`, with row-column orbit counts `5,29,18`. All 130 repeated-factor
-singleton frames are included; second-order support maxima are `22,22,23`.
-
-### `Q6-COORDINATE-FIRST-ORDER-EIGHT`
-
-A complete 54,264-frame scan and independent source-fiber replay prove
-
-\[
-|E(\gamma)|+|S(\gamma)|\le6
-\quad\Longrightarrow\quad q\ge8.
-\]
+The value 14 is retained only under maximum row and column degree two:
 
 ```text
-core: 8f0d2f3e746582c581e23f519c776733654e9f907af1b88bd29daea8a65f892b
-status: STRICT_ROUTE_THEOREM
+degree-capped equality supports             96
+degree-capped orbit          C6 = K33 minus one matching
 ```
 
-### `Q6-COORDINATE-SECOND-ORDER-EQUALITY`
+Six C6 envelopes still cover all 24 targets. Raw support counting remains
+insufficient; the canonical C6 coefficient-level cancellation theorem remains
+valid.
 
-The enlarged local second-order envelope has maximum 20. Its 288 equality
-frames have profile `(12,0,8,8)`, and internally vanishing two-jets on those
-frames have zero matching projection.
+## Other route results
 
 ```text
-core: 938fa79d2410032ec2d12ff917add00d1affaa7365be39241a1931197f0d4eb9
-status: ROUTE_DIAGNOSTIC_AND_EQUALITY_STATE_LEMMA
+two-supported coordinate regular two-jets          CLOSED
+positive-singleton coordinate regular two-jets     CLOSED
+coordinate regular first-order q<=7                 ZERO
+global coordinate second-order q=6                  OPEN
 ```
+
+## CI correction receipt
+
+The previous hosted run exposed two concrete defects:
+
+```text
+false unrestricted second-order expectation: 14 instead of 18
+singleton independent replay typo: Counter[] instead of Counter()
+```
+
+Both are corrected in the current packet. Await the new hosted result before
+marking the branch green.
 
 ## Current decisive interface
 
-The only unresolved literal-block count is six. The paired-column theorem and
-the two local-rigidity theorems close simple deletion, direct pair merge,
-tangent absorption, and second-order curvature absorption at the standard
-seven-block witness.
-
-The next valid routes are:
-
-- the third fundamental form of the standard six-tuple in the
-  missing-summand quotient;
-- genuinely mixed four-column configurations away from the standard chart;
-- the full-support six-element quotient circuit across all repeated-column
-  multidegrees;
-- global coefficient-level coordinate second-order compatibility; or
-- an exact six-block construction.
-
-Do not return to scalar derivative towers, isolated slices, simple sign-term
-deletion, or support-only coordinate scans.
-
-## Pull-request ancestry
-
-```text
-quartic tail: PR #82 -> #83 -> #84 -> #85 -> #86 -> #87 -> #88 -> #89 -> #92
-PR #92 base head: 4804e9a948fa0602c062d167f0474d1346dbcab9
-first-order local-rigidity packet head: 44021026bb7fb0e2a46c69f927d83cd022b86732
-second-order local-rigidity packet head: b1273af7ca1926e2e3a42be6b17a50e0db4fb4a2
-```
+The fixed-split sign family is now rigid even when deleted bases vary. The next
+finite problem is the union over different column splits. A six-block witness
+must either exploit mixed splits, leave the sign family, or use genuinely remote
+common-source geometry.
 
 ## Strict boundary
 
@@ -178,11 +147,9 @@ second-order local-rigidity packet head: b1273af7ca1926e2e3a42be6b17a50e0db4fb4a
 six-block literal sum = OPEN
 seven-block literal sum = NONZERO
 mu(6,4) = OPEN IN [6,7]
-paired-column quartic threshold = 7
-standard seven-block direct pair merge = ZERO
-standard deleted-summand first-order absorption = ZERO
-standard deleted-summand second-order absorption = ZERO
-standard local third/higher absorption = OPEN
+variable-base fixed-split threshold = 7
+mixed-split sign threshold = OPEN
+standard local absorption through order three = ZERO
 coordinate regular first-order q<=7 = ZERO
 global coordinate second-order q=6 = OPEN
 noncoordinate / singular / multigrade q=6 = OPEN

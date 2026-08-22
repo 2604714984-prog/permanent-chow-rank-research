@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent bit-mask and matching-moment replay for the second-order envelope."""
+"""Independent bit-mask replay for the corrected second-order envelope."""
 
 from __future__ import annotations
 
@@ -19,10 +19,21 @@ def require(condition: bool, message: object) -> None:
         raise RuntimeError(message)
 
 
+def degree_maxima(values: tuple[int, ...]) -> tuple[int, int]:
+    rows = [0] * ORDER
+    columns = [0] * ORDER
+    for cell in values:
+        rows[cell // ORDER] += 1
+        columns[cell % ORDER] += 1
+    return max(rows), max(columns)
+
+
 def main() -> int:
     checked = 0
     maximum = -1
     equality_count = 0
+    capped_maximum = -1
+    capped_equality_count = 0
 
     for size in range(7):
         for values in combinations(range(16), size):
@@ -54,9 +65,20 @@ def main() -> int:
             elif envelope_count == maximum:
                 equality_count += 1
 
-    require(checked == 14893, checked)
-    require(maximum == 14, maximum)
-    require(equality_count == 96, equality_count)
+            row_maximum, column_maximum = degree_maxima(values)
+            if row_maximum <= 2 and column_maximum <= 2:
+                if envelope_count > capped_maximum:
+                    capped_maximum = envelope_count
+                    capped_equality_count = 1
+                elif envelope_count == capped_maximum:
+                    capped_equality_count += 1
+
+    require(checked == 14_893, checked)
+    require((maximum, equality_count) == (18, 16), (maximum, equality_count))
+    require(
+        (capped_maximum, capped_equality_count) == (14, 96),
+        (capped_maximum, capped_equality_count),
+    )
     print("GENERAL_QUARTIC_COORDINATE_SECOND_ORDER_ENVELOPE_INDEPENDENT_PASS")
     return 0
 

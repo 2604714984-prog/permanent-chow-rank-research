@@ -1,0 +1,161 @@
+{
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "global_six_block_literal_sum": "OPEN",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "mixed_column_splits": "NOT_EXCLUDED",
+    "mu_6_4": "OPEN_IN_[6,7]",
+    "quartic_threshold": 7,
+    "remote_non_sign_frames": "NOT_EXCLUDED",
+    "unrestricted_chow_rank_improvement": false,
+    "variable_base_fixed_split_threshold": "2^(m-1)-1"
+  },
+  "classification": "EXACT_RESTRICTED_DICTIONARY_RIGIDITY",
+  "core_sha256": "6d45f40e47ad3e150a9e62224f0f93145ce137db92fc3229c2ef9cc8d0c6aaca",
+  "direct_reconstructions": {
+    "3": {
+      "omitted_bases_checked": 4,
+      "target_coordinate_count": 27
+    },
+    "4": {
+      "omitted_bases_checked": 8,
+      "target_coordinate_count": 112
+    },
+    "5": {
+      "omitted_bases_checked": 16,
+      "target_coordinate_count": 375
+    },
+    "6": {
+      "omitted_bases_checked": 32,
+      "target_coordinate_count": 1116
+    }
+  },
+  "family": {
+    "B_v": "v tensor v",
+    "U_v": "v tensor power (m-2)",
+    "atom": "U_v tensor (B_v-B_u), v!=u",
+    "bases_may_vary_by_atom": true,
+    "column_split_is_fixed": true
+  },
+  "field": "characteristic_zero",
+  "proof_interface": {
+    "absent_source_forces": "Z=-B_v",
+    "equality_classification": "exactly one omitted source and a common omitted base",
+    "grouped_source_equation": "Y_v=chi(v)*(B_v+Z)",
+    "maximum_absent_sources": 1,
+    "no_three_tail_points_collinear": "two-sign secant has nonzero 2x2 minor 4*alpha*beta"
+  },
+  "quartic": {
+    "consequence": "SIX_ATOMS_IMPOSSIBLE_IN_VARIABLE_BASE_FIXED_SPLIT_FAMILY",
+    "directed_atoms": 56,
+    "equality_families": 8,
+    "minimum_atoms": 7
+  },
+  "rows": [
+    {
+      "directed_dictionary_atoms": 12,
+      "equality_families": 4,
+      "left_tensor_rank": 3,
+      "minimum_dictionary_atoms": 3,
+      "missing_walsh_character_mask": 3,
+      "order": 3,
+      "reachable_parity_masks": 3,
+      "secant_minor_constant": 4,
+      "sign_count": 4,
+      "tail_rank_one_points": 4,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 56,
+      "equality_families": 8,
+      "left_tensor_rank": 7,
+      "minimum_dictionary_atoms": 7,
+      "missing_walsh_character_mask": 7,
+      "order": 4,
+      "reachable_parity_masks": 7,
+      "secant_minor_constant": 4,
+      "sign_count": 8,
+      "tail_rank_one_points": 8,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 240,
+      "equality_families": 16,
+      "left_tensor_rank": 15,
+      "minimum_dictionary_atoms": 15,
+      "missing_walsh_character_mask": 15,
+      "order": 5,
+      "reachable_parity_masks": 15,
+      "secant_minor_constant": 4,
+      "sign_count": 16,
+      "tail_rank_one_points": 16,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 992,
+      "equality_families": 32,
+      "left_tensor_rank": 31,
+      "minimum_dictionary_atoms": 31,
+      "missing_walsh_character_mask": 31,
+      "order": 6,
+      "reachable_parity_masks": 31,
+      "secant_minor_constant": 4,
+      "sign_count": 32,
+      "tail_rank_one_points": 32,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 4032,
+      "equality_families": 64,
+      "left_tensor_rank": 63,
+      "minimum_dictionary_atoms": 63,
+      "missing_walsh_character_mask": 63,
+      "order": 7,
+      "reachable_parity_masks": 63,
+      "secant_minor_constant": 4,
+      "sign_count": 64,
+      "tail_rank_one_points": 64,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 16256,
+      "equality_families": 128,
+      "left_tensor_rank": 127,
+      "minimum_dictionary_atoms": 127,
+      "missing_walsh_character_mask": 127,
+      "order": 8,
+      "reachable_parity_masks": 127,
+      "secant_minor_constant": 4,
+      "sign_count": 128,
+      "tail_rank_one_points": 128,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 65280,
+      "equality_families": 256,
+      "left_tensor_rank": 255,
+      "minimum_dictionary_atoms": 255,
+      "missing_walsh_character_mask": 255,
+      "order": 9,
+      "reachable_parity_masks": 255,
+      "secant_minor_constant": 4,
+      "sign_count": 256,
+      "tail_rank_one_points": 256,
+      "unique_left_relation_dimension": 1
+    },
+    {
+      "directed_dictionary_atoms": 261632,
+      "equality_families": 512,
+      "left_tensor_rank": 511,
+      "minimum_dictionary_atoms": 511,
+      "missing_walsh_character_mask": 511,
+      "order": 10,
+      "reachable_parity_masks": 511,
+      "secant_minor_constant": 4,
+      "sign_count": 512,
+      "tail_rank_one_points": 512,
+      "unique_left_relation_dimension": 1
+    }
+  ],
+  "schema": "general_variable_base_glynn_compression_rigidity/v1"
+}

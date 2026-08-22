@@ -1,23 +1,57 @@
 {
   "claim_boundary": {
     "literature_novelty": "NOT_ESTABLISHED",
-    "mu_6_4_exact_value": "OPEN_IN_[6,8]",
+    "mu_6_4_exact_value": "OPEN_IN_[6,7]",
     "new_border_rank_bound": false,
     "new_unrestricted_chow_rank_bound": false,
     "raw_second_order_support_route": "INSUFFICIENT",
     "second_order_six_block_witness": false
   },
-  "equality_graph": "C6_EQUALS_K33_MINUS_PERFECT_MATCHING",
-  "equality_partial_matching_counts": {
-    "r2": 9,
-    "r3": 2,
-    "r4": 0
+  "correction": {
+    "correct_unrestricted_maximum": 18,
+    "superseded_unrestricted_maximum": 14,
+    "value_14_scope": "MAX_ROW_DEGREE_AND_MAX_COLUMN_DEGREE_AT_MOST_TWO"
   },
-  "equality_row_column_orbits": 1,
-  "equality_supports": 96,
-  "explicit_cover_frame_count": 6,
-  "explicit_cover_union": 24,
-  "maximum_second_order_envelope": 14,
-  "schema": "general_quartic_coordinate_second_order_envelope/v1",
-  "supports_checked": 14893
+  "explicit_c6_cover": {
+    "frame_count": 6,
+    "union": 24
+  },
+  "row_column_degree_cap_two": {
+    "equality_graph": "C6_EQUALS_K33_MINUS_PERFECT_MATCHING",
+    "equality_partial_matching_counts": {
+      "r2": 9,
+      "r3": 2,
+      "r4": 0
+    },
+    "equality_row_column_orbits": 1,
+    "equality_supports": 96,
+    "maximum_second_order_envelope": 14
+  },
+  "schema": "general_quartic_coordinate_second_order_envelope/v2",
+  "supports_checked": 14893,
+  "unrestricted": {
+    "equality_degree_sequences": {
+      "column": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "row": [
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    "equality_graph": "PUNCTURED_ROW_COLUMN_CROSS",
+    "equality_partial_matching_counts": {
+      "r2": 9,
+      "r3": 0,
+      "r4": 0
+    },
+    "equality_row_column_orbits": 1,
+    "equality_supports": 16,
+    "maximum_second_order_envelope": 18
+  }
 }

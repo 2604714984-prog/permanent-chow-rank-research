@@ -1,38 +1,33 @@
-# Adversarial review: coordinate second-order matching-envelope barrier
+# Adversarial review: corrected coordinate second-order envelopes
 
-## Is `E_2(A)` the exact second-order image?
+## What failed in the superseded packet?
 
-No. It is a necessary support envelope. A matching produced by two factor
-motions retains at least two base cells, but membership in the envelope does
-not guarantee compatible source coefficients or cancellation of lower-order
-terms.
+The scan included all supports, but the expected maximum was hard-coded as 14.
+The actual unrestricted scan returns 18. The omitted equality family consists
+of punctured row-column crosses with degree sequences `(3,1,1,1)` on both
+sides. This is a mathematical scope error, not a floating-point or CI issue.
 
-## Does the six-envelope cover construct a witness?
+## Is 14 still useful?
 
-No. The cover ignores coefficients, nonmatching monomials, order-zero
-cancellation, order-one cancellation, and integrability across source and
-factor jets. It proves only that support counting cannot rule out the case.
+Yes, but only with the explicit additional hypothesis that every row and every
+column has degree at most two. Under that cap the 96 C6 supports are exactly the
+equality locus. The canonical fixed-`3 x 3` C6 cover lies entirely in this
+restricted family.
 
-## Could repeated factors enlarge the support maximum?
+## Does the corrected maximum produce a witness?
 
-No. Repetition reduces the set of distinct cells. The scan includes every
-support of size at most six, so all repeated-factor supports are covered by the
-same upper bound.
+No. `E_2(A)` is only a necessary support envelope. It ignores coefficients,
+nonmatching monomials, order-zero and order-one cancellation, repeated-label
+source kernels, and integrability.
 
-## Is the equality classification dependent on numerical optimization?
+## Are repeated factors covered?
 
-No. All 14,893 supports are enumerated exactly. The independent replay checks
-`|E_2|=2r_2-2r_3+3r_4` using integer matching counts. Equality supports are
-exactly the 96 labeled `C6` graphs.
-
-## Does this weaken the first-order closure theorem?
-
-No. The first-order theorem uses the sharper three-unchanged-cell envelope and
-source-kernel incidence budget. This note begins only at the first nonzero
-second-order layer.
+Yes. Repetition can only reduce the distinct support. The scan includes every
+support of size at most six.
 
 ## Strict conclusion
 
-The result is a route barrier for raw second-order matching support. It gives
-no six-block construction, no improvement of `mu(6,4)`, no unrestricted Chow
-rank or border-rank bound, and no literature-novelty claim.
+The corrected theorem is a support diagnostic. It preserves the conclusion
+that support counting alone is insufficient, but it retracts the false global
+number 14. It gives no six-block construction, no new ordinary Chow-rank or
+border-rank bound, and no novelty claim.
