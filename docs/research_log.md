@@ -3916,3 +3916,20 @@ bivectors satisfy an exhaustive pencil dichotomy: bivector-span rank at most
 one, at most two distinct nonzero relation ratios, or a complete
 Grassmannian flag line. This is a structural reduction, not yet an exclusion
 of F3, the full q5=2 class, Packet B, ordinary lower 50, or border rank.
+
+## 2026-08-22: arbitrary nonzero weights reduced to Schur membership
+
+The weighted common-graph condition now has a basis-free fixed-code test.
+Writing `w_i=d_i^{-1}`, the inclusion `D^{-1}R4 subset C3` is equivalent to
+`w` lying in the orthogonal complement of `R3 star R4`. Over an infinite
+field this weight space meets the full coordinate torus exactly when no unit
+coordinate vector `e_i` belongs to the Schur span. Thus W-01 through W-03
+replace a 42-variable saturation by 42 membership tests in a matrix with at
+most 35 columns.
+
+On the three existing curve-union profile controls, both standard primes give
+Schur rank 11, weight-space dimension 31, and no coordinate-vector
+obstruction. These are fixed-code orientation controls only: they show that
+arbitrary nonzero weights remain available on those controls, not that the
+permanent target is contained or that any F frontier survives. Common-graph
+B1, arbitrary Packet B, ordinary lower 50, and border rank remain open.

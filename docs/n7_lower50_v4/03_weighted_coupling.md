@@ -1,5 +1,12 @@
 # Program W — arbitrary nonzero weighted coupling
 
+## Executed foundation
+
+`W-01`, `W-02`, and `W-03` are implemented and replayed in
+`docs/n7_weighted_schur_coupling.md` and
+`scripts/n7_weighted_schur_coupling.py`.  Subsequent tasks may use the
+coordinate-vector membership criterion directly for a fixed point code.
+
 ## Goal
 
 Replace unit-weight diagnostics by the exact arbitrary nonzero-weight problem.

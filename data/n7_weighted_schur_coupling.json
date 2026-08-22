@@ -1,0 +1,105 @@
+{
+  "claim_boundary": [
+    "The dense-torus equivalence is a theorem over an infinite field for each fixed point code.",
+    "The displayed modular curve-union rows are orientation controls, not target-compatible frontier components.",
+    "No F frontier, Packet B endpoint, lower-50 theorem, or border-rank claim follows."
+  ],
+  "controls": [
+    {
+      "curve_degree": 6,
+      "frontier_profiles": "F1",
+      "prime_rows": [
+        {
+          "coordinate_membership_indices": [],
+          "no_coordinate_vector_in_schur_span_mod_prime": true,
+          "prime": 65521,
+          "q3": 9,
+          "q4": 3,
+          "rank_e3": 33,
+          "rank_e4": 39,
+          "schur_generator_count": 27,
+          "schur_rank": 11,
+          "weight_space_dimension": 31
+        },
+        {
+          "coordinate_membership_indices": [],
+          "no_coordinate_vector_in_schur_span_mod_prime": true,
+          "prime": 65519,
+          "q3": 9,
+          "q4": 3,
+          "rank_e3": 33,
+          "rank_e4": 39,
+          "schur_generator_count": 27,
+          "schur_rank": 11,
+          "weight_space_dimension": 31
+        }
+      ]
+    },
+    {
+      "curve_degree": 4,
+      "frontier_profiles": "F2-F3",
+      "prime_rows": [
+        {
+          "coordinate_membership_indices": [],
+          "no_coordinate_vector_in_schur_span_mod_prime": true,
+          "prime": 65521,
+          "q3": 8,
+          "q4": 4,
+          "rank_e3": 34,
+          "rank_e4": 38,
+          "schur_generator_count": 32,
+          "schur_rank": 11,
+          "weight_space_dimension": 31
+        },
+        {
+          "coordinate_membership_indices": [],
+          "no_coordinate_vector_in_schur_span_mod_prime": true,
+          "prime": 65519,
+          "q3": 8,
+          "q4": 4,
+          "rank_e3": 34,
+          "rank_e4": 38,
+          "schur_generator_count": 32,
+          "schur_rank": 11,
+          "weight_space_dimension": 31
+        }
+      ]
+    },
+    {
+      "curve_degree": 2,
+      "frontier_profiles": "F4-F5",
+      "prime_rows": [
+        {
+          "coordinate_membership_indices": [],
+          "no_coordinate_vector_in_schur_span_mod_prime": true,
+          "prime": 65521,
+          "q3": 7,
+          "q4": 5,
+          "rank_e3": 35,
+          "rank_e4": 37,
+          "schur_generator_count": 35,
+          "schur_rank": 11,
+          "weight_space_dimension": 31
+        },
+        {
+          "coordinate_membership_indices": [],
+          "no_coordinate_vector_in_schur_span_mod_prime": true,
+          "prime": 65519,
+          "q3": 7,
+          "q4": 5,
+          "rank_e3": 35,
+          "rank_e4": 37,
+          "schur_generator_count": 35,
+          "schur_rank": 11,
+          "weight_space_dimension": 31
+        }
+      ]
+    }
+  ],
+  "maximum_active_matrix_shape": [
+    42,
+    35
+  ],
+  "schema_version": 1,
+  "status": "W-01-W-03-SCHUR-COORDINATE-CRITERION"
+}
