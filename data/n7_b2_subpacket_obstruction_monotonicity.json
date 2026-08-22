@@ -45,8 +45,12 @@
   "theorem": {
     "dimension_formula": "dim O_I = dim K_I - rank(B_I) - rank(C_I) + rank(B_I C_I)",
     "field_scope": "arbitrary field",
+    "former_disjoint_repair_target": 47,
+    "former_shared_repair_target": 45,
     "full_equality_consequence": "If O_J=0, then O_I=0 for every term subpacket I subset J.",
+    "increment_inequality": "If the added middle dimension is s, then Delta_B + Delta_C - Delta_BC <= s.",
     "monotonicity": "For I subset J, zero extension induces an injection O_I -> O_J.",
-    "obstruction_space": "O_I = ker(B_I) / (ker(B_I) intersect im(C_I))"
+    "obstruction_space": "O_I = ker(B_I) / (ker(B_I) intersect im(C_I))",
+    "rank_seven_fifth_term_cap": 35
   }
 }

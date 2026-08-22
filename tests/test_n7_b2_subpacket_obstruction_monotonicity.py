@@ -44,6 +44,12 @@ class SubpacketObstructionMonotonicityTests(unittest.TestCase):
             )
         )
 
+    def test_increment_inequality_closes_fifth_term_repair(self) -> None:
+        theorem = MODULE.build_payload()["theorem"]
+        self.assertEqual(theorem["rank_seven_fifth_term_cap"], 35)
+        self.assertGreater(theorem["former_shared_repair_target"], 35)
+        self.assertGreater(theorem["former_disjoint_repair_target"], 35)
+
     def test_no_bare_assert_in_proof_replay(self) -> None:
         tree = ast.parse(SCRIPT.read_text(encoding="utf-8"))
         bare_asserts = [node.lineno for node in ast.walk(tree) if isinstance(node, ast.Assert)]

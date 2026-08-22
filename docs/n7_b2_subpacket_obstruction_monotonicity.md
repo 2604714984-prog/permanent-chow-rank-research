@@ -5,8 +5,8 @@
 `GENERAL LINEAR-ALGEBRA THEOREM; CANONICAL TWO-TRANSPOSITION JOINS GLOBALLY NONCOMPLETABLE.`
 
 This note corrects the former completion boundary of the exact two-transposition
-join calculation.  A positive Packet-B coupling defect supported on a subset of
-term blocks cannot be killed by appending more term blocks.  Consequently, the
+join calculation. A positive Packet-B coupling defect supported on a subset of
+term blocks cannot be killed by appending more term blocks. Consequently, the
 canonical shared-row join with defect ten and the canonical disjoint join with
 defect twelve are not merely bad four-term packets: neither can occur as an
 exact subpacket of any larger Sylvester-equality completion.
@@ -32,7 +32,7 @@ For a finite label set `I`, put
  B_I=\sum_{i\in I}B_i:K_I\longrightarrow Y.
 \]
 
-No assumption `B_I C_I=0` is required.  Define the middle obstruction space
+No assumption `B_I C_I=0` is required. Define the middle obstruction space
 
 \[
  \mathcal O_I
@@ -76,8 +76,8 @@ In particular,
  B_J e_{I,J}(z)=B_Iz=0,
 \]
 
-so zero extension maps `ker(B_I)` into `ker(B_J)`.  Suppose that the class of
-`e_{I,J}(z)` vanishes in `O_J`.  Then there is an `x` in `X` such that
+so zero extension maps `ker(B_I)` into `ker(B_J)`. Suppose that the class of
+`e_{I,J}(z)` vanishes in `O_J`. Then there is an `x` in `X` such that
 
 \[
  e_{I,J}(z)=C_Jx.
@@ -90,7 +90,7 @@ Projecting this identity from `K_J` to the old coordinate summand `K_I` gives
 \]
 
 Thus `z` already lies in `ker(B_I) intersect im(C_I)`, so its class in `O_I`
-was zero.  This proves injectivity.  No rank semicontinuity or genericity
+was zero. This proves injectivity. No rank semicontinuity or genericity
 argument is involved.
 
 ### Full-equality consequence
@@ -101,20 +101,43 @@ If a full label packet `J` satisfies the Sylvester equality condition
  \ker B_J\subseteq\operatorname{im}C_J,
 \]
 
-then `O_J=0`.  The theorem forces
+then `O_J=0`. The theorem forces
 
 \[
  \boxed{\mathcal O_I=0\quad\text{for every }I\subseteq J.}         \tag{2.3}
 \]
 
 Therefore every term subpacket of a full equality packet must itself have zero
-coupling defect.  A positive defect is a hereditary obstruction, not a deficit
+coupling defect. A positive defect is a hereditary obstruction, not a deficit
 that later labels can repair.
+
+### Increment inequality
+
+Suppose `J` is obtained from `I` by appending middle blocks of total dimension
+`s`, and put
+
+\[
+ \Delta_B=\operatorname{rank}B_J-\operatorname{rank}B_I,
+ \quad
+ \Delta_C=\operatorname{rank}C_J-\operatorname{rank}C_I,
+ \quad
+ \Delta_{BC}=\operatorname{rank}(B_JC_J)-\operatorname{rank}(B_IC_I).
+\]
+
+Subtracting (1.2) for `I` from (1.2) for `J` and using (2.2) gives
+
+\[
+ \boxed{\Delta_B+\Delta_C-\Delta_{BC}\le s.}                       \tag{2.4}
+\]
+
+For one rank-seven Chow term in the degree-four middle, `s=binom(7,4)=35`.
+Hence the former fifth-term repair targets 45 and 47 are impossible for every
+possible fifth term, not merely for the finite charts already scanned.
 
 ## 3. Local-variable packets inside the ambient 49-variable system
 
 The canonical joins were ranked in an eleven-variable space `W`, whereas a
-full `perm_7` packet uses the ambient variable space `V`.  This does not weaken
+full `perm_7` packet uses the ambient variable space `V`. This does not weaken
 the theorem.
 
 For an old term whose factors lie in `W`, the ambient source map factors as
@@ -125,13 +148,13 @@ For an old term whose factors lie in `W`, the ambient source map factors as
    \xrightarrow{\ C_i^W\ }K_i.                                  \tag{3.1}
 \]
 
-The first arrow is restriction and is surjective.  Hence
+The first arrow is restriction and is surjective. Hence
 
 \[
  \operatorname{im}C_i^V=\operatorname{im}C_i^W,                   \tag{3.2}
 \]
 
-and the same is true after stacking any fixed old label set.  The `B_i` maps
+and the same is true after stacking any fixed old label set. The `B_i` maps
 also have the same ranks after the target is embedded into the ambient target.
 Thus the eleven-variable defects inject unchanged into every 49-variable
 completion containing those exact terms.
@@ -148,21 +171,21 @@ disjoint (01),(23)       140      114       95        81       12
 
 By (2.1), every larger labelled packet containing the shared-row join has
 obstruction dimension at least ten, and every packet containing the disjoint
-join has obstruction dimension at least twelve.  Therefore
+join has obstruction dimension at least twelve. Therefore
 
 \[
  \boxed{\text{neither canonical join admits any Sylvester-equality completion}.}
                                                                     \tag{4.1}
 \]
 
-An additional rank-seven term cannot reduce either defect.  Nor can any number
-of later terms.  The former proposal to compute a one-term "defect-killing
+An additional rank-seven term cannot reduce either defect. Nor can any number
+of later terms. The former proposal to compute a one-term "defect-killing
 subspace" is therefore unnecessary and invalid as a completion mechanism.
 
 ## 5. Corrected Packet-B frontier
 
-This theorem does **not** close the full equality locus.  It excludes exact
-subpackets containing the two canonical four-term joins.  A surviving pair of
+This theorem does **not** close the full equality locus. It excludes exact
+subpackets containing the two canonical four-term joins. A surviving pair of
 transposition-slice identities would have to be coupled already inside its
 four terms so that its four-term obstruction is zero; cross-slice factor mixing
 cannot be postponed to later labels.
@@ -180,7 +203,7 @@ without constructing additional Packet-B blocks.
 
 ## 6. Exact replay boundary
 
-The theorem is the written projection argument above.  The script performs two
+The theorem is the written projection argument above. The script performs two
 separate checks:
 
 1. exhaustive verification over `F_2` for all `4096` three-scalar-block systems
@@ -203,7 +226,7 @@ python -m unittest tests.test_n7_b2_subpacket_obstruction_monotonicity -v
 subpacket obstruction monotonicity                 PROVED
 field restriction                                  NONE
 canonical shared-row join completion               IMPOSSIBLE
-a canonical disjoint join completion               IMPOSSIBLE
+canonical disjoint join completion                 IMPOSSIBLE
 arbitrary four-term cross-slice coupling            OPEN
 full Packet B equality locus                        OPEN
 B2-CLOSED                                           false
