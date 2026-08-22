@@ -103,6 +103,27 @@ factors and genuinely using all three, a contradiction.  Consequently, after
 a coordinate permutation both extra factors lie in one coordinate two-plane,
 and (3) is the complete rank-five middle-equality classification.
 
+Coordinate scalings on `x_1,x_2` show that the equality locus has exactly
+three orbit types (up to frame permutation):
+
+1. the triple-parallel boundary, where only one square coefficient is
+   nonzero;
+2. the two-square diagonal type, with `c^2/(ab)=0`;
+3. the conic type, with `c^2/(ab)=9/2`.
+
+If a binary tail lies off the equality divisor, (3) gives middle dimension
+18.  If a pair uses at least three directions and were not already an
+equality form, choose a three-direction specialization witnessing this.  Its
+ternary formula is `3+3*dim D2(g)`, with the middle rank at least five, hence
+at least 18; semicontinuity transfers that lower bound back to the original
+pair.  Therefore every non-equality rank-five product has
+
+\[
+ \dim\mathcal D_3(T)\ge18,
+\]
+
+so its full-increment surplus is at least `18-15=3`.
+
 The computation is replayed by
 `scripts/n7_lower51_rank5_binary_equality.py`.  This completes
 `R5-EQUALITY-FORMS`.  It does not classify intermediate quotient directions

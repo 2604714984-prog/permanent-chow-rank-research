@@ -2,7 +2,7 @@
   "ambient_dimension": 49,
   "budget": 35,
   "claim": "These are exactly the direct-sum rank-count vectors passing the dimension equation, universal full-increment floors, and pair/triple subset-span floors.",
-  "claim_boundary": "They are necessary scalar basis types, not represented 50-plane packets or Chow identities; rank-six support costs can refine them.",
+  "claim_boundary": "They are necessary scalar basis types, not represented 50-plane packets or Chow identities; rank-six support costs and rank-five intermediate quotient data can refine them.",
   "full_increment_surplus_floor_rank_1_through_7": [
     26,
     17,
@@ -13,6 +13,7 @@
     0
   ],
   "low_rank_compositions": 67,
+  "rank5_equality_near_typed_rows": 240,
   "rows": [
     {
       "basis_labels": 7,
@@ -27,6 +28,7 @@
         7
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -42,6 +44,7 @@
         1
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -57,6 +60,7 @@
         2
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -72,6 +76,7 @@
         3
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -87,6 +92,7 @@
         4
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -102,6 +108,7 @@
         0
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 5,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -117,6 +124,7 @@
         1
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 6,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -132,6 +140,7 @@
         2
       ],
       "full_increment_surplus_floor": 0,
+      "maximum_rank5_near_equality_terms": 7,
       "maximum_residual_middle_cap": 35
     },
     {
@@ -147,6 +156,7 @@
         3
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -162,6 +172,7 @@
         4
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -177,6 +188,7 @@
         5
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -192,6 +204,7 @@
         0
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -207,6 +220,7 @@
         1
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 4,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -222,6 +236,7 @@
         2
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 5,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -237,6 +252,7 @@
         0
       ],
       "full_increment_surplus_floor": 3,
+      "maximum_rank5_near_equality_terms": 9,
       "maximum_residual_middle_cap": 32
     },
     {
@@ -252,6 +268,7 @@
         5
       ],
       "full_increment_surplus_floor": 6,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 29
     },
     {
@@ -267,6 +284,7 @@
         0
       ],
       "full_increment_surplus_floor": 6,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 29
     },
     {
@@ -282,6 +300,7 @@
         1
       ],
       "full_increment_surplus_floor": 6,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 29
     },
     {
@@ -297,6 +316,7 @@
         2
       ],
       "full_increment_surplus_floor": 6,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 29
     },
     {
@@ -312,6 +332,7 @@
         3
       ],
       "full_increment_surplus_floor": 6,
+      "maximum_rank5_near_equality_terms": 4,
       "maximum_residual_middle_cap": 29
     },
     {
@@ -327,6 +348,7 @@
         0
       ],
       "full_increment_surplus_floor": 6,
+      "maximum_rank5_near_equality_terms": 7,
       "maximum_residual_middle_cap": 29
     },
     {
@@ -342,6 +364,7 @@
         1
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -357,6 +380,7 @@
         2
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -372,6 +396,7 @@
         3
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -387,6 +412,7 @@
         0
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 5,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -402,6 +428,7 @@
         1
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 6,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -417,6 +444,7 @@
         3
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -432,6 +460,7 @@
         4
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -447,6 +476,7 @@
         0
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -462,6 +492,7 @@
         1
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 4,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -477,6 +508,7 @@
         0
       ],
       "full_increment_surplus_floor": 15,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 20
     },
     {
@@ -492,6 +524,7 @@
         1
       ],
       "full_increment_surplus_floor": 15,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 20
     },
     {
@@ -507,6 +540,7 @@
         2
       ],
       "full_increment_surplus_floor": 15,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 20
     },
     {
@@ -522,6 +556,7 @@
         1
       ],
       "full_increment_surplus_floor": 18,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 17
     },
     {
@@ -537,6 +572,7 @@
         2
       ],
       "full_increment_surplus_floor": 18,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 17
     },
     {
@@ -552,6 +588,7 @@
         0
       ],
       "full_increment_surplus_floor": 18,
+      "maximum_rank5_near_equality_terms": 5,
       "maximum_residual_middle_cap": 17
     },
     {
@@ -567,6 +604,7 @@
         3
       ],
       "full_increment_surplus_floor": 21,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 14
     },
     {
@@ -582,6 +620,7 @@
         0
       ],
       "full_increment_surplus_floor": 21,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 14
     },
     {
@@ -597,6 +636,7 @@
         0
       ],
       "full_increment_surplus_floor": 24,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 11
     },
     {
@@ -612,6 +652,7 @@
         1
       ],
       "full_increment_surplus_floor": 24,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 11
     },
     {
@@ -627,6 +668,7 @@
         1
       ],
       "full_increment_surplus_floor": 27,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 8
     },
     {
@@ -642,6 +684,7 @@
         0
       ],
       "full_increment_surplus_floor": 33,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 2
     },
     {
@@ -657,6 +700,7 @@
         4
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -672,6 +716,7 @@
         5
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -687,6 +732,7 @@
         0
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -702,6 +748,7 @@
         1
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -717,6 +764,7 @@
         2
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 4,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -732,6 +780,7 @@
         3
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 5,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -747,6 +796,7 @@
         0
       ],
       "full_increment_surplus_floor": 9,
+      "maximum_rank5_near_equality_terms": 8,
       "maximum_residual_middle_cap": 26
     },
     {
@@ -762,6 +812,7 @@
         6
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -777,6 +828,7 @@
         0
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -792,6 +844,7 @@
         1
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -807,6 +860,7 @@
         2
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -822,6 +876,7 @@
         3
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -837,6 +892,7 @@
         0
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 6,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -852,6 +908,7 @@
         1
       ],
       "full_increment_surplus_floor": 12,
+      "maximum_rank5_near_equality_terms": 7,
       "maximum_residual_middle_cap": 23
     },
     {
@@ -867,6 +924,7 @@
         1
       ],
       "full_increment_surplus_floor": 18,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 17
     },
     {
@@ -882,6 +940,7 @@
         5
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -897,6 +956,7 @@
         6
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -912,6 +972,7 @@
         0
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -927,6 +988,7 @@
         1
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 2,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -942,6 +1004,7 @@
         2
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 3,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -957,6 +1020,7 @@
         3
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 4,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -972,6 +1036,7 @@
         0
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 6,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -987,6 +1052,7 @@
         1
       ],
       "full_increment_surplus_floor": 17,
+      "maximum_rank5_near_equality_terms": 6,
       "maximum_residual_middle_cap": 18
     },
     {
@@ -1002,6 +1068,7 @@
         1
       ],
       "full_increment_surplus_floor": 20,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 15
     },
     {
@@ -1017,6 +1084,7 @@
         6
       ],
       "full_increment_surplus_floor": 26,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 9
     },
     {
@@ -1032,6 +1100,7 @@
         0
       ],
       "full_increment_surplus_floor": 26,
+      "maximum_rank5_near_equality_terms": 0,
       "maximum_residual_middle_cap": 9
     },
     {
@@ -1047,6 +1116,7 @@
         1
       ],
       "full_increment_surplus_floor": 26,
+      "maximum_rank5_near_equality_terms": 1,
       "maximum_residual_middle_cap": 9
     }
   ],

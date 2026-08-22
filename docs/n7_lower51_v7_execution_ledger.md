@@ -562,12 +562,21 @@ The ternary `6 by 10` middle catalectic and selected exact `5 by 5` minors
 exclude every equality form genuinely using three or more frame directions.
 Thus, up to a frame permutation, the displayed binary divisor is the full
 middle-dimension-15 equality locus.
+After coordinate scaling it consists of three orbit types: the
+triple-parallel boundary, the two-square diagonal type, and the conic type
+with invariant `c^2/(a*b)=9/2`.  Every other rank-five product has middle
+dimension at least 18 and therefore full-increment surplus at least 3.
+Splitting each of the 69 direct-basis rank rows by the number of equality
+versus near-equality rank-five blocks leaves 240 typed scalar rows; each row
+records the maximum allowed number of near-equality blocks in the frozen
+direct-basis payload.
 
 Decisive markers:
 
 ```text
 R5-BINARY-EQUALITY-FAMILY
 R5-EQUALITY-FORMS
+R5-FULL-INCREMENT-GAP
 ```
 
 Intermediate quotient directions and full 50-term rank-five packets remain

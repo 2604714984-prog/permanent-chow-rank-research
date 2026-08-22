@@ -67,17 +67,21 @@ def build() -> dict:
     )
     assert recursive == independent
     rows = []
+    typed_rank5_rows = 0
     for counts in recursive:
         ranks = [rank for rank, count in enumerate(counts, 1) for _ in range(count)]
         surplus_floor = sum(
             a * b for a, b in zip(counts, FULL_INCREMENT_FLOOR)
         )
+        maximum_rank5_near = min(counts[4], (BUDGET - surplus_floor) // 3)
+        typed_rank5_rows += maximum_rank5_near + 1
         rows.append(
             {
                 "counts_rank_1_through_7": list(counts),
                 "basis_labels": len(ranks),
                 "full_increment_surplus_floor": surplus_floor,
                 "maximum_residual_middle_cap": BUDGET - surplus_floor,
+                "maximum_rank5_near_equality_terms": maximum_rank5_near,
                 "contains_rank_at_most_5": any(counts[:5]),
             }
         )
@@ -90,6 +94,7 @@ def build() -> dict:
         "full_increment_surplus_floor_rank_1_through_7": list(FULL_INCREMENT_FLOOR),
         "surviving_compositions": len(rows),
         "low_rank_compositions": sum(row["contains_rank_at_most_5"] for row in rows),
+        "rank5_equality_near_typed_rows": typed_rank5_rows,
         "rows": rows,
         "claim": (
             "These are exactly the direct-sum rank-count vectors passing the "
@@ -98,7 +103,8 @@ def build() -> dict:
         ),
         "claim_boundary": (
             "They are necessary scalar basis types, not represented 50-plane "
-            "packets or Chow identities; rank-six support costs can refine them."
+            "packets or Chow identities; rank-six support costs and rank-five "
+            "intermediate quotient data can refine them."
         ),
     }
 
@@ -119,6 +125,9 @@ def main() -> None:
             {
                 "surviving_compositions": payload["surviving_compositions"],
                 "low_rank_compositions": payload["low_rank_compositions"],
+                "rank5_equality_near_typed_rows": payload[
+                    "rank5_equality_near_typed_rows"
+                ],
             },
             sort_keys=True,
         )

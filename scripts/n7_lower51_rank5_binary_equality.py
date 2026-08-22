@@ -138,6 +138,13 @@ def build() -> dict:
             "After a coordinate permutation, both extra factors lie in "
             "span(x1,x2) and c*(9*a*b-2*c^2)=0."
         ),
+        "equality_orbit_types": [
+            "triple_parallel_boundary",
+            "two_square_diagonal_c2_over_ab_0",
+            "binary_conic_c2_over_ab_9_over_2",
+        ],
+        "non_equality_middle_lower_bound": 18,
+        "non_equality_full_increment_surplus_floor": 3,
         "claim": (
             "Every rank-five middle-dimension-15 product has, after a frame "
             "permutation, both extra factors in one coordinate two-plane and "

@@ -27,6 +27,7 @@ class DirectBasisCompositionTests(unittest.TestCase):
         payload = MODULE.build()
         self.assertEqual(payload["surviving_compositions"], 69)
         self.assertEqual(payload["low_rank_compositions"], 67)
+        self.assertEqual(payload["rank5_equality_near_typed_rows"], 240)
 
     def test_every_row_satisfies_gates(self) -> None:
         payload = MODULE.build()
@@ -41,6 +42,10 @@ class DirectBasisCompositionTests(unittest.TestCase):
             self.assertEqual(
                 row["maximum_residual_middle_cap"],
                 35 - row["full_increment_surplus_floor"],
+            )
+            self.assertLessEqual(
+                3 * row["maximum_rank5_near_equality_terms"],
+                row["maximum_residual_middle_cap"],
             )
 
 

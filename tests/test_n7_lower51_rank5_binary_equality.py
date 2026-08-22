@@ -23,6 +23,9 @@ class RankFiveBinaryEqualityTests(unittest.TestCase):
         self.assertEqual(payload["binary_middle_determinant"], "8*c*(9*a*b-2*c^2)")
         self.assertEqual(payload["ternary_middle_matrix_shape"], [6, 10])
         self.assertGreater(payload["nonzero_five_minor_polynomials"], 0)
+        self.assertEqual(payload["non_equality_middle_lower_bound"], 18)
+        self.assertEqual(payload["non_equality_full_increment_surplus_floor"], 3)
+        self.assertEqual(len(payload["equality_orbit_types"]), 3)
 
 
 if __name__ == "__main__":
