@@ -3877,3 +3877,18 @@ commit in 29 minutes 3 seconds, including the English-only scan, the full
 configured unit-test suite, and the optimized independent fixed-six arithmetic
 replay. This freezes the three rank pairs and six triples as the starting point
 for the remaining B1 work; it does not close B1 or prove ordinary lower 50.
+
+## 2026-08-22: B1F-01 removes one Hilbert triple
+
+The first-difference O-sequence classification is now complete at the formal
+Macaulay level. Nondegeneracy fixes the first two differences as `(1,6)`, and
+the degree-one Macaulay bound leaves only 126 bounded prefix choices across
+the six triples. Exact enumeration gives 84 complete formal continuations:
+12, 12, 24, 12, 24, and 0 for S1 through S6, respectively.
+
+In particular, S6 `(35,37,40)` would have consecutive first differences 2
+and 3 in degrees four and five, while `2^{<4>}=2`. It is therefore impossible
+by Macaulay growth. The active formal frontier has five triples. This result
+does not assert that any of the 84 remaining O-sequences is realizable by 42
+distinct reduced graph points; Betti, realizability, weight, and target gates
+remain open, as do ordinary lower 50 and border rank.
