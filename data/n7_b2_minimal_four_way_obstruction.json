@@ -1,0 +1,108 @@
+{
+  "candidate_cardinality_checked_before_materialization": {
+    "exact_subset_rows": 30,
+    "join_types": 2,
+    "middle_columns_per_term": 35,
+    "nonempty_subsets_per_join": 15
+  },
+  "claim_boundary": [
+    "Every rank is computed exactly over Q after assembling the selected term blocks in one common unprojected eleven-variable space.",
+    "All singleton, pair, and triple subpackets of both canonical joins satisfy Sylvester equality.",
+    "The first positive obstruction occurs only when all four terms are present: defect ten for the shared-row join and twelve for the disjoint join.",
+    "Pairwise and triple synchronization are therefore insufficient to imply four-term synchronization.",
+    "This does not classify noncanonical four-term cross-slice couplings or close full Packet B.",
+    "No lower-50 or border-rank claim is made."
+  ],
+  "decision": "ALL_PROPER_SUBPACKETS_HAVE_ZERO_DEFECT_BUT_BOTH_FULL_JOINS_HAVE_POSITIVE_DEFECT",
+  "next_exact_gate": "Construct a four-way compatibility invariant or classify the zero-defect noncanonical four-term locus; pairwise and triple tests alone cannot close the frontier.",
+  "profiles": {
+    "disjoint_01_23": {
+      "all_proper_subpackets_zero_defect": true,
+      "full_join_defect": 12,
+      "join_type": "disjoint_01_23",
+      "minimal_positive_subset_size": 4,
+      "orbit_summary": {
+        "cross_slice_pair": {
+          "rank_tuples": [
+            [70, 70, 69, 69, 0]
+          ],
+          "row_count": 4
+        },
+        "full_join": {
+          "rank_tuples": [
+            [140, 114, 95, 81, 12]
+          ],
+          "row_count": 1
+        },
+        "singleton": {
+          "rank_tuples": [
+            [35, 35, 35, 35, 0]
+          ],
+          "row_count": 4
+        },
+        "triple": {
+          "rank_tuples": [
+            [105, 98, 88, 81, 0]
+          ],
+          "row_count": 4
+        },
+        "within_slice_pair": {
+          "rank_tuples": [
+            [70, 65, 60, 55, 0]
+          ],
+          "row_count": 2
+        }
+      },
+      "proper_subpacket_count": 14,
+      "transpositions": [
+        [0, 1],
+        [2, 3]
+      ]
+    },
+    "shared_row_01_02": {
+      "all_proper_subpackets_zero_defect": true,
+      "full_join_defect": 10,
+      "join_type": "shared_row_01_02",
+      "minimal_positive_subset_size": 4,
+      "orbit_summary": {
+        "cross_slice_pair": {
+          "rank_tuples": [
+            [70, 69, 66, 65, 0]
+          ],
+          "row_count": 4
+        },
+        "full_join": {
+          "rank_tuples": [
+            [140, 111, 94, 75, 10]
+          ],
+          "row_count": 1
+        },
+        "singleton": {
+          "rank_tuples": [
+            [35, 35, 35, 35, 0]
+          ],
+          "row_count": 4
+        },
+        "triple": {
+          "rank_tuples": [
+            [105, 95, 85, 75, 0]
+          ],
+          "row_count": 4
+        },
+        "within_slice_pair": {
+          "rank_tuples": [
+            [70, 65, 60, 55, 0]
+          ],
+          "row_count": 2
+        }
+      },
+      "proper_subpacket_count": 14,
+      "transpositions": [
+        [0, 1],
+        [0, 2]
+      ]
+    }
+  },
+  "schema_version": 1,
+  "status": "CANONICAL_JOINS_HAVE_MINIMAL_FOUR_WAY_OBSTRUCTION"
+}

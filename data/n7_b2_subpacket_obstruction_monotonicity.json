@@ -1,0 +1,56 @@
+{
+  "canonical_two_transposition_join_corollary": {
+    "disjoint_01_23": {
+      "completion_to_sylvester_equality_possible": false,
+      "middle_dimension": 140,
+      "minimum_obstruction_in_every_completion": 12,
+      "rank_B": 114,
+      "rank_BC": 81,
+      "rank_C": 95,
+      "subpacket_obstruction_dimension": 12
+    },
+    "shared_row_01_02": {
+      "completion_to_sylvester_equality_possible": false,
+      "middle_dimension": 140,
+      "minimum_obstruction_in_every_completion": 10,
+      "rank_B": 111,
+      "rank_BC": 75,
+      "rank_C": 94,
+      "subpacket_obstruction_dimension": 10
+    }
+  },
+  "claim_boundary": [
+    "The theorem applies to direct-sum middle spaces with common source and target maps, including the labelled Packet-B maps.",
+    "Source enlargement from a local variable space W to the ambient V does not change the image of an old term block because restriction Sym^3(V*) -> Sym^3(W*) is surjective.",
+    "The canonical shared-row and disjoint two-transposition joins are globally noncompletable in any larger Packet-B equality packet.",
+    "This does not classify noncanonical four-term factorizations or cross-slice graph couplings whose four-term obstruction already vanishes.",
+    "No full B2-CLOSED, lower-50, exact perm_7, or border-rank claim is made."
+  ],
+  "finite_field_replay": {
+    "block_count": 3,
+    "block_types": 16,
+    "inequalities_checked": 49152,
+    "maximum_observed_increase": 2,
+    "prime": 2,
+    "source_dimension": 2,
+    "strict_subset_pairs_per_system": 12,
+    "systems_checked": 4096,
+    "target_dimension": 2,
+    "violations": 0
+  },
+  "next_exact_gate": "Classify zero-defect four-term cross-slice couplings. Any positive four-term defect is already globally fatal and must not be sent to additional-term completion tests.",
+  "schema_version": 1,
+  "status": "SUBPACKET_OBSTRUCTION_MONOTONICITY_PROVED_AND_JOIN_COROLLARIES_REPLAYED",
+  "superseded_statement": "The frozen v1 join packet said a positive subpacket defect might be repaired by later term blocks. Subpacket obstruction monotonicity proves that statement false.",
+  "theorem": {
+    "dimension_formula": "dim O_I = dim K_I - rank(B_I) - rank(C_I) + rank(B_I C_I)",
+    "field_scope": "arbitrary field",
+    "former_disjoint_repair_target": 47,
+    "former_shared_repair_target": 45,
+    "full_equality_consequence": "If O_J=0, then O_I=0 for every term subpacket I subset J.",
+    "increment_inequality": "If the added middle dimension is s, then Delta_B + Delta_C - Delta_BC <= s.",
+    "monotonicity": "For I subset J, zero extension induces an injection O_I -> O_J.",
+    "obstruction_space": "O_I = ker(B_I) / (ker(B_I) intersect im(C_I))",
+    "rank_seven_fifth_term_cap": 35
+  }
+}
