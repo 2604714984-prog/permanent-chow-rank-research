@@ -1,0 +1,128 @@
+{
+  "claim_boundary": {
+    "border_rank_improvement": false,
+    "general_glynn_optimality": "OPEN",
+    "literature_novelty": "NOT_ESTABLISHED",
+    "multi_degree_coupled_symbols": "NOT_COVERED",
+    "new_chow_rank_lower_bound": false,
+    "nonlinear_relation_modules": "NOT_COVERED"
+  },
+  "field": "characteristic_zero",
+  "monotone_ratio_verified_through": 64,
+  "route_class": {
+    "factor_filtration": "sum rank(P_i)=n^2",
+    "full_rank_test_term": "T=z_1*...*z_n, P=id",
+    "global_upper": "h <= (c*N-c^2-Delta)/2",
+    "local_form": "rank(beta_(T,P)) + delta(T)/2 >= s*rank(P)",
+    "middle_order": "n=2m"
+  },
+  "schema": "general_even_middle_symbol_capacity_ceiling/v1",
+  "scope": "ordinary_chow_rank_route_barrier",
+  "selected_rows": [
+    {
+      "constant_slope_cap_denominator": 4,
+      "constant_slope_cap_numerator": 6,
+      "glynn_target": 8,
+      "middle_degree": 2,
+      "missing_global_symbol_charge": 0,
+      "missing_rank_units": 0,
+      "n": 4,
+      "one_term_middle_rank_cap": 6,
+      "route_ceiling": 14,
+      "route_reaches_glynn_capacity": true
+    },
+    {
+      "constant_slope_cap_denominator": 6,
+      "constant_slope_cap_numerator": 20,
+      "glynn_target": 32,
+      "middle_degree": 3,
+      "missing_global_symbol_charge": 0,
+      "missing_rank_units": 0,
+      "n": 6,
+      "one_term_middle_rank_cap": 20,
+      "route_ceiling": 32,
+      "route_reaches_glynn_capacity": true
+    },
+    {
+      "constant_slope_cap_denominator": 8,
+      "constant_slope_cap_numerator": 70,
+      "glynn_target": 128,
+      "middle_degree": 4,
+      "missing_global_symbol_charge": 1470,
+      "missing_rank_units": 42,
+      "n": 8,
+      "one_term_middle_rank_cap": 70,
+      "route_ceiling": 86,
+      "route_reaches_glynn_capacity": false
+    },
+    {
+      "constant_slope_cap_denominator": 10,
+      "constant_slope_cap_numerator": 252,
+      "glynn_target": 512,
+      "middle_degree": 5,
+      "missing_global_symbol_charge": 30240,
+      "missing_rank_units": 240,
+      "n": 10,
+      "one_term_middle_rank_cap": 252,
+      "route_ceiling": 272,
+      "route_reaches_glynn_capacity": false
+    },
+    {
+      "constant_slope_cap_denominator": 12,
+      "constant_slope_cap_numerator": 924,
+      "glynn_target": 2048,
+      "middle_degree": 6,
+      "missing_global_symbol_charge": 508200,
+      "missing_rank_units": 1100,
+      "n": 12,
+      "one_term_middle_rank_cap": 924,
+      "route_ceiling": 948,
+      "route_reaches_glynn_capacity": false
+    },
+    {
+      "constant_slope_cap_denominator": 16,
+      "constant_slope_cap_numerator": 12870,
+      "glynn_target": 32768,
+      "middle_degree": 8,
+      "missing_global_symbol_charge": 127837710,
+      "missing_rank_units": 19866,
+      "n": 16,
+      "one_term_middle_rank_cap": 12870,
+      "route_ceiling": 12902,
+      "route_reaches_glynn_capacity": false
+    },
+    {
+      "constant_slope_cap_denominator": 32,
+      "constant_slope_cap_numerator": 601080390,
+      "glynn_target": 2147483648,
+      "middle_degree": 16,
+      "missing_global_symbol_charge": 464756317473382830,
+      "missing_rank_units": 1546403194,
+      "n": 32,
+      "one_term_middle_rank_cap": 601080390,
+      "route_ceiling": 601080454,
+      "route_reaches_glynn_capacity": false
+    },
+    {
+      "constant_slope_cap_denominator": 64,
+      "constant_slope_cap_numerator": 1832624140942590534,
+      "glynn_target": 9223372036854775808,
+      "middle_degree": 32,
+      "missing_global_symbol_charge": 6772231506834663412288133726937503982,
+      "missing_rank_units": 7390747895912185146,
+      "n": 64,
+      "one_term_middle_rank_cap": 1832624140942590534,
+      "route_ceiling": 1832624140942590662,
+      "route_reaches_glynn_capacity": false
+    }
+  ],
+  "theorem": {
+    "asymptotic_ratio": "sqrt(8/(pi*n))*(1+o(1))",
+    "certifiable_rank_ceiling": "N <= c+2n as a route-capacity ceiling",
+    "even_n_ge_8": "c+2n<2^(n-1)",
+    "n6": "c+2n=32=2^(n-1)",
+    "slope_ceiling": "s <= c/n, c=binom(n,n/2)"
+  },
+  "theorem_core_sha256": "29310e7c02e0ec22a4622acc57fccb5cc5582f23f1c15c950fbf3b28dfcd2aaf",
+  "theorem_id": "G-EVEN-MIDDLE-SYMBOL-CAPACITY-CEILING-v1"
+}
